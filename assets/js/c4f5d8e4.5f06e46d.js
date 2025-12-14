@@ -1,0 +1,1 @@
+"use strict";(globalThis.webpackChunktemp_book=globalThis.webpackChunktemp_book||[]).push([[2634],{192:(o,n,t)=>{t.r(n),t.d(n,{default:()=>i});t(6540);var e=t(6347),s=t(4586),r=t(4848);const i=function(){const{siteConfig:o}=(0,s.A)();return(0,r.jsx)(e.rd,{to:"/LLMs-for-Backend-Engineers/intro"})}}}]);

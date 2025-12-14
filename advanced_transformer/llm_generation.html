@@ -1,0 +1,175 @@
+<!doctype html>
+<html lang="en" dir="ltr" class="docs-wrapper plugin-docs plugin-id-default docs-version-current docs-doc-page docs-doc-id-advanced_transformer/llm_generation" data-has-hydrated="false">
+<head>
+<meta charset="UTF-8">
+<meta name="generator" content="Docusaurus v3.9.2">
+<title data-rh="true">LLM生成机制：去神秘化解析 | LLMs for Backend Engineers</title><meta data-rh="true" name="viewport" content="width=device-width,initial-scale=1"><meta data-rh="true" name="twitter:card" content="summary_large_image"><meta data-rh="true" property="og:image" content="https://kingson4wu.github.io/LLMs-for-Backend-Engineers/img/docusaurus-social-card.jpg"><meta data-rh="true" name="twitter:image" content="https://kingson4wu.github.io/LLMs-for-Backend-Engineers/img/docusaurus-social-card.jpg"><meta data-rh="true" property="og:url" content="https://kingson4wu.github.io/LLMs-for-Backend-Engineers/advanced_transformer/llm_generation"><meta data-rh="true" property="og:locale" content="en"><meta data-rh="true" name="docusaurus_locale" content="en"><meta data-rh="true" name="docsearch:language" content="en"><meta data-rh="true" name="docusaurus_version" content="current"><meta data-rh="true" name="docusaurus_tag" content="docs-default-current"><meta data-rh="true" name="docsearch:version" content="current"><meta data-rh="true" name="docsearch:docusaurus_tag" content="docs-default-current"><meta data-rh="true" property="og:title" content="LLM生成机制：去神秘化解析 | LLMs for Backend Engineers"><meta data-rh="true" name="description" content="&quot;模型在思考&quot;是一种错觉"><meta data-rh="true" property="og:description" content="&quot;模型在思考&quot;是一种错觉"><link data-rh="true" rel="icon" href="/LLMs-for-Backend-Engineers/img/favicon.ico"><link data-rh="true" rel="canonical" href="https://kingson4wu.github.io/LLMs-for-Backend-Engineers/advanced_transformer/llm_generation"><link data-rh="true" rel="alternate" href="https://kingson4wu.github.io/LLMs-for-Backend-Engineers/advanced_transformer/llm_generation" hreflang="en"><link data-rh="true" rel="alternate" href="https://kingson4wu.github.io/LLMs-for-Backend-Engineers/advanced_transformer/llm_generation" hreflang="x-default"><script data-rh="true" type="application/ld+json">{"@context":"https://schema.org","@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"name":"LLM生成机制：去神秘化解析","item":"https://kingson4wu.github.io/LLMs-for-Backend-Engineers/advanced_transformer/llm_generation"}]}</script><link rel="alternate" type="application/rss+xml" href="/LLMs-for-Backend-Engineers/blog/rss.xml" title="LLMs for Backend Engineers RSS Feed">
+<link rel="alternate" type="application/atom+xml" href="/LLMs-for-Backend-Engineers/blog/atom.xml" title="LLMs for Backend Engineers Atom Feed"><link rel="stylesheet" href="/LLMs-for-Backend-Engineers/assets/css/styles.0c55421b.css">
+<script src="/LLMs-for-Backend-Engineers/assets/js/runtime~main.04b9815c.js" defer="defer"></script>
+<script src="/LLMs-for-Backend-Engineers/assets/js/main.8d407b25.js" defer="defer"></script>
+</head>
+<body class="navigation-with-keyboard">
+<svg style="display: none;"><defs>
+<symbol id="theme-svg-external-link" viewBox="0 0 24 24"><path fill="currentColor" d="M21 13v10h-21v-19h12v2h-10v15h17v-8h2zm3-12h-10.988l4.035 4-6.977 7.07 2.828 2.828 6.977-7.07 4.125 4.172v-11z"/></symbol>
+</defs></svg>
+<script>!function(){var t=function(){try{return new URLSearchParams(window.location.search).get("docusaurus-theme")}catch(t){}}()||function(){try{return window.localStorage.getItem("theme")}catch(t){}}();document.documentElement.setAttribute("data-theme",t||(window.matchMedia("(prefers-color-scheme: dark)").matches?"dark":"light")),document.documentElement.setAttribute("data-theme-choice",t||"system")}(),function(){try{const c=new URLSearchParams(window.location.search).entries();for(var[t,e]of c)if(t.startsWith("docusaurus-data-")){var a=t.replace("docusaurus-data-","data-");document.documentElement.setAttribute(a,e)}}catch(t){}}()</script><div id="__docusaurus"><link rel="preload" as="image" href="/LLMs-for-Backend-Engineers/img/logo.svg"><div role="region" aria-label="Skip to main content"><a class="skipToContent_fXgn" href="#__docusaurus_skipToContent_fallback">Skip to main content</a></div><nav aria-label="Main" class="theme-layout-navbar navbar navbar--fixed-top"><div class="navbar__inner"><div class="theme-layout-navbar-left navbar__items"><button aria-label="Toggle navigation bar" aria-expanded="false" class="navbar__toggle clean-btn" type="button"><svg width="30" height="30" viewBox="0 0 30 30" aria-hidden="true"><path stroke="currentColor" stroke-linecap="round" stroke-miterlimit="10" stroke-width="2" d="M4 7h22M4 15h22M4 23h22"></path></svg></button><a class="navbar__brand" href="/LLMs-for-Backend-Engineers/"><div class="navbar__logo"><img src="/LLMs-for-Backend-Engineers/img/logo.svg" alt="LLM Book Logo" class="themedComponent_mlkZ themedComponent--light_NVdE"><img src="/LLMs-for-Backend-Engineers/img/logo.svg" alt="LLM Book Logo" class="themedComponent_mlkZ themedComponent--dark_xIcU"></div><b class="navbar__title text--truncate">LLMs for Backend Engineers</b></a></div><div class="theme-layout-navbar-right navbar__items navbar__items--right"><a href="https://github.com/kingson4wu/LLMs-for-Backend-Engineers" target="_blank" rel="noopener noreferrer" class="navbar__item navbar__link">GitHub<svg width="13.5" height="13.5" aria-label="(opens in new tab)" class="iconExternalLink_nPIU"><use href="#theme-svg-external-link"></use></svg></a><div class="toggle_vylO colorModeToggle_DEke"><button class="clean-btn toggleButton_gllP toggleButtonDisabled_aARS" type="button" disabled="" title="system mode" aria-label="Switch between dark and light mode (currently system mode)"><svg viewBox="0 0 24 24" width="24" height="24" aria-hidden="true" class="toggleIcon_g3eP lightToggleIcon_pyhR"><path fill="currentColor" d="M12,9c1.65,0,3,1.35,3,3s-1.35,3-3,3s-3-1.35-3-3S10.35,9,12,9 M12,7c-2.76,0-5,2.24-5,5s2.24,5,5,5s5-2.24,5-5 S14.76,7,12,7L12,7z M2,13l2,0c0.55,0,1-0.45,1-1s-0.45-1-1-1l-2,0c-0.55,0-1,0.45-1,1S1.45,13,2,13z M20,13l2,0c0.55,0,1-0.45,1-1 s-0.45-1-1-1l-2,0c-0.55,0-1,0.45-1,1S19.45,13,20,13z M11,2v2c0,0.55,0.45,1,1,1s1-0.45,1-1V2c0-0.55-0.45-1-1-1S11,1.45,11,2z M11,20v2c0,0.55,0.45,1,1,1s1-0.45,1-1v-2c0-0.55-0.45-1-1-1C11.45,19,11,19.45,11,20z M5.99,4.58c-0.39-0.39-1.03-0.39-1.41,0 c-0.39,0.39-0.39,1.03,0,1.41l1.06,1.06c0.39,0.39,1.03,0.39,1.41,0s0.39-1.03,0-1.41L5.99,4.58z M18.36,16.95 c-0.39-0.39-1.03-0.39-1.41,0c-0.39,0.39-0.39,1.03,0,1.41l1.06,1.06c0.39,0.39,1.03,0.39,1.41,0c0.39-0.39,0.39-1.03,0-1.41 L18.36,16.95z M19.42,5.99c0.39-0.39,0.39-1.03,0-1.41c-0.39-0.39-1.03-0.39-1.41,0l-1.06,1.06c-0.39,0.39-0.39,1.03,0,1.41 s1.03,0.39,1.41,0L19.42,5.99z M7.05,18.36c0.39-0.39,0.39-1.03,0-1.41c-0.39-0.39-1.03-0.39-1.41,0l-1.06,1.06 c-0.39,0.39-0.39,1.03,0,1.41s1.03,0.39,1.41,0L7.05,18.36z"></path></svg><svg viewBox="0 0 24 24" width="24" height="24" aria-hidden="true" class="toggleIcon_g3eP darkToggleIcon_wfgR"><path fill="currentColor" d="M9.37,5.51C9.19,6.15,9.1,6.82,9.1,7.5c0,4.08,3.32,7.4,7.4,7.4c0.68,0,1.35-0.09,1.99-0.27C17.45,17.19,14.93,19,12,19 c-3.86,0-7-3.14-7-7C5,9.07,6.81,6.55,9.37,5.51z M12,3c-4.97,0-9,4.03-9,9s4.03,9,9,9s9-4.03,9-9c0-0.46-0.04-0.92-0.1-1.36 c-0.98,1.37-2.58,2.26-4.4,2.26c-2.98,0-5.4-2.42-5.4-5.4c0-1.81,0.89-3.42,2.26-4.4C12.92,3.04,12.46,3,12,3L12,3z"></path></svg><svg viewBox="0 0 24 24" width="24" height="24" aria-hidden="true" class="toggleIcon_g3eP systemToggleIcon_QzmC"><path fill="currentColor" d="m12 21c4.971 0 9-4.029 9-9s-4.029-9-9-9-9 4.029-9 9 4.029 9 9 9zm4.95-13.95c1.313 1.313 2.05 3.093 2.05 4.95s-0.738 3.637-2.05 4.95c-1.313 1.313-3.093 2.05-4.95 2.05v-14c1.857 0 3.637 0.737 4.95 2.05z"></path></svg></button></div><div class="navbarSearchContainer_Bca1"></div></div></div><div role="presentation" class="navbar-sidebar__backdrop"></div></nav><div id="__docusaurus_skipToContent_fallback" class="theme-layout-main main-wrapper mainWrapper_z2l0"><div class="docsWrapper_hBAB"><button aria-label="Scroll back to top" class="clean-btn theme-back-to-top-button backToTopButton_sjWU" type="button"></button><div class="docRoot_UBD9"><aside class="theme-doc-sidebar-container docSidebarContainer_YfHR"><div class="sidebarViewport_aRkj"><div class="sidebar_njMd"><nav aria-label="Docs sidebar" class="menu thin-scrollbar menu_SIkG"><ul class="theme-doc-sidebar-menu menu__list"><li class="theme-doc-sidebar-item-link theme-doc-sidebar-item-link-level-1 menu__list-item"><a class="menu__link" href="/LLMs-for-Backend-Engineers/intro"><span title="简介" class="linkLabel_WmDU">简介</span></a></li><li class="theme-doc-sidebar-item-category theme-doc-sidebar-item-category-level-1 menu__list-item menu__list-item--collapsed"><div class="menu__list-item-collapsible"><a class="categoryLink_byQd menu__link menu__link--sublist menu__link--sublist-caret" role="button" aria-expanded="false" href="/LLMs-for-Backend-Engineers/chapters/chapter1"><span title="基础概念" class="categoryLinkLabel_W154">基础概念</span></a></div></li><li class="theme-doc-sidebar-item-category theme-doc-sidebar-item-category-level-1 menu__list-item menu__list-item--collapsed"><div class="menu__list-item-collapsible"><a class="categoryLink_byQd menu__link menu__link--sublist menu__link--sublist-caret" role="button" aria-expanded="false" href="/LLMs-for-Backend-Engineers/chapters/chapter3"><span title="实践应用" class="categoryLinkLabel_W154">实践应用</span></a></div></li><li class="theme-doc-sidebar-item-category theme-doc-sidebar-item-category-level-1 menu__list-item menu__list-item--collapsed"><div class="menu__list-item-collapsible"><a class="categoryLink_byQd menu__link menu__link--sublist menu__link--sublist-caret" role="button" aria-expanded="false" href="/LLMs-for-Backend-Engineers/chapters/chapter5"><span title="高级主题" class="categoryLinkLabel_W154">高级主题</span></a></div></li><li class="theme-doc-sidebar-item-category theme-doc-sidebar-item-category-level-1 menu__list-item"><div class="menu__list-item-collapsible"><a class="categoryLink_byQd menu__link menu__link--sublist menu__link--sublist-caret menu__link--active" role="button" aria-expanded="true" href="/LLMs-for-Backend-Engineers/advanced_transformer/transformer_architecture"><span title="Transformer深度解析" class="categoryLinkLabel_W154">Transformer深度解析</span></a></div><ul class="menu__list"><li class="theme-doc-sidebar-item-link theme-doc-sidebar-item-link-level-2 menu__list-item"><a class="menu__link" tabindex="0" href="/LLMs-for-Backend-Engineers/advanced_transformer/transformer_architecture"><span title="Transformer架构：分布式系统视角" class="linkLabel_WmDU">Transformer架构：分布式系统视角</span></a></li><li class="theme-doc-sidebar-item-link theme-doc-sidebar-item-link-level-2 menu__list-item"><a class="menu__link" tabindex="0" href="/LLMs-for-Backend-Engineers/advanced_transformer/attention_mechanism"><span title="Attention机制：工程视角解析" class="linkLabel_WmDU">Attention机制：工程视角解析</span></a></li><li class="theme-doc-sidebar-item-link theme-doc-sidebar-item-link-level-2 menu__list-item"><a class="menu__link menu__link--active" aria-current="page" tabindex="0" href="/LLMs-for-Backend-Engineers/advanced_transformer/llm_generation"><span title="LLM生成机制：去神秘化解析" class="linkLabel_WmDU">LLM生成机制：去神秘化解析</span></a></li><li class="theme-doc-sidebar-item-link theme-doc-sidebar-item-link-level-2 menu__list-item"><a class="menu__link" tabindex="0" href="/LLMs-for-Backend-Engineers/advanced_transformer/ai_engineering_practices"><span title="AI系统工程实践：去神话指南" class="linkLabel_WmDU">AI系统工程实践：去神话指南</span></a></li></ul></li></ul></nav></div></div></aside><main class="docMainContainer_TBSr"><div class="container padding-top--md padding-bottom--lg"><div class="row"><div class="col docItemCol_VOVn"><div class="docItemContainer_Djhp"><article><nav class="theme-doc-breadcrumbs breadcrumbsContainer_Z_bl" aria-label="Breadcrumbs"><ul class="breadcrumbs"><li class="breadcrumbs__item"><a aria-label="Home page" class="breadcrumbs__link" href="/LLMs-for-Backend-Engineers/"><svg viewBox="0 0 24 24" class="breadcrumbHomeIcon_YNFT"><path d="M10 19v-5h4v5c0 .55.45 1 1 1h3c.55 0 1-.45 1-1v-7h1.7c.46 0 .68-.57.33-.87L12.67 3.6c-.38-.34-.96-.34-1.34 0l-8.36 7.53c-.34.3-.13.87.33.87H5v7c0 .55.45 1 1 1h3c.55 0 1-.45 1-1z" fill="currentColor"></path></svg></a></li><li class="breadcrumbs__item"><span class="breadcrumbs__link">Transformer深度解析</span></li><li class="breadcrumbs__item breadcrumbs__item--active"><span class="breadcrumbs__link">LLM生成机制：去神秘化解析</span></li></ul></nav><div class="tocCollapsible_ETCw theme-doc-toc-mobile tocMobile_ITEo"><button type="button" class="clean-btn tocCollapsibleButton_TO0P">On this page</button></div><div class="theme-doc-markdown markdown"><header><h1>LLM生成机制：去神秘化解析</h1></header>
+<h2 class="anchor anchorTargetStickyNavbar_Vzrq" id="模型在思考是一种错觉">&quot;模型在思考&quot;是一种错觉<a href="#模型在思考是一种错觉" class="hash-link" aria-label="Direct link to &quot;模型在思考&quot;是一种错觉" title="Direct link to &quot;模型在思考&quot;是一种错觉" translate="no">​</a></h2>
+<p>这是当前 AI 讨论中最容易被误解的一点。</p>
+<h3 class="anchor anchorTargetStickyNavbar_Vzrq" id="结论先行">结论先行<a href="#结论先行" class="hash-link" aria-label="Direct link to 结论先行" title="Direct link to 结论先行" translate="no">​</a></h3>
+<p><strong>模型内部不存在&quot;思考过程&quot;和&quot;最终结果&quot;的区分</strong>。</p>
+<p>在模型眼里，只有一件事：</p>
+<blockquote>
+<p>根据已有 token，预测下一个 token</p>
+</blockquote>
+<p>所谓：</p>
+<ul>
+<li class="">思考过程</li>
+<li class="">推理步骤</li>
+<li class="">Chain-of-Thought</li>
+</ul>
+<p>只是训练数据中高概率出现的语言模式。</p>
+<h2 class="anchor anchorTargetStickyNavbar_Vzrq" id="为什么它看起来像在想">为什么它&quot;看起来像在想&quot;<a href="#为什么它看起来像在想" class="hash-link" aria-label="Direct link to 为什么它&quot;看起来像在想&quot;" title="Direct link to 为什么它&quot;看起来像在想&quot;" translate="no">​</a></h2>
+<p>因为人类在解决复杂问题时，习惯把中间过程写出来。</p>
+<p>模型学到的是：</p>
+<blockquote>
+<p>在这种上下文下，&quot;先写一段推导，再给答案&quot;，概率更高。</p>
+</blockquote>
+<p>不是因为它先想好了，而是因为它还没&quot;结束输出&quot;。</p>
+<h3 class="anchor anchorTargetStickyNavbar_Vzrq" id="一个工程类比">一个工程类比<a href="#一个工程类比" class="hash-link" aria-label="Direct link to 一个工程类比" title="Direct link to 一个工程类比" translate="no">​</a></h3>
+<p>日志系统不会区分：</p>
+<ul>
+<li class="">INFO（过程）</li>
+<li class="">RESULT（结果）</li>
+</ul>
+<p>它们都是字符串。区分它们的，是你这个人。</p>
+<h2 class="anchor anchorTargetStickyNavbar_Vzrq" id="为什么-llm-只能用-decoder而不是-encoder-decoder">为什么 LLM 只能用 Decoder，而不是 Encoder-Decoder？<a href="#为什么-llm-只能用-decoder而不是-encoder-decoder" class="hash-link" aria-label="Direct link to 为什么 LLM 只能用 Decoder，而不是 Encoder-Decoder？" title="Direct link to 为什么 LLM 只能用 Decoder，而不是 Encoder-Decoder？" translate="no">​</a></h2>
+<p>先说一句很多人不敢说的实话：</p>
+<p>Encoder-Decoder 并不是更高级，只是为&quot;输入-输出映射&quot;设计的，比如：</p>
+<ul>
+<li class="">翻译</li>
+<li class="">摘要</li>
+<li class="">问答（有明确输入、明确输出）</li>
+</ul>
+<p>这些任务是：Input → Encode → Decode → Output</p>
+<p>而 GPT 要做的是：<strong>无限续写一个序列</strong></p>
+<p>这在工程上意味着：</p>
+<ul>
+<li class="">序列在不断增长</li>
+<li class="">上下文长度不固定</li>
+<li class="">输入和输出是同一个东西</li>
+</ul>
+<p>于是 Encoder 的角色就彻底消失了。</p>
+<p><strong>Decoder-only 的真实含义是</strong>：</p>
+<blockquote>
+<p>每一步都对&quot;当前完整上下文&quot;做一次建模，然后预测下一个 token。</p>
+</blockquote>
+<h2 class="anchor anchorTargetStickyNavbar_Vzrq" id="mask-的真正作用工程解释">Mask 的真正作用（工程解释）<a href="#mask-的真正作用工程解释" class="hash-link" aria-label="Direct link to Mask 的真正作用（工程解释）" title="Direct link to Mask 的真正作用（工程解释）" translate="no">​</a></h2>
+<p>你一定见过 &quot;causal mask / 下三角矩阵&quot; 的图。</p>
+<p>绝大多数科普会说：&quot;为了防止模型看到未来。&quot;这是表面现象，不是本质。</p>
+<h3 class="anchor anchorTargetStickyNavbar_Vzrq" id="本质是">本质是：<a href="#本质是" class="hash-link" aria-label="Direct link to 本质是：" title="Direct link to 本质是：" translate="no">​</a></h3>
+<p>把一个&quot;并行可计算的模型&quot;，约束成&quot;看起来像顺序生成&quot;的模型。</p>
+<h3 class="anchor anchorTargetStickyNavbar_Vzrq" id="一次前向计算里模型其实已经算完所有未来">一次前向计算里，模型其实&quot;已经算完所有未来&quot;<a href="#一次前向计算里模型其实已经算完所有未来" class="hash-link" aria-label="Direct link to 一次前向计算里，模型其实&quot;已经算完所有未来&quot;" title="Direct link to 一次前向计算里，模型其实&quot;已经算完所有未来&quot;" translate="no">​</a></h3>
+<p>这是一个反直觉但极其重要的事实：</p>
+<p>在训练时，Transformer 是一次性并行计算整个序列的。</p>
+<p>假设训练数据是：&quot;I love coding&quot;</p>
+<p>模型在一次 forward 中：</p>
+<ul>
+<li class="">同时计算：&quot;I&quot; → 预测 &quot;love&quot;</li>
+<li class="">同时计算：&quot;I love&quot; → 预测 &quot;coding&quot;</li>
+<li class="">同时计算：&quot;I love coding&quot; → 预测 <code>&amp;lt;EOS&amp;gt;</code></li>
+</ul>
+<p>它不是一步一步算的，是一次性算完的。</p>
+<h3 class="anchor anchorTargetStickyNavbar_Vzrq" id="mask-的真正作用">Mask 的真正作用<a href="#mask-的真正作用" class="hash-link" aria-label="Direct link to Mask 的真正作用" title="Direct link to Mask 的真正作用" translate="no">​</a></h3>
+<p>Attention 本来是：任意 token 可以看任意 token</p>
+<p>但生成模型有一个硬约束：<strong>位置 i 的 token，不能依赖位置 &gt; i 的 token</strong></p>
+<p>否则就会发生：</p>
+<ul>
+<li class="">训练时偷看答案</li>
+<li class="">推理时行为不一致</li>
+</ul>
+<p>所以 mask 做的事只有一件：在 attention 的路由表里，把&quot;未来节点&quot;的权重强行设为 0。</p>
+<p><strong>这不是防作弊，是定义计算图的因果结构</strong>。</p>
+<p>你可以把它理解成：在一张全连接图上，人为删掉了&quot;指向未来的边&quot;。</p>
+<h2 class="anchor anchorTargetStickyNavbar_Vzrq" id="为什么生成时一定是一个-token-一个-token">为什么生成时一定是&quot;一个 token 一个 token&quot;？<a href="#为什么生成时一定是一个-token-一个-token" class="hash-link" aria-label="Direct link to 为什么生成时一定是&quot;一个 token 一个 token&quot;？" title="Direct link to 为什么生成时一定是&quot;一个 token 一个 token&quot;？" translate="no">​</a></h2>
+<p>训练时能并行，推理时却不能，这是很多人迷惑的点。</p>
+<h3 class="anchor anchorTargetStickyNavbar_Vzrq" id="原因非常工程化">原因非常工程化：<a href="#原因非常工程化" class="hash-link" aria-label="Direct link to 原因非常工程化：" title="Direct link to 原因非常工程化：" translate="no">​</a></h3>
+<ul>
+<li class=""><strong>训练阶段</strong>：全序列已知，可以一次性建图，GPU 并行跑</li>
+<li class=""><strong>推理阶段</strong>：下一个 token 不存在，必须先生成它，才能成为下一步的上下文</li>
+</ul>
+<p>这不是模型限制，是信息论限制：你不能用一个还不存在的信息。</p>
+<p>所以生成必然是：</p>
+<blockquote>
+<p>上下文 → forward → 采样 → 拼到上下文 → 再 forward</p>
+</blockquote>
+<h3 class="anchor anchorTargetStickyNavbar_Vzrq" id="gpt-每一步真的在干什么">GPT 每一步&quot;真的在干什么&quot;？<a href="#gpt-每一步真的在干什么" class="hash-link" aria-label="Direct link to GPT 每一步&quot;真的在干什么&quot;？" title="Direct link to GPT 每一步&quot;真的在干什么&quot;？" translate="no">​</a></h3>
+<p>现在我们用你已经理解的 Transformer 心智模型，把生成过程说清楚。</p>
+<p>假设当前上下文是：&quot;I love&quot;</p>
+<p>模型做的事情是：</p>
+<ol>
+<li class="">把 &quot;I love&quot; 当成一个完整序列</li>
+<li class="">对这个序列跑完整的一次 Transformer 前向</li>
+<li class="">得到每个位置的输出向量</li>
+<li class="">只取最后一个位置的输出</li>
+<li class="">映射成词表概率</li>
+<li class="">采样一个 token，比如 &quot;coding&quot;</li>
+<li class="">拼接成：&quot;I love coding&quot;，然后重复</li>
+</ol>
+<p><strong>注意重点</strong>：
+模型并没有&quot;记住上一步的中间状态&quot;，每一步都是对&quot;当前完整上下文&quot;的一次全量重算。</p>
+<p>这也是为什么：</p>
+<ul>
+<li class="">上下文越长，推理越慢</li>
+<li class="">KV cache 才如此重要</li>
+</ul>
+<h2 class="anchor anchorTargetStickyNavbar_Vzrq" id="kv-cache-的真实意义不是黑魔法">KV Cache 的真实意义（不是黑魔法）<a href="#kv-cache-的真实意义不是黑魔法" class="hash-link" aria-label="Direct link to KV Cache 的真实意义（不是黑魔法）" title="Direct link to KV Cache 的真实意义（不是黑魔法）" translate="no">​</a></h2>
+<p>KV cache 本质上是一个工程优化：</p>
+<blockquote>
+<p>把&quot;前面已经算过的 K/V 结果缓存下来&quot;，避免每一步都从头算。</p>
+</blockquote>
+<p>没有 cache，复杂度是：O(n²) 每步 × n 步</p>
+<p>有 cache，变成：O(n²) 一次 + O(n) 每步</p>
+<p><strong>注意</strong>：</p>
+<ul>
+<li class="">cache 不改变模型逻辑</li>
+<li class="">只是减少重复计算</li>
+<li class="">attention 的路由机制完全不变</li>
+</ul>
+<h2 class="anchor anchorTargetStickyNavbar_Vzrq" id="为什么-gpt-看起来像在思考">为什么 GPT 看起来&quot;像在思考&quot;？<a href="#为什么-gpt-看起来像在思考" class="hash-link" aria-label="Direct link to 为什么 GPT 看起来&quot;像在思考&quot;？" title="Direct link to 为什么 GPT 看起来&quot;像在思考&quot;？" translate="no">​</a></h2>
+<p>这是最容易被神化的一点。</p>
+<p>本质原因只有一个：</p>
+<blockquote>
+<p>每一步生成，模型都在对&quot;越来越复杂的上下文&quot;做全局建模。</p>
+</blockquote>
+<p>随着上下文增长：</p>
+<ul>
+<li class="">注意力图越来越复杂</li>
+<li class="">信息流路径越来越多</li>
+<li class="">表达空间越来越丰富</li>
+</ul>
+<p>于是你看到的现象是：</p>
+<ul>
+<li class="">自我修正</li>
+<li class="">回指前文</li>
+<li class="">多步推理</li>
+<li class="">风格一致性</li>
+</ul>
+<p>但底层没有任何：</p>
+<ul>
+<li class="">规划模块</li>
+<li class="">推理引擎</li>
+<li class="">逻辑树</li>
+<li class="">思考步骤</li>
+</ul>
+<p>只有：反复执行的 attention + FFN。</p>
+<h2 class="anchor anchorTargetStickyNavbar_Vzrq" id="为什么要隐藏思考过程">为什么要&quot;隐藏思考过程&quot;<a href="#为什么要隐藏思考过程" class="hash-link" aria-label="Direct link to 为什么要&quot;隐藏思考过程&quot;" title="Direct link to 为什么要&quot;隐藏思考过程&quot;" translate="no">​</a></h2>
+<p>你可能注意到：很多产品刻意不展示模型的推理文本。</p>
+<p>原因不是&quot;怕你看不懂&quot;，而是：</p>
+<ul>
+<li class="">推理文本不稳定</li>
+<li class="">容易误导用户对正确性的判断</li>
+<li class="">会泄露训练分布和系统策略</li>
+</ul>
+<p>隐藏 CoT 是产品与安全决策，不是模型能力变化。</p></div><footer class="theme-doc-footer docusaurus-mt-lg"><div class="row margin-top--sm theme-doc-footer-edit-meta-row"><div class="col noPrint_WFHX"><a href="https://github.com/facebook/docusaurus/tree/main/packages/create-docusaurus/templates/shared/docs/advanced_transformer/llm_generation.md" target="_blank" rel="noopener noreferrer" class="theme-edit-this-page"><svg fill="currentColor" height="20" width="20" viewBox="0 0 40 40" class="iconEdit_Z9Sw" aria-hidden="true"><g><path d="m34.5 11.7l-3 3.1-6.3-6.3 3.1-3q0.5-0.5 1.2-0.5t1.1 0.5l3.9 3.9q0.5 0.4 0.5 1.1t-0.5 1.2z m-29.5 17.1l18.4-18.5 6.3 6.3-18.4 18.4h-6.3v-6.2z"></path></g></svg>Edit this page</a></div><div class="col lastUpdated_JAkA"></div></div></footer></article><nav class="docusaurus-mt-lg pagination-nav" aria-label="Docs pages"><a class="pagination-nav__link pagination-nav__link--prev" href="/LLMs-for-Backend-Engineers/advanced_transformer/attention_mechanism"><div class="pagination-nav__sublabel">Previous</div><div class="pagination-nav__label">Attention机制：工程视角解析</div></a><a class="pagination-nav__link pagination-nav__link--next" href="/LLMs-for-Backend-Engineers/advanced_transformer/ai_engineering_practices"><div class="pagination-nav__sublabel">Next</div><div class="pagination-nav__label">AI系统工程实践：去神话指南</div></a></nav></div></div><div class="col col--3"><div class="tableOfContents_bqdL thin-scrollbar theme-doc-toc-desktop"><ul class="table-of-contents table-of-contents__left-border"><li><a href="#模型在思考是一种错觉" class="table-of-contents__link toc-highlight">&quot;模型在思考&quot;是一种错觉</a><ul><li><a href="#结论先行" class="table-of-contents__link toc-highlight">结论先行</a></li></ul></li><li><a href="#为什么它看起来像在想" class="table-of-contents__link toc-highlight">为什么它&quot;看起来像在想&quot;</a><ul><li><a href="#一个工程类比" class="table-of-contents__link toc-highlight">一个工程类比</a></li></ul></li><li><a href="#为什么-llm-只能用-decoder而不是-encoder-decoder" class="table-of-contents__link toc-highlight">为什么 LLM 只能用 Decoder，而不是 Encoder-Decoder？</a></li><li><a href="#mask-的真正作用工程解释" class="table-of-contents__link toc-highlight">Mask 的真正作用（工程解释）</a><ul><li><a href="#本质是" class="table-of-contents__link toc-highlight">本质是：</a></li><li><a href="#一次前向计算里模型其实已经算完所有未来" class="table-of-contents__link toc-highlight">一次前向计算里，模型其实&quot;已经算完所有未来&quot;</a></li><li><a href="#mask-的真正作用" class="table-of-contents__link toc-highlight">Mask 的真正作用</a></li></ul></li><li><a href="#为什么生成时一定是一个-token-一个-token" class="table-of-contents__link toc-highlight">为什么生成时一定是&quot;一个 token 一个 token&quot;？</a><ul><li><a href="#原因非常工程化" class="table-of-contents__link toc-highlight">原因非常工程化：</a></li><li><a href="#gpt-每一步真的在干什么" class="table-of-contents__link toc-highlight">GPT 每一步&quot;真的在干什么&quot;？</a></li></ul></li><li><a href="#kv-cache-的真实意义不是黑魔法" class="table-of-contents__link toc-highlight">KV Cache 的真实意义（不是黑魔法）</a></li><li><a href="#为什么-gpt-看起来像在思考" class="table-of-contents__link toc-highlight">为什么 GPT 看起来&quot;像在思考&quot;？</a></li><li><a href="#为什么要隐藏思考过程" class="table-of-contents__link toc-highlight">为什么要&quot;隐藏思考过程&quot;</a></li></ul></div></div></div></div></main></div></div></div><footer class="theme-layout-footer footer footer--dark"><div class="container container-fluid"><div class="row footer__links"><div class="theme-layout-footer-column col footer__col"><div class="footer__title">Docs</div><ul class="footer__items clean-list"><li class="footer__item"><a class="footer__link-item" href="/LLMs-for-Backend-Engineers/intro">电子书</a></li></ul></div><div class="theme-layout-footer-column col footer__col"><div class="footer__title">Community</div><ul class="footer__items clean-list"><li class="footer__item"><a href="https://stackoverflow.com/questions/tagged/docusaurus" target="_blank" rel="noopener noreferrer" class="footer__link-item">Stack Overflow<svg width="13.5" height="13.5" aria-label="(opens in new tab)" class="iconExternalLink_nPIU"><use href="#theme-svg-external-link"></use></svg></a></li><li class="footer__item"><a href="https://discordapp.com/invite/docusaurus" target="_blank" rel="noopener noreferrer" class="footer__link-item">Discord<svg width="13.5" height="13.5" aria-label="(opens in new tab)" class="iconExternalLink_nPIU"><use href="#theme-svg-external-link"></use></svg></a></li><li class="footer__item"><a href="https://x.com/docusaurus" target="_blank" rel="noopener noreferrer" class="footer__link-item">X<svg width="13.5" height="13.5" aria-label="(opens in new tab)" class="iconExternalLink_nPIU"><use href="#theme-svg-external-link"></use></svg></a></li></ul></div><div class="theme-layout-footer-column col footer__col"><div class="footer__title">More</div><ul class="footer__items clean-list"><li class="footer__item"><a class="footer__link-item" href="/LLMs-for-Backend-Engineers/blog">Blog</a></li><li class="footer__item"><a href="https://github.com/facebook/docusaurus" target="_blank" rel="noopener noreferrer" class="footer__link-item">GitHub<svg width="13.5" height="13.5" aria-label="(opens in new tab)" class="iconExternalLink_nPIU"><use href="#theme-svg-external-link"></use></svg></a></li></ul></div></div><div class="footer__bottom text--center"><div class="footer__copyright">Copyright © 2025 My Project, Inc. Built with Docusaurus.</div></div></div></footer></div>
+</body>
+</html>

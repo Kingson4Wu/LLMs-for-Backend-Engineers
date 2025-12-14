@@ -1,0 +1,1 @@
+"use strict";(globalThis.webpackChunktemp_book=globalThis.webpackChunktemp_book||[]).push([[1903],{1912:o=>{o.exports=JSON.parse('{"blogBasePath":"/LLMs-for-Backend-Engineers/blog","blogTitle":"Blog","authorsListPath":"/LLMs-for-Backend-Engineers/blog/authors"}')}}]);

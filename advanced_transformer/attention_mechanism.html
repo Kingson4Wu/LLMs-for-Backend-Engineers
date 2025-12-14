@@ -1,0 +1,163 @@
+<!doctype html>
+<html lang="en" dir="ltr" class="docs-wrapper plugin-docs plugin-id-default docs-version-current docs-doc-page docs-doc-id-advanced_transformer/attention_mechanism" data-has-hydrated="false">
+<head>
+<meta charset="UTF-8">
+<meta name="generator" content="Docusaurus v3.9.2">
+<title data-rh="true">Attention机制：工程视角解析 | LLMs for Backend Engineers</title><meta data-rh="true" name="viewport" content="width=device-width,initial-scale=1"><meta data-rh="true" name="twitter:card" content="summary_large_image"><meta data-rh="true" property="og:image" content="https://kingson4wu.github.io/LLMs-for-Backend-Engineers/img/docusaurus-social-card.jpg"><meta data-rh="true" name="twitter:image" content="https://kingson4wu.github.io/LLMs-for-Backend-Engineers/img/docusaurus-social-card.jpg"><meta data-rh="true" property="og:url" content="https://kingson4wu.github.io/LLMs-for-Backend-Engineers/advanced_transformer/attention_mechanism"><meta data-rh="true" property="og:locale" content="en"><meta data-rh="true" name="docusaurus_locale" content="en"><meta data-rh="true" name="docsearch:language" content="en"><meta data-rh="true" name="docusaurus_version" content="current"><meta data-rh="true" name="docusaurus_tag" content="docs-default-current"><meta data-rh="true" name="docsearch:version" content="current"><meta data-rh="true" name="docsearch:docusaurus_tag" content="docs-default-current"><meta data-rh="true" property="og:title" content="Attention机制：工程视角解析 | LLMs for Backend Engineers"><meta data-rh="true" name="description" content="Attention 本质是什么？（不是数学，是工程视角）"><meta data-rh="true" property="og:description" content="Attention 本质是什么？（不是数学，是工程视角）"><link data-rh="true" rel="icon" href="/LLMs-for-Backend-Engineers/img/favicon.ico"><link data-rh="true" rel="canonical" href="https://kingson4wu.github.io/LLMs-for-Backend-Engineers/advanced_transformer/attention_mechanism"><link data-rh="true" rel="alternate" href="https://kingson4wu.github.io/LLMs-for-Backend-Engineers/advanced_transformer/attention_mechanism" hreflang="en"><link data-rh="true" rel="alternate" href="https://kingson4wu.github.io/LLMs-for-Backend-Engineers/advanced_transformer/attention_mechanism" hreflang="x-default"><script data-rh="true" type="application/ld+json">{"@context":"https://schema.org","@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"name":"Attention机制：工程视角解析","item":"https://kingson4wu.github.io/LLMs-for-Backend-Engineers/advanced_transformer/attention_mechanism"}]}</script><link rel="alternate" type="application/rss+xml" href="/LLMs-for-Backend-Engineers/blog/rss.xml" title="LLMs for Backend Engineers RSS Feed">
+<link rel="alternate" type="application/atom+xml" href="/LLMs-for-Backend-Engineers/blog/atom.xml" title="LLMs for Backend Engineers Atom Feed"><link rel="stylesheet" href="/LLMs-for-Backend-Engineers/assets/css/styles.0c55421b.css">
+<script src="/LLMs-for-Backend-Engineers/assets/js/runtime~main.04b9815c.js" defer="defer"></script>
+<script src="/LLMs-for-Backend-Engineers/assets/js/main.8d407b25.js" defer="defer"></script>
+</head>
+<body class="navigation-with-keyboard">
+<svg style="display: none;"><defs>
+<symbol id="theme-svg-external-link" viewBox="0 0 24 24"><path fill="currentColor" d="M21 13v10h-21v-19h12v2h-10v15h17v-8h2zm3-12h-10.988l4.035 4-6.977 7.07 2.828 2.828 6.977-7.07 4.125 4.172v-11z"/></symbol>
+</defs></svg>
+<script>!function(){var t=function(){try{return new URLSearchParams(window.location.search).get("docusaurus-theme")}catch(t){}}()||function(){try{return window.localStorage.getItem("theme")}catch(t){}}();document.documentElement.setAttribute("data-theme",t||(window.matchMedia("(prefers-color-scheme: dark)").matches?"dark":"light")),document.documentElement.setAttribute("data-theme-choice",t||"system")}(),function(){try{const c=new URLSearchParams(window.location.search).entries();for(var[t,e]of c)if(t.startsWith("docusaurus-data-")){var a=t.replace("docusaurus-data-","data-");document.documentElement.setAttribute(a,e)}}catch(t){}}()</script><div id="__docusaurus"><link rel="preload" as="image" href="/LLMs-for-Backend-Engineers/img/logo.svg"><div role="region" aria-label="Skip to main content"><a class="skipToContent_fXgn" href="#__docusaurus_skipToContent_fallback">Skip to main content</a></div><nav aria-label="Main" class="theme-layout-navbar navbar navbar--fixed-top"><div class="navbar__inner"><div class="theme-layout-navbar-left navbar__items"><button aria-label="Toggle navigation bar" aria-expanded="false" class="navbar__toggle clean-btn" type="button"><svg width="30" height="30" viewBox="0 0 30 30" aria-hidden="true"><path stroke="currentColor" stroke-linecap="round" stroke-miterlimit="10" stroke-width="2" d="M4 7h22M4 15h22M4 23h22"></path></svg></button><a class="navbar__brand" href="/LLMs-for-Backend-Engineers/"><div class="navbar__logo"><img src="/LLMs-for-Backend-Engineers/img/logo.svg" alt="LLM Book Logo" class="themedComponent_mlkZ themedComponent--light_NVdE"><img src="/LLMs-for-Backend-Engineers/img/logo.svg" alt="LLM Book Logo" class="themedComponent_mlkZ themedComponent--dark_xIcU"></div><b class="navbar__title text--truncate">LLMs for Backend Engineers</b></a></div><div class="theme-layout-navbar-right navbar__items navbar__items--right"><a href="https://github.com/kingson4wu/LLMs-for-Backend-Engineers" target="_blank" rel="noopener noreferrer" class="navbar__item navbar__link">GitHub<svg width="13.5" height="13.5" aria-label="(opens in new tab)" class="iconExternalLink_nPIU"><use href="#theme-svg-external-link"></use></svg></a><div class="toggle_vylO colorModeToggle_DEke"><button class="clean-btn toggleButton_gllP toggleButtonDisabled_aARS" type="button" disabled="" title="system mode" aria-label="Switch between dark and light mode (currently system mode)"><svg viewBox="0 0 24 24" width="24" height="24" aria-hidden="true" class="toggleIcon_g3eP lightToggleIcon_pyhR"><path fill="currentColor" d="M12,9c1.65,0,3,1.35,3,3s-1.35,3-3,3s-3-1.35-3-3S10.35,9,12,9 M12,7c-2.76,0-5,2.24-5,5s2.24,5,5,5s5-2.24,5-5 S14.76,7,12,7L12,7z M2,13l2,0c0.55,0,1-0.45,1-1s-0.45-1-1-1l-2,0c-0.55,0-1,0.45-1,1S1.45,13,2,13z M20,13l2,0c0.55,0,1-0.45,1-1 s-0.45-1-1-1l-2,0c-0.55,0-1,0.45-1,1S19.45,13,20,13z M11,2v2c0,0.55,0.45,1,1,1s1-0.45,1-1V2c0-0.55-0.45-1-1-1S11,1.45,11,2z M11,20v2c0,0.55,0.45,1,1,1s1-0.45,1-1v-2c0-0.55-0.45-1-1-1C11.45,19,11,19.45,11,20z M5.99,4.58c-0.39-0.39-1.03-0.39-1.41,0 c-0.39,0.39-0.39,1.03,0,1.41l1.06,1.06c0.39,0.39,1.03,0.39,1.41,0s0.39-1.03,0-1.41L5.99,4.58z M18.36,16.95 c-0.39-0.39-1.03-0.39-1.41,0c-0.39,0.39-0.39,1.03,0,1.41l1.06,1.06c0.39,0.39,1.03,0.39,1.41,0c0.39-0.39,0.39-1.03,0-1.41 L18.36,16.95z M19.42,5.99c0.39-0.39,0.39-1.03,0-1.41c-0.39-0.39-1.03-0.39-1.41,0l-1.06,1.06c-0.39,0.39-0.39,1.03,0,1.41 s1.03,0.39,1.41,0L19.42,5.99z M7.05,18.36c0.39-0.39,0.39-1.03,0-1.41c-0.39-0.39-1.03-0.39-1.41,0l-1.06,1.06 c-0.39,0.39-0.39,1.03,0,1.41s1.03,0.39,1.41,0L7.05,18.36z"></path></svg><svg viewBox="0 0 24 24" width="24" height="24" aria-hidden="true" class="toggleIcon_g3eP darkToggleIcon_wfgR"><path fill="currentColor" d="M9.37,5.51C9.19,6.15,9.1,6.82,9.1,7.5c0,4.08,3.32,7.4,7.4,7.4c0.68,0,1.35-0.09,1.99-0.27C17.45,17.19,14.93,19,12,19 c-3.86,0-7-3.14-7-7C5,9.07,6.81,6.55,9.37,5.51z M12,3c-4.97,0-9,4.03-9,9s4.03,9,9,9s9-4.03,9-9c0-0.46-0.04-0.92-0.1-1.36 c-0.98,1.37-2.58,2.26-4.4,2.26c-2.98,0-5.4-2.42-5.4-5.4c0-1.81,0.89-3.42,2.26-4.4C12.92,3.04,12.46,3,12,3L12,3z"></path></svg><svg viewBox="0 0 24 24" width="24" height="24" aria-hidden="true" class="toggleIcon_g3eP systemToggleIcon_QzmC"><path fill="currentColor" d="m12 21c4.971 0 9-4.029 9-9s-4.029-9-9-9-9 4.029-9 9 4.029 9 9 9zm4.95-13.95c1.313 1.313 2.05 3.093 2.05 4.95s-0.738 3.637-2.05 4.95c-1.313 1.313-3.093 2.05-4.95 2.05v-14c1.857 0 3.637 0.737 4.95 2.05z"></path></svg></button></div><div class="navbarSearchContainer_Bca1"></div></div></div><div role="presentation" class="navbar-sidebar__backdrop"></div></nav><div id="__docusaurus_skipToContent_fallback" class="theme-layout-main main-wrapper mainWrapper_z2l0"><div class="docsWrapper_hBAB"><button aria-label="Scroll back to top" class="clean-btn theme-back-to-top-button backToTopButton_sjWU" type="button"></button><div class="docRoot_UBD9"><aside class="theme-doc-sidebar-container docSidebarContainer_YfHR"><div class="sidebarViewport_aRkj"><div class="sidebar_njMd"><nav aria-label="Docs sidebar" class="menu thin-scrollbar menu_SIkG"><ul class="theme-doc-sidebar-menu menu__list"><li class="theme-doc-sidebar-item-link theme-doc-sidebar-item-link-level-1 menu__list-item"><a class="menu__link" href="/LLMs-for-Backend-Engineers/intro"><span title="简介" class="linkLabel_WmDU">简介</span></a></li><li class="theme-doc-sidebar-item-category theme-doc-sidebar-item-category-level-1 menu__list-item menu__list-item--collapsed"><div class="menu__list-item-collapsible"><a class="categoryLink_byQd menu__link menu__link--sublist menu__link--sublist-caret" role="button" aria-expanded="false" href="/LLMs-for-Backend-Engineers/chapters/chapter1"><span title="基础概念" class="categoryLinkLabel_W154">基础概念</span></a></div></li><li class="theme-doc-sidebar-item-category theme-doc-sidebar-item-category-level-1 menu__list-item menu__list-item--collapsed"><div class="menu__list-item-collapsible"><a class="categoryLink_byQd menu__link menu__link--sublist menu__link--sublist-caret" role="button" aria-expanded="false" href="/LLMs-for-Backend-Engineers/chapters/chapter3"><span title="实践应用" class="categoryLinkLabel_W154">实践应用</span></a></div></li><li class="theme-doc-sidebar-item-category theme-doc-sidebar-item-category-level-1 menu__list-item menu__list-item--collapsed"><div class="menu__list-item-collapsible"><a class="categoryLink_byQd menu__link menu__link--sublist menu__link--sublist-caret" role="button" aria-expanded="false" href="/LLMs-for-Backend-Engineers/chapters/chapter5"><span title="高级主题" class="categoryLinkLabel_W154">高级主题</span></a></div></li><li class="theme-doc-sidebar-item-category theme-doc-sidebar-item-category-level-1 menu__list-item"><div class="menu__list-item-collapsible"><a class="categoryLink_byQd menu__link menu__link--sublist menu__link--sublist-caret menu__link--active" role="button" aria-expanded="true" href="/LLMs-for-Backend-Engineers/advanced_transformer/transformer_architecture"><span title="Transformer深度解析" class="categoryLinkLabel_W154">Transformer深度解析</span></a></div><ul class="menu__list"><li class="theme-doc-sidebar-item-link theme-doc-sidebar-item-link-level-2 menu__list-item"><a class="menu__link" tabindex="0" href="/LLMs-for-Backend-Engineers/advanced_transformer/transformer_architecture"><span title="Transformer架构：分布式系统视角" class="linkLabel_WmDU">Transformer架构：分布式系统视角</span></a></li><li class="theme-doc-sidebar-item-link theme-doc-sidebar-item-link-level-2 menu__list-item"><a class="menu__link menu__link--active" aria-current="page" tabindex="0" href="/LLMs-for-Backend-Engineers/advanced_transformer/attention_mechanism"><span title="Attention机制：工程视角解析" class="linkLabel_WmDU">Attention机制：工程视角解析</span></a></li><li class="theme-doc-sidebar-item-link theme-doc-sidebar-item-link-level-2 menu__list-item"><a class="menu__link" tabindex="0" href="/LLMs-for-Backend-Engineers/advanced_transformer/llm_generation"><span title="LLM生成机制：去神秘化解析" class="linkLabel_WmDU">LLM生成机制：去神秘化解析</span></a></li><li class="theme-doc-sidebar-item-link theme-doc-sidebar-item-link-level-2 menu__list-item"><a class="menu__link" tabindex="0" href="/LLMs-for-Backend-Engineers/advanced_transformer/ai_engineering_practices"><span title="AI系统工程实践：去神话指南" class="linkLabel_WmDU">AI系统工程实践：去神话指南</span></a></li></ul></li></ul></nav></div></div></aside><main class="docMainContainer_TBSr"><div class="container padding-top--md padding-bottom--lg"><div class="row"><div class="col docItemCol_VOVn"><div class="docItemContainer_Djhp"><article><nav class="theme-doc-breadcrumbs breadcrumbsContainer_Z_bl" aria-label="Breadcrumbs"><ul class="breadcrumbs"><li class="breadcrumbs__item"><a aria-label="Home page" class="breadcrumbs__link" href="/LLMs-for-Backend-Engineers/"><svg viewBox="0 0 24 24" class="breadcrumbHomeIcon_YNFT"><path d="M10 19v-5h4v5c0 .55.45 1 1 1h3c.55 0 1-.45 1-1v-7h1.7c.46 0 .68-.57.33-.87L12.67 3.6c-.38-.34-.96-.34-1.34 0l-8.36 7.53c-.34.3-.13.87.33.87H5v7c0 .55.45 1 1 1h3c.55 0 1-.45 1-1z" fill="currentColor"></path></svg></a></li><li class="breadcrumbs__item"><span class="breadcrumbs__link">Transformer深度解析</span></li><li class="breadcrumbs__item breadcrumbs__item--active"><span class="breadcrumbs__link">Attention机制：工程视角解析</span></li></ul></nav><div class="tocCollapsible_ETCw theme-doc-toc-mobile tocMobile_ITEo"><button type="button" class="clean-btn tocCollapsibleButton_TO0P">On this page</button></div><div class="theme-doc-markdown markdown"><header><h1>Attention机制：工程视角解析</h1></header>
+<h2 class="anchor anchorTargetStickyNavbar_Vzrq" id="attention-本质是什么不是数学是工程视角">Attention 本质是什么？（不是数学，是工程视角）<a href="#attention-本质是什么不是数学是工程视角" class="hash-link" aria-label="Direct link to Attention 本质是什么？（不是数学，是工程视角）" title="Direct link to Attention 本质是什么？（不是数学，是工程视角）" translate="no">​</a></h2>
+<p>别再看那些&quot;Q/K/V 是查询/键/值&quot;这种小儿科名词解释了。</p>
+<p>从工程视角，它就是一个：<strong>基于相似度的动态路由表（Dynamic Routing Table）</strong>。</p>
+<h3 class="anchor anchorTargetStickyNavbar_Vzrq" id="把-token-看成节点">把 token 看成节点<a href="#把-token-看成节点" class="hash-link" aria-label="Direct link to 把 token 看成节点" title="Direct link to 把 token 看成节点" translate="no">​</a></h3>
+<ul>
+<li class=""><strong>Q（Query）</strong> = 当前节点发出的查找需求</li>
+<li class=""><strong>K（Key）</strong> = 其他节点所能提供的&quot;检索标签&quot;</li>
+<li class=""><strong>V（Value）</strong> = 其他节点的真实内容（payload）</li>
+</ul>
+<h3 class="anchor anchorTargetStickyNavbar_Vzrq" id="attention-做的事其实就是">Attention 做的事其实就是<a href="#attention-做的事其实就是" class="hash-link" aria-label="Direct link to Attention 做的事其实就是" title="Direct link to Attention 做的事其实就是" translate="no">​</a></h3>
+<ol>
+<li class="">计算 &quot;节点之间是否相关&quot;（Q 和 K 做匹配）</li>
+<li class="">根据相关度动态生成一张路由转发表</li>
+<li class="">按照路由权重聚合其他节点的数据（通过 V）</li>
+</ol>
+<p>你是做后端的，可以把它理解为：</p>
+<blockquote>
+<p>每个 token 都在 runtime 自己决定要从哪些其他 token pull data，并且 pull 的权重是多少。</p>
+</blockquote>
+<p>没有魔法，就是动态路由。</p>
+<h2 class="anchor anchorTargetStickyNavbar_Vzrq" id="q--k--v-的真正工程含义">Q / K / V 的真正工程含义<a href="#q--k--v-的真正工程含义" class="hash-link" aria-label="Direct link to Q / K / V 的真正工程含义" title="Direct link to Q / K / V 的真正工程含义" translate="no">​</a></h2>
+<p>我们把&quot;QKV 是查询/键/值&quot;这种废话升级成工程语言。</p>
+<p>对于某个 token T：</p>
+<h3 class="anchor anchorTargetStickyNavbar_Vzrq" id="qquery">Q（Query）<a href="#qquery" class="hash-link" aria-label="Direct link to Q（Query）" title="Direct link to Q（Query）" translate="no">​</a></h3>
+<ul>
+<li class=""><strong>&quot;我当前想补全的语义需求向量&quot;</strong></li>
+</ul>
+<p>它不是问题文本，而是：</p>
+<ul>
+<li class="">当前 token 在当前层、当前上下文中</li>
+<li class="">&quot;还缺什么信息&quot; 的抽象表示</li>
+</ul>
+<h3 class="anchor anchorTargetStickyNavbar_Vzrq" id="kkey">K（Key）<a href="#kkey" class="hash-link" aria-label="Direct link to K（Key）" title="Direct link to K（Key）" translate="no">​</a></h3>
+<ul>
+<li class=""><strong>&quot;我能被别人用什么方式检索到&quot;</strong></li>
+</ul>
+<p>每个 token 对外暴露一个 K，表示：</p>
+<ul>
+<li class="">&quot;如果你在找某类信息，我适不适合被你参考？&quot;</li>
+</ul>
+<p>这非常像：</p>
+<ul>
+<li class="">搜索系统的倒排索引</li>
+<li class="">服务注册中心里的 metadata</li>
+<li class="">ES 里的 keyword embedding</li>
+</ul>
+<h3 class="anchor anchorTargetStickyNavbar_Vzrq" id="vvalue">V（Value）<a href="#vvalue" class="hash-link" aria-label="Direct link to V（Value）" title="Direct link to V（Value）" translate="no">​</a></h3>
+<ul>
+<li class=""><strong>&quot;如果你决定参考我，我真正能给你的内容&quot;</strong></li>
+</ul>
+<p>V 是 payload，是数据本体。</p>
+<p><strong>重点来了</strong>：</p>
+<ul>
+<li class="">K 只是为了&quot;被选中&quot;</li>
+<li class="">V 才是&quot;被用到的内容&quot;</li>
+</ul>
+<p>很多科普文把 K 和 V 混着讲，这是非常糟糕的。</p>
+<h2 class="anchor anchorTargetStickyNavbar_Vzrq" id="attention-的完整运行流程工程拆解">Attention 的完整运行流程（工程拆解）<a href="#attention-的完整运行流程工程拆解" class="hash-link" aria-label="Direct link to Attention 的完整运行流程（工程拆解）" title="Direct link to Attention 的完整运行流程（工程拆解）" translate="no">​</a></h2>
+<p>我们只看一个 token T 的视角。</p>
+<h3 class="anchor anchorTargetStickyNavbar_Vzrq" id="step-1构造查询意图q">Step 1：构造查询意图（Q）<a href="#step-1构造查询意图q" class="hash-link" aria-label="Direct link to Step 1：构造查询意图（Q）" title="Direct link to Step 1：构造查询意图（Q）" translate="no">​</a></h3>
+<p>Token T 先根据自己当前状态，生成一个 Q：</p>
+<blockquote>
+<p>&quot;我现在在这个上下文里，想知道些什么？&quot;</p>
+</blockquote>
+<p>这是一个向量，不是字符串。</p>
+<h3 class="anchor anchorTargetStickyNavbar_Vzrq" id="step-2对全网做可检索性评估q--k">Step 2：对全网做可检索性评估（Q · K）<a href="#step-2对全网做可检索性评估q--k" class="hash-link" aria-label="Direct link to Step 2：对全网做可检索性评估（Q · K）" title="Direct link to Step 2：对全网做可检索性评估（Q · K）" translate="no">​</a></h3>
+<p>T 用自己的 Q，去和所有 token 的 K 做匹配。</p>
+<p>你可以把它想象成：</p>
+<ul>
+<li class="">用一个 embedding 去扫一张全表索引</li>
+<li class="">看哪些记录&quot;看起来像我需要的&quot;</li>
+</ul>
+<p>匹配结果不是 yes/no，而是相关度打分。</p>
+<h3 class="anchor anchorTargetStickyNavbar_Vzrq" id="step-3把相关度转成资源分配比例softmax">Step 3：把相关度转成&quot;资源分配比例&quot;（softmax）<a href="#step-3把相关度转成资源分配比例softmax" class="hash-link" aria-label="Direct link to Step 3：把相关度转成&quot;资源分配比例&quot;（softmax）" title="Direct link to Step 3：把相关度转成&quot;资源分配比例&quot;（softmax）" translate="no">​</a></h3>
+<p>原始打分不能直接用，因为：</p>
+<ul>
+<li class="">有正有负</li>
+<li class="">量纲不统一</li>
+<li class="">总量不可控</li>
+</ul>
+<p>softmax 在工程上做的事只有一个：</p>
+<blockquote>
+<p>把一堆打分，转成&quot;总量为 1 的资源分配比例&quot;。</p>
+</blockquote>
+<p>你可以把它理解为：</p>
+<ul>
+<li class="">流量比例</li>
+<li class="">CPU 时间片比例</li>
+<li class="">带宽分配权重</li>
+</ul>
+<p>不是数学技巧，是资源调度。</p>
+<h3 class="anchor anchorTargetStickyNavbar_Vzrq" id="step-4按比例拉取真实数据加权-v">Step 4：按比例拉取真实数据（加权 V）<a href="#step-4按比例拉取真实数据加权-v" class="hash-link" aria-label="Direct link to Step 4：按比例拉取真实数据（加权 V）" title="Direct link to Step 4：按比例拉取真实数据（加权 V）" translate="no">​</a></h3>
+<p>现在 T 已经有了一张路由表：</p>
+<div class="language-text codeBlockContainer_Ckt0 theme-code-block" style="--prism-color:#393A34;--prism-background-color:#f6f8fa"><div class="codeBlockContent_QJqH"><pre tabindex="0" class="prism-code language-text codeBlock_bY9V thin-scrollbar" style="color:#393A34;background-color:#f6f8fa"><code class="codeBlockLines_e6Vv"><span class="token-line" style="color:#393A34"><span class="token plain">token A: 0.5</span><br></span><span class="token-line" style="color:#393A34"><span class="token plain">token B: 0.3</span><br></span><span class="token-line" style="color:#393A34"><span class="token plain">token C: 0.2</span><br></span></code></pre></div></div>
+<p>于是：</p>
+<ul>
+<li class="">从 A 的 V 拉 50%</li>
+<li class="">从 B 的 V 拉 30%</li>
+<li class="">从 C 的 V 拉 20%</li>
+</ul>
+<p>拉完后加权合并，得到一个新的向量。这就是 attention 的输出。</p>
+<h2 class="anchor anchorTargetStickyNavbar_Vzrq" id="关键概念澄清">关键概念澄清<a href="#关键概念澄清" class="hash-link" aria-label="Direct link to 关键概念澄清" title="Direct link to 关键概念澄清" translate="no">​</a></h2>
+<h3 class="anchor anchorTargetStickyNavbar_Vzrq" id="attention-不是找最相关的那个">Attention 不是&quot;找最相关的那个&quot;<a href="#attention-不是找最相关的那个" class="hash-link" aria-label="Direct link to Attention 不是&quot;找最相关的那个&quot;" title="Direct link to Attention 不是&quot;找最相关的那个&quot;" translate="no">​</a></h3>
+<p>很多人以为 attention 在做 Top-1 / Top-K 匹配，这是错的。</p>
+<p>Attention 做的是：<strong>软聚合（soft aggregation）</strong></p>
+<p>它允许：</p>
+<ul>
+<li class="">多个 token 同时贡献信息</li>
+<li class="">贡献比例连续可微</li>
+<li class="">学习过程稳定</li>
+</ul>
+<p>这在工程上非常重要：</p>
+<ul>
+<li class="">不会因为选错一个节点导致崩溃</li>
+<li class="">表达能力远强于硬路由</li>
+</ul>
+<h3 class="anchor anchorTargetStickyNavbar_Vzrq" id="self-attention-vs-cross-attention一句话讲清">Self-Attention vs Cross-Attention（一句话讲清）<a href="#self-attention-vs-cross-attention一句话讲清" class="hash-link" aria-label="Direct link to Self-Attention vs Cross-Attention（一句话讲清）" title="Direct link to Self-Attention vs Cross-Attention（一句话讲清）" translate="no">​</a></h3>
+<ul>
+<li class=""><strong>Self-Attention</strong>: Q/K/V 都来自同一个序列 = 节点在&quot;集群内部&quot;互相通信</li>
+<li class=""><strong>Cross-Attention</strong>: Q 来自 A，K/V 来自 B = 一个系统在调用另一个系统的数据</li>
+</ul>
+<h2 class="anchor anchorTargetStickyNavbar_Vzrq" id="多头-attention-的工程意义">多头 Attention 的工程意义<a href="#多头-attention-的工程意义" class="hash-link" aria-label="Direct link to 多头 Attention 的工程意义" title="Direct link to 多头 Attention 的工程意义" translate="no">​</a></h2>
+<p>每个 head：</p>
+<ul>
+<li class="">有自己的一套 Q/K/V 投影</li>
+<li class="">学习自己的路由规则</li>
+<li class="">聚焦不同关系模式</li>
+</ul>
+<p>例如（直觉层面）：</p>
+<ul>
+<li class="">Head 1：主谓关系</li>
+<li class="">Head 2：指代关系</li>
+<li class="">Head 3：时间顺序</li>
+<li class="">Head 4：语义相似度</li>
+</ul>
+<p>这些不是人为指定的，是训练中自然分化出来的。</p>
+<p><strong>多头的本质是：并行的多策略路由系统</strong>。</p>
+<h2 class="anchor anchorTargetStickyNavbar_Vzrq" id="attention-为什么必须是可微的">Attention 为什么必须是&quot;可微的&quot;？<a href="#attention-为什么必须是可微的" class="hash-link" aria-label="Direct link to Attention 为什么必须是&quot;可微的&quot;？" title="Direct link to Attention 为什么必须是&quot;可微的&quot;？" translate="no">​</a></h2>
+<p>如果路由是 if/else 或 top-k 硬选择，那梯度就断了，模型不可训练。</p>
+<p>softmax + 加权和的意义是：<strong>让&quot;路由决策&quot;本身也能被学习</strong>。</p>
+<p>你不是写规则，而是训练规则。</p>
+<h2 class="anchor anchorTargetStickyNavbar_Vzrq" id="阶段性总结">阶段性总结<a href="#阶段性总结" class="hash-link" aria-label="Direct link to 阶段性总结" title="Direct link to 阶段性总结" translate="no">​</a></h2>
+<p>请你把下面这段话记住，它比任何公式都有用：</p>
+<blockquote>
+<p><strong>Attention 不是相似度计算，而是一个可学习的、并行的、软路由信息聚合机制。Transformer 本质上是在反复执行这种路由与聚合。</strong></p>
+</blockquote></div><footer class="theme-doc-footer docusaurus-mt-lg"><div class="row margin-top--sm theme-doc-footer-edit-meta-row"><div class="col noPrint_WFHX"><a href="https://github.com/facebook/docusaurus/tree/main/packages/create-docusaurus/templates/shared/docs/advanced_transformer/attention_mechanism.md" target="_blank" rel="noopener noreferrer" class="theme-edit-this-page"><svg fill="currentColor" height="20" width="20" viewBox="0 0 40 40" class="iconEdit_Z9Sw" aria-hidden="true"><g><path d="m34.5 11.7l-3 3.1-6.3-6.3 3.1-3q0.5-0.5 1.2-0.5t1.1 0.5l3.9 3.9q0.5 0.4 0.5 1.1t-0.5 1.2z m-29.5 17.1l18.4-18.5 6.3 6.3-18.4 18.4h-6.3v-6.2z"></path></g></svg>Edit this page</a></div><div class="col lastUpdated_JAkA"></div></div></footer></article><nav class="docusaurus-mt-lg pagination-nav" aria-label="Docs pages"><a class="pagination-nav__link pagination-nav__link--prev" href="/LLMs-for-Backend-Engineers/advanced_transformer/transformer_architecture"><div class="pagination-nav__sublabel">Previous</div><div class="pagination-nav__label">Transformer架构：分布式系统视角</div></a><a class="pagination-nav__link pagination-nav__link--next" href="/LLMs-for-Backend-Engineers/advanced_transformer/llm_generation"><div class="pagination-nav__sublabel">Next</div><div class="pagination-nav__label">LLM生成机制：去神秘化解析</div></a></nav></div></div><div class="col col--3"><div class="tableOfContents_bqdL thin-scrollbar theme-doc-toc-desktop"><ul class="table-of-contents table-of-contents__left-border"><li><a href="#attention-本质是什么不是数学是工程视角" class="table-of-contents__link toc-highlight">Attention 本质是什么？（不是数学，是工程视角）</a><ul><li><a href="#把-token-看成节点" class="table-of-contents__link toc-highlight">把 token 看成节点</a></li><li><a href="#attention-做的事其实就是" class="table-of-contents__link toc-highlight">Attention 做的事其实就是</a></li></ul></li><li><a href="#q--k--v-的真正工程含义" class="table-of-contents__link toc-highlight">Q / K / V 的真正工程含义</a><ul><li><a href="#qquery" class="table-of-contents__link toc-highlight">Q（Query）</a></li><li><a href="#kkey" class="table-of-contents__link toc-highlight">K（Key）</a></li><li><a href="#vvalue" class="table-of-contents__link toc-highlight">V（Value）</a></li></ul></li><li><a href="#attention-的完整运行流程工程拆解" class="table-of-contents__link toc-highlight">Attention 的完整运行流程（工程拆解）</a><ul><li><a href="#step-1构造查询意图q" class="table-of-contents__link toc-highlight">Step 1：构造查询意图（Q）</a></li><li><a href="#step-2对全网做可检索性评估q--k" class="table-of-contents__link toc-highlight">Step 2：对全网做可检索性评估（Q · K）</a></li><li><a href="#step-3把相关度转成资源分配比例softmax" class="table-of-contents__link toc-highlight">Step 3：把相关度转成&quot;资源分配比例&quot;（softmax）</a></li><li><a href="#step-4按比例拉取真实数据加权-v" class="table-of-contents__link toc-highlight">Step 4：按比例拉取真实数据（加权 V）</a></li></ul></li><li><a href="#关键概念澄清" class="table-of-contents__link toc-highlight">关键概念澄清</a><ul><li><a href="#attention-不是找最相关的那个" class="table-of-contents__link toc-highlight">Attention 不是&quot;找最相关的那个&quot;</a></li><li><a href="#self-attention-vs-cross-attention一句话讲清" class="table-of-contents__link toc-highlight">Self-Attention vs Cross-Attention（一句话讲清）</a></li></ul></li><li><a href="#多头-attention-的工程意义" class="table-of-contents__link toc-highlight">多头 Attention 的工程意义</a></li><li><a href="#attention-为什么必须是可微的" class="table-of-contents__link toc-highlight">Attention 为什么必须是&quot;可微的&quot;？</a></li><li><a href="#阶段性总结" class="table-of-contents__link toc-highlight">阶段性总结</a></li></ul></div></div></div></div></main></div></div></div><footer class="theme-layout-footer footer footer--dark"><div class="container container-fluid"><div class="row footer__links"><div class="theme-layout-footer-column col footer__col"><div class="footer__title">Docs</div><ul class="footer__items clean-list"><li class="footer__item"><a class="footer__link-item" href="/LLMs-for-Backend-Engineers/intro">电子书</a></li></ul></div><div class="theme-layout-footer-column col footer__col"><div class="footer__title">Community</div><ul class="footer__items clean-list"><li class="footer__item"><a href="https://stackoverflow.com/questions/tagged/docusaurus" target="_blank" rel="noopener noreferrer" class="footer__link-item">Stack Overflow<svg width="13.5" height="13.5" aria-label="(opens in new tab)" class="iconExternalLink_nPIU"><use href="#theme-svg-external-link"></use></svg></a></li><li class="footer__item"><a href="https://discordapp.com/invite/docusaurus" target="_blank" rel="noopener noreferrer" class="footer__link-item">Discord<svg width="13.5" height="13.5" aria-label="(opens in new tab)" class="iconExternalLink_nPIU"><use href="#theme-svg-external-link"></use></svg></a></li><li class="footer__item"><a href="https://x.com/docusaurus" target="_blank" rel="noopener noreferrer" class="footer__link-item">X<svg width="13.5" height="13.5" aria-label="(opens in new tab)" class="iconExternalLink_nPIU"><use href="#theme-svg-external-link"></use></svg></a></li></ul></div><div class="theme-layout-footer-column col footer__col"><div class="footer__title">More</div><ul class="footer__items clean-list"><li class="footer__item"><a class="footer__link-item" href="/LLMs-for-Backend-Engineers/blog">Blog</a></li><li class="footer__item"><a href="https://github.com/facebook/docusaurus" target="_blank" rel="noopener noreferrer" class="footer__link-item">GitHub<svg width="13.5" height="13.5" aria-label="(opens in new tab)" class="iconExternalLink_nPIU"><use href="#theme-svg-external-link"></use></svg></a></li></ul></div></div><div class="footer__bottom text--center"><div class="footer__copyright">Copyright © 2025 My Project, Inc. Built with Docusaurus.</div></div></div></footer></div>
+</body>
+</html>

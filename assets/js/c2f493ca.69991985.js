@@ -1,0 +1,1 @@
+"use strict";(globalThis.webpackChunktemp_book=globalThis.webpackChunktemp_book||[]).push([[766],{338:e=>{e.exports=JSON.parse('{"metadata":{"permalink":"/LLMs-for-Backend-Engineers/blog","page":1,"postsPerPage":10,"totalPages":1,"totalCount":4,"blogDescription":"Blog","blogTitle":"Blog"}}')}}]);
