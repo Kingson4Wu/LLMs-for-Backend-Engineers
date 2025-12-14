@@ -1,0 +1,54 @@
+# Dependencies
+node_modules/
+
+# Production builds
+/build/
+/dist/
+/out/
+
+# Temporary files
+.nyc_output/
+coverage/
+*.log
+
+# Environment variables
+.env*
+!.env.example
+
+# OS generated files
+.DS_Store
+Thumbs.db
+
+# IDE specific files
+.vscode/
+.idea/
+*.swp
+*.swo
+
+# Docusaurus specific
+.docusaurus/
+.cache/
+
+# Editor temporary files
+*~
+#*.tmp
+*.bak
+
+# Local configuration
+/.netlify/
+.vercel/
+.now/
+
+# Coverage directory used by tools like istanbul
+coverage/
+
+# Testing
+.nyc_output/
+.jest/
+
+# Temporary files used by Docusaurus during development
+.temp/
+
+# Debugging
+debug.log
+*.trace

@@ -1,6 +1,57 @@
 
 # LLMs for Backend Engineers
 
+## 本地开发
+
+本文档介绍如何在本地启动和开发《LLMs for Backend Engineers》电子书项目。
+
+### 快速启动
+
+项目提供了便捷的启动脚本：
+
+**Linux/macOS:**
+```bash
+./start_docs.sh
+```
+
+**Windows:**
+双击运行 `start_docs.bat`
+
+启动后，电子书将可以通过 `http://localhost:3000/` 访问。
+
+如需更多信息，请查看 [LOCAL_DEVELOPMENT.md](LOCAL_DEVELOPMENT.md)。
+
+## 部署到 GitHub Pages
+
+本项目支持将电子书部署到 GitHub Pages。
+
+### 部署步骤
+
+1. 构建项目：
+```bash
+cd documentation
+npm run build
+```
+
+2. 部署到 GitHub Pages：
+```bash
+# 使用用户名部署
+GIT_USER=<username> npm run deploy
+
+# 或使用 SSH 方式
+USE_SSH=true npm run deploy
+
+# 或使用 GitHub Token
+GITHUB_TOKEN=<token> npm run deploy
+```
+
+对于此项目，部署命令为：
+```bash
+GIT_USER=kingson4wu npm run deploy
+```
+
+部署后，电子书将在 `https://kingson4wu.github.io/LLMs-for-Backend-Engineers/` 可访问。
+
 *A clear and practical guide to large language models*
 
 ## Overview
