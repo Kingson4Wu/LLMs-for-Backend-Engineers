@@ -24,7 +24,11 @@ const sidebars: SidebarsConfig = {
     {
       type: 'category',
       label: '实践应用',
-      items: ['chapters/chapter3', 'chapters/chapter4'],
+      items: ['chapters/chapter3', 'chapters/chapter4', {
+        type: 'category',
+        label: '向量与嵌入基础',
+        items: ['chapters/vector_concepts/dot_product_angle'],
+      }],
     },
     {
       type: 'category',
