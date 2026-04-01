@@ -1,9 +1,9 @@
 ---
-sidebar_label: 'LLM生成机制：去神秘化解析'
+sidebar_label: 'LLM生成机制'
 sidebar_position: 3
 ---
 
-# LLM生成机制：去神秘化解析
+# LLM生成机制
 
 ## "模型在思考"是一种错觉
 
@@ -185,3 +185,175 @@ KV cache 本质上是一个工程优化：
 - 会泄露训练分布和系统策略
 
 隐藏 CoT 是产品与安全决策，不是模型能力变化。
+
+---
+
+## 采样策略：Top-K、Top-P、Temperature
+
+生成过程中，每一步都要从一个概率分布里选一个 token。选法不同，结果的"确定性"和"多样性"也不同。
+
+### 采样流程全貌
+
+```
+输入文本
+    ↓
+模型前向计算（全词表概率分布）
+    ↓
+【Temperature】调整概率陡峭度
+    ↓
+【Top-K】限制候选上限（最多 K 个）
+    ↓
+【Top-P】累计概率筛选（质量阈值）
+    ↓
+归一化概率
+    ↓
+【采样策略】选择 1 个 token
+    ↓
+输出拼入序列，重复
+```
+
+### Temperature：调整概率分布的"陡峭程度"
+
+Temperature 在 Top-K/Top-P **之前**应用：
+
+```
+原始概率:  [0.5, 0.3, 0.15, 0.05]
+Temp = 0.5（更确定）→ [0.64, 0.24, 0.09, 0.03]  ← 几乎总选最高
+Temp = 1.0（保持原样）→ [0.5, 0.3, 0.15, 0.05]
+Temp = 2.0（更随机）→ [0.33, 0.27, 0.22, 0.18]  ← 机会更均等
+```
+
+数学上，Temperature 把 logits 除以一个温度值，再做 softmax——温度越高，分布越平；温度越低，分布越"尖峰"。
+
+### Top-K 和 Top-P：筛选候选池
+
+即使 Temperature 调整了分布，全词表（5 万个 token）里大部分概率接近于零。Top-K 和 Top-P 的作用是把真正值得考虑的候选缩小到一个可控范围。
+
+**Top-K**：硬性上限，只保留概率最高的 K 个 token。比如 Top-K=50，就只从 5 万个里挑前 50 个。
+
+**Top-P**：自适应筛选，从概率最高的 token 开始累加，累加到超过阈值 P 为止。比如 Top-P=0.9，实际候选数可能是 5~20 个（取决于分布形状）。
+
+```
+原始词表 50,000 个 token
+    ↓
+Top-K = 50（只保留前 50 个）
+    ↓
+Top-P = 0.9（从 50 个中筛选到 3~10 个）
+    ↓
+从这 3~10 个中按概率加权随机采样 1 个
+```
+
+**常见配置**：
+
+| 任务 | Temperature | Top-K | Top-P |
+|------|------------|-------|-------|
+| 代码生成 | 0.2 | 50 | 0.9 |
+| 事实问答 | 0.7 | 40 | 0.85 |
+| 日常对话 | 0.8 | 50 | 0.9 |
+| 创意写作 | 1.0 | 0 | 0.95 |
+
+### 三种采样策略
+
+**1. 加权随机采样（最常用，默认）**
+
+经过 Top-K/Top-P 筛选后，按概率加权随机采样。概率高的 token 更容易被选中，但概率低的也有机会被抽到。
+
+```
+候选词: ["很", "真", "挺", "非常"]
+概率:   [0.5,  0.3,  0.15, 0.05]
+
+生成随机数 r ∈ [0, 1)：
+- r ∈ [0, 0.5)      → 选 "很"   (50%)
+- r ∈ [0.5, 0.8)    → 选 "真"   (30%)
+- r ∈ [0.8, 0.95)   → 选 "挺"   (15%)
+- r ∈ [0.95, 1.0)   → 选 "非常" (5%)
+```
+
+特点：高概率更易选中，低概率也有机会。每次生成可能不同，适合创意任务。
+
+**2. 贪心采样（Greedy Decoding）**
+
+永远选概率最高的 token，不做任何随机。
+
+```python
+selected = candidates[argmax(probs)]
+```
+
+特点：完全确定性（相同输入 → 相同输出），速度快，但容易重复、缺乏创意。适合数学计算等精确任务。
+
+**3. Beam Search（束搜索）**
+
+这是真正的"多分支"方法。每一步保留 beam_size 条最优路径，最终选总分最高的 1 条。
+
+```
+beam_size = 3
+
+步骤 1：保留 top-3 候选
+  A: "很"    B: "真"    C: "挺"
+
+步骤 2：每个分支扩展，再保留总分最高的 3 条路径
+  A → ["很好", "很不错", "很棒"]
+  B → ["真好", "真不错", "真棒"]
+  C → ["挺好", "挺不错", "挺棒"]
+
+最终：选分数最高的 1 条路径
+```
+
+特点：全局更优解，适合翻译、摘要等有标准答案的任务。但 Token 消耗是普通采样的 beam_size 倍，且缺乏多样性。
+
+### 三种策略对比
+
+| 维度 | 加权随机采样 | 贪心采样 | Beam Search |
+|------|------------|---------|-------------|
+| 分支数 | 1 条 | 1 条 | beam_size 条 |
+| 确定性 | 随机 | 完全确定 | 较确定 |
+| 多样性 | 高 | 无 | 低 |
+| Token 消耗 | N 个 | N 个 | N × beam_size |
+| 适用场景 | 创意、对话 | 数学、精确任务 | 翻译、摘要 |
+
+### 采样本质：一句话总结
+
+> **LLM 串行生成，每次用 Temperature 调整概率分布陡峭度，再用 Top-K/Top-P 筛选候选池，最后按概率加权随机选 1 个 token（除非用贪心或 Beam Search）。**
+
+### 工程实现
+
+```python
+import torch
+import torch.nn.functional as F
+
+def sample_next_token(logits, temperature=1.0, top_k=50, top_p=0.9):
+    # 步骤 1：应用 Temperature
+    logits = logits / temperature
+
+    # 步骤 2：计算概率分布
+    probs = F.softmax(logits, dim=-1)
+
+    # 步骤 3：Top-K 过滤
+    if top_k > 0:
+        top_k_probs, top_k_indices = torch.topk(probs, min(top_k, len(probs)))
+    else:
+        top_k_probs, top_k_indices = probs, torch.arange(len(probs))
+
+    # 步骤 4：Top-P 过滤
+    cumsum = torch.cumsum(top_k_probs, dim=-1)
+    cutoff_index = (cumsum >= top_p).nonzero()
+    if len(cutoff_index) > 0:
+        cutoff_index = cutoff_index[0].item() + 1
+    else:
+        cutoff_index = len(top_k_probs)
+
+    final_probs = top_k_probs[:cutoff_index]
+    final_indices = top_k_indices[:cutoff_index]
+
+    # 步骤 5：归一化
+    final_probs = final_probs / final_probs.sum()
+
+    # 步骤 6：加权随机采样
+    sampled_index = torch.multinomial(final_probs, num_samples=1)
+    return final_indices[sampled_index]
+```
+
+## 延伸阅读
+
+- [数学基础：Softmax](../math_foundations/softmax) — 采样之前，模型输出的原始分布由 Softmax 生成
+- [数学基础：反向传播](../math_foundations/backpropagation) — 采样策略影响的是推理阶段的输出，训练时的 loss 计算依赖反向传播

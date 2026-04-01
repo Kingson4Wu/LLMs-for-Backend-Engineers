@@ -1,0 +1,5 @@
+advanced_transformer/ai_engineering_practices.md
+advanced_transformer/attention_mechanism.md
+advanced_transformer/llm_generation.md
+advanced_transformer/transformer_architecture.md
+

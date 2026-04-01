@@ -7,14 +7,14 @@ sidebar_position: 2
 
 ## Attention 本质是什么？（不是数学，是工程视角）
 
-别再看那些"Q/K/V 是查询/键/值"这种小儿科名词解释了。
+从工程角度理解，Q/K/V 有更直接的含义。
 
 从工程视角，它就是一个：**基于相似度的动态路由表（Dynamic Routing Table）**。
 
 ### 把 token 看成节点
 
 - **Q（Query）** = 当前节点发出的查找需求
-- **K（Key）** = 其他节点所能提供的"检索标签"  
+- **K（Key）** = 其他节点所能提供的"检索标签"
 - **V（Value）** = 其他节点的真实内容（payload）
 
 ### Attention 做的事其实就是
@@ -27,11 +27,11 @@ sidebar_position: 2
 
 > 每个 token 都在 runtime 自己决定要从哪些其他 token pull data，并且 pull 的权重是多少。
 
-没有魔法，就是动态路由。
+从工程角度看，这就是动态路由。
 
 ## Q / K / V 的真正工程含义
 
-我们把"QKV 是查询/键/值"这种废话升级成工程语言。
+从工程角度重新理解 Q/K/V 的含义。
 
 对于某个 token T：
 
@@ -62,7 +62,7 @@ V 是 payload，是数据本体。
 - K 只是为了"被选中"
 - V 才是"被用到的内容"
 
-很多科普文把 K 和 V 混着讲，这是非常糟糕的。
+K 和 V 承担不同的工程职责，区分清楚有助于理解 attention 的信息路由机制。
 
 ## Attention 的完整运行流程（工程拆解）
 
@@ -75,7 +75,7 @@ Token T 先根据自己当前状态，生成一个 Q：
 
 这是一个向量，不是字符串。
 
-### Step 2：对全网做可检索性评估（Q · K）
+### Step 2：对全网做可检索性评估（Q · K）（详见 [向量点积与夹角：Attention 的相似度度量](../chapters/vector_concepts/dot_product_angle)）
 T 用自己的 Q，去和所有 token 的 K 做匹配。
 
 你可以把它想象成：
@@ -90,7 +90,7 @@ T 用自己的 Q，去和所有 token 的 K 做匹配。
 - 量纲不统一
 - 总量不可控
 
-softmax 在工程上做的事只有一个：
+softmax 在工程上做的事只有一个（详见 [数学基础：Softmax](../math_foundations/softmax)）：
 > 把一堆打分，转成"总量为 1 的资源分配比例"。
 
 你可以把它理解为：
@@ -158,7 +158,14 @@ softmax + 加权和的意义是：**让"路由决策"本身也能被学习**。
 
 你不是写规则，而是训练规则。
 
-## 阶段性总结
-请你把下面这段话记住，它比任何公式都有用：
+## 本章小结
+
+Attention 本质上是一个可学习的、并行的、软路由信息聚合机制。Transformer 本质上是在反复执行这种路由与聚合。
 
 > **Attention 不是相似度计算，而是一个可学习的、并行的、软路由信息聚合机制。Transformer 本质上是在反复执行这种路由与聚合。**
+
+## 延伸阅读
+
+- Vaswani et al., "Attention Is All You Need", NeurIPS 2017
+- "The Illustrated Transformer" by Jay Alammar
+- "Attention is All You Need - Explained" on paperswithcode
