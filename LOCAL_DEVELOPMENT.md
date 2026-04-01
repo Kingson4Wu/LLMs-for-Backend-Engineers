@@ -138,6 +138,33 @@ sidebar_position: 位置编号
 内容...
 ```
 
+## 部署到 GitHub Pages
+
+1. 构建项目：
+```bash
+cd documentation
+npm run build
+```
+
+2. 部署到 GitHub Pages：
+```bash
+# 使用用户名部署
+GIT_USER=<username> npm run deploy
+
+# 或使用 SSH 方式
+USE_SSH=true npm run deploy
+
+# 或使用 GitHub Token
+GITHUB_TOKEN=<token> npm run deploy
+```
+
+本项目部署命令：
+```bash
+GIT_USER=kingson4wu npm run deploy
+```
+
+部署后访问：https://kingson4wu.github.io/LLMs-for-Backend-Engineers/
+
 ## 联系方式
 
 如遇到问题，请提交 Issue 或通过 GitHub 联系项目维护者。
