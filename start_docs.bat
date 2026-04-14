@@ -1,6 +1,6 @@
 @echo off
 REM LLMs for Backend Engineers 电子书本地开发启动脚本 (Windows)
-REM 用途：快速启动Docusaurus开发服务器以预览电子书
+REM 用途：快速启动 Honkit 开发服务器以预览电子书
 
 setlocal enabledelayedexpansion
 
@@ -24,11 +24,11 @@ if errorlevel 1 (
 )
 
 REM 设置项目目录
-set "PROJECT_DIR=%~dp0documentation"
+set "PROJECT_DIR=%~dp0book"
 
 REM 检查项目目录和package.json
 if not exist "%PROJECT_DIR%" (
-    echo 错误: 未找到 documentation 目录。
+    echo 错误: 未找到 book 目录。
     pause
     exit /b 1
 )
@@ -39,7 +39,7 @@ if not exist "%PROJECT_DIR%\package.json" (
     exit /b 1
 )
 
-echo 进入文档目录: %PROJECT_DIR%
+echo 进入书籍目录: %PROJECT_DIR%
 cd /d "%PROJECT_DIR%"
 
 REM 安装依赖（如果需要）
@@ -56,9 +56,9 @@ if not exist "node_modules" (
     echo 检测到 node_modules 目录，跳过依赖安装。
 )
 
-echo 启动 Docusaurus 开发服务器...
-echo 访问地址: http://localhost:3000
+echo 启动 Honkit 开发服务器...
+echo 访问地址: http://localhost:4000
 echo 按 Ctrl+C 停止服务器。
 
 REM 启动开发服务器
-npm run start
+npm run serve

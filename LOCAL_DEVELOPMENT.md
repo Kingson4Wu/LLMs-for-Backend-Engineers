@@ -1,170 +1,84 @@
 # 本地开发指南
 
-本文档介绍如何在本地启动和开发《LLMs for Backend Engineers》电子书项目。
+本书使用 [Honkit](https://honkit.net/) 构建。
 
 ## 环境要求
 
-- Node.js (版本 20.0 或更高)
-- npm (随 Node.js 自动安装)
-- Git (用于版本控制)
+- Node.js 18+（推荐：20）
+- npm 9+
 
-## 快速启动
-
-项目提供了便捷的启动脚本，以简化本地开发流程。
-
-### Linux/macOS
-
-运行以下命令启动开发服务器：
+## 快速开始
 
 ```bash
-./start_docs.sh
-```
-
-如需强制重新安装依赖，请使用：
-
-```bash
-./start_docs.sh --install
-```
-
-如需指定端口，请使用：
-
-```bash
-./start_docs.sh --port=3001
-# 或
-./start_docs.sh -p 3001
-```
-
-获取帮助信息：
-
-```bash
-./start_docs.sh --help
-```
-
-启动后，电子书将可以通过 `http://localhost:3000/` 访问。
-
-macOS用户也可以直接使用npx命令启动（需要先cd到documentation目录）：
-
-```bash
-cd documentation && npx docusaurus start
-```
-
-### Windows
-
-双击运行 `start_docs.bat` 文件，或在命令提示符中运行：
-
-```cmd
-start_docs.bat
-```
-
-## 手动启动
-
-如果需要手动启动，可以按以下步骤操作：
-
-1. 进入文档目录：
-```bash
-cd documentation
-```
-
-2. 安装依赖（首次运行或更新后需要）：
-```bash
+cd book
 npm install
+npm run serve
 ```
 
-3. 启动开发服务器：
+打开 http://localhost:4000
+
+## 构建
+
+### 使用 npm
+
 ```bash
-npm run start
-```
-
-服务器将在 `http://localhost:3000` 上运行。
-
-## 开发命令
-
-项目支持以下开发命令：
-
-- `npm start` - 启动开发服务器
-- `npm run build` - 构建静态文件用于生产部署
-- `npm run serve` - 本地预览构建的静态文件
-- `npm run swizzle` - 自定义 Docusaurus 组件
-
-## 目录结构
-
-- `documentation/` - Docusaurus 项目主目录
-  - `docs/` - 文档源文件
-    - `chapters/` - 电子书主章节
-    - `advanced_transformer/` - Transformer深度解析章节
-  - `src/` - 自定义组件和样式
-  - `static/` - 静态资源文件
-  - `docusaurus.config.ts` - 站点配置
-  - `sidebars.ts` - 侧边栏导航配置
-
-## 故障排除
-
-### 依赖安装问题
-
-如果遇到依赖安装问题，请尝试：
-1. 清除 npm 缓存：`npm cache clean --force`
-2. 删除 node_modules 目录和 package-lock.json
-3. 重新运行 `npm install`
-
-### 端口冲突
-
-如果 3000 端口被占用，Docusaurus 会自动尝试其他端口，如 3001、3002 等。
-
-### 构建错误
-
-如果遇到构建错误，请检查：
-1. Node.js 版本是否满足要求
-2. 依赖是否正确安装
-3. 配置文件语法是否正确
-
-## 贡献指南
-
-欢迎提交 Issue 和 Pull Request 来改进电子书内容。
-
-### 添加新章节
-
-1. 在 `docs/` 目录下创建新的 Markdown 文件
-2. 在 `sidebars.ts` 中添加新章节到导航栏
-3. 使用适当的 front matter：
-
-```markdown
----
-sidebar_label: '章节标题'
-sidebar_position: 位置编号
----
-
-# 章节标题
-
-内容...
-```
-
-## 部署到 GitHub Pages
-
-1. 构建项目：
-```bash
-cd documentation
+cd book
 npm run build
 ```
 
-2. 部署到 GitHub Pages：
+输出到 `book/_book/`。
+
+### 使用 Python 工具链
+
 ```bash
-# 使用用户名部署
-GIT_USER=<username> npm run deploy
-
-# 或使用 SSH 方式
-USE_SSH=true npm run deploy
-
-# 或使用 GitHub Token
-GITHUB_TOKEN=<token> npm run deploy
+python3 tools/book-kit/build_honkit.py
 ```
 
-本项目部署命令：
+Python 工具链会自动：
+- 将源文件复制到临时暂存目录
+- 为共享资源（assets/、styles/、diagrams/）创建符号链接
+- 运行 Honkit 构建
+- 输出到 `book/_book/`
+
+### 清理
+
 ```bash
-GIT_USER=kingson4wu npm run deploy
+npm run clean
 ```
 
-部署后访问：https://kingson4wu.github.io/LLMs-for-Backend-Engineers/
+## 项目结构
 
-## 联系方式
+```
+book/
+├── book.json           # Honkit 配置
+├── package.json       # Node.js 依赖
+├── SUMMARY.md          # 书籍导航目录
+├── index.md            # 导读
+├── preface.md          # 前言
+├── README.md           # README（Honkit 根文件）
+├── styles/
+│   ├── website.css     # 网站样式
+│   └── pdf.css         # PDF 样式
+├── assets/
+│   └── cover.svg       # 书籍封面
+├── chapters/            # 章节内容
+│   ├── part1-math-foundations/    # 第一层：数学基础
+│   ├── part2-llm-internal/       # 第二层：LLM 内部机制
+│   └── part3-llm-external/       # 第三层：外部系统
+└── locales/            # 国际化文件
 
-如遇到问题，请提交 Issue 或通过 GitHub 联系项目维护者。
+tools/book-kit/
+├── build_honkit.py     # Honkit 构建脚本
+└── book_meta.py        # 书籍元数据工具
+
+.github/workflows/
+└── deploy-docs.yml     # GitHub Pages 部署
+```
+
+## 部署
+
+推送到 `main` 分支，GitHub Actions 将自动构建并部署到 GitHub Pages。
+
+## 归档说明
+
+旧的 Docusaurus 文档已移至 `archived-docusaurus/` 目录。

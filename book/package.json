@@ -1,0 +1,13 @@
+{
+  "name": "llms-backend-engineers-book",
+  "version": "1.0.0",
+  "description": "LLMs for Backend Engineers - A Honkit book for backend engineers to understand LLMs",
+  "scripts": {
+    "build": "honkit build . _book",
+    "serve": "honkit serve .",
+    "clean": "rm -rf _book"
+  },
+  "dependencies": {
+    "honkit": "^5.1.4"
+  }
+}

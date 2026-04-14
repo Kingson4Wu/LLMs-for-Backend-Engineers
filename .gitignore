@@ -1,53 +1,52 @@
-# Dependencies
-node_modules/
+# Node rules:
+## Grunt intermediate storage (http://gruntjs.com/creating-plugins#storing-task-files)
+.grunt
 
-# Production builds
-/build/
-/dist/
-/out/
+## Dependency directory
+## Commenting this out is preferred by some people, see
+## https://docs.npmjs.com/misc/faq#should-i-check-my-node_modules-folder-into-git
+node_modules
 
-# Documentation build
-documentation/build/
-documentation/.docusaurus/
-documentation/.cache/
-
-# Temporary files
-.nyc_output/
-coverage/
-*.log
-
-# Environment variables
-.env*
-!.env.example
-
-# OS generated files
-.DS_Store
-Thumbs.db
-
-# IDE specific files
-.vscode/
+# Local editor state
 .idea/
-*.swp
-*.swo
+.DS_Store
 
-# Docusaurus specific for documentation directory
-documentation/.temp/
+# Python cache
+__pycache__/
+**/__pycache__/
+*.py[cod]
 
-# Editor temporary files
-*~
+# Book build output
+_book
+_build
+_debug
+_texdebug
+exported
+dist
+**/dist/
 
-# Local configuration
-/.netlify/
-.vercel/
-.now/
+# Nested book build output
+**/_book/
+**/_debug/
+**/_texdebug/
+**/exported/
 
-# Coverage directory used by tools like istanbul
-coverage/
+# eBook build output
+*.epub
+*.mobi
+*.pdf
 
-# Testing
-.nyc_output/
-.jest/
+# LaTeX / pandoc intermediates
+*.aux
+*.fdb_latexmk
+*.fls
+*.log
+*.out
+*.toc
 
-# Debugging
-debug.log
-*.trace
+# Archived documentation
+archived-docusaurus/
+archived-docusaurus/build/
+archived-docusaurus/.docusaurus/
+archived-docusaurus/.cache/
+archived-docusaurus/.temp/

@@ -1,0 +1,101 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 560" width="400" height="560">
+  <defs>
+    <linearGradient id="bgGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#1a1a2e;stop-opacity:1" />
+      <stop offset="100%" style="stop-color:#16213e;stop-opacity:1" />
+    </linearGradient>
+    <linearGradient id="accentGrad" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" style="stop-color:#0f3460;stop-opacity:1" />
+      <stop offset="100%" style="stop-color:#533483;stop-opacity:1" />
+    </linearGradient>
+    <linearGradient id="textGrad" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" style="stop-color:#e94560;stop-opacity:1" />
+      <stop offset="100%" style="stop-color:#f5a623;stop-opacity:1" />
+    </linearGradient>
+  </defs>
+
+  <!-- Background -->
+  <rect width="400" height="560" fill="url(#bgGrad)" rx="12" ry="12"/>
+
+  <!-- Decorative circuit lines -->
+  <g stroke="#0f3460" stroke-width="1.5" fill="none" opacity="0.6">
+    <line x1="0" y1="80" x2="60" y2="80"/>
+    <line x1="60" y1="80" x2="60" y2="200"/>
+    <line x1="60" y1="200" x2="120" y2="200"/>
+    <circle cx="60" cy="80" r="3" fill="#0f3460"/>
+    <circle cx="60" cy="200" r="3" fill="#0f3460"/>
+
+    <line x1="400" y1="120" x2="340" y2="120"/>
+    <line x1="340" y1="120" x2="340" y2="240"/>
+    <line x1="340" y1="240" x2="280" y2="240"/>
+    <circle cx="340" cy="120" r="3" fill="#0f3460"/>
+    <circle cx="340" cy="240" r="3" fill="#0f3460"/>
+
+    <line x1="0" y1="380" x2="50" y2="380"/>
+    <line x1="50" y1="380" x2="50" y2="480"/>
+    <circle cx="50" cy="380" r="3" fill="#0f3460"/>
+
+    <line x1="400" y1="400" x2="350" y2="400"/>
+    <line x1="350" y1="400" x2="350" y2="490"/>
+    <circle cx="350" cy="400" r="3" fill="#0f3460"/>
+  </g>
+
+  <!-- Left accent bar -->
+  <rect x="30" y="30" width="4" height="500" rx="2" fill="url(#textGrad)" opacity="0.8"/>
+
+  <!-- Title -->
+  <text x="200" y="220"
+        font-family="system-ui, -apple-system, 'Segoe UI', Helvetica, Arial, sans-serif"
+        font-size="28" font-weight="700"
+        fill="#ffffff" text-anchor="middle">
+    LLMs for
+  </text>
+  <text x="200" y="260"
+        font-family="system-ui, -apple-system, 'Segoe UI', Helvetica, Arial, sans-serif"
+        font-size="28" font-weight="700"
+        fill="#ffffff" text-anchor="middle">
+    Backend
+  </text>
+  <text x="200" y="300"
+        font-family="system-ui, -apple-system, 'Segoe UI', Helvetica, Arial, sans-serif"
+        font-size="28" font-weight="700"
+        fill="url(#textGrad)" text-anchor="middle">
+    Engineers
+  </text>
+
+  <!-- Subtitle -->
+  <text x="200" y="340"
+        font-family="system-ui, -apple-system, 'Segoe UI', Helvetica, Arial, sans-serif"
+        font-size="13"
+        fill="#a0aec0" text-anchor="middle">
+    从工程视角理解大型语言模型
+  </text>
+
+  <!-- Divider line -->
+  <line x1="100" y1="360" x2="300" y2="360" stroke="#0f3460" stroke-width="1.5"/>
+
+  <!-- Three layer labels -->
+  <g font-family="system-ui, -apple-system, 'Segoe UI', Helvetica, Arial, sans-serif"
+     font-size="11" fill="#718096">
+    <text x="80" y="400" text-anchor="middle">第一层</text>
+    <text x="200" y="400" text-anchor="middle">第二层</text>
+    <text x="320" y="400" text-anchor="middle">第三层</text>
+
+    <text x="80" y="415" font-size="10" fill="#4a5568" text-anchor="middle">数学基础</text>
+    <text x="200" y="415" font-size="10" fill="#4a5568" text-anchor="middle">LLM 内部</text>
+    <text x="320" y="415" font-size="10" fill="#4a5568" text-anchor="middle">外部系统</text>
+  </g>
+
+  <!-- Layer bars -->
+  <rect x="50" y="428" width="100" height="6" rx="3" fill="url(#accentGrad)"/>
+  <rect x="150" y="428" width="100" height="6" rx="3" fill="#e94560" opacity="0.7"/>
+  <rect x="250" y="428" width="100" height="6" rx="3" fill="#f5a623" opacity="0.7"/>
+
+  <!-- Bottom text -->
+  <text x="200" y="520"
+        font-family="system-ui, -apple-system, 'Segoe UI', Helvetica, Arial, sans-serif"
+        font-size="11"
+        fill="#4a5568" text-anchor="middle">
+    github.com/kingson4wu/LLMs-for-Backend-Engineers
+  </text>
+</svg>

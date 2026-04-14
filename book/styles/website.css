@@ -1,0 +1,23 @@
+body {
+  text-rendering: optimizeLegibility;
+}
+
+.book .book-summary {
+  font-size: 14px;
+}
+
+.book .book-body .page-wrapper .page-inner {
+  max-width: 900px;
+}
+
+.book .book-body .page-wrapper .page-inner section.normal img {
+  display: block;
+  margin: 1.5rem auto;
+  max-width: 100%;
+  height: auto;
+}
+
+.book .book-body .page-wrapper .page-inner section.normal h1,
+.book .book-body .page-wrapper .page-inner section.normal h2 {
+  letter-spacing: 0.01em;
+}

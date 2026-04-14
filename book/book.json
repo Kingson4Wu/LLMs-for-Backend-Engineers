@@ -1,0 +1,26 @@
+{
+  "title": "LLMs for Backend Engineers",
+  "description": "一部帮助后端工程师从工程视角理解大型语言模型的书稿。",
+  "author": "Kingson Wu",
+  "language": "zh-hans",
+  "root": ".",
+  "styles": {
+    "website": "styles/website.css",
+    "pdf": "styles/pdf.css"
+  },
+  "plugins": [],
+  "pluginsConfig": {},
+  "readme_path": "index.md",
+  "release_date": "2026-04-13",
+  "cover_image": "assets/cover.svg",
+  "cover_alt": "封面：LLMs for Backend Engineers",
+  "outputs": {
+    "print_html": "exported/book-print.html",
+    "pdf": "exported/book.pdf",
+    "print_pdf": "exported/book-print.pdf"
+  },
+  "title_page_lines": [
+    "从工程视角理解大型语言模型",
+    "github.com/kingson4wu/LLMs-for-Backend-Engineers"
+  ]
+}
