@@ -2,8 +2,8 @@
 
 [中文 README](./README.zh-CN.md)
 
-[![Read Online](https://img.shields.io/badge/Read%20Online-LLMs%20for%20Backend%20Engineers-16a34a?style=flat-square&logo=googlechrome&logoColor=white&maxAge=0)](https://kingson4wu.github.io/LLMs-for-Backend-Engineers/)
-[![GitHub](https://img.shields.io/badge/GitHub-kingson4wu/LLMs-for-Backend-Engineers-24292e?style=flat-square&logo=github&logoColor=white)](https://github.com/kingson4wu/LLMs-for-Backend-Engineers)
+[![Read Online](https://img.shields.io/badge/Read%20Online-LLMs%20for%20Backend%20Engineers-16a34a?style=flat-square&logo=googlechrome&logoColor=white)](https://kingson4wu.github.io/LLMs-for-Backend-Engineers/)
+[![GitHub](https://img.shields.io/badge/GitHub-kingson4wu%2FLLMs--for--Backend--Engineers-24292e?style=flat-square&logo=github&logoColor=white)](https://github.com/kingson4wu/LLMs-for-Backend-Engineers)
 
 A book that helps backend engineers understand large language models from an engineering perspective. No derivations, no theory for its own sake — just system design, trade-offs, how LLMs actually work, and real constraints.
 
