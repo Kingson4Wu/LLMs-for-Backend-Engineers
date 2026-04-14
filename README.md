@@ -5,7 +5,7 @@
 [![Read Online](https://img.shields.io/badge/Read%20Online-LLMs%20for%20Backend%20Engineers-16a34a?style=flat-square&logo=googlechrome&logoColor=white&maxAge=0)](https://kingson4wu.github.io/LLMs-for-Backend-Engineers/)
 [![GitHub](https://img.shields.io/badge/GitHub-kingson4wu/LLMs-for-Backend-Engineers-24292e?style=flat-square&logo=github&logoColor=white)](https://github.com/kingson4wu/LLMs-for-Backend-Engineers)
 
-一本帮助后端工程师从工程视角理解大型语言模型的书稿。不讲模型原理推导，讲系统设计和工程权衡；不讲学术理论，讲运行机制和实际限制；不讲工具罗列，讲架构原则和模式判断。
+A book that helps backend engineers understand large language models from an engineering perspective. No derivations, no theory for its own sake — just system design, trade-offs, how LLMs actually work, and real constraints.
 
 <table>
   <tr>
@@ -16,51 +16,51 @@
       <br>
       <strong>LLMs for Backend Engineers</strong>
       <br>
-      <a href="https://kingson4wu.github.io/LLMs-for-Backend-Engineers/">在线阅读</a> ·
+      <a href="https://kingson4wu.github.io/LLMs-for-Backend-Engineers/">Read online</a> ·
       <a href="https://kingson4wu.github.io/LLMs-for-Backend-Engineers/exported/book.pdf">Download PDF</a>
     </td>
   </tr>
 </table>
 
-本书的核心立场：
+The core position of this book:
 
-> 把 LLM 当作**概率系统**来理解，而不是当作"推理实体"。
+> Understand LLMs as **probabilistic systems**, not as "reasoning entities".
 
-后端工程师每天都在和数学打交道——处理金额时要做精度归一化、设计限流算法时要分析收敛性、配置超时重试时要理解指数退避。这些看似和 AI 无关的工作，背后其实是同一套数学思维。本书从这套思维出发，帮你建立起对 LLM 工作方式的直觉。
+Backend engineers work with math every day — normalizing decimal precision, analyzing convergence in rate-limiting algorithms, understanding exponential backoff for timeouts. These seem unrelated to AI, but they're the same mental toolkit. This book builds intuition for how LLMs actually work.
 
-## 三层内容架构
+## Three-Layer Architecture
 
-本书按技术栈层次分为三层，由底向上建立知识体系：
+The book is organized in three layers, building up from foundations:
 
-### 第一层：数学与机器学习基础
+### Layer 1: Math & Machine Learning Foundations
 
-与具体模型无关的数学与机器学习基础概念。按依赖顺序排列：
-AI数学精要 → 向量点积与夹角 → Softmax → 激活函数 → 感知机 → 交叉熵损失 → 反向传播 → 梯度消失与爆炸 → LayerNorm → Embedding 原理
+Concepts independent of any specific model. Read in order:
+AI Math Essentials → Dot Product & Vector Angles → Softmax → Activation Functions → Perceptron Learning → Cross-Entropy Loss → Backpropagation → Vanishing & Exploding Gradients → LayerNorm → From One-hot to Embedding
 
-### 第二层：LLM 内部机制
+### Layer 2: LLM Internal Mechanisms
 
-深入 LLM 的内部工作原理。按依赖顺序排列：
-Embedding 演化 → Transformer 架构 → Attention 机制 → Token 生成与采样 → 微调与蒸馏 → 优化器选择 → AI系统工程实践
+Deep dive into how LLMs work internally. Read in order:
+Embedding Evolution → Transformer Architecture → Attention Mechanism → Token Generation & Sampling → Fine-tuning & Distillation → Optimizer Selection → AI Engineering Practices
 
-### 第三层：LLM 与外部系统的连接
+### Layer 3: LLM & External Systems
 
-LLM 如何与外部世界交互：
-RAG 与知识库、外部工具调用
+How LLMs connect to the outside world:
+RAG & Knowledge Bases, External Tool Calling
 
-## 目标读者
+## Who This Book Is For
 
-- 有工程背景但无 AI 基础的后端工程师
-- 想要理解 LLM 内部原理的开发者
-- 对 LLM 应用架构感兴趣的架构师
-- 想要从系统层面思考 LLM 的任何人
+- Backend engineers with engineering background but no AI experience
+- Developers who want to understand LLM internals
+- Architects interested in LLM application design
+- Anyone who wants to think about LLMs from a systems perspective
 
-## 阅读建议
+## Reading Path
 
-- 无 ML 背景 → 从第一层开始，按顺序阅读
-- 有 ML 基础 → 从第二层开始，按顺序阅读
-- 关注应用落地 → 从第三层开始，按需补充第二层前置知识
+- No ML background → start from Layer 1, read in order
+- Have ML background → start from Layer 2, read in order
+- Focused on application → start from Layer 3, supplement Layer 2 as needed
 
-## 本地构建
+## Local Build
 
 ```bash
 cd book
@@ -69,9 +69,9 @@ npm run build
 python3 ../tools/book-kit/build_honkit.py
 ```
 
-最终输出在 `book/_book/`。
+Output goes to `book/_book/`.
 
-详细构建说明见 [LOCAL_DEVELOPMENT.md](LOCAL_DEVELOPMENT.md)。
+See [LOCAL_DEVELOPMENT.md](LOCAL_DEVELOPMENT.md) for full build instructions.
 
 ---
 
