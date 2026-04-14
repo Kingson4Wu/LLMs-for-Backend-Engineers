@@ -37,6 +37,15 @@ jobs:
         with:
           python-version: "3.11"
 
+      - name: Install PDF export dependencies
+        run: |
+          sudo apt-get update
+          sudo apt-get install -y \
+            pandoc \
+            librsvg2-bin \
+            fonts-noto-cjk \
+            fonts-noto-core
+
       - name: Configure GitHub Pages
         uses: actions/configure-pages@v5
 
@@ -48,8 +57,26 @@ jobs:
         working-directory: ./book
         run: npm run build
 
+      - name: Build print HTML
+        working-directory: ./book
+        run: python3 ../tools/book-kit/build_print_html.py
+
+      - name: Export PDF
+        working-directory: ./book
+        env:
+          PDF_MAINFONT: Noto Serif CJK SC
+          PDF_CJK_MAINFONT: Noto Serif CJK SC
+          PDF_MONOFONT: Noto Sans Mono
+        run: python3 ../tools/book-kit/export_pdf.py
+
+      - name: Copy exported files into build
+        run: cp -r book/exported book/_book/
+
       - name: Verify book output
-        run: test -f book/_book/index.html
+        run: |
+          test -f book/_book/index.html
+          test -f book/_book/exported/book-print.html
+          test -f book/_book/exported/book.pdf
 
       - name: Upload Pages artifact
         uses: actions/upload-pages-artifact@v3
