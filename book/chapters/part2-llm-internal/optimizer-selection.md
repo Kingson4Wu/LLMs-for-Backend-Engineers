@@ -1,6 +1,6 @@
 # 优化器选择：从 SGD 到 AdamW
 
-## 本章要解决什么问题
+## 本节要解决什么问题
 
 训练神经网络，本质上是一个优化问题：给定损失函数 L(theta)，找到一组参数 theta 使其最小化。
 
@@ -132,7 +132,7 @@ optimizer = optim.AdamW(
 # 带 Warmup 的学习率调度（通常配合 linear_warmup + cosine_decay）
 ```
 
-## 本章小结
+## 本节小结
 
 AdamW + Warmup 是 Transformer 训练的主流选择：AdamW 的自适应机制解决了不同参数梯度尺度差异大的问题，Warmup 则保护了训练初期的数值稳定性。
 

@@ -1,6 +1,6 @@
 # 从 Word2Vec 到 Transformer：Embedding 的角色演化
 
-## 本章要解决什么问题
+## 本节要解决什么问题
 
 在后端系统中，你一定用过缓存。最初级的缓存是**静态预计算缓存**——把查询结果提前算好存进 Redis，用的时候直接读取，缓存命中则返回，缓存失效则回源。这种方式简单可靠，但只能处理完全一致的请求。
 
@@ -146,7 +146,7 @@ Token embedding 与 Position embedding 求和，作为第 0 层的输入。
 | Embedding 的地位 | 学习的最终目标 | 深层推理的起点 |
 | 输入/输出向量关系 | 两张独立表 | 权重共享（通常） |
 
-## 本章小结
+## 本节小结
 
 从 Word2Vec 到 Transformer，Embedding 的本质（可学习的参数矩阵）没有变，但它的角色从"学习的最终目标"转变为"深层推理的起点"——Transformer 中真正的上下文相关表示来自多层 self-attention 后的 hidden state，而非 embedding 表本身。
 
