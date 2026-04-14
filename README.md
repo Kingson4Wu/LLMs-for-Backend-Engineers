@@ -1,6 +1,6 @@
 # LLMs for Backend Engineers
 
-[![Read Online](https://img.shields.io/badge/Read%20Online-LLMs%20for%20Backend%20Engineers-16a34a?style=flat-square&logo=googlechrome&logoColor=white&maxAge=0)](https://kingson4wu.github.io/LLMs-for-Backend-Engineers/book/)
+[![Read Online](https://img.shields.io/badge/Read%20Online-LLMs%20for%20Backend%20Engineers-16a34a?style=flat-square&logo=googlechrome&logoColor=white&maxAge=0)](https://kingson4wu.github.io/LLMs-for-Backend-Engineers/)
 [![GitHub](https://img.shields.io/badge/GitHub-kingson4wu/LLMs-for-Backend-Engineers-24292e?style=flat-square&logo=github&logoColor=white)](https://github.com/kingson4wu/LLMs-for-Backend-Engineers)
 
 一本帮助后端工程师从工程视角理解大型语言模型的书稿。不讲模型原理推导，讲系统设计和工程权衡；不讲学术理论，讲运行机制和实际限制；不讲工具罗列，讲架构原则和模式判断。
@@ -8,13 +8,14 @@
 <table>
   <tr>
     <td align="center" valign="top" width="50%">
-      <a href="https://kingson4wu.github.io/LLMs-for-Backend-Engineers/book/">
+      <a href="https://kingson4wu.github.io/LLMs-for-Backend-Engineers/">
         <img src="./book/assets/cover.svg" alt="LLMs for Backend Engineers" width="280">
       </a>
       <br>
       <strong>LLMs for Backend Engineers</strong>
       <br>
-      <a href="https://kingson4wu.github.io/LLMs-for-Backend-Engineers/book/">在线阅读</a>
+      <a href="https://kingson4wu.github.io/LLMs-for-Backend-Engineers/">在线阅读</a> ·
+      <a href="https://kingson4wu.github.io/LLMs-for-Backend-Engineers/exported/book.pdf">Download PDF</a>
     </td>
   </tr>
 </table>
