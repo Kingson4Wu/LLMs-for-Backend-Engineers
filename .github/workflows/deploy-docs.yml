@@ -45,7 +45,10 @@ jobs:
             pandoc \
             librsvg2-bin \
             fonts-noto-cjk \
-            fonts-noto-core
+            fonts-noto-core \
+            texlive-latex-extra \
+            texlive-xetex \
+            texlive-lang-chinese
 
       - name: Configure GitHub Pages
         uses: actions/configure-pages@v5
