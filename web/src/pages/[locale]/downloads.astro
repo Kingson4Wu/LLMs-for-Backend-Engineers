@@ -1,0 +1,118 @@
+---
+import fs from 'node:fs';
+import path from 'node:path';
+import Layout from '../../layouts/Layout.astro';
+import { locales, bookDir, repo, t } from '../../lib/book.mjs';
+import { withBase } from '../../lib/paths.mjs';
+export function getStaticPaths() {
+  return locales.map((locale) => ({ params: { locale } }));
+}
+const { locale } = Astro.params;
+const base = import.meta.env.BASE_URL;
+const files = [
+  {
+    ext: 'pdf',
+    title: 'PDF',
+    desc: t(
+      locale,
+      '固定版式，适合桌面阅读与打印。',
+      'Fixed pages for desktop reading and printing.',
+    ),
+  },
+  {
+    ext: 'epub',
+    title: 'EPUB',
+    desc: t(
+      locale,
+      '可重排版式，适合手机和平板阅读器。',
+      'Reflowable text for phones, tablets, and ebook readers.',
+    ),
+  },
+];
+const htmlExists = fs.existsSync(
+  path.join(bookDir, `exported/${locale}/book-print.html`),
+);
+---
+
+<Layout
+  pageKind="downloads"
+  locale={locale}
+  title={t(locale, '电子书与版本', 'Editions & downloads')}
+>
+  <main id="main" class="simple-page">
+    <p class="eyebrow">
+      {t(locale, '离线也能继续阅读', 'KEEP READING OFFLINE')}
+    </p>
+    <h1>
+      {t(locale, '选择适合你的版本', 'Choose your edition')}
+      <em>.</em>
+    </h1>
+    <p>
+      {t(
+        locale,
+        '这里展示本站包含的出版文件。各文件的源版本与构建时间以清单为准；正式发行及 PDF 也可前往 GitHub Releases 查看。',
+        'These publication files are included in this site. Check the manifest for each file’s source revision and build time. Visit GitHub Releases for versioned editions and PDFs.',
+      )}
+    </p>
+    <div class="format-cards">
+      {files.map((file) => (
+        <div>
+          <h2>{file.title}</h2>
+          <p>{file.desc}</p>
+          {fs.existsSync(
+            path.join(bookDir, `exported/${locale}/book.${file.ext}`),
+          ) ? (
+            <a
+              href={withBase(`/exported/${locale}/book.${file.ext}`, base)}
+              download
+            >
+              {t(locale, '下载此文件', 'Download this file')} ↓
+            </a>
+          ) : (
+            <p>
+              {t(
+                locale,
+                '本站未包含此文件，可查看下方 GitHub Releases，或按命令本地生成。',
+                'This file is not included in the site. Check GitHub Releases below, or generate it locally.',
+              )}
+            </p>
+          )}
+        </div>
+      ))}
+    </div>
+    {htmlExists && (
+      <p>
+        <a href={withBase(`/exported/${locale}/book-print.html`, base)}>
+          {t(locale, '打开完整打印 HTML', 'Open the complete print HTML')} ↗
+        </a>{' '}
+        ·{' '}
+        <a href={withBase(`/exported/${locale}/manifest.json`, base)}>
+          {t(locale, '构建清单与 SHA256', 'Build manifest & SHA256')}
+        </a>
+      </p>
+    )}
+    <h2>{t(locale, '版本与语言', 'Versions & languages')}</h2>
+    <p>
+      {locale === 'en'
+        ? 'The English edition is AI-assisted and reviewed by an AI agent; human editorial review is pending. Chinese is the source edition.'
+        : '中文为原文。英文版为 AI 辅助翻译，已由 AI 代理检查，尚未经过人工编辑审校。'}
+    </p>
+    <p>
+      <a href={`${repo}/releases`}>
+        {t(locale, '查看 GitHub Releases', 'Visit GitHub Releases')} ↗
+      </a>
+    </p>
+    <h2>{t(locale, '本地构建', 'Build locally')}</h2>
+    <pre><code>{`python3 tools/book-kit/build_print_html.py --locale ${locale}\npython3 tools/book-kit/export_epub.py --locale ${locale}\npython3 tools/book-kit/export_book_pdf.py --locale ${locale}`}</code></pre>
+    <p>
+      {t(
+        locale,
+        '请在仓库根目录执行。需要 Python 3.11+、Pandoc 和 librsvg；PDF 另需 XeLaTeX、模板依赖与字体。详细安装步骤见本地开发指南。',
+        'Run from the repository root. Requires Python 3.11+, Pandoc and librsvg; PDF also needs XeLaTeX, template packages and fonts. See the local development guide for setup.',
+      )}
+    </p>
+    <a href={`${repo}/blob/main/LOCAL_DEVELOPMENT.md`}>
+      {t(locale, '本地开发指南', 'Local development guide')} ↗
+    </a>
+  </main>
+</Layout>

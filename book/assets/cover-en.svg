@@ -1,0 +1,21 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 600 840" width="600" height="840" role="img" aria-labelledby="title desc">
+  <title id="title">LLMs for Backend Engineers</title>
+  <desc id="desc">A guide to large language models from foundations and model internals to external systems and infrastructure.</desc>
+  <rect width="600" height="840" fill="#f6f4ed"/>
+  <rect x="45" y="48" width="56" height="56" rx="14" fill="#23332f"/>
+  <path d="M59 65h24M59 77h17M59 89h24" fill="none" stroke="#f6f4ed" stroke-linecap="round" stroke-width="5"/>
+  <circle cx="89" cy="89" r="4" fill="#eac7b4"/>
+  <text x="45" y="174" fill="#646e65" font-family="sans-serif" font-size="13" letter-spacing="2">FROM FOUNDATIONS TO SYSTEMS</text>
+  <g font-family="sans-serif" font-weight="700" font-size="55" fill="#23332f">
+    <text x="42" y="264">LLMs for</text><text x="42" y="338">Backend</text><text x="42" y="412" fill="#b34a2e">Engineers</text>
+  </g>
+  <text x="45" y="471" font-family="sans-serif" font-size="20" fill="#646e65">An engineering guide to language models</text>
+  <g stroke="#d6d8cd" fill="none"><path d="M45 530H555M45 586H555M45 642H555M45 698H555"/></g>
+  <g font-family="sans-serif" font-size="15" fill="#23332f">
+    <text x="45" y="566" fill="#b34a2e">01</text><text x="93" y="566">Math &amp; machine learning</text>
+    <text x="45" y="622" fill="#b34a2e">02</text><text x="93" y="622">LLM internals</text>
+    <text x="45" y="678" fill="#b34a2e">03</text><text x="93" y="678">LLMs and external systems</text>
+    <text x="45" y="734" fill="#b34a2e">04</text><text x="93" y="734">LLM infrastructure</text>
+  </g>
+  <text x="45" y="772" font-family="sans-serif" font-size="17" fill="#23332f">Kingson Wu</text><text x="389" y="772" font-family="sans-serif" font-size="12" fill="#646e65">READ · THINK · BUILD</text>
+</svg>

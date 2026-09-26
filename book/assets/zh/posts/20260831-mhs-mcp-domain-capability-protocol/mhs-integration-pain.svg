@@ -1,0 +1,33 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="760" height="420" viewBox="0 0 760 420" role="img" aria-labelledby="title desc">
+  <title id="title">MHS 要解决的硬件集成问题</title>
+  <desc id="desc">从大量设备供应商、相似能力不同接口、说明书和安全限制分散，到人工适配成本高和 Agent 需要动态理解组合的流程。</desc>
+  <rect width="760" height="420" fill="#fbf7ef"/>
+  <style>
+    .title{font:700 28px Georgia,"Times New Roman","Noto Serif CJK SC",serif;fill:#173f63}
+    .box{fill:#fffdf8;stroke:#173f63;stroke-width:1.5;rx:8}
+    .accent{fill:#eff6fb;stroke:#173f63;stroke-width:1.5;rx:8}
+    .last{fill:#f2f8f4;stroke:#1f7a57;stroke-width:1.5;rx:8}
+    .label{font:700 21px -apple-system,BlinkMacSystemFont,"Segoe UI","Noto Sans CJK SC",sans-serif;fill:#173f63}
+    .small{font:16px -apple-system,BlinkMacSystemFont,"Segoe UI","Noto Sans CJK SC",sans-serif;fill:#425a6d}
+    .line{stroke:#173f63;stroke-width:1.8;fill:none;marker-end:url(#arrow)}
+  </style>
+  <defs>
+    <marker id="arrow" viewBox="0 0 10 10" refX="8.5" refY="5" markerWidth="7" markerHeight="7" orient="auto">
+      <path d="M0 0L10 5L0 10z" fill="#173f63"/>
+    </marker>
+  </defs>
+  <text x="380" y="48" text-anchor="middle" class="title">硬件集成的问题不在“能不能调用”</text>
+  <rect x="130" y="78" width="500" height="54" class="box"/>
+  <text x="380" y="112" text-anchor="middle" class="label">大量设备供应商</text>
+  <path d="M380 132L380 158" class="line"/>
+  <rect x="130" y="164" width="500" height="54" class="box"/>
+  <text x="380" y="198" text-anchor="middle" class="label">能力相似，但接口不同</text>
+  <path d="M380 218L380 244" class="line"/>
+  <rect x="130" y="250" width="500" height="54" class="accent"/>
+  <text x="380" y="275" text-anchor="middle" class="label">说明书、SDK、状态、安全限制分散</text>
+  <text x="380" y="296" text-anchor="middle" class="small">很多语义不在函数签名里</text>
+  <path d="M380 304L380 330" class="line"/>
+  <rect x="130" y="336" width="500" height="54" class="last"/>
+  <text x="380" y="360" text-anchor="middle" class="label">人工适配成本高</text>
+  <text x="380" y="382" text-anchor="middle" class="small">Agent 还需要动态发现、理解、组合和操作</text>
+</svg>

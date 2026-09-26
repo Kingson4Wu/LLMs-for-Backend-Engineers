@@ -1,0 +1,21 @@
+{
+  "figures": [
+    { "path": "book/assets/book-system-map-en.svg", "kind": "diagram" },
+    { "path": "book/assets/book-system-map-zh.svg", "kind": "diagram" },
+    { "path": "book/assets/cover.svg", "kind": "cover" },
+    { "path": "book/assets/cover-en.svg", "kind": "cover" },
+    { "path": "book/assets/cover-zh-Hans.svg", "kind": "cover" },
+    { "path": "book/assets/zh/posts/20260804-ai-agent-eval-business-quality-system/agent-eval-system.svg", "kind": "diagram" },
+    { "path": "book/assets/zh/posts/20260804-ai-agent-eval-business-quality-system/business-quality-system.svg", "kind": "diagram" },
+    { "path": "book/assets/zh/posts/20260804-ai-agent-eval-business-quality-system/eval-iteration-loop.svg", "kind": "diagram" },
+    { "path": "book/assets/zh/posts/20260831-mhs-mcp-domain-capability-protocol/business-access-stack.svg", "kind": "diagram" },
+    { "path": "book/assets/zh/posts/20260831-mhs-mcp-domain-capability-protocol/domain-capability-layers.svg", "kind": "diagram" },
+    { "path": "book/assets/zh/posts/20260831-mhs-mcp-domain-capability-protocol/domain-examples.svg", "kind": "diagram" },
+    { "path": "book/assets/zh/posts/20260831-mhs-mcp-domain-capability-protocol/hardware-capability-model.svg", "kind": "diagram" },
+    { "path": "book/assets/zh/posts/20260831-mhs-mcp-domain-capability-protocol/mcp-basic-shape.svg", "kind": "diagram" },
+    { "path": "book/assets/zh/posts/20260831-mhs-mcp-domain-capability-protocol/mcp-mhs-layering.svg", "kind": "diagram" },
+    { "path": "book/assets/zh/posts/20260831-mhs-mcp-domain-capability-protocol/mhs-driver-stack.svg", "kind": "diagram" },
+    { "path": "book/assets/zh/posts/20260831-mhs-mcp-domain-capability-protocol/mhs-integration-pain.svg", "kind": "diagram" },
+    { "path": "book/assets/zh/posts/20260831-mhs-mcp-domain-capability-protocol/mhs-read-write.svg", "kind": "diagram" }
+  ]
+}

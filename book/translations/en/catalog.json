@@ -1,0 +1,234 @@
+{
+  "version": 1,
+  "frontmatter": [
+    {
+      "id": "introduction",
+      "path": "index.md",
+      "title": "Introduction"
+    },
+    {
+      "id": "preface",
+      "path": "preface.md",
+      "title": "Preface"
+    }
+  ],
+  "parts": [
+    {
+      "id": "math-foundations",
+      "title": "Mathematics and Machine Learning Foundations",
+      "path": "parts/math-foundations.md",
+      "chapters": [
+        {
+          "id": "ai-math-foundations",
+          "path": "chapters/part1-math-foundations/ai-math-foundations.md",
+          "title": "AI Math and Machine Learning: A Bird's-Eye View"
+        },
+        {
+          "id": "from-onehot-to-embedding",
+          "path": "chapters/part1-math-foundations/from-onehot-to-embedding.md",
+          "title": "From One-Hot to Embeddings: How Discrete Tokens Become Vectors"
+        },
+        {
+          "id": "dot-product-angle",
+          "path": "chapters/part1-math-foundations/dot-product-angle.md",
+          "title": "Dot Products and Cosine Similarity: How Vectors Express Relationships"
+        },
+        {
+          "id": "softmax",
+          "path": "chapters/part1-math-foundations/softmax.md",
+          "title": "Softmax: Turning Scores into Probabilities"
+        },
+        {
+          "id": "activation-functions",
+          "path": "chapters/part1-math-foundations/activation-functions.md",
+          "title": "Activation Functions: Where Nonlinearity Comes From"
+        },
+        {
+          "id": "perceptron-learning",
+          "path": "chapters/part1-math-foundations/perceptron-learning.md",
+          "title": "Perceptrons: How Parameters Learn from Error"
+        },
+        {
+          "id": "cross-entropy",
+          "path": "chapters/part1-math-foundations/cross-entropy.md",
+          "title": "Cross-Entropy: Measuring Prediction Error"
+        },
+        {
+          "id": "backpropagation",
+          "path": "chapters/part1-math-foundations/backpropagation.md",
+          "title": "Backpropagation: How Error Reaches Each Parameter"
+        },
+        {
+          "id": "vanishing-exploding-gradients",
+          "path": "chapters/part1-math-foundations/vanishing-exploding-gradients.md",
+          "title": "Vanishing and Exploding Gradients: Why Deep Networks Are Hard to Train"
+        }
+      ]
+    },
+    {
+      "id": "llm-internal",
+      "title": "LLM Internals",
+      "path": "parts/llm-internal.md",
+      "chapters": [
+        {
+          "id": "model-training-lifecycle",
+          "path": "chapters/part2-llm-internal/model-training-lifecycle.md",
+          "title": "How Models Acquire Their Capabilities Through Training"
+        },
+        {
+          "id": "optimizer-selection",
+          "path": "chapters/part2-llm-internal/optimizer-selection.md",
+          "title": "Optimizers: How Gradients Become Parameter Updates"
+        },
+        {
+          "id": "fine-tuning-and-distillation",
+          "path": "chapters/part2-llm-internal/fine-tuning-and-distillation.md",
+          "title": "Fine-Tuning and Distillation as Function Approximation"
+        },
+        {
+          "id": "embedding-evolution",
+          "path": "chapters/part2-llm-internal/embedding-evolution.md",
+          "title": "From Word2Vec to Transformers: The Changing Role of Embeddings"
+        },
+        {
+          "id": "rnn-to-transformer",
+          "path": "chapters/part2-llm-internal/rnn-to-transformer.md",
+          "title": "From RNNs to Transformers: A Structural Change in Sequence Modeling"
+        },
+        {
+          "id": "transformer-architecture",
+          "path": "chapters/part2-llm-internal/transformer-architecture.md",
+          "title": "Transformer Architecture Through Data Flow"
+        },
+        {
+          "id": "softmax-gradient-scaling",
+          "path": "chapters/part2-llm-internal/softmax-gradient-scaling.md",
+          "title": "Scaled Dot Products: Why Softmax Gradients Become Extreme"
+        },
+        {
+          "id": "residual-connections",
+          "path": "chapters/part2-llm-internal/residual-connections.md",
+          "title": "Residual Connections: Why Deep Networks Remain Trainable"
+        },
+        {
+          "id": "layer-norm",
+          "path": "chapters/part2-llm-internal/layer-norm.md",
+          "title": "LayerNorm: Keeping Representations Numerically Stable"
+        },
+        {
+          "id": "llm-generation",
+          "path": "chapters/part2-llm-internal/llm-generation.md",
+          "title": "LLM Generation: From Input to the Next Token"
+        },
+        {
+          "id": "llm-inference-nondeterminism",
+          "path": "chapters/part2-llm-internal/llm-inference-nondeterminism.md",
+          "title": "Why LLM Inference Is Not Fully Deterministic"
+        },
+        {
+          "id": "multilingual-llms",
+          "path": "chapters/part2-llm-internal/multilingual-llms.md",
+          "title": "Multilingual LLMs: How Languages Share Representations and Capabilities"
+        },
+        {
+          "id": "multimodal-models",
+          "path": "chapters/part2-llm-internal/multimodal-models.md",
+          "title": "Multimodal Models: How Information Beyond Text Enters Computation"
+        }
+      ]
+    },
+    {
+      "id": "llm-external",
+      "title": "LLMs and External Systems",
+      "path": "parts/llm-external.md",
+      "chapters": [
+        {
+          "id": "llm-external-interaction",
+          "path": "chapters/part3-llm-external/llm-external-interaction.md",
+          "title": "How LLMs Interact with the External World: From Generation to Action"
+        },
+        {
+          "id": "rag-context-evidence",
+          "path": "chapters/part3-llm-external/rag-context-evidence.md",
+          "title": "RAG and Context Engineering: How Evidence Enters a Model"
+        },
+        {
+          "id": "function-calling-tool-use",
+          "path": "chapters/part3-llm-external/function-calling-tool-use.md",
+          "title": "Function Calling and Tool Use: Mechanism, Difference, and Essence"
+        },
+        {
+          "id": "mhs-mcp-domain-capability-protocol",
+          "path": "chapters/part3-llm-external/mhs-mcp-domain-capability-protocol.md",
+          "title": "From MHS and MCP to Domain Capability Protocols"
+        },
+        {
+          "id": "harness-runtime-skills",
+          "path": "chapters/part3-llm-external/harness-runtime-skills.md",
+          "title": "Harnesses, Agent Runtimes, and Skills: How Multi-turn Tasks Run Reliably"
+        },
+        {
+          "id": "agent-eval-business-quality-system",
+          "path": "chapters/part3-llm-external/agent-eval-business-quality-system.md",
+          "title": "AI Agent Evaluation: From Tests to a Business Quality System"
+        }
+      ]
+    },
+    {
+      "id": "serving-runtime",
+      "title": "LLM Infrastructure",
+      "path": "parts/ai-infrastructure.md",
+      "chapters": [
+        {
+          "id": "llm-infrastructure",
+          "path": "chapters/part4-serving-runtime/llm-infrastructure.md",
+          "title": "LLM Infrastructure: How a Model Becomes a Reliable Service"
+        },
+        {
+          "id": "inference-performance-capacity",
+          "path": "chapters/part4-serving-runtime/inference-performance-capacity.md",
+          "title": "Inference Performance and Capacity: How Latency, Throughput, and KV Cache Constrain One Another"
+        },
+        {
+          "id": "serving-control-plane",
+          "path": "chapters/part4-serving-runtime/serving-control-plane.md",
+          "title": "Serving Control Plane: Routing, Scaling, and Reliable Delivery"
+        }
+      ]
+    },
+    {
+      "id": "appendices",
+      "title": "Further Reading",
+      "path": "parts/appendices.md",
+      "chapters": [
+        {
+          "id": "what-ai-really-means",
+          "path": "chapters/appendices/what-ai-really-means.md",
+          "title": "Is “Artificial Intelligence” an Accurate Name? Reflections on AI’s Conceptual Boundary"
+        },
+        {
+          "id": "can-ai-create-new-things",
+          "path": "chapters/appendices/can-ai-create-new-things.md",
+          "title": "Can AI Create Genuinely New Things?"
+        },
+        {
+          "id": "generative-ai-probability-and-innovation",
+          "path": "chapters/appendices/generative-ai-probability-and-innovation.md",
+          "title": "Generative AI: Probability, Constraints, and Verification"
+        }
+      ]
+    },
+    {
+      "id": "appendix",
+      "title": "Appendix",
+      "path": "parts/appendix.md",
+      "chapters": [
+        {
+          "id": "learning-resources",
+          "path": "chapters/appendices/learning-resources.md",
+          "title": "Appendix I: Recommended Learning Resources"
+        }
+      ]
+    }
+  ]
+}

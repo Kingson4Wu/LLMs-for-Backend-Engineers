@@ -1,0 +1,44 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="760" height="860" viewBox="0 0 760 860" role="img" aria-labelledby="title desc">
+  <title id="title">其他领域的能力模型类比</title>
+  <desc id="desc">支付、游戏平台服务和智能家居都可能存在异构实现、稳定对象、通用能力和约束，需要标准化抽象。</desc>
+  <rect width="760" height="860" fill="#fbf7ef"/>
+  <style>
+    .title{font:700 28px Georgia,"Times New Roman","Noto Serif CJK SC",serif;fill:#173f63}
+    .card{fill:#fffdf8;stroke:#173f63;stroke-width:1.5;rx:8}
+    .green{fill:#f2f8f4;stroke:#1f7a57;stroke-width:1.5;rx:8}
+    .red{fill:#fff8f2;stroke:#9a3b2f;stroke-width:1.5;rx:8}
+    .label{font:700 21px -apple-system,BlinkMacSystemFont,"Segoe UI","Noto Sans CJK SC",sans-serif;fill:#173f63}
+    .small{font:17px -apple-system,BlinkMacSystemFont,"Segoe UI","Noto Sans CJK SC",sans-serif;fill:#425a6d}
+    .tiny{font:16px -apple-system,BlinkMacSystemFont,"Segoe UI","Noto Sans CJK SC",sans-serif;fill:#5f7180}
+  </style>
+  <text x="380" y="48" text-anchor="middle" class="title">不是只有硬件领域有这个问题</text>
+  <rect x="90" y="86" width="580" height="180" class="card"/>
+  <text x="130" y="126" class="label">支付</text>
+  <text x="130" y="158" class="tiny">对象：支付单、退款、结算、争议</text>
+  <text x="130" y="190" class="tiny">能力：支付、退款、查状态、对账</text>
+  <text x="130" y="222" class="tiny">约束：币种、区域、风控、合规、用户确认</text>
+  <rect x="480" y="126" width="150" height="78" class="green"/>
+  <text x="555" y="154" text-anchor="middle" class="tiny">支付宝 / 微信</text>
+  <text x="555" y="182" text-anchor="middle" class="tiny">Stripe / Apple Pay</text>
+
+  <rect x="90" y="300" width="580" height="180" class="card"/>
+  <text x="130" y="340" class="label">游戏平台服务</text>
+  <text x="130" y="372" class="tiny">对象：玩家、权益、库存、成就、订阅</text>
+  <text x="130" y="404" class="tiny">能力：登录、发放道具、验单、退款</text>
+  <text x="130" y="436" class="tiny">约束：平台政策、区域、年龄、反欺诈</text>
+  <rect x="480" y="340" width="150" height="78" class="green"/>
+  <text x="555" y="368" text-anchor="middle" class="tiny">Steam / PS</text>
+  <text x="555" y="396" text-anchor="middle" class="tiny">Xbox / App Store</text>
+
+  <rect x="90" y="514" width="580" height="180" class="card"/>
+  <text x="130" y="554" class="label">智能家居</text>
+  <text x="130" y="586" class="tiny">对象：房间、人员、设备、传感器</text>
+  <text x="130" y="618" class="tiny">能力：开关、锁门、调温、检测移动</text>
+  <text x="130" y="650" class="tiny">约束：权限、安全、占用状态、隐私</text>
+  <rect x="480" y="554" width="150" height="78" class="green"/>
+  <text x="555" y="582" text-anchor="middle" class="tiny">HomeKit / 米家</text>
+  <text x="555" y="610" text-anchor="middle" class="tiny">Google Home / HA</text>
+
+  <rect x="90" y="738" width="580" height="56" class="red"/>
+  <text x="380" y="772" text-anchor="middle" class="small">共同点：异构实现多，接入和替换成本高，需要稳定语义复用</text>
+</svg>

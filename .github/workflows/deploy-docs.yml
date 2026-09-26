@@ -1,92 +1,61 @@
-name: Deploy GitHub Pages
-
+name: Deploy reading website
 on:
   push:
-    branches:
-      - main
+    branches: [main]
     paths:
       - 'book/**'
+      - 'web/**'
+      - 'tools/book-kit/**'
       - '.github/workflows/deploy-docs.yml'
   workflow_dispatch:
-
 permissions:
   contents: read
-  pages: write
-  id-token: write
-
 concurrency:
   group: github-pages
   cancel-in-progress: true
-
 jobs:
   build:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: '24'
+          cache: npm
+          cache-dependency-path: web/package-lock.json
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.11'
+      - name: Install portable publishing tools
+        run: sudo apt-get update && sudo apt-get install -y pandoc librsvg2-bin fonts-noto-cjk epubcheck
+      - name: Validate and build portable books
+        run: |
+          python3 -m unittest discover -s tests -v
+          python3 tools/book-kit/check_translations.py
+          python3 tools/book-kit/validate_figures.py
+          for locale in zh-Hans en; do
+            python3 tools/book-kit/validate_book.py --locale "$locale" --check-links
+            python3 tools/book-kit/build_print_html.py --locale "$locale"
+            python3 tools/book-kit/export_epub.py --locale "$locale"
+            epubcheck "book/exported/$locale/book.epub"
+          done
+      - name: Build reading site
+        working-directory: web
+        run: npm ci && npm run check && npm test && npm run build && npm run check:deployment
+      - uses: actions/configure-pages@v5
+      - uses: actions/upload-pages-artifact@v3
+        with:
+          path: web/dist
+  deploy:
+    if: github.repository == 'kingson4wu/LLMs-for-Backend-Engineers'
+    needs: build
+    permissions:
+      pages: write
+      id-token: write
     runs-on: ubuntu-latest
     environment:
       name: github-pages
       url: ${{ steps.deployment.outputs.page_url }}
     steps:
-      - name: Checkout repository
-        uses: actions/checkout@v4
-
-      - name: Setup Node.js
-        uses: actions/setup-node@v4
-        with:
-          node-version: 20
-
-      - name: Setup Python
-        uses: actions/setup-python@v5
-        with:
-          python-version: "3.11"
-
-      - name: Install PDF export dependencies
-        run: |
-          sudo apt-get update
-          sudo apt-get install -y \
-            pandoc \
-            librsvg2-bin \
-            fonts-noto-cjk \
-            fonts-noto-core \
-            texlive-latex-extra \
-            texlive-xetex \
-            texlive-lang-chinese
-
-      - name: Configure GitHub Pages
-        uses: actions/configure-pages@v5
-
-      - name: Install dependencies
-        working-directory: ./book
-        run: npm install
-
-      - name: Build book
-        working-directory: ./book
-        run: npm run build
-
-      - name: Build print HTML
-        working-directory: ./book
-        run: python3 ../tools/book-kit/build_print_html.py
-
-      - name: Export PDF
-        working-directory: ./book
-        env:
-          PDF_MAINFONT: Noto Serif CJK SC
-          PDF_CJK_MAINFONT: Noto Serif CJK SC
-          PDF_MONOFONT: Noto Sans Mono
-        run: python3 ../tools/book-kit/export_pdf.py
-
-      - name: Copy exported files into build
-        run: cp -r book/exported book/_book/
-
-      - name: Verify book output
-        run: |
-          test -f book/_book/index.html
-          test -f book/_book/exported/book-print.html
-          test -f book/_book/exported/book.pdf
-
-      - name: Upload Pages artifact
-        uses: actions/upload-pages-artifact@v3
-        with:
-          path: book/_book
-
-      - name: Deploy to GitHub Pages
+      - uses: actions/deploy-pages@v4
         id: deployment
-        uses: actions/deploy-pages@v4

@@ -50,3 +50,10 @@ archived-docusaurus/build/
 archived-docusaurus/.docusaurus/
 archived-docusaurus/.cache/
 archived-docusaurus/.temp/
+
+# Reading site and release bundles
+web/.astro/
+release/
+
+# Local browser screenshots
+web/review/

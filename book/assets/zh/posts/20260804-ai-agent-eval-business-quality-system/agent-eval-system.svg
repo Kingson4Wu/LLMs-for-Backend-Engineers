@@ -1,0 +1,52 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="620" viewBox="0 0 1200 620" role="img" aria-labelledby="title desc">
+  <title id="title">AI agent eval system boundary</title>
+  <desc id="desc">Agent evaluation measures a full system made of model, prompt, tools, scaffold, environment, task data, trace and grader.</desc>
+  <defs>
+    <marker id="arrow" viewBox="0 0 10 10" refX="8" refY="5" markerWidth="8" markerHeight="8" orient="auto-start-reverse">
+      <path d="M 0 0 L 10 5 L 0 10 z" fill="#64748b"/>
+    </marker>
+  </defs>
+  <rect width="1200" height="620" fill="#f8fafc"/>
+  <rect x="70" y="60" width="1060" height="500" rx="22" fill="#ffffff" stroke="#d8dee9" stroke-width="2"/>
+
+  <text x="600" y="118" text-anchor="middle" font-family="Arial, sans-serif" font-size="32" font-weight="700" fill="#18212f">Agent eval 评估的是完整系统</text>
+  <text x="600" y="152" text-anchor="middle" font-family="Arial, sans-serif" font-size="18" fill="#5f6b7a">不是裸模型的一次回答，而是一组组件共同产生的结果</text>
+
+  <rect x="125" y="225" width="140" height="72" rx="12" fill="#e8f2ff" stroke="#6b9bd8" stroke-width="2"/>
+  <text x="195" y="268" text-anchor="middle" font-family="Arial, sans-serif" font-size="20" font-weight="700" fill="#1f4f82">模型</text>
+
+  <rect x="305" y="225" width="140" height="72" rx="12" fill="#f1f5f9" stroke="#94a3b8" stroke-width="2"/>
+  <text x="375" y="268" text-anchor="middle" font-family="Arial, sans-serif" font-size="20" font-weight="700" fill="#334155">Prompt</text>
+
+  <rect x="485" y="225" width="140" height="72" rx="12" fill="#fff4df" stroke="#d69d42" stroke-width="2"/>
+  <text x="555" y="268" text-anchor="middle" font-family="Arial, sans-serif" font-size="20" font-weight="700" fill="#895d16">工具</text>
+
+  <rect x="665" y="225" width="140" height="72" rx="12" fill="#e9f7ef" stroke="#5ca879" stroke-width="2"/>
+  <text x="735" y="268" text-anchor="middle" font-family="Arial, sans-serif" font-size="20" font-weight="700" fill="#25643d">Scaffold</text>
+
+  <rect x="845" y="225" width="210" height="72" rx="12" fill="#f3e8ff" stroke="#a47ad4" stroke-width="2"/>
+  <text x="950" y="268" text-anchor="middle" font-family="Arial, sans-serif" font-size="20" font-weight="700" fill="#6b3fa0">运行环境</text>
+
+  <path d="M265 261 H295" stroke="#64748b" stroke-width="3" marker-end="url(#arrow)"/>
+  <path d="M445 261 H475" stroke="#64748b" stroke-width="3" marker-end="url(#arrow)"/>
+  <path d="M625 261 H655" stroke="#64748b" stroke-width="3" marker-end="url(#arrow)"/>
+  <path d="M805 261 H835" stroke="#64748b" stroke-width="3" marker-end="url(#arrow)"/>
+
+  <rect x="175" y="385" width="220" height="82" rx="14" fill="#f8fafc" stroke="#cbd5e1" stroke-width="2"/>
+  <text x="285" y="418" text-anchor="middle" font-family="Arial, sans-serif" font-size="19" font-weight="700" fill="#334155">任务数据</text>
+  <text x="285" y="448" text-anchor="middle" font-family="Arial, sans-serif" font-size="16" fill="#64748b">task / trial</text>
+
+  <rect x="490" y="385" width="220" height="82" rx="14" fill="#f8fafc" stroke="#cbd5e1" stroke-width="2"/>
+  <text x="600" y="418" text-anchor="middle" font-family="Arial, sans-serif" font-size="19" font-weight="700" fill="#334155">执行轨迹</text>
+  <text x="600" y="448" text-anchor="middle" font-family="Arial, sans-serif" font-size="16" fill="#64748b">transcript / trace</text>
+
+  <rect x="805" y="385" width="220" height="82" rx="14" fill="#f8fafc" stroke="#cbd5e1" stroke-width="2"/>
+  <text x="915" y="418" text-anchor="middle" font-family="Arial, sans-serif" font-size="19" font-weight="700" fill="#334155">评分判断</text>
+  <text x="915" y="448" text-anchor="middle" font-family="Arial, sans-serif" font-size="16" fill="#64748b">grader / outcome</text>
+
+  <path d="M395 426 H480" stroke="#64748b" stroke-width="3" marker-end="url(#arrow)"/>
+  <path d="M710 426 H795" stroke="#64748b" stroke-width="3" marker-end="url(#arrow)"/>
+  <path d="M600 297 V374" stroke="#64748b" stroke-width="3" marker-end="url(#arrow)"/>
+
+  <text x="600" y="520" text-anchor="middle" font-family="Arial, sans-serif" font-size="20" font-weight="700" fill="#18212f">分数不是单点能力，而是系统行为的外部表现</text>
+</svg>

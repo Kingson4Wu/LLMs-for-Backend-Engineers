@@ -1,0 +1,29 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="640" viewBox="0 0 1200 640" role="img" aria-labelledby="title desc">
+  <title id="title">AI eval in business quality system</title>
+  <desc id="desc">AI eval is one executable signal inside a broader business quality system with automation, human review, online feedback and postmortems.</desc>
+  <rect width="1200" height="640" fill="#f8fafc"/>
+  <rect x="70" y="60" width="1060" height="520" rx="22" fill="#ffffff" stroke="#d8dee9" stroke-width="2"/>
+  <text x="600" y="118" text-anchor="middle" font-family="Arial, sans-serif" font-size="32" font-weight="700" fill="#18212f">Eval 是业务质量系统中的一层信号</text>
+  <text x="600" y="152" text-anchor="middle" font-family="Arial, sans-serif" font-size="18" fill="#5f6b7a">它很重要，但不能替代线上反馈、人工校准和事故复盘</text>
+
+  <rect x="155" y="430" width="890" height="72" rx="14" fill="#e8f2ff" stroke="#6b9bd8" stroke-width="2"/>
+  <text x="600" y="474" text-anchor="middle" font-family="Arial, sans-serif" font-size="22" font-weight="700" fill="#1f4f82">自动化检查：规模、速度、确定性底线</text>
+
+  <rect x="215" y="340" width="770" height="72" rx="14" fill="#fff4df" stroke="#d69d42" stroke-width="2"/>
+  <text x="600" y="384" text-anchor="middle" font-family="Arial, sans-serif" font-size="22" font-weight="700" fill="#895d16">Eval suite：可运行、可复现、可比较</text>
+
+  <rect x="275" y="250" width="650" height="72" rx="14" fill="#e9f7ef" stroke="#5ca879" stroke-width="2"/>
+  <text x="600" y="294" text-anchor="middle" font-family="Arial, sans-serif" font-size="22" font-weight="700" fill="#25643d">人工复核：校准主观质量和高风险边界</text>
+
+  <rect x="335" y="160" width="530" height="72" rx="14" fill="#f3e8ff" stroke="#a47ad4" stroke-width="2"/>
+  <text x="600" y="204" text-anchor="middle" font-family="Arial, sans-serif" font-size="22" font-weight="700" fill="#6b3fa0">线上反馈：真实分布、用户反馈、事故复盘</text>
+
+  <text x="170" y="250" text-anchor="start" font-family="Arial, sans-serif" font-size="16" fill="#64748b">低频高风险</text>
+  <text x="170" y="292" text-anchor="start" font-family="Arial, sans-serif" font-size="16" fill="#64748b">人工校准</text>
+
+  <text x="930" y="430" text-anchor="end" font-family="Arial, sans-serif" font-size="16" fill="#64748b">高频低风险</text>
+  <text x="930" y="472" text-anchor="end" font-family="Arial, sans-serif" font-size="16" fill="#64748b">自动判断</text>
+
+  <rect x="350" y="530" width="500" height="38" rx="19" fill="#f8fafc" stroke="#cbd5e1" stroke-width="2"/>
+  <text x="600" y="555" text-anchor="middle" font-family="Arial, sans-serif" font-size="17" font-weight="700" fill="#334155">成熟质量系统不是纯自动，也不是纯人工</text>
+</svg>

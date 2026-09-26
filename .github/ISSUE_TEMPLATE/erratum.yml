@@ -1,0 +1,26 @@
+name: 勘误 / Erratum
+description: 报告书稿、翻译、公式、图表或链接中的具体错误
+labels: ["勘误"]
+body:
+  - type: input
+    id: location
+    attributes:
+      label: 文章位置
+      description: 请填写文章 URL、语言和标题；如与下载版本有关，请补充版本号或页码。
+      placeholder: zh-Hans/read/softmax/ · 简体中文 · 第 2 节
+    validations:
+      required: true
+  - type: textarea
+    id: original
+    attributes:
+      label: 原文、公式或链接
+      description: 请粘贴足以定位的问题片段；不需要提供私人上下文或密钥。
+    validations:
+      required: true
+  - type: textarea
+    id: correction
+    attributes:
+      label: 问题与建议
+      description: 请说明为什么有问题；涉及事实、公式或翻译时请附可靠来源或推导。
+    validations:
+      required: true

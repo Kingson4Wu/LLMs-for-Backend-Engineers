@@ -1,0 +1,8 @@
+blank_issues_enabled: false
+contact_links:
+  - name: 在线阅读
+    url: https://kingson4wu.github.io/LLMs-for-Backend-Engineers/zh-Hans/
+    about: 请先确认问题仍出现在当前线上版本，并在反馈中附文章 URL。
+  - name: 贡献指南
+    url: https://github.com/Kingson4Wu/LLMs-for-Backend-Engineers/blob/main/CONTRIBUTING.md
+    about: 了解中英文书稿、图表和阅读站的修改要求。

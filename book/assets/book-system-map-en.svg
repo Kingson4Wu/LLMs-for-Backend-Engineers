@@ -1,0 +1,42 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 620" role="img" aria-labelledby="title desc">
+  <title id="title">From training to service: four layers of an LLM system</title>
+  <desc id="desc">Mathematics and machine learning foundations, LLM internals, external systems, and LLM infrastructure connect in order, showing how information becomes a deliverable service.</desc>
+  <rect width="1200" height="620" rx="28" fill="#f6f4ed"/>
+  <text x="72" y="86" fill="#23332f" font-family="Inter, sans-serif" font-size="32" font-weight="700">From training to service: four layers of an LLM system</text>
+  <text x="72" y="124" fill="#64736c" font-family="Inter, sans-serif" font-size="18">Each layer answers a different question; together they determine what one request can know, produce, and deliver.</text>
+  <path d="M196 295H336M496 295H636M796 295H936" fill="none" stroke="#9baa9c" stroke-linecap="round" stroke-width="5"/>
+  <path d="m322 283 18 12-18 12m156-24 18 12-18 12m156-24 18 12-18 12" fill="none" stroke="#9baa9c" stroke-linecap="round" stroke-linejoin="round" stroke-width="5"/>
+  <g font-family="Inter, sans-serif">
+    <g transform="translate(72 204)">
+      <rect width="250" height="184" rx="18" fill="#fffdf8" stroke="#cbd2c8" stroke-width="2"/>
+      <text x="26" y="48" fill="#bd775b" font-size="15" font-weight="700">PART I</text>
+      <text x="26" y="82" fill="#23332f" font-size="22" font-weight="700">Foundations</text>
+      <text x="26" y="118" fill="#64736c" font-size="16">representation · probability</text>
+      <text x="26" y="150" fill="#64736c" font-size="14">How information enters learnable computation</text>
+    </g>
+    <g transform="translate(372 204)">
+      <rect width="250" height="184" rx="18" fill="#fffdf8" stroke="#cbd2c8" stroke-width="2"/>
+      <text x="26" y="48" fill="#bd775b" font-size="15" font-weight="700">PART II</text>
+      <text x="26" y="82" fill="#23332f" font-size="22" font-weight="700">LLM internals</text>
+      <text x="26" y="118" fill="#64736c" font-size="16">training · Transformer · generation</text>
+      <text x="26" y="150" fill="#64736c" font-size="14">How parameters and context produce output</text>
+    </g>
+    <g transform="translate(672 204)">
+      <rect width="250" height="184" rx="18" fill="#fffdf8" stroke="#cbd2c8" stroke-width="2"/>
+      <text x="26" y="48" fill="#bd775b" font-size="15" font-weight="700">PART III</text>
+      <text x="26" y="82" fill="#23332f" font-size="22" font-weight="700">External systems</text>
+      <text x="26" y="118" fill="#64736c" font-size="16">context · evidence · tools</text>
+      <text x="26" y="150" fill="#64736c" font-size="14">How a proposal becomes an outside action</text>
+    </g>
+    <g transform="translate(972 204)">
+      <rect width="156" height="184" rx="18" fill="#23332f"/>
+      <text x="24" y="48" fill="#eac7b4" font-size="15" font-weight="700">PART IV</text>
+      <text x="24" y="82" fill="#f6f4ed" font-size="22" font-weight="700">LLM</text>
+      <text x="24" y="112" fill="#f6f4ed" font-size="22" font-weight="700">infrastructure</text>
+      <text x="24" y="146" fill="#d4ddd4" font-size="14">requests · state · delivery</text>
+    </g>
+  </g>
+  <rect x="72" y="466" width="1056" height="86" rx="16" fill="#e7ece4"/>
+  <text x="104" y="502" fill="#23332f" font-family="Inter, sans-serif" font-size="17" font-weight="700">When tracing one request, keep four things distinct:</text>
+  <text x="104" y="532" fill="#52635a" font-family="Inter, sans-serif" font-size="16">patterns learned in parameters · evidence in this context · actions run by external programs · capacity and reliability constraints of service delivery</text>
+</svg>

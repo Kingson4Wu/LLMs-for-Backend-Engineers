@@ -1,6 +1,7 @@
 from __future__ import annotations
 
 import argparse
+import json
 import os
 import subprocess
 import sys
@@ -14,11 +15,47 @@ from book_meta import (
     resolve_book_dir,
     resolve_source_dir,
 )
-from build_pandoc_book import build_book
+from publication import prepare, write_manifest
 
 
 def run(args: list[str], *, cwd: Path | None = None) -> None:
     subprocess.run(args, cwd=cwd, check=True)
+
+
+def validate_pdf_log(log: str) -> None:
+    if "Missing character:" in log:
+        raise ValueError("PDF contains missing glyphs; choose compatible fonts before publishing.")
+
+
+PDF_VERBATIM_SYMBOLS = str.maketrans(
+    {
+        "₀": "_0", "₁": "_1", "₂": "_2", "₃": "_3", "₄": "_4",
+        "₅": "_5", "₆": "_6", "₇": "_7", "₈": "_8", "₉": "_9",
+        "ᵢ": "_i", "ₙ": "_n", "ₜ": "_t",
+        "̂": "^",
+        "→": "->", "←": "<-", "↑": "^", "↓": "v", "↗": "/^", "↘": "\\/",
+        "✓": "[ok]", "✔": "[ok]", "✅": "[ok]", "❌": "[x]", "👉": "Note:",
+        "∏": "prod", "∑": "sum", "∝": "proportional-to", "⟺": "<=>",
+        "×": "*", "·": "*", "√": "sqrt", "≈": "~", "−": "-",
+    }
+)
+
+def normalize_pdf_verbatim_symbols(document: dict) -> None:
+    """Use portable ASCII equivalents in code rendered with the PDF mono font."""
+    def visit(value):
+        if isinstance(value, dict):
+            if value.get("t") in ("Code", "CodeBlock"):
+                content = value.get("c")
+                if isinstance(content, list) and len(content) == 2 and isinstance(content[1], str):
+                    content[1] = content[1].translate(PDF_VERBATIM_SYMBOLS)
+                    return
+            for child in value.values():
+                visit(child)
+        elif isinstance(value, list):
+            for child in value:
+                visit(child)
+
+    visit(document)
 
 
 def default_fonts(language: str) -> tuple[str, str | None, str]:
@@ -38,7 +75,7 @@ def parse_args(argv: list[str]) -> argparse.Namespace:
     parser.add_argument(
         "--clean",
         action="store_true",
-        help="Remove build caches and previous exported files before rebuilding.",
+        help="Remove only this locale’s PDF intermediates before rebuilding.",
     )
     parser.add_argument(
         "--clean-generated",
@@ -61,13 +98,6 @@ def remove_path(path: Path) -> None:
     else:
         path.unlink()
 
-
-def clean_book_outputs(book_dir: Path, meta: dict) -> None:
-    for rel_path in meta.get("outputs", {}).values():
-        remove_path(book_dir / rel_path)
-
-    for rel_dir in ("_book", "_debug", "_texdebug"):
-        remove_path(book_dir / rel_dir)
 
 
 def regenerate_diagrams(book_dir: Path) -> None:
@@ -146,7 +176,36 @@ def render_title_page(meta: dict, cover_pdf_rel: str | None, release_items: list
 def render_header(documentclass: str, cjk_mainfont: str | None) -> str:
     lines = [
             r"\usepackage{graphicx}",
+            r"\AtBeginDocument{\let\maketitle\relax\pagestyle{plain}}",
             r"\usepackage{etoolbox}",
+            r"\usepackage{newunicodechar}",
+            r"\newunicodechar{ᵢ}{\ensuremath{_{i}}}",
+            r"\newunicodechar{₀}{\ensuremath{_{0}}}",
+            r"\newunicodechar{₁}{\ensuremath{_{1}}}",
+            r"\newunicodechar{₂}{\ensuremath{_{2}}}",
+            r"\newunicodechar{₃}{\ensuremath{_{3}}}",
+            r"\newunicodechar{₄}{\ensuremath{_{4}}}",
+            r"\newunicodechar{₅}{\ensuremath{_{5}}}",
+            r"\newunicodechar{₆}{\ensuremath{_{6}}}",
+            r"\newunicodechar{₇}{\ensuremath{_{7}}}",
+            r"\newunicodechar{₈}{\ensuremath{_{8}}}",
+            r"\newunicodechar{₉}{\ensuremath{_{9}}}",
+            r"\newunicodechar{ₙ}{\ensuremath{_{n}}}",
+            r"\newunicodechar{∇}{\ensuremath{\nabla}}",
+            r"\newunicodechar{∑}{\ensuremath{\sum}}",
+            r"\newunicodechar{∏}{\ensuremath{\prod}}",
+            r"\newunicodechar{∝}{\ensuremath{\propto}}",
+            r"\newunicodechar{⟺}{\ensuremath{\Longleftrightarrow}}",
+            r"\newunicodechar{→}{\ensuremath{\rightarrow}}",
+            r"\newunicodechar{←}{\ensuremath{\leftarrow}}",
+            r"\newunicodechar{⊙}{\ensuremath{\odot}}",
+            r"\newunicodechar{✓}{\ensuremath{\checkmark}}",
+            r"\newunicodechar{✔}{\ensuremath{\checkmark}}",
+            r"\newunicodechar{✅}{\ensuremath{\checkmark}}",
+            r"\newunicodechar{❌}{\ensuremath{\times}}",
+            r"\newunicodechar{👉}{\textbf{提示：}}",
+            r"\usepackage{fvextra}",
+            r"\DefineVerbatimEnvironment{Highlighting}{Verbatim}{commandchars=\\\{\},breaklines,breakanywhere,fontsize=\small}",
             r"\setkeys{Gin}{width=\linewidth,height=0.82\textheight,keepaspectratio}",
             r"% Keep paragraph spacing local instead of loading parskip.",
             r"% Pandoc's parskip path patches \@starttoc and caused TOC entries",
@@ -251,23 +310,25 @@ def main() -> None:
     pdf_meta = meta.get("pdf", {})
     documentclass = str(pdf_meta.get("documentclass", "ctexbook" if str(meta.get("language", "")).startswith("zh") else "book"))
 
-    if args.clean or args.clean_generated:
-        clean_book_outputs(book_dir, meta)
     if args.clean_generated:
         regenerate_diagrams(book_dir)
 
-    book_output_dir = book_dir / "_book"
+    book_dir, source_dir, meta, book_output_dir, book_ast = prepare(args, "pdf")
+    document = json.loads(book_ast.read_text(encoding="utf-8"))
+    normalize_pdf_verbatim_symbols(document)
+    book_ast.write_text(json.dumps(document, ensure_ascii=False), encoding="utf-8")
     output_name = meta["outputs"].get("pdf") or meta["outputs"]["book_pdf"]
     output = book_dir / output_name
     output.parent.mkdir(parents=True, exist_ok=True)
-    book_md = book_output_dir / "book.md"
     titlepage_tex = book_output_dir / "titlepage.tex"
     header_tex = book_output_dir / "header.tex"
 
     book_output_dir.mkdir(parents=True, exist_ok=True)
-    book_md.write_text(build_book(book_dir, meta, source_dir), encoding="utf-8")
 
-    cover_pdf_rel = ensure_cover_pdf(book_dir, meta, book_output_dir)
+    cover_meta = dict(meta)
+    if meta.get("cover_image") and (source_dir / meta["cover_image"]).is_file():
+        cover_meta["cover_image"] = str((source_dir / meta["cover_image"]).resolve())
+    cover_pdf_rel = ensure_cover_pdf(book_dir, cover_meta, book_output_dir)
     titlepage_tex.write_text(render_title_page(meta, cover_pdf_rel, release_items), encoding="utf-8")
     language = str(meta.get("language", ""))
     mainfont_default, cjk_mainfont_default, monofont_default = default_fonts(language)
@@ -276,16 +337,23 @@ def main() -> None:
     monofont = str(pdf_meta.get("monofont") or os.environ.get("PDF_MONOFONT") or monofont_default)
     header_tex.write_text(render_header(documentclass, cjk_mainfont), encoding="utf-8")
 
+    engine = shutil.which("xelatex")
+    if not engine and Path("/Library/TeX/texbin/xelatex").is_file():
+        engine = "/Library/TeX/texbin/xelatex"
+    if not engine:
+        raise SystemExit("Missing xelatex: install TeX Live / MacTeX and the required CJK fonts.")
+
     pandoc_args = [
         "pandoc",
-        str(book_md),
+        str(book_ast),
         "--from",
-        "markdown+raw_tex",
+        "json",
         "--resource-path",
         str(book_dir),
         "--toc",
         "--toc-depth=2",
-        "--pdf-engine=xelatex",
+        f"--pdf-engine={engine}",
+        "--top-level-division=chapter",
         f"--include-before-body={titlepage_tex}",
         f"--include-in-header={header_tex}",
         "-V",
@@ -331,11 +399,13 @@ def main() -> None:
     if documentclass.startswith("ctex") and cjk_mainfont:
         pandoc_args.extend(["-V", f"CJKmainfont={cjk_mainfont}"])
 
-    run(
-        pandoc_args,
-        cwd=book_dir,
-    )
+    result = subprocess.run(pandoc_args, cwd=book_dir, capture_output=True, text=True)
+    sys.stderr.write(result.stderr)
+    result.check_returncode()
+    validate_pdf_log(result.stderr)
 
+    provenance = json.loads((book_output_dir / "provenance.json").read_text())
+    write_manifest(book_dir, args.locale, output, provenance)
     print(output)
 
 

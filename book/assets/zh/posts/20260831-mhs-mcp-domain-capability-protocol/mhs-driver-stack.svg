@@ -1,0 +1,35 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="760" height="500" viewBox="0 0 760 500" role="img" aria-labelledby="title desc">
+  <title id="title">MHS Driver 所在的位置</title>
+  <desc id="desc">MHS Driver 位于物理设备、厂商 SDK 和上层 Agent 或程序之间，将设备接口翻译成标准设备表示。</desc>
+  <rect width="760" height="500" fill="#fbf7ef"/>
+  <style>
+    .title{font:700 28px Georgia,"Times New Roman","Noto Serif CJK SC",serif;fill:#173f63}
+    .box{fill:#fffdf8;stroke:#173f63;stroke-width:1.5;rx:8}
+    .mhs{fill:#f2f8f4;stroke:#1f7a57;stroke-width:1.5;rx:8}
+    .device{fill:#fff8f2;stroke:#9a3b2f;stroke-width:1.5;rx:8}
+    .label{font:700 22px -apple-system,BlinkMacSystemFont,"Segoe UI","Noto Sans CJK SC",sans-serif;fill:#173f63}
+    .small{font:16px -apple-system,BlinkMacSystemFont,"Segoe UI","Noto Sans CJK SC",sans-serif;fill:#425a6d}
+    .line{stroke:#173f63;stroke-width:1.8;fill:none;marker-end:url(#arrow)}
+    .green{stroke:#1f7a57;stroke-width:1.8;fill:none;marker-end:url(#greenArrow)}
+  </style>
+  <defs>
+    <marker id="arrow" viewBox="0 0 10 10" refX="8.5" refY="5" markerWidth="7" markerHeight="7" orient="auto"><path d="M0 0L10 5L0 10z" fill="#173f63"/></marker>
+    <marker id="greenArrow" viewBox="0 0 10 10" refX="8.5" refY="5" markerWidth="7" markerHeight="7" orient="auto"><path d="M0 0L10 5L0 10z" fill="#1f7a57"/></marker>
+  </defs>
+  <text x="380" y="48" text-anchor="middle" class="title">MHS Driver 是翻译层</text>
+  <rect x="170" y="82" width="420" height="60" class="box"/>
+  <text x="380" y="118" text-anchor="middle" class="label">Agent / Program</text>
+  <path d="M380 142L380 174" class="line"/>
+  <rect x="170" y="180" width="420" height="68" class="mhs"/>
+  <text x="380" y="209" text-anchor="middle" class="label">Standard Device Representation</text>
+  <text x="380" y="232" text-anchor="middle" class="small">统一描述对象、状态、能力、限制</text>
+  <path d="M380 248L380 280" class="green"/>
+  <rect x="170" y="286" width="420" height="64" class="mhs"/>
+  <text x="380" y="324" text-anchor="middle" class="label">MHS Driver</text>
+  <path d="M380 350L380 382" class="green"/>
+  <rect x="170" y="388" width="420" height="60" class="box"/>
+  <text x="380" y="424" text-anchor="middle" class="label">Vendor SDK / Device Interface</text>
+  <path d="M380 448L380 470" class="line"/>
+  <rect x="170" y="472" width="420" height="20" class="device"/>
+  <text x="380" y="487" text-anchor="middle" class="small">Physical Device</text>
+</svg>

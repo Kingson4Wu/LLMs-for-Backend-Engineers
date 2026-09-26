@@ -1,0 +1,180 @@
+{
+  "version": 1,
+  "source_locale": "zh-Hans",
+  "locale": "en",
+  "review": "AI-assisted; not human-reviewed",
+  "articles": {
+    "introduction": {
+      "source_sha256": "5728edea16e80efd2791846b5a276a382a1d705ebf254d964cc7a4ab5a6df1dc",
+      "status": "reviewed-by-agent"
+    },
+    "preface": {
+      "source_sha256": "14deb58d679941887b3233c4a3aca97077b38a2e133c02d3bcfda45e6db74a3c",
+      "status": "reviewed-by-agent"
+    },
+    "from-onehot-to-embedding": {
+      "source_sha256": "0c84e92f2af0e735b9ec03ad5f91b471671425ee4166f9d350e16cf9fcc09b6c",
+      "status": "reviewed-by-agent"
+    },
+    "dot-product-angle": {
+      "source_sha256": "a01dbe126b869abe31c01bb4960ad2daa9111b07033becf05a4ea2bd32111ef4",
+      "status": "reviewed-by-agent"
+    },
+    "softmax": {
+      "source_sha256": "371256f99a44edc3ff993bd2d0c946f6842140908a9a8c1e759dcfe1e9aa4c53",
+      "status": "reviewed-by-agent"
+    },
+    "activation-functions": {
+      "source_sha256": "b5e068f69312b461570dfa997f2fa4fdd3013e039b43269175a06dad98f98f84",
+      "status": "reviewed-by-agent"
+    },
+    "perceptron-learning": {
+      "source_sha256": "3162243dab205bb239aec9e10a201a04dff77ef7cea2262389347a3db8d50ad2",
+      "status": "reviewed-by-agent"
+    },
+    "cross-entropy": {
+      "source_sha256": "edf0a7b47a585c331287b18e56b21a78b06869e5634848dcfdb8bf4ea333803d",
+      "status": "reviewed-by-agent"
+    },
+    "backpropagation": {
+      "source_sha256": "5bb1a7d723e9be042400b3bd90b8e3bc4065dd7b4ba4820e7b01bafaa26fa854",
+      "status": "reviewed-by-agent"
+    },
+    "vanishing-exploding-gradients": {
+      "source_sha256": "e18bd0b26ba0aa462420814b74026b40b79b1cb484b2f73030db5170350a25cf",
+      "status": "reviewed-by-agent"
+    },
+    "layer-norm": {
+      "source_sha256": "65802e56d542712b5f6a364095dd1272247ad7ffa4d05a99acb1e52a4668fc2b",
+      "status": "reviewed-by-agent"
+    },
+    "ai-math-foundations": {
+      "source_sha256": "f2864dfdfc4ac5f37df3f0f23d159834ad7c40b82775c6d07824e54f70e71c2c",
+      "status": "reviewed-by-agent"
+    },
+    "model-training-lifecycle": {
+      "source_sha256": "13756cf2e7856c8cd1582935dd386108e50719ba9e9ef4d19d255f2594f31303",
+      "status": "reviewed-by-agent"
+    },
+    "optimizer-selection": {
+      "source_sha256": "ed17e168aa6fe34379a5cb2ae91dd025443684d045a3432b2f62185a91fa41db",
+      "status": "reviewed-by-agent"
+    },
+    "fine-tuning-and-distillation": {
+      "source_sha256": "ed97581ca10f76c205ecb2627c211620566075505f39c83defbf7f8743527241",
+      "status": "reviewed-by-agent"
+    },
+    "embedding-evolution": {
+      "source_sha256": "0423f14cc8df71ff78dc21d9d99f3dfcf6853bfbd1ece6a6b5015179bbc41f15",
+      "status": "reviewed-by-agent"
+    },
+    "rnn-to-transformer": {
+      "source_sha256": "b4a323c2ca38da37d4ab136e8d46c0b0433363b12cc6851e32285f092847ef5f",
+      "status": "reviewed-by-agent"
+    },
+    "transformer-architecture": {
+      "source_sha256": "7113ff1399363a80234e0f5fedd08daa72e2d9e2b319f44131bcfa6e43e2468a",
+      "status": "reviewed-by-agent"
+    },
+    "softmax-gradient-scaling": {
+      "source_sha256": "a44dbca491438c83994d71e8f941a28c0a3be25382c2ea34071c05f4031276f4",
+      "status": "reviewed-by-agent"
+    },
+    "residual-connections": {
+      "source_sha256": "84a8f45c05b0ffe1d7ddaa591073f4e9d5f93cb92f630a7561097e90a0623cd5",
+      "status": "reviewed-by-agent"
+    },
+    "llm-generation": {
+      "source_sha256": "9120c6afebcad8d79e7c163737d8b1560d81bdc346485daca272a74c48b8c60d",
+      "status": "reviewed-by-agent"
+    },
+    "llm-inference-nondeterminism": {
+      "source_sha256": "203b245cbc59d79de9a2d15e2beba736bc0c1ca2668cfdec0e30ca148b9e595e",
+      "status": "reviewed-by-agent"
+    },
+    "multimodal-models": {
+      "source_sha256": "5f6c35a70e84e0b60d4e2626f2fd4a75c31d779bea567c0c1fa3f83e62ab776e",
+      "status": "reviewed-by-agent"
+    },
+    "multilingual-llms": {
+      "source_sha256": "c0302e5dbfa50778dd3fed8e6eccd604a1fccbf843ee5ecbe3179b2cb0d8a7fe",
+      "status": "reviewed-by-agent"
+    },
+    "llm-external-interaction": {
+      "source_sha256": "e553b5ef43038425692fb3ac49bacdf03e59b928f874274020cf810b15aa7d9c",
+      "status": "reviewed-by-agent"
+    },
+    "rag-context-evidence": {
+      "source_sha256": "4069e1e5beff6bab5b55e986bc64738972f1649e483ccc76015f2a5218d2b9f5",
+      "status": "reviewed-by-agent"
+    },
+    "function-calling-tool-use": {
+      "source_sha256": "c83cbae668392cb8311acd0df29b8c8c6ffa8017bbd3cc6854e5d8f511a84e46",
+      "status": "reviewed-by-agent"
+    },
+    "agent-eval-business-quality-system": {
+      "source_sha256": "7e965075e67c679fc674ce93e5148cec1abebd7cdf4c3f2dc4c5c02defa358ab",
+      "status": "reviewed-by-agent"
+    },
+    "mhs-mcp-domain-capability-protocol": {
+      "source_sha256": "efeece8eef1fe5473a3f075c30457abc8a6c41be7e80f9d0a9e696333e6532ce",
+      "status": "reviewed-by-agent"
+    },
+    "harness-runtime-skills": {
+      "source_sha256": "27d729fd79df6c12286ae5fce07246635c50dba3b9dadc7e0341f37547469876",
+      "status": "reviewed-by-agent"
+    },
+    "llm-infrastructure": {
+      "source_sha256": "f306ff242b29dc43d0a9aabae184c3c227dde6108757160421c792bcac4b31bd",
+      "status": "reviewed-by-agent"
+    },
+    "inference-performance-capacity": {
+      "source_sha256": "8a7cdbfa5be18d9035bb975f1f8cb06370a92de7d3e73195a67e97bbac4a52c0",
+      "status": "reviewed-by-agent"
+    },
+    "serving-control-plane": {
+      "source_sha256": "f0252f8fb3b6e1737d5d36f4cd9e827b32a4f3c64310eed690471c62e05a303e",
+      "status": "reviewed-by-agent"
+    },
+    "what-ai-really-means": {
+      "source_sha256": "0b1e5e1e7c7ff7c14802a780537874428429eb59dc5a29f7b25ddb2460e97888",
+      "status": "reviewed-by-agent"
+    },
+    "can-ai-create-new-things": {
+      "source_sha256": "52b489b64cc4340a0ff952ac6dca4acf9ec02a74fc3d32bbdc78899fee57085e",
+      "status": "reviewed-by-agent"
+    },
+    "generative-ai-probability-and-innovation": {
+      "source_sha256": "8092e7eb9f3e80a2e9ac633f19cd9cacc3b06948b3ce01ed265cf55718eb0ca7",
+      "status": "reviewed-by-agent"
+    },
+    "learning-resources": {
+      "source_sha256": "2c3082d0c7c4df062333823ffd2e2850fc4268d4c711805c44965d24cee49992",
+      "status": "reviewed-by-agent"
+    },
+    "math-foundations": {
+      "source_sha256": "73221bf1ef3d9124dfb1630c59219447d8dc030bf0a7122c44241e5b6c059fb9",
+      "status": "reviewed-by-agent"
+    },
+    "llm-internal": {
+      "source_sha256": "d7a62a97f6afbccbb9c7768768f7c71caf8f71de9db4392edea2351b18fad006",
+      "status": "reviewed-by-agent"
+    },
+    "llm-external": {
+      "source_sha256": "69cb307465813a4ea362148164d43c26f7f11f3ddd2fe7c5d31832fb1c67d0c7",
+      "status": "reviewed-by-agent"
+    },
+    "serving-runtime": {
+      "source_sha256": "e9fa9b6391e140ef8a2e41f77f5d99c1f8b0c5bdc55577266766357fa42c8eb5",
+      "status": "reviewed-by-agent"
+    },
+    "appendices": {
+      "source_sha256": "9d958168d6f103a12a957c05ffcf225f8bd157fa00c64aa93c113e57cc6442f2",
+      "status": "reviewed-by-agent"
+    },
+    "appendix": {
+      "source_sha256": "cee8d4922e8c00086d054892eb7054e88d0c81b5bb3290ffa5fcd677b6cd9192",
+      "status": "reviewed-by-agent"
+    }
+  }
+}

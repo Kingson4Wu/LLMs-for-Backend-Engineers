@@ -1,0 +1,22 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 600 840" width="600" height="840" role="img" aria-labelledby="title desc">
+  <title id="title">《后端工程师的 LLM 指南》</title>
+  <desc id="desc">一本从数学基础、模型原理、外部系统到基础设施理解大语言模型的书。</desc>
+  <rect width="600" height="840" fill="#f6f4ed"/>
+  <rect x="45" y="48" width="56" height="56" rx="14" fill="#23332f"/>
+  <path d="M59 65h24M59 77h17M59 89h24" fill="none" stroke="#f6f4ed" stroke-linecap="round" stroke-width="5"/>
+  <circle cx="89" cy="89" r="4" fill="#eac7b4"/>
+  <text x="45" y="174" fill="#646e65" font-family="sans-serif" font-size="13" letter-spacing="2">从基础到系统</text>
+  <g font-family="'Noto Sans CJK SC', 'PingFang SC', sans-serif" font-weight="700" font-size="54" fill="#23332f">
+    <text x="42" y="264">后端工程师的</text>
+    <text x="42" y="338" fill="#b34a2e">LLM 指南</text>
+  </g>
+  <text x="45" y="398" font-family="sans-serif" font-size="19" fill="#646e65">LLMs for Backend Engineers</text>
+  <g stroke="#d6d8cd" fill="none"><path d="M45 474H555M45 530H555M45 586H555M45 642H555"/></g>
+  <g font-family="'Noto Sans CJK SC', 'PingFang SC', sans-serif" font-size="15" fill="#23332f">
+    <text x="45" y="510" fill="#b34a2e">01</text><text x="93" y="510">数学与机器学习基础</text>
+    <text x="45" y="566" fill="#b34a2e">02</text><text x="93" y="566">LLM 内部原理</text>
+    <text x="45" y="622" fill="#b34a2e">03</text><text x="93" y="622">LLM 与外部系统</text>
+    <text x="45" y="678" fill="#b34a2e">04</text><text x="93" y="678">LLM 基础设施</text>
+  </g>
+  <text x="45" y="772" font-family="sans-serif" font-size="17" fill="#23332f">Kingson Wu</text><text x="404" y="772" font-family="'Noto Sans CJK SC', sans-serif" font-size="12" fill="#646e65">读 · 想 · 构建</text>
+</svg>

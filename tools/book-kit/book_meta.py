@@ -19,36 +19,86 @@ APPENDIX_PREFIX_RE = re.compile(
     r"^((?:附录\s*[A-Za-z一二三四五六七八九十]+)|(?:Appendix\s+[A-Za-z0-9]+))[:：\s-]*(.+)$",
     re.IGNORECASE,
 )
-DEFAULT_LOCALE = "zh-hans"
+DEFAULT_LOCALE = "zh-Hans"
+
+
+def normalize_locale(locale: str | None) -> str:
+    return "zh-Hans" if not locale or locale.lower() in ("zh-hans", "zh-cn", "zh") else locale
 
 
 def resolve_book_dir(raw_path: str | None) -> Path:
-    if raw_path:
-        return Path(raw_path).resolve()
-    return Path(__file__).resolve().parents[2] / "book"
+    return Path(raw_path).resolve() if raw_path else Path(__file__).resolve().parents[2] / "book"
 
 
 def resolve_source_dir(book_dir: Path, locale: str | None = None) -> Path:
-    if not locale:
-        return book_dir
-
-    locale_dir = book_dir / "locales" / locale
-    if locale_dir.exists():
-        return locale_dir
-    return book_dir
+    code = normalize_locale(locale)
+    editions = json.loads((book_dir / "editions.json").read_text())["editions"]
+    if code not in editions:
+        raise ValueError(f"Unknown edition: {code}")
+    source = (book_dir / editions[code]["source"]).resolve()
+    if not source.is_dir() or not (source / "catalog.json").is_file():
+        raise ValueError(f"Missing edition sources: {code}: {source}")
+    return source
 
 
 def resolve_build_dir(book_dir: Path, locale: str | None = None) -> Path:
-    if not locale:
-        return book_dir / "_book"
-    return book_dir / "_book" / locale
+    code = normalize_locale(locale)
+    return book_dir / "_book" if code == DEFAULT_LOCALE else book_dir / "_book" / code
 
 
 def load_meta(book_dir: Path, locale: str | None = None) -> dict:
-    meta_path = resolve_source_dir(book_dir, locale) / "book.json"
-    if not meta_path.exists():
-        raise SystemExit(f"Missing book metadata: {meta_path}")
-    return json.loads(meta_path.read_text(encoding="utf-8"))
+    source = resolve_source_dir(book_dir, locale)
+    meta = json.loads((source / "book.json").read_text(encoding="utf-8"))
+    meta["language"] = normalize_locale(locale)
+    meta["outputs"] = {"print_html": f"exported/{meta['language']}/book-print.html",
+                       "pdf": f"exported/{meta['language']}/book.pdf",
+                       "epub": f"exported/{meta['language']}/book.epub"}
+    return meta
+
+
+def catalog_entries(catalog: dict) -> list[dict]:
+    return catalog["frontmatter"] + [chapter for part in catalog["parts"] for chapter in part["chapters"]]
+
+
+def part_entries(catalog: dict) -> list[dict]:
+    return [
+        {"id": part["id"], "path": part["path"], "title": part["title"]}
+        for part in catalog["parts"]
+    ]
+
+
+def load_catalog(source_dir: Path) -> dict:
+    catalog = json.loads((source_dir / "catalog.json").read_text(encoding="utf-8"))
+    if catalog.get("version") != 1:
+        raise ValueError("Unsupported catalog version")
+    entries = catalog_entries(catalog)
+    ids = [entry["id"] for entry in entries] + [part["id"] for part in catalog["parts"]]
+    paths = [entry["path"] for entry in entries]
+    if len(set(ids)) != len(ids) or len(set(paths)) != len(paths):
+        raise ValueError("Catalog IDs and paths must be unique")
+    for entry in entries:
+        path = (source_dir / entry["path"]).resolve()
+        if not path.is_relative_to(source_dir.resolve()) or not path.is_file():
+            raise ValueError(f"Missing or unsafe catalog source: {entry['path']}")
+        if not entry["title"] or not re.fullmatch(r"[a-z0-9]+(?:-[a-z0-9]+)*", entry["id"]):
+            raise ValueError(f"Invalid catalog entry: {entry}")
+    for entry in part_entries(catalog):
+        path = (source_dir / entry["path"]).resolve()
+        if not path.is_relative_to(source_dir.resolve()) or not path.is_file():
+            raise ValueError(f"Missing or unsafe part source: {entry['path']}")
+    actual = {path.relative_to(source_dir).as_posix() for path in (source_dir / "chapters").rglob("*.md")}
+    if actual != {path for path in paths if path.startswith("chapters/")}:
+        raise ValueError("Catalog must include every chapter exactly once")
+    return catalog
+
+
+def render_summary(catalog: dict) -> str:
+    lines = ["# Summary", ""]
+    lines += [f"- [{entry['title']}]({entry['path']})" for entry in catalog["frontmatter"]]
+    for part in catalog["parts"]:
+        lines += ["", f"## {part['title']}", ""]
+        lines += [f"- [{entry['title']}]({entry['path']})" for entry in part["chapters"]]
+    return "\n".join(lines) + "\n"
 
 
 def git_revision(book_dir: Path) -> str | None:
@@ -84,16 +134,7 @@ def release_display_items(book_dir: Path, meta: dict, *, draft: bool = False) ->
 
 
 def chapter_paths(source_dir: Path) -> list[str]:
-    summary_path = source_dir / "SUMMARY.md"
-    if not summary_path.exists():
-        raise SystemExit(f"Missing SUMMARY.md: {summary_path}")
-
-    paths: list[str] = []
-    for line in summary_path.read_text(encoding="utf-8").splitlines():
-        match = LINK_RE.search(line)
-        if match:
-            paths.append(match.group(1))
-    return paths
+    return [entry["path"] for entry in catalog_entries(load_catalog(source_dir))]
 
 
 def strip_markdown_links(text: str) -> str:

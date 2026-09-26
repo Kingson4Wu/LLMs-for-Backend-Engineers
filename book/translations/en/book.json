@@ -1,0 +1,30 @@
+{
+  "title": "LLMs for Backend Engineers",
+  "description": "An engineering guide to the mathematics, internals, and system integration of large language models.",
+  "author": "Kingson Wu",
+  "language": "en",
+  "root": ".",
+  "styles": {
+    "website": "styles/website.css",
+    "pdf": "styles/pdf.css"
+  },
+  "plugins": [],
+  "pluginsConfig": {},
+  "readme_path": "index.md",
+  "release_date": "2026-04-13",
+  "cover_image": "assets/cover-en.svg",
+  "cover_alt": "Cover: LLMs for Backend Engineers",
+  "outputs": {
+    "print_html": "exported/en/book-print.html",
+    "pdf": "exported/en/book.pdf",
+    "epub": "exported/en/book.epub"
+  },
+  "title_page_lines": [
+    "Understanding large language models from an engineering perspective",
+    "AI-assisted English edition; not human-reviewed",
+    "github.com/kingson4wu/LLMs-for-Backend-Engineers"
+  ],
+  "structure": {
+    "readme": "index.md"
+  }
+}

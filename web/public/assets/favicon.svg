@@ -1,0 +1,6 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64">
+  <title>LLMs for Backend Engineers</title>
+  <rect width="64" height="64" rx="14" fill="#23332f"/>
+  <path d="M17 19h25M17 32h18M17 45h25" fill="none" stroke="#f6f4ed" stroke-linecap="round" stroke-width="6"/>
+  <circle cx="47" cy="45" r="5" fill="#eac7b4"/>
+</svg>

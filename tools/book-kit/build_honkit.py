@@ -1,18 +1,22 @@
 from __future__ import annotations
 
 import argparse
+import json
+import re
+from urllib.parse import urlsplit, urlunsplit
 import shutil
 import subprocess
 import sys
 import tempfile
 from pathlib import Path
 
-from book_meta import chapter_paths, load_meta, resolve_book_dir, resolve_build_dir, resolve_source_dir
+from book_meta import chapter_paths, load_meta, resolve_book_dir, resolve_build_dir, resolve_source_dir, normalize_locale, load_catalog, render_summary
 
 
 def parse_args(argv: list[str]) -> argparse.Namespace:
     parser = argparse.ArgumentParser(description="Build a Honkit site for a locale-aware book.")
     parser.add_argument("book_dir", nargs="?", help="Book directory path")
+    parser.add_argument("--serve", action="store_true")
     parser.add_argument("--locale", help="Locale to build, for example en or zh-Hans")
     parser.add_argument(
         "--clean",
@@ -23,7 +27,7 @@ def parse_args(argv: list[str]) -> argparse.Namespace:
 
 
 def stage_source(book_dir: Path, source_dir: Path, locale: str | None) -> Path:
-    stage_root = book_dir / "_build" / "honkit" / (locale or "default")
+    stage_root = book_dir / "_build" / "honkit" / normalize_locale(locale)
     stage_src = stage_root / "src"
     if stage_root.exists():
         shutil.rmtree(stage_root)
@@ -44,6 +48,17 @@ def stage_source(book_dir: Path, source_dir: Path, locale: str | None) -> Path:
         dest_path = stage_src / rel_path
         dest_path.parent.mkdir(parents=True, exist_ok=True)
         shutil.copy2(source_path, dest_path)
+        if source_path.suffix == ".md":
+            def normalize_link(match):
+                target = match.group(1)
+                url = urlsplit(target)
+                if url.scheme or url.netloc or not url.path or Path(url.path).suffix:
+                    return match.group(0)
+                if (source_path.parent / (url.path + ".md")).is_file():
+                    return "](" + urlunsplit(("", "", url.path + ".md", url.query, url.fragment)) + ")"
+                return match.group(0)
+            dest_path.write_text(re.sub(r"\]\(([^)]+)\)", normalize_link, source_path.read_text(encoding="utf-8")), encoding="utf-8")
+
 
     for shared_name in ("assets", "styles", "diagrams"):
         shared_path = book_dir / shared_name
@@ -55,22 +70,20 @@ def stage_source(book_dir: Path, source_dir: Path, locale: str | None) -> Path:
                 shutil.rmtree(dest_path)
             else:
                 dest_path.unlink()
-        dest_path.symlink_to(shared_path, target_is_directory=True)
+        shutil.copytree(shared_path, dest_path)
 
+    (stage_src / "SUMMARY.md").write_text(render_summary(load_catalog(source_dir)), encoding="utf-8")
     return stage_src
 
 
 def locale_codes(book_dir: Path) -> list[str]:
-    locales_dir = book_dir / "locales"
-    if not locales_dir.exists():
-        return []
-    return sorted(path.name for path in locales_dir.iterdir() if path.is_dir())
+    return [code for code in json.loads((book_dir / "editions.json").read_text())["editions"] if code != "zh-Hans"]
 
 
 def preserve_locale_builds(book_dir: Path, build_dir: Path, locale: str | None) -> tuple[Path, list[tuple[Path, Path]]]:
     temp_root = Path(tempfile.mkdtemp(prefix="honkit-preserve-"))
     preserved: list[tuple[Path, Path]] = []
-    if locale is not None:
+    if normalize_locale(locale) != "zh-Hans":
         return temp_root, preserved
     for code in locale_codes(book_dir):
         locale_build = build_dir / code
@@ -104,15 +117,17 @@ def main() -> None:
         if args.clean:
             if build_dir.exists():
                 shutil.rmtree(build_dir)
-            stage_root = book_dir / "_build" / "honkit" / (args.locale or "default")
+            stage_root = book_dir / "_build" / "honkit" / normalize_locale(args.locale)
             if stage_root.exists():
                 shutil.rmtree(stage_root)
 
         stage_src = stage_source(book_dir, source_dir, args.locale)
         build_dir.parent.mkdir(parents=True, exist_ok=True)
 
+        if not (book_dir / "node_modules/.bin/honkit").is_file():
+            raise SystemExit("Missing local Honkit; run npm ci in book/ first.")
         subprocess.run(
-            ["npx", "--yes", "honkit", "build", str(stage_src), str(build_dir)],
+            [str(book_dir / "node_modules/.bin/honkit"), "serve" if args.serve else "build", str(stage_src), str(build_dir)],
             cwd=book_dir,
             check=True,
         )

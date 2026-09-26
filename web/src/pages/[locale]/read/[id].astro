@@ -1,0 +1,237 @@
+---
+import Layout from '../../../layouts/Layout.astro';
+import {
+  catalog,
+  pages,
+  locales,
+  sourceFor,
+  titleFor,
+  partTitle,
+  partDescription,
+  partNumber,
+  chapterNumber,
+  minutes,
+  repo,
+  t,
+} from '../../../lib/book.mjs';
+import { chapterUrl, withBase } from '../../../lib/paths.mjs';
+import { renderMarkdown } from '../../../lib/markdown.mjs';
+export function getStaticPaths() {
+  return locales.flatMap((locale) =>
+    pages.map((page) => ({ params: { locale, id: page.id }, props: { page } })),
+  );
+}
+const { locale } = Astro.params;
+const { page } = Astro.props;
+const base = import.meta.env.BASE_URL;
+const source = sourceFor(locale, page),
+  title = titleFor(locale, page),
+  index = pages.findIndex((p) => p.id === page.id);
+const { html, headings } = await renderMarkdown(
+  source,
+  page,
+  pages,
+  locale,
+  base,
+);
+---
+
+<Layout locale={locale} title={title} chapter={page.id} reader>
+  <div class="progress" aria-hidden="true">
+    <div id="progress-bar"></div>
+  </div>
+  <div class="reader-grid" data-locale={locale} data-chapter={page.id}>
+    <aside class="chapter-sidebar">
+      <details id="book-navigation" open>
+        <summary>{t(locale, '全书目录', 'Book contents')}</summary>
+        <nav aria-label={t(locale, '章节导航', 'Chapter navigation')}>
+          {catalog.frontmatter.map((p) => (
+            <a
+              class:list={{ active: p.id === page.id }}
+              aria-current={p.id === page.id ? 'page' : undefined}
+              href={chapterUrl(locale, p.id, base)}
+            >
+              {titleFor(locale, p)}
+            </a>
+          ))}
+          {catalog.parts.map((part, i) => (
+            <div class="nav-part">
+              <a
+                class:list={{ 'nav-part-title': true, active: part.id === page.id }}
+                aria-current={part.id === page.id ? 'page' : undefined}
+                href={chapterUrl(locale, part.id, base)}
+              >
+                <span class="nav-part-number">{partNumber(locale, i)}</span>
+                <span>{partTitle(locale, part)}</span>
+              </a>
+              {partDescription(locale, part) && (
+                <small>{partDescription(locale, part)}</small>
+              )}
+              {part.chapters.map((p, j) => (
+                <a
+                  class:list={{ 'nav-chapter': true, active: p.id === page.id }}
+                  aria-current={p.id === page.id ? 'page' : undefined}
+                  href={chapterUrl(locale, p.id, base)}
+                >
+                  {part.id !== 'appendix' && (
+                    <span class="nav-chapter-number">{chapterNumber(j)}</span>
+                  )}
+                  <span>{titleFor(locale, p)}</span>
+                </a>
+              ))}
+            </div>
+          ))}
+        </nav>
+      </details>
+    </aside>
+    <main id="main" class="reading-main">
+      <div class="reader-top">
+        <a href={withBase(`/${locale}/`, base)}>
+          {t(locale, '本书', 'The book')}
+        </a>
+        <span>
+          {minutes(source)} {t(locale, '分钟阅读', 'min read')}
+        </span>
+      </div>
+      <header class="chapter-heading">
+        <p class="eyebrow">
+          {page.part
+            ? partTitle(
+                locale,
+                catalog.parts.find((p) => p.id === page.part),
+              )
+            : t(locale, '阅读之前', 'BEFORE YOU BEGIN')}
+        </p>
+        <h1>{title}</h1>
+      </header>
+      {locale === 'en' && (
+        <aside class="translation-notice">
+          This is an AI-assisted translation, reviewed by an AI agent and not
+          yet reviewed by a human editor.{' '}
+          <a href={chapterUrl('zh-Hans', page.id, base)}>
+            Read the Chinese source ↗
+          </a>
+        </aside>
+      )}
+      <div class="reader-toolbar" hidden>
+        <button
+          id="smaller"
+          aria-label={t(locale, '缩小字号', 'Decrease text size')}
+        >
+          A−
+        </button>
+        <button
+          id="larger"
+          aria-label={t(locale, '增大字号', 'Increase text size')}
+        >
+          A+
+        </button>
+        <button id="focus" aria-pressed="false">
+          {t(locale, '专注阅读', 'Focus')}
+        </button>
+        <button id="notes-open">{t(locale, '笔记', 'Notes')}</button>
+      </div>
+      <div id="resume" hidden>
+        <span id="resume-label">{t(locale, '上次读到这里', 'Pick up where you left off')}</span>
+        <button id="resume-button">{t(locale, '继续阅读', 'Continue')}</button>
+        <button id="resume-dismiss">{t(locale, '忽略', 'Dismiss')}</button>
+      </div>
+      <details class="mobile-outline">
+        <summary>{t(locale, '本篇内容', 'On this page')}</summary>
+        {headings.map((h) => (
+          <a href={`#${h.id}`}>{h.text}</a>
+        ))}
+      </details>
+      <article id="article" class="prose" data-pagefind-body set:html={html} />
+      <nav class="pager" aria-label={t(locale, '前后篇', 'Previous and next')}>
+        {index > 0 ? (
+          <a href={chapterUrl(locale, pages[index - 1].id, base)}>
+            <small>← {t(locale, '上一篇', 'PREVIOUS')}</small>
+            {titleFor(locale, pages[index - 1])}
+          </a>
+        ) : (
+          <a href={withBase(`/${locale}/`, base)}>
+            {t(locale, '返回首页', 'Back to the book')}
+          </a>
+        )}
+        {index < pages.length - 1 && (
+          <a href={chapterUrl(locale, pages[index + 1].id, base)}>
+            <small>{t(locale, '下一篇', 'NEXT')} →</small>
+            {titleFor(locale, pages[index + 1])}
+          </a>
+        )}
+      </nav>
+      <p class="correction">
+        <a
+          href={`${repo}/issues/new?title=${encodeURIComponent(`[${locale}] ${title}`)}`}
+        >
+          {t(
+            locale,
+            '发现问题？提交勘误',
+            'Found an issue? Suggest a correction',
+          )}{' '}
+          ↗
+        </a>
+      </p>
+    </main>
+    <aside class="outline-sidebar">
+      <p class="eyebrow">{t(locale, '本篇内容', 'ON THIS PAGE')}</p>
+      <nav aria-label={t(locale, '页内目录', 'Page outline')}>
+        {headings.map((h) => (
+          <a class:list={{ sub: h.depth === 3 }} href={`#${h.id}`}>
+            {h.text}
+          </a>
+        ))}
+      </nav>
+      <a class="back-top" href="#main">
+        ↑ {t(locale, '回到顶部', 'Back to top')}
+      </a>
+    </aside>
+  </div>
+  <button class="search-launch" id="search-open" hidden>
+    {t(locale, '搜索全书', 'Search the book')} <kbd>/</kbd>
+  </button>
+  <dialog id="search-dialog" aria-labelledby="search-title">
+    <div class="dialog-header">
+      <h2 id="search-title">{t(locale, '搜索全书', 'Search the book')}</h2>
+      <button data-close>{t(locale, '关闭', 'Close')} ×</button>
+    </div>
+    <div id="search"></div>
+  </dialog>
+  <dialog id="notes-dialog" aria-labelledby="notes-title">
+    <div class="dialog-header">
+      <h2 id="notes-title">{t(locale, '阅读笔记', 'Reading notes')}</h2>
+      <button data-close>{t(locale, '关闭', 'Close')} ×</button>
+    </div>
+    <p class="muted">
+      {t(
+        locale,
+        '先选中正文，再记录笔记。笔记仅保存在本机浏览器；请导出备份。',
+        'Select a passage before adding a note. Notes stay in this browser only; export a backup to keep them.',
+      )}
+    </p>
+    <blockquote id="selected-quote"></blockquote>
+    <label for="note-text">{t(locale, '你的笔记', 'Your note')}</label>
+    <textarea id="note-text" rows="4" maxlength="20000"></textarea>
+    <button id="save-note" class="button primary">
+      {t(locale, '保存笔记', 'Save note')}
+    </button>
+    <p id="note-status" role="status"></p>
+    <div class="note-actions">
+      <button id="export-notes">
+        {t(locale, '导出备份', 'Export backup')}
+      </button>
+      <label class="file-label">
+        {t(locale, '导入备份', 'Import backup')}
+        <input id="import-notes" type="file" accept="application/json" />
+      </label>
+    </div>
+    <div id="notes-list"></div>
+  </dialog>
+  <script>
+    import '../../../scripts/reader';
+  </script>
+  <script is:inline define:vars={{ base, locale }}>
+    window.bookSearchConfig = { base, locale };
+  </script>
+</Layout>

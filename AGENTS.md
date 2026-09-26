@@ -1,78 +1,51 @@
 # Repository Guidelines
 
-## 项目结构
+## Source of truth
 
-本书使用 Honkit 构建，书籍内容在 `book/` 目录下：
+This book uses an Astro reading website and independent Pandoc publication tools. Preserve the four-part structure and descriptive source filenames.
 
-- `book/book.json` — Honkit 书籍配置
-- `book/SUMMARY.md` — 书籍目录导航
-- `book/chapters/` — 章节内容（按三层架构组织）
-- `book/styles/` — 样式文件
-- `book/assets/` — 图片和封面
-- `book/locales/` — 国际化文件
-- `tools/book-kit/` — Python 构建工具
+- `book/book.json`: Chinese book metadata; `book/catalog.json`: ordered frontmatter and grouped articles.
+- `book/editions.json`: available languages and source directories.
+- `book/chapters/`: Chinese source, divided into mathematics and machine-learning foundations, LLM internals, external systems, and LLM infrastructure.
+- `book/parts/`: four website-only part landing pages; each is reached by its part title and is not a numbered core chapter.
+- `book/translations/en/`: English mirror, localized catalog/metadata, glossary and source hashes.
+- `book/SUMMARY.md`: generated legacy navigation; update via `validate_book.py --write-summary`.
+- `web/`: Astro homepage, reader, search, typography and local reading data.
+- `tools/book-kit/`: validation and standalone print HTML/PDF/EPUB generation.
+- `tests/`: publication and delivery regressions.
 
-不要将 `_book/`、`_build/` 或 `node_modules/` 视为源代码，它们是生成的、可丢弃的。
+Do not treat `_book/`, `_build/`, `exported/`, `dist/`, `.astro/`, `release/` or `node_modules/` as source. Keep PDF intermediates out of deployable website output.
 
-## 构建命令
-
-### 使用 npm
-
-```bash
-cd book
-npm install
-npm run build    # 构建到 book/_book/
-npm run serve    # 本地预览
-npm run clean    # 清理构建产物
-```
-
-### 使用 Python 工具链
+## Commands
 
 ```bash
-python3 tools/book-kit/build_honkit.py              # 构建
-python3 tools/book-kit/build_honkit.py --clean       # 清理后重建
+python3 -m unittest discover -s tests -v
+python3 tools/book-kit/validate_book.py --check-links
+python3 tools/book-kit/validate_book.py --locale en --check-links
+python3 tools/book-kit/check_translations.py
+cd web
+npm ci
+npm run check
+npm test
+npm run build
+npm run check:deployment
+npm run dev
 ```
 
-## 书籍元数据
+Run the block from the repository root after installing publication prerequisites: the Python tests require Pandoc and librsvg and regenerate Chinese HTML/EPUB outputs. Check `SITE_BASE=/` as well as the default `/LLMs-for-Backend-Engineers/` when touching routing. Search requires a full build and preview. Node 22.12+ (CI 24), npm 9.6.5+, Python 3.11+. Publication prerequisites and legacy Honkit commands are in `LOCAL_DEVELOPMENT.md`.
 
-在 `book/book.json` 中管理元数据：
+## Content and design
 
-- `release_date` — 正式发布日期
-- `language` — 语言代码（`zh-Hans` 或 `en`）
-- `cover_image` — 封面图片路径
-- `title_page_lines` — PDF/打印版标题页附加信息
+- Before drafting or revising book prose, follow [BOOK_CONTENT_GUIDELINES.md](BOOK_CONTENT_GUIDELINES.md). It defines the book's required global framing, clear causal explanations, and selective mechanism-level depth.
+- No duplicate article IDs or duplicated publication entries; groups are not chapters.
+- Do not silently substitute Chinese for a missing requested language.
+- English source hashes track change, not translation quality; preserve AI-assisted review disclosure.
+- Body max width 900px; centered responsive images; `text-rendering: optimizeLegibility`.
+- Validate Chinese/English typography, 390px mobile and desktop, light/dark, formulas, code, tables, keyboard access.
+- Local notes are private browser storage with export/import, not a cloud service.
 
-## 内容组织
+## Delivery
 
-章节内容在 `book/chapters/` 下按三层架构组织：
+PR validates. On the upstream repository, matching main-branch path changes (or manual dispatch) trigger Pages deployment; v-prefixed numeric tags such as `v1.0.0` trigger versioned PDF/EPUB/HTML releases. Pages includes HTML/EPUB, while PDF is built by the separate release workflow. See the actual workflow filters in `.github/workflows/`. Do not publish partial or mixed-source releases: the three formats within each language must share source provenance. Never label a build or translation as verified without actual checks.
 
-```
-book/chapters/
-├── part1-math-foundations/    # 第一层：数学与机器学习基础
-├── part2-llm-internal/       # 第二层：LLM 内部机制
-└── part3-llm-external/      # 第三层：LLM 与外部系统的连接
-```
-
-每篇文章使用描述性文件名（如 `softmax.md`、`attention-mechanism.md`），并保持 `SUMMARY.md` 与实际阅读顺序一致。
-
-## 样式规范
-
-- 页面最大宽度：900px（通过 `book/styles/website.css` 控制）
-- 图片居中，最大宽度 100%
-- 字体渲染优化：`text-rendering: optimizeLegibility`
-
-## GitHub Actions
-
-- `main` 分支推送后自动构建并部署到 GitHub Pages
-- 触发路径：`book/**`
-- 部署目录：`book/_book/`
-
-## Commit 规范
-
-使用简洁的祈使句 commit 信息，例如：
-
-- `Add AI math foundations chapter`
-- `Restructure book to Honkit format`
-- `Fix build output directory`
-
-保持 commit 专注于单一逻辑变更。
+Use concise imperative commit messages focused on a single change. Do not invent a content/code license: the author has not selected one.

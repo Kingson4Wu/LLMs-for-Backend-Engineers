@@ -1,0 +1,23 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="760" height="360" viewBox="0 0 760 360" role="img" aria-labelledby="title desc">
+  <title id="title">MCP 的基本结构</title>
+  <desc id="desc">MCP Client 通过 MCP Server 连接数据、工具和工作流。</desc>
+  <rect width="760" height="360" fill="#fbf7ef"/>
+  <style>
+    .title{font:700 28px Georgia,"Times New Roman","Noto Serif CJK SC",serif;fill:#173f63}
+    .box{fill:#fffdf8;stroke:#173f63;stroke-width:1.5;rx:8}
+    .mcp{fill:#eff6fb;stroke:#173f63;stroke-width:1.5;rx:8}
+    .label{font:700 22px -apple-system,BlinkMacSystemFont,"Segoe UI","Noto Sans CJK SC",sans-serif;fill:#173f63}
+    .small{font:16px -apple-system,BlinkMacSystemFont,"Segoe UI","Noto Sans CJK SC",sans-serif;fill:#425a6d}
+    .line{stroke:#173f63;stroke-width:1.8;fill:none;marker-end:url(#arrow)}
+  </style>
+  <defs><marker id="arrow" viewBox="0 0 10 10" refX="8.5" refY="5" markerWidth="7" markerHeight="7" orient="auto"><path d="M0 0L10 5L0 10z" fill="#173f63"/></marker></defs>
+  <text x="380" y="48" text-anchor="middle" class="title">MCP 的基本结构</text>
+  <rect x="200" y="86" width="360" height="58" class="box"/>
+  <text x="380" y="122" text-anchor="middle" class="label">MCP Client</text>
+  <path d="M380 144L380 184" class="line"/>
+  <rect x="200" y="190" width="360" height="58" class="mcp"/>
+  <text x="380" y="226" text-anchor="middle" class="label">MCP Server</text>
+  <path d="M380 248L380 288" class="line"/>
+  <rect x="200" y="294" width="360" height="42" class="box"/>
+  <text x="380" y="321" text-anchor="middle" class="small">Data / Tool / Workflow</text>
+</svg>

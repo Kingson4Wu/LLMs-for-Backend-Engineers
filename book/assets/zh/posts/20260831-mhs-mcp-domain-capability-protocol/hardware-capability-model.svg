@@ -1,0 +1,37 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="760" height="560" viewBox="0 0 760 560" role="img" aria-labelledby="title desc">
+  <title id="title">从厂商接口到设备能力模型</title>
+  <desc id="desc">不同机械臂厂商有不同函数名，上层更需要统一的 RobotArm 能力、状态和约束模型。</desc>
+  <rect width="760" height="560" fill="#fbf7ef"/>
+  <style>
+    .title{font:700 28px Georgia,"Times New Roman","Noto Serif CJK SC",serif;fill:#173f63}
+    .box{fill:#fffdf8;stroke:#173f63;stroke-width:1.5;rx:8}
+    .mhs{fill:#f2f8f4;stroke:#1f7a57;stroke-width:1.5;rx:8}
+    .label{font:700 21px -apple-system,BlinkMacSystemFont,"Segoe UI","Noto Sans CJK SC",sans-serif;fill:#173f63}
+    .small{font:16px -apple-system,BlinkMacSystemFont,"Segoe UI","Noto Sans CJK SC",sans-serif;fill:#425a6d}
+    .mono{font:16px ui-monospace,SFMono-Regular,Menlo,Consolas,monospace;fill:#173f63}
+    .line{stroke:#1f7a57;stroke-width:1.8;fill:none;marker-end:url(#arrow)}
+  </style>
+  <defs><marker id="arrow" viewBox="0 0 10 10" refX="8.5" refY="5" markerWidth="7" markerHeight="7" orient="auto"><path d="M0 0L10 5L0 10z" fill="#1f7a57"/></marker></defs>
+  <text x="380" y="48" text-anchor="middle" class="title">不要把上层绑死在厂商函数名上</text>
+  <rect x="70" y="90" width="180" height="86" class="box"/>
+  <text x="160" y="120" text-anchor="middle" class="label">ABB</text>
+  <text x="160" y="150" text-anchor="middle" class="mono">moveJoint()</text>
+  <rect x="290" y="90" width="180" height="86" class="box"/>
+  <text x="380" y="120" text-anchor="middle" class="label">Fanuc</text>
+  <text x="380" y="150" text-anchor="middle" class="mono">jointMove()</text>
+  <rect x="510" y="90" width="180" height="86" class="box"/>
+  <text x="600" y="120" text-anchor="middle" class="label">KUKA</text>
+  <text x="600" y="150" text-anchor="middle" class="mono">PTP()</text>
+  <path d="M160 176C160 230 380 226 380 270" class="line"/>
+  <path d="M380 176L380 270" class="line"/>
+  <path d="M600 176C600 230 380 226 380 270" class="line"/>
+  <rect x="170" y="276" width="420" height="220" class="mhs"/>
+  <text x="380" y="310" text-anchor="middle" class="label">RobotArm 标准能力模型</text>
+  <text x="230" y="356" class="small">Capability</text>
+  <text x="370" y="356" class="small">move / grasp</text>
+  <text x="230" y="398" class="small">State</text>
+  <text x="370" y="398" class="small">position / load / health</text>
+  <text x="230" y="440" class="small">Constraint</text>
+  <text x="370" y="440" class="small">workspace / max payload / safety limits</text>
+  <text x="380" y="480" text-anchor="middle" class="small">上层面向稳定语义，不直接面向厂商 API</text>
+</svg>

@@ -3,11 +3,15 @@
   "version": "1.0.0",
   "description": "LLMs for Backend Engineers - A Honkit book for backend engineers to understand LLMs",
   "scripts": {
-    "build": "honkit build . _book",
-    "serve": "honkit serve .",
-    "clean": "rm -rf _book"
+    "build": "python3 ../tools/book-kit/build_honkit.py",
+    "serve": "python3 ../tools/book-kit/build_honkit.py --serve",
+    "clean": "rm -rf _book",
+    "validate": "python3 ../tools/book-kit/validate_book.py",
+    "export:html": "python3 ../tools/book-kit/build_print_html.py",
+    "export:epub": "python3 ../tools/book-kit/export_epub.py",
+    "export:pdf": "python3 ../tools/book-kit/export_book_pdf.py"
   },
   "dependencies": {
-    "honkit": "^5.1.4"
+    "honkit": "6.2.2"
   }
 }

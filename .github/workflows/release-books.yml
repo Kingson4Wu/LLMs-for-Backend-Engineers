@@ -1,0 +1,64 @@
+name: Publish versioned books
+on:
+  push:
+    tags: ['v*']
+permissions:
+  contents: read
+jobs:
+  books:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.11'
+      - name: Install publication tools
+        run: |
+          sudo apt-get update
+          sudo apt-get install -y pandoc librsvg2-bin fonts-noto-cjk fonts-noto-core texlive-xetex texlive-lang-chinese texlive-latex-extra epubcheck poppler-utils
+      - name: Build and validate both editions
+        env:
+          PDF_MAINFONT: Noto Serif CJK SC
+          PDF_CJK_MAINFONT: Noto Serif CJK SC
+          PDF_MONOFONT: Noto Sans Mono
+        run: |
+          python3 tools/book-kit/check_translations.py
+          python3 -m unittest discover -s tests -v
+          python3 tools/book-kit/validate_figures.py
+          for locale in zh-Hans en; do
+            python3 tools/book-kit/validate_book.py --locale "$locale" --check-links
+            python3 tools/book-kit/build_print_html.py --locale "$locale"
+            python3 tools/book-kit/export_epub.py --locale "$locale"
+            python3 tools/book-kit/export_book_pdf.py --locale "$locale"
+            epubcheck "book/exported/$locale/book.epub"
+            pdffonts "book/exported/$locale/book.pdf"
+          done
+          python3 tools/book-kit/package_release.py --version "$GITHUB_REF_NAME"
+      - uses: actions/upload-artifact@v4
+        with:
+          name: versioned-books
+          path: release/
+  publish:
+    if: github.repository == 'kingson4wu/LLMs-for-Backend-Engineers'
+    needs: books
+    runs-on: ubuntu-latest
+    permissions:
+      contents: write
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
+      - uses: actions/download-artifact@v4
+        with:
+          name: versioned-books
+          path: release
+      - name: Create versioned release without overwriting an existing release
+        env:
+          GH_TOKEN: ${{ github.token }}
+          GH_REPO: ${{ github.repository }}
+          RELEASE_TAG: ${{ github.ref_name }}
+        run: |
+          python3 tools/book-kit/release_notes.py --tag "$RELEASE_TAG" --output release-notes.md
+          gh release create "$RELEASE_TAG" release/* --verify-tag --title "$RELEASE_TAG" --notes-file release-notes.md

@@ -1,78 +1,75 @@
 # LLMs for Backend Engineers
 
-[中文 README](./README.zh-CN.md)
+[中文 README](README.zh-CN.md)
 
-[![Read Online](https://img.shields.io/badge/Read%20Online-LLMs%20for%20Backend%20Engineers-16a34a?style=flat-square&logo=googlechrome&logoColor=white)](https://kingson4wu.github.io/LLMs-for-Backend-Engineers/)
-[![GitHub](https://img.shields.io/badge/GitHub-kingson4wu%2FLLMs--for--Backend--Engineers-24292e?style=flat-square&logo=github&logoColor=white)](https://github.com/kingson4wu/LLMs-for-Backend-Engineers)
+A principles-first book for backend engineers. It starts with mathematical and machine-learning foundations, explains computation inside an LLM, shows how an application connects it to the outside world, and follows one model call into reliable service delivery.
 
-A book that helps backend engineers understand large language models from an engineering perspective. No derivations, no theory for its own sake — just system design, trade-offs, how LLMs actually work, and real constraints.
+**[Read online](https://kingson4wu.github.io/LLMs-for-Backend-Engineers/en/) · [Download PDF / EPUB](https://kingson4wu.github.io/LLMs-for-Backend-Engineers/en/downloads/) · [Learn in dialogue](learning/README.md) · [Report an erratum or question](https://github.com/Kingson4Wu/LLMs-for-Backend-Engineers/issues/new/choose)**
 
-<table>
-  <tr>
-    <td align="center" valign="top" width="50%">
-      <a href="https://kingson4wu.github.io/LLMs-for-Backend-Engineers/">
-        <img src="./book/assets/cover.svg" alt="LLMs for Backend Engineers" width="280">
-      </a>
-      <br>
-      <strong>LLMs for Backend Engineers</strong>
-      <br>
-      <a href="https://kingson4wu.github.io/LLMs-for-Backend-Engineers/">Read online</a> ·
-      <a href="https://kingson4wu.github.io/LLMs-for-Backend-Engineers/exported/book.pdf">Download PDF</a>
-    </td>
-  </tr>
-</table>
+[<img src="book/assets/cover-en.svg" width="260" alt="LLMs for Backend Engineers book cover">](https://kingson4wu.github.io/LLMs-for-Backend-Engineers/en/)
 
-The core position of this book:
+**Four parts · 35 articles · Simplified Chinese and English · web, PDF, EPUB**
 
-> Understand LLMs as **probabilistic systems**, not as "reasoning entities".
+## What this book explains
 
-Backend engineers work with math every day — normalizing decimal precision, analyzing convergence in rate-limiting algorithms, understanding exponential backoff for timeouts. These seem unrelated to AI, but they're the same mental toolkit. This book builds intuition for how LLMs actually work.
+An LLM application often conflates four things: how training changes parameters, how a current context affects output, how retrieval and tools connect a model to external systems, and how a service manages latency, capacity, and reliability. This book follows that chain to establish a system view, then enters mechanism-level detail only where it changes engineering judgement.
 
-## Three-Layer Architecture
+It is not a model-source tour, a training recipe collection, or a framework tutorial. Its scope is Transformer-centered generative language models and multimodal extensions running in digital information and software systems.
 
-The book is organized in three layers, building up from foundations:
+## How to read it
 
-### Layer 1: Math & Machine Learning Foundations
+For a first pass, follow the thread: foundations → LLM internals → external systems → infrastructure. Each part landing page explains its groups and reading order; the website’s [introduction](https://kingson4wu.github.io/LLMs-for-Backend-Engineers/en/read/introduction/) gives the complete map.
 
-Concepts independent of any specific model. Read in order:
-AI Math Essentials → Dot Product & Vector Angles → Softmax → Activation Functions → Perceptron Learning → Cross-Entropy Loss → Backpropagation → Vanishing & Exploding Gradients → LayerNorm → From One-hot to Embedding
+If you are building an application, start with Part III and return to Part II when you need to explain a model output. Move to Part IV for latency, concurrency, memory, or cost questions. Part I is not a gate: it is a reference for representation, probability, and learning when those ideas become necessary.
 
-### Layer 2: LLM Internal Mechanisms
+| Part | Question answered |
+| --- | --- |
+| Mathematics and machine-learning foundations | How do discrete information, probability, and error become learnable computation? |
+| LLM internals | How do parameters acquire capability, and how does one input become output? |
+| LLMs and external systems | How does a model obtain evidence, propose actions, and enter a verifiable task loop? |
+| LLM infrastructure | How is one call delivered under latency, capacity, cost, and reliability constraints? |
 
-Deep dive into how LLMs work internally. Read in order:
-Embedding Evolution → Transformer Architecture → Attention Mechanism → Token Generation & Sampling → Fine-tuning & Distillation → Optimizer Selection → AI Engineering Practices
+### Start from your work
 
-### Layer 3: LLM & External Systems
+- **Building APIs, RAG, or tool use:** start with Part III, then return to Part II for model behaviour and context limits.
+- **Investigating latency, memory, concurrency, or cost:** start with Part IV, then revisit Transformer and generation mechanics as needed.
+- **Building a complete model:** follow the four parts in order and restate each part's causal chain using a system you know.
 
-How LLMs connect to the outside world:
-RAG & Knowledge Bases, External Tool Calling
+## Learn through dialogue
 
-## Who This Book Is For
+You can also study the book with a local assistant such as Codex or Claude Code. Start in the [dialogue learning space](learning/README.md), which provides a map, reading method, and question principles without binding the experience to one Skill, MCP server, or startup command.
 
-- Backend engineers with engineering background but no AI experience
-- Developers who want to understand LLM internals
-- Architects interested in LLM application design
-- Anyone who wants to think about LLMs from a systems perspective
+## Reading and publishing
 
-## Reading Path
+The reader includes search, formulas, light/dark themes, text-size controls, reading progress, and browser-local notes with import and export. It has no account or cloud synchronization. Download pages list only formats present in the build; versioned releases include source provenance and SHA256 checksums.
 
-- No ML background → start from Layer 1, read in order
-- Have ML background → start from Layer 2, read in order
-- Focused on application → start from Layer 3, supplement Layer 2 as needed
+Chinese is the source edition. English is AI-assisted and agent-reviewed, with human editorial review pending. CI checks English coverage, source hashes, and links; it does not represent machine checks as human review.
 
-## Local Build
+## Repository map
 
-```bash
-cd book
-npm install
-npm run build
-python3 ../tools/book-kit/build_honkit.py
+```text
+book/                  Chinese source, catalog, part landings, and publication assets
+book/translations/en/  English mirror, glossary, and translation status
+web/                   Astro reader, search, and local notes
+learning/              Entry point for dialogue-based learning with local AI assistants
+tools/book-kit/        Content validation and HTML, PDF, EPUB publication tools
 ```
 
-Output goes to `book/_book/`.
+## Local development
 
-See [LOCAL_DEVELOPMENT.md](LOCAL_DEVELOPMENT.md) for full build instructions.
+The website requires Node.js 22.12+ (CI uses 24) and npm 9.6.5+. Publication tools and tests also require Python 3.11+, Pandoc, and librsvg; PDF additionally needs XeLaTeX and fonts.
 
----
+```bash
+npm --prefix web ci
+npm --prefix web run dev
+```
 
-<sub>Keywords: Large Language Models, Backend Engineering, LLM Architecture, Transformer, Attention, RAG, Agent System, Engineering Practices</sub>
+See the [local development guide](LOCAL_DEVELOPMENT.md) for complete builds, both deployment bases, and PDF / EPUB prerequisites.
+
+## Contributing
+
+Corrections, English editorial review, examples, and reader improvements are welcome. Use the [erratum and question forms](https://github.com/Kingson4Wu/LLMs-for-Backend-Engineers/issues/new/choose), which request the article URL, language, quoted passage, and evidence. See the [contribution guide](CONTRIBUTING.md).
+
+## License
+
+The book content and source code are released under the [MIT License](LICENSE).

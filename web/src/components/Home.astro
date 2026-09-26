@@ -1,0 +1,265 @@
+---
+import Layout from '../layouts/Layout.astro';
+import {
+  catalog,
+  pages,
+  repo,
+  t,
+  titleFor,
+  partTitle,
+  partDescription,
+  partNumber,
+  chapterNumber,
+} from '../lib/book.mjs';
+import { withBase, chapterUrl } from '../lib/paths.mjs';
+const { locale = 'zh-Hans' } = Astro.props;
+const base = import.meta.env.BASE_URL;
+---
+
+<Layout
+  locale={locale}
+  title={t(locale, '后端工程师的 LLM 指南', 'LLMs for Backend Engineers')}
+>
+  <main id="main" class="home">
+    <section class="hero">
+      <div>
+        <p class="eyebrow">
+          <span class="dot"></span>{' '}
+          {t(locale, '一本写给系统构建者的书', 'A BOOK FOR SYSTEM BUILDERS')}
+        </p>
+        <h1>
+          {t(locale, '从后端工程，', 'From backend systems')}
+          <br />
+          <em>{t(locale, '理解大模型。', 'to language models.')}</em>
+        </h1>
+        <p class="hero-subtitle">LLMs for Backend Engineers</p>
+        <p class="hero-description">
+          {t(
+            locale,
+            '用熟悉的工程直觉，理解陌生的模型世界。沿着数学基础、内部原理、外部系统与 LLM 基础设施，建立自己的知识地图。',
+            'Build an understanding of language models with the engineering intuition you already have. Follow a path through foundations, LLM internals, external systems, and LLM infrastructure.',
+          )}
+        </p>
+        <div class="hero-actions">
+          <a
+            class="button primary"
+            id="start-reading"
+            data-locale={locale}
+            href={chapterUrl(locale, 'introduction', base)}
+          >
+            {t(locale, '开始阅读', 'Start reading')} <span>↗</span>
+          </a>
+          <a class="text-link" href="#contents">
+            {t(locale, '探索全书', 'Explore the book')} ↓
+          </a>
+        </div>
+        <p class="byline">
+          Kingson Wu ·{' '}
+          {t(
+            locale,
+            '适合有编程基础、希望理解 LLM 的工程师',
+            'For engineers with a programming background',
+          )}
+        </p>
+      </div>
+      <aside class="hero-reading-note" aria-label={t(locale, '本书说明', 'About this book')}>
+        <p class="hero-note-index">{t(locale, '阅读说明 / 01', 'READING NOTE / 01')}</p>
+        <p class="hero-note-lead">
+          {t(
+            locale,
+            '理解 LLM，不必从框架或产品名开始。',
+            'You do not need to begin with frameworks or product names to understand LLMs.',
+          )}
+        </p>
+        <div class="hero-note-section">
+          <h2>{t(locale, '这本书解释什么', 'What this book explains')}</h2>
+          <p>
+            {t(
+              locale,
+              '模型怎样从数据形成能力，怎样根据上下文生成输出，又怎样与程序、资料和运行系统组成可交付的服务。',
+              'How models acquire capability from data, generate from context, and become deliverable systems with programs, evidence, and runtime infrastructure.',
+            )}
+          </p>
+        </div>
+        <div class="hero-note-section">
+          <h2>{t(locale, '这本书不做什么', 'What it leaves out')}</h2>
+          <p>
+            {t(
+              locale,
+              '不把它写成框架手册，也不试图罗列每个模型与产品；细节只在它改变工程判断时展开。',
+              'It is neither a framework manual nor a catalogue of models and products. Details appear where they change engineering judgment.',
+            )}
+          </p>
+        </div>
+        <a class="hero-note-link" href="#contents">
+          {t(locale, '查看全书结构', 'See the book structure')} <span aria-hidden="true">↓</span>
+        </a>
+      </aside>
+    </section>
+    <div class="facts">
+      <span>
+        <strong>04</strong> {t(locale, '内容部分', 'parts of the book')}
+      </span>
+      <span>
+        <strong>{catalog.parts.flatMap((p) => p.chapters).length}</strong>{' '}
+        {t(locale, '篇正文', 'articles')}
+      </span>
+      <span>
+        {t(locale, '在线阅读 · EPUB · HTML', 'Read online · EPUB · HTML')}
+      </span>
+    </div>
+    <section class="routes">
+      <p class="eyebrow">
+        {t(locale, '找到你的起点', 'FIND YOUR STARTING POINT')}
+      </p>
+      <div>
+        {catalog.parts.slice(0, 4).map((part, i) => (
+          <a href={chapterUrl(locale, part.id, base)}>
+            <small>0{i + 1} / {t(locale, '阅读入口', 'READING ENTRY')}</small>
+            <h2>
+              {
+                [
+                  t(locale, '从零建立直觉', 'Build your intuition'),
+                  t(locale, '拆开模型看内部', 'Look inside the model'),
+                  t(locale, '连接外部世界', 'Connect the external world'),
+                  t(locale, '理解服务交付', 'Understand service delivery'),
+                ][i]
+              }
+            </h2>
+            <p>
+              {
+                [
+                  t(
+                    locale,
+                    '没有 ML 背景？从向量、概率与学习开始。',
+                    'New to ML? Start with vectors, probability, and learning.',
+                  ),
+                  t(
+                    locale,
+                    '已有基础？理解 Transformer 如何产生输出。',
+                    'Know the basics? Explore how Transformers produce outputs.',
+                  ),
+                  t(
+                    locale,
+                    '关注应用？从事实、资料与工具的边界开始。',
+                    'Building an application? Begin with boundaries among facts, material, and tools.',
+                  ),
+                  t(
+                    locale,
+                    '关注性能与部署？从一次请求的生命周期开始。',
+                    'Working on performance or deployment? Start with one request lifecycle.',
+                  ),
+                ][i]
+              }
+            </p>
+            <span>→</span>
+          </a>
+        ))}
+      </div>
+    </section>
+    <section id="contents" class="contents">
+      <div class="section-heading">
+        <div>
+          <p class="eyebrow">
+            {t(locale, '沿着依赖顺序，逐层深入', 'A PATH THROUGH THE IDEAS')}
+          </p>
+          <h2>
+            {t(locale, '全书目录', 'Inside the book')}
+            <em>.</em>
+          </h2>
+        </div>
+        <a href={chapterUrl(locale, 'preface', base)}>
+          {t(locale, '读前言', 'Read the preface')} ↗
+        </a>
+      </div>
+      {catalog.parts.map((part, i) => (
+        <section id={part.id} class="part-section">
+          <h3>
+            <span>{partNumber(locale, i)}</span>
+            <a href={chapterUrl(locale, part.id, base)}>
+              {partTitle(locale, part)}
+            </a>
+          </h3>
+          {partDescription(locale, part) && (
+            <p class="part-description">{partDescription(locale, part)}</p>
+          )}
+          <div class="chapter-grid">
+            {part.chapters.map((page, j) => (
+              <a href={chapterUrl(locale, page.id, base)}>
+                {part.id !== 'appendix' && (
+                  <span class="chapter-index">
+                    {chapterNumber(j)}
+                  </span>
+                )}
+                <span>{titleFor(locale, page)}</span>
+                <span>↗</span>
+              </a>
+            ))}
+          </div>
+        </section>
+      ))}
+    </section>
+    <section class="download-banner">
+      <div>
+        <p class="eyebrow">
+          {t(locale, '按自己的节奏阅读', 'READ AT YOUR OWN PACE')}
+        </p>
+        <h2>{t(locale, '把书带走。', 'Take the book with you.')}</h2>
+        <p>
+          {t(
+            locale,
+            'PDF 适合完整排版，EPUB 适合随屏幕重排。下载页说明版本与构建方式。',
+            'Choose PDF for fixed pages or EPUB for reflowable reading. See edition status and build instructions.',
+          )}
+        </p>
+      </div>
+      <a class="button" href={withBase(`/${locale}/downloads/`, base)}>
+        {t(locale, '查看电子书', 'View editions')} ↗
+      </a>
+    </section>
+  </main>
+  <script
+    is:inline
+    define:vars={{ introUrl: chapterUrl(locale, 'introduction', base), locale }}
+  >
+    if (locale === 'zh-Hans' && location.hash) {
+      const old = new Set([
+        '导读',
+        '三层内容架构',
+        '第一层：数学与机器学习基础',
+        '第二层：llm-内部机制',
+        '第三层：llm-与外部系统的连接',
+        '阅读建议',
+        'llms-for-backend-engineers',
+      ]);
+      try {
+        const id = decodeURIComponent(location.hash.slice(1));
+        if (old.has(id))
+          location.replace(
+            introUrl +
+              (id === 'llms-for-backend-engineers' ? '' : location.hash),
+          );
+      } catch {}
+    }
+  </script>
+  <script>
+    const link = document.querySelector<HTMLAnchorElement>('#start-reading');
+    try {
+      const last = JSON.parse(
+        localStorage.getItem(`llms-last:${link?.dataset.locale}`) || 'null',
+      );
+      if (
+        link &&
+        last &&
+        typeof last.href === 'string' &&
+        last.href.startsWith(
+          link.href.slice(0, link.href.indexOf('/read/') + 6),
+        )
+      ) {
+        link.href = last.href;
+        link.firstChild.textContent =
+          link.dataset.locale === 'en' ? 'Continue reading ' : '继续阅读 ';
+      }
+    } catch {}
+  </script>
+</Layout>

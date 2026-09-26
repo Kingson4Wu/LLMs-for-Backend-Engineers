@@ -1,0 +1,169 @@
+---
+import '@fontsource-variable/inter';
+import '@fontsource-variable/lora';
+import 'katex/dist/katex.min.css';
+import '../styles/site.css';
+import { locales, editions, repo, t } from '../lib/book.mjs';
+import { withBase, chapterUrl } from '../lib/paths.mjs';
+const {
+  title,
+  locale = 'zh-Hans',
+  chapter,
+  description,
+  reader = false,
+  pageKind = 'home',
+} = Astro.props;
+const base = import.meta.env.BASE_URL;
+const localized = (l: string) =>
+  chapter
+    ? chapterUrl(l, chapter, base)
+    : withBase(`/${l}/${pageKind === 'downloads' ? 'downloads/' : ''}`, base);
+const canonical = new URL(
+  Astro.url.pathname === base || Astro.url.pathname === base + '/'
+    ? withBase('/zh-Hans/', base)
+    : Astro.url.pathname,
+  Astro.site,
+).href;
+const desc =
+  description ??
+  t(
+    locale,
+    '从后端工程视角理解数学基础、模型机制与系统集成。',
+    'Understand mathematical foundations, model internals, and system integration from a backend engineering perspective.',
+  );
+---
+
+<!doctype html>
+<html lang={locale}>
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width,initial-scale=1" />
+    <title>{title} · LLMs for Backend Engineers</title>
+    <meta name="description" content={desc} />
+    <link rel="canonical" href={canonical} />
+    {process.env.SITE_PREVIEW === 'true' && (
+      <meta name="robots" content="noindex,nofollow" />
+    )}
+    <meta property="og:title" content={title} />
+    <meta property="og:description" content={desc} />
+    <meta property="og:type" content="website" />
+    <meta property="og:url" content={canonical} />
+    <meta
+      property="og:image"
+      content={
+        new URL(withBase('/assets/social-card.png', base), Astro.site).href
+      }
+    />
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta name="theme-color" content="#f6f4ed" />
+    <link
+      rel="icon"
+      type="image/svg+xml"
+      href={withBase('/assets/favicon.svg', base)}
+    />
+    {locales.map((l) => (
+      <link
+        rel="alternate"
+        hreflang={l}
+        href={new URL(localized(l), Astro.site).href}
+      />
+    ))}
+    <link
+      rel="alternate"
+      hreflang="x-default"
+      href={new URL(localized('zh-Hans'), Astro.site).href}
+    />
+    <script is:inline>
+      try {
+        document.documentElement.dataset.theme =
+          localStorage.getItem('llms-theme') ||
+          (matchMedia('(prefers-color-scheme: dark)').matches
+            ? 'dark'
+            : 'light');
+      } catch {}
+    </script>
+  </head>
+  <body class:list={[{ reader }]}>
+    <a class="skip" href="#main">
+      {t(locale, '跳至正文', 'Skip to content')}
+    </a>
+    <header class="site-header">
+      <a
+        class="brand"
+        href={withBase(`/${locale}/`, base)}
+        aria-label="LLMs for Backend Engineers"
+      >
+        <span class="brand-mark" aria-hidden="true">
+          <svg viewBox="0 0 64 64" focusable="false">
+            <rect class="brand-mark-tile" x="0" y="0" width="64" height="64" rx="15" />
+            <path class="brand-mark-lines" d="M17 19h25M17 32h18M17 45h25" />
+            <circle class="brand-mark-dot" cx="47" cy="45" r="5" />
+          </svg>
+        </span>
+        <span>
+          LLMs <small>for Backend Engineers</small>
+        </span>
+      </a>
+      <nav class="top-nav" aria-label={t(locale, '主导航', 'Main navigation')}>
+        <a href={withBase(`/${locale}/#contents`, base)}>
+          {t(locale, '全书目录', 'Contents')}
+        </a>
+        <a href={withBase(`/${locale}/downloads/`, base)}>
+          {t(locale, '电子书', 'Editions')}
+        </a>
+        <a href={repo}>GitHub ↗</a>
+      </nav>
+      <div class="header-tools">
+        <details class="languages">
+          <summary>
+            {editions.editions[locale].label} <span aria-hidden="true">⌄</span>
+          </summary>
+          <nav aria-label={t(locale, '语言', 'Language')}>
+            {locales.map((l) => (
+              <a
+                href={localized(l)}
+                aria-current={l === locale ? 'page' : undefined}
+                lang={l}
+              >
+                {editions.editions[l].label}
+              </a>
+            ))}
+          </nav>
+        </details>
+        <button
+          id="theme"
+          class="icon-button"
+          hidden
+          aria-label={t(locale, '切换明暗主题', 'Toggle light and dark theme')}
+        >
+          ◐
+        </button>
+      </div>
+    </header>
+    <slot />
+    <footer class="site-footer">
+      <span>
+        LLMs for Backend Engineers <span class="muted">/ Kingson Wu</span>
+      </span>
+      <a href={`${repo}/issues`}>
+        {t(locale, '勘误与建议', 'Corrections & feedback')} ↗
+      </a>
+    </footer>
+    <script>
+      const button = document.querySelector<HTMLButtonElement>('#theme');
+      if (button) {
+        button.hidden = false;
+        button.addEventListener('click', () => {
+          const theme =
+            document.documentElement.dataset.theme === 'dark'
+              ? 'light'
+              : 'dark';
+          document.documentElement.dataset.theme = theme;
+          try {
+            localStorage.setItem('llms-theme', theme);
+          } catch {}
+        });
+      }
+    </script>
+  </body>
+</html>

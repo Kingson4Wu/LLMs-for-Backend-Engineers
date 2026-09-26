@@ -1,78 +1,75 @@
 # LLMs for Backend Engineers / 后端工程师的 LLM 指南
 
-[English README](./README.md)
+[English README](README.md)
 
-[![Read Online](https://img.shields.io/badge/Read%20Online-LLMs%20for%20Backend%20Engineers-16a34a?style=flat-square&logo=googlechrome&logoColor=white)](https://kingson4wu.github.io/LLMs-for-Backend-Engineers/)
-[![GitHub](https://img.shields.io/badge/GitHub-kingson4wu%2FLLMs--for--Backend--Engineers-24292e?style=flat-square&logo=github&logoColor=white)](https://github.com/kingson4wu/LLMs-for-Backend-Engineers)
+一本面向后端工程师的 LLM 原理书。它从数学与机器学习基础出发，解释模型内部计算、应用怎样连接外部世界，以及一次模型调用怎样成为可靠服务。
 
-一本帮助后端工程师从工程视角理解大型语言模型的书稿。不讲模型原理推导，讲系统设计和工程权衡；不讲学术理论，讲运行机制和实际限制；不讲工具罗列，讲架构原则和模式判断。
+**[在线阅读](https://kingson4wu.github.io/LLMs-for-Backend-Engineers/zh-Hans/) · [下载 PDF / EPUB](https://kingson4wu.github.io/LLMs-for-Backend-Engineers/zh-Hans/downloads/) · [对话学习](learning/README.md) · [提交勘误或问题](https://github.com/Kingson4Wu/LLMs-for-Backend-Engineers/issues/new/choose)**
 
-<table>
-  <tr>
-    <td align="center" valign="top" width="50%">
-      <a href="https://kingson4wu.github.io/LLMs-for-Backend-Engineers/">
-        <img src="./book/assets/cover.svg" alt="LLMs for Backend Engineers" width="280">
-      </a>
-      <br>
-      <strong>LLMs for Backend Engineers</strong>
-      <br>
-      <a href="https://kingson4wu.github.io/LLMs-for-Backend-Engineers/">在线阅读</a> ·
-      <a href="https://kingson4wu.github.io/LLMs-for-Backend-Engineers/exported/book.pdf">PDF 下载</a>
-    </td>
-  </tr>
-</table>
+[<img src="book/assets/cover-zh-Hans.svg" width="260" alt="《后端工程师的 LLM 指南》封面">](https://kingson4wu.github.io/LLMs-for-Backend-Engineers/zh-Hans/)
 
-本书的核心立场是：
+**四个部分 · 35 篇文章 · 简体中文与英文 · 网页、PDF、EPUB**
 
-> 把 LLM 当作**概率系统**来理解，而不是当作"推理实体"。
+## 这本书解决什么问题
 
-模型不"思考"，模型只是在一个巨大的概率空间里找最可能的下一步。这种视角会让你对 LLM 的能力、局限和工程权衡有更清醒的判断。
+LLM 应用中常被混淆的几件事是：训练怎样改变参数，当前上下文怎样影响输出，检索和工具怎样把模型接入外部系统，以及服务怎样处理延迟、容量与可靠性。本书沿这条链路建立全局认识，并在影响工程判断的地方进入必要细节。
 
-## 三层内容架构
+它不讲模型源码、训练配方或单一框架的操作手册，也不试图覆盖所有 AI 方向。重点是以 Transformer 为主的生成式语言模型及其多模态扩展，及其在数字信息与软件系统中的运行方式。
 
-本书按技术栈层次分为三层，由底向上建立知识体系：
+## 怎样阅读
 
-### 第一层：数学与机器学习基础
+第一次阅读可以沿主线走：数学基础 → 模型内部 → 外部系统 → 基础设施。每部分首页说明其内部小分类与阅读顺序；可从网站的[导读](https://kingson4wu.github.io/LLMs-for-Backend-Engineers/zh-Hans/read/introduction/)查看全书地图。
 
-与具体模型无关的数学与机器学习基础概念。按依赖顺序排列：
-AI数学精要 → 向量点积与夹角 → Softmax → 激活函数 → 感知机 → 交叉熵损失 → 反向传播 → 梯度消失与爆炸 → LayerNorm → Embedding 原理
+如果正在做应用，可先读第三部分，在需要解释模型输出时回到第二部分；遇到延迟、并发、显存或成本问题时进入第四部分。数学部分不是门槛，而是理解表示、概率与训练时可按需回看的基础。
 
-### 第二层：LLM 内部机制
+| 部分 | 回答的问题 |
+| --- | --- |
+| 数学与机器学习基础 | 离散信息、概率和误差怎样成为可学习计算？ |
+| LLM 内部原理 | 参数怎样形成能力，一次输入怎样生成输出？ |
+| LLM 与外部系统 | 模型怎样获得证据、提出动作并进入可验证的任务循环？ |
+| LLM 基础设施 | 一次调用怎样在延迟、容量、成本与可靠性约束下被交付？ |
 
-深入 LLM 的内部工作原理。按依赖顺序排列：
-Embedding 演化 → Transformer 架构 → Attention 机制 → Token 生成与采样 → 微调与蒸馏 → 优化器选择 → AI系统工程实践
+### 按正在做的工作切入
 
-### 第三层：LLM 与外部系统的连接
+- **做 API、RAG 或工具调用**：从第三部分开始；遇到输出行为或上下文限制时回到第二部分。
+- **排查延迟、显存、并发或成本**：从第四部分开始，再回看 Transformer 与生成机制。
+- **希望建立完整模型**：按四部分顺序阅读，并在每一部分结束时用自己的系统场景复述因果链。
 
-LLM 如何与外部世界交互：
-RAG 与知识库、外部工具调用
+## 以对话方式学习
 
-## 目标读者
+也可以在本地用 Codex、Claude Code 等助手围绕书稿学习：进入[对话式学习空间](learning/README.md)，从全书地图、阅读方式和提问原则开始。这里不绑定特定 Skill、MCP 或启动命令，保留对话对不同问题的适应能力。
 
-- 有工程背景但无 AI 基础的后端工程师
-- 想要理解 LLM 内部原理的开发者
-- 对 LLM 应用架构感兴趣的架构师
-- 想要从系统层面思考 LLM 的任何人
+## 阅读与发布
 
-## 阅读建议
+阅读站提供搜索、公式、明暗主题、字号、阅读进度和浏览器本地笔记；笔记可导入导出，不需要账号，也不上传云端。下载页只列出本次构建实际包含的格式；正式发行包含来源清单与 SHA256 校验和。
 
-- 无 ML 背景 → 从第一层开始，按顺序阅读
-- 有 ML 基础 → 从第二层开始，按顺序阅读
-- 关注应用落地 → 从第三层开始，按需补充第二层前置知识
+中文是源版本。英文为 AI 辅助翻译，已进行代理审阅，仍待人工编辑审校；CI 检查英文覆盖范围、原文哈希和链接，但不把机器检查误称为人工审校。
 
-## 本地构建
+## 仓库结构
 
-```bash
-cd book
-npm install
-npm run build
-python3 ../tools/book-kit/build_honkit.py
+```text
+book/                  中文书稿、目录、部分前言与出版资源
+book/translations/en/  英文镜像、术语表与翻译状态
+web/                   Astro 阅读站、搜索与本地笔记
+learning/              供本地 AI 助手进行对话式学习的入口
+tools/book-kit/        内容校验及 HTML、PDF、EPUB 出版工具
 ```
 
-最终输出在 `book/_book/`。
+## 本地开发
 
-详细构建说明见 [LOCAL_DEVELOPMENT.md](LOCAL_DEVELOPMENT.md)。
+网站需要 Node.js 22.12+（CI 使用 24）和 npm 9.6.5+。出版工具及测试还需要 Python 3.11+、Pandoc 和 librsvg；PDF 另需 XeLaTeX 与字体。
 
----
+```bash
+npm --prefix web ci
+npm --prefix web run dev
+```
 
-<sub>Keywords: 大型语言模型, 后端工程, LLM 架构, Transformer, Attention, RAG, Agent System, Engineering Practices · Large Language Models, Backend Engineering, LLM Architecture, Transformer, Attention, RAG, Agent System, Engineering Practices</sub>
+完整网站构建、双部署路径、PDF / EPUB 前提条件和旧 Honkit 构建见[本地开发指南](LOCAL_DEVELOPMENT.md)。
+
+## 参与改进
+
+欢迎勘误、英文审校、示例与阅读体验改进。可直接[提交勘误或问题](https://github.com/Kingson4Wu/LLMs-for-Backend-Engineers/issues/new/choose)；模板会要求文章 URL、语言、原文片段与依据。贡献流程见[贡献指南](CONTRIBUTING.md)。
+
+## 许可证
+
+书籍内容与源码均按 [MIT License](LICENSE) 发布。

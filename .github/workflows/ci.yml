@@ -1,40 +1,66 @@
-name: CI
-
+name: Validate book and website
 on:
   pull_request:
   push:
-    branches:
-      - main
-
+    branches: [main]
 permissions:
   contents: read
-
 jobs:
-  build-and-validate:
+  validate:
     runs-on: ubuntu-latest
     steps:
-      - name: Checkout repository
-        uses: actions/checkout@v4
-
-      - name: Setup Node.js
-        uses: actions/setup-node@v4
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
         with:
-          node-version: 20
-
-      - name: Setup Python
-        uses: actions/setup-python@v5
+          node-version: '24'
+          cache: npm
+          cache-dependency-path: |
+            book/package-lock.json
+            web/package-lock.json
+      - uses: actions/setup-python@v5
         with:
-          python-version: "3.11"
-
-      - name: Install dependencies
-        working-directory: ./book
-        run: npm install
-
-      - name: Build book
-        working-directory: ./book
-        run: npm run build
-
-      - name: Verify book output
+          python-version: '3.11'
+      - name: Install publication tools
+        run: sudo apt-get update && sudo apt-get install -y pandoc librsvg2-bin fonts-noto-cjk epubcheck
+      - name: Test publication and source integrity
         run: |
-          test -f book/_book/index.html
-          test -f book/_book/preface.html
+          python3 -m unittest discover -s tests -v
+          python3 tools/book-kit/validate_book.py --check-links
+          python3 tools/book-kit/validate_book.py --locale en --check-links
+          python3 tools/book-kit/check_translations.py
+          python3 tools/book-kit/validate_figures.py
+      - name: Check legacy build
+        working-directory: book
+        run: npm ci && npm run build
+      - name: Build portable editions
+        run: |
+          for locale in zh-Hans en; do
+            python3 tools/book-kit/build_print_html.py --locale "$locale"
+            python3 tools/book-kit/export_epub.py --locale "$locale"
+            epubcheck "book/exported/$locale/book.epub"
+          done
+      - name: Check website
+        working-directory: web
+        run: |
+          npm ci
+          npm run check
+          npm test
+          SITE_BASE=/ npm run build
+          SITE_BASE=/ npm run check:deployment
+          npm run build
+          npm run check:deployment
+      - name: Run browser and accessibility smoke checks
+        working-directory: web
+        run: |
+          python3 -m pip install playwright
+          python3 -m playwright install --with-deps chromium
+          npx astro preview --host 127.0.0.1 --port 4322 > "$RUNNER_TEMP/book-preview.log" 2>&1 &
+          for attempt in $(seq 1 30); do
+            curl --fail --silent http://127.0.0.1:4322/LLMs-for-Backend-Engineers/zh-Hans/ >/dev/null && break
+            sleep 1
+          done
+          BOOK_PREVIEW_URL=http://127.0.0.1:4322/LLMs-for-Backend-Engineers python3 scripts/browser-smoke.py
+      - uses: actions/upload-artifact@v4
+        with:
+          name: book-preview
+          path: web/dist
