@@ -1,0 +1,56 @@
+# Node rules:
+## Grunt intermediate storage (http://gruntjs.com/creating-plugins#storing-task-files)
+.grunt
+
+## Dependency directory
+## Commenting this out is preferred by some people, see
+## https://docs.npmjs.com/misc/faq#should-i-check-my-node_modules-folder-into-git
+node_modules
+
+# Local editor state
+.idea/
+.DS_Store
+
+# Python cache
+__pycache__/
+**/__pycache__/
+*.py[cod]
+
+# Book build output
+_build
+_debug
+_texdebug
+exported
+dist
+**/dist/
+
+# Nested book build output
+**/_debug/
+**/_texdebug/
+**/exported/
+
+# eBook build output
+*.epub
+*.mobi
+*.pdf
+
+# LaTeX / pandoc intermediates
+*.aux
+*.fdb_latexmk
+*.fls
+*.log
+*.out
+*.toc
+
+# Reading site and release bundles
+web/.astro/
+release/
+
+# Local browser screenshots
+web/review/
+
+# Local visual-companion session state
+.superpowers/
+
+# Learner-owned material; copy learning/WORKSPACE_TEMPLATE to start privately.
+learning/workspace/

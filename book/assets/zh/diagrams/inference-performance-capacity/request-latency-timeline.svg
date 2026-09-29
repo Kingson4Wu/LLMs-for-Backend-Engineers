@@ -1,0 +1,59 @@
+<?xml version="1.0"?>
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="650" viewBox="0 0 1200 650" role="img" aria-labelledby="title desc">
+  <title id="title">&#x6D41;&#x5F0F;&#x8BF7;&#x6C42;&#x7684;&#x5EF6;&#x8FDF;&#x65F6;&#x95F4;&#x7EBF;</title>
+  <desc id="desc">&#x8BF7;&#x6C42;&#x5148;&#x6392;&#x961F;&#x540E; Prefill&#xFF0C;&#x51FA;&#x73B0;&#x7B2C;&#x4E00;&#x4E2A; token &#x540E;&#x8FDB;&#x5165; Decode&#x3002;TTFT &#x4ECE;&#x5230;&#x8FBE;&#x8BA1;&#x5230;&#x9996; token&#xFF1B;TPOT &#x662F; Decode &#x4E2D;&#x76F8;&#x90BB; token &#x7684;&#x95F4;&#x9694;&#x3002;</desc>
+  <defs>
+    <marker id="a" viewBox="0 0 10 10" refX="8" refY="5" markerWidth="8" markerHeight="8" orient="auto">
+      <path d="M0 0 10 5 0 10z" fill="#0F4D92"/>
+    </marker>
+  </defs>
+  <rect width="1200" height="650" rx="30" fill="#FFFFFF"/>
+  <g font-family="Arial,'Noto Sans SC',sans-serif">
+    <text x="58" y="68" font-size="31" font-weight="700" fill="#17324D">&#x4E00;&#x6B21;&#x6D41;&#x5F0F;&#x8BF7;&#x6C42;&#x7684;&#x201C;&#x5FEB;&#x201D;&#xFF0C;&#x81F3;&#x5C11;&#x8981;&#x62C6;&#x6210;&#x4E09;&#x79CD;&#x65F6;&#x95F4;</text>
+    <text x="58" y="105" font-size="18" fill="#5E7F9C">&#x6392;&#x961F;&#x5F71;&#x54CD;&#x80FD;&#x5426;&#x5F00;&#x59CB;&#xFF1B;TTFT &#x51B3;&#x5B9A;&#x4F55;&#x65F6;&#x770B;&#x5230;&#x9996; token&#xFF1B;TPOT &#x63CF;&#x8FF0;&#x6301;&#x7EED;&#x8F93;&#x51FA;&#x7684;&#x8282;&#x594F;&#x3002;</text>
+    <path d="M100 365H1080" fill="none" stroke="#0F4D92" stroke-width="5" marker-end="url(#a)" data-figure-connector="true"/>
+    <g stroke-width="3">
+      <rect x="130" y="190" width="200" height="150" rx="22" fill="#FFF8D6" stroke="#FFD700"/>
+      <rect x="360" y="190" width="235" height="150" rx="22" fill="#EAF3FB" stroke="#0F4D92"/>
+      <rect x="650" y="190" width="315" height="150" rx="22" fill="#EAF3FB" stroke="#0F4D92"/>
+    </g>
+    <g text-anchor="middle">
+      <text x="230" y="244" font-size="23" font-weight="700" fill="#765800">&#x6392;&#x961F;</text>
+      <text x="230" y="278" font-size="17" fill="#765800">&#x7B49;&#x5F85;&#x5B9E;&#x4F8B;&#x3001;&#x663E;&#x5B58;&#x6216;</text>
+      <text x="230" y="303" font-size="17" fill="#765800">&#x8C03;&#x5EA6;&#x673A;&#x4F1A;</text>
+      <text x="477" y="244" font-size="23" font-weight="700" fill="#17324D">Prefill</text>
+      <text x="477" y="278" font-size="17" fill="#0F4D92">&#x5904;&#x7406;&#x5DF2;&#x6709;&#x8F93;&#x5165;&#xFF0C;</text>
+      <text x="477" y="303" font-size="17" fill="#0F4D92">&#x5EFA;&#x7ACB;&#x672C;&#x8F6E; KV &#x72B6;&#x6001;</text>
+      <text x="807" y="244" font-size="23" font-weight="700" fill="#17324D">Decode</text>
+      <text x="807" y="278" font-size="17" fill="#0F4D92">&#x9010;&#x6B65;&#x8F93;&#x51FA;&#x540E;&#x7EED; token</text>
+      <text x="807" y="303" font-size="17" fill="#0F4D92">&#x76F4;&#x5230;&#x6700;&#x7EC8; token</text>
+    </g>
+    <circle cx="625" cy="365" r="20" fill="#B64342"/>
+    <text x="625" y="164" text-anchor="middle" font-size="20" font-weight="700" fill="#B64342">&#x9996;&#x4E2A; token</text>
+    <circle cx="1000" cy="365" r="20" fill="#0F4D92"/>
+    <text x="1000" y="164" text-anchor="middle" font-size="20" font-weight="700" fill="#17324D">&#x6700;&#x540E; token</text>
+    <path d="M130 397H625M130 387v20M625 387v20" fill="none" stroke="#B64342" stroke-width="4"/>
+    <text x="377" y="442" text-anchor="middle" font-size="22" font-weight="700" fill="#B64342">TTFT = &#x6392;&#x961F; + &#x8F93;&#x5165;&#x5904;&#x7406; + Prefill</text>
+    <path d="M670 490H960M670 480v20M960 480v20" fill="none" stroke="#FFD700" stroke-width="4"/>
+    <text x="815" y="536" text-anchor="middle" font-size="21" font-weight="700" fill="#765800">TPOT&#xFF1A;&#x76F8;&#x90BB;&#x8F93;&#x51FA; token &#x7684;&#x95F4;&#x9694;</text>
+    <text x="600" y="596" text-anchor="middle" font-size="18" fill="#5E7F9C">&#x541E;&#x5410;&#x91CF;&#x9AD8;&#x4E0D;&#x5FC5;&#x7136;&#x610F;&#x5473;&#x7740;&#x6BCF;&#x4E2A;&#x8BF7;&#x6C42;&#x7684; TTFT &#x6216; TPOT &#x90FD;&#x4F4E;&#x3002;</text>
+  </g>
+  <g aria-hidden="true" fill="none" opacity="0" pointer-events="none">
+    <rect data-figure-safe-zone="text" x="46.0" y="25.0" width="573.0" height="65.8"/>
+    <rect data-figure-safe-zone="text" x="46.0" y="75.0" width="612.2" height="48.3"/>
+    <rect data-figure-safe-zone="text" x="218.0" y="209.0" width="67.7" height="55.0"/>
+    <rect data-figure-safe-zone="text" x="218.0" y="249.0" width="145.9" height="47.0"/>
+    <rect data-figure-safe-zone="text" x="218.0" y="274.0" width="88.6" height="47.0"/>
+    <rect data-figure-safe-zone="text" x="465.0" y="209.0" width="107.7" height="55.0"/>
+    <rect data-figure-safe-zone="text" x="465.0" y="249.0" width="129.7" height="47.0"/>
+    <rect data-figure-safe-zone="text" x="465.0" y="274.0" width="156.3" height="47.0"/>
+    <rect data-figure-safe-zone="text" x="795.0" y="209.0" width="95.8" height="55.0"/>
+    <rect data-figure-safe-zone="text" x="795.0" y="249.0" width="173.9" height="47.0"/>
+    <rect data-figure-safe-zone="text" x="795.0" y="274.0" width="141.6" height="47.0"/>
+    <rect data-figure-safe-zone="text" x="562.8" y="132.0" width="124.4" height="51.0"/>
+    <rect data-figure-safe-zone="text" x="937.8" y="132.0" width="124.4" height="51.0"/>
+    <rect data-figure-safe-zone="text" x="187.9" y="408.0" width="378.2" height="53.7"/>
+    <rect data-figure-safe-zone="text" x="667.7" y="503.0" width="294.7" height="52.4"/>
+    <rect data-figure-safe-zone="text" x="373.3" y="566.0" width="453.5" height="48.3"/>
+  </g>
+</svg>

@@ -1,0 +1,71 @@
+<?xml version="1.0"?>
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 620" role="img" aria-labelledby="title desc">
+  <title id="title">From training to service: four layers of an LLM system</title>
+  <desc id="desc">Mathematics and machine learning foundations, LLM internals, external systems, and LLM infrastructure connect in order, showing how information becomes a deliverable service.</desc>
+  <rect width="1200" height="620" rx="28" fill="#F6F4ED"/>
+  <text x="72" y="86" fill="#23332F" font-family="Inter, sans-serif" font-size="32" font-weight="700">From training to service: four layers of an LLM system</text>
+  <text x="72" y="124" fill="#64736C" font-family="Inter, sans-serif" font-size="18">Each layer answers a different question; together they determine what one request can know, produce, and deliver.</text>
+  <path d="M196 295H336M496 295H636M796 295H936" fill="none" stroke="#9BAA9C" stroke-linecap="round" stroke-width="5"/>
+  <path d="m322 283 18 12-18 12m156-24 18 12-18 12m156-24 18 12-18 12" fill="none" stroke="#9BAA9C" stroke-linecap="round" stroke-linejoin="round" stroke-width="5"/>
+  <g font-family="Inter, sans-serif">
+    <g transform="translate(72 204)">
+      <rect width="250" height="184" rx="18" fill="#FFFFFF" stroke="#CBD2C8" stroke-width="2"/>
+      <text x="26" y="48" fill="#BD775B" font-size="15" font-weight="700">PART I</text>
+      <text x="26" y="82" fill="#23332F" font-size="22" font-weight="700">Foundations</text>
+      <text x="26" y="118" fill="#64736C" font-size="16">representation &#xB7; probability</text>
+      <text x="26" y="145" fill="#64736C" font-size="14">How information enters</text>
+      <text x="26" y="166" fill="#64736C" font-size="14">learnable computation</text>
+    </g>
+    <g transform="translate(372 204)">
+      <rect width="250" height="184" rx="18" fill="#FFFFFF" stroke="#CBD2C8" stroke-width="2"/>
+      <text x="26" y="48" fill="#BD775B" font-size="15" font-weight="700">PART II</text>
+      <text x="26" y="82" fill="#23332F" font-size="22" font-weight="700">LLM internals</text>
+      <text x="26" y="118" fill="#64736C" font-size="14">training &#xB7; Transformer &#xB7; generation</text>
+      <text x="26" y="145" fill="#64736C" font-size="14">How parameters and context</text>
+      <text x="26" y="166" fill="#64736C" font-size="14">produce output</text>
+    </g>
+    <g transform="translate(672 204)">
+      <rect width="250" height="184" rx="18" fill="#FFFFFF" stroke="#CBD2C8" stroke-width="2"/>
+      <text x="26" y="48" fill="#BD775B" font-size="15" font-weight="700">PART III</text>
+      <text x="26" y="82" fill="#23332F" font-size="22" font-weight="700">External systems</text>
+      <text x="26" y="118" fill="#64736C" font-size="16">context &#xB7; evidence &#xB7; tools</text>
+      <text x="26" y="145" fill="#64736C" font-size="14">How a proposal becomes</text>
+      <text x="26" y="166" fill="#64736C" font-size="14">an outside action</text>
+    </g>
+    <g transform="translate(972 204)">
+      <rect width="200" height="184" rx="18" fill="#23332F"/>
+      <text x="24" y="48" fill="#EAC7B4" font-size="15" font-weight="700">PART IV</text>
+      <text x="24" y="82" fill="#F6F4ED" font-size="22" font-weight="700">LLM</text>
+      <text x="24" y="112" fill="#F6F4ED" font-size="22" font-weight="700">infrastructure</text>
+      <text x="24" y="146" fill="#D4DDD4" font-size="14">requests &#xB7; state &#xB7; delivery</text>
+    </g>
+  </g>
+  <rect x="72" y="466" width="1056" height="86" rx="16" fill="#E7ECE4"/>
+  <text x="104" y="502" fill="#23332F" font-family="Inter, sans-serif" font-size="17" font-weight="700">When tracing one request, keep four things distinct:</text>
+  <text x="104" y="532" fill="#52635A" font-family="Inter, sans-serif" font-size="16">patterns learned in parameters &#xB7; evidence in this context &#xB7; actions run by external programs &#xB7; capacity and reliability constraints of service delivery</text>
+  <g aria-hidden="true" fill="none" opacity="0" pointer-events="none">
+    <rect data-figure-safe-zone="text" x="60.0" y="42.0" width="922.6" height="67.2"/>
+    <rect data-figure-safe-zone="text" x="60.0" y="94.0" width="1081.7" height="48.3"/>
+    <rect data-figure-safe-zone="text" x="14.0" y="21.0" width="70.8" height="44.2"/>
+    <rect data-figure-safe-zone="text" x="14.0" y="48.0" width="149.8" height="53.7"/>
+    <rect data-figure-safe-zone="text" x="14.0" y="90.0" width="257.0" height="45.6"/>
+    <rect data-figure-safe-zone="text" x="14.0" y="119.0" width="184.2" height="42.9"/>
+    <rect data-figure-safe-zone="text" x="14.0" y="140.0" width="176.9" height="42.9"/>
+    <rect data-figure-safe-zone="text" x="14.0" y="21.0" width="78.6" height="44.2"/>
+    <rect data-figure-safe-zone="text" x="14.0" y="48.0" width="172.7" height="53.7"/>
+    <rect data-figure-safe-zone="text" x="14.0" y="90.0" width="315.2" height="45.6"/>
+    <rect data-figure-safe-zone="text" x="14.0" y="119.0" width="213.3" height="42.9"/>
+    <rect data-figure-safe-zone="text" x="14.0" y="140.0" width="125.9" height="42.9"/>
+    <rect data-figure-safe-zone="text" x="14.0" y="21.0" width="86.4" height="44.2"/>
+    <rect data-figure-safe-zone="text" x="14.0" y="48.0" width="207.0" height="53.7"/>
+    <rect data-figure-safe-zone="text" x="14.0" y="90.0" width="240.3" height="45.6"/>
+    <rect data-figure-safe-zone="text" x="14.0" y="119.0" width="184.2" height="42.9"/>
+    <rect data-figure-safe-zone="text" x="14.0" y="140.0" width="147.8" height="42.9"/>
+    <rect data-figure-safe-zone="text" x="12.0" y="21.0" width="78.6" height="44.2"/>
+    <rect data-figure-safe-zone="text" x="12.0" y="48.0" width="58.3" height="53.7"/>
+    <rect data-figure-safe-zone="text" x="12.0" y="78.0" width="184.2" height="53.7"/>
+    <rect data-figure-safe-zone="text" x="12.0" y="120.0" width="220.6" height="42.9"/>
+    <rect data-figure-safe-zone="text" x="92.0" y="473.0" width="483.7" height="47.0"/>
+    <rect data-figure-safe-zone="text" x="92.0" y="504.0" width="1280.3" height="45.6"/>
+  </g>
+<g aria-hidden="true" fill="none" opacity="0" pointer-events="none"><rect data-figure-safe-zone="text" x="60.0" y="42.0" width="922.6" height="67.2"/><rect data-figure-safe-zone="text" x="60.0" y="94.0" width="1081.7" height="48.3"/><rect data-figure-safe-zone="text" x="14.0" y="21.0" width="70.8" height="44.2"/><rect data-figure-safe-zone="text" x="14.0" y="48.0" width="149.8" height="53.7"/><rect data-figure-safe-zone="text" x="14.0" y="90.0" width="257.0" height="45.6"/><rect data-figure-safe-zone="text" x="14.0" y="119.0" width="184.2" height="42.9"/><rect data-figure-safe-zone="text" x="14.0" y="140.0" width="176.9" height="42.9"/><rect data-figure-safe-zone="text" x="14.0" y="21.0" width="78.6" height="44.2"/><rect data-figure-safe-zone="text" x="14.0" y="48.0" width="172.7" height="53.7"/><rect data-figure-safe-zone="text" x="14.0" y="92.0" width="278.8" height="42.9"/><rect data-figure-safe-zone="text" x="14.0" y="119.0" width="213.3" height="42.9"/><rect data-figure-safe-zone="text" x="14.0" y="140.0" width="125.9" height="42.9"/><rect data-figure-safe-zone="text" x="14.0" y="21.0" width="86.4" height="44.2"/><rect data-figure-safe-zone="text" x="14.0" y="48.0" width="207.0" height="53.7"/><rect data-figure-safe-zone="text" x="14.0" y="90.0" width="240.3" height="45.6"/><rect data-figure-safe-zone="text" x="14.0" y="119.0" width="184.2" height="42.9"/><rect data-figure-safe-zone="text" x="14.0" y="140.0" width="147.8" height="42.9"/><rect data-figure-safe-zone="text" x="12.0" y="21.0" width="78.6" height="44.2"/><rect data-figure-safe-zone="text" x="12.0" y="48.0" width="58.3" height="53.7"/><rect data-figure-safe-zone="text" x="12.0" y="78.0" width="184.2" height="53.7"/><rect data-figure-safe-zone="text" x="12.0" y="120.0" width="220.6" height="42.9"/><rect data-figure-safe-zone="text" x="92.0" y="473.0" width="483.7" height="47.0"/><rect data-figure-safe-zone="text" x="92.0" y="504.0" width="1280.3" height="45.6"/></g></svg>

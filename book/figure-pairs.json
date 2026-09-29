@@ -1,0 +1,804 @@
+{
+  "pairs": [
+    {
+      "chapter": "introduction",
+      "ordinal": 1,
+      "zh": "book/assets/zh/diagrams/introduction/ai-scope.svg",
+      "en": "book/assets/en/diagrams/introduction/ai-scope.svg",
+      "zh_source": "book/index.md",
+      "en_source": "book/translations/en/index.md"
+    },
+    {
+      "chapter": "introduction",
+      "ordinal": 2,
+      "zh": "book/assets/zh/diagrams/introduction/llm-scope.svg",
+      "en": "book/assets/en/diagrams/introduction/llm-scope.svg",
+      "zh_source": "book/index.md",
+      "en_source": "book/translations/en/index.md"
+    },
+    {
+      "chapter": "introduction",
+      "ordinal": 3,
+      "zh": "book/assets/zh/diagrams/introduction/system-flow.svg",
+      "en": "book/assets/en/diagrams/introduction/system-flow.svg",
+      "zh_source": "book/index.md",
+      "en_source": "book/translations/en/index.md"
+    },
+    {
+      "chapter": "introduction",
+      "ordinal": 4,
+      "zh": "book/assets/book-system-map-zh.svg",
+      "en": "book/assets/book-system-map-en.svg",
+      "zh_source": "book/index.md",
+      "en_source": "book/translations/en/index.md"
+    },
+    {
+      "chapter": "can-ai-create-new-things",
+      "ordinal": 1,
+      "zh": "book/assets/zh/diagrams/can-ai-create-new-things/creative-feedback-loop.svg",
+      "en": "book/assets/en/diagrams/appendices/candidate-verification-loop.svg",
+      "zh_source": "book/chapters/appendices/can-ai-create-new-things.md",
+      "en_source": "book/translations/en/chapters/appendices/can-ai-create-new-things.md"
+    },
+    {
+      "chapter": "generative-ai-probability-and-innovation",
+      "ordinal": 1,
+      "zh": "book/assets/zh/diagrams/generative-ai-probability-and-innovation/generation-validation-loop.svg",
+      "en": "book/assets/en/diagrams/appendices/generation-control-loop.svg",
+      "zh_source": "book/chapters/appendices/generative-ai-probability-and-innovation.md",
+      "en_source": "book/translations/en/chapters/appendices/generative-ai-probability-and-innovation.md"
+    },
+    {
+      "chapter": "generative-ai-probability-and-innovation",
+      "ordinal": 2,
+      "zh": "book/assets/zh/diagrams/generative-ai-probability-and-innovation/responsibility-boundaries.svg",
+      "en": "book/assets/en/diagrams/generative-ai-probability-and-innovation/responsibility-boundaries.svg",
+      "zh_source": "book/chapters/appendices/generative-ai-probability-and-innovation.md",
+      "en_source": "book/translations/en/chapters/appendices/generative-ai-probability-and-innovation.md"
+    },
+    {
+      "chapter": "generative-ai-probability-and-innovation",
+      "ordinal": 3,
+      "zh": "book/assets/zh/diagrams/generative-ai-probability-and-innovation/explanation-evidence-chain.svg",
+      "en": "book/assets/en/diagrams/appendices/evidence-decision-chain.svg",
+      "zh_source": "book/chapters/appendices/generative-ai-probability-and-innovation.md",
+      "en_source": "book/translations/en/chapters/appendices/generative-ai-probability-and-innovation.md"
+    },
+    {
+      "chapter": "what-ai-really-means",
+      "ordinal": 1,
+      "zh": "book/assets/zh/diagrams/what-ai-really-means/ai-system-feedback.svg",
+      "en": "book/assets/en/diagrams/appendices/ai-feedback-boundary.svg",
+      "zh_source": "book/chapters/appendices/what-ai-really-means.md",
+      "en_source": "book/translations/en/chapters/appendices/what-ai-really-means.md"
+    },
+    {
+      "chapter": "activation-functions",
+      "ordinal": 1,
+      "zh": "book/assets/zh/diagrams/activation-functions/xor-samples.svg",
+      "en": "book/assets/en/diagrams/activation-functions/xor-samples.svg",
+      "zh_source": "book/chapters/part1-math-foundations/activation-functions.md",
+      "en_source": "book/translations/en/chapters/part1-math-foundations/activation-functions.md"
+    },
+    {
+      "chapter": "activation-functions",
+      "ordinal": 2,
+      "zh": "book/assets/zh/diagrams/activation-functions/xor-linear-boundary.svg",
+      "en": "book/assets/en/diagrams/activation-functions/xor-linear-boundary.svg",
+      "zh_source": "book/chapters/part1-math-foundations/activation-functions.md",
+      "en_source": "book/translations/en/chapters/part1-math-foundations/activation-functions.md"
+    },
+    {
+      "chapter": "activation-functions",
+      "ordinal": 3,
+      "zh": "book/assets/zh/diagrams/activation-functions/xor-relu-network.svg",
+      "en": "book/assets/en/diagrams/activation-functions/xor-relu-network.svg",
+      "zh_source": "book/chapters/part1-math-foundations/activation-functions.md",
+      "en_source": "book/translations/en/chapters/part1-math-foundations/activation-functions.md"
+    },
+    {
+      "chapter": "activation-functions",
+      "ordinal": 4,
+      "zh": "book/assets/zh/diagrams/activation-functions/xor-region-gating.svg",
+      "en": "book/assets/en/diagrams/activation-functions/xor-region-gating.svg",
+      "zh_source": "book/chapters/part1-math-foundations/activation-functions.md",
+      "en_source": "book/translations/en/chapters/part1-math-foundations/activation-functions.md"
+    },
+    {
+      "chapter": "activation-functions",
+      "ordinal": 5,
+      "zh": "book/assets/zh/diagrams/activation-functions/relu-curve.svg",
+      "en": "book/assets/en/diagrams/activation-functions/relu-curve.svg",
+      "zh_source": "book/chapters/part1-math-foundations/activation-functions.md",
+      "en_source": "book/translations/en/chapters/part1-math-foundations/activation-functions.md"
+    },
+    {
+      "chapter": "activation-functions",
+      "ordinal": 6,
+      "zh": "book/assets/zh/diagrams/activation-functions/sigmoid-curve.svg",
+      "en": "book/assets/en/diagrams/activation-functions/sigmoid-curve.svg",
+      "zh_source": "book/chapters/part1-math-foundations/activation-functions.md",
+      "en_source": "book/translations/en/chapters/part1-math-foundations/activation-functions.md"
+    },
+    {
+      "chapter": "activation-functions",
+      "ordinal": 7,
+      "zh": "book/assets/zh/diagrams/activation-functions/tanh-curve.svg",
+      "en": "book/assets/en/diagrams/activation-functions/tanh-curve.svg",
+      "zh_source": "book/chapters/part1-math-foundations/activation-functions.md",
+      "en_source": "book/translations/en/chapters/part1-math-foundations/activation-functions.md"
+    },
+    {
+      "chapter": "activation-functions",
+      "ordinal": 8,
+      "zh": "book/assets/zh/diagrams/activation-functions/softmax-distribution.svg",
+      "en": "book/assets/en/diagrams/activation-functions/softmax-distribution.svg",
+      "zh_source": "book/chapters/part1-math-foundations/activation-functions.md",
+      "en_source": "book/translations/en/chapters/part1-math-foundations/activation-functions.md"
+    },
+    {
+      "chapter": "backpropagation",
+      "ordinal": 1,
+      "zh": "book/assets/zh/diagrams/backpropagation/branch-gradient.svg",
+      "en": "book/assets/en/diagrams/backpropagation/branching-graph.svg",
+      "zh_source": "book/chapters/part1-math-foundations/backpropagation.md",
+      "en_source": "book/translations/en/chapters/part1-math-foundations/backpropagation.md"
+    },
+    {
+      "chapter": "cross-entropy",
+      "ordinal": 1,
+      "zh": "book/assets/zh/diagrams/cross-entropy/likelihood-to-cross-entropy.svg",
+      "en": "book/assets/en/diagrams/cross-entropy/likelihood-to-cross-entropy.svg",
+      "zh_source": "book/chapters/part1-math-foundations/cross-entropy.md",
+      "en_source": "book/translations/en/chapters/part1-math-foundations/cross-entropy.md"
+    },
+    {
+      "chapter": "cross-entropy",
+      "ordinal": 2,
+      "zh": "book/assets/zh/diagrams/cross-entropy/understanding-path.svg",
+      "en": "book/assets/en/diagrams/cross-entropy/understanding-path.svg",
+      "zh_source": "book/chapters/part1-math-foundations/cross-entropy.md",
+      "en_source": "book/translations/en/chapters/part1-math-foundations/cross-entropy.md"
+    },
+    {
+      "chapter": "dot-product-angle",
+      "ordinal": 1,
+      "zh": "book/assets/zh/diagrams/dot-product-angle/vector-projection.svg",
+      "en": "book/assets/en/diagrams/dot-product-angle/projection.svg",
+      "zh_source": "book/chapters/part1-math-foundations/dot-product-angle.md",
+      "en_source": "book/translations/en/chapters/part1-math-foundations/dot-product-angle.md"
+    },
+    {
+      "chapter": "dot-product-angle",
+      "ordinal": 2,
+      "zh": "book/assets/zh/diagrams/dot-product-angle/direction-comparison.svg",
+      "en": "book/assets/en/diagrams/dot-product-angle/direction-cases.svg",
+      "zh_source": "book/chapters/part1-math-foundations/dot-product-angle.md",
+      "en_source": "book/translations/en/chapters/part1-math-foundations/dot-product-angle.md"
+    },
+    {
+      "chapter": "dot-product-angle",
+      "ordinal": 3,
+      "zh": "book/assets/zh/diagrams/dot-product-angle/cosine-angle-curve.svg",
+      "en": "book/assets/en/diagrams/dot-product-angle/cosine-trend.svg",
+      "zh_source": "book/chapters/part1-math-foundations/dot-product-angle.md",
+      "en_source": "book/translations/en/chapters/part1-math-foundations/dot-product-angle.md"
+    },
+    {
+      "chapter": "dot-product-angle",
+      "ordinal": 4,
+      "zh": "book/assets/zh/diagrams/dot-product-angle/cosine-law-triangle.svg",
+      "en": "book/assets/en/diagrams/dot-product-angle/cosine-law-triangle.svg",
+      "zh_source": "book/chapters/part1-math-foundations/dot-product-angle.md",
+      "en_source": "book/translations/en/chapters/part1-math-foundations/dot-product-angle.md"
+    },
+    {
+      "chapter": "perceptron-learning",
+      "ordinal": 1,
+      "zh": "book/assets/zh/diagrams/perceptron-learning/relu-breakpoints.svg",
+      "en": "book/assets/en/diagrams/perceptron-learning/relu-breakpoints.svg",
+      "zh_source": "book/chapters/part1-math-foundations/perceptron-learning.md",
+      "en_source": "book/translations/en/chapters/part1-math-foundations/perceptron-learning.md"
+    },
+    {
+      "chapter": "perceptron-learning",
+      "ordinal": 2,
+      "zh": "book/assets/zh/diagrams/perceptron-learning/relu-piecewise-linear.svg",
+      "en": "book/assets/en/diagrams/perceptron-learning/relu-piecewise-linear.svg",
+      "zh_source": "book/chapters/part1-math-foundations/perceptron-learning.md",
+      "en_source": "book/translations/en/chapters/part1-math-foundations/perceptron-learning.md"
+    },
+    {
+      "chapter": "vanishing-exploding-gradients",
+      "ordinal": 1,
+      "zh": "book/assets/zh/diagrams/vanishing-exploding-gradients/activation-shapes.svg",
+      "en": "book/assets/en/diagrams/vanishing-exploding-gradients/activation-shapes.svg",
+      "zh_source": "book/chapters/part1-math-foundations/vanishing-exploding-gradients.md",
+      "en_source": "book/translations/en/chapters/part1-math-foundations/vanishing-exploding-gradients.md"
+    },
+    {
+      "chapter": "layer-norm",
+      "ordinal": 1,
+      "zh": "book/assets/zh/diagrams/layer-norm/deep-scale-drift.svg",
+      "en": "book/assets/en/diagrams/layer-norm/deep-scale-drift.svg",
+      "zh_source": "book/chapters/part2-llm-internal/layer-norm.md",
+      "en_source": "book/translations/en/chapters/part2-llm-internal/layer-norm.md"
+    },
+    {
+      "chapter": "layer-norm",
+      "ordinal": 2,
+      "zh": "book/assets/zh/diagrams/layer-norm/residual-norm-path.svg",
+      "en": "book/assets/en/diagrams/layer-norm/residual-norm-path.svg",
+      "zh_source": "book/chapters/part2-llm-internal/layer-norm.md",
+      "en_source": "book/translations/en/chapters/part2-llm-internal/layer-norm.md"
+    },
+    {
+      "chapter": "llm-generation",
+      "ordinal": 1,
+      "zh": "book/assets/zh/diagrams/llm-generation/text-token-embedding.svg",
+      "en": "book/assets/en/diagrams/llm-generation/token-to-context.svg",
+      "zh_source": "book/chapters/part2-llm-internal/llm-generation.md",
+      "en_source": "book/translations/en/chapters/part2-llm-internal/llm-generation.md"
+    },
+    {
+      "chapter": "llm-generation",
+      "ordinal": 2,
+      "zh": "book/assets/zh/diagrams/llm-generation/autoregressive-step.svg",
+      "en": "book/assets/en/diagrams/llm-generation/autoregressive-step.svg",
+      "zh_source": "book/chapters/part2-llm-internal/llm-generation.md",
+      "en_source": "book/translations/en/chapters/part2-llm-internal/llm-generation.md"
+    },
+    {
+      "chapter": "llm-generation",
+      "ordinal": 3,
+      "zh": "book/assets/zh/diagrams/llm-generation/training-parallelism.svg",
+      "en": "book/assets/en/diagrams/llm-generation/training-parallelism.svg",
+      "zh_source": "book/chapters/part2-llm-internal/llm-generation.md",
+      "en_source": "book/translations/en/chapters/part2-llm-internal/llm-generation.md"
+    },
+    {
+      "chapter": "llm-generation",
+      "ordinal": 4,
+      "zh": "book/assets/zh/diagrams/llm-generation/prefill-decode-sequence.svg",
+      "en": "book/assets/en/diagrams/llm-generation/prefill-decode-sequence.svg",
+      "zh_source": "book/chapters/part2-llm-internal/llm-generation.md",
+      "en_source": "book/translations/en/chapters/part2-llm-internal/llm-generation.md"
+    },
+    {
+      "chapter": "llm-inference-nondeterminism",
+      "ordinal": 1,
+      "zh": "book/assets/zh/diagrams/llm-inference-nondeterminism/numerical-divergence.svg",
+      "en": "book/assets/en/diagrams/llm-inference-nondeterminism/numerical-divergence.svg",
+      "zh_source": "book/chapters/part2-llm-internal/llm-inference-nondeterminism.md",
+      "en_source": "book/translations/en/chapters/part2-llm-internal/llm-inference-nondeterminism.md"
+    },
+    {
+      "chapter": "llm-inference-nondeterminism",
+      "ordinal": 2,
+      "zh": "book/assets/zh/diagrams/llm-inference-nondeterminism/argmax-boundary.svg",
+      "en": "book/assets/en/diagrams/llm-inference-nondeterminism/argmax-boundary.svg",
+      "zh_source": "book/chapters/part2-llm-internal/llm-inference-nondeterminism.md",
+      "en_source": "book/translations/en/chapters/part2-llm-internal/llm-inference-nondeterminism.md"
+    },
+    {
+      "chapter": "model-training-lifecycle",
+      "ordinal": 1,
+      "zh": "book/assets/zh/diagrams/model-training-lifecycle/training-lifecycle.svg",
+      "en": "book/assets/en/diagrams/model-training-lifecycle/training-loop.svg",
+      "zh_source": "book/chapters/part2-llm-internal/model-training-lifecycle.md",
+      "en_source": "book/translations/en/chapters/part2-llm-internal/model-training-lifecycle.md"
+    },
+    {
+      "chapter": "model-training-lifecycle",
+      "ordinal": 2,
+      "zh": "book/assets/zh/diagrams/model-training-lifecycle/token-to-loss.svg",
+      "en": "book/assets/en/diagrams/model-training-lifecycle/token-to-loss.svg",
+      "zh_source": "book/chapters/part2-llm-internal/model-training-lifecycle.md",
+      "en_source": "book/translations/en/chapters/part2-llm-internal/model-training-lifecycle.md"
+    },
+    {
+      "chapter": "model-training-lifecycle",
+      "ordinal": 3,
+      "zh": "book/assets/zh/diagrams/model-training-lifecycle/parameter-update-cycle.svg",
+      "en": "book/assets/en/diagrams/model-training-lifecycle/parameter-update-cycle.svg",
+      "zh_source": "book/chapters/part2-llm-internal/model-training-lifecycle.md",
+      "en_source": "book/translations/en/chapters/part2-llm-internal/model-training-lifecycle.md"
+    },
+    {
+      "chapter": "model-training-lifecycle",
+      "ordinal": 4,
+      "zh": "book/assets/zh/diagrams/model-training-lifecycle/checkpoint-feedback.svg",
+      "en": "book/assets/en/diagrams/model-training-lifecycle/checkpoint-feedback.svg",
+      "zh_source": "book/chapters/part2-llm-internal/model-training-lifecycle.md",
+      "en_source": "book/translations/en/chapters/part2-llm-internal/model-training-lifecycle.md"
+    },
+    {
+      "chapter": "multilingual-llms",
+      "ordinal": 1,
+      "zh": "book/assets/zh/diagrams/multilingual-llms/shared-representation.svg",
+      "en": "book/assets/en/diagrams/multilingual-llms/shared-representation.svg",
+      "zh_source": "book/chapters/part2-llm-internal/multilingual-llms.md",
+      "en_source": "book/translations/en/chapters/part2-llm-internal/multilingual-llms.md"
+    },
+    {
+      "chapter": "multimodal-models",
+      "ordinal": 1,
+      "zh": "book/assets/zh/diagrams/multimodal-models/multimodal-overview.svg",
+      "en": "book/assets/en/diagrams/multimodal-models/multimodal-overview.svg",
+      "zh_source": "book/chapters/part2-llm-internal/multimodal-models.md",
+      "en_source": "book/translations/en/chapters/part2-llm-internal/multimodal-models.md"
+    },
+    {
+      "chapter": "multimodal-models",
+      "ordinal": 2,
+      "zh": "book/assets/zh/diagrams/multimodal-models/interleaved-context.svg",
+      "en": "book/assets/en/diagrams/multimodal-models/interleaved-context.svg",
+      "zh_source": "book/chapters/part2-llm-internal/multimodal-models.md",
+      "en_source": "book/translations/en/chapters/part2-llm-internal/multimodal-models.md"
+    },
+    {
+      "chapter": "multimodal-models",
+      "ordinal": 3,
+      "zh": "book/assets/zh/diagrams/multimodal-models/screenshot-input-paths.svg",
+      "en": "book/assets/en/diagrams/multimodal-models/screenshot-input-paths.svg",
+      "zh_source": "book/chapters/part2-llm-internal/multimodal-models.md",
+      "en_source": "book/translations/en/chapters/part2-llm-internal/multimodal-models.md"
+    },
+    {
+      "chapter": "multimodal-models",
+      "ordinal": 4,
+      "zh": "book/assets/zh/diagrams/multimodal-models/visual-question-answering.svg",
+      "en": "book/assets/en/diagrams/multimodal-models/visual-question-answering.svg",
+      "zh_source": "book/chapters/part2-llm-internal/multimodal-models.md",
+      "en_source": "book/translations/en/chapters/part2-llm-internal/multimodal-models.md"
+    },
+    {
+      "chapter": "multimodal-models",
+      "ordinal": 5,
+      "zh": "book/assets/zh/diagrams/multimodal-models/cross-modal-training-signals.svg",
+      "en": "book/assets/en/diagrams/multimodal-models/cross-modal-training-signals.svg",
+      "zh_source": "book/chapters/part2-llm-internal/multimodal-models.md",
+      "en_source": "book/translations/en/chapters/part2-llm-internal/multimodal-models.md"
+    },
+    {
+      "chapter": "optimizer-selection",
+      "ordinal": 1,
+      "zh": "book/assets/zh/diagrams/optimizer-selection/sgd-ravine.svg",
+      "en": "book/assets/en/diagrams/optimizer-selection/optimization-geometry.svg",
+      "zh_source": "book/chapters/part2-llm-internal/optimizer-selection.md",
+      "en_source": "book/translations/en/chapters/part2-llm-internal/optimizer-selection.md"
+    },
+    {
+      "chapter": "optimizer-selection",
+      "ordinal": 2,
+      "zh": "book/assets/zh/diagrams/optimizer-selection/warmup-schedule.svg",
+      "en": "book/assets/en/diagrams/optimizer-selection/warmup-schedule.svg",
+      "zh_source": "book/chapters/part2-llm-internal/optimizer-selection.md",
+      "en_source": "book/translations/en/chapters/part2-llm-internal/optimizer-selection.md"
+    },
+    {
+      "chapter": "optimizer-selection",
+      "ordinal": 3,
+      "zh": "book/assets/zh/diagrams/optimizer-selection/optimizer-evolution.svg",
+      "en": "book/assets/en/diagrams/optimizer-selection/optimizer-progression.svg",
+      "zh_source": "book/chapters/part2-llm-internal/optimizer-selection.md",
+      "en_source": "book/translations/en/chapters/part2-llm-internal/optimizer-selection.md"
+    },
+    {
+      "chapter": "softmax-gradient-scaling",
+      "ordinal": 1,
+      "zh": "book/assets/zh/diagrams/softmax-gradient-scaling/saturation-comparison.svg",
+      "en": "book/assets/en/diagrams/softmax-gradient-scaling/saturation-comparison.svg",
+      "zh_source": "book/chapters/part2-llm-internal/softmax-gradient-scaling.md",
+      "en_source": "book/translations/en/chapters/part2-llm-internal/softmax-gradient-scaling.md"
+    },
+    {
+      "chapter": "softmax-gradient-scaling",
+      "ordinal": 2,
+      "zh": "book/assets/zh/diagrams/softmax-gradient-scaling/saturation-comparison.svg",
+      "en": "book/assets/en/diagrams/softmax-gradient-scaling/saturation-comparison.svg",
+      "zh_source": "book/chapters/part2-llm-internal/softmax-gradient-scaling.md",
+      "en_source": "book/translations/en/chapters/part2-llm-internal/softmax-gradient-scaling.md"
+    },
+    {
+      "chapter": "softmax-gradient-scaling",
+      "ordinal": 3,
+      "zh": "book/assets/zh/diagrams/softmax-gradient-scaling/gradient-path-comparison.svg",
+      "en": "book/assets/en/diagrams/softmax-gradient-scaling/gradient-path-comparison.svg",
+      "zh_source": "book/chapters/part2-llm-internal/softmax-gradient-scaling.md",
+      "en_source": "book/translations/en/chapters/part2-llm-internal/softmax-gradient-scaling.md"
+    },
+    {
+      "chapter": "softmax-gradient-scaling",
+      "ordinal": 4,
+      "zh": "book/assets/zh/diagrams/softmax-gradient-scaling/gradient-path-comparison.svg",
+      "en": "book/assets/en/diagrams/softmax-gradient-scaling/gradient-path-comparison.svg",
+      "zh_source": "book/chapters/part2-llm-internal/softmax-gradient-scaling.md",
+      "en_source": "book/translations/en/chapters/part2-llm-internal/softmax-gradient-scaling.md"
+    },
+    {
+      "chapter": "softmax-gradient-scaling",
+      "ordinal": 5,
+      "zh": "book/assets/zh/diagrams/softmax-gradient-scaling/scale-to-gradient-chain.svg",
+      "en": "book/assets/en/diagrams/softmax-gradient-scaling/scale-to-gradient-chain.svg",
+      "zh_source": "book/chapters/part2-llm-internal/softmax-gradient-scaling.md",
+      "en_source": "book/translations/en/chapters/part2-llm-internal/softmax-gradient-scaling.md"
+    },
+    {
+      "chapter": "transformer-architecture",
+      "ordinal": 1,
+      "zh": "book/assets/zh/diagrams/transformer-architecture/original-encoder-decoder.svg",
+      "en": "book/assets/en/diagrams/transformer-architecture/original-encoder-decoder.svg",
+      "zh_source": "book/chapters/part2-llm-internal/transformer-architecture.md",
+      "en_source": "book/translations/en/chapters/part2-llm-internal/transformer-architecture.md"
+    },
+    {
+      "chapter": "transformer-architecture",
+      "ordinal": 2,
+      "zh": "book/assets/zh/diagrams/transformer-architecture/transformer-stack.svg",
+      "en": "book/assets/en/diagrams/transformer-architecture/layer-data-flow.svg",
+      "zh_source": "book/chapters/part2-llm-internal/transformer-architecture.md",
+      "en_source": "book/translations/en/chapters/part2-llm-internal/transformer-architecture.md"
+    },
+    {
+      "chapter": "transformer-architecture",
+      "ordinal": 3,
+      "zh": "book/assets/zh/diagrams/transformer-architecture/scaled-dot-product-attention.svg",
+      "en": "book/assets/en/diagrams/transformer-architecture/scaled-dot-product-attention.svg",
+      "zh_source": "book/chapters/part2-llm-internal/transformer-architecture.md",
+      "en_source": "book/translations/en/chapters/part2-llm-internal/transformer-architecture.md"
+    },
+    {
+      "chapter": "transformer-architecture",
+      "ordinal": 4,
+      "zh": "book/assets/zh/diagrams/transformer-architecture/multi-head-attention.svg",
+      "en": "book/assets/en/diagrams/transformer-architecture/multi-head-attention.svg",
+      "zh_source": "book/chapters/part2-llm-internal/transformer-architecture.md",
+      "en_source": "book/translations/en/chapters/part2-llm-internal/transformer-architecture.md"
+    },
+    {
+      "chapter": "transformer-architecture",
+      "ordinal": 5,
+      "zh": "book/assets/zh/diagrams/transformer-architecture/moe-routing.svg",
+      "en": "book/assets/en/diagrams/transformer-architecture/moe-routing.svg",
+      "zh_source": "book/chapters/part2-llm-internal/transformer-architecture.md",
+      "en_source": "book/translations/en/chapters/part2-llm-internal/transformer-architecture.md"
+    },
+    {
+      "chapter": "transformer-architecture",
+      "ordinal": 6,
+      "zh": "book/assets/zh/diagrams/transformer-architecture/encoder-decoder-flow.svg",
+      "en": "book/assets/en/diagrams/transformer-architecture/encoder-decoder-flow.svg",
+      "zh_source": "book/chapters/part2-llm-internal/transformer-architecture.md",
+      "en_source": "book/translations/en/chapters/part2-llm-internal/transformer-architecture.md"
+    },
+    {
+      "chapter": "agent-eval-business-quality-system",
+      "ordinal": 1,
+      "zh": "book/assets/zh/diagrams/agent-eval-business-quality-system/eval-comparison.svg",
+      "en": "book/assets/en/diagrams/agent-eval-business-quality-system/eval-comparison.svg",
+      "zh_source": "book/chapters/part3-llm-external/agent-eval-business-quality-system.md",
+      "en_source": "book/translations/en/chapters/part3-llm-external/agent-eval-business-quality-system.md"
+    },
+    {
+      "chapter": "agent-eval-business-quality-system",
+      "ordinal": 2,
+      "zh": "book/assets/zh/posts/20260804-ai-agent-eval-business-quality-system/eval-iteration-loop.svg",
+      "en": "book/assets/en/diagrams/agent-eval-business-quality-system/evaluation-regression-loop.svg",
+      "zh_source": "book/chapters/part3-llm-external/agent-eval-business-quality-system.md",
+      "en_source": "book/translations/en/chapters/part3-llm-external/agent-eval-business-quality-system.md"
+    },
+    {
+      "chapter": "agent-eval-business-quality-system",
+      "ordinal": 3,
+      "zh": "book/assets/zh/posts/20260804-ai-agent-eval-business-quality-system/business-quality-system.svg",
+      "en": "book/assets/en/diagrams/agent-eval-business-quality-system/business-quality-system.svg",
+      "zh_source": "book/chapters/part3-llm-external/agent-eval-business-quality-system.md",
+      "en_source": "book/translations/en/chapters/part3-llm-external/agent-eval-business-quality-system.md"
+    },
+    {
+      "chapter": "agent-eval-business-quality-system",
+      "ordinal": 4,
+      "zh": "book/assets/zh/diagrams/agent-eval-business-quality-system/quality-layers.svg",
+      "en": "book/assets/en/diagrams/agent-eval-business-quality-system/quality-layers.svg",
+      "zh_source": "book/chapters/part3-llm-external/agent-eval-business-quality-system.md",
+      "en_source": "book/translations/en/chapters/part3-llm-external/agent-eval-business-quality-system.md"
+    },
+    {
+      "chapter": "agent-eval-business-quality-system",
+      "ordinal": 5,
+      "zh": "book/assets/zh/diagrams/agent-eval-business-quality-system/case-to-regression.svg",
+      "en": "book/assets/en/diagrams/agent-eval-business-quality-system/case-to-regression.svg",
+      "zh_source": "book/chapters/part3-llm-external/agent-eval-business-quality-system.md",
+      "en_source": "book/translations/en/chapters/part3-llm-external/agent-eval-business-quality-system.md"
+    },
+    {
+      "chapter": "function-calling-tool-use",
+      "ordinal": 1,
+      "zh": "book/assets/zh/diagrams/function-calling-tool-use/mcp-integration-layers.svg",
+      "en": "book/assets/en/diagrams/function-calling-tool-use/mcp-integration-layers.svg",
+      "zh_source": "book/chapters/part3-llm-external/function-calling-tool-use.md",
+      "en_source": "book/translations/en/chapters/part3-llm-external/function-calling-tool-use.md"
+    },
+    {
+      "chapter": "function-calling-tool-use",
+      "ordinal": 2,
+      "zh": "book/assets/zh/diagrams/function-calling-tool-use/mcp-reuse-comparison.svg",
+      "en": "book/assets/en/diagrams/function-calling-tool-use/mcp-reuse-comparison.svg",
+      "zh_source": "book/chapters/part3-llm-external/function-calling-tool-use.md",
+      "en_source": "book/translations/en/chapters/part3-llm-external/function-calling-tool-use.md"
+    },
+    {
+      "chapter": "function-calling-tool-use",
+      "ordinal": 3,
+      "zh": "book/assets/zh/diagrams/function-calling-tool-use/product-to-model-stack.svg",
+      "en": "book/assets/en/diagrams/function-calling-tool-use/product-to-model-stack.svg",
+      "zh_source": "book/chapters/part3-llm-external/function-calling-tool-use.md",
+      "en_source": "book/translations/en/chapters/part3-llm-external/function-calling-tool-use.md"
+    },
+    {
+      "chapter": "harness-runtime-skills",
+      "ordinal": 1,
+      "zh": "book/assets/zh/diagrams/harness-runtime-skills/runtime-control-loop.svg",
+      "en": "book/assets/en/diagrams/harness-runtime-skills/runtime-loop.svg",
+      "zh_source": "book/chapters/part3-llm-external/harness-runtime-skills.md",
+      "en_source": "book/translations/en/chapters/part3-llm-external/harness-runtime-skills.md"
+    },
+    {
+      "chapter": "harness-runtime-skills",
+      "ordinal": 2,
+      "zh": "book/assets/zh/diagrams/harness-runtime-skills/stable-path-layers.svg",
+      "en": "book/assets/en/diagrams/harness-runtime-skills/stable-path-layers.svg",
+      "zh_source": "book/chapters/part3-llm-external/harness-runtime-skills.md",
+      "en_source": "book/translations/en/chapters/part3-llm-external/harness-runtime-skills.md"
+    },
+    {
+      "chapter": "harness-runtime-skills",
+      "ordinal": 3,
+      "zh": "book/assets/zh/diagrams/harness-runtime-skills/skill-contents.svg",
+      "en": "book/assets/en/diagrams/harness-runtime-skills/skill-contents.svg",
+      "zh_source": "book/chapters/part3-llm-external/harness-runtime-skills.md",
+      "en_source": "book/translations/en/chapters/part3-llm-external/harness-runtime-skills.md"
+    },
+    {
+      "chapter": "harness-runtime-skills",
+      "ordinal": 4,
+      "zh": "book/assets/zh/diagrams/harness-runtime-skills/external-state-validation.svg",
+      "en": "book/assets/en/diagrams/harness-runtime-skills/validation-layers.svg",
+      "zh_source": "book/chapters/part3-llm-external/harness-runtime-skills.md",
+      "en_source": "book/translations/en/chapters/part3-llm-external/harness-runtime-skills.md"
+    },
+    {
+      "chapter": "llm-external-interaction",
+      "ordinal": 1,
+      "zh": "book/assets/zh/diagrams/llm-external-interaction/model-to-world-loop.svg",
+      "en": "book/assets/en/diagrams/llm-external-interaction/model-world-boundary.svg",
+      "zh_source": "book/chapters/part3-llm-external/llm-external-interaction.md",
+      "en_source": "book/translations/en/chapters/part3-llm-external/llm-external-interaction.md"
+    },
+    {
+      "chapter": "llm-external-interaction",
+      "ordinal": 2,
+      "zh": "book/assets/zh/diagrams/llm-external-interaction/constrained-decoding.svg",
+      "en": "book/assets/en/diagrams/llm-external-interaction/structured-output-validation.svg",
+      "zh_source": "book/chapters/part3-llm-external/llm-external-interaction.md",
+      "en_source": "book/translations/en/chapters/part3-llm-external/llm-external-interaction.md"
+    },
+    {
+      "chapter": "llm-external-interaction",
+      "ordinal": 3,
+      "zh": "book/assets/zh/diagrams/llm-external-interaction/validation-boundaries.svg",
+      "en": "book/assets/en/diagrams/llm-external-interaction/validation-boundaries.svg",
+      "zh_source": "book/chapters/part3-llm-external/llm-external-interaction.md",
+      "en_source": "book/translations/en/chapters/part3-llm-external/llm-external-interaction.md"
+    },
+    {
+      "chapter": "llm-external-interaction",
+      "ordinal": 4,
+      "zh": "book/assets/zh/diagrams/llm-external-interaction/tool-calling-cycle.svg",
+      "en": "book/assets/en/diagrams/llm-external-interaction/tool-calling-cycle.svg",
+      "zh_source": "book/chapters/part3-llm-external/llm-external-interaction.md",
+      "en_source": "book/translations/en/chapters/part3-llm-external/llm-external-interaction.md"
+    },
+    {
+      "chapter": "llm-external-interaction",
+      "ordinal": 5,
+      "zh": "book/assets/zh/diagrams/llm-external-interaction/agent-observe-act-loop.svg",
+      "en": "book/assets/en/diagrams/llm-external-interaction/agent-feedback-loop.svg",
+      "zh_source": "book/chapters/part3-llm-external/llm-external-interaction.md",
+      "en_source": "book/translations/en/chapters/part3-llm-external/llm-external-interaction.md"
+    },
+    {
+      "chapter": "mhs-mcp-domain-capability-protocol",
+      "ordinal": 1,
+      "zh": "book/assets/zh/posts/20260831-mhs-mcp-domain-capability-protocol/mhs-integration-pain.svg",
+      "en": "book/assets/en/diagrams/mhs-mcp-domain-capability-protocol/mhs-integration-pain.svg",
+      "zh_source": "book/chapters/part3-llm-external/mhs-mcp-domain-capability-protocol.md",
+      "en_source": "book/translations/en/chapters/part3-llm-external/mhs-mcp-domain-capability-protocol.md"
+    },
+    {
+      "chapter": "mhs-mcp-domain-capability-protocol",
+      "ordinal": 2,
+      "zh": "book/assets/zh/posts/20260831-mhs-mcp-domain-capability-protocol/mhs-driver-stack.svg",
+      "en": "book/assets/en/diagrams/mhs-mcp-domain-capability-protocol/mhs-driver-stack.svg",
+      "zh_source": "book/chapters/part3-llm-external/mhs-mcp-domain-capability-protocol.md",
+      "en_source": "book/translations/en/chapters/part3-llm-external/mhs-mcp-domain-capability-protocol.md"
+    },
+    {
+      "chapter": "mhs-mcp-domain-capability-protocol",
+      "ordinal": 3,
+      "zh": "book/assets/zh/posts/20260831-mhs-mcp-domain-capability-protocol/mhs-read-write.svg",
+      "en": "book/assets/en/diagrams/mhs-mcp-domain-capability-protocol/mhs-read-write.svg",
+      "zh_source": "book/chapters/part3-llm-external/mhs-mcp-domain-capability-protocol.md",
+      "en_source": "book/translations/en/chapters/part3-llm-external/mhs-mcp-domain-capability-protocol.md"
+    },
+    {
+      "chapter": "mhs-mcp-domain-capability-protocol",
+      "ordinal": 4,
+      "zh": "book/assets/zh/posts/20260831-mhs-mcp-domain-capability-protocol/hardware-capability-model.svg",
+      "en": "book/assets/en/diagrams/mhs-mcp-domain-capability-protocol/hardware-capability-model.svg",
+      "zh_source": "book/chapters/part3-llm-external/mhs-mcp-domain-capability-protocol.md",
+      "en_source": "book/translations/en/chapters/part3-llm-external/mhs-mcp-domain-capability-protocol.md"
+    },
+    {
+      "chapter": "mhs-mcp-domain-capability-protocol",
+      "ordinal": 5,
+      "zh": "book/assets/zh/posts/20260831-mhs-mcp-domain-capability-protocol/mcp-basic-shape.svg",
+      "en": "book/assets/en/diagrams/mhs-mcp-domain-capability-protocol/mcp-basic-shape.svg",
+      "zh_source": "book/chapters/part3-llm-external/mhs-mcp-domain-capability-protocol.md",
+      "en_source": "book/translations/en/chapters/part3-llm-external/mhs-mcp-domain-capability-protocol.md"
+    },
+    {
+      "chapter": "mhs-mcp-domain-capability-protocol",
+      "ordinal": 6,
+      "zh": "book/assets/zh/posts/20260831-mhs-mcp-domain-capability-protocol/mcp-mhs-layering.svg",
+      "en": "book/assets/en/diagrams/mhs-mcp-domain-capability-protocol/mcp-mhs-layering.svg",
+      "zh_source": "book/chapters/part3-llm-external/mhs-mcp-domain-capability-protocol.md",
+      "en_source": "book/translations/en/chapters/part3-llm-external/mhs-mcp-domain-capability-protocol.md"
+    },
+    {
+      "chapter": "mhs-mcp-domain-capability-protocol",
+      "ordinal": 7,
+      "zh": "book/assets/zh/posts/20260831-mhs-mcp-domain-capability-protocol/business-access-stack.svg",
+      "en": "book/assets/en/diagrams/mhs-mcp-domain-capability-protocol/business-access-stack.svg",
+      "zh_source": "book/chapters/part3-llm-external/mhs-mcp-domain-capability-protocol.md",
+      "en_source": "book/translations/en/chapters/part3-llm-external/mhs-mcp-domain-capability-protocol.md"
+    },
+    {
+      "chapter": "mhs-mcp-domain-capability-protocol",
+      "ordinal": 8,
+      "zh": "book/assets/zh/posts/20260831-mhs-mcp-domain-capability-protocol/domain-capability-layers.svg",
+      "en": "book/assets/en/diagrams/mhs-mcp-domain-capability-protocol/domain-capability-layers.svg",
+      "zh_source": "book/chapters/part3-llm-external/mhs-mcp-domain-capability-protocol.md",
+      "en_source": "book/translations/en/chapters/part3-llm-external/mhs-mcp-domain-capability-protocol.md"
+    },
+    {
+      "chapter": "mhs-mcp-domain-capability-protocol",
+      "ordinal": 9,
+      "zh": "book/assets/zh/posts/20260831-mhs-mcp-domain-capability-protocol/domain-examples.svg",
+      "en": "book/assets/en/diagrams/mhs-mcp-domain-capability-protocol/domain-examples.svg",
+      "zh_source": "book/chapters/part3-llm-external/mhs-mcp-domain-capability-protocol.md",
+      "en_source": "book/translations/en/chapters/part3-llm-external/mhs-mcp-domain-capability-protocol.md"
+    },
+    {
+      "chapter": "rag-context-evidence",
+      "ordinal": 1,
+      "zh": "book/assets/zh/diagrams/rag-context-evidence/evidence-to-context.svg",
+      "en": "book/assets/en/diagrams/rag-context-evidence/evidence-pipeline.svg",
+      "zh_source": "book/chapters/part3-llm-external/rag-context-evidence.md",
+      "en_source": "book/translations/en/chapters/part3-llm-external/rag-context-evidence.md"
+    },
+    {
+      "chapter": "rag-context-evidence",
+      "ordinal": 2,
+      "zh": "book/assets/zh/diagrams/rag-context-evidence/rag-selection-pipeline.svg",
+      "en": "book/assets/en/diagrams/rag-context-evidence/rag-selection-pipeline.svg",
+      "zh_source": "book/chapters/part3-llm-external/rag-context-evidence.md",
+      "en_source": "book/translations/en/chapters/part3-llm-external/rag-context-evidence.md"
+    },
+    {
+      "chapter": "inference-performance-capacity",
+      "ordinal": 1,
+      "zh": "book/assets/zh/diagrams/inference-performance-capacity/request-latency-timeline.svg",
+      "en": "book/assets/en/diagrams/inference-performance-capacity/request-timeline.svg",
+      "zh_source": "book/chapters/part4-serving-runtime/inference-performance-capacity.md",
+      "en_source": "book/translations/en/chapters/part4-serving-runtime/inference-performance-capacity.md"
+    },
+    {
+      "chapter": "inference-performance-capacity",
+      "ordinal": 2,
+      "zh": "book/assets/zh/diagrams/inference-performance-capacity/kv-and-prefix-reuse.svg",
+      "en": "book/assets/en/diagrams/inference-performance-capacity/kv-prefix-reuse.svg",
+      "zh_source": "book/chapters/part4-serving-runtime/inference-performance-capacity.md",
+      "en_source": "book/translations/en/chapters/part4-serving-runtime/inference-performance-capacity.md"
+    },
+    {
+      "chapter": "inference-performance-capacity",
+      "ordinal": 3,
+      "zh": "book/assets/zh/diagrams/inference-performance-capacity/chunked-prefill.svg",
+      "en": "book/assets/en/diagrams/inference-performance-capacity/chunked-prefill.svg",
+      "zh_source": "book/chapters/part4-serving-runtime/inference-performance-capacity.md",
+      "en_source": "book/translations/en/chapters/part4-serving-runtime/inference-performance-capacity.md"
+    },
+    {
+      "chapter": "inference-performance-capacity",
+      "ordinal": 4,
+      "zh": "book/assets/zh/diagrams/inference-performance-capacity/prefill-decode-disaggregation.svg",
+      "en": "book/assets/en/diagrams/inference-performance-capacity/prefill-decode-disaggregation.svg",
+      "zh_source": "book/chapters/part4-serving-runtime/inference-performance-capacity.md",
+      "en_source": "book/translations/en/chapters/part4-serving-runtime/inference-performance-capacity.md"
+    },
+    {
+      "chapter": "inference-performance-capacity",
+      "ordinal": 5,
+      "zh": "book/assets/zh/diagrams/inference-performance-capacity/speculative-decoding.svg",
+      "en": "book/assets/en/diagrams/inference-performance-capacity/speculative-decoding.svg",
+      "zh_source": "book/chapters/part4-serving-runtime/inference-performance-capacity.md",
+      "en_source": "book/translations/en/chapters/part4-serving-runtime/inference-performance-capacity.md"
+    },
+    {
+      "chapter": "llm-infrastructure",
+      "ordinal": 1,
+      "zh": "book/assets/zh/diagrams/llm-infrastructure/request-serving-stack.svg",
+      "en": "book/assets/en/diagrams/llm-infrastructure/request-serving-stack.svg",
+      "zh_source": "book/chapters/part4-serving-runtime/llm-infrastructure.md",
+      "en_source": "book/translations/en/chapters/part4-serving-runtime/llm-infrastructure.md"
+    },
+    {
+      "chapter": "llm-infrastructure",
+      "ordinal": 2,
+      "zh": "book/assets/zh/diagrams/llm-infrastructure/web-and-sharded-serving.svg",
+      "en": "book/assets/en/diagrams/llm-infrastructure/web-vs-sharded.svg",
+      "zh_source": "book/chapters/part4-serving-runtime/llm-infrastructure.md",
+      "en_source": "book/translations/en/chapters/part4-serving-runtime/llm-infrastructure.md"
+    },
+    {
+      "chapter": "llm-infrastructure",
+      "ordinal": 3,
+      "zh": "book/assets/zh/diagrams/llm-infrastructure/model-runtime-hardware.svg",
+      "en": "book/assets/en/diagrams/llm-infrastructure/model-runtime-hardware.svg",
+      "zh_source": "book/chapters/part4-serving-runtime/llm-infrastructure.md",
+      "en_source": "book/translations/en/chapters/part4-serving-runtime/llm-infrastructure.md"
+    },
+    {
+      "chapter": "llm-infrastructure",
+      "ordinal": 4,
+      "zh": "book/assets/zh/diagrams/llm-infrastructure/config-weights-engine.svg",
+      "en": "book/assets/en/diagrams/llm-infrastructure/config-weights-engine.svg",
+      "zh_source": "book/chapters/part4-serving-runtime/llm-infrastructure.md",
+      "en_source": "book/translations/en/chapters/part4-serving-runtime/llm-infrastructure.md"
+    },
+    {
+      "chapter": "llm-infrastructure",
+      "ordinal": 5,
+      "zh": "book/assets/zh/diagrams/llm-infrastructure/prefill-decode-state.svg",
+      "en": "book/assets/en/diagrams/llm-infrastructure/prefill-decode-state.svg",
+      "zh_source": "book/chapters/part4-serving-runtime/llm-infrastructure.md",
+      "en_source": "book/translations/en/chapters/part4-serving-runtime/llm-infrastructure.md"
+    },
+    {
+      "chapter": "serving-control-plane",
+      "ordinal": 1,
+      "zh": "book/assets/zh/diagrams/serving-control-plane/data-and-control-plane.svg",
+      "en": "book/assets/en/diagrams/serving-control-plane/data-control-plane.svg",
+      "zh_source": "book/chapters/part4-serving-runtime/serving-control-plane.md",
+      "en_source": "book/translations/en/chapters/part4-serving-runtime/serving-control-plane.md"
+    },
+    {
+      "chapter": "serving-control-plane",
+      "ordinal": 2,
+      "zh": "book/assets/zh/diagrams/serving-control-plane/model-scale-up.svg",
+      "en": "book/assets/en/diagrams/serving-control-plane/scale-out.svg",
+      "zh_source": "book/chapters/part4-serving-runtime/serving-control-plane.md",
+      "en_source": "book/translations/en/chapters/part4-serving-runtime/serving-control-plane.md"
+    },
+    {
+      "chapter": "serving-control-plane",
+      "ordinal": 3,
+      "zh": "book/assets/zh/diagrams/serving-control-plane/progressive-rollout.svg",
+      "en": "book/assets/en/diagrams/serving-control-plane/progressive-rollout.svg",
+      "zh_source": "book/chapters/part4-serving-runtime/serving-control-plane.md",
+      "en_source": "book/translations/en/chapters/part4-serving-runtime/serving-control-plane.md"
+    }
+  ]
+}

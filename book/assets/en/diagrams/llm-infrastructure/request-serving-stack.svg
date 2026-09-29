@@ -1,0 +1,64 @@
+<?xml version="1.0"?>
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="680" viewBox="0 0 1200 680" role="img" aria-labelledby="title desc">
+  <title id="title">How a request traverses the LLM serving stack</title>
+  <desc id="desc">A request moves through gateway, routing, and inference runtime to model computation and streamed output. Scheduling, weights, KV cache, and observability make computation a service.</desc>
+  <defs>
+    <marker id="a" viewBox="0 0 10 10" refX="8.5" refY="5" markerWidth="8" markerHeight="8" orient="auto">
+      <path d="M0 0 10 5 0 10z" fill="#0F4D92"/>
+    </marker>
+    <style>text{font-family:Arial,sans-serif}.h{font-size:19px;font-weight:700}.b{font-size:15px}</style>
+  </defs>
+  <rect width="1200" height="680" fill="#FFFFFF"/>
+  <text x="65" y="68" font-size="31" font-weight="700" fill="#17324D">One model request is an observable, schedulable service path</text>
+  <text x="65" y="103" class="b" fill="#416985">Inference is one segment; delivery also needs admission control, scheduling, and operational feedback.</text>
+  <g text-anchor="middle">
+    <rect x="65" y="180" width="200" height="110" rx="20" fill="#EAF3FB" stroke="#8EB6D8" stroke-width="2"/>
+    <text x="165" y="222" class="h" fill="#17324D">User / app</text>
+    <text x="165" y="252" class="b" fill="#416985">request, context, constraints</text>
+    <rect x="315" y="180" width="200" height="110" rx="20" fill="#FFF8D6" stroke="#D8A919" stroke-width="2"/>
+    <text x="415" y="222" class="h" fill="#765800">Gateway &amp; routing</text>
+    <text x="415" y="252" class="b" fill="#765800">auth, limits, placement</text>
+    <rect x="565" y="180" width="200" height="110" rx="20" fill="#EAF3FB" stroke="#8EB6D8" stroke-width="2"/>
+    <text x="665" y="222" class="h" fill="#17324D">Inference runtime</text>
+    <text x="665" y="246" class="b" fill="#416985">batching and queues</text>
+    <text x="665" y="266" class="b" fill="#416985">scheduling policy</text>
+    <rect x="815" y="180" width="200" height="110" rx="20" fill="#F6CFCB" stroke="#E9A6A1" stroke-width="2"/>
+    <text x="915" y="222" class="h" fill="#8F3635">Model compute</text>
+    <text x="915" y="252" class="b" fill="#8F3635">GPU / NPU execution</text>
+    <rect x="1065" y="180" width="70" height="110" rx="20" fill="#17324D"/>
+    <text x="1100" y="225" class="h" fill="#FFFFFF">Stream</text>
+    <text x="1100" y="250" class="h" fill="#FFFFFF">reply</text>
+  </g>
+  <path d="M265 180V165H305V178M515 180V165H555V178M765 180V165H805V178M1015 180V165H1055V178" fill="none" stroke="#0F4D92" stroke-width="4" marker-end="url(#a)" data-figure-connector="true"/>
+  <rect x="465" y="360" width="500" height="110" rx="20" fill="#F4F8FC" stroke="#8EB6D8" stroke-width="2"/>
+  <text x="495" y="400" class="h" fill="#17324D">Runtime state to manage</text>
+  <text x="495" y="431" class="b" fill="#416985">weights &#xB7; KV cache &#xB7; memory capacity &#xB7; bandwidth</text>
+  <text x="495" y="454" font-size="14" fill="#5E7F9C">These set the batching, latency, throughput, and availability trade-offs.</text>
+  <path d="M715 360v-60" fill="none" stroke="#0F4D92" stroke-width="4" marker-end="url(#a)" data-figure-connector="true"/>
+  <rect x="65" y="535" width="1070" height="75" rx="18" fill="#17324D"/>
+  <text x="97" y="568" font-size="20" font-weight="700" fill="#FFFFFF">Service feedback and governance</text>
+  <text x="97" y="594" font-size="17" fill="#CFCECE">streaming &#xB7; metrics &#xB7; logs and traces &#xB7; quotas and limits &#xB7; usage and billing</text>
+  <path d="M165 290v215M1100 290v215" fill="none" stroke="#0F4D92" stroke-width="3" stroke-dasharray="8 8"/>
+  <text x="600" y="655" text-anchor="middle" font-size="16" fill="#8F3635">Service quality comes from the whole path; compute optimization alone cannot replace admission, scheduling, and feedback control.</text>
+  <g aria-hidden="true" fill="none" opacity="0" pointer-events="none">
+    <rect data-figure-safe-zone="text" x="53.0" y="25.0" width="991.2" height="65.8"/>
+    <rect data-figure-safe-zone="text" x="53.0" y="74.0" width="925.7" height="47.0"/>
+    <rect data-figure-safe-zone="text" x="153.0" y="188.0" width="138.4" height="53.7"/>
+    <rect data-figure-safe-zone="text" x="153.0" y="223.0" width="280.4" height="47.0"/>
+    <rect data-figure-safe-zone="text" x="403.0" y="188.0" width="218.5" height="53.7"/>
+    <rect data-figure-safe-zone="text" x="403.0" y="223.0" width="227.3" height="47.0"/>
+    <rect data-figure-safe-zone="text" x="653.0" y="188.0" width="218.5" height="53.7"/>
+    <rect data-figure-safe-zone="text" x="653.0" y="217.0" width="192.0" height="47.0"/>
+    <rect data-figure-safe-zone="text" x="653.0" y="237.0" width="174.3" height="47.0"/>
+    <rect data-figure-safe-zone="text" x="903.0" y="188.0" width="172.7" height="53.7"/>
+    <rect data-figure-safe-zone="text" x="903.0" y="223.0" width="192.0" height="47.0"/>
+    <rect data-figure-safe-zone="text" x="1088.0" y="191.0" width="92.6" height="53.7"/>
+    <rect data-figure-safe-zone="text" x="1088.0" y="216.0" width="81.2" height="53.7"/>
+    <rect data-figure-safe-zone="text" x="483.0" y="366.0" width="287.1" height="53.7"/>
+    <rect data-figure-safe-zone="text" x="483.0" y="402.0" width="448.3" height="47.0"/>
+    <rect data-figure-safe-zone="text" x="483.0" y="428.0" width="555.4" height="42.9"/>
+    <rect data-figure-safe-zone="text" x="85.0" y="536.0" width="346.4" height="51.0"/>
+    <rect data-figure-safe-zone="text" x="85.0" y="565.0" width="704.7" height="47.0"/>
+    <rect data-figure-safe-zone="text" x="51.4" y="627.0" width="1097.3" height="45.6"/>
+  </g>
+</svg>

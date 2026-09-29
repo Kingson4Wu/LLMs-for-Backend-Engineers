@@ -1,0 +1,69 @@
+<?xml version="1.0"?>
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="650" viewBox="0 0 1200 650" role="img" aria-labelledby="title desc">
+  <title id="title">Layers from product to training</title>
+  <desc id="desc">A stair-step diagram shows product experience, MCP integration protocol, structured function-call proposals, and learned model capability. Higher layers depend on lower ones but solve different problems.</desc>
+  <defs>
+    <marker id="a" viewBox="0 0 10 10" refX="8" refY="5" markerWidth="8" markerHeight="8" orient="auto">
+      <path d="M0 0 10 5 0 10z" fill="#0F4D92"/>
+    </marker>
+  </defs>
+  <rect width="1200" height="650" rx="30" fill="#FFFFFF"/>
+  <g font-family="Arial, sans-serif">
+    <text x="58" y="68" font-size="31" font-weight="700" fill="#17324D">From model capability to product outcome: layers solve different problems</text>
+    <text x="58" y="105" font-size="18" fill="#5E7F9C">Lower layers supply capability; upper layers define integration, experience, authority, and responsibility for real-world effects.</text>
+    <path d="M180 520H350V420H525V320H700V220H875V150" fill="none" stroke="#D5DED8" stroke-width="22" stroke-linejoin="round"/>
+    <g stroke-width="3">
+      <rect x="120" y="440" width="300" height="105" rx="20" fill="#F6CFCB" stroke="#B64342"/>
+      <rect x="295" y="340" width="300" height="105" rx="20" fill="#EAF3FB" stroke="#0F4D92"/>
+      <rect x="470" y="240" width="300" height="105" rx="20" fill="#FFF8D6" stroke="#FFD700"/>
+      <rect x="645" y="140" width="300" height="105" rx="20" fill="#EAF3FB" stroke="#0F4D92"/>
+    </g>
+    <g text-anchor="middle">
+      <text x="270" y="478" font-size="22" font-weight="700" fill="#B64342">model training</text>
+      <text x="270" y="503" font-size="17" fill="#B64342">source of learned language</text>
+      <text x="270" y="528" font-size="17" fill="#B64342">and calling patterns</text>
+      <text x="445" y="378" font-size="22" font-weight="700" fill="#17324D">function calling</text>
+      <text x="445" y="410" font-size="17" fill="#0F4D92">a structured form for call proposals</text>
+      <text x="620" y="278" font-size="22" font-weight="700" fill="#765800">MCP</text>
+      <text x="620" y="303" font-size="17" fill="#765800">integration and discovery</text>
+      <text x="620" y="328" font-size="17" fill="#765800">for tools and context</text>
+      <text x="795" y="178" font-size="22" font-weight="700" fill="#17324D">application product</text>
+      <text x="795" y="203" font-size="17" fill="#0F4D92">user experience and workflow</text>
+      <text x="795" y="228" font-size="17" fill="#0F4D92">execution boundary</text>
+    </g>
+    <path d="M945 130H1060" fill="none" stroke="#0F4D92" stroke-width="4" marker-end="url(#a)" data-figure-connector="true"/>
+    <text x="1005" y="174" text-anchor="middle" font-size="18" font-weight="700" fill="#17324D">user-visible outcome</text>
+    <g font-size="17">
+      <text x="58" y="159" fill="#5E7F9C">Higher: closer to users and business consequences</text>
+      <text x="58" y="566" fill="#5E7F9C">Lower: closer to learned general generation capability</text>
+    </g>
+    <rect x="760" y="364" width="340" height="130" rx="20" fill="#FFFFFF" stroke="#FFD700" stroke-width="3"/>
+    <text x="930" y="400" text-anchor="middle" font-size="20" font-weight="700" fill="#765800">Do not collapse the layers</text>
+    <text x="930" y="425" text-anchor="middle" font-size="15" fill="#765800">MCP does not create model capability.</text>
+    <text x="930" y="447" text-anchor="middle" font-size="15" fill="#765800">A call proposal does not grant authority;</text>
+    <text x="930" y="469" text-anchor="middle" font-size="15" fill="#765800">training does not define workflow.</text>
+    <text x="600" y="620" text-anchor="middle" font-size="18" fill="#5E7F9C">Layering helps locate whether a failure is in capability, integration, execution, or product design.</text>
+  </g>
+  <g aria-hidden="true" fill="none" opacity="0" pointer-events="none">
+    <rect data-figure-safe-zone="text" x="46.0" y="25.0" width="1200.8" height="65.8"/>
+    <rect data-figure-safe-zone="text" x="46.0" y="75.0" width="1240.8" height="48.3"/>
+    <rect data-figure-safe-zone="text" x="258.0" y="444.0" width="184.2" height="53.7"/>
+    <rect data-figure-safe-zone="text" x="258.0" y="474.0" width="253.8" height="47.0"/>
+    <rect data-figure-safe-zone="text" x="258.0" y="499.0" width="200.8" height="47.0"/>
+    <rect data-figure-safe-zone="text" x="433.0" y="344.0" width="207.0" height="53.7"/>
+    <rect data-figure-safe-zone="text" x="433.0" y="381.0" width="342.2" height="47.0"/>
+    <rect data-figure-safe-zone="text" x="608.0" y="244.0" width="58.3" height="53.7"/>
+    <rect data-figure-safe-zone="text" x="608.0" y="274.0" width="245.0" height="47.0"/>
+    <rect data-figure-safe-zone="text" x="608.0" y="299.0" width="209.6" height="47.0"/>
+    <rect data-figure-safe-zone="text" x="783.0" y="144.0" width="241.4" height="53.7"/>
+    <rect data-figure-safe-zone="text" x="783.0" y="174.0" width="271.5" height="47.0"/>
+    <rect data-figure-safe-zone="text" x="783.0" y="199.0" width="183.1" height="47.0"/>
+    <rect data-figure-safe-zone="text" x="899.4" y="144.0" width="211.2" height="48.3"/>
+    <rect data-figure-safe-zone="text" x="46.0" y="130.0" width="457.2" height="47.0"/>
+    <rect data-figure-safe-zone="text" x="46.0" y="537.0" width="501.4" height="47.0"/>
+    <rect data-figure-safe-zone="text" x="782.8" y="368.0" width="294.4" height="51.0"/>
+    <rect data-figure-safe-zone="text" x="697.5" y="404.0" width="465.0" height="45.6"/>
+    <rect data-figure-safe-zone="text" x="668.4" y="429.0" width="523.2" height="45.6"/>
+    <rect data-figure-safe-zone="text" x="120.0" y="590.0" width="960.0" height="48.3"/>
+  </g>
+<g aria-hidden="true" fill="none" opacity="0" pointer-events="none"><rect data-figure-safe-zone="text" x="46.0" y="25.0" width="1200.8" height="65.8"/><rect data-figure-safe-zone="text" x="46.0" y="75.0" width="1240.8" height="48.3"/><rect data-figure-safe-zone="text" x="258.0" y="444.0" width="184.2" height="53.7"/><rect data-figure-safe-zone="text" x="258.0" y="474.0" width="253.8" height="47.0"/><rect data-figure-safe-zone="text" x="258.0" y="499.0" width="200.8" height="47.0"/><rect data-figure-safe-zone="text" x="433.0" y="344.0" width="207.0" height="53.7"/><rect data-figure-safe-zone="text" x="433.0" y="381.0" width="342.2" height="47.0"/><rect data-figure-safe-zone="text" x="608.0" y="244.0" width="58.3" height="53.7"/><rect data-figure-safe-zone="text" x="608.0" y="274.0" width="245.0" height="47.0"/><rect data-figure-safe-zone="text" x="608.0" y="299.0" width="209.6" height="47.0"/><rect data-figure-safe-zone="text" x="783.0" y="144.0" width="241.4" height="53.7"/><rect data-figure-safe-zone="text" x="783.0" y="174.0" width="271.5" height="47.0"/><rect data-figure-safe-zone="text" x="783.0" y="199.0" width="183.1" height="47.0"/><rect data-figure-safe-zone="text" x="899.4" y="144.0" width="211.2" height="48.3"/><rect data-figure-safe-zone="text" x="46.0" y="130.0" width="457.2" height="47.0"/><rect data-figure-safe-zone="text" x="46.0" y="537.0" width="501.4" height="47.0"/><rect data-figure-safe-zone="text" x="782.8" y="368.0" width="294.4" height="51.0"/><rect data-figure-safe-zone="text" x="773.7" y="398.0" width="312.6" height="44.2"/><rect data-figure-safe-zone="text" x="758.1" y="420.0" width="343.8" height="44.2"/><rect data-figure-safe-zone="text" x="785.4" y="442.0" width="289.2" height="44.2"/><rect data-figure-safe-zone="text" x="120.0" y="590.0" width="960.0" height="48.3"/></g></svg>

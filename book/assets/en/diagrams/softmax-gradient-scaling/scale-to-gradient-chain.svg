@@ -1,0 +1,77 @@
+<?xml version="1.0"?>
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="680" viewBox="0 0 1200 680" role="img" aria-labelledby="title desc">
+  <title id="title">The causal path from dot-product scale to gradient decay</title>
+  <desc id="desc">Under a zero-mean independent approximation, high-dimensional Q,K dot products grow in variance with d_k and typical scale with square root d_k. This can saturate Softmax and weaken local gradients; division by square root d_k controls the risk.</desc>
+  <defs>
+    <marker id="a" viewBox="0 0 10 10" refX="8.5" refY="5" markerWidth="8" markerHeight="8" orient="auto">
+      <path d="M0 0 10 5 0 10z" fill="#0F4D92"/>
+    </marker>
+    <style>text{font-family:Arial,sans-serif}.h{font-size:21px;font-weight:700;fill:#17324D}.b{font-size:17px;fill:#416985}.s{font-size:16px;fill:#5E7F9C}</style>
+  </defs>
+  <rect width="1200" height="680" fill="#FFFFFF"/>
+  <text x="65" y="68" font-size="32" font-weight="700" fill="#17324D">Why divide attention dot products by &#x221A;d&#x2096;?</text>
+  <text x="65" y="103" class="b">This risk chain uses a common zero-mean, approximate-independence assumption; it is a control mechanism, not an absolute law.</text>
+  <g>
+    <rect x="65" y="165" width="233" height="214" rx="20" fill="#F4F8FC" stroke="#8EB6D8" stroke-width="2"/>
+    <text x="92" y="198" font-size="18" font-weight="700">High-dimensional</text>
+    <text x="92" y="221" font-size="18" font-weight="700">dot product</text>
+    <text x="92" y="253" class="b">Q &#xB7; K sums d&#x2096; terms</text>
+    <text x="92" y="280" class="s">under the approximation:</text>
+    <text x="92" y="310" font-size="21" font-weight="700" fill="#0F4D92">Var(Q &#xB7; K) &#x221D; d&#x2096;</text>
+    <text x="92" y="342" class="s">typical magnitude &#x221D; &#x221A;d&#x2096;</text>
+    <path d="M298 165V150H371V163" fill="none" stroke="#0F4D92" stroke-width="4" marker-end="url(#a)" data-figure-connector="true"/>
+    <rect x="386" y="165" width="233" height="214" rx="20" fill="#FFF8D6" stroke="#D8A919" stroke-width="2"/>
+    <text x="413" y="209" class="h">Enter Softmax</text>
+    <text x="413" y="243" class="b">when score scale</text>
+    <text x="413" y="264" class="b">is excessive</text>
+    <text x="413" y="298" font-size="17" font-weight="700" fill="#765800">exponentials amplify</text>
+    <text x="413" y="320" font-size="17" font-weight="700" fill="#765800">gaps</text>
+    <text x="413" y="345" class="s">ranking stays;</text>
+    <text x="413" y="365" class="s">distribution sharpens</text>
+    <path d="M619 165V150H692V163" fill="none" stroke="#0F4D92" stroke-width="4" marker-end="url(#a)" data-figure-connector="true"/>
+    <rect x="707" y="165" width="233" height="214" rx="20" fill="#FFF8D6" stroke="#E9A6A1" stroke-width="2"/>
+    <text x="734" y="209" font-size="18" font-weight="700">Probability saturation</text>
+    <text x="734" y="243" class="b">approaches one-hot</text>
+    <path d="M744 285h156" stroke="#B64342" stroke-width="17" stroke-linecap="round"/>
+    <path d="M744 321h20m25 0h20m25 0h20m25 0h20" stroke="#E0AAA0" stroke-width="8" stroke-linecap="round"/>
+    <text x="734" y="354" font-size="16" class="s">most positions approach zero</text>
+    <path d="M940 272h73" fill="none" stroke="#B64342" stroke-width="4" marker-end="url(#a)" data-figure-connector="true"/>
+    <rect x="1028" y="165" width="107" height="214" rx="20" fill="#F6CFCB" stroke="#B64342" stroke-width="2"/>
+    <text x="1081" y="220" text-anchor="middle" class="h">local</text>
+    <text x="1081" y="249" text-anchor="middle" class="h">gradient</text>
+    <text x="1081" y="288" text-anchor="middle" class="b">shrinks</text>
+    <text x="1081" y="322" text-anchor="middle" class="s">Q, K</text>
+    <text x="1081" y="344" text-anchor="middle" class="s">weaken</text>
+  </g>
+  <path d="M600 400v60" stroke="#0F4D92" stroke-width="4" fill="none" marker-end="url(#a)" data-figure-connector="true"/>
+  <rect x="320" y="475" width="560" height="110" rx="22" fill="#17324D"/>
+  <text x="600" y="519" text-anchor="middle" font-size="24" font-weight="700" fill="#FFFFFF">Scaled dot product: QK&#x1D40; / &#x221A;d&#x2096;</text>
+  <text x="600" y="545" text-anchor="middle" font-size="17" fill="#CFCECE">returns typical input scale to a steadier range</text>
+  <text x="600" y="569" text-anchor="middle" font-size="17" fill="#CFCECE">and reduces early saturation risk</text>
+  <rect x="65" y="616" width="1070" height="39" rx="12" fill="#F6CFCB"/>
+  <text x="92" y="642" font-size="16" fill="#8F3635">Risk reduction is not a stability guarantee: parameter distributions, optimization, normalization, and numerics also matter.</text>
+  <g aria-hidden="true" fill="none" opacity="0" pointer-events="none">
+    <rect data-figure-safe-zone="text" x="53.0" y="24.0" width="706.2" height="67.2"/>
+    <rect data-figure-safe-zone="text" x="53.0" y="74.0" width="1129.0" height="47.0"/>
+    <rect data-figure-safe-zone="text" x="80.0" y="175.0" width="344.3" height="53.7"/>
+    <rect data-figure-safe-zone="text" x="80.0" y="214.0" width="192.0" height="47.0"/>
+    <rect data-figure-safe-zone="text" x="80.0" y="246.0" width="236.2" height="47.0"/>
+    <rect data-figure-safe-zone="text" x="80.0" y="277.0" width="187.8" height="52.4"/>
+    <rect data-figure-safe-zone="text" x="80.0" y="313.0" width="227.3" height="47.0"/>
+    <rect data-figure-safe-zone="text" x="401.0" y="175.0" width="172.7" height="53.7"/>
+    <rect data-figure-safe-zone="text" x="401.0" y="214.0" width="280.4" height="47.0"/>
+    <rect data-figure-safe-zone="text" x="401.0" y="250.0" width="284.0" height="51.0"/>
+    <rect data-figure-safe-zone="text" x="401.0" y="286.0" width="377.6" height="47.0"/>
+    <rect data-figure-safe-zone="text" x="722.0" y="175.0" width="275.7" height="53.7"/>
+    <rect data-figure-safe-zone="text" x="722.0" y="214.0" width="183.1" height="47.0"/>
+    <rect data-figure-safe-zone="text" x="722.0" y="325.0" width="271.5" height="47.0"/>
+    <rect data-figure-safe-zone="text" x="1040.4" y="186.0" width="81.2" height="53.7"/>
+    <rect data-figure-safe-zone="text" x="1023.2" y="215.0" width="115.5" height="53.7"/>
+    <rect data-figure-safe-zone="text" x="1038.1" y="259.0" width="85.9" height="47.0"/>
+    <rect data-figure-safe-zone="text" x="1051.3" y="293.0" width="59.4" height="47.0"/>
+    <rect data-figure-safe-zone="text" x="1042.5" y="315.0" width="77.0" height="47.0"/>
+    <rect data-figure-safe-zone="text" x="407.0" y="483.0" width="385.9" height="56.4"/>
+    <rect data-figure-safe-zone="text" x="208.9" y="521.0" width="782.2" height="48.3"/>
+    <rect data-figure-safe-zone="text" x="80.0" y="614.0" width="1055.7" height="45.6"/>
+  </g>
+<g aria-hidden="true" fill="none" opacity="0" pointer-events="none"><rect data-figure-safe-zone="text" x="53.0" y="24.0" width="706.2" height="67.2"/><rect data-figure-safe-zone="text" x="53.0" y="74.0" width="1129.0" height="47.0"/><rect data-figure-safe-zone="text" x="80.0" y="168.0" width="173.8" height="48.3"/><rect data-figure-safe-zone="text" x="80.0" y="191.0" width="127.0" height="48.3"/><rect data-figure-safe-zone="text" x="80.0" y="224.0" width="192.0" height="47.0"/><rect data-figure-safe-zone="text" x="80.0" y="251.0" width="236.2" height="47.0"/><rect data-figure-safe-zone="text" x="80.0" y="277.0" width="187.8" height="52.4"/><rect data-figure-safe-zone="text" x="80.0" y="313.0" width="227.3" height="47.0"/><rect data-figure-safe-zone="text" x="401.0" y="175.0" width="172.7" height="53.7"/><rect data-figure-safe-zone="text" x="401.0" y="214.0" width="165.4" height="47.0"/><rect data-figure-safe-zone="text" x="401.0" y="235.0" width="130.1" height="47.0"/><rect data-figure-safe-zone="text" x="401.0" y="269.0" width="200.8" height="47.0"/><rect data-figure-safe-zone="text" x="401.0" y="291.0" width="59.4" height="47.0"/><rect data-figure-safe-zone="text" x="401.0" y="316.0" width="147.8" height="47.0"/><rect data-figure-safe-zone="text" x="401.0" y="336.0" width="209.6" height="47.0"/><rect data-figure-safe-zone="text" x="722.0" y="179.0" width="229.9" height="48.3"/><rect data-figure-safe-zone="text" x="722.0" y="214.0" width="183.1" height="47.0"/><rect data-figure-safe-zone="text" x="722.0" y="326.0" width="257.0" height="45.6"/><rect data-figure-safe-zone="text" x="1040.4" y="186.0" width="81.2" height="53.7"/><rect data-figure-safe-zone="text" x="1023.2" y="215.0" width="115.5" height="53.7"/><rect data-figure-safe-zone="text" x="1038.1" y="259.0" width="85.9" height="47.0"/><rect data-figure-safe-zone="text" x="1051.3" y="293.0" width="59.4" height="47.0"/><rect data-figure-safe-zone="text" x="1042.5" y="315.0" width="77.0" height="47.0"/><rect data-figure-safe-zone="text" x="407.0" y="483.0" width="385.9" height="56.4"/><rect data-figure-safe-zone="text" x="380.3" y="516.0" width="439.5" height="47.0"/><rect data-figure-safe-zone="text" x="442.1" y="540.0" width="315.7" height="47.0"/><rect data-figure-safe-zone="text" x="80.0" y="614.0" width="1055.7" height="45.6"/></g></svg>

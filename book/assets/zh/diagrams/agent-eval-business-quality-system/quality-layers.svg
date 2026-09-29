@@ -1,0 +1,48 @@
+<?xml version="1.0"?>
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="650" viewBox="0 0 1200 650" role="img" aria-labelledby="title desc">
+  <title id="title">&#x6309;&#x98CE;&#x9669;&#x548C;&#x9891;&#x7387;&#x5206;&#x5C42;&#x7684;&#x8D28;&#x91CF;&#x63A7;&#x5236;</title>
+  <desc id="desc">&#x9AD8;&#x9891;&#x4F4E;&#x98CE;&#x9669;&#x4E8B;&#x9879;&#x4EE5;&#x81EA;&#x52A8;&#x5316;&#x68C0;&#x67E5;&#x4E3A;&#x4E3B;&#xFF0C;&#x9AD8;&#x9891;&#x4E2D;&#x98CE;&#x9669;&#x52A0;&#x5165;&#x62BD;&#x68C0;&#xFF0C;&#x4F4E;&#x9891;&#x9AD8;&#x98CE;&#x9669;&#x4F7F;&#x7528;&#x4EBA;&#x5DE5;&#x786E;&#x8BA4;&#xFF1B;&#x672A;&#x77E5;&#x95EE;&#x9898;&#x7ECF;&#x5BA1;&#x67E5;&#x540E;&#x56DE;&#x6D41;&#x4E3A;&#x65B0;&#x89C4;&#x5219;&#x548C;&#x6848;&#x4F8B;&#x3002;</desc>
+  <defs>
+    <marker id="a" viewBox="0 0 10 10" refX="8" refY="5" markerWidth="8" markerHeight="8" orient="auto">
+      <path d="M0 0 10 5 0 10z" fill="#0F4D92"/>
+    </marker>
+  </defs>
+  <rect width="1200" height="650" rx="30" fill="#FFFFFF"/>
+  <g font-family="Arial,'Noto Sans SC',sans-serif">
+    <text x="58" y="68" font-size="31" font-weight="700" fill="#17324D">&#x8D28;&#x91CF;&#x5224;&#x65AD;&#x6309;&#x98CE;&#x9669;&#x548C;&#x9891;&#x7387;&#x5206;&#x5C42;&#xFF0C;&#x800C;&#x975E;&#x4E00;&#x628A;&#x5C3A;&#x5B50;&#x91CF;&#x5230;&#x5E95;</text>
+    <text x="58" y="105" font-size="18" fill="#5E7F9C">&#x63A7;&#x5236;&#x8D8A;&#x63A5;&#x8FD1;&#x9AD8;&#x540E;&#x679C;&#x8FB9;&#x754C;&#xFF0C;&#x8D8A;&#x9700;&#x8981;&#x72EC;&#x7ACB;&#x8BC1;&#x636E;&#x3001;&#x4EBA;&#x5DE5;&#x5224;&#x65AD;&#x548C;&#x660E;&#x786E;&#x7684;&#x5347;&#x7EA7;&#x8DEF;&#x5F84;&#x3002;</text>
+    <g stroke-width="3">
+      <rect x="100" y="165" width="900" height="95" rx="22" fill="#EAF3FB" stroke="#0F4D92"/>
+      <rect x="170" y="285" width="760" height="95" rx="22" fill="#FFF8D6" stroke="#FFD700"/>
+      <rect x="240" y="405" width="620" height="95" rx="22" fill="#F6CFCB" stroke="#B64342"/>
+    </g>
+    <text x="140" y="205" font-size="22" font-weight="700" fill="#17324D">&#x9AD8;&#x9891; &#xB7; &#x4F4E;&#x98CE;&#x9669;</text>
+    <text x="520" y="205" font-size="21" fill="#0F4D92">&#x81EA;&#x52A8;&#x5316;&#x5224;&#x65AD;&#xFF1A;&#x89C4;&#x6A21;&#x3001;&#x901F;&#x5EA6;&#x4E0E;&#x4E00;&#x81F4;&#x6027;</text>
+    <text x="140" y="234" font-size="16" fill="#0F4D92">&#x683C;&#x5F0F;&#x3001;&#x7ED3;&#x6784;&#x3001;&#x5DF2;&#x77E5;&#x89C4;&#x5219;&#x3001;&#x786E;&#x5B9A;&#x6027;&#x7EA6;&#x675F;</text>
+    <text x="210" y="325" font-size="22" font-weight="700" fill="#765800">&#x9AD8;&#x9891; &#xB7; &#x4E2D;&#x98CE;&#x9669;</text>
+    <text x="520" y="325" font-size="21" fill="#765800">&#x81EA;&#x52A8;&#x5316; + &#x62BD;&#x68C0;&#xFF1A;&#x53D1;&#x73B0;&#x6F02;&#x79FB;&#x4E0E;&#x8BEF;&#x5224;</text>
+    <text x="210" y="354" font-size="16" fill="#765800">&#x8D28;&#x91CF;&#x62BD;&#x6837;&#x3001;&#x4EBA;&#x5DE5;&#x6821;&#x51C6;&#x3001;&#x5F02;&#x5E38;&#x76D1;&#x63A7;</text>
+    <text x="280" y="445" font-size="22" font-weight="700" fill="#B64342">&#x4F4E;&#x9891; &#xB7; &#x9AD8;&#x98CE;&#x9669;</text>
+    <text x="520" y="445" font-size="17" fill="#B64342">&#x4EBA;&#x5DE5;&#x786E;&#x8BA4;&#xFF1A;&#x6821;&#x51C6;&#x8D23;&#x4EFB;&#x8FB9;&#x754C;&#x4E0E;&#x4E0D;&#x53EF;&#x9006;&#x540E;&#x679C;</text>
+    <text x="280" y="474" font-size="16" fill="#B64342">&#x654F;&#x611F;&#x64CD;&#x4F5C;&#x3001;&#x91CD;&#x5927;&#x635F;&#x5931;&#x3001;&#x672A;&#x77E5;&#x98CE;&#x9669;&#x548C;&#x5347;&#x7EA7;</text>
+    <path d="M550 500V515H850V528" fill="none" stroke="#0F4D92" stroke-width="4" marker-end="url(#a)" data-figure-connector="true"/>
+    <rect x="850" y="530" width="260" height="65" rx="18" fill="#EAF3FB" stroke="#0F4D92" stroke-width="3"/>
+    <text x="980" y="558" text-anchor="middle" font-size="19" font-weight="700" fill="#17324D">&#x672A;&#x77E5;&#x95EE;&#x9898;</text>
+    <text x="980" y="582" text-anchor="middle" font-size="16" fill="#0F4D92">&#x5BA1;&#x67E5;&#x540E;&#x6C89;&#x6DC0;&#x65B0;&#x89C4;&#x5219;&#x4E0E;&#x6848;&#x4F8B;</text>
+  </g>
+  <g aria-hidden="true" fill="none" opacity="0" pointer-events="none">
+    <rect data-figure-safe-zone="text" x="46.0" y="25.0" width="658.6" height="65.8"/>
+    <rect data-figure-safe-zone="text" x="46.0" y="75.0" width="548.0" height="48.3"/>
+    <rect data-figure-safe-zone="text" x="128.0" y="171.0" width="162.8" height="53.7"/>
+    <rect data-figure-safe-zone="text" x="508.0" y="172.0" width="305.2" height="52.4"/>
+    <rect data-figure-safe-zone="text" x="128.0" y="206.0" width="246.6" height="45.6"/>
+    <rect data-figure-safe-zone="text" x="198.0" y="291.0" width="162.8" height="53.7"/>
+    <rect data-figure-safe-zone="text" x="508.0" y="292.0" width="307.1" height="52.4"/>
+    <rect data-figure-safe-zone="text" x="198.0" y="326.0" width="223.0" height="45.6"/>
+    <rect data-figure-safe-zone="text" x="268.0" y="411.0" width="162.8" height="53.7"/>
+    <rect data-figure-safe-zone="text" x="508.0" y="412.0" width="354.1" height="52.4"/>
+    <rect data-figure-safe-zone="text" x="268.0" y="446.0" width="268.6" height="45.6"/>
+    <rect data-figure-safe-zone="text" x="931.9" y="527.0" width="96.2" height="49.7"/>
+    <rect data-figure-safe-zone="text" x="884.4" y="554.0" width="191.2" height="45.6"/>
+  </g>
+<g aria-hidden="true" fill="none" opacity="0" pointer-events="none"><rect data-figure-safe-zone="text" x="46.0" y="25.0" width="658.6" height="65.8"/><rect data-figure-safe-zone="text" x="46.0" y="75.0" width="548.0" height="48.3"/><rect data-figure-safe-zone="text" x="128.0" y="171.0" width="162.8" height="53.7"/><rect data-figure-safe-zone="text" x="508.0" y="172.0" width="305.2" height="52.4"/><rect data-figure-safe-zone="text" x="128.0" y="206.0" width="246.6" height="45.6"/><rect data-figure-safe-zone="text" x="198.0" y="291.0" width="162.8" height="53.7"/><rect data-figure-safe-zone="text" x="508.0" y="292.0" width="307.1" height="52.4"/><rect data-figure-safe-zone="text" x="198.0" y="326.0" width="223.0" height="45.6"/><rect data-figure-safe-zone="text" x="268.0" y="411.0" width="162.8" height="53.7"/><rect data-figure-safe-zone="text" x="508.0" y="416.0" width="291.2" height="47.0"/><rect data-figure-safe-zone="text" x="268.0" y="446.0" width="268.6" height="45.6"/><rect data-figure-safe-zone="text" x="931.9" y="527.0" width="96.2" height="49.7"/><rect data-figure-safe-zone="text" x="884.4" y="554.0" width="191.2" height="45.6"/></g></svg>

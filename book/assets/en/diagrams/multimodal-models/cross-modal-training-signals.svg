@@ -1,0 +1,60 @@
+<?xml version="1.0"?>
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="650" viewBox="0 0 1200 650" role="img" aria-labelledby="title desc">
+  <title id="title">Three complementary kinds of multimodal training signal</title>
+  <desc id="desc">Paired material teaches correspondence, conditional targets teach generation from input, and task behavior signals shape useful and safe user-facing output.</desc>
+  <defs>
+    <marker id="a" viewBox="0 0 10 10" refX="8.5" refY="5" markerWidth="8" markerHeight="8" orient="auto">
+      <path d="M0 0 10 5 0 10z" fill="#0F4D92"/>
+    </marker>
+    <style>text{font-family:Arial,sans-serif}.k{font-size:17px;font-weight:700}.h{font-size:23px;font-weight:700;fill:#17324D}.b{font-size:17px;fill:#416985}.s{font-size:16px;fill:#687972}</style>
+  </defs>
+  <rect width="1200" height="650" fill="#FFFFFF"/>
+  <text x="68" y="68" font-size="32" font-weight="700" fill="#17324D">Multimodal ability comes from three complementary signals</text>
+  <text x="68" y="103" class="b">They answer different questions: what corresponds, how to generate from input, and what behavior helps a user.</text>
+  <path d="M600 157v337" stroke="#B9CBC2" stroke-width="5" stroke-dasharray="9 10"/>
+  <rect x="68" y="145" width="464" height="142" rx="20" fill="#F4F8FC" stroke="#8EB6D8" stroke-width="2"/>
+  <circle cx="110" cy="188" r="21" fill="#0F4D92"/>
+  <text x="110" y="195" text-anchor="middle" class="k" fill="#FFFFFF">1</text>
+  <text x="150" y="190" class="h">Alignment signals</text>
+  <text x="150" y="214" class="b">image&#x2013;text, audio&#x2013;text,</text>
+  <text x="150" y="236" class="b">video&#x2013;text, mixed documents</text>
+  <text x="150" y="262" class="s">learn correspondence in content, place, and time</text>
+  <path d="M532 145V130H644V143" fill="none" stroke="#0F4D92" stroke-width="4" marker-end="url(#a)" data-figure-connector="true"/>
+  <rect x="668" y="145" width="464" height="142" rx="20" fill="#FFF8D6" stroke="#D8A919" stroke-width="2"/>
+  <circle cx="710" cy="188" r="21" fill="#FFD700"/>
+  <text x="710" y="195" text-anchor="middle" class="k" fill="#FFFFFF">2</text>
+  <text x="750" y="190" class="h">Conditional generation</text>
+  <text x="750" y="215" class="b">given modalities, predict text</text>
+  <text x="750" y="239" class="b">or another modality</text>
+  <text x="750" y="267" class="s">learn to use input evidence to produce a target</text>
+  <path d="M600 287v70" fill="none" stroke="#0F4D92" stroke-width="4" marker-end="url(#a)" data-figure-connector="true"/>
+  <rect x="368" y="373" width="464" height="142" rx="20" fill="#F6CFCB" stroke="#B64342" stroke-width="2"/>
+  <circle cx="410" cy="416" r="21" fill="#B64342"/>
+  <text x="410" y="423" text-anchor="middle" class="k" fill="#FFFFFF">3</text>
+  <text x="450" y="418" class="h">Task-behavior signals</text>
+  <text x="450" y="442" class="b">instructions, preferences,</text>
+  <text x="450" y="464" class="b">verification, safety feedback</text>
+  <text x="450" y="490" class="s">shape output around the user's task and constraints</text>
+  <rect x="68" y="552" width="1064" height="70" rx="14" fill="#F6CFCB"/>
+  <text x="94" y="580" font-size="17" fill="#8F3635">Paired material alone does not teach a specific Q&amp;A task.</text>
+  <text x="94" y="606" font-size="17" fill="#8F3635">Targets and evaluation must cover the cross-modal relation you need.</text>
+  <g aria-hidden="true" fill="none" opacity="0" pointer-events="none">
+    <rect data-figure-safe-zone="text" x="56.0" y="24.0" width="972.5" height="67.2"/>
+    <rect data-figure-safe-zone="text" x="56.0" y="74.0" width="996.4" height="47.0"/>
+    <rect data-figure-safe-zone="text" x="90.0" y="166.0" width="40.0" height="47.0"/>
+    <rect data-figure-safe-zone="text" x="138.0" y="156.0" width="218.5" height="53.7"/>
+    <rect data-figure-safe-zone="text" x="138.0" y="192.0" width="474.8" height="47.0"/>
+    <rect data-figure-safe-zone="text" x="138.0" y="222.0" width="448.3" height="47.0"/>
+    <rect data-figure-safe-zone="text" x="690.0" y="166.0" width="40.0" height="47.0"/>
+    <rect data-figure-safe-zone="text" x="738.0" y="156.0" width="275.7" height="53.7"/>
+    <rect data-figure-safe-zone="text" x="738.0" y="186.0" width="289.2" height="47.0"/>
+    <rect data-figure-safe-zone="text" x="738.0" y="210.0" width="192.0" height="47.0"/>
+    <rect data-figure-safe-zone="text" x="738.0" y="238.0" width="439.5" height="47.0"/>
+    <rect data-figure-safe-zone="text" x="390.0" y="394.0" width="40.0" height="47.0"/>
+    <rect data-figure-safe-zone="text" x="438.0" y="384.0" width="264.2" height="53.7"/>
+    <rect data-figure-safe-zone="text" x="438.0" y="420.0" width="519.0" height="47.0"/>
+    <rect data-figure-safe-zone="text" x="438.0" y="450.0" width="474.8" height="47.0"/>
+    <rect data-figure-safe-zone="text" x="82.0" y="551.0" width="527.9" height="47.0"/>
+    <rect data-figure-safe-zone="text" x="82.0" y="577.0" width="625.1" height="47.0"/>
+  </g>
+<g aria-hidden="true" fill="none" opacity="0" pointer-events="none"><rect data-figure-safe-zone="text" x="56.0" y="24.0" width="972.5" height="67.2"/><rect data-figure-safe-zone="text" x="56.0" y="74.0" width="996.4" height="47.0"/><rect data-figure-safe-zone="text" x="90.0" y="166.0" width="40.0" height="47.0"/><rect data-figure-safe-zone="text" x="138.0" y="156.0" width="218.5" height="53.7"/><rect data-figure-safe-zone="text" x="138.0" y="185.0" width="227.3" height="47.0"/><rect data-figure-safe-zone="text" x="138.0" y="207.0" width="262.7" height="47.0"/><rect data-figure-safe-zone="text" x="138.0" y="233.0" width="448.3" height="47.0"/><rect data-figure-safe-zone="text" x="690.0" y="166.0" width="40.0" height="47.0"/><rect data-figure-safe-zone="text" x="738.0" y="156.0" width="275.7" height="53.7"/><rect data-figure-safe-zone="text" x="738.0" y="186.0" width="289.2" height="47.0"/><rect data-figure-safe-zone="text" x="738.0" y="210.0" width="192.0" height="47.0"/><rect data-figure-safe-zone="text" x="738.0" y="238.0" width="439.5" height="47.0"/><rect data-figure-safe-zone="text" x="390.0" y="394.0" width="40.0" height="47.0"/><rect data-figure-safe-zone="text" x="438.0" y="384.0" width="264.2" height="53.7"/><rect data-figure-safe-zone="text" x="438.0" y="413.0" width="253.8" height="47.0"/><rect data-figure-safe-zone="text" x="438.0" y="435.0" width="280.4" height="47.0"/><rect data-figure-safe-zone="text" x="438.0" y="461.0" width="474.8" height="47.0"/><rect data-figure-safe-zone="text" x="82.0" y="551.0" width="527.9" height="47.0"/><rect data-figure-safe-zone="text" x="82.0" y="577.0" width="625.1" height="47.0"/></g></svg>

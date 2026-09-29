@@ -1,0 +1,72 @@
+<?xml version="1.0"?>
+<svg xmlns="http://www.w3.org/2000/svg" width="1280" height="600" viewBox="0 0 1280 600" role="img" aria-labelledby="title desc">
+  <title id="title">RAG evidence-selection pipeline</title>
+  <desc id="desc">Sources are prepared and indexed, candidates retrieved, filtered by authority and time, reranked and deduplicated, assembled with the question, then used for generation and checking.</desc>
+  <defs>
+    <marker id="a" viewBox="0 0 10 10" refX="8" refY="5" markerWidth="8" markerHeight="8" orient="auto">
+      <path d="M0 0 10 5 0 10z" fill="#0F4D92"/>
+    </marker>
+  </defs>
+  <rect width="1280" height="600" rx="36" fill="#FFFFFF"/>
+  <g font-family="Arial, sans-serif">
+    <text x="55" y="70" font-size="32" font-weight="700" fill="#17324D">RAG narrows evidence before generation</text>
+    <text x="55" y="105" font-size="19" fill="#5E7F9C">Retrieval alone is not enough: authority, time, conditions, redundancy, and final-state checks shape usable context.</text>
+  </g>
+  <g font-family="Arial, sans-serif" text-anchor="middle" font-weight="700">
+    <g fill="#EAF3FB" stroke="#0F4D92" stroke-width="3">
+      <rect x="35" y="245" width="140" height="78" rx="21"/>
+      <rect x="405" y="245" width="125" height="78" rx="21"/>
+      <rect x="775" y="245" width="150" height="78" rx="21"/>
+      <rect x="1125" y="245" width="120" height="78" rx="21"/>
+    </g>
+    <g fill="#FFF8D6" stroke="#FFD700" stroke-width="3">
+      <rect x="225" y="245" width="130" height="78" rx="21"/>
+      <rect x="580" y="245" width="145" height="78" rx="21"/>
+    </g>
+    <g fill="#F6CFCB" stroke="#B64342" stroke-width="3">
+      <rect x="975" y="245" width="100" height="78" rx="21"/>
+    </g>
+    <g fill="none" stroke="#0F4D92" stroke-width="4" marker-end="url(#a)">
+      <path d="M175 284H215"/>
+      <path d="M355 284H395"/>
+      <path d="M530 284H570"/>
+      <path d="M725 284H765"/>
+      <path d="M925 284H965"/>
+      <path d="M1075 284H1115"/>
+    </g>
+    <g font-size="17">
+      <text x="105" y="289" fill="#0F4D92">sources</text>
+      <text x="290" y="274" fill="#765800">clean, version,</text>
+      <text x="290" y="298" fill="#765800">chunk, index</text>
+      <text x="467" y="289" fill="#0F4D92">retrieve</text>
+      <text x="652" y="274" fill="#765800">filter authority,</text>
+      <text x="652" y="298" fill="#765800">time, conditions</text>
+      <text x="850" y="274" fill="#0F4D92">rerank and</text>
+      <text x="850" y="298" fill="#0F4D92">deduplicate</text>
+      <text x="1025" y="274" fill="#B64342">assemble</text>
+      <text x="1025" y="292" fill="#B64342">context +</text>
+      <text x="1025" y="312" fill="#B64342">question</text>
+      <text x="1185" y="274" fill="#0F4D92">generate +</text>
+      <text x="1185" y="298" fill="#0F4D92">check</text>
+    </g>
+  </g>
+  <path d="M110 415H1170" stroke="#FFD700" stroke-width="3"/>
+  <text x="640" y="465" font-family="Arial, sans-serif" font-size="19" fill="#765800" text-anchor="middle">Evidence must be selected, qualified, and checked&#x2014;not merely retrieved.</text>
+  <g aria-hidden="true" fill="none" opacity="0" pointer-events="none">
+    <rect data-figure-safe-zone="text" x="43.0" y="26.0" width="656.3" height="67.2"/>
+    <rect data-figure-safe-zone="text" x="43.0" y="74.0" width="1170.1" height="49.7"/>
+    <rect data-figure-safe-zone="text" x="93.0" y="260.0" width="85.9" height="47.0"/>
+    <rect data-figure-safe-zone="text" x="278.0" y="245.0" width="156.6" height="47.0"/>
+    <rect data-figure-safe-zone="text" x="278.0" y="269.0" width="130.1" height="47.0"/>
+    <rect data-figure-safe-zone="text" x="455.0" y="260.0" width="94.7" height="47.0"/>
+    <rect data-figure-safe-zone="text" x="640.0" y="245.0" width="174.3" height="47.0"/>
+    <rect data-figure-safe-zone="text" x="640.0" y="269.0" width="165.4" height="47.0"/>
+    <rect data-figure-safe-zone="text" x="838.0" y="245.0" width="112.4" height="47.0"/>
+    <rect data-figure-safe-zone="text" x="838.0" y="269.0" width="121.2" height="47.0"/>
+    <rect data-figure-safe-zone="text" x="1013.0" y="245.0" width="94.7" height="47.0"/>
+    <rect data-figure-safe-zone="text" x="1013.0" y="269.0" width="183.1" height="47.0"/>
+    <rect data-figure-safe-zone="text" x="1173.0" y="245.0" width="112.4" height="47.0"/>
+    <rect data-figure-safe-zone="text" x="1173.0" y="269.0" width="68.2" height="47.0"/>
+    <rect data-figure-safe-zone="text" x="277.3" y="434.0" width="725.5" height="49.7"/>
+  </g>
+<g aria-hidden="true" fill="none" opacity="0" pointer-events="none"><rect data-figure-safe-zone="text" x="43.0" y="26.0" width="656.3" height="67.2"/><rect data-figure-safe-zone="text" x="43.0" y="74.0" width="1170.1" height="49.7"/><rect data-figure-safe-zone="text" x="93.0" y="260.0" width="85.9" height="47.0"/><rect data-figure-safe-zone="text" x="278.0" y="245.0" width="156.6" height="47.0"/><rect data-figure-safe-zone="text" x="278.0" y="269.0" width="130.1" height="47.0"/><rect data-figure-safe-zone="text" x="455.0" y="260.0" width="94.7" height="47.0"/><rect data-figure-safe-zone="text" x="640.0" y="245.0" width="174.3" height="47.0"/><rect data-figure-safe-zone="text" x="640.0" y="269.0" width="165.4" height="47.0"/><rect data-figure-safe-zone="text" x="838.0" y="245.0" width="112.4" height="47.0"/><rect data-figure-safe-zone="text" x="838.0" y="269.0" width="121.2" height="47.0"/><rect data-figure-safe-zone="text" x="1013.0" y="245.0" width="94.7" height="47.0"/><rect data-figure-safe-zone="text" x="1013.0" y="263.0" width="103.6" height="47.0"/><rect data-figure-safe-zone="text" x="1013.0" y="283.0" width="94.7" height="47.0"/><rect data-figure-safe-zone="text" x="1173.0" y="245.0" width="112.4" height="47.0"/><rect data-figure-safe-zone="text" x="1173.0" y="269.0" width="68.2" height="47.0"/><rect data-figure-safe-zone="text" x="277.3" y="434.0" width="725.5" height="49.7"/></g></svg>

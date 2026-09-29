@@ -1,0 +1,83 @@
+<?xml version="1.0"?>
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="650" viewBox="0 0 1200 650" role="img" aria-labelledby="title desc">
+  <title id="title">Scope difference between LLM and agent evaluation</title>
+  <desc id="desc">Traditional LLM evaluation focuses on input and response. Agent evaluation also covers task route, tool calls, external state, execution trace, and final business outcome.</desc>
+  <defs>
+    <marker id="a" viewBox="0 0 10 10" refX="8" refY="5" markerWidth="8" markerHeight="8" orient="auto">
+      <path d="M0 0 10 5 0 10z" fill="#0F4D92"/>
+    </marker>
+  </defs>
+  <rect width="1200" height="650" rx="30" fill="#FFFFFF"/>
+  <g font-family="Arial,sans-serif">
+    <text x="58" y="68" font-size="31" font-weight="700" fill="#17324D">Evaluation scope: from one response to an auditable task outcome</text>
+    <text x="58" y="105" font-size="18" fill="#5E7F9C">Response quality still matters; an agent that changes the outside world also owns route, authority, cost, and final state.</text>
+    <rect x="55" y="165" width="420" height="340" rx="25" fill="#FFFFFF" stroke="#FFD700" stroke-width="3"/>
+    <rect x="725" y="165" width="420" height="340" rx="25" fill="#F4FBF5" stroke="#0F4D92" stroke-width="3"/>
+    <text x="265" y="213" text-anchor="middle" font-size="24" font-weight="700" fill="#765800">traditional LLM evaluation</text>
+    <text x="935" y="213" text-anchor="middle" font-size="24" font-weight="700" fill="#17324D">agent evaluation</text>
+    <g fill="none" stroke="#FFD700" stroke-width="4" marker-end="url(#a)">
+      <path d="M150 320H235"/>
+      <path d="M335 320H420"/>
+    </g>
+    <g stroke-width="3">
+      <rect x="75" y="270" width="75" height="100" rx="18" fill="#FFF8D6" stroke="#FFD700"/>
+      <rect x="235" y="270" width="100" height="100" rx="18" fill="#FFF8D6" stroke="#FFD700"/>
+      <rect x="420" y="270" width="35" height="100" rx="18" fill="#F6CFCB" stroke="#B64342"/>
+    </g>
+    <text x="112" y="314" text-anchor="middle" font-size="18" font-weight="700" fill="#765800">input</text>
+    <text x="112" y="340" text-anchor="middle" font-size="15" fill="#765800">prompt</text>
+    <text x="285" y="314" text-anchor="middle" font-size="18" font-weight="700" fill="#765800">response</text>
+    <text x="437" y="314" text-anchor="middle" font-size="14" font-weight="700" fill="#B64342">score</text>
+    <text x="110" y="434" font-size="17" fill="#765800">often: correctness, format, factuality, expression</text>
+    <g fill="none" stroke="#0F4D92" stroke-width="4" marker-end="url(#a)">
+      <path d="M760 320H805"/>
+      <path d="M880 320H925"/>
+      <path d="M1000 320H1045"/>
+    </g>
+    <g stroke-width="3">
+      <rect x="740" y="270" width="65" height="100" rx="18" fill="#EAF3FB" stroke="#0F4D92"/>
+      <rect x="805" y="270" width="75" height="100" rx="18" fill="#FFF8D6" stroke="#FFD700"/>
+      <rect x="880" y="270" width="45" height="100" rx="18" fill="#FFF8D6" stroke="#FFD700"/>
+      <rect x="925" y="270" width="75" height="100" rx="18" fill="#F6CFCB" stroke="#B64342"/>
+      <rect x="1000" y="270" width="45" height="100" rx="18" fill="#EAF3FB" stroke="#0F4D92"/>
+      <rect x="1045" y="270" width="75" height="100" rx="18" fill="#EAF3FB" stroke="#0F4D92"/>
+    </g>
+    <g text-anchor="middle" font-size="14" font-weight="700">
+      <text x="772" y="321" fill="#17324D">task</text>
+      <text x="842" y="321" fill="#765800">reason</text>
+      <text x="902" y="321" fill="#765800">tool</text>
+      <text x="962" y="312" fill="#B64342">external</text>
+      <text x="962" y="334" fill="#B64342">state</text>
+      <text x="1022" y="312" fill="#17324D">trace</text>
+      <text x="1022" y="334" fill="#17324D">result</text>
+      <text x="1082" y="312" fill="#17324D">score</text>
+      <text x="1082" y="334" fill="#17324D">regress</text>
+    </g>
+    <text x="755" y="426" font-size="15" fill="#0F4D92">also: policy, authority, cost,</text>
+    <text x="755" y="448" font-size="15" fill="#0F4D92">latency, recovery, real final state</text>
+    <rect x="190" y="555" width="820" height="46" rx="14" fill="#F6CFCB" stroke="#B64342" stroke-width="3"/>
+    <text x="600" y="585" text-anchor="middle" font-size="18" font-weight="700" fill="#B64342">A fluent final answer alone cannot prove that the right external action happened safely.</text>
+  </g>
+  <g aria-hidden="true" fill="none" opacity="0" pointer-events="none">
+    <rect data-figure-safe-zone="text" x="46.0" y="25.0" width="1055.7" height="65.8"/>
+    <rect data-figure-safe-zone="text" x="46.0" y="75.0" width="1165.9" height="48.3"/>
+    <rect data-figure-safe-zone="text" x="90.8" y="177.0" width="348.5" height="56.4"/>
+    <rect data-figure-safe-zone="text" x="823.2" y="177.0" width="223.7" height="56.4"/>
+    <rect data-figure-safe-zone="text" x="76.6" y="284.0" width="70.8" height="48.3"/>
+    <rect data-figure-safe-zone="text" x="76.6" y="313.0" width="70.8" height="44.2"/>
+    <rect data-figure-safe-zone="text" x="235.6" y="284.0" width="98.9" height="48.3"/>
+    <rect data-figure-safe-zone="text" x="406.8" y="288.0" width="60.4" height="42.9"/>
+    <rect data-figure-safe-zone="text" x="98.0" y="405.0" width="466.0" height="47.0"/>
+    <rect data-figure-safe-zone="text" x="760.0" y="292.0" width="59.4" height="47.0"/>
+    <rect data-figure-safe-zone="text" x="830.0" y="292.0" width="77.0" height="47.0"/>
+    <rect data-figure-safe-zone="text" x="890.0" y="292.0" width="59.4" height="47.0"/>
+    <rect data-figure-safe-zone="text" x="950.0" y="283.0" width="94.7" height="47.0"/>
+    <rect data-figure-safe-zone="text" x="950.0" y="305.0" width="68.2" height="47.0"/>
+    <rect data-figure-safe-zone="text" x="1010.0" y="283.0" width="68.2" height="47.0"/>
+    <rect data-figure-safe-zone="text" x="1010.0" y="305.0" width="77.0" height="47.0"/>
+    <rect data-figure-safe-zone="text" x="1070.0" y="283.0" width="68.2" height="47.0"/>
+    <rect data-figure-safe-zone="text" x="1070.0" y="305.0" width="85.9" height="47.0"/>
+    <rect data-figure-safe-zone="text" x="743.0" y="405.0" width="607.4" height="47.0"/>
+    <rect data-figure-safe-zone="text" x="176.2" y="555.0" width="847.7" height="48.3"/>
+  </g>
+<g aria-hidden="true" fill="none" opacity="0" pointer-events="none"><rect data-figure-safe-zone="text" x="46.0" y="25.0" width="1055.7" height="65.8"/><rect data-figure-safe-zone="text" x="46.0" y="75.0" width="1165.9" height="48.3"/><rect data-figure-safe-zone="text" x="90.8" y="177.0" width="348.5" height="56.4"/><rect data-figure-safe-zone="text" x="823.2" y="177.0" width="223.7" height="56.4"/><rect data-figure-safe-zone="text" x="76.6" y="284.0" width="70.8" height="48.3"/><rect data-figure-safe-zone="text" x="76.6" y="313.0" width="70.8" height="44.2"/><rect data-figure-safe-zone="text" x="235.6" y="284.0" width="98.9" height="48.3"/><rect data-figure-safe-zone="text" x="406.8" y="288.0" width="60.4" height="42.9"/><rect data-figure-safe-zone="text" x="98.0" y="405.0" width="466.0" height="47.0"/><rect data-figure-safe-zone="text" x="760.0" y="292.0" width="59.4" height="47.0"/><rect data-figure-safe-zone="text" x="830.0" y="292.0" width="77.0" height="47.0"/><rect data-figure-safe-zone="text" x="890.0" y="292.0" width="59.4" height="47.0"/><rect data-figure-safe-zone="text" x="950.0" y="283.0" width="94.7" height="47.0"/><rect data-figure-safe-zone="text" x="950.0" y="305.0" width="68.2" height="47.0"/><rect data-figure-safe-zone="text" x="1010.0" y="283.0" width="68.2" height="47.0"/><rect data-figure-safe-zone="text" x="1010.0" y="305.0" width="77.0" height="47.0"/><rect data-figure-safe-zone="text" x="1070.0" y="283.0" width="68.2" height="47.0"/><rect data-figure-safe-zone="text" x="1070.0" y="305.0" width="85.9" height="47.0"/><rect data-figure-safe-zone="text" x="743.0" y="399.0" width="258.0" height="44.2"/><rect data-figure-safe-zone="text" x="743.0" y="421.0" width="297.0" height="44.2"/><rect data-figure-safe-zone="text" x="176.2" y="555.0" width="847.7" height="48.3"/></g></svg>

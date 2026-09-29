@@ -1,0 +1,12 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1100 500" role="img" aria-labelledby="title desc">
+  <title id="title">AI 覆盖数字信息与物理世界系统</title><desc id="desc">AI 分为数字信息系统和物理世界系统两类应用范围，并列举各自的代表性工作。</desc>
+  <style>.t{font-family:Arial,'PingFang SC','Microsoft YaHei',sans-serif;fill:#183153}.h{font-size:28px;font-weight:700}.s{font-size:15px;fill:#58708e}.k{font-size:18px;font-weight:700}.b{font-size:15px}.tag{font-size:13px;font-weight:700;letter-spacing:.8px}.line{stroke:#b8c9dc;stroke-width:2;fill:none;stroke-linecap:round}.dot{stroke-width:2}.card{stroke-width:1.5}</style>
+  <rect width="1100" height="500" rx="28" fill="#f8fbff"/><text x="58" y="65" class="t h">AI 覆盖数字信息与物理世界系统</text><text x="58" y="94" class="t s">同一类学习与推理技术，面向不同的信息载体和执行环境。</text>
+  <rect x="58" y="126" width="984" height="54" rx="15" fill="#183153"/><text x="86" y="160" font-family="Arial,sans-serif" font-size="22" font-weight="700" fill="white">AI</text>
+  <path class="line" d="M300 180V202H246V220M300 202H790V220"/>
+  <rect class="card" x="58" y="220" width="470" height="220" rx="20" fill="#eef7ff" stroke="#9ac7ea"/><text x="88" y="258" class="t tag" fill="#2471a3">数字信息系统</text><text x="88" y="289" class="t k">感知、预测、生成与智能体</text><path d="M88 308H496" stroke="#b9d9ef"/>
+  <circle cx="101" cy="337" r="5" fill="#3b9ed0"/><text x="116" y="342" class="t b">文本、图像、语音与多模态理解</text><circle cx="101" cy="369" r="5" fill="#3b9ed0"/><text x="116" y="374" class="t b">排序、推荐与优化决策</text><circle cx="101" cy="401" r="5" fill="#3b9ed0"/><text x="116" y="406" class="t b">生成内容与软件工具工作流</text>
+  <rect class="card" x="572" y="220" width="470" height="220" rx="20" fill="#f4f1ff" stroke="#b7a8ec"/><text x="602" y="258" class="t tag" fill="#7256b5">物理世界系统</text><text x="602" y="289" class="t k">机器人、自动驾驶与控制</text><path d="M602 308H1010" stroke="#d6ccef"/>
+  <circle cx="615" cy="337" r="5" fill="#8c71ce"/><text x="630" y="342" class="t b">传感器融合与场景感知</text><circle cx="615" cy="369" r="5" fill="#8c71ce"/><text x="630" y="374" class="t b">规划、定位与控制</text><circle cx="615" cy="401" r="5" fill="#8c71ce"/><text x="630" y="406" class="t b">在变化环境中安全执行</text>
+  <text x="58" y="473" class="t s">技术与模型可以交叉使用；系统的目标、约束与验证方式决定它属于哪一类问题。</text>
+</svg>

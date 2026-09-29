@@ -1,0 +1,41 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="680" viewBox="0 0 1200 680" role="img" aria-labelledby="title desc">
+  <title id="title">截图进入模型的两条路径</title>
+  <desc id="desc">截图可先经 OCR 转写为文本，或保留视觉表示进入多模态模型。两条路径的可审计性和保留的信息不同，输出都需要验证。</desc>
+  <defs>
+    <marker id="arrow" viewBox="0 0 10 10" refX="8.5" refY="5" markerWidth="8" markerHeight="8" orient="auto"><path d="M0 0 10 5 0 10z" fill="#0F4D92"/></marker>
+    <style>text{font-family:Arial,'Noto Sans SC',sans-serif}.label{font-size:18px;fill:#0F4D92}.cardTitle{font-size:20px;font-weight:700;fill:#17324D}.body{font-size:17px;fill:#456159}.small{font-size:16px;fill:#64766F}</style>
+  </defs>
+  <rect width="1200" height="680" fill="#FFFFFF"/>
+  <text x="68" y="70" font-size="32" font-weight="700" fill="#17324D">同一张截图：两条输入路径，不同的信息边界</text>
+  <text x="68" y="104" class="body">先判断任务需要保留什么证据，再选择转写或直接视觉理解。</text>
+  <rect x="68" y="146" width="220" height="338" rx="20" fill="#F4F8FC" stroke="#AAC0B6" stroke-width="2"/>
+  <rect x="91" y="177" width="174" height="186" rx="12" fill="#17324D"/>
+  <rect x="104" y="191" width="148" height="158" rx="8" fill="#EAF0ED"/>
+  <path d="M119 318h118M119 291h84M119 264h102" stroke="#8BA89B" stroke-width="7" stroke-linecap="round"/>
+  <path d="M120 236c20-25 33 14 51-10s33 20 62-14" fill="none" stroke="#FFD700" stroke-width="6" stroke-linecap="round"/>
+  <text x="178" y="405" text-anchor="middle" class="cardTitle">监控截图</text>
+  <text x="178" y="434" text-anchor="middle" class="small">曲线 · 颜色 · 布局 · 文字</text>
+  <path d="M288 258H352M288 372H352" fill="none" stroke="#0F4D92" stroke-width="4" marker-end="url(#arrow)" data-figure-connector="true"/>
+  <rect x="366" y="146" width="354" height="180" rx="20" fill="#FFF8D6" stroke="#D8A919" stroke-width="2"/>
+  <rect x="391" y="170" width="94" height="34" rx="17" fill="#FFF1B8"/><text x="438" y="193" text-anchor="middle" class="label" fill="#765800">路径 A</text>
+  <text x="391" y="239" class="cardTitle">转写为文本</text>
+  <text x="391" y="271" class="body">OCR / 图像描述 → 文本 LLM</text>
+  <text x="391" y="300" class="small">得到可引用、可检索的转写记录</text>
+  <rect x="366" y="358" width="354" height="180" rx="20" fill="#EAF3FB" stroke="#88AD9B" stroke-width="2"/>
+  <rect x="391" y="382" width="94" height="34" rx="17" fill="#CCE2D3"/><text x="438" y="405" text-anchor="middle" class="label">路径 B</text>
+  <text x="391" y="451" class="cardTitle">保留视觉表示</text>
+  <text x="391" y="483" class="body">视觉编码 → 多模态模型</text>
+  <text x="391" y="512" class="small">让后续计算看到布局和视觉关系</text>
+  <path d="M720 236H792M720 448H792" fill="none" stroke="#0F4D92" stroke-width="4" marker-end="url(#arrow)" data-figure-connector="true"/>
+  <rect x="806" y="206" width="326" height="278" rx="22" fill="#17324D"/>
+  <text x="969" y="251" text-anchor="middle" font-size="22" font-weight="700" fill="#FFFFFF">带着问题推理</text>
+  <rect x="838" y="278" width="262" height="63" rx="12" fill="#0F4D92"/>
+  <text x="969" y="306" text-anchor="middle" font-size="18" fill="#FFFFFF">文本证据或视觉特征</text>
+  <text x="969" y="329" text-anchor="middle" font-size="16" fill="#CFCECE">与用户问题一起进入模型</text>
+  <path d="M969 350v31" fill="none" stroke="#CFCECE" stroke-width="3" marker-end="url(#arrow)" data-figure-connector="true"/>
+  <rect x="838" y="395" width="262" height="53" rx="12" fill="#F6CFCB"/>
+  <text x="969" y="428" text-anchor="middle" font-size="18" font-weight="700" fill="#8F3635">回答 + 必要的核验</text>
+  <rect x="68" y="582" width="1064" height="55" rx="14" fill="#F6CFCB"/>
+  <circle cx="101" cy="610" r="12" fill="#B64342"/><text x="101" y="616" text-anchor="middle" font-size="16" font-weight="700" fill="#FFFFFF">!</text>
+  <text x="130" y="616" font-size="17" fill="#8F3635">OCR 便于审计，却可能遗漏曲线、颜色和空间关系；直接视觉输入保留得更多，也不等于模型已正确识别。</text>
+<g aria-hidden="true" fill="none" opacity="0" pointer-events="none"><rect data-figure-safe-zone="text" x="56.0" y="26.0" width="604.5" height="67.2"/><rect data-figure-safe-zone="text" x="56.0" y="75.0" width="445.4" height="47.0"/><rect data-figure-safe-zone="text" x="133.7" y="376.0" width="88.6" height="47.0"/><rect data-figure-safe-zone="text" x="61.6" y="405.0" width="232.8" height="47.0"/><rect data-figure-safe-zone="text" x="401.0" y="164.0" width="74.0" height="47.0"/><rect data-figure-safe-zone="text" x="379.0" y="210.0" width="104.8" height="47.0"/><rect data-figure-safe-zone="text" x="379.0" y="242.0" width="235.8" height="47.0"/><rect data-figure-safe-zone="text" x="379.0" y="271.0" width="242.8" height="47.0"/><rect data-figure-safe-zone="text" x="401.0" y="376.0" width="74.0" height="47.0"/><rect data-figure-safe-zone="text" x="379.0" y="422.0" width="120.9" height="47.0"/><rect data-figure-safe-zone="text" x="379.0" y="454.0" width="195.9" height="47.0"/><rect data-figure-safe-zone="text" x="379.0" y="483.0" width="250.1" height="47.0"/><rect data-figure-safe-zone="text" x="894.3" y="217.0" width="149.4" height="53.7"/><rect data-figure-safe-zone="text" x="880.0" y="276.0" width="177.9" height="48.3"/><rect data-figure-safe-zone="text" x="873.4" y="301.0" width="191.2" height="45.6"/><rect data-figure-safe-zone="text" x="883.1" y="398.0" width="171.8" height="48.3"/><rect data-figure-safe-zone="text" x="81.0" y="588.0" width="40.0" height="45.6"/><rect data-figure-safe-zone="text" x="118.0" y="587.0" width="749.6" height="47.0"/></g></svg>

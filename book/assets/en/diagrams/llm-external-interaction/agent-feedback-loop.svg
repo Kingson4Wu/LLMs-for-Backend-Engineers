@@ -1,0 +1,72 @@
+<?xml version="1.0"?>
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="650" viewBox="0 0 1200 650" role="img" aria-labelledby="title desc">
+  <title id="title">Observation-driven agent feedback loop</title>
+  <desc id="desc">Task and state form context, the model proposes a step, and a program validates and executes a tool. Results and errors update state so the next action can change. The runtime controls explicit stopping conditions.</desc>
+  <defs>
+    <marker id="a" viewBox="0 0 10 10" refX="8" refY="5" markerWidth="8" markerHeight="8" orient="auto">
+      <path d="M0 0 10 5 0 10z" fill="#0F4D92"/>
+    </marker>
+  </defs>
+  <rect width="1200" height="650" rx="30" fill="#FFFFFF"/>
+  <g font-family="Arial,sans-serif">
+    <text x="58" y="68" font-size="31" font-weight="700" fill="#17324D">Observation changes the next action; runtime controls loop boundaries</text>
+    <text x="58" y="105" font-size="18" fill="#5E7F9C">An &#x201C;agent&#x201D; is a runtime process of proposals, controlled actions, and external observations.</text>
+    <text x="58" y="129" font-size="18" fill="#5E7F9C">Explicit state updates carry those observations into the next turn.</text>
+    <g fill="none" stroke="#0F4D92" stroke-width="4" marker-end="url(#a)">
+      <path d="M235 255H285"/>
+      <path d="M485 255H535"/>
+      <path d="M735 255H785"/>
+      <path d="M985 255V395H150V335"/>
+    </g>
+    <g stroke-width="3">
+      <rect x="45" y="175" width="190" height="160" rx="22" fill="#EAF3FB" stroke="#0F4D92"/>
+      <rect x="285" y="175" width="200" height="160" rx="22" fill="#FFF8D6" stroke="#FFD700"/>
+      <rect x="535" y="175" width="200" height="160" rx="22" fill="#EAF3FB" stroke="#0F4D92"/>
+      <rect x="785" y="175" width="200" height="160" rx="22" fill="#F6CFCB" stroke="#B64342"/>
+    </g>
+    <g text-anchor="middle">
+      <text x="140" y="214" font-size="20" font-weight="700" fill="#17324D">task + explicit</text>
+      <text x="140" y="238" font-size="20" font-weight="700" fill="#17324D">state</text>
+      <text x="140" y="259" font-size="16" fill="#0F4D92">goal, evidence, progress,</text>
+      <text x="140" y="285" font-size="16" fill="#0F4D92">budget, observations</text>
+      <text x="385" y="226" font-size="22" font-weight="700" fill="#765800">assemble context</text>
+      <text x="385" y="259" font-size="16" fill="#765800">select this turn&#x2019;s info,</text>
+      <text x="385" y="285" font-size="16" fill="#765800">capabilities, constraints</text>
+      <text x="635" y="214" font-size="20" font-weight="700" fill="#17324D">model proposes</text>
+      <text x="635" y="238" font-size="20" font-weight="700" fill="#17324D">next step</text>
+      <text x="635" y="259" font-size="16" fill="#0F4D92">answer, call, search,</text>
+      <text x="635" y="285" font-size="16" fill="#0F4D92">or stopping suggestion</text>
+      <text x="885" y="226" font-size="22" font-weight="700" fill="#B64342">validate + act</text>
+      <text x="885" y="259" font-size="16" fill="#B64342">authorize, limit, execute,</text>
+      <text x="885" y="285" font-size="16" fill="#B64342">observe external result</text>
+    </g>
+    <rect x="300" y="420" width="600" height="120" rx="20" fill="#FFFFFF" stroke="#FFD700" stroke-width="3"/>
+    <text x="600" y="451" text-anchor="middle" font-size="17" font-weight="700" fill="#765800">Results, errors, and environment state update</text>
+    <text x="600" y="474" text-anchor="middle" font-size="17" font-weight="700" fill="#765800">explicit state for the next turn</text>
+    <text x="600" y="504" text-anchor="middle" font-size="15" fill="#765800">Each observation can change later input, planning,</text>
+    <text x="600" y="524" text-anchor="middle" font-size="15" fill="#765800">and whether the loop continues.</text>
+    <rect x="170" y="555" width="860" height="45" rx="14" fill="#F6CFCB" stroke="#B64342" stroke-width="3"/>
+    <text x="600" y="584" text-anchor="middle" font-size="17" font-weight="700" fill="#B64342">Stop: verified goal, inability to continue, budget exhaustion, or required human approval.</text>
+  </g>
+  <g aria-hidden="true" fill="none" opacity="0" pointer-events="none">
+    <rect data-figure-safe-zone="text" x="46.0" y="25.0" width="1136.3" height="65.8"/>
+    <rect data-figure-safe-zone="text" x="46.0" y="75.0" width="1418.6" height="48.3"/>
+    <rect data-figure-safe-zone="text" x="128.0" y="182.0" width="180.0" height="51.0"/>
+    <rect data-figure-safe-zone="text" x="128.0" y="206.0" width="76.0" height="51.0"/>
+    <rect data-figure-safe-zone="text" x="128.0" y="231.0" width="232.0" height="45.6"/>
+    <rect data-figure-safe-zone="text" x="128.0" y="257.0" width="190.4" height="45.6"/>
+    <rect data-figure-safe-zone="text" x="373.0" y="192.0" width="207.0" height="53.7"/>
+    <rect data-figure-safe-zone="text" x="373.0" y="231.0" width="223.7" height="45.6"/>
+    <rect data-figure-safe-zone="text" x="373.0" y="257.0" width="232.0" height="45.6"/>
+    <rect data-figure-safe-zone="text" x="623.0" y="182.0" width="169.6" height="51.0"/>
+    <rect data-figure-safe-zone="text" x="623.0" y="206.0" width="117.6" height="51.0"/>
+    <rect data-figure-safe-zone="text" x="623.0" y="231.0" width="198.7" height="45.6"/>
+    <rect data-figure-safe-zone="text" x="623.0" y="257.0" width="207.0" height="45.6"/>
+    <rect data-figure-safe-zone="text" x="873.0" y="192.0" width="184.2" height="53.7"/>
+    <rect data-figure-safe-zone="text" x="873.0" y="231.0" width="240.3" height="45.6"/>
+    <rect data-figure-safe-zone="text" x="873.0" y="257.0" width="215.4" height="45.6"/>
+    <rect data-figure-safe-zone="text" x="194.9" y="433.0" width="810.2" height="52.4"/>
+    <rect data-figure-safe-zone="text" x="225.6" y="468.0" width="748.9" height="47.0"/>
+    <rect data-figure-safe-zone="text" x="190.2" y="555.0" width="819.6" height="47.0"/>
+  </g>
+<g aria-hidden="true" fill="none" opacity="0" pointer-events="none"><rect data-figure-safe-zone="text" x="46.0" y="25.0" width="1136.3" height="65.8"/><rect data-figure-safe-zone="text" x="46.0" y="75.0" width="885.1" height="48.3"/><rect data-figure-safe-zone="text" x="46.0" y="99.0" width="651.1" height="48.3"/><rect data-figure-safe-zone="text" x="128.0" y="182.0" width="180.0" height="51.0"/><rect data-figure-safe-zone="text" x="128.0" y="206.0" width="76.0" height="51.0"/><rect data-figure-safe-zone="text" x="128.0" y="231.0" width="232.0" height="45.6"/><rect data-figure-safe-zone="text" x="128.0" y="257.0" width="190.4" height="45.6"/><rect data-figure-safe-zone="text" x="373.0" y="192.0" width="207.0" height="53.7"/><rect data-figure-safe-zone="text" x="373.0" y="231.0" width="223.7" height="45.6"/><rect data-figure-safe-zone="text" x="373.0" y="257.0" width="232.0" height="45.6"/><rect data-figure-safe-zone="text" x="623.0" y="182.0" width="169.6" height="51.0"/><rect data-figure-safe-zone="text" x="623.0" y="206.0" width="117.6" height="51.0"/><rect data-figure-safe-zone="text" x="623.0" y="231.0" width="198.7" height="45.6"/><rect data-figure-safe-zone="text" x="623.0" y="257.0" width="207.0" height="45.6"/><rect data-figure-safe-zone="text" x="873.0" y="192.0" width="184.2" height="53.7"/><rect data-figure-safe-zone="text" x="873.0" y="231.0" width="240.3" height="45.6"/><rect data-figure-safe-zone="text" x="873.0" y="257.0" width="215.4" height="45.6"/><rect data-figure-safe-zone="text" x="389.1" y="422.0" width="421.8" height="47.0"/><rect data-figure-safe-zone="text" x="446.6" y="445.0" width="306.9" height="47.0"/><rect data-figure-safe-zone="text" x="393.0" y="477.0" width="414.0" height="44.2"/><rect data-figure-safe-zone="text" x="467.1" y="497.0" width="265.8" height="44.2"/><rect data-figure-safe-zone="text" x="190.2" y="555.0" width="819.6" height="47.0"/></g></svg>

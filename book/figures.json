@@ -1,0 +1,796 @@
+{
+  "figures": [
+    {
+      "path": "book/assets/zh/diagrams/introduction/ai-scope.svg",
+      "kind": "diagram"
+    },
+    {
+      "path": "book/assets/zh/diagrams/introduction/llm-scope.svg",
+      "kind": "diagram"
+    },
+    {
+      "path": "book/assets/zh/diagrams/introduction/system-flow.svg",
+      "kind": "diagram"
+    },
+    {
+      "path": "book/assets/en/diagrams/introduction/ai-scope.svg",
+      "kind": "diagram"
+    },
+    {
+      "path": "book/assets/en/diagrams/introduction/llm-scope.svg",
+      "kind": "diagram"
+    },
+    {
+      "path": "book/assets/en/diagrams/introduction/system-flow.svg",
+      "kind": "diagram"
+    },
+    {
+      "path": "book/assets/en/diagrams/activation-functions/xor-samples.svg",
+      "kind": "diagram"
+    },
+    {
+      "path": "book/assets/en/diagrams/activation-functions/xor-linear-boundary.svg",
+      "kind": "diagram"
+    },
+    {
+      "path": "book/assets/en/diagrams/activation-functions/sigmoid-curve.svg",
+      "kind": "diagram"
+    },
+    {
+      "path": "book/assets/en/diagrams/activation-functions/tanh-curve.svg",
+      "kind": "diagram"
+    },
+    {
+      "path": "book/assets/en/diagrams/activation-functions/softmax-distribution.svg",
+      "kind": "diagram"
+    },
+    {
+      "path": "book/assets/en/diagrams/activation-functions/xor-relu-network.svg",
+      "kind": "diagram"
+    },
+    {
+      "path": "book/assets/en/diagrams/activation-functions/xor-region-gating.svg",
+      "kind": "diagram"
+    },
+    {
+      "path": "book/assets/en/diagrams/perceptron-learning/relu-breakpoints.svg",
+      "kind": "diagram"
+    },
+    {
+      "path": "book/assets/en/diagrams/perceptron-learning/relu-piecewise-linear.svg",
+      "kind": "diagram"
+    },
+    {
+      "path": "book/assets/en/diagrams/layer-norm/deep-scale-drift.svg",
+      "kind": "diagram"
+    },
+    {
+      "path": "book/assets/en/diagrams/layer-norm/residual-norm-path.svg",
+      "kind": "diagram"
+    },
+    {
+      "path": "book/assets/en/diagrams/softmax-gradient-scaling/saturation-comparison.svg",
+      "kind": "diagram"
+    },
+    {
+      "path": "book/assets/en/diagrams/softmax-gradient-scaling/gradient-path-comparison.svg",
+      "kind": "diagram"
+    },
+    {
+      "path": "book/assets/en/diagrams/softmax-gradient-scaling/scale-to-gradient-chain.svg",
+      "kind": "diagram"
+    },
+    {
+      "path": "book/assets/en/diagrams/cross-entropy/understanding-path.svg",
+      "kind": "diagram"
+    },
+    {
+      "path": "book/assets/en/diagrams/llm-inference-nondeterminism/argmax-boundary.svg",
+      "kind": "diagram"
+    },
+    {
+      "path": "book/assets/en/diagrams/model-training-lifecycle/parameter-update-cycle.svg",
+      "kind": "diagram"
+    },
+    {
+      "path": "book/assets/en/diagrams/model-training-lifecycle/checkpoint-feedback.svg",
+      "kind": "diagram"
+    },
+    {
+      "path": "book/assets/en/diagrams/generative-ai-probability-and-innovation/responsibility-boundaries.svg",
+      "kind": "diagram"
+    },
+    {
+      "path": "book/assets/en/diagrams/rag-context-evidence/rag-selection-pipeline.svg",
+      "kind": "diagram"
+    },
+    {
+      "path": "book/assets/en/diagrams/function-calling-tool-use/mcp-integration-layers.svg",
+      "kind": "diagram"
+    },
+    {
+      "path": "book/assets/en/diagrams/function-calling-tool-use/mcp-reuse-comparison.svg",
+      "kind": "diagram"
+    },
+    {
+      "path": "book/assets/en/diagrams/function-calling-tool-use/product-to-model-stack.svg",
+      "kind": "diagram"
+    },
+    {
+      "path": "book/assets/en/diagrams/llm-external-interaction/validation-boundaries.svg",
+      "kind": "diagram"
+    },
+    {
+      "path": "book/assets/en/diagrams/llm-external-interaction/tool-calling-cycle.svg",
+      "kind": "diagram"
+    },
+    {
+      "path": "book/assets/en/diagrams/mhs-mcp-domain-capability-protocol/mhs-integration-pain.svg",
+      "kind": "diagram"
+    },
+    {
+      "path": "book/assets/en/diagrams/mhs-mcp-domain-capability-protocol/mhs-driver-stack.svg",
+      "kind": "diagram"
+    },
+    {
+      "path": "book/assets/en/diagrams/mhs-mcp-domain-capability-protocol/mhs-read-write.svg",
+      "kind": "diagram"
+    },
+    {
+      "path": "book/assets/en/diagrams/mhs-mcp-domain-capability-protocol/hardware-capability-model.svg",
+      "kind": "diagram"
+    },
+    {
+      "path": "book/assets/en/diagrams/mhs-mcp-domain-capability-protocol/mcp-basic-shape.svg",
+      "kind": "diagram"
+    },
+    {
+      "path": "book/assets/en/diagrams/mhs-mcp-domain-capability-protocol/mcp-mhs-layering.svg",
+      "kind": "diagram"
+    },
+    {
+      "path": "book/assets/en/diagrams/mhs-mcp-domain-capability-protocol/domain-capability-layers.svg",
+      "kind": "diagram"
+    },
+    {
+      "path": "book/assets/en/diagrams/agent-eval-business-quality-system/eval-comparison.svg",
+      "kind": "diagram"
+    },
+    {
+      "path": "book/assets/en/diagrams/agent-eval-business-quality-system/business-quality-system.svg",
+      "kind": "diagram"
+    },
+    {
+      "path": "book/assets/en/diagrams/agent-eval-business-quality-system/quality-layers.svg",
+      "kind": "diagram"
+    },
+    {
+      "path": "book/assets/en/diagrams/agent-eval-business-quality-system/case-to-regression.svg",
+      "kind": "diagram"
+    },
+    {
+      "path": "book/assets/en/diagrams/llm-infrastructure/model-runtime-hardware.svg",
+      "kind": "diagram"
+    },
+    {
+      "path": "book/assets/en/diagrams/llm-infrastructure/config-weights-engine.svg",
+      "kind": "diagram"
+    },
+    {
+      "path": "book/assets/en/diagrams/inference-performance-capacity/chunked-prefill.svg",
+      "kind": "diagram"
+    },
+    {
+      "path": "book/assets/en/diagrams/inference-performance-capacity/prefill-decode-disaggregation.svg",
+      "kind": "diagram"
+    },
+    {
+      "path": "book/assets/en/diagrams/llm-generation/training-parallelism.svg",
+      "kind": "diagram"
+    },
+    {
+      "path": "book/assets/en/diagrams/llm-generation/prefill-decode-sequence.svg",
+      "kind": "diagram"
+    },
+    {
+      "path": "book/assets/en/diagrams/mhs-mcp-domain-capability-protocol/business-access-stack.svg",
+      "kind": "diagram"
+    },
+    {
+      "path": "book/assets/en/diagrams/mhs-mcp-domain-capability-protocol/domain-examples.svg",
+      "kind": "diagram"
+    },
+    {
+      "path": "book/assets/en/diagrams/vanishing-exploding-gradients/activation-shapes.svg",
+      "kind": "diagram"
+    },
+    {
+      "path": "book/assets/en/diagrams/activation-functions/relu-curve.svg",
+      "kind": "diagram"
+    },
+    {
+      "path": "book/assets/book-system-map-en.svg",
+      "kind": "diagram"
+    },
+    {
+      "path": "book/assets/en/diagrams/serving-control-plane/scale-out.svg",
+      "kind": "diagram"
+    },
+    {
+      "path": "book/assets/en/diagrams/serving-control-plane/progressive-rollout.svg",
+      "kind": "diagram"
+    },
+    {
+      "path": "book/assets/en/diagrams/llm-infrastructure/request-serving-stack.svg",
+      "kind": "diagram"
+    },
+    {
+      "path": "book/assets/en/diagrams/llm-infrastructure/web-vs-sharded.svg",
+      "kind": "diagram"
+    },
+    {
+      "path": "book/assets/en/diagrams/llm-infrastructure/prefill-decode-state.svg",
+      "kind": "diagram"
+    },
+    {
+      "path": "book/assets/en/diagrams/serving-control-plane/data-control-plane.svg",
+      "kind": "diagram"
+    },
+    {
+      "path": "book/assets/en/diagrams/inference-performance-capacity/request-timeline.svg",
+      "kind": "diagram"
+    },
+    {
+      "path": "book/assets/en/diagrams/inference-performance-capacity/kv-prefix-reuse.svg",
+      "kind": "diagram"
+    },
+    {
+      "path": "book/assets/en/diagrams/inference-performance-capacity/speculative-decoding.svg",
+      "kind": "diagram"
+    },
+    {
+      "path": "book/assets/en/diagrams/llm-external-interaction/model-world-boundary.svg",
+      "kind": "diagram"
+    },
+    {
+      "path": "book/assets/en/diagrams/llm-external-interaction/structured-output-validation.svg",
+      "kind": "diagram"
+    },
+    {
+      "path": "book/assets/en/diagrams/llm-external-interaction/agent-feedback-loop.svg",
+      "kind": "diagram"
+    },
+    {
+      "path": "book/assets/en/diagrams/rag-context-evidence/evidence-pipeline.svg",
+      "kind": "diagram"
+    },
+    {
+      "path": "book/assets/en/diagrams/harness-runtime-skills/runtime-loop.svg",
+      "kind": "diagram"
+    },
+    {
+      "path": "book/assets/en/diagrams/harness-runtime-skills/stable-path-layers.svg",
+      "kind": "diagram"
+    },
+    {
+      "path": "book/assets/en/diagrams/harness-runtime-skills/skill-contents.svg",
+      "kind": "diagram"
+    },
+    {
+      "path": "book/assets/en/diagrams/harness-runtime-skills/validation-layers.svg",
+      "kind": "diagram"
+    },
+    {
+      "path": "book/assets/en/diagrams/transformer-architecture/layer-data-flow.svg",
+      "kind": "diagram"
+    },
+    {
+      "path": "book/assets/en/diagrams/transformer-architecture/original-encoder-decoder.svg",
+      "kind": "diagram"
+    },
+    {
+      "path": "book/assets/en/diagrams/transformer-architecture/scaled-dot-product-attention.svg",
+      "kind": "diagram"
+    },
+    {
+      "path": "book/assets/en/diagrams/transformer-architecture/multi-head-attention.svg",
+      "kind": "diagram"
+    },
+    {
+      "path": "book/assets/en/diagrams/transformer-architecture/moe-routing.svg",
+      "kind": "diagram"
+    },
+    {
+      "path": "book/assets/en/diagrams/transformer-architecture/encoder-decoder-flow.svg",
+      "kind": "diagram"
+    },
+    {
+      "path": "book/assets/en/diagrams/model-training-lifecycle/training-loop.svg",
+      "kind": "diagram"
+    },
+    {
+      "path": "book/assets/en/diagrams/model-training-lifecycle/token-to-loss.svg",
+      "kind": "diagram"
+    },
+    {
+      "path": "book/assets/en/diagrams/llm-generation/token-to-context.svg",
+      "kind": "diagram"
+    },
+    {
+      "path": "book/assets/en/diagrams/llm-generation/autoregressive-step.svg",
+      "kind": "diagram"
+    },
+    {
+      "path": "book/assets/en/diagrams/dot-product-angle/cosine-law-triangle.svg",
+      "kind": "diagram"
+    },
+    {
+      "path": "book/assets/en/diagrams/dot-product-angle/projection.svg",
+      "kind": "diagram"
+    },
+    {
+      "path": "book/assets/en/diagrams/dot-product-angle/direction-cases.svg",
+      "kind": "diagram"
+    },
+    {
+      "path": "book/assets/en/diagrams/dot-product-angle/cosine-trend.svg",
+      "kind": "diagram"
+    },
+    {
+      "path": "book/assets/en/diagrams/backpropagation/branching-graph.svg",
+      "kind": "diagram"
+    },
+    {
+      "path": "book/assets/zh/diagrams/dot-product-angle/cosine-law-triangle.svg",
+      "kind": "diagram"
+    },
+    {
+      "path": "book/assets/zh/diagrams/vanishing-exploding-gradients/activation-shapes.svg",
+      "kind": "diagram"
+    },
+    {
+      "path": "book/assets/zh/diagrams/layer-norm/residual-norm-path.svg",
+      "kind": "diagram"
+    },
+    {
+      "path": "book/assets/zh/diagrams/llm-infrastructure/model-runtime-hardware.svg",
+      "kind": "diagram"
+    },
+    {
+      "path": "book/assets/zh/diagrams/llm-infrastructure/config-weights-engine.svg",
+      "kind": "diagram"
+    },
+    {
+      "path": "book/assets/zh/diagrams/agent-eval-business-quality-system/eval-comparison.svg",
+      "kind": "diagram"
+    },
+    {
+      "path": "book/assets/zh/diagrams/agent-eval-business-quality-system/quality-layers.svg",
+      "kind": "diagram"
+    },
+    {
+      "path": "book/assets/zh/diagrams/agent-eval-business-quality-system/case-to-regression.svg",
+      "kind": "diagram"
+    },
+    {
+      "path": "book/assets/zh/diagrams/softmax-gradient-scaling/saturation-comparison.svg",
+      "kind": "diagram"
+    },
+    {
+      "path": "book/assets/zh/diagrams/softmax-gradient-scaling/gradient-path-comparison.svg",
+      "kind": "diagram"
+    },
+    {
+      "path": "book/assets/zh/diagrams/optimizer-selection/sgd-ravine.svg",
+      "kind": "diagram"
+    },
+    {
+      "path": "book/assets/zh/diagrams/transformer-architecture/encoder-decoder-flow.svg",
+      "kind": "diagram"
+    },
+    {
+      "path": "book/assets/zh/diagrams/multimodal-models/interleaved-context.svg",
+      "kind": "diagram"
+    },
+    {
+      "path": "book/assets/zh/diagrams/transformer-architecture/transformer-stack.svg",
+      "kind": "diagram"
+    },
+    {
+      "path": "book/assets/zh/diagrams/function-calling-tool-use/product-to-model-stack.svg",
+      "kind": "diagram"
+    },
+    {
+      "path": "book/assets/zh/diagrams/function-calling-tool-use/mcp-reuse-comparison.svg",
+      "kind": "diagram"
+    },
+    {
+      "path": "book/assets/book-system-map-zh.svg",
+      "kind": "diagram"
+    },
+    {
+      "path": "book/assets/cover-en.svg",
+      "kind": "cover"
+    },
+    {
+      "path": "book/assets/cover-zh-Hans.svg",
+      "kind": "cover"
+    },
+    {
+      "path": "book/assets/zh/diagrams/backpropagation/branch-gradient.svg",
+      "kind": "diagram"
+    },
+    {
+      "path": "book/assets/zh/diagrams/cross-entropy/likelihood-to-cross-entropy.svg",
+      "kind": "diagram"
+    },
+    {
+      "path": "book/assets/zh/diagrams/activation-functions/xor-samples.svg",
+      "kind": "diagram"
+    },
+    {
+      "path": "book/assets/zh/diagrams/activation-functions/xor-linear-boundary.svg",
+      "kind": "diagram"
+    },
+    {
+      "path": "book/assets/zh/diagrams/activation-functions/xor-relu-network.svg",
+      "kind": "diagram"
+    },
+    {
+      "path": "book/assets/zh/diagrams/perceptron-learning/relu-piecewise-linear.svg",
+      "kind": "diagram"
+    },
+    {
+      "path": "book/assets/zh/diagrams/dot-product-angle/vector-projection.svg",
+      "kind": "diagram"
+    },
+    {
+      "path": "book/assets/zh/diagrams/dot-product-angle/direction-comparison.svg",
+      "kind": "diagram"
+    },
+    {
+      "path": "book/assets/zh/diagrams/dot-product-angle/cosine-angle-curve.svg",
+      "kind": "diagram"
+    },
+    {
+      "path": "book/assets/zh/diagrams/rag-context-evidence/evidence-to-context.svg",
+      "kind": "diagram"
+    },
+    {
+      "path": "book/assets/zh/diagrams/llm-infrastructure/request-serving-stack.svg",
+      "kind": "diagram"
+    },
+    {
+      "path": "book/assets/zh/diagrams/llm-infrastructure/web-and-sharded-serving.svg",
+      "kind": "diagram"
+    },
+    {
+      "path": "book/assets/zh/diagrams/serving-control-plane/data-and-control-plane.svg",
+      "kind": "diagram"
+    },
+    {
+      "path": "book/assets/zh/diagrams/generative-ai-probability-and-innovation/generation-validation-loop.svg",
+      "kind": "diagram"
+    },
+    {
+      "path": "book/assets/zh/diagrams/generative-ai-probability-and-innovation/responsibility-boundaries.svg",
+      "kind": "diagram"
+    },
+    {
+      "path": "book/assets/zh/diagrams/generative-ai-probability-and-innovation/explanation-evidence-chain.svg",
+      "kind": "diagram"
+    },
+    {
+      "path": "book/assets/zh/diagrams/can-ai-create-new-things/creative-feedback-loop.svg",
+      "kind": "diagram"
+    },
+    {
+      "path": "book/assets/zh/diagrams/what-ai-really-means/ai-system-feedback.svg",
+      "kind": "diagram"
+    },
+    {
+      "path": "book/assets/zh/diagrams/llm-infrastructure/prefill-decode-state.svg",
+      "kind": "diagram"
+    },
+    {
+      "path": "book/assets/zh/diagrams/inference-performance-capacity/request-latency-timeline.svg",
+      "kind": "diagram"
+    },
+    {
+      "path": "book/assets/zh/diagrams/inference-performance-capacity/kv-and-prefix-reuse.svg",
+      "kind": "diagram"
+    },
+    {
+      "path": "book/assets/zh/diagrams/serving-control-plane/model-scale-up.svg",
+      "kind": "diagram"
+    },
+    {
+      "path": "book/assets/zh/diagrams/serving-control-plane/progressive-rollout.svg",
+      "kind": "diagram"
+    },
+    {
+      "path": "book/assets/zh/diagrams/inference-performance-capacity/chunked-prefill.svg",
+      "kind": "diagram"
+    },
+    {
+      "path": "book/assets/zh/diagrams/inference-performance-capacity/prefill-decode-disaggregation.svg",
+      "kind": "diagram"
+    },
+    {
+      "path": "book/assets/zh/diagrams/inference-performance-capacity/speculative-decoding.svg",
+      "kind": "diagram"
+    },
+    {
+      "path": "book/assets/zh/diagrams/rag-context-evidence/rag-selection-pipeline.svg",
+      "kind": "diagram"
+    },
+    {
+      "path": "book/assets/zh/diagrams/llm-external-interaction/model-to-world-loop.svg",
+      "kind": "diagram"
+    },
+    {
+      "path": "book/assets/zh/diagrams/llm-external-interaction/constrained-decoding.svg",
+      "kind": "diagram"
+    },
+    {
+      "path": "book/assets/zh/diagrams/llm-external-interaction/validation-boundaries.svg",
+      "kind": "diagram"
+    },
+    {
+      "path": "book/assets/zh/diagrams/llm-external-interaction/tool-calling-cycle.svg",
+      "kind": "diagram"
+    },
+    {
+      "path": "book/assets/zh/diagrams/llm-external-interaction/agent-observe-act-loop.svg",
+      "kind": "diagram"
+    },
+    {
+      "path": "book/assets/zh/diagrams/activation-functions/xor-region-gating.svg",
+      "kind": "diagram"
+    },
+    {
+      "path": "book/assets/zh/diagrams/activation-functions/relu-curve.svg",
+      "kind": "diagram"
+    },
+    {
+      "path": "book/assets/zh/diagrams/activation-functions/sigmoid-curve.svg",
+      "kind": "diagram"
+    },
+    {
+      "path": "book/assets/zh/diagrams/activation-functions/tanh-curve.svg",
+      "kind": "diagram"
+    },
+    {
+      "path": "book/assets/zh/diagrams/activation-functions/softmax-distribution.svg",
+      "kind": "diagram"
+    },
+    {
+      "path": "book/assets/zh/diagrams/llm-generation/text-token-embedding.svg",
+      "kind": "diagram"
+    },
+    {
+      "path": "book/assets/en/diagrams/cross-entropy/likelihood-to-cross-entropy.svg",
+      "kind": "diagram"
+    },
+    {
+      "path": "book/assets/en/diagrams/optimizer-selection/optimization-geometry.svg",
+      "kind": "diagram"
+    },
+    {
+      "path": "book/assets/en/diagrams/optimizer-selection/warmup-schedule.svg",
+      "kind": "diagram"
+    },
+    {
+      "path": "book/assets/en/diagrams/optimizer-selection/optimizer-progression.svg",
+      "kind": "diagram"
+    },
+    {
+      "path": "book/assets/en/diagrams/agent-eval-business-quality-system/evaluation-regression-loop.svg",
+      "kind": "diagram"
+    },
+    {
+      "path": "book/assets/en/diagrams/llm-inference-nondeterminism/numerical-divergence.svg",
+      "kind": "diagram"
+    },
+    {
+      "path": "book/assets/en/diagrams/appendices/candidate-verification-loop.svg",
+      "kind": "diagram"
+    },
+    {
+      "path": "book/assets/en/diagrams/appendices/generation-control-loop.svg",
+      "kind": "diagram"
+    },
+    {
+      "path": "book/assets/en/diagrams/appendices/evidence-decision-chain.svg",
+      "kind": "diagram"
+    },
+    {
+      "path": "book/assets/en/diagrams/appendices/ai-feedback-boundary.svg",
+      "kind": "diagram"
+    },
+    {
+      "path": "book/assets/en/diagrams/multimodal-models/multimodal-overview.svg",
+      "kind": "diagram"
+    },
+    {
+      "path": "book/assets/en/diagrams/multimodal-models/interleaved-context.svg",
+      "kind": "diagram"
+    },
+    {
+      "path": "book/assets/en/diagrams/multimodal-models/screenshot-input-paths.svg",
+      "kind": "diagram"
+    },
+    {
+      "path": "book/assets/en/diagrams/multimodal-models/visual-question-answering.svg",
+      "kind": "diagram"
+    },
+    {
+      "path": "book/assets/en/diagrams/multimodal-models/cross-modal-training-signals.svg",
+      "kind": "diagram"
+    },
+    {
+      "path": "book/assets/en/diagrams/multilingual-llms/shared-representation.svg",
+      "kind": "diagram"
+    },
+    {
+      "path": "book/assets/zh/diagrams/llm-generation/autoregressive-step.svg",
+      "kind": "diagram"
+    },
+    {
+      "path": "book/assets/zh/diagrams/llm-generation/training-parallelism.svg",
+      "kind": "diagram"
+    },
+    {
+      "path": "book/assets/zh/diagrams/llm-generation/prefill-decode-sequence.svg",
+      "kind": "diagram"
+    },
+    {
+      "path": "book/assets/zh/diagrams/transformer-architecture/moe-routing.svg",
+      "kind": "diagram"
+    },
+    {
+      "path": "book/assets/zh/diagrams/multimodal-models/multimodal-overview.svg",
+      "kind": "diagram"
+    },
+    {
+      "path": "book/assets/zh/diagrams/model-training-lifecycle/training-lifecycle.svg",
+      "kind": "diagram"
+    },
+    {
+      "path": "book/assets/zh/diagrams/harness-runtime-skills/runtime-control-loop.svg",
+      "kind": "diagram"
+    },
+    {
+      "path": "book/assets/zh/diagrams/harness-runtime-skills/stable-path-layers.svg",
+      "kind": "diagram"
+    },
+    {
+      "path": "book/assets/zh/diagrams/multilingual-llms/shared-representation.svg",
+      "kind": "diagram"
+    },
+    {
+      "path": "book/assets/zh/diagrams/llm-inference-nondeterminism/numerical-divergence.svg",
+      "kind": "diagram"
+    },
+    {
+      "path": "book/assets/zh/diagrams/llm-inference-nondeterminism/argmax-boundary.svg",
+      "kind": "diagram"
+    },
+    {
+      "path": "book/assets/zh/diagrams/model-training-lifecycle/token-to-loss.svg",
+      "kind": "diagram"
+    },
+    {
+      "path": "book/assets/zh/diagrams/model-training-lifecycle/parameter-update-cycle.svg",
+      "kind": "diagram"
+    },
+    {
+      "path": "book/assets/zh/diagrams/model-training-lifecycle/checkpoint-feedback.svg",
+      "kind": "diagram"
+    },
+    {
+      "path": "book/assets/zh/diagrams/layer-norm/deep-scale-drift.svg",
+      "kind": "diagram"
+    },
+    {
+      "path": "book/assets/zh/diagrams/multimodal-models/screenshot-input-paths.svg",
+      "kind": "diagram"
+    },
+    {
+      "path": "book/assets/zh/diagrams/harness-runtime-skills/skill-contents.svg",
+      "kind": "diagram"
+    },
+    {
+      "path": "book/assets/zh/diagrams/harness-runtime-skills/external-state-validation.svg",
+      "kind": "diagram"
+    },
+    {
+      "path": "book/assets/zh/diagrams/optimizer-selection/warmup-schedule.svg",
+      "kind": "diagram"
+    },
+    {
+      "path": "book/assets/zh/diagrams/optimizer-selection/optimizer-evolution.svg",
+      "kind": "diagram"
+    },
+    {
+      "path": "book/assets/zh/diagrams/softmax-gradient-scaling/scale-to-gradient-chain.svg",
+      "kind": "diagram"
+    },
+    {
+      "path": "book/assets/zh/diagrams/cross-entropy/understanding-path.svg",
+      "kind": "diagram"
+    },
+    {
+      "path": "book/assets/zh/diagrams/perceptron-learning/relu-breakpoints.svg",
+      "kind": "diagram"
+    },
+    {
+      "path": "book/assets/zh/diagrams/function-calling-tool-use/mcp-integration-layers.svg",
+      "kind": "diagram"
+    },
+    {
+      "path": "book/assets/zh/diagrams/multimodal-models/visual-question-answering.svg",
+      "kind": "diagram"
+    },
+    {
+      "path": "book/assets/zh/diagrams/multimodal-models/cross-modal-training-signals.svg",
+      "kind": "diagram"
+    },
+    {
+      "path": "book/assets/zh/posts/20260804-ai-agent-eval-business-quality-system/business-quality-system.svg",
+      "kind": "diagram"
+    },
+    {
+      "path": "book/assets/zh/posts/20260804-ai-agent-eval-business-quality-system/eval-iteration-loop.svg",
+      "kind": "diagram"
+    },
+    {
+      "path": "book/assets/zh/posts/20260831-mhs-mcp-domain-capability-protocol/business-access-stack.svg",
+      "kind": "diagram"
+    },
+    {
+      "path": "book/assets/zh/posts/20260831-mhs-mcp-domain-capability-protocol/domain-capability-layers.svg",
+      "kind": "diagram"
+    },
+    {
+      "path": "book/assets/zh/posts/20260831-mhs-mcp-domain-capability-protocol/domain-examples.svg",
+      "kind": "diagram"
+    },
+    {
+      "path": "book/assets/zh/posts/20260831-mhs-mcp-domain-capability-protocol/hardware-capability-model.svg",
+      "kind": "diagram"
+    },
+    {
+      "path": "book/assets/zh/posts/20260831-mhs-mcp-domain-capability-protocol/mcp-basic-shape.svg",
+      "kind": "diagram"
+    },
+    {
+      "path": "book/assets/zh/posts/20260831-mhs-mcp-domain-capability-protocol/mcp-mhs-layering.svg",
+      "kind": "diagram"
+    },
+    {
+      "path": "book/assets/zh/posts/20260831-mhs-mcp-domain-capability-protocol/mhs-driver-stack.svg",
+      "kind": "diagram"
+    },
+    {
+      "path": "book/assets/zh/posts/20260831-mhs-mcp-domain-capability-protocol/mhs-integration-pain.svg",
+      "kind": "diagram"
+    },
+    {
+      "path": "book/assets/zh/posts/20260831-mhs-mcp-domain-capability-protocol/mhs-read-write.svg",
+      "kind": "diagram"
+    },
+    {
+      "path": "book/assets/zh/diagrams/transformer-architecture/scaled-dot-product-attention.svg",
+      "kind": "diagram"
+    },
+    {
+      "path": "book/assets/zh/diagrams/transformer-architecture/multi-head-attention.svg",
+      "kind": "diagram"
+    },
+    {
+      "path": "book/assets/zh/diagrams/transformer-architecture/original-encoder-decoder.svg",
+      "kind": "diagram"
+    }
+  ]
+}

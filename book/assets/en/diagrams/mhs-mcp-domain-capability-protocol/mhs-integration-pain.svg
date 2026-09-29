@@ -1,0 +1,58 @@
+<?xml version="1.0"?>
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="650" viewBox="0 0 1200 650" role="img" aria-labelledby="title desc">
+  <title id="title">The hardware integration complexity MHS addresses</title>
+  <desc id="desc">Multiple vendors expose similar capabilities through different interfaces and scattered semantics, causing repeated adaptation per workflow. Drivers and a shared capability model encapsulate variation behind a common boundary.</desc>
+  <defs>
+    <marker id="a" viewBox="0 0 10 10" refX="8.5" refY="5" markerWidth="8" markerHeight="8" orient="auto">
+      <path d="M0 0 10 5 0 10z" fill="#9CBFC4"/>
+    </marker>
+    <style>text{font-family:Arial,sans-serif}.h{font-size:22px;font-weight:700}.b{font-size:17px}</style>
+  </defs>
+  <rect width="1200" height="650" fill="#FFFDF9"/>
+  <text x="65" y="68" font-size="32" font-weight="700" fill="#665F57">Hardware integration is harder than &#x201C;can it be called?&#x201D;</text>
+  <text x="65" y="103" class="b" fill="#526D73">The same intent can hide different vendors, units, state machines, constraints, and recovery semantics.</text>
+  <rect x="65" y="155" width="280" height="290" rx="22" fill="#F8F1E5" stroke="#F4D5CE" stroke-width="2"/>
+  <text x="97" y="204" class="h" fill="#806560">Device reality</text>
+  <text x="97" y="246" font-size="16" fill="#806560">many vendors and SDKs</text>
+  <text x="97" y="278" font-size="16" fill="#806560">similar capability,</text><text x="97" y="300" font-size="16" fill="#806560">different API</text>
+  <text x="97" y="332" font-size="16" fill="#806560">manuals and</text><text x="97" y="354" font-size="16" fill="#806560">constraints scattered</text>
+  <text x="97" y="392" font-size="16" fill="#806560">much meaning is outside</text><text x="97" y="414" font-size="16" fill="#806560">a function signature</text>
+  <path d="M345 155V140H440V153" fill="none" stroke="#D3AAA1" stroke-width="4" marker-end="url(#a)" data-figure-connector="true"/>
+  <rect x="455" y="155" width="280" height="290" rx="22" fill="#F8F1E5" stroke="#C5BA8B" stroke-width="2"/>
+  <text x="487" y="204" class="h" fill="#586653">Manual adaptation</text>
+  <text x="487" y="246" font-size="16" fill="#586653">each workflow relearns</text>
+  <text x="487" y="278" font-size="16" fill="#586653">objects, units, and state</text>
+  <text x="487" y="310" font-size="16" fill="#586653">constraints and recovery</text><text x="487" y="332" font-size="16" fill="#586653">rules</text>
+  <text x="487" y="392" font-size="16" fill="#586653">cost repeats as integration</text><text x="487" y="414" font-size="16" fill="#586653">expands</text>
+  <path d="M735 155V140H830V153" fill="none" stroke="#9CBFC4" stroke-width="4" marker-end="url(#a)" data-figure-connector="true"/>
+  <rect x="845" y="155" width="290" height="290" rx="22" fill="#EFF8F8" stroke="#C8E3E5" stroke-width="2"/>
+  <text x="877" y="204" class="h" fill="#665F57">MHS target boundary</text>
+  <text x="877" y="246" font-size="16" fill="#526D73">drivers hide vendor</text><text x="877" y="268" font-size="16" fill="#526D73">variation</text>
+  <text x="877" y="300" font-size="16" fill="#526D73">a shared model exposes</text><text x="877" y="322" font-size="16" fill="#526D73">objects</text>
+  <text x="877" y="354" font-size="16" fill="#526D73">state, units, limits,</text><text x="877" y="376" font-size="16" fill="#526D73">recovery</text>
+  <text x="877" y="414" font-size="16" fill="#9CBFC4">agents can discover</text><text x="877" y="436" font-size="16" fill="#9CBFC4">and compose</text>
+  <rect x="65" y="500" width="1070" height="70" rx="14" fill="#E7E2D8"/>
+  <text x="94" y="530" font-size="18" fill="#665F57">The goal is reusable capability semantics for reliable,</text>
+  <text x="94" y="555" font-size="18" fill="#665F57">governable cross-device workflows&#x2014;not one universal function name.</text>
+  <g aria-hidden="true" fill="none" opacity="0" pointer-events="none">
+    <rect data-figure-safe-zone="text" x="53.0" y="24.0" width="939.2" height="67.2"/>
+    <rect data-figure-safe-zone="text" x="53.0" y="74.0" width="934.5" height="47.0"/>
+    <rect data-figure-safe-zone="text" x="85.0" y="170.0" width="184.2" height="53.7"/>
+    <rect data-figure-safe-zone="text" x="85.0" y="222.0" width="209.6" height="47.0"/>
+    <rect data-figure-safe-zone="text" x="85.0" y="260.0" width="315.7" height="47.0"/>
+    <rect data-figure-safe-zone="text" x="85.0" y="298.0" width="315.7" height="47.0"/>
+    <rect data-figure-safe-zone="text" x="85.0" y="361.0" width="413.0" height="47.0"/>
+    <rect data-figure-safe-zone="text" x="475.0" y="170.0" width="218.5" height="53.7"/>
+    <rect data-figure-safe-zone="text" x="475.0" y="222.0" width="218.5" height="47.0"/>
+    <rect data-figure-safe-zone="text" x="475.0" y="260.0" width="245.0" height="47.0"/>
+    <rect data-figure-safe-zone="text" x="475.0" y="298.0" width="289.2" height="47.0"/>
+    <rect data-figure-safe-zone="text" x="475.0" y="361.0" width="333.4" height="47.0"/>
+    <rect data-figure-safe-zone="text" x="865.0" y="170.0" width="241.4" height="53.7"/>
+    <rect data-figure-safe-zone="text" x="865.0" y="222.0" width="280.4" height="47.0"/>
+    <rect data-figure-safe-zone="text" x="865.0" y="260.0" width="289.2" height="47.0"/>
+    <rect data-figure-safe-zone="text" x="865.0" y="298.0" width="289.2" height="47.0"/>
+    <rect data-figure-safe-zone="text" x="865.0" y="361.0" width="298.0" height="47.0"/>
+    <rect data-figure-safe-zone="text" x="82.0" y="500.0" width="538.8" height="48.3"/>
+    <rect data-figure-safe-zone="text" x="82.0" y="525.0" width="641.8" height="48.3"/>
+  </g>
+<g aria-hidden="true" fill="none" opacity="0" pointer-events="none"><rect data-figure-safe-zone="text" x="53.0" y="24.0" width="939.2" height="67.2"/><rect data-figure-safe-zone="text" x="53.0" y="74.0" width="934.5" height="47.0"/><rect data-figure-safe-zone="text" x="85.0" y="170.0" width="184.2" height="53.7"/><rect data-figure-safe-zone="text" x="85.0" y="218.0" width="198.7" height="45.6"/><rect data-figure-safe-zone="text" x="85.0" y="250.0" width="182.1" height="45.6"/><rect data-figure-safe-zone="text" x="85.0" y="272.0" width="132.2" height="45.6"/><rect data-figure-safe-zone="text" x="85.0" y="304.0" width="115.5" height="45.6"/><rect data-figure-safe-zone="text" x="85.0" y="326.0" width="198.7" height="45.6"/><rect data-figure-safe-zone="text" x="85.0" y="364.0" width="215.4" height="45.6"/><rect data-figure-safe-zone="text" x="85.0" y="386.0" width="190.4" height="45.6"/><rect data-figure-safe-zone="text" x="475.0" y="170.0" width="218.5" height="53.7"/><rect data-figure-safe-zone="text" x="475.0" y="218.0" width="207.0" height="45.6"/><rect data-figure-safe-zone="text" x="475.0" y="250.0" width="232.0" height="45.6"/><rect data-figure-safe-zone="text" x="475.0" y="282.0" width="223.7" height="45.6"/><rect data-figure-safe-zone="text" x="475.0" y="304.0" width="65.6" height="45.6"/><rect data-figure-safe-zone="text" x="475.0" y="364.0" width="248.6" height="45.6"/><rect data-figure-safe-zone="text" x="475.0" y="386.0" width="82.2" height="45.6"/><rect data-figure-safe-zone="text" x="865.0" y="170.0" width="241.4" height="53.7"/><rect data-figure-safe-zone="text" x="865.0" y="218.0" width="182.1" height="45.6"/><rect data-figure-safe-zone="text" x="865.0" y="240.0" width="98.9" height="45.6"/><rect data-figure-safe-zone="text" x="865.0" y="272.0" width="207.0" height="45.6"/><rect data-figure-safe-zone="text" x="865.0" y="294.0" width="82.2" height="45.6"/><rect data-figure-safe-zone="text" x="865.0" y="326.0" width="198.7" height="45.6"/><rect data-figure-safe-zone="text" x="865.0" y="348.0" width="90.6" height="45.6"/><rect data-figure-safe-zone="text" x="865.0" y="386.0" width="182.1" height="45.6"/><rect data-figure-safe-zone="text" x="865.0" y="408.0" width="115.5" height="45.6"/><rect data-figure-safe-zone="text" x="82.0" y="500.0" width="538.8" height="48.3"/><rect data-figure-safe-zone="text" x="82.0" y="525.0" width="641.8" height="48.3"/></g></svg>

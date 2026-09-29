@@ -1,0 +1,76 @@
+<?xml version="1.0"?>
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="580" viewBox="0 0 1200 580" role="img" aria-labelledby="title desc">
+  <title id="title">&#x4ECE;&#x6700;&#x5927;&#x4F3C;&#x7136;&#x5230;&#x4EA4;&#x53C9;&#x71B5;</title>
+  <desc id="desc">&#x6700;&#x5927;&#x5316;&#x8BAD;&#x7EC3;&#x6570;&#x636E;&#x4F3C;&#x7136;&#xFF0C;&#x7ECF;&#x53D6;&#x5BF9;&#x6570;&#x548C;&#x53D8;&#x53F7;&#x5F97;&#x5230;&#x8D1F;&#x5BF9;&#x6570;&#x4F3C;&#x7136;&#xFF1B;&#x5728; one-hot &#x7ECF;&#x9A8C;&#x6807;&#x7B7E;&#x4E0E;&#x6761;&#x4EF6;&#x6982;&#x7387;&#x6A21;&#x578B;&#x4E0B;&#xFF0C;&#x5176;&#x9010;&#x6837;&#x672C;&#x76EE;&#x6807;&#x7B49;&#x4E8E;&#x4EA4;&#x53C9;&#x71B5;&#x3002;</desc>
+  <defs>
+    <marker id="arrow" markerWidth="10" markerHeight="10" refX="8" refY="3" orient="auto">
+      <path d="M0 0L0 6L9 3z" fill="#3775BA"/>
+    </marker>
+  </defs>
+  <rect width="1200" height="580" rx="30" fill="#FFFFFF"/>
+  <text x="70" y="72" font-family="Arial,'PingFang SC',sans-serif" font-size="32" font-weight="700" fill="#17324D">&#x4ECE;&#x6700;&#x5927;&#x4F3C;&#x7136;&#x5230;&#x4EA4;&#x53C9;&#x71B5;</text>
+  <text x="70" y="106" font-family="Arial,'PingFang SC',sans-serif" font-size="19" fill="#5E7F9C">&#x540C;&#x4E00;&#x8BAD;&#x7EC3;&#x76EE;&#x6807;&#x5728;&#x7EDF;&#x8BA1;&#x5B66;&#x3001;&#x4F18;&#x5316;&#x548C;&#x4FE1;&#x606F;&#x8BBA;&#x4E2D;&#x7684;&#x4E09;&#x79CD;&#x8868;&#x8FF0;</text>
+  <g font-family="Arial,'PingFang SC',sans-serif" text-anchor="middle">
+    <g fill="#DDF3DE" stroke="#3775BA" stroke-width="3">
+      <rect x="70" y="205" width="235" height="145" rx="20"/>
+      <rect x="74" y="209" width="227" height="137" rx="18" fill="none" stroke="#AADCA9" stroke-width="1.5"/>
+    </g>
+    <text x="188" y="254" font-size="25" font-weight="700" fill="#17324D">&#x6700;&#x5927;&#x4F3C;&#x7136;</text>
+    <text x="188" y="290" font-size="18" fill="#35564E">&#x6700;&#x5927;&#x5316;&#x6570;&#x636E;&#x6982;&#x7387;</text>
+    <text x="188" y="322" font-size="18" fill="#35564E">&#x220F;&#x1D62; P&#x3B8;(y&#x1D62;|x&#x1D62;)</text>
+    <g fill="#FFF8D6" stroke="#FFD700" stroke-width="3">
+      <rect x="350" y="205" width="235" height="145" rx="20"/>
+      <rect x="354" y="209" width="227" height="137" rx="18" fill="none" stroke="#E4BB86" stroke-width="1.5"/>
+    </g>
+    <text x="468" y="254" font-size="25" font-weight="700" fill="#765800">&#x5BF9;&#x6570;&#x4F3C;&#x7136;</text>
+    <text x="468" y="290" font-size="18" fill="#765800">&#x8FDE;&#x4E58;&#x53D8;&#x8FDE;&#x52A0;</text>
+    <text x="468" y="322" font-size="18" fill="#765800">&#x3A3;&#x1D62; log P&#x3B8;(y&#x1D62;|x&#x1D62;)</text>
+    <g fill="#F6CFCB" stroke="#B64342" stroke-width="3">
+      <rect x="630" y="205" width="235" height="145" rx="20"/>
+      <rect x="634" y="209" width="227" height="137" rx="18" fill="none" stroke="#DEA19A" stroke-width="1.5"/>
+    </g>
+    <text x="748" y="254" font-size="25" font-weight="700" fill="#8F3635">&#x8D1F;&#x5BF9;&#x6570;&#x4F3C;&#x7136;</text>
+    <text x="748" y="290" font-size="18" fill="#8F3635">&#x6700;&#x5927;&#x5316;&#x6539;&#x4E3A;&#x6700;&#x5C0F;&#x5316;</text>
+    <text x="748" y="322" font-size="18" fill="#8F3635">&#x2212;&#x3A3;&#x1D62; log P&#x3B8;(y&#x1D62;|x&#x1D62;)</text>
+    <g fill="#17324D" stroke="#17324D" stroke-width="3">
+      <rect x="910" y="205" width="220" height="145" rx="20"/>
+    </g>
+    <text x="1020" y="254" font-size="25" font-weight="700" fill="#FFFFFF">&#x4EA4;&#x53C9;&#x71B5;</text>
+    <text x="1020" y="290" font-size="18" fill="#FFFFFF">&#x7ECF;&#x9A8C;&#x6807;&#x7B7E;&#x5206;&#x5E03;</text>
+    <text x="1020" y="322" font-size="18" fill="#FFFFFF">H(P, Q&#x3B8;)</text>
+  </g>
+  <g fill="none" stroke="#3775BA" stroke-width="3.5" marker-end="url(#arrow)">
+    <path d="M306 278H348"/>
+    <path d="M586 278H628"/>
+    <path d="M866 278H908"/>
+  </g>
+  <g font-family="Arial,'PingFang SC',sans-serif" font-size="17" text-anchor="middle" fill="#5E7F9C">
+    <text x="327" y="186" font-size="14">&#x53D6;&#x5BF9;&#x6570;</text>
+    <text x="607" y="186">&#x53D8;&#x53F7;</text>
+    <text x="887" y="186" font-size="14">&#x6807;&#x7B7E;&#x5206;&#x5E03;</text>
+  </g>
+  <rect x="168" y="424" width="864" height="96" rx="18" fill="#FDE9E7"/>
+  <text x="600" y="470" font-family="Arial,'PingFang SC',sans-serif" font-size="22" text-anchor="middle" font-weight="700" fill="#26312E">&#x5F53;&#x76EE;&#x6807;&#x4E3A; one-hot &#x7ECF;&#x9A8C;&#x6807;&#x7B7E;&#x3001;&#x6A21;&#x578B;&#x8868;&#x793A;&#x6761;&#x4EF6;&#x6982;&#x7387;&#x65F6;</text>
+  <text x="600" y="507" font-family="Arial,'PingFang SC',sans-serif" font-size="20" text-anchor="middle" fill="#B64342">&#x9010;&#x6837;&#x672C; NLL = H(P, Q&#x3B8;) = &#x2212;log P&#x3B8;(ytrue | x)</text>
+  <g aria-hidden="true" fill="none" opacity="0" pointer-events="none">
+    <rect data-figure-safe-zone="text" x="58.0" y="28.0" width="297.6" height="67.2"/>
+    <rect data-figure-safe-zone="text" x="58.0" y="75.0" width="431.0" height="49.7"/>
+    <rect data-figure-safe-zone="text" x="176.0" y="217.0" width="119.0" height="57.8"/>
+    <rect data-figure-safe-zone="text" x="176.0" y="260.0" width="143.7" height="48.3"/>
+    <rect data-figure-safe-zone="text" x="176.0" y="292.0" width="136.3" height="48.3"/>
+    <rect data-figure-safe-zone="text" x="456.0" y="217.0" width="119.0" height="57.8"/>
+    <rect data-figure-safe-zone="text" x="456.0" y="260.0" width="109.5" height="48.3"/>
+    <rect data-figure-safe-zone="text" x="456.0" y="292.0" width="173.8" height="48.3"/>
+    <rect data-figure-safe-zone="text" x="736.0" y="217.0" width="142.8" height="57.8"/>
+    <rect data-figure-safe-zone="text" x="736.0" y="260.0" width="160.8" height="48.3"/>
+    <rect data-figure-safe-zone="text" x="736.0" y="292.0" width="183.1" height="48.3"/>
+    <rect data-figure-safe-zone="text" x="1008.0" y="217.0" width="95.2" height="57.8"/>
+    <rect data-figure-safe-zone="text" x="1008.0" y="260.0" width="126.6" height="48.3"/>
+    <rect data-figure-safe-zone="text" x="1008.0" y="292.0" width="98.9" height="48.3"/>
+    <rect data-figure-safe-zone="text" x="315.0" y="213.0" width="72.4" height="47.0"/>
+    <rect data-figure-safe-zone="text" x="595.0" y="213.0" width="56.3" height="47.0"/>
+    <rect data-figure-safe-zone="text" x="875.0" y="213.0" width="88.6" height="47.0"/>
+    <rect data-figure-safe-zone="text" x="353.2" y="436.0" width="493.7" height="53.7"/>
+    <rect data-figure-safe-zone="text" x="372.3" y="475.0" width="455.4" height="51.0"/>
+  </g>
+<g aria-hidden="true" fill="none" opacity="0" pointer-events="none"><rect data-figure-safe-zone="text" x="58.0" y="28.0" width="297.6" height="67.2"/><rect data-figure-safe-zone="text" x="58.0" y="75.0" width="431.0" height="49.7"/><rect data-figure-safe-zone="text" x="176.0" y="217.0" width="119.0" height="57.8"/><rect data-figure-safe-zone="text" x="176.0" y="260.0" width="143.7" height="48.3"/><rect data-figure-safe-zone="text" x="176.0" y="292.0" width="136.3" height="48.3"/><rect data-figure-safe-zone="text" x="456.0" y="217.0" width="119.0" height="57.8"/><rect data-figure-safe-zone="text" x="456.0" y="260.0" width="109.5" height="48.3"/><rect data-figure-safe-zone="text" x="456.0" y="292.0" width="173.8" height="48.3"/><rect data-figure-safe-zone="text" x="736.0" y="217.0" width="142.8" height="57.8"/><rect data-figure-safe-zone="text" x="736.0" y="260.0" width="160.8" height="48.3"/><rect data-figure-safe-zone="text" x="736.0" y="292.0" width="183.1" height="48.3"/><rect data-figure-safe-zone="text" x="1008.0" y="217.0" width="95.2" height="57.8"/><rect data-figure-safe-zone="text" x="1008.0" y="260.0" width="126.6" height="48.3"/><rect data-figure-safe-zone="text" x="1008.0" y="292.0" width="98.9" height="48.3"/><rect data-figure-safe-zone="text" x="315.0" y="216.0" width="63.9" height="42.9"/><rect data-figure-safe-zone="text" x="595.0" y="213.0" width="56.3" height="47.0"/><rect data-figure-safe-zone="text" x="875.0" y="216.0" width="77.2" height="42.9"/><rect data-figure-safe-zone="text" x="353.2" y="436.0" width="493.7" height="53.7"/><rect data-figure-safe-zone="text" x="372.3" y="475.0" width="455.4" height="51.0"/></g></svg>

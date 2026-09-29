@@ -1,0 +1,66 @@
+<?xml version="1.0"?>
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="680" viewBox="0 0 1200 680" role="img" aria-labelledby="title desc">
+  <title id="title">&#x5B8C;&#x6574;&#x526F;&#x672C;&#x7684; Web &#x670D;&#x52A1;&#x4E0E;&#x5206;&#x7247; LLM &#x670D;&#x52A1;</title>
+  <desc id="desc">&#x666E;&#x901A; Web &#x8BF7;&#x6C42;&#x901A;&#x5E38;&#x88AB;&#x8F6C;&#x7ED9;&#x4E00;&#x4E2A;&#x5B8C;&#x6574;&#x7684;&#x5E94;&#x7528;&#x526F;&#x672C;&#x3002;&#x9700;&#x8981;&#x5206;&#x7247;&#x7684; LLM &#x8BF7;&#x6C42;&#x7531;&#x591A;&#x4E2A;&#x8BBE;&#x5907;&#x5171;&#x540C;&#x5B8C;&#x6210;&#xFF0C;&#x8BBE;&#x5907;&#x95F4;&#x5F20;&#x91CF;&#x6216;&#x72B6;&#x6001;&#x4EA4;&#x6362;&#x4F4D;&#x4E8E;&#x8BF7;&#x6C42;&#x7684;&#x5173;&#x952E;&#x8DEF;&#x5F84;&#x3002;</desc>
+  <defs>
+    <marker id="a" viewBox="0 0 10 10" refX="8.5" refY="5" markerWidth="8" markerHeight="8" orient="auto">
+      <path d="M0 0 10 5 0 10z" fill="#0F4D92"/>
+    </marker>
+    <style>text{font-family:Arial,'Noto Sans SC',sans-serif}.h{font-size:21px;font-weight:700}.b{font-size:16px}.s{font-size:15px}</style>
+  </defs>
+  <rect width="1200" height="680" fill="#FFFFFF"/>
+  <text x="65" y="68" font-size="32" font-weight="700" fill="#17324D">&#x8D1F;&#x8F7D;&#x5747;&#x8861;&#x7684;&#x5BF9;&#x8C61;&#x4E0D;&#x540C;&#xFF1A;&#x5B8C;&#x6574;&#x526F;&#x672C;&#xFF0C;&#x6216;&#x540C;&#x4E00;&#x8BF7;&#x6C42;&#x7684;&#x591A;&#x4E2A;&#x8BBE;&#x5907;</text>
+  <rect x="65" y="128" width="1070" height="205" rx="22" fill="#EAF3FB" stroke="#8EB6D8" stroke-width="2"/>
+  <text x="96" y="173" class="h" fill="#17324D">&#x5178;&#x578B; Web &#x670D;&#x52A1;&#xFF1A;&#x4E00;&#x6B21;&#x8BF7;&#x6C42;&#x7531;&#x4E00;&#x4E2A;&#x5B8C;&#x6574;&#x5E94;&#x7528;&#x526F;&#x672C;&#x5904;&#x7406;</text>
+  <g text-anchor="middle">
+    <rect x="96" y="210" width="150" height="70" rx="14" fill="#FFFFFF" stroke="#8EB6D8" stroke-width="2"/>
+    <text x="171" y="253" class="h" fill="#17324D">&#x8BF7;&#x6C42;</text>
+    <rect x="322" y="210" width="170" height="70" rx="14" fill="#FFF8D6" stroke="#D8A919" stroke-width="2"/>
+    <text x="407" y="253" class="h" fill="#765800">&#x8D1F;&#x8F7D;&#x5747;&#x8861;</text>
+    <rect x="568" y="195" width="215" height="100" rx="16" fill="#0F4D92"/>
+    <text x="675" y="236" class="h" fill="#FFFFFF">&#x5B8C;&#x6574;&#x5E94;&#x7528;&#x5B9E;&#x4F8B;</text>
+    <text x="675" y="264" class="b" fill="#CFCECE">&#x672C;&#x5730;&#x5904;&#x7406;&#x4E1A;&#x52A1;&#x903B;&#x8F91;</text>
+    <rect x="859" y="210" width="190" height="70" rx="14" fill="#FFFFFF" stroke="#8EB6D8" stroke-width="2"/>
+    <text x="954" y="253" class="h" fill="#17324D">&#x6570;&#x636E;&#x5E93; / &#x7F13;&#x5B58;</text>
+  </g>
+  <path d="M246 210V195H312V208M492 210V195H558V193M783 195V180H849V208" fill="none" stroke="#0F4D92" stroke-width="4" marker-end="url(#a)" data-figure-connector="true"/>
+  <rect x="65" y="370" width="1070" height="235" rx="22" fill="#FDE9E7" stroke="#E9A6A1" stroke-width="2"/>
+  <text x="96" y="415" class="h" fill="#8F3635">&#x9700;&#x8981;&#x6A21;&#x578B;&#x5206;&#x7247;&#x7684; LLM &#x670D;&#x52A1;&#xFF1A;&#x591A;&#x4E2A;&#x8BBE;&#x5907;&#x5171;&#x540C;&#x5B8C;&#x6210;&#x540C;&#x4E00;&#x6B21;&#x8BF7;&#x6C42;</text>
+  <rect x="96" y="457" width="150" height="75" rx="14" fill="#FFFFFF" stroke="#E9A6A1" stroke-width="2"/>
+  <text x="171" y="503" text-anchor="middle" class="h" fill="#8F3635">&#x8BF7;&#x6C42;</text>
+  <path d="M246 495h64" fill="none" stroke="#B64342" stroke-width="4" marker-end="url(#a)" data-figure-connector="true"/>
+  <rect x="325" y="457" width="175" height="75" rx="14" fill="#FFF8D6" stroke="#D8A919" stroke-width="2"/>
+  <text x="412" y="503" text-anchor="middle" class="h" fill="#765800">&#x63A8;&#x7406;&#x8DEF;&#x7531;</text>
+  <path d="M500 495h64" fill="none" stroke="#B64342" stroke-width="4" marker-end="url(#a)" data-figure-connector="true"/>
+  <rect x="579" y="440" width="196" height="108" rx="18" fill="#B64342"/>
+  <text x="677" y="480" text-anchor="middle" class="h" fill="#FFFFFF">&#x4E00;&#x4E2A;&#x63A8;&#x7406;&#x5B9E;&#x4F8B;</text>
+  <text x="677" y="508" text-anchor="middle" class="b" fill="#F6CFCB">&#x534F;&#x8C03;&#x591A;&#x8BBE;&#x5907;&#x6267;&#x884C;</text>
+  <path d="M775 495h64" fill="none" stroke="#B64342" stroke-width="4" marker-end="url(#a)" data-figure-connector="true"/>
+  <g>
+    <rect x="854" y="430" width="223" height="41" rx="10" fill="#FFFFFF" stroke="#E9A6A1" stroke-width="2"/>
+    <rect x="854" y="486" width="223" height="41" rx="10" fill="#FFFFFF" stroke="#E9A6A1" stroke-width="2"/>
+    <rect x="854" y="542" width="223" height="41" rx="10" fill="#FFFFFF" stroke="#E9A6A1" stroke-width="2"/>
+    <text x="876" y="457" class="b" fill="#8F3635">GPU 0&#xFF1A;&#x90E8;&#x5206;&#x6743;&#x91CD; / &#x72B6;&#x6001;</text>
+    <text x="876" y="513" class="b" fill="#8F3635">GPU 1&#xFF1A;&#x90E8;&#x5206;&#x6743;&#x91CD; / &#x72B6;&#x6001;</text>
+    <text x="876" y="569" class="b" fill="#8F3635">GPU n&#xFF1A;&#x90E8;&#x5206;&#x6743;&#x91CD; / &#x72B6;&#x6001;</text>
+  </g>
+  <text x="600" y="648" text-anchor="middle" font-size="16" fill="#8F3635">&#x5173;&#x952E;&#x8DEF;&#x5F84;&#x4E0A;&#x7684;&#x5F20;&#x91CF; / &#x72B6;&#x6001;&#x4EA4;&#x6362;&#xFF0C;&#x4F1A;&#x8BA9;&#x8BBE;&#x5907;&#x95F4;&#x901A;&#x4FE1;&#x6210;&#x4E3A;&#x670D;&#x52A1;&#x65F6;&#x5EF6;&#x548C;&#x5BB9;&#x91CF;&#x7684;&#x4E00;&#x90E8;&#x5206;&#x3002;</text>
+  <g aria-hidden="true" fill="none" opacity="0" pointer-events="none">
+    <rect data-figure-safe-zone="text" x="53.0" y="24.0" width="756.5" height="67.2"/>
+    <rect data-figure-safe-zone="text" x="84.0" y="139.0" width="489.7" height="53.7"/>
+    <rect data-figure-safe-zone="text" x="159.0" y="219.0" width="65.8" height="53.7"/>
+    <rect data-figure-safe-zone="text" x="395.0" y="219.0" width="107.6" height="53.7"/>
+    <rect data-figure-safe-zone="text" x="663.0" y="202.0" width="149.4" height="53.7"/>
+    <rect data-figure-safe-zone="text" x="663.0" y="235.0" width="153.2" height="47.0"/>
+    <rect data-figure-safe-zone="text" x="942.0" y="219.0" width="162.8" height="53.7"/>
+    <rect data-figure-safe-zone="text" x="84.0" y="381.0" width="552.4" height="53.7"/>
+    <rect data-figure-safe-zone="text" x="138.1" y="469.0" width="65.8" height="53.7"/>
+    <rect data-figure-safe-zone="text" x="358.2" y="469.0" width="107.6" height="53.7"/>
+    <rect data-figure-safe-zone="text" x="602.3" y="446.0" width="149.4" height="53.7"/>
+    <rect data-figure-safe-zone="text" x="608.5" y="479.0" width="137.1" height="47.0"/>
+    <rect data-figure-safe-zone="text" x="864.0" y="428.0" width="200.5" height="47.0"/>
+    <rect data-figure-safe-zone="text" x="864.0" y="484.0" width="200.5" height="47.0"/>
+    <rect data-figure-safe-zone="text" x="864.0" y="540.0" width="200.5" height="47.0"/>
+    <rect data-figure-safe-zone="text" x="324.0" y="620.0" width="552.0" height="45.6"/>
+  </g>
+</svg>

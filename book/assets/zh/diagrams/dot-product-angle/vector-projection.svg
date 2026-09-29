@@ -1,0 +1,53 @@
+<?xml version="1.0"?>
+<svg xmlns="http://www.w3.org/2000/svg" width="1080" height="620" viewBox="0 0 1080 620" role="img" aria-labelledby="title desc">
+  <title id="title">&#x5411;&#x91CF; a &#x5728;&#x5411;&#x91CF; b &#x65B9;&#x5411;&#x4E0A;&#x7684;&#x6295;&#x5F71;</title>
+  <desc id="desc">&#x5411;&#x91CF; a &#x4E0E; b &#x5F62;&#x6210;&#x5939;&#x89D2; &#x3B8;&#x3002;a &#x5728; b &#x65B9;&#x5411;&#x4E0A;&#x7684;&#x6295;&#x5F71;&#x957F;&#x5EA6;&#x662F; |a|cos(&#x3B8;)&#xFF0C;&#x70B9;&#x79EF;&#x7B49;&#x4E8E; b &#x7684;&#x957F;&#x5EA6;&#x4E58;&#x8FD9;&#x4E2A;&#x6295;&#x5F71;&#x957F;&#x5EA6;&#x3002;</desc>
+  <defs>
+    <marker id="g" viewBox="0 0 10 10" refX="8" refY="5" markerWidth="8" markerHeight="8" orient="auto">
+      <path d="M0 0 10 5 0 10z" fill="#0F4D92"/>
+    </marker>
+    <marker id="r" viewBox="0 0 10 10" refX="8" refY="5" markerWidth="8" markerHeight="8" orient="auto">
+      <path d="M0 0 10 5 0 10z" fill="#B64342"/>
+    </marker>
+  </defs>
+  <rect width="1080" height="620" rx="36" fill="#FFFFFF"/>
+  <g font-family="Arial, 'Noto Sans SC', sans-serif">
+    <text x="60" y="70" font-size="32" font-weight="700" fill="#17324D">&#x6295;&#x5F71;&#xFF1A;&#x628A; a &#x7684;&#x65B9;&#x5411;&#x5173;&#x7CFB;&#x6620;&#x5C04;&#x5230; b &#x7684;&#x8F74;&#x4E0A;</text>
+    <text x="60" y="105" font-size="19" fill="#5E7F9C">&#x70B9;&#x79EF;&#x8861;&#x91CF;&#x7684;&#x4E0D;&#x662F;&#x4E24;&#x6839;&#x7BAD;&#x5934;&#x201C;&#x591A;&#x957F;&#x201D;&#xFF0C;&#x800C;&#x662F; a &#x6CBF; b &#x65B9;&#x5411;&#x8D21;&#x732E;&#x4E86;&#x591A;&#x5C11;&#x3002;</text>
+  </g>
+  <path d="M145 445H785" fill="none" stroke="#0F4D92" stroke-width="5" marker-end="url(#g)" data-figure-connector="true"/>
+  <path d="M149 449H781" fill="none" stroke="#8EB6D8" stroke-width="2"/>
+  <path d="M145 445L575 180" fill="none" stroke="#B64342" stroke-width="7" marker-end="url(#r)" data-figure-connector="true"/>
+  <path d="M149 449L579 184" fill="none" stroke="#E9A6A1" stroke-width="2" opacity=".8"/>
+  <path d="M575 180V445" stroke="#FFD700" stroke-width="4" stroke-dasharray="11 9"/>
+  <path d="M579 180V445" stroke="#D8A919" stroke-width="2" opacity=".8"/>
+  <path d="M238 445A93 93 0 0 0 223 393" fill="none" stroke="#5E7F9C" stroke-width="3"/>
+  <text x="260" y="415" font-family="Arial, 'Noto Sans SC', sans-serif" font-size="25" fill="#0F4D92">&#x3B8;</text>
+  <g font-family="Arial, 'Noto Sans SC', sans-serif" font-weight="700">
+    <text x="592" y="180" font-size="28" fill="#B64342">a</text>
+    <text x="800" y="453" font-size="28" fill="#0F4D92">b</text>
+  </g>
+  <g fill="#FFF8D6" stroke="#FFD700" stroke-width="3">
+    <rect x="182" y="483" width="465" height="72" rx="22"/>
+  </g>
+  <path d="M186 487H643" fill="none" stroke="#D8A919" stroke-width="2"/>
+  <text x="414" y="514" font-family="Arial, 'Noto Sans SC', sans-serif" font-size="22" font-weight="700" fill="#765800" text-anchor="middle">&#x6295;&#x5F71;&#x957F;&#x5EA6; = |a| cos(&#x3B8;)</text>
+  <text x="414" y="540" font-family="Arial, 'Noto Sans SC', sans-serif" font-size="17" fill="#765800" text-anchor="middle">&#x5B83;&#x4F4D;&#x4E8E; b &#x7684;&#x65B9;&#x5411;&#x4E0A;</text>
+  <g fill="#EAF3FB" stroke="#0F4D92" stroke-width="3">
+    <rect x="730" y="260" width="278" height="126" rx="23"/>
+  </g>
+  <path d="M734 264H1004" fill="none" stroke="#8EB6D8" stroke-width="2"/>
+  <text x="869" y="306" font-family="Arial, 'Noto Sans SC', sans-serif" font-size="19" font-weight="700" fill="#0F4D92" text-anchor="middle">&#x70B9;&#x79EF; = |b| &#xD7; &#x6295;&#x5F71;&#x957F;&#x5EA6;</text>
+  <text x="869" y="344" font-family="Arial, 'Noto Sans SC', sans-serif" font-size="22" fill="#0F4D92" text-anchor="middle">a &#xB7; b = |a||b|cos(&#x3B8;)</text>
+  <g aria-hidden="true" fill="none" opacity="0" pointer-events="none">
+    <rect data-figure-safe-zone="text" x="48.0" y="26.0" width="566.1" height="67.2"/>
+    <rect data-figure-safe-zone="text" x="48.0" y="74.0" width="537.9" height="49.7"/>
+    <rect data-figure-safe-zone="text" x="248.0" y="386.0" width="40.0" height="58.0"/>
+    <rect data-figure-safe-zone="text" x="580.0" y="140.0" width="40.0" height="61.8"/>
+    <rect data-figure-safe-zone="text" x="788.0" y="413.0" width="40.0" height="61.8"/>
+    <rect data-figure-safe-zone="text" x="285.8" y="480.0" width="256.3" height="53.7"/>
+    <rect data-figure-safe-zone="text" x="332.2" y="511.0" width="163.6" height="47.0"/>
+    <rect data-figure-safe-zone="text" x="758.4" y="275.0" width="221.2" height="49.7"/>
+    <rect data-figure-safe-zone="text" x="742.6" y="310.0" width="252.8" height="53.7"/>
+  </g>
+</svg>

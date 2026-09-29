@@ -1,0 +1,25 @@
+{
+  "title": "理解大模型：面向软件工程师的原理与系统指南",
+  "description": "一部面向有编程经验的软件工程师，尤其是后端、AI 应用与平台工程师，从系统视角理解大语言模型原理、机制与边界的书稿。",
+  "author": "Kingson Wu",
+  "language": "zh-Hans",
+  "root": ".",
+  "plugins": [],
+  "pluginsConfig": {},
+  "readme_path": "index.md",
+  "release_date": "2026-04-13",
+  "cover_image": "assets/cover-zh-Hans.svg",
+  "cover_alt": "封面：《理解大模型：面向软件工程师的原理与系统指南》",
+  "outputs": {
+    "print_html": "exported/zh-Hans/Understanding-LLMs.print.html",
+    "pdf": "exported/zh-Hans/Understanding-LLMs.pdf",
+    "epub": "exported/zh-Hans/Understanding-LLMs.epub"
+  },
+  "title_page_lines": [
+    "面向软件工程师的系统视角指南",
+    "github.com/kingson4wu/Understanding-LLMs"
+  ],
+  "structure": {
+    "readme": "index.md"
+  }
+}

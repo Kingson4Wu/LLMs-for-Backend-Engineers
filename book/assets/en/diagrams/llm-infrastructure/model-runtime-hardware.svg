@@ -1,0 +1,67 @@
+<?xml version="1.0"?>
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="620" viewBox="0 0 1200 620" role="img" aria-labelledby="title desc">
+  <title id="title">Responsibility boundaries of model, inference runtime, and hardware</title>
+  <desc id="desc">The Transformer determines the computation graph and dependencies, the inference runtime manages request state and execution policy, and hardware plus interconnect provide compute, memory, and data movement. All three shape serving performance.</desc>
+  <defs>
+    <marker id="a" viewBox="0 0 10 10" refX="8.5" refY="5" markerWidth="8" markerHeight="8" orient="auto">
+      <path d="M0 0 10 5 0 10z" fill="#0F4D92"/>
+    </marker>
+    <style>text{font-family:Arial,sans-serif}.h{font-size:23px;font-weight:700}.b{font-size:17px}.s{font-size:16px}</style>
+  </defs>
+  <rect width="1200" height="620" fill="#FFFFFF"/>
+  <text x="65" y="68" font-size="32" font-weight="700" fill="#17324D">Generating one token is a three-layer contract</text>
+  <text x="65" y="103" class="b" fill="#416985">Separate responsibilities to locate whether structure, execution, or device resources constrain the service.</text>
+  <rect x="65" y="155" width="315" height="280" rx="23" fill="#EAF3FB" stroke="#8EB6D8" stroke-width="2"/>
+  <circle cx="111" cy="202" r="20" fill="#0F4D92"/>
+  <text x="111" y="209" text-anchor="middle" font-size="17" font-weight="700" fill="#FFFFFF">1</text>
+  <text x="145" y="210" class="h" fill="#17324D">Model</text>
+  <text x="97" y="260" class="b" fill="#416985">Transformer / computation graph</text>
+  <text x="97" y="296" class="b" fill="#416985">data dependencies and transforms</text>
+  <text x="97" y="332" class="b" fill="#416985">semantics of weights and activations</text>
+  <text x="97" y="389" class="s" fill="#5E7F9C">defines what must be computed</text>
+  <path d="M380 155V140H450V153" fill="none" stroke="#0F4D92" stroke-width="4" marker-end="url(#a)" data-figure-connector="true"/>
+  <rect x="465" y="155" width="315" height="280" rx="23" fill="#FFF8D6" stroke="#D8A919" stroke-width="2"/>
+  <circle cx="511" cy="202" r="20" fill="#FFD700"/>
+  <text x="511" y="209" text-anchor="middle" font-size="17" font-weight="700" fill="#FFFFFF">2</text>
+  <text x="545" y="210" class="h" fill="#765800">Inference runtime</text>
+  <text x="497" y="260" class="b" fill="#765800">request and KV-cache state</text>
+  <text x="497" y="296" class="b" fill="#765800">batching, queues, scheduling</text>
+  <text x="497" y="332" class="b" fill="#765800">kernel choice and execution policy</text>
+  <text x="497" y="389" class="s" fill="#765800">defines how computation is organized</text>
+  <path d="M780 155V140H850V153" fill="none" stroke="#0F4D92" stroke-width="4" marker-end="url(#a)" data-figure-connector="true"/>
+  <rect x="865" y="155" width="270" height="280" rx="23" fill="#FFF8D6" stroke="#E9A6A1" stroke-width="2"/>
+  <circle cx="911" cy="202" r="20" fill="#B64342"/>
+  <text x="911" y="209" text-anchor="middle" font-size="17" font-weight="700" fill="#FFFFFF">3</text>
+  <text x="945" y="210" class="h" fill="#8F3635">Hardware / fabric</text>
+  <text x="897" y="260" class="b" fill="#8F3635">compute units and memory</text>
+  <text x="897" y="296" class="b" fill="#8F3635">nodes, network, interconnect</text>
+  <text x="897" y="332" class="b" fill="#8F3635">data movement capability</text>
+  <text x="897" y="389" class="s" fill="#8D625A">defines execution cost and limits</text>
+  <rect x="65" y="490" width="1070" height="73" rx="18" fill="#17324D"/>
+  <text x="98" y="525" font-size="20" font-weight="700" fill="#FFFFFF">Joint outcome: latency, throughput, capacity, and numerical behavior</text>
+  <text x="98" y="551" font-size="17" fill="#CFCECE">No one layer determines these alone; optimize after locating the bottleneck and the interface that exposes it.</text>
+  <g aria-hidden="true" fill="none" opacity="0" pointer-events="none">
+    <rect data-figure-safe-zone="text" x="53.0" y="24.0" width="789.4" height="67.2"/>
+    <rect data-figure-safe-zone="text" x="53.0" y="74.0" width="978.7" height="47.0"/>
+    <rect data-figure-safe-zone="text" x="91.0" y="180.0" width="40.0" height="47.0"/>
+    <rect data-figure-safe-zone="text" x="133.0" y="176.0" width="81.2" height="53.7"/>
+    <rect data-figure-safe-zone="text" x="85.0" y="231.0" width="298.0" height="47.0"/>
+    <rect data-figure-safe-zone="text" x="85.0" y="267.0" width="306.9" height="47.0"/>
+    <rect data-figure-safe-zone="text" x="85.0" y="303.0" width="342.2" height="47.0"/>
+    <rect data-figure-safe-zone="text" x="85.0" y="360.0" width="280.4" height="47.0"/>
+    <rect data-figure-safe-zone="text" x="491.0" y="180.0" width="40.0" height="47.0"/>
+    <rect data-figure-safe-zone="text" x="533.0" y="176.0" width="218.5" height="53.7"/>
+    <rect data-figure-safe-zone="text" x="485.0" y="231.0" width="253.8" height="47.0"/>
+    <rect data-figure-safe-zone="text" x="485.0" y="267.0" width="271.5" height="47.0"/>
+    <rect data-figure-safe-zone="text" x="485.0" y="303.0" width="324.6" height="47.0"/>
+    <rect data-figure-safe-zone="text" x="485.0" y="360.0" width="342.2" height="47.0"/>
+    <rect data-figure-safe-zone="text" x="891.0" y="180.0" width="40.0" height="47.0"/>
+    <rect data-figure-safe-zone="text" x="933.0" y="176.0" width="218.5" height="53.7"/>
+    <rect data-figure-safe-zone="text" x="885.0" y="231.0" width="236.2" height="47.0"/>
+    <rect data-figure-safe-zone="text" x="885.0" y="267.0" width="271.5" height="47.0"/>
+    <rect data-figure-safe-zone="text" x="885.0" y="303.0" width="236.2" height="47.0"/>
+    <rect data-figure-safe-zone="text" x="885.0" y="360.0" width="315.7" height="47.0"/>
+    <rect data-figure-safe-zone="text" x="86.0" y="493.0" width="731.2" height="51.0"/>
+    <rect data-figure-safe-zone="text" x="86.0" y="522.0" width="996.4" height="47.0"/>
+  </g>
+</svg>

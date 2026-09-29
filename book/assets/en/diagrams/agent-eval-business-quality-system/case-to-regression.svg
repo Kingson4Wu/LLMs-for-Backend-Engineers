@@ -1,0 +1,65 @@
+<?xml version="1.0"?>
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="650" viewBox="0 0 1200 650" role="img" aria-labelledby="title desc">
+  <title id="title">From a real case to a regression suite</title>
+  <desc id="desc">A real case is attributed from its trace, turned into measurable quality assertions and reusable cases, then added to a regression suite; new production evidence continually revises the rules.</desc>
+  <defs>
+    <marker id="a" viewBox="0 0 10 10" refX="8" refY="5" markerWidth="8" markerHeight="8" orient="auto">
+      <path d="M0 0 10 5 0 10z" fill="#0F4D92"/>
+    </marker>
+  </defs>
+  <rect width="1200" height="650" rx="30" fill="#FFFFFF"/>
+  <g font-family="Arial,sans-serif">
+    <text x="58" y="68" font-size="31" font-weight="700" fill="#17324D">Evaluation maintenance: turn one failure into a repeatable defense</text>
+    <text x="58" y="105" font-size="18" fill="#5E7F9C">Only when an incident becomes a checkable assertion and case can future changes automatically expose a similar regression.</text>
+    <g fill="none" stroke="#0F4D92" stroke-width="4" marker-end="url(#a)">
+      <path d="M245 275H305"/>
+      <path d="M505 275H565"/>
+      <path d="M765 275H825"/>
+    </g>
+    <g stroke-width="3">
+      <rect x="55" y="190" width="190" height="170" rx="22" fill="#F6CFCB" stroke="#B64342"/>
+      <rect x="305" y="190" width="200" height="170" rx="22" fill="#FFF8D6" stroke="#FFD700"/>
+      <rect x="565" y="190" width="200" height="170" rx="22" fill="#EAF3FB" stroke="#0F4D92"/>
+      <rect x="825" y="190" width="250" height="170" rx="22" fill="#EAF3FB" stroke="#0F4D92"/>
+    </g>
+    <g text-anchor="middle">
+      <text x="150" y="242" font-size="22" font-weight="700" fill="#B64342">real case</text>
+      <text x="150" y="276" font-size="16" fill="#B64342">user impact, environment</text>
+      <text x="150" y="302" font-size="16" fill="#B64342">state, actual trace</text>
+      <text x="405" y="242" font-size="20" font-weight="700" fill="#765800">attribute failure mode</text>
+      <text x="405" y="276" font-size="16" fill="#765800">which layer caused it?</text>
+      <text x="405" y="302" font-size="16" fill="#765800">what triggered it?</text>
+      <text x="665" y="242" font-size="22" font-weight="700" fill="#17324D">extract assertions</text>
+      <text x="665" y="276" font-size="16" fill="#0F4D92">observable expectation,</text>
+      <text x="665" y="302" font-size="16" fill="#0F4D92">evidence, threshold</text>
+      <text x="950" y="242" font-size="22" font-weight="700" fill="#17324D">regression suite</text>
+      <text x="950" y="276" font-size="16" fill="#0F4D92">cases, graders, versioned</text>
+      <text x="950" y="302" font-size="16" fill="#0F4D92">baseline, continuous checks</text>
+    </g>
+    <path d="M950 360V425H150V370" fill="none" stroke="#FFD700" stroke-width="4" marker-end="url(#a)" data-figure-connector="true"/>
+    <rect x="260" y="440" width="680" height="105" rx="20" fill="#FFFFFF" stroke="#FFD700" stroke-width="3"/>
+    <text x="600" y="472" text-anchor="middle" font-size="18" font-weight="700" fill="#765800">New production evidence revises cases, quality rules,</text>
+    <text x="600" y="495" text-anchor="middle" font-size="18" font-weight="700" fill="#765800">and acceptance thresholds</text>
+    <text x="600" y="522" text-anchor="middle" font-size="15" fill="#765800">A regression suite is reviewed, evolving quality material—not static truth.</text>
+    <text x="600" y="592" text-anchor="middle" font-size="18" fill="#5E7F9C">Good cases preserve the mechanism of a problem, not merely one accidental answer string.</text>
+  </g>
+  <g aria-hidden="true" fill="none" opacity="0" pointer-events="none">
+    <rect data-figure-safe-zone="text" x="46.0" y="25.0" width="1087.9" height="65.8"/>
+    <rect data-figure-safe-zone="text" x="46.0" y="75.0" width="1165.9" height="48.3"/>
+    <rect data-figure-safe-zone="text" x="138.0" y="208.0" width="127.0" height="53.7"/>
+    <rect data-figure-safe-zone="text" x="138.0" y="248.0" width="223.7" height="45.6"/>
+    <rect data-figure-safe-zone="text" x="138.0" y="274.0" width="182.1" height="45.6"/>
+    <rect data-figure-safe-zone="text" x="393.0" y="208.0" width="275.7" height="53.7"/>
+    <rect data-figure-safe-zone="text" x="393.0" y="248.0" width="207.0" height="45.6"/>
+    <rect data-figure-safe-zone="text" x="393.0" y="274.0" width="173.8" height="45.6"/>
+    <rect data-figure-safe-zone="text" x="653.0" y="208.0" width="229.9" height="53.7"/>
+    <rect data-figure-safe-zone="text" x="653.0" y="248.0" width="215.4" height="45.6"/>
+    <rect data-figure-safe-zone="text" x="653.0" y="274.0" width="182.1" height="45.6"/>
+    <rect data-figure-safe-zone="text" x="938.0" y="208.0" width="207.0" height="53.7"/>
+    <rect data-figure-safe-zone="text" x="938.0" y="248.0" width="232.0" height="45.6"/>
+    <rect data-figure-safe-zone="text" x="938.0" y="274.0" width="248.6" height="45.6"/>
+    <rect data-figure-safe-zone="text" x="177.2" y="451.0" width="845.6" height="51.0"/>
+    <rect data-figure-safe-zone="text" x="246.9" y="484.0" width="706.2" height="45.6"/>
+    <rect data-figure-safe-zone="text" x="176.2" y="562.0" width="847.7" height="48.3"/>
+  </g>
+<g aria-hidden="true" fill="none" opacity="0" pointer-events="none"><rect data-figure-safe-zone="text" x="46.0" y="25.0" width="1087.9" height="65.8"/><rect data-figure-safe-zone="text" x="46.0" y="75.0" width="1165.9" height="48.3"/><rect data-figure-safe-zone="text" x="138.0" y="208.0" width="127.0" height="53.7"/><rect data-figure-safe-zone="text" x="138.0" y="248.0" width="223.7" height="45.6"/><rect data-figure-safe-zone="text" x="138.0" y="274.0" width="182.1" height="45.6"/><rect data-figure-safe-zone="text" x="393.0" y="210.0" width="252.8" height="51.0"/><rect data-figure-safe-zone="text" x="393.0" y="248.0" width="207.0" height="45.6"/><rect data-figure-safe-zone="text" x="393.0" y="274.0" width="173.8" height="45.6"/><rect data-figure-safe-zone="text" x="653.0" y="208.0" width="229.9" height="53.7"/><rect data-figure-safe-zone="text" x="653.0" y="248.0" width="215.4" height="45.6"/><rect data-figure-safe-zone="text" x="653.0" y="274.0" width="182.1" height="45.6"/><rect data-figure-safe-zone="text" x="938.0" y="208.0" width="207.0" height="53.7"/><rect data-figure-safe-zone="text" x="938.0" y="248.0" width="232.0" height="45.6"/><rect data-figure-safe-zone="text" x="938.0" y="274.0" width="248.6" height="45.6"/><rect data-figure-safe-zone="text" x="340.0" y="442.0" width="520.1" height="48.3"/><rect data-figure-safe-zone="text" x="471.0" y="465.0" width="258.0" height="48.3"/><rect data-figure-safe-zone="text" x="295.5" y="495.0" width="609.0" height="44.2"/><rect data-figure-safe-zone="text" x="176.2" y="562.0" width="847.7" height="48.3"/></g></svg>

@@ -1,0 +1,50 @@
+<?xml version="1.0"?>
+<svg xmlns="http://www.w3.org/2000/svg" width="1080" height="620" viewBox="0 0 1080 620" role="img" aria-labelledby="title desc">
+  <title id="title">Vector projection onto another direction</title>
+  <desc id="desc">Vector a makes angle theta with b. Its projection on b has length |a|cos(theta), and the dot product is b's length times that projection.</desc>
+  <defs>
+    <marker id="g" viewBox="0 0 10 10" refX="8" refY="5" markerWidth="8" markerHeight="8" orient="auto">
+      <path d="M0 0 10 5 0 10z" fill="#0F4D92"/>
+    </marker>
+    <marker id="r" viewBox="0 0 10 10" refX="8" refY="5" markerWidth="8" markerHeight="8" orient="auto">
+      <path d="M0 0 10 5 0 10z" fill="#B64342"/>
+    </marker>
+  </defs>
+  <rect width="1080" height="620" rx="36" fill="#FFFFFF"/>
+  <g font-family="Arial, sans-serif">
+    <text x="60" y="70" font-size="32" font-weight="700" fill="#17324D">Projection maps a directional relation onto b's axis</text>
+    <text x="60" y="105" font-size="19" fill="#5E7F9C">The dot product asks how much of a points in b's direction, not merely how long the two vectors are.</text>
+  </g>
+  <path d="M145 445H785" fill="none" stroke="#0F4D92" stroke-width="5" marker-end="url(#g)" data-figure-connector="true"/>
+  <path d="M149 449H781" fill="none" stroke="#8EB6D8" stroke-width="2"/>
+  <path d="M145 445L575 180" fill="none" stroke="#B64342" stroke-width="7" marker-end="url(#r)" data-figure-connector="true"/>
+  <path d="M149 449L579 184" fill="none" stroke="#E9A6A1" stroke-width="2"/>
+  <path d="M575 180V445" stroke="#FFD700" stroke-width="4" stroke-dasharray="11 9"/>
+  <path d="M238 445A93 93 0 0 0 223 393" fill="none" stroke="#5E7F9C" stroke-width="3"/>
+  <text x="260" y="415" font-family="Arial, sans-serif" font-size="25" fill="#0F4D92">&#x3B8;</text>
+  <g font-family="Arial, sans-serif" font-weight="700">
+    <text x="592" y="180" font-size="28" fill="#B64342">a</text>
+    <text x="800" y="453" font-size="28" fill="#0F4D92">b</text>
+  </g>
+  <g fill="#FFF8D6" stroke="#FFD700" stroke-width="3">
+    <rect x="182" y="483" width="465" height="72" rx="22"/>
+  </g>
+  <text x="414" y="514" font-family="Arial, sans-serif" font-size="22" font-weight="700" fill="#765800" text-anchor="middle">projection = |a| cos(&#x3B8;)</text>
+  <text x="414" y="540" font-family="Arial, sans-serif" font-size="17" fill="#765800" text-anchor="middle">along b's direction</text>
+  <g fill="#EAF3FB" stroke="#0F4D92" stroke-width="3">
+    <rect x="730" y="260" width="278" height="126" rx="23"/>
+  </g>
+  <text x="869" y="306" font-family="Arial, sans-serif" font-size="19" font-weight="700" fill="#0F4D92" text-anchor="middle">dot product = |b| &#xD7; projection</text>
+  <text x="869" y="344" font-family="Arial, sans-serif" font-size="22" fill="#0F4D92" text-anchor="middle">a &#xB7; b = |a||b|cos(&#x3B8;)</text>
+  <g aria-hidden="true" fill="none" opacity="0" pointer-events="none">
+    <rect data-figure-safe-zone="text" x="48.0" y="26.0" width="889.3" height="67.2"/>
+    <rect data-figure-safe-zone="text" x="48.0" y="74.0" width="1012.0" height="49.7"/>
+    <rect data-figure-safe-zone="text" x="248.0" y="386.0" width="40.0" height="58.0"/>
+    <rect data-figure-safe-zone="text" x="580.0" y="140.0" width="40.0" height="61.8"/>
+    <rect data-figure-safe-zone="text" x="788.0" y="413.0" width="40.0" height="61.8"/>
+    <rect data-figure-safe-zone="text" x="270.4" y="480.0" width="287.1" height="53.7"/>
+    <rect data-figure-safe-zone="text" x="318.0" y="511.0" width="192.0" height="47.0"/>
+    <rect data-figure-safe-zone="text" x="708.8" y="275.0" width="320.4" height="49.7"/>
+    <rect data-figure-safe-zone="text" x="742.6" y="310.0" width="252.8" height="53.7"/>
+  </g>
+</svg>

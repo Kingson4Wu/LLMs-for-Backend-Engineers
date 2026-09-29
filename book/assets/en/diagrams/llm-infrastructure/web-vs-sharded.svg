@@ -1,0 +1,67 @@
+<?xml version="1.0"?>
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="680" viewBox="0 0 1200 680" role="img" aria-labelledby="title desc">
+  <title id="title">Web replicas compared with sharded LLM serving</title>
+  <desc id="desc">A normal web request usually goes to one complete application replica. A sharded LLM request needs multiple devices working together, with tensor or state exchange on the critical path.</desc>
+  <defs>
+    <marker id="a" viewBox="0 0 10 10" refX="8.5" refY="5" markerWidth="8" markerHeight="8" orient="auto">
+      <path d="M0 0 10 5 0 10z" fill="#0F4D92"/>
+    </marker>
+    <style>text{font-family:Arial,sans-serif}.h{font-size:21px;font-weight:700}.b{font-size:16px}.s{font-size:15px}</style>
+  </defs>
+  <rect width="1200" height="680" fill="#FFFFFF"/>
+  <text x="65" y="68" font-size="32" font-weight="700" fill="#17324D">What is balanced: complete replicas, or many devices for one request?</text>
+  <rect x="65" y="128" width="1070" height="205" rx="22" fill="#EAF3FB" stroke="#8EB6D8" stroke-width="2"/>
+  <text x="96" y="173" class="h" fill="#17324D">Typical web service: one complete application replica handles the request</text>
+  <g text-anchor="middle">
+    <rect x="96" y="210" width="150" height="70" rx="14" fill="#FFFFFF" stroke="#8EB6D8" stroke-width="2"/>
+    <text x="171" y="253" class="h" fill="#17324D">request</text>
+    <rect x="322" y="210" width="170" height="70" rx="14" fill="#FFF8D6" stroke="#D8A919" stroke-width="2"/>
+    <text x="407" y="253" class="h" fill="#765800">load balancer</text>
+    <rect x="568" y="195" width="215" height="100" rx="16" fill="#0F4D92"/>
+    <text x="675" y="236" class="h" fill="#FFFFFF">complete app replica</text>
+    <text x="675" y="264" class="b" fill="#CFCECE">business logic is local</text>
+    <rect x="859" y="210" width="190" height="70" rx="14" fill="#FFFFFF" stroke="#8EB6D8" stroke-width="2"/>
+    <text x="954" y="253" class="h" fill="#17324D">database / cache</text>
+  </g>
+  <path d="M246 280V345H312V282M492 280V345H558V297M783 295V345H849V284" fill="none" stroke="#0F4D92" stroke-width="4" marker-end="url(#a)" data-figure-connector="true"/>
+  <rect x="65" y="370" width="1070" height="235" rx="22" fill="#FDE9E7" stroke="#E9A6A1" stroke-width="2"/>
+  <text x="96" y="415" class="h" fill="#8F3635">Sharded LLM serving: several devices complete the same request</text>
+  <rect x="96" y="457" width="150" height="75" rx="14" fill="#FFFFFF" stroke="#E9A6A1" stroke-width="2"/>
+  <text x="171" y="503" text-anchor="middle" class="h" fill="#8F3635">request</text>
+  <path d="M246 457V442H310V455" fill="none" stroke="#B64342" stroke-width="4" marker-end="url(#a)" data-figure-connector="true"/>
+  <rect x="325" y="457" width="175" height="75" rx="14" fill="#FFF8D6" stroke="#D8A919" stroke-width="2"/>
+  <text x="412" y="503" text-anchor="middle" class="h" fill="#765800">inference router</text>
+  <path d="M500 532V555H564V550" fill="none" stroke="#B64342" stroke-width="4" marker-end="url(#a)" data-figure-connector="true"/>
+  <rect x="579" y="440" width="196" height="108" rx="18" fill="#B64342"/>
+  <text x="677" y="470" text-anchor="middle" font-size="19" font-weight="700" fill="#FFFFFF">one inference</text>
+  <text x="677" y="494" text-anchor="middle" font-size="19" font-weight="700" fill="#FFFFFF">instance</text>
+  <text x="677" y="508" text-anchor="middle" class="b" fill="#F6CFCB">coordinates devices</text>
+  <path d="M775 548V590H839V585" fill="none" stroke="#B64342" stroke-width="4" marker-end="url(#a)" data-figure-connector="true"/>
+  <g>
+    <rect x="854" y="430" width="223" height="41" rx="10" fill="#FFFFFF" stroke="#E9A6A1" stroke-width="2"/>
+    <rect x="854" y="486" width="223" height="41" rx="10" fill="#FFFFFF" stroke="#E9A6A1" stroke-width="2"/>
+    <rect x="854" y="542" width="223" height="41" rx="10" fill="#FFFFFF" stroke="#E9A6A1" stroke-width="2"/>
+    <text x="876" y="457" class="b" fill="#8F3635">GPU 0: partial weights / state</text>
+    <text x="876" y="513" class="b" fill="#8F3635">GPU 1: partial weights / state</text>
+    <text x="876" y="569" class="b" fill="#8F3635">GPU n: partial weights / state</text>
+  </g>
+  <text x="600" y="648" text-anchor="middle" font-size="16" fill="#8F3635">Tensor or state exchange on the critical path makes inter-device communication part of service latency and capacity.</text>
+  <g aria-hidden="true" fill="none" opacity="0" pointer-events="none">
+    <rect data-figure-safe-zone="text" x="53.0" y="24.0" width="1172.2" height="67.2"/>
+    <rect data-figure-safe-zone="text" x="84.0" y="139.0" width="859.1" height="53.7"/>
+    <rect data-figure-safe-zone="text" x="159.0" y="219.0" width="104.1" height="53.7"/>
+    <rect data-figure-safe-zone="text" x="395.0" y="219.0" width="172.7" height="53.7"/>
+    <rect data-figure-safe-zone="text" x="663.0" y="202.0" width="252.8" height="53.7"/>
+    <rect data-figure-safe-zone="text" x="663.0" y="235.0" width="227.3" height="47.0"/>
+    <rect data-figure-safe-zone="text" x="942.0" y="219.0" width="207.0" height="53.7"/>
+    <rect data-figure-safe-zone="text" x="84.0" y="381.0" width="733.3" height="53.7"/>
+    <rect data-figure-safe-zone="text" x="119.0" y="469.0" width="104.1" height="53.7"/>
+    <rect data-figure-safe-zone="text" x="308.5" y="469.0" width="207.0" height="53.7"/>
+    <rect data-figure-safe-zone="text" x="539.2" y="446.0" width="275.7" height="53.7"/>
+    <rect data-figure-safe-zone="text" x="581.0" y="479.0" width="192.0" height="47.0"/>
+    <rect data-figure-safe-zone="text" x="864.0" y="428.0" width="289.2" height="47.0"/>
+    <rect data-figure-safe-zone="text" x="864.0" y="484.0" width="289.2" height="47.0"/>
+    <rect data-figure-safe-zone="text" x="864.0" y="540.0" width="289.2" height="47.0"/>
+    <rect data-figure-safe-zone="text" x="105.4" y="620.0" width="989.1" height="45.6"/>
+  </g>
+<g aria-hidden="true" fill="none" opacity="0" pointer-events="none"><rect data-figure-safe-zone="text" x="53.0" y="24.0" width="1172.2" height="67.2"/><rect data-figure-safe-zone="text" x="84.0" y="139.0" width="859.1" height="53.7"/><rect data-figure-safe-zone="text" x="159.0" y="219.0" width="104.1" height="53.7"/><rect data-figure-safe-zone="text" x="395.0" y="219.0" width="172.7" height="53.7"/><rect data-figure-safe-zone="text" x="663.0" y="202.0" width="252.8" height="53.7"/><rect data-figure-safe-zone="text" x="663.0" y="235.0" width="227.3" height="47.0"/><rect data-figure-safe-zone="text" x="942.0" y="219.0" width="207.0" height="53.7"/><rect data-figure-safe-zone="text" x="84.0" y="381.0" width="733.3" height="53.7"/><rect data-figure-safe-zone="text" x="119.0" y="469.0" width="104.1" height="53.7"/><rect data-figure-safe-zone="text" x="308.5" y="469.0" width="207.0" height="53.7"/><rect data-figure-safe-zone="text" x="600.8" y="439.0" width="152.4" height="49.7"/><rect data-figure-safe-zone="text" x="625.5" y="463.0" width="103.0" height="49.7"/><rect data-figure-safe-zone="text" x="581.0" y="479.0" width="192.0" height="47.0"/><rect data-figure-safe-zone="text" x="864.0" y="428.0" width="289.2" height="47.0"/><rect data-figure-safe-zone="text" x="864.0" y="484.0" width="289.2" height="47.0"/><rect data-figure-safe-zone="text" x="864.0" y="540.0" width="289.2" height="47.0"/><rect data-figure-safe-zone="text" x="105.4" y="620.0" width="989.1" height="45.6"/></g></svg>

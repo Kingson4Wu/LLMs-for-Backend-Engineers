@@ -1,0 +1,73 @@
+<?xml version="1.0"?>
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="650" viewBox="0 0 1200 650" role="img" aria-labelledby="title desc">
+  <title id="title">Training loop: from material to independent evaluation</title>
+  <desc id="desc">Training material is prepared into batches, processed through a forward pass and loss to obtain gradients and update parameters into a checkpoint; independent evaluation and data review feed the next cycle.</desc>
+  <defs>
+    <marker id="a" viewBox="0 0 10 10" refX="8" refY="5" markerWidth="8" markerHeight="8" orient="auto">
+      <path d="M0 0 10 5 0 10z" fill="#0F4D92"/>
+    </marker>
+  </defs>
+  <rect width="1200" height="650" rx="30" fill="#FFFFFF"/>
+  <g font-family="Arial,sans-serif">
+    <text x="58" y="68" font-size="31" font-weight="700" fill="#17324D">Training is a loop of material, updates, and independent evaluation</text>
+    <text x="58" y="105" font-size="18" fill="#5E7F9C">The boundary of training is whether this computation changes parameters under a training objective.</text>
+    <g fill="none" stroke="#0F4D92" stroke-width="4" marker-end="url(#a)">
+      <path d="M225 260H278"/>
+      <path d="M465 260H518"/>
+      <path d="M705 260H758"/>
+      <path d="M945 260H998"/>
+      <path d="M1068 334V392H170V334"/>
+    </g>
+    <g stroke-width="3">
+      <rect x="55" y="180" width="170" height="154" rx="22" fill="#EAF3FB" stroke="#0F4D92"/>
+      <rect x="278" y="180" width="187" height="154" rx="22" fill="#FFF8D6" stroke="#FFD700"/>
+      <rect x="518" y="180" width="187" height="154" rx="22" fill="#EAF3FB" stroke="#0F4D92"/>
+      <rect x="758" y="180" width="187" height="154" rx="22" fill="#F6CFCB" stroke="#B64342"/>
+      <rect x="998" y="180" width="140" height="154" rx="22" fill="#EAF3FB" stroke="#0F4D92"/>
+    </g>
+    <g text-anchor="middle">
+      <text x="140" y="226" font-size="21" font-weight="700" fill="#17324D">material + task</text>
+      <text x="140" y="258" font-size="16" fill="#0F4D92">text, demonstrations,</text>
+      <text x="140" y="284" font-size="16" fill="#0F4D92">feedback, objective</text>
+      <text x="371" y="226" font-size="21" font-weight="700" fill="#765800">data preparation</text>
+      <text x="371" y="258" font-size="16" fill="#765800">select &#xB7; clean &#xB7; dedupe</text>
+      <text x="371" y="284" font-size="16" fill="#765800">mix &#xB7; tokenize &#xB7; batch</text>
+      <text x="611" y="226" font-size="21" font-weight="700" fill="#17324D">forward + loss</text>
+      <text x="611" y="258" font-size="16" fill="#0F4D92">Transformer &#x2192; logits</text>
+      <text x="611" y="284" font-size="14" fill="#0F4D92">judge the prediction against target</text>
+      <text x="851" y="226" font-size="21" font-weight="700" fill="#B64342">backprop + update</text>
+      <text x="851" y="258" font-size="16" fill="#B64342">gradients &#x2192; optimizer</text>
+      <text x="851" y="284" font-size="14" fill="#B64342">change trainable parameters</text>
+      <text x="1068" y="226" font-size="21" font-weight="700" fill="#17324D">checkpoint</text>
+      <text x="1068" y="258" font-size="14" fill="#0F4D92">full parameter</text>
+      <text x="1068" y="281" font-size="14" fill="#0F4D92">state at save time</text>
+    </g>
+    <rect x="250" y="405" width="700" height="112" rx="22" fill="#FFFFFF" stroke="#FFD700" stroke-width="3"/>
+    <text x="600" y="446" text-anchor="middle" font-size="22" font-weight="700" fill="#765800">independent validation, task evaluation, data review, and monitoring</text>
+    <text x="600" y="472" text-anchor="middle" font-size="16" fill="#765800">Choose a checkpoint; detect overfitting; decide whether to continue,</text>
+    <text x="600" y="495" text-anchor="middle" font-size="16" fill="#765800">change data or objective, or stop.</text>
+    <text x="600" y="592" text-anchor="middle" font-size="18" fill="#5E7F9C">Training loss moves the current objective; independent evaluation checks whether that change produces the intended ability.</text>
+  </g>
+  <g aria-hidden="true" fill="none" opacity="0" pointer-events="none">
+    <rect data-figure-safe-zone="text" x="46.0" y="25.0" width="1104.0" height="65.8"/>
+    <rect data-figure-safe-zone="text" x="46.0" y="75.0" width="950.6" height="48.3"/>
+    <rect data-figure-safe-zone="text" x="128.0" y="193.0" width="187.8" height="52.4"/>
+    <rect data-figure-safe-zone="text" x="128.0" y="230.0" width="198.7" height="45.6"/>
+    <rect data-figure-safe-zone="text" x="128.0" y="256.0" width="182.1" height="45.6"/>
+    <rect data-figure-safe-zone="text" x="359.0" y="193.0" width="198.7" height="52.4"/>
+    <rect data-figure-safe-zone="text" x="359.0" y="230.0" width="215.4" height="45.6"/>
+    <rect data-figure-safe-zone="text" x="359.0" y="256.0" width="207.0" height="45.6"/>
+    <rect data-figure-safe-zone="text" x="599.0" y="193.0" width="176.9" height="52.4"/>
+    <rect data-figure-safe-zone="text" x="599.0" y="230.0" width="190.4" height="45.6"/>
+    <rect data-figure-safe-zone="text" x="599.0" y="258.0" width="278.8" height="42.9"/>
+    <rect data-figure-safe-zone="text" x="839.0" y="193.0" width="209.6" height="52.4"/>
+    <rect data-figure-safe-zone="text" x="839.0" y="230.0" width="198.7" height="45.6"/>
+    <rect data-figure-safe-zone="text" x="839.0" y="258.0" width="220.6" height="42.9"/>
+    <rect data-figure-safe-zone="text" x="1056.0" y="193.0" width="133.2" height="52.4"/>
+    <rect data-figure-safe-zone="text" x="1056.0" y="232.0" width="125.9" height="42.9"/>
+    <rect data-figure-safe-zone="text" x="1056.0" y="255.0" width="155.0" height="42.9"/>
+    <rect data-figure-safe-zone="text" x="199.0" y="412.0" width="801.9" height="53.7"/>
+    <rect data-figure-safe-zone="text" x="146.0" y="451.0" width="908.0" height="47.0"/>
+    <rect data-figure-safe-zone="text" x="12.4" y="562.0" width="1175.3" height="48.3"/>
+  </g>
+<g aria-hidden="true" fill="none" opacity="0" pointer-events="none"><rect data-figure-safe-zone="text" x="46.0" y="25.0" width="1104.0" height="65.8"/><rect data-figure-safe-zone="text" x="46.0" y="75.0" width="950.6" height="48.3"/><rect data-figure-safe-zone="text" x="128.0" y="193.0" width="187.8" height="52.4"/><rect data-figure-safe-zone="text" x="128.0" y="230.0" width="198.7" height="45.6"/><rect data-figure-safe-zone="text" x="128.0" y="256.0" width="182.1" height="45.6"/><rect data-figure-safe-zone="text" x="359.0" y="193.0" width="198.7" height="52.4"/><rect data-figure-safe-zone="text" x="359.0" y="230.0" width="215.4" height="45.6"/><rect data-figure-safe-zone="text" x="359.0" y="256.0" width="207.0" height="45.6"/><rect data-figure-safe-zone="text" x="599.0" y="193.0" width="176.9" height="52.4"/><rect data-figure-safe-zone="text" x="599.0" y="230.0" width="190.4" height="45.6"/><rect data-figure-safe-zone="text" x="599.0" y="258.0" width="278.8" height="42.9"/><rect data-figure-safe-zone="text" x="839.0" y="193.0" width="209.6" height="52.4"/><rect data-figure-safe-zone="text" x="839.0" y="230.0" width="198.7" height="45.6"/><rect data-figure-safe-zone="text" x="839.0" y="258.0" width="220.6" height="42.9"/><rect data-figure-safe-zone="text" x="1056.0" y="193.0" width="133.2" height="52.4"/><rect data-figure-safe-zone="text" x="1056.0" y="232.0" width="125.9" height="42.9"/><rect data-figure-safe-zone="text" x="1056.0" y="255.0" width="155.0" height="42.9"/><rect data-figure-safe-zone="text" x="199.0" y="412.0" width="801.9" height="53.7"/><rect data-figure-safe-zone="text" x="305.1" y="444.0" width="589.8" height="45.6"/><rect data-figure-safe-zone="text" x="446.6" y="467.0" width="306.9" height="45.6"/><rect data-figure-safe-zone="text" x="12.4" y="562.0" width="1175.3" height="48.3"/></g></svg>

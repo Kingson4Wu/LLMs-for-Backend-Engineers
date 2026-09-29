@@ -1,0 +1,54 @@
+<?xml version="1.0"?>
+<svg xmlns="http://www.w3.org/2000/svg" width="1240" height="600" viewBox="0 0 1240 600" role="img" aria-labelledby="title desc">
+  <title id="title">&#x81EA;&#x56DE;&#x5F52;&#x8BED;&#x8A00;&#x6A21;&#x578B;&#x7684;&#x4E00;&#x6B65;&#x751F;&#x6210;&#x94FE;&#x8DEF;</title>
+  <desc id="desc">&#x5DF2;&#x6709;&#x8F93;&#x5165;&#x7ECF;&#x8FC7; Transformer&#xFF0C;&#x6700;&#x540E;&#x4F4D;&#x7F6E;&#x8868;&#x793A;&#x7ECF;&#x8F93;&#x51FA;&#x6295;&#x5F71;&#x5F97;&#x5230;&#x5168;&#x8BCD;&#x8868; logits&#x3002;&#x89E3;&#x7801;&#x9009;&#x62E9;&#x4E00;&#x4E2A; token&#xFF0C;&#x8FFD;&#x52A0;&#x5230;&#x5E8F;&#x5217;&#x540E;&#x6210;&#x4E3A;&#x4E0B;&#x4E00;&#x6B65;&#x6761;&#x4EF6;&#x3002;</desc>
+  <defs>
+    <marker id="a" viewBox="0 0 10 10" refX="8" refY="5" markerWidth="8" markerHeight="8" orient="auto">
+      <path d="M0 0 10 5 0 10z" fill="#0F4D92"/>
+    </marker>
+  </defs>
+  <rect width="1240" height="600" rx="36" fill="#FFFFFF"/>
+  <g font-family="Arial, 'Noto Sans SC', sans-serif">
+    <text x="60" y="70" font-size="32" font-weight="700" fill="#17324D">&#x4E00;&#x6B21;&#x751F;&#x6210;&#xFF1A;&#x9009;&#x62E9;&#x4E00;&#x4E2A; token&#xFF0C;&#x5E76;&#x6539;&#x53D8;&#x4E0B;&#x4E00;&#x6B65;&#x6761;&#x4EF6;</text>
+    <text x="60" y="105" font-size="19" fill="#5E7F9C">&#x6BCF;&#x4E00;&#x6B65;&#x90FD;&#x5BF9;&#x6574;&#x4E2A;&#x8BCD;&#x8868;&#x6253;&#x5206;&#xFF1B;&#x9009;&#x51FA;&#x7684; token &#x88AB;&#x8FFD;&#x52A0;&#x5230;&#x5E8F;&#x5217;&#xFF0C;&#x4E8E;&#x662F;&#x4E0B;&#x4E00;&#x6B65;&#x4E0D;&#x518D;&#x9762;&#x5BF9;&#x76F8;&#x540C;&#x4E0A;&#x4E0B;&#x6587;&#x3002;</text>
+  </g>
+  <g fill="#EAF3FB" stroke="#0F4D92" stroke-width="3">
+    <rect x="40" y="240" width="190" height="88" rx="23"/>
+    <rect x="610" y="240" width="210" height="88" rx="23"/>
+  </g>
+  <g fill="#FFF8D6" stroke="#FFD700" stroke-width="3">
+    <rect x="300" y="240" width="190" height="88" rx="23"/>
+  </g>
+  <g fill="#F6CFCB" stroke="#B64342" stroke-width="3">
+    <rect x="890" y="240" width="245" height="88" rx="23"/>
+  </g>
+  <g fill="none" stroke="#0F4D92" stroke-width="4" marker-end="url(#a)">
+    <path d="M230 284H290"/>
+    <path d="M490 284H600"/>
+    <path d="M820 284H880"/>
+  </g>
+  <path d="M1012 328V410H25V230H135V232" fill="none" stroke="#FFD700" stroke-width="4" stroke-dasharray="12 9" marker-end="url(#a)" data-figure-connector="true"/>
+  <g font-family="Arial, 'Noto Sans SC', sans-serif" text-anchor="middle" font-weight="700">
+    <text x="135" y="294" font-size="22" fill="#0F4D92">&#x5DF2;&#x6709;&#x8F93;&#x5165;</text>
+    <text x="395" y="294" font-size="22" fill="#765800">Transformer</text>
+    <text x="715" y="270" font-size="21" fill="#0F4D92">&#x6700;&#x540E;&#x4F4D;&#x7F6E;&#x8868;&#x793A;</text>
+    <text x="715" y="296" font-size="16" fill="#0F4D92">&#x8F93;&#x51FA;&#x6295;&#x5F71;</text>
+    <text x="1012" y="270" font-size="21" fill="#B64342">&#x5168;&#x8BCD;&#x8868; logits</text>
+    <text x="1012" y="296" font-size="16" fill="#B64342">&#x89E3;&#x7801;&#x9009;&#x62E9;&#x4E00;&#x4E2A; token</text>
+  </g>
+  <g fill="#FFF8D6" stroke="#FFD700" stroke-width="3">
+    <rect x="390" y="465" width="460" height="72" rx="22"/>
+  </g>
+  <text x="620" y="508" font-family="Arial, 'Noto Sans SC', sans-serif" font-size="21" font-weight="700" fill="#765800" text-anchor="middle">&#x8FFD;&#x52A0; token&#xFF0C;&#x8FDB;&#x5165;&#x4E0B;&#x4E00;&#x6B65;</text>
+  <g aria-hidden="true" fill="none" opacity="0" pointer-events="none">
+    <rect data-figure-safe-zone="text" x="48.0" y="26.0" width="643.5" height="67.2"/>
+    <rect data-figure-safe-zone="text" x="48.0" y="74.0" width="736.5" height="49.7"/>
+    <rect data-figure-safe-zone="text" x="123.0" y="260.0" width="107.6" height="53.7"/>
+    <rect data-figure-safe-zone="text" x="383.0" y="260.0" width="149.8" height="53.7"/>
+    <rect data-figure-safe-zone="text" x="703.0" y="237.0" width="143.7" height="52.4"/>
+    <rect data-figure-safe-zone="text" x="703.0" y="268.0" width="84.8" height="45.6"/>
+    <rect data-figure-safe-zone="text" x="1000.0" y="237.0" width="160.3" height="52.4"/>
+    <rect data-figure-safe-zone="text" x="1000.0" y="268.0" width="165.1" height="45.6"/>
+    <rect data-figure-safe-zone="text" x="500.0" y="475.0" width="240.1" height="52.4"/>
+  </g>
+</svg>

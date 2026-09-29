@@ -1,0 +1,12 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1100 360" role="img" aria-labelledby="title desc">
+  <title id="title">本书从 AI 收敛到 LLM 系统</title><desc id="desc">从 AI、深度学习、基础模型到 Transformer 为主的 LLM，最后聚焦本书的四个主题。</desc>
+  <style>.t{font-family:Arial,'PingFang SC','Microsoft YaHei',sans-serif;fill:#183153}.h{font-size:28px;font-weight:700}.s{font-size:15px;fill:#58708e}.k{font-size:18px;font-weight:700}.b{font-size:14px}.tag{font-size:12px;font-weight:700;letter-spacing:.7px}.arr{stroke:#8da5bf;stroke-width:2.5;fill:none;stroke-linecap:round;stroke-linejoin:round}</style>
+  <defs><marker id="arrow" markerWidth="8" markerHeight="8" refX="6.8" refY="3.8" orient="auto"><path d="M0 0L7.5 3.8L0 7.6Z" fill="#8da5bf"/></marker></defs>
+  <rect width="1100" height="360" rx="28" fill="#f8fbff"/><text x="58" y="66" class="t h">本书从 AI 收敛到 LLM 系统</text><text x="58" y="95" class="t s">范围逐层缩小，目的是把可交付的大模型系统讲清楚。</text>
+  <path class="arr" marker-end="url(#arrow)" d="M264 204H313M500 204H549M736 204H785"/>
+  <g><rect x="58" y="150" width="206" height="108" rx="18" fill="#eaf5ff" stroke="#9ac7ea" stroke-width="1.5"/><text x="82" y="184" class="t tag" fill="#2471a3">WIDER SCOPE</text><text x="82" y="219" class="t k">AI</text><text x="82" y="242" class="t b">智能系统的总范围</text></g>
+  <g><rect x="313" y="150" width="187" height="108" rx="18" fill="#eff8f5" stroke="#a8d4c3" stroke-width="1.5"/><text x="337" y="184" class="t tag" fill="#278067">LEARNING</text><text x="337" y="219" class="t k">深度学习</text><text x="337" y="242" class="t b">神经网络表示与学习</text></g>
+  <g><rect x="549" y="150" width="187" height="108" rx="18" fill="#fff7e8" stroke="#e8c77f" stroke-width="1.5"/><text x="573" y="184" class="t tag" fill="#a66d11">PRETRAINING</text><text x="573" y="219" class="t k">基础模型</text><text x="573" y="242" class="t b">广泛数据上的预训练</text></g>
+  <g><rect x="785" y="132" width="257" height="144" rx="20" fill="#f4f1ff" stroke="#b7a8ec" stroke-width="1.5"/><text x="811" y="166" class="t tag" fill="#7256b5">THIS BOOK’S FOCUS</text><text x="811" y="201" class="t k">Transformer 为主的 LLM</text><text x="811" y="226" class="t b">训练 · 模型计算 · 外部系统</text><text x="811" y="248" class="t b">推理服务</text></g>
+  <text x="58" y="321" class="t s">LLM 是基础模型的一条重要路径，不等同于全部 AI，也不覆盖所有智能系统问题。</text>
+</svg>

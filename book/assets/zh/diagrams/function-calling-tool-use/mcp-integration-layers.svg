@@ -1,0 +1,28 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="650" viewBox="0 0 1200 650" role="img" aria-labelledby="title desc">
+  <title id="title">MCP 在产品、调用能力和模型之间的定位</title>
+  <desc id="desc">从产品到基础模型的四层结构中，MCP 是工具和上下文的集成协议；模型提出调用，应用与执行侧保留权限和业务责任。</desc>
+  <rect width="1200" height="650" rx="30" fill="#FFFFFF"/>
+  <g font-family="Arial, 'Noto Sans SC', sans-serif">
+    <text x="58" y="68" font-size="31" font-weight="700" fill="#17324D">MCP 是集成协议层，不是权限系统</text>
+    <text x="58" y="105" font-size="18" fill="#5E7F9C">它让能力更容易被发现和接入；它不替代应用对执行后果的判断。</text>
+    <g stroke-width="3">
+      <rect x="75" y="165" width="620" height="82" rx="20" fill="#EAF3FB" stroke="#0F4D92"/>
+      <rect x="75" y="262" width="620" height="82" rx="20" fill="#FFF8D6" stroke="#FFD700"/>
+      <rect x="75" y="359" width="620" height="82" rx="20" fill="#F6CFCB" stroke="#B64342"/>
+      <rect x="75" y="456" width="620" height="82" rx="20" fill="#E9EEEA" stroke="#71827B"/>
+    </g>
+    <g text-anchor="middle">
+      <text x="138" y="216" font-size="30" font-weight="700" fill="#17324D">①</text><text x="365" y="204" font-size="22" font-weight="700" fill="#17324D">应用产品</text><text x="365" y="230" font-size="16" fill="#0F4D92">用户体验、业务流程、呈现与执行边界</text>
+      <text x="138" y="313" font-size="30" font-weight="700" fill="#765800">②</text><text x="365" y="301" font-size="22" font-weight="700" fill="#765800">MCP 接入协议</text><text x="365" y="327" font-size="16" fill="#765800">prompts、resources 与 tools 的描述、发现和交换</text>
+      <text x="138" y="410" font-size="30" font-weight="700" fill="#B64342">③</text><text x="365" y="398" font-size="22" font-weight="700" fill="#B64342">Function Calling</text><text x="365" y="424" font-size="16" fill="#B64342">模型生成符合 schema 的结构化调用提议</text>
+      <text x="138" y="507" font-size="30" font-weight="700" fill="#40534C">④</text><text x="365" y="495" font-size="22" font-weight="700" fill="#40534C">基础语言模型</text><text x="365" y="521" font-size="16" fill="#60716A">根据当前上下文预测后续 token</text>
+    </g>
+    <path d="M735 175V528" fill="none" stroke="#FFD700" stroke-width="4"/>
+    <path d="M735 175h28M735 528h28" fill="none" stroke="#FFD700" stroke-width="4"/>
+    <text x="805" y="212" font-size="20" font-weight="700" fill="#765800">不能由 MCP 自动完成</text>
+    <g font-size="18" fill="#7D5621"><text x="805" y="260">• 身份认证与授权</text><text x="805" y="299">• 参数和状态校验</text><text x="805" y="338">• 幂等、审计与限额</text><text x="805" y="377">• 领域语义与副作用</text><text x="805" y="416">• 对外部结果的核验</text></g>
+    <rect x="790" y="456" width="330" height="82" rx="18" fill="#F6CFCB" stroke="#B64342" stroke-width="3"/>
+    <text x="955" y="490" text-anchor="middle" font-size="20" font-weight="700" fill="#B64342">执行责任仍在应用与工具侧</text><text x="955" y="517" text-anchor="middle" font-size="16" fill="#B64342">协议提升互操作性，不转移责任。</text>
+    <text x="600" y="593" text-anchor="middle" font-size="18" fill="#5E7F9C">结构化提议不等于已获授权，更不等于动作已经成功。</text>
+  </g>
+<g aria-hidden="true" fill="none" opacity="0" pointer-events="none"><rect data-figure-safe-zone="text" x="46.0" y="25.0" width="458.0" height="65.8"/><rect data-figure-safe-zone="text" x="46.0" y="75.0" width="504.4" height="48.3"/><rect data-figure-safe-zone="text" x="126.0" y="174.0" width="40.0" height="64.5"/><rect data-figure-safe-zone="text" x="353.0" y="170.0" width="107.6" height="53.7"/><rect data-figure-safe-zone="text" x="353.0" y="202.0" width="268.6" height="45.6"/><rect data-figure-safe-zone="text" x="126.0" y="271.0" width="40.0" height="64.5"/><rect data-figure-safe-zone="text" x="353.0" y="267.0" width="153.4" height="53.7"/><rect data-figure-safe-zone="text" x="353.0" y="299.0" width="377.1" height="45.6"/><rect data-figure-safe-zone="text" x="126.0" y="368.0" width="40.0" height="64.5"/><rect data-figure-safe-zone="text" x="353.0" y="364.0" width="207.0" height="53.7"/><rect data-figure-safe-zone="text" x="353.0" y="396.0" width="303.4" height="45.6"/><rect data-figure-safe-zone="text" x="126.0" y="465.0" width="40.0" height="64.5"/><rect data-figure-safe-zone="text" x="353.0" y="461.0" width="149.4" height="53.7"/><rect data-figure-safe-zone="text" x="353.0" y="493.0" width="241.1" height="45.6"/><rect data-figure-safe-zone="text" x="793.0" y="180.0" width="209.0" height="51.0"/><rect data-figure-safe-zone="text" x="793.0" y="231.0" width="154.7" height="47.0"/><rect data-figure-safe-zone="text" x="793.0" y="270.0" width="154.7" height="47.0"/><rect data-figure-safe-zone="text" x="793.0" y="309.0" width="163.6" height="47.0"/><rect data-figure-safe-zone="text" x="793.0" y="348.0" width="170.9" height="47.0"/><rect data-figure-safe-zone="text" x="793.0" y="387.0" width="170.9" height="47.0"/><rect data-figure-safe-zone="text" x="829.0" y="458.0" width="252.0" height="51.0"/><rect data-figure-safe-zone="text" x="835.9" y="489.0" width="238.2" height="45.6"/><rect data-figure-safe-zone="text" x="390.5" y="563.0" width="418.9" height="48.3"/></g></svg>

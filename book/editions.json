@@ -1,0 +1,15 @@
+{
+  "default": "zh-Hans",
+  "editions": {
+    "zh-Hans": {
+      "label": "简体中文",
+      "source": ".",
+      "status": "published"
+    },
+    "en": {
+      "label": "English",
+      "source": "translations/en",
+      "status": "published"
+    }
+  }
+}

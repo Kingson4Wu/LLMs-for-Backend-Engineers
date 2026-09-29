@@ -1,0 +1,36 @@
+<?xml version="1.0"?>
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="650" viewBox="0 0 1200 650" role="img" aria-labelledby="title desc">
+  <title id="title">Quality controls layered by risk and frequency</title>
+  <desc id="desc">Frequent low-risk work relies mainly on automated checks, frequent medium-risk work adds sampling, and rare high-risk work uses human confirmation; reviewed unknowns become new rules and cases.</desc>
+  <defs>
+    <marker id="a" viewBox="0 0 10 10" refX="8" refY="5" markerWidth="8" markerHeight="8" orient="auto">
+      <path d="M0 0 10 5 0 10z" fill="#0F4D92"/>
+    </marker>
+  </defs>
+  <rect width="1200" height="650" rx="30" fill="#FFFFFF"/>
+  <g font-family="Arial,sans-serif">
+    <text x="58" y="68" font-size="31" font-weight="700" fill="#17324D">Layer quality controls by risk and frequency, not one ruler for everything</text>
+    <text x="58" y="105" font-size="18" fill="#5E7F9C">The closer a control is to high-consequence boundaries, the more it needs independent evidence, human judgment, and a clear escalation path.</text>
+    <g stroke-width="3">
+      <rect x="100" y="165" width="900" height="95" rx="22" fill="#EAF3FB" stroke="#0F4D92"/>
+      <rect x="170" y="285" width="760" height="95" rx="22" fill="#FFF8D6" stroke="#FFD700"/>
+      <rect x="240" y="405" width="620" height="95" rx="22" fill="#F6CFCB" stroke="#B64342"/>
+    </g>
+    <text x="140" y="205" font-size="22" font-weight="700" fill="#17324D">frequent &#xB7; low risk</text>
+    <text x="520" y="205" font-size="21" fill="#0F4D92">automated checks: scale, speed, consistency</text>
+    <text x="140" y="234" font-size="16" fill="#0F4D92">format, structure, known rules, deterministic constraints</text>
+    <text x="210" y="325" font-size="22" font-weight="700" fill="#765800">frequent &#xB7; medium risk</text>
+    <text x="520" y="315" font-size="19" fill="#765800">automation + sampling:</text>
+    <text x="520" y="338" font-size="19" fill="#765800">detect drift and misjudgment</text>
+    <text x="210" y="364" font-size="16" fill="#765800">quality sampling, human calibration, anomaly monitoring</text>
+    <text x="280" y="445" font-size="22" font-weight="700" fill="#B64342">rare &#xB7; high risk</text>
+    <text x="520" y="432" font-size="17" fill="#B64342">human confirmation:</text>
+    <text x="520" y="454" font-size="17" fill="#B64342">responsibility and</text>
+    <text x="520" y="476" font-size="17" fill="#B64342">irreversible consequences</text>
+    <text x="280" y="492" font-size="15" fill="#B64342">sensitive actions, major loss, unknown risk, escalation</text>
+    <path d="M870 500V515H980V522" fill="none" stroke="#0F4D92" stroke-width="4" marker-end="url(#a)" data-figure-connector="true"/>
+    <rect x="850" y="530" width="260" height="65" rx="18" fill="#EAF3FB" stroke="#0F4D92" stroke-width="3"/>
+    <text x="980" y="558" text-anchor="middle" font-size="19" font-weight="700" fill="#17324D">unknown cases</text>
+    <text x="980" y="582" text-anchor="middle" font-size="16" fill="#0F4D92">reviewed into new rules and cases</text>
+  </g>
+  <g aria-hidden="true" fill="none" opacity="0" pointer-events="none"><rect data-figure-safe-zone="text" x="46.0" y="25.0" width="1216.9" height="65.8"/><rect data-figure-safe-zone="text" x="46.0" y="75.0" width="1334.4" height="48.3"/><rect data-figure-safe-zone="text" x="128.0" y="171.0" width="241.4" height="53.7"/><rect data-figure-safe-zone="text" x="508.0" y="172.0" width="493.6" height="52.4"/><rect data-figure-safe-zone="text" x="128.0" y="206.0" width="498.2" height="45.6"/><rect data-figure-safe-zone="text" x="198.0" y="291.0" width="275.7" height="53.7"/><rect data-figure-safe-zone="text" x="508.0" y="284.0" width="241.4" height="49.7"/><rect data-figure-safe-zone="text" x="508.0" y="307.0" width="300.6" height="49.7"/><rect data-figure-safe-zone="text" x="198.0" y="336.0" width="481.6" height="45.6"/><rect data-figure-safe-zone="text" x="268.0" y="411.0" width="207.0" height="53.7"/><rect data-figure-safe-zone="text" x="508.0" y="403.0" width="192.0" height="47.0"/><rect data-figure-safe-zone="text" x="508.0" y="425.0" width="183.1" height="47.0"/><rect data-figure-safe-zone="text" x="508.0" y="447.0" width="245.0" height="47.0"/><rect data-figure-safe-zone="text" x="268.0" y="465.0" width="453.0" height="44.2"/><rect data-figure-safe-zone="text" x="903.8" y="527.0" width="152.4" height="49.7"/><rect data-figure-safe-zone="text" x="830.7" y="554.0" width="298.6" height="45.6"/></g></svg>

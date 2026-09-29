@@ -1,0 +1,24 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 600 840" width="600" height="840" role="img" aria-labelledby="title desc">
+  <title id="title">Understanding LLMs for Software Engineers</title>
+  <desc id="desc">A guide to large language models from foundations and model internals to external systems and infrastructure.</desc>
+  <rect width="600" height="840" fill="#f6f4ed"/>
+  <rect x="45" y="48" width="56" height="56" rx="14" fill="#23332f"/>
+  <path d="M59 65h24M59 77h17M59 89h24" fill="none" stroke="#f6f4ed" stroke-linecap="round" stroke-width="5"/>
+  <circle cx="89" cy="89" r="4" fill="#eac7b4"/>
+  <text x="45" y="174" fill="#646e65" font-family="sans-serif" font-size="13" letter-spacing="2">FROM FOUNDATIONS TO SYSTEMS</text>
+  <g font-family="sans-serif" font-weight="700" fill="#23332f">
+    <text x="42" y="260" font-size="45">Understanding</text>
+    <text x="42" y="320" font-size="42" fill="#b34a2e">LLMs for</text>
+    <text x="42" y="370" font-size="34">Software Engineers</text>
+  </g>
+  <text x="45" y="422" font-family="sans-serif" font-size="18" fill="#646e65">Principles · Mechanisms · Systems</text>
+  <text x="45" y="464" font-family="sans-serif" font-size="20" fill="#646e65">A systems-first guide for software engineers</text>
+  <g stroke="#d6d8cd" fill="none"><path d="M45 520H555M45 576H555M45 632H555M45 688H555"/></g>
+  <g font-family="sans-serif" font-size="15" fill="#23332f">
+    <text x="45" y="556" fill="#b34a2e">01</text><text x="93" y="556">Math &amp; machine learning</text>
+    <text x="45" y="612" fill="#b34a2e">02</text><text x="93" y="612">LLM internals</text>
+    <text x="45" y="668" fill="#b34a2e">03</text><text x="93" y="668">LLMs and external systems</text>
+    <text x="45" y="724" fill="#b34a2e">04</text><text x="93" y="724">LLM infrastructure</text>
+  </g>
+  <text x="45" y="772" font-family="sans-serif" font-size="17" fill="#23332f">Kingson Wu</text><text x="365" y="772" font-family="sans-serif" font-size="12" fill="#646e65">READ · REASON · CONNECT</text>
+</svg>

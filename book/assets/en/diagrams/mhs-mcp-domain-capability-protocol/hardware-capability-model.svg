@@ -1,0 +1,41 @@
+<?xml version="1.0"?>
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="650" viewBox="0 0 1200 650" role="img" aria-labelledby="title desc">
+  <title id="title">From vendor interfaces to a stable hardware capability model</title>
+  <desc id="desc">Drivers map different robot-arm interfaces into a standard RobotArm capability model containing objects, state, operations, and constraints.</desc>
+  <defs>
+    <marker id="a" viewBox="0 0 10 10" refX="8.5" refY="5" markerWidth="8" markerHeight="8" orient="auto">
+      <path d="M0 0 10 5 0 10z" fill="#9CBFC4"/>
+    </marker>
+    <style>text{font-family:Arial,sans-serif}.h{font-size:22px;font-weight:700}.b{font-size:17px}</style>
+  </defs>
+  <rect width="1200" height="650" fill="#FFFDF9"/>
+  <text x="65" y="68" font-size="32" font-weight="700" fill="#665F57">Do not bind upper workflows to vendor function names</text>
+  <text x="65" y="103" class="b" fill="#526D73">Drivers map different APIs while retaining state, limits, and safety meaning as a stable capability boundary.</text>
+  <g>
+    <rect x="65" y="170" width="230" height="75" rx="16" fill="#F8F1E5" stroke="#F4D5CE" stroke-width="2"/>
+    <text x="97" y="215" class="h" fill="#806560">ABB</text>
+    <text x="97" y="238" class="b" fill="#806560">moveJoint()</text>
+    <rect x="65" y="275" width="230" height="75" rx="16" fill="#F8F1E5" stroke="#F4D5CE" stroke-width="2"/>
+    <text x="97" y="320" class="h" fill="#806560">Fanuc</text>
+    <text x="97" y="343" class="b" fill="#806560">jointMove()</text>
+    <rect x="65" y="380" width="230" height="75" rx="16" fill="#F8F1E5" stroke="#F4D5CE" stroke-width="2"/>
+    <text x="97" y="425" class="h" fill="#806560">KUKA</text>
+    <text x="97" y="448" class="b" fill="#806560">PTP()</text>
+    <path d="M295 208h105m-105 104h105m-105 105h105" fill="none" stroke="#D3AAA1" stroke-width="4" marker-end="url(#a)" data-figure-connector="true"/>
+  </g>
+  <rect x="415" y="150" width="430" height="330" rx="24" fill="#E7E2D8"/>
+  <text x="447" y="197" class="h" fill="#665F57">Standard RobotArm capability</text>
+  <text x="447" y="247" font-size="15" fill="#665F57">object and state: pose &#xB7; payload &#xB7; health</text>
+  <text x="447" y="292" font-size="15" fill="#665F57">operations: move &#xB7; grasp &#xB7; stop &#xB7; calibrate</text>
+  <text x="447" y="337" font-size="15" fill="#665F57">constraints: workspace &#xB7; units</text><text x="447" y="359" font-size="15" fill="#665F57">payload &#xB7; safety limits</text>
+  <text x="447" y="397" font-size="15" fill="#665F57">governance: confirmation &#xB7; result state</text><text x="447" y="419" font-size="15" fill="#665F57">recovery</text>
+  <text x="447" y="454" font-size="15" fill="#665F57">upper layers call capability, not a vendor API</text>
+  <path d="M845 150H945V243" fill="none" stroke="#9CBFC4" stroke-width="4" marker-end="url(#a)" data-figure-connector="true"/>
+  <rect x="960" y="245" width="175" height="140" rx="20" fill="#EFF8F8" stroke="#C8E3E5" stroke-width="2"/>
+  <text x="992" y="292" class="h" fill="#665F57">Agent / app</text>
+  <text x="992" y="326" class="b" fill="#526D73">discover capability</text>
+  <text x="992" y="342" class="b" fill="#526D73">check limits</text>
+  <text x="992" y="366" class="b" fill="#526D73">then invoke</text>
+  <rect x="65" y="540" width="1070" height="45" rx="13" fill="#FDF0ED"/>
+  <text x="93" y="569" font-size="17" fill="#806560">Abstraction means reusable complete semantics, not bluntly changing different vendor functions into one string.</text>
+  <g aria-hidden="true" fill="none" opacity="0" pointer-events="none"><rect data-figure-safe-zone="text" x="53.0" y="24.0" width="889.3" height="67.2"/><rect data-figure-safe-zone="text" x="53.0" y="74.0" width="987.6" height="47.0"/><rect data-figure-safe-zone="text" x="85.0" y="181.0" width="58.3" height="53.7"/><rect data-figure-safe-zone="text" x="85.0" y="209.0" width="121.2" height="47.0"/><rect data-figure-safe-zone="text" x="85.0" y="286.0" width="81.2" height="53.7"/><rect data-figure-safe-zone="text" x="85.0" y="314.0" width="121.2" height="47.0"/><rect data-figure-safe-zone="text" x="85.0" y="391.0" width="69.8" height="53.7"/><rect data-figure-safe-zone="text" x="85.0" y="419.0" width="68.2" height="47.0"/><rect data-figure-safe-zone="text" x="435.0" y="163.0" width="344.3" height="53.7"/><rect data-figure-safe-zone="text" x="435.0" y="220.0" width="343.8" height="44.2"/><rect data-figure-safe-zone="text" x="435.0" y="265.0" width="359.4" height="44.2"/><rect data-figure-safe-zone="text" x="435.0" y="310.0" width="258.0" height="44.2"/><rect data-figure-safe-zone="text" x="435.0" y="332.0" width="203.4" height="44.2"/><rect data-figure-safe-zone="text" x="435.0" y="370.0" width="328.2" height="44.2"/><rect data-figure-safe-zone="text" x="435.0" y="392.0" width="86.4" height="44.2"/><rect data-figure-safe-zone="text" x="435.0" y="427.0" width="382.8" height="44.2"/><rect data-figure-safe-zone="text" x="980.0" y="258.0" width="149.8" height="53.7"/><rect data-figure-safe-zone="text" x="980.0" y="297.0" width="192.0" height="47.0"/><rect data-figure-safe-zone="text" x="980.0" y="313.0" width="130.1" height="47.0"/><rect data-figure-safe-zone="text" x="980.0" y="337.0" width="121.2" height="47.0"/><rect data-figure-safe-zone="text" x="81.0" y="540.0" width="1005.2" height="47.0"/></g></svg>

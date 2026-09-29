@@ -1,0 +1,37 @@
+<?xml version="1.0"?>
+<svg xmlns="http://www.w3.org/2000/svg" width="1080" height="640" viewBox="0 0 1080 640" role="img" aria-labelledby="title desc">
+  <title id="title">SGD &#x5728;&#x9661;&#x5CED;&#x5CE1;&#x8C37;&#x4E2D;&#x56E0;&#x7EDF;&#x4E00;&#x6B65;&#x957F;&#x53D1;&#x751F;&#x6A2A;&#x5411;&#x9707;&#x8361;</title>
+  <desc id="desc">&#x692D;&#x5706;&#x7B49;&#x9AD8;&#x7EBF;&#x5F62;&#x6210;&#x4E00;&#x6761;&#x9661;&#x5CED;&#x6A2A;&#x5411;&#x3001;&#x5E73;&#x7F13;&#x7EB5;&#x5411;&#x7684;&#x635F;&#x5931;&#x5CE1;&#x8C37;&#x3002;&#x7EDF;&#x4E00;&#x5B66;&#x4E60;&#x7387;&#x8BA9; SGD &#x5728;&#x9661;&#x5CED;&#x65B9;&#x5411;&#x53CD;&#x590D;&#x8D8A;&#x8FC7;&#x8C37;&#x5E95;&#xFF0C;&#x53EA;&#x7F13;&#x6162;&#x6CBF;&#x5E73;&#x7F13;&#x65B9;&#x5411;&#x524D;&#x8FDB;&#x3002;</desc>
+  <defs>
+    <marker id="a" viewBox="0 0 10 10" refX="8" refY="5" markerWidth="8" markerHeight="8" orient="auto">
+      <path d="M0 0 10 5 0 10z" fill="#0F4D92"/>
+    </marker>
+  </defs>
+  <rect width="1080" height="640" rx="36" fill="#FFFFFF"/>
+  <text x="60" y="70" font-family="Arial, 'Noto Sans SC', sans-serif" font-size="32" font-weight="700" fill="#17324D">&#x7EDF;&#x4E00;&#x6B65;&#x957F;&#x8BA9; SGD &#x5728;&#x9661;&#x5CED;&#x5CE1;&#x8C37;&#x4E2D;&#x6A2A;&#x5411;&#x9707;&#x8361;</text>
+  <g fill="none" stroke="#FFD700" stroke-width="3">
+    <ellipse cx="520" cy="315" rx="350" ry="115"/>
+    <ellipse cx="520" cy="315" rx="265" ry="84"/>
+    <ellipse cx="520" cy="315" rx="180" ry="55"/>
+    <ellipse cx="520" cy="315" rx="90" ry="25"/>
+  </g>
+  <path d="M245 170L805 455" fill="none" stroke="#0F4D92" stroke-width="4" marker-end="url(#a)" data-figure-connector="true"/>
+  <path d="M275 190L620 360L390 280L720 410L475 335L805 455" fill="none" stroke="#B64342" stroke-width="7" stroke-linejoin="round" marker-end="url(#a)" data-figure-connector="true"/>
+  <circle cx="520" cy="315" r="9" fill="#17324D"/>
+  <g font-family="Arial, 'Noto Sans SC', sans-serif">
+    <text x="155" y="140" font-size="20" fill="#765800">&#x9661;&#x5CED;&#x65B9;&#x5411;&#xFF1A;&#x5BB9;&#x6613;&#x8D8A;&#x8FC7;&#x8C37;&#x5E95;</text>
+    <text x="730" y="500" font-size="20" fill="#0F4D92">&#x5E73;&#x7F13;&#x76EE;&#x6807;&#x65B9;&#x5411;&#xFF1A;&#x8FDB;&#x5C55;&#x6162;</text>
+    <text x="400" y="220" font-size="20" fill="#B64342">&#x6A2A;&#x5411;&#x9707;&#x8361;</text>
+    <text x="580" y="290" font-size="18" fill="#0F4D92">&#x8C37;&#x5E95;</text>
+  </g>
+  <path d="M110 550H970" stroke="#FFD700" stroke-width="3"/>
+  <text x="540" y="595" font-family="Arial, 'Noto Sans SC', sans-serif" font-size="18" fill="#765800" text-anchor="middle">Momentum &#x80FD;&#x7D2F;&#x79EF;&#x4E00;&#x81F4;&#x65B9;&#x5411;&#x3001;&#x62B5;&#x6D88;&#x4EA4;&#x66FF;&#x65B9;&#x5411;&#xFF1B;&#x4F46;&#x5B83;&#x4E0D;&#x6D88;&#x9664;&#x53C2;&#x6570;&#x5C3A;&#x5EA6;&#x5DEE;&#x5F02;&#x3002;</text>
+  <g aria-hidden="true" fill="none" opacity="0" pointer-events="none">
+    <rect data-figure-safe-zone="text" x="48.0" y="26.0" width="563.2" height="67.2"/>
+    <rect data-figure-safe-zone="text" x="143.0" y="108.0" width="224.4" height="51.0"/>
+    <rect data-figure-safe-zone="text" x="718.0" y="468.0" width="205.4" height="51.0"/>
+    <rect data-figure-safe-zone="text" x="388.0" y="188.0" width="100.0" height="51.0"/>
+    <rect data-figure-safe-zone="text" x="568.0" y="260.0" width="58.2" height="48.3"/>
+    <rect data-figure-safe-zone="text" x="266.6" y="565.0" width="546.7" height="48.3"/>
+  </g>
+</svg>

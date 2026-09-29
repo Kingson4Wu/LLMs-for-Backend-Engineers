@@ -1,0 +1,170 @@
+---
+import fs from 'node:fs';
+import path from 'node:path';
+import Layout from '../../layouts/Layout.astro';
+import { locales, bookDir, repo, t } from '../../lib/book.mjs';
+import { withBase } from '../../lib/paths.mjs';
+export function getStaticPaths() {
+  return locales.map((locale) => ({ params: { locale } }));
+}
+const { locale } = Astro.params;
+const base = import.meta.env.BASE_URL;
+const files = [
+  {
+    ext: 'md',
+    title: 'Markdown',
+    desc: t(locale, '完整单文件书稿，适合纯文本阅读、检索与本地 AI 工具。', 'A complete single-file manuscript for plain-text reading, search, and local AI tools.'),
+  },
+  {
+    ext: 'pdf',
+    title: 'PDF',
+    desc: t(
+      locale,
+      '固定版式，适合桌面阅读与打印。',
+      'Fixed pages for desktop reading and printing.',
+    ),
+  },
+  {
+    ext: 'epub',
+    title: 'EPUB',
+    desc: t(
+      locale,
+      '可重排版式，适合手机和平板阅读器。',
+      'Reflowable text for phones, tablets, and ebook readers.',
+    ),
+  },
+];
+const htmlExists = fs.existsSync(
+  path.join(bookDir, `exported/${locale}/Understanding-LLMs.print.html`),
+);
+---
+
+<Layout
+  pageKind="downloads"
+  locale={locale}
+  title={t(locale, '电子书与版本', 'Editions & downloads')}
+>
+  <main id="main" class="simple-page">
+    <p class="eyebrow">
+      {t(locale, '离线也能继续阅读', 'KEEP READING OFFLINE')}
+    </p>
+    <h1>
+      {t(locale, '选择适合你的版本', 'Choose your edition')}
+      <em>.</em>
+    </h1>
+    <p>
+      {t(
+        locale,
+        '这里展示本站包含的出版文件。各文件的源版本与构建时间以清单为准；正式发行及 PDF 也可前往 GitHub Releases 查看。',
+        'These publication files are included in this site. Check the manifest for each file’s source revision and build time. Visit GitHub Releases for versioned editions and PDFs.',
+      )}
+    </p>
+    <section class="ai-download-guide" aria-labelledby="ai-download-guide-title">
+      <p class="eyebrow">
+        {t(locale, '推荐的学习方式', 'RECOMMENDED LEARNING METHOD')}
+      </p>
+      <h2 id="ai-download-guide-title">
+        {t(locale, '让 AI 下载完整书稿后带你学习', 'Let AI download the complete book, then teach')}
+      </h2>
+      <p>
+        {t(
+          locale,
+            '首页提供一段可复制提示词：让能联网或下载文件的 AI 先下载完整 PDF，再按你的目标组织学习。',
+            'The home page provides one copyable prompt: it asks an AI that can access the web or download files to fetch the complete PDF, then organize learning around your goal.',
+        )}
+      </p>
+      <ol>
+        <li>
+          {t(
+            locale,
+            '打开与你要学习的语言相同的首页，复制唯一的学习提示词。',
+            'Open the home page for the language you will study and copy its single learning prompt.',
+          )}
+        </li>
+        <li>
+          {t(
+            locale,
+            '粘贴给 ChatGPT、Claude、DeepSeek、Codex 或其他能下载链接文件的 AI，让它先读取 PDF。',
+            'Paste it into ChatGPT, Claude, DeepSeek, Codex, or another AI that can download linked files, and let it read the PDF first.',
+          )}
+        </li>
+        <li>
+          {t(
+            locale,
+            '从一个工程问题或不理解的公式开始；要求它标明 chapter ID、标题和依据，而不是只给摘要。',
+            'Start with an engineering question or a formula you do not understand; require chapter IDs, titles, and evidence instead of a summary alone.',
+          )}
+        </li>
+      </ol>
+      <p>
+        {t(
+          locale,
+          '若所用 AI 无法下载或读取 PDF，下载页也提供 Markdown、EPUB 与完整 print HTML；逐图查看 SVG 和源文件时可 clone 仓库后使用 Codex 等本地工具。',
+          'If the AI cannot download or read the PDF, this page also provides Markdown, EPUB, and complete print HTML; clone the repository and use a local tool such as Codex for SVG and source-level figure inspection.',
+        )}
+      </p>
+      <div class="ai-download-links">
+        <a class="button primary" href={withBase(`/${locale}/`, base)}>
+          {t(locale, '打开首页并复制提示词', 'Open home page and copy prompt')} ↗
+        </a>
+        <a href={repo}>
+          {t(locale, '查看仓库中的本地学习说明', 'See local-learning guidance in the repository')} ↗
+        </a>
+      </div>
+    </section>
+    <div class="format-cards">
+      {files.map((file) => (
+        <div>
+          <h2>{file.title}</h2>
+          <p>{file.desc}</p>
+          {fs.existsSync(
+            path.join(bookDir, `exported/${locale}/Understanding-LLMs.${file.ext}`),
+          ) ? (
+            <a
+              href={withBase(`/exported/${locale}/Understanding-LLMs.${file.ext}`, base)}
+              download
+            >
+              {t(locale, '下载此文件', 'Download this file')} ↓
+            </a>
+          ) : (
+            <p>
+              {t(
+                locale,
+                '本站未包含此文件，可查看下方 GitHub Releases，或按命令本地生成。',
+                'This file is not included in the site. Check GitHub Releases below, or generate it locally.',
+              )}
+            </p>
+          )}
+        </div>
+      ))}
+    </div>
+    {htmlExists && (
+      <p>
+        <a href={withBase(`/exported/${locale}/Understanding-LLMs.print.html`, base)}>
+          {t(locale, '打开完整打印 HTML', 'Open the complete print HTML')} ↗
+        </a>{' '}
+        ·{' '}
+        <a href={withBase(`/exported/${locale}/manifest.json`, base)}>
+          {t(locale, '构建清单与 SHA256', 'Build manifest & SHA256')}
+        </a>
+      </p>
+    )}
+    <p>
+      <a href={`${repo}/releases`}>
+        {t(locale, '查看 GitHub Releases', 'Visit GitHub Releases')} ↗
+      </a>
+    </p>
+    <h2>{t(locale, '本地构建', 'Build locally')}</h2>
+    <pre><code>{`python3 tools/book-kit/export_markdown.py --locale ${locale}\npython3 tools/book-kit/build_print_html.py --locale ${locale}\npython3 tools/book-kit/export_epub.py --locale ${locale}\npython3 tools/book-kit/export_book_pdf.py --locale ${locale}`}</code></pre>
+    <p>
+      {t(
+        locale,
+        '请在仓库根目录执行。需要 Python 3.11+、Pandoc 和 librsvg；PDF 另需 XeLaTeX、模板依赖与字体。详细安装步骤见本地开发指南。',
+        'Run from the repository root. Requires Python 3.11+, Pandoc and librsvg; PDF also needs XeLaTeX, template packages and fonts. See the local development guide for setup.',
+      )}
+    </p>
+    <a href={`${repo}/blob/main/LOCAL_DEVELOPMENT.md`}>
+      {t(locale, '本地开发指南', 'Local development guide')} ↗
+    </a>
+  </main>
+</Layout>

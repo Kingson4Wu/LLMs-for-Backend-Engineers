@@ -1,0 +1,37 @@
+<?xml version="1.0"?>
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="650" viewBox="0 0 1200 650" role="img" aria-labelledby="title desc">
+  <title id="title">Layers of evidence in a business quality system</title>
+  <desc id="desc">Automated checks, offline evaluation, human review, and online feedback together make an agent business quality system; no individual layer substitutes for the rest.</desc>
+  <rect width="1200" height="650" rx="30" fill="#FFFFFF"/>
+  <g font-family="Arial,sans-serif" text-anchor="middle">
+    <text x="58" y="68" text-anchor="start" font-size="31" font-weight="700" fill="#17324D">Evaluation is one source of business-quality evidence, not all of it</text>
+    <text x="58" y="105" text-anchor="start" font-size="18" fill="#5E7F9C">Automation gives scale and speed; people calibrate high-risk boundaries; real distribution and incidents correct offline blind spots.</text>
+    <g stroke-width="3">
+      <rect x="115" y="165" width="970" height="90" rx="22" fill="#EAF3FB" stroke="#0F4D92"/>
+      <rect x="190" y="280" width="820" height="90" rx="22" fill="#FFF8D6" stroke="#FFD700"/>
+      <rect x="265" y="395" width="670" height="90" rx="22" fill="#EAF3FB" stroke="#0F4D92"/>
+      <rect x="340" y="510" width="520" height="60" rx="18" fill="#F6CFCB" stroke="#B64342"/>
+    </g>
+    <text x="600" y="204" text-anchor="middle" font-size="23" font-weight="700" fill="#17324D">automated checks: scale, speed, deterministic floor</text>
+    <text x="600" y="235" text-anchor="middle" font-size="17" fill="#0F4D92">format, constraints, authority, regression metrics, common failure patterns</text>
+    <text x="600" y="319" text-anchor="middle" font-size="23" font-weight="700" fill="#765800">evaluation suite: runnable, reproducible, comparable offline evidence</text>
+    <text x="600" y="350" text-anchor="middle" font-size="17" fill="#765800">tasks, cases, graders, traces, cost, and success conditions</text>
+    <text x="600" y="426" text-anchor="middle" font-size="17" font-weight="700" fill="#17324D">human review: subjective quality</text>
+    <text x="600" y="448" text-anchor="middle" font-size="17" font-weight="700" fill="#17324D">and high-risk boundaries</text>
+    <text x="600" y="474" text-anchor="middle" font-size="15" fill="#0F4D92">ambiguous goals, potential harm, disputed cases, escalation decisions</text>
+    <text x="600" y="548" text-anchor="middle" font-size="16" font-weight="700" fill="#B64342">online feedback: distribution, feedback, and incidents</text>
+    <text x="600" y="612" text-anchor="middle" font-size="18" fill="#5E7F9C">A mature quality system is neither &#x201C;all automated&#x201D; nor &#x201C;all human&#x201D;: its evidence sources cross-check one another.</text>
+  </g>
+  <g aria-hidden="true" fill="none" opacity="0" pointer-events="none">
+    <rect data-figure-safe-zone="text" x="46.0" y="25.0" width="1120.2" height="65.8"/>
+    <rect data-figure-safe-zone="text" x="46.0" y="75.0" width="1268.9" height="48.3"/>
+    <rect data-figure-safe-zone="text" x="588.0" y="169.0" width="634.0" height="55.0"/>
+    <rect data-figure-safe-zone="text" x="588.0" y="206.0" width="687.0" height="47.0"/>
+    <rect data-figure-safe-zone="text" x="588.0" y="284.0" width="849.2" height="55.0"/>
+    <rect data-figure-safe-zone="text" x="588.0" y="321.0" width="545.6" height="47.0"/>
+    <rect data-figure-safe-zone="text" x="588.0" y="399.0" width="885.1" height="55.0"/>
+    <rect data-figure-safe-zone="text" x="588.0" y="436.0" width="634.0" height="47.0"/>
+    <rect data-figure-safe-zone="text" x="588.0" y="516.0" width="710.4" height="51.0"/>
+    <rect data-figure-safe-zone="text" x="588.0" y="582.0" width="1081.7" height="48.3"/>
+  </g>
+<g aria-hidden="true" fill="none" opacity="0" pointer-events="none"><rect data-figure-safe-zone="text" x="46.0" y="25.0" width="1120.2" height="65.8"/><rect data-figure-safe-zone="text" x="46.0" y="75.0" width="1268.9" height="48.3"/><rect data-figure-safe-zone="text" x="283.0" y="169.0" width="634.0" height="55.0"/><rect data-figure-safe-zone="text" x="256.5" y="206.0" width="687.0" height="47.0"/><rect data-figure-safe-zone="text" x="175.4" y="284.0" width="849.2" height="55.0"/><rect data-figure-safe-zone="text" x="327.2" y="321.0" width="545.6" height="47.0"/><rect data-figure-safe-zone="text" x="446.6" y="397.0" width="306.9" height="47.0"/><rect data-figure-safe-zone="text" x="481.9" y="419.0" width="236.2" height="47.0"/><rect data-figure-safe-zone="text" x="318.9" y="447.0" width="562.2" height="44.2"/><rect data-figure-safe-zone="text" x="363.4" y="520.0" width="473.3" height="45.6"/><rect data-figure-safe-zone="text" x="59.2" y="582.0" width="1081.7" height="48.3"/></g></svg>

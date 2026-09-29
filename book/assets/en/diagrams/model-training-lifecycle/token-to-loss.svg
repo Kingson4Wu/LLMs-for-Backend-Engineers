@@ -1,0 +1,69 @@
+<?xml version="1.0"?>
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="650" viewBox="0 0 1200 650" role="img" aria-labelledby="title desc">
+  <title id="title">How one forward pass becomes cross-entropy loss</title>
+  <desc id="desc">Input tokens pass through embeddings, Transformer, logits, and Softmax to produce a probability for the true target token; cross-entropy evaluates that probability.</desc>
+  <defs>
+    <marker id="a" viewBox="0 0 10 10" refX="8" refY="5" markerWidth="8" markerHeight="8" orient="auto">
+      <path d="M0 0 10 5 0 10z" fill="#0F4D92"/>
+    </marker>
+  </defs>
+  <rect width="1200" height="650" rx="30" fill="#FFFFFF"/>
+  <g font-family="Arial,sans-serif">
+    <text x="58" y="68" font-size="31" font-weight="700" fill="#17324D">A forward pass makes predictions; the objective turns them into loss</text>
+    <text x="58" y="105" font-size="18" fill="#5E7F9C">Architecture computes scores; cross-entropy evaluates whether the true next token received enough probability.</text>
+    <g fill="none" stroke="#0F4D92" stroke-width="4" marker-end="url(#a)">
+      <path d="M220 255H270"/>
+      <path d="M470 255H520"/>
+      <path d="M720 255H770"/>
+    </g>
+    <g stroke-width="3">
+      <rect x="55" y="175" width="165" height="160" rx="22" fill="#EAF3FB" stroke="#0F4D92"/>
+      <rect x="270" y="175" width="200" height="160" rx="22" fill="#FFF8D6" stroke="#FFD700"/>
+      <rect x="520" y="175" width="200" height="160" rx="22" fill="#EAF3FB" stroke="#0F4D92"/>
+      <rect x="770" y="175" width="170" height="160" rx="22" fill="#FFF8D6" stroke="#FFD700"/>
+    </g>
+    <g text-anchor="middle">
+      <text x="138" y="226" font-size="22" font-weight="700" fill="#17324D">input tokens</text>
+      <text x="138" y="259" font-size="16" fill="#0F4D92">earlier tokens condition</text>
+      <text x="138" y="285" font-size="16" fill="#0F4D92">the next token is target</text>
+      <text x="370" y="226" font-size="22" font-weight="700" fill="#765800">represent</text>
+      <text x="370" y="259" font-size="16" fill="#765800">token IDs &#x2192; embeddings</text>
+      <text x="370" y="285" font-size="16" fill="#765800">plus positions</text>
+      <text x="620" y="226" font-size="22" font-weight="700" fill="#17324D">Transformer</text>
+      <text x="620" y="259" font-size="16" fill="#0F4D92">contextual representations</text>
+      <text x="620" y="285" font-size="16" fill="#0F4D92">logits for entire vocabulary</text>
+      <text x="855" y="226" font-size="22" font-weight="700" fill="#765800">Softmax</text>
+      <text x="855" y="259" font-size="16" fill="#765800">normalize logits</text>
+      <text x="855" y="285" font-size="16" fill="#765800">into vocabulary probabilities</text>
+    </g>
+    <path d="M855 335V390" fill="none" stroke="#B64342" stroke-width="4" marker-end="url(#a)" data-figure-connector="true"/>
+    <rect x="420" y="410" width="700" height="112" rx="22" fill="#F6CFCB" stroke="#B64342" stroke-width="3"/>
+    <text x="770" y="451" text-anchor="middle" font-size="23" font-weight="700" fill="#B64342">cross-entropy: inspect the probability of the true target token</text>
+    <text x="770" y="487" text-anchor="middle" font-size="18" fill="#B64342">Lower probability for that target means larger loss; backpropagation starts from this loss.</text>
+    <path d="M235 530H405V524" fill="none" stroke="#0F4D92" stroke-width="4" marker-end="url(#a)" data-figure-connector="true"/>
+    <text x="55" y="461" font-size="19" font-weight="700" fill="#17324D">true target</text>
+    <text x="55" y="490" font-size="16" fill="#5E7F9C">the next token</text>
+    <text x="600" y="590" text-anchor="middle" font-size="18" fill="#5E7F9C">The model does not first say &#x201C;right&#x201D; or &#x201C;wrong&#x201D;: it scores every vocabulary candidate.</text>
+  </g>
+  <g aria-hidden="true" fill="none" opacity="0" pointer-events="none">
+    <rect data-figure-safe-zone="text" x="46.0" y="25.0" width="1120.2" height="65.8"/>
+    <rect data-figure-safe-zone="text" x="46.0" y="75.0" width="1053.6" height="48.3"/>
+    <rect data-figure-safe-zone="text" x="126.0" y="192.0" width="161.3" height="53.7"/>
+    <rect data-figure-safe-zone="text" x="126.0" y="231.0" width="223.7" height="45.6"/>
+    <rect data-figure-safe-zone="text" x="126.0" y="257.0" width="223.7" height="45.6"/>
+    <rect data-figure-safe-zone="text" x="358.0" y="192.0" width="127.0" height="53.7"/>
+    <rect data-figure-safe-zone="text" x="358.0" y="231.0" width="207.0" height="45.6"/>
+    <rect data-figure-safe-zone="text" x="358.0" y="257.0" width="140.5" height="45.6"/>
+    <rect data-figure-safe-zone="text" x="608.0" y="192.0" width="149.8" height="53.7"/>
+    <rect data-figure-safe-zone="text" x="608.0" y="231.0" width="240.3" height="45.6"/>
+    <rect data-figure-safe-zone="text" x="608.0" y="257.0" width="257.0" height="45.6"/>
+    <rect data-figure-safe-zone="text" x="843.0" y="192.0" width="104.1" height="53.7"/>
+    <rect data-figure-safe-zone="text" x="843.0" y="231.0" width="157.1" height="45.6"/>
+    <rect data-figure-safe-zone="text" x="843.0" y="257.0" width="265.3" height="45.6"/>
+    <rect data-figure-safe-zone="text" x="381.3" y="416.0" width="777.5" height="55.0"/>
+    <rect data-figure-safe-zone="text" x="332.1" y="457.0" width="875.8" height="48.3"/>
+    <rect data-figure-safe-zone="text" x="43.0" y="430.0" width="132.7" height="49.7"/>
+    <rect data-figure-safe-zone="text" x="43.0" y="462.0" width="140.5" height="45.6"/>
+    <rect data-figure-safe-zone="text" x="185.5" y="560.0" width="829.0" height="48.3"/>
+  </g>
+</svg>

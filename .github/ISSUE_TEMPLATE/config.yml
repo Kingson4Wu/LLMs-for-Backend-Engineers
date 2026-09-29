@@ -1,0 +1,8 @@
+blank_issues_enabled: false
+contact_links:
+  - name: 在线阅读
+    url: https://kingson4wu.github.io/Understanding-LLMs/zh-Hans/
+    about: 请先确认问题仍出现在当前线上版本，并在反馈中附文章 URL。
+  - name: 贡献指南
+    url: https://github.com/Kingson4Wu/Understanding-LLMs/blob/main/CONTRIBUTING.md
+    about: 了解中英文书稿、图表和阅读站的修改要求。

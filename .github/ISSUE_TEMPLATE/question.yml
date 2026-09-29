@@ -1,0 +1,19 @@
+name: 问题与讨论 / Question
+description: 讨论书中的机制、边界、工程判断或阅读体验
+labels: ["讨论"]
+body:
+  - type: input
+    id: location
+    attributes:
+      label: 相关文章
+      description: 请填写文章 URL、语言和标题。
+      placeholder: zh-Hans/read/llm-infrastructure/ · 简体中文
+    validations:
+      required: true
+  - type: textarea
+    id: question
+    attributes:
+      label: 问题与已有理解
+      description: 描述你的问题、场景和已尝试的推理；不要附上 API key、私人提示词或敏感数据。
+    validations:
+      required: true

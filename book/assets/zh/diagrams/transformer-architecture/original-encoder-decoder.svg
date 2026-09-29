@@ -1,0 +1,13 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1120" height="720" viewBox="0 0 1120 720" role="img" aria-labelledby="title desc">
+  <title id="title">原始 Transformer 编码器—解码器架构</title><desc id="desc">源 token 经过堆叠的编码器层。目标前缀 token 经掩码自注意力、对编码器状态的交叉注意力和前馈层后形成输出分布。</desc>
+  <defs><marker id="arrow" viewBox="0 0 10 10" refX="8" refY="5" markerWidth="7" markerHeight="7" orient="auto"><path d="M0 0 10 5 0 10z" fill="#0F4D92"/></marker></defs>
+  <rect width="1120" height="720" rx="36" fill="#fff"/><text x="56" y="64" font-family="Arial,'PingFang SC',sans-serif" font-size="30" font-weight="700" fill="#17324D">原始 Transformer：带 Post-LN 残差块的编码器—解码器</text>
+  <g font-family="Arial,'PingFang SC',sans-serif" text-anchor="middle" font-weight="700"><text x="280" y="128" font-size="23" fill="#0F4D92">编码器</text><text x="790" y="128" font-size="23" fill="#0F4D92">解码器</text></g>
+  <g stroke="#0F4D92" stroke-width="3"><rect x="90" y="160" width="380" height="400" rx="28" fill="#F4F8FC"/><rect x="600" y="160" width="380" height="400" rx="28" fill="#F4F8FC"/></g>
+  <g font-family="Arial,'PingFang SC',sans-serif" text-anchor="middle" font-size="20" font-weight="700" fill="#17324D"><text x="280" y="211">源嵌入 + 位置编码</text><text x="790" y="211">目标嵌入 + 位置编码</text></g>
+  <g fill="#FFF8D6" stroke="#C99B00" stroke-width="3"><rect x="145" y="255" width="270" height="62" rx="18"/><rect x="655" y="255" width="270" height="62" rx="18"/><rect x="655" y="360" width="270" height="62" rx="18"/><rect x="655" y="465" width="270" height="62" rx="18"/></g>
+  <g font-family="Arial,'PingFang SC',sans-serif" text-anchor="middle" font-size="18" font-weight="700" fill="#614A00"><text x="280" y="294">自注意力</text><text x="790" y="294">掩码自注意力</text><text x="790" y="399">交叉注意力</text><text x="790" y="504">前馈网络</text></g>
+  <g fill="#EAF3FB" stroke="#0F4D92" stroke-width="3"><rect x="145" y="380" width="270" height="62" rx="18"/><rect x="145" y="475" width="270" height="62" rx="18"/></g><g font-family="Arial,'PingFang SC',sans-serif" text-anchor="middle" font-size="18" font-weight="700" fill="#17324D"><text x="280" y="419">前馈网络</text><text x="280" y="514">编码器状态</text></g>
+  <g fill="none" stroke="#0F4D92" stroke-width="4" marker-end="url(#arrow)"><path d="M280 225V245M280 320V370M280 445V464M790 225V245M790 320V350M790 425V455M790 530V605M415 506C525 506 530 392 640 392"/></g>
+  <path d="M280 560V605" stroke="#0F4D92" stroke-width="4" marker-end="url(#arrow)"/><g font-family="Arial,'PingFang SC',sans-serif" text-anchor="middle" font-size="20" font-weight="700"><text x="280" y="641" fill="#0F4D92">上下文化源表示</text><text x="790" y="641" fill="#B64342">下一个 token 的分布</text></g>
+</svg>

@@ -1,0 +1,61 @@
+<?xml version="1.0"?>
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="670" viewBox="0 0 1200 670" role="img" aria-labelledby="title desc">
+  <title id="title">Backpropagation paths through unsaturated and saturated Softmax</title>
+  <desc id="desc">When Softmax is unsaturated, its Jacobian can pass useful gradients from loss to logits and Q,K. In saturation, Jacobian terms become small and this local gradient decays.</desc>
+  <defs>
+    <marker id="a" viewBox="0 0 10 10" refX="8.5" refY="5" markerWidth="8" markerHeight="8" orient="auto">
+      <path d="M0 0 10 5 0 10z" fill="#0F4D92"/>
+    </marker>
+    <style>text{font-family:Arial,sans-serif}.h{font-size:22px;font-weight:700}.b{font-size:17px}.n{font-size:16px}</style>
+  </defs>
+  <rect width="1200" height="670" fill="#FFFFFF"/>
+  <text x="65" y="68" font-size="32" font-weight="700" fill="#17324D">Softmax saturation changes a local channel in backpropagation</text>
+  <text x="65" y="103" class="b" fill="#416985">It explains a gradient risk from Softmax to logits, not every source of training instability.</text>
+  <rect x="65" y="145" width="500" height="420" rx="22" fill="#EAF3FB" stroke="#8EB6D8" stroke-width="2"/>
+  <text x="98" y="190" class="h" fill="#17324D">Unsaturated: local derivative remains useful</text>
+  <text x="98" y="218" class="b" fill="#416985">The backward signal can cross the probability transform</text>
+  <g text-anchor="middle">
+    <rect x="187" y="255" width="250" height="56" rx="14" fill="#0F4D92"/>
+    <text x="312" y="291" font-size="19" font-weight="700" fill="#FFFFFF">Loss</text>
+    <path d="M312 311v44" fill="none" stroke="#0F4D92" stroke-width="4" marker-end="url(#a)" data-figure-connector="true"/>
+    <rect x="187" y="366" width="250" height="63" rx="14" fill="#DDF3DE"/>
+    <text x="312" y="394" class="h" fill="#17324D">Softmax Jacobian</text>
+    <text x="312" y="416" class="n" fill="#0F4D92">&#x2202;s / &#x2202;z is not near zero</text>
+    <path d="M312 435v38" fill="none" stroke="#0F4D92" stroke-width="4" marker-end="url(#a)" data-figure-connector="true"/>
+    <rect x="187" y="484" width="250" height="52" rx="14" fill="#FFFFFF" stroke="#0F4D92" stroke-width="2"/>
+    <text x="312" y="517" class="b" fill="#17324D">logits &#x2192; Q, K can update</text>
+  </g>
+  <rect x="635" y="145" width="500" height="420" rx="22" fill="#FFF8D6" stroke="#E9A6A1" stroke-width="2"/>
+  <text x="668" y="190" class="h" fill="#8F3635">Saturated: local derivative can be tiny</text>
+  <text x="668" y="218" class="b" fill="#8F3635">The gradient weakens at the probability transform</text>
+  <g text-anchor="middle">
+    <rect x="757" y="255" width="250" height="56" rx="14" fill="#B64342"/>
+    <text x="882" y="291" font-size="19" font-weight="700" fill="#FFFFFF">Loss</text>
+    <path d="M882 311v44" fill="none" stroke="#B64342" stroke-width="4" stroke-dasharray="8 7" marker-end="url(#a)" data-figure-connector="true"/>
+    <rect x="757" y="366" width="250" height="63" rx="14" fill="#F6CFCB"/>
+    <text x="882" y="394" class="h" fill="#8F3635">Softmax Jacobian</text>
+    <text x="882" y="416" class="n" fill="#B64342">&#x2202;s / &#x2202;z approaches zero</text>
+    <path d="M882 435v38" fill="none" stroke="#B64342" stroke-width="4" stroke-dasharray="8 7" marker-end="url(#a)" data-figure-connector="true"/>
+    <rect x="757" y="484" width="250" height="52" rx="14" fill="#FFFFFF" stroke="#B64342" stroke-width="2"/>
+    <text x="882" y="517" class="b" fill="#8F3635">logits &#x2192; Q, K gradient shrinks</text>
+  </g>
+  <rect x="65" y="595" width="1070" height="43" rx="13" fill="#FFF8D6"/>
+  <text x="92" y="623" font-size="17" fill="#765800">Scaled dot products bring typical inputs back to a steadier range, reducing the chance of entering the right-hand path too early.</text>
+  <g aria-hidden="true" fill="none" opacity="0" pointer-events="none">
+    <rect data-figure-safe-zone="text" x="53.0" y="24.0" width="1039.0" height="67.2"/>
+    <rect data-figure-safe-zone="text" x="53.0" y="74.0" width="846.1" height="47.0"/>
+    <rect data-figure-safe-zone="text" x="86.0" y="156.0" width="527.4" height="53.7"/>
+    <rect data-figure-safe-zone="text" x="86.0" y="189.0" width="510.2" height="47.0"/>
+    <rect data-figure-safe-zone="text" x="300.0" y="260.0" width="63.5" height="49.7"/>
+    <rect data-figure-safe-zone="text" x="300.0" y="360.0" width="207.0" height="53.7"/>
+    <rect data-figure-safe-zone="text" x="300.0" y="387.0" width="236.2" height="47.0"/>
+    <rect data-figure-safe-zone="text" x="300.0" y="488.0" width="236.2" height="47.0"/>
+    <rect data-figure-safe-zone="text" x="656.0" y="156.0" width="470.2" height="53.7"/>
+    <rect data-figure-safe-zone="text" x="656.0" y="189.0" width="457.2" height="47.0"/>
+    <rect data-figure-safe-zone="text" x="870.0" y="260.0" width="63.5" height="49.7"/>
+    <rect data-figure-safe-zone="text" x="870.0" y="360.0" width="207.0" height="53.7"/>
+    <rect data-figure-safe-zone="text" x="870.0" y="387.0" width="227.3" height="47.0"/>
+    <rect data-figure-safe-zone="text" x="870.0" y="488.0" width="289.2" height="47.0"/>
+    <rect data-figure-safe-zone="text" x="80.0" y="594.0" width="1164.4" height="47.0"/>
+  </g>
+</svg>

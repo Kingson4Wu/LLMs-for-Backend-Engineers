@@ -1,0 +1,53 @@
+<?xml version="1.0"?>
+<svg xmlns="http://www.w3.org/2000/svg" width="1100" height="620" viewBox="0 0 1100 620" role="img" aria-labelledby="title desc">
+  <title id="title">Two ReLU units split work across a boundary in the XOR plane</title>
+  <desc id="desc">The line x1 equals x2 divides the plane. ReLU(x1-x2) is positive on one side and ReLU(x2-x1) on the other; an output layer combines both responses to represent the XOR positive class.</desc>
+  <defs>
+    <marker id="a" viewBox="0 0 10 10" refX="8.5" refY="5" markerWidth="8" markerHeight="8" orient="auto">
+      <path d="M0 0 10 5 0 10z" fill="#0F4D92"/>
+    </marker>
+    <style>text{font-family:Arial,sans-serif}.h{font-size:22px;font-weight:700}.b{font-size:17px}</style>
+  </defs>
+  <rect width="1100" height="620" fill="#FFFFFF"/>
+  <text x="65" y="68" font-size="32" font-weight="700" fill="#17324D">Different ReLU units respond on opposite sides of one boundary</text>
+  <text x="65" y="103" class="b" fill="#416985">Nonlinear units partition a continuous plane into regions; an output layer can compose regions into the desired decision shape.</text>
+  <rect x="65" y="145" width="650" height="395" rx="22" fill="#F4F8FC" stroke="#8EB6D8" stroke-width="2"/>
+  <path d="M170 465V200M170 465H625" stroke="#0F4D92" stroke-width="4" marker-end="url(#a)" data-figure-connector="true"/>
+  <path d="M205 425L575 225" stroke="#FFD700" stroke-width="5" stroke-dasharray="10 8"/>
+  <path d="M205 425L575 225L575 425Z" fill="#DDF3DE"/>
+  <path d="M205 425L205 225L575 225Z" fill="#F6CFCB"/>
+  <text x="648" y="480" class="h" fill="#17324D">x&#x2081;</text>
+  <text x="112" y="194" class="h" fill="#17324D">x&#x2082;</text>
+  <text x="485" y="408" class="h" fill="#17324D">h&#x2081; = ReLU(x&#x2081; &#x2212; x&#x2082;)</text>
+  <text x="220" y="256" class="h" fill="#8F3635">h&#x2082; = ReLU(x&#x2082; &#x2212; x&#x2081;)</text>
+  <text x="480" y="214" class="b" fill="#765800">x&#x2081; = x&#x2082;</text>
+  <circle cx="205" cy="425" r="20" fill="#FFFFFF" stroke="#B64342" stroke-width="5"/>
+  <circle cx="575" cy="225" r="20" fill="#FFFFFF" stroke="#B64342" stroke-width="5"/>
+  <circle cx="205" cy="225" r="20" fill="#0F4D92"/>
+  <circle cx="575" cy="425" r="20" fill="#0F4D92"/>
+  <rect x="770" y="170" width="270" height="135" rx="20" fill="#EAF3FB" stroke="#8EB6D8" stroke-width="2"/>
+  <text x="801" y="216" class="h" fill="#17324D">Green region</text>
+  <text x="801" y="250" class="b" fill="#416985">x&#x2081; &gt; x&#x2082;</text>
+  <text x="801" y="279" class="b" fill="#416985">h&#x2081; active; h&#x2082; is zero</text>
+  <rect x="770" y="335" width="270" height="135" rx="20" fill="#FFF8D6" stroke="#E9A6A1" stroke-width="2"/>
+  <text x="801" y="381" class="h" fill="#8F3635">Red region</text>
+  <text x="801" y="415" class="b" fill="#8F3635">x&#x2082; &gt; x&#x2081;</text>
+  <text x="801" y="444" class="b" fill="#8F3635">h&#x2082; active; h&#x2081; is zero</text>
+  <text x="65" y="582" font-size="17" fill="#8F3635">Both are zero on the boundary. For binary XOR samples, summing positive responses retains exactly the two unequal corners.</text>
+  <g aria-hidden="true" fill="none" opacity="0" pointer-events="none">
+    <rect data-figure-safe-zone="text" x="53.0" y="24.0" width="1055.7" height="67.2"/>
+    <rect data-figure-safe-zone="text" x="53.0" y="74.0" width="1146.7" height="47.0"/>
+    <rect data-figure-safe-zone="text" x="636.0" y="446.0" width="46.9" height="53.7"/>
+    <rect data-figure-safe-zone="text" x="100.0" y="160.0" width="46.9" height="53.7"/>
+    <rect data-figure-safe-zone="text" x="473.0" y="374.0" width="229.9" height="53.7"/>
+    <rect data-figure-safe-zone="text" x="208.0" y="222.0" width="229.9" height="53.7"/>
+    <rect data-figure-safe-zone="text" x="468.0" y="185.0" width="85.9" height="47.0"/>
+    <rect data-figure-safe-zone="text" x="789.0" y="182.0" width="161.3" height="53.7"/>
+    <rect data-figure-safe-zone="text" x="789.0" y="221.0" width="85.9" height="47.0"/>
+    <rect data-figure-safe-zone="text" x="789.0" y="250.0" width="209.6" height="47.0"/>
+    <rect data-figure-safe-zone="text" x="789.0" y="347.0" width="138.4" height="53.7"/>
+    <rect data-figure-safe-zone="text" x="789.0" y="386.0" width="85.9" height="47.0"/>
+    <rect data-figure-safe-zone="text" x="789.0" y="415.0" width="209.6" height="47.0"/>
+    <rect data-figure-safe-zone="text" x="53.0" y="553.0" width="1102.5" height="47.0"/>
+  </g>
+</svg>

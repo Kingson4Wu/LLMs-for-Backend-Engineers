@@ -1,0 +1,183 @@
+{
+  "version": 1,
+  "source_locale": "zh-Hans",
+  "locale": "en",
+  "articles": {
+    "introduction": {
+      "source_sha256": "a8f6117056ce7c15fbbd35ebdf4769d206f465b01fd583c4c0525ea2b4b4d908",
+      "status": "human-reviewed"
+    },
+    "preface": {
+      "source_sha256": "375be81894fe46bf19876453e3e6430910f463005b3ec994999ae231710f0c94",
+      "status": "human-reviewed"
+    },
+    "from-onehot-to-embedding": {
+      "source_sha256": "f340f38ab3b05be62fd636420b1cc74d3f8e39ad85dfb8c37dd334e816f2799d",
+      "status": "human-reviewed"
+    },
+    "dot-product-angle": {
+      "source_sha256": "453dfa1179310f5ffa840dd9407fcc71255d17ef6e326fc1e383e603ee175253",
+      "status": "human-reviewed"
+    },
+    "softmax": {
+      "source_sha256": "371256f99a44edc3ff993bd2d0c946f6842140908a9a8c1e759dcfe1e9aa4c53",
+      "status": "human-reviewed"
+    },
+    "activation-functions": {
+      "source_sha256": "60b581def5501dbd1c175b0b1ce6b5b05e4035c8092df326ab4d47e6c9d9f952",
+      "status": "human-reviewed"
+    },
+    "perceptron-learning": {
+      "source_sha256": "fdec9c538d4f87d5cb21067a8c83bfea2d2553955d84d5a630b35c7b543b0d21",
+      "status": "human-reviewed"
+    },
+    "cross-entropy": {
+      "source_sha256": "74365d587b8dd0f1fc06262d973251b99334ac6d6f0ee9367ba7248df7105e43",
+      "status": "human-reviewed"
+    },
+    "backpropagation": {
+      "source_sha256": "2b540f6ae602da25d8e843ae2a2c2e527e539ff05ea04439f9b0ede65443eafb",
+      "status": "human-reviewed"
+    },
+    "vanishing-exploding-gradients": {
+      "source_sha256": "dd6850d23b6f6bc3e53482c410d05d2e8ca1948200ebb60ebfdcc1cc408e81bb",
+      "status": "human-reviewed"
+    },
+    "layer-norm": {
+      "source_sha256": "85787bde7f47f9e00c130527bfbcb034e22c70f808e2c6990a511aa1c996d9d5",
+      "status": "human-reviewed"
+    },
+    "ai-math-foundations": {
+      "source_sha256": "f2864dfdfc4ac5f37df3f0f23d159834ad7c40b82775c6d07824e54f70e71c2c",
+      "status": "human-reviewed"
+    },
+    "model-training-lifecycle": {
+      "source_sha256": "e7ad47522ad1098659fc7eba4307fcf4f485bb08563494c74fa29a4a974ff55a",
+      "status": "human-reviewed"
+    },
+    "optimizer-selection": {
+      "source_sha256": "9a56b8bc966c011f575994fa04460eab2577b5e9d02aec758660938e2b699ad2",
+      "status": "human-reviewed"
+    },
+    "fine-tuning-and-distillation": {
+      "source_sha256": "ed97581ca10f76c205ecb2627c211620566075505f39c83defbf7f8743527241",
+      "status": "human-reviewed"
+    },
+    "embedding-evolution": {
+      "source_sha256": "b53f46b1f1176f0927df6aa56704b3112906729fcae175174a6d7b0178545d06",
+      "status": "human-reviewed"
+    },
+    "rnn-to-transformer": {
+      "source_sha256": "b4a323c2ca38da37d4ab136e8d46c0b0433363b12cc6851e32285f092847ef5f",
+      "status": "human-reviewed"
+    },
+    "transformer-architecture": {
+      "source_sha256": "6d03cc584a9f377c940861b0d9286678d003c464b0d618cbab2765bc70347c24",
+      "status": "human-reviewed"
+    },
+    "softmax-gradient-scaling": {
+      "source_sha256": "cd3627bd943e8f704938b26922973b9bce4a4df008cbd471a52dcfda2d14c539",
+      "status": "human-reviewed"
+    },
+    "residual-connections": {
+      "source_sha256": "84a8f45c05b0ffe1d7ddaa591073f4e9d5f93cb92f630a7561097e90a0623cd5",
+      "status": "human-reviewed"
+    },
+    "llm-generation": {
+      "source_sha256": "2ab2299126bf432d7162a7a7cd8bdd787cc12737e8f2969f1dd7de0ef3efd06e",
+      "status": "human-reviewed"
+    },
+    "llm-inference-nondeterminism": {
+      "source_sha256": "eac2e1f0f2ae6cb1b8f74d14c617d0b473da76674f4f2c9abc84834571251d2a",
+      "status": "human-reviewed"
+    },
+    "multimodal-models": {
+      "source_sha256": "22cefc0cf688d773f9b387cc2eb229a854917b3caa9108370b581a01b01dfe15",
+      "status": "human-reviewed"
+    },
+    "multilingual-llms": {
+      "source_sha256": "8eaae0de23faeca13b0e0edf7141f0eaf7de3f8e355f2d3d2460f6f8ac5e932f",
+      "status": "human-reviewed"
+    },
+    "llm-external-interaction": {
+      "source_sha256": "4ebed2827f012f03072480ade22c8803bdab428b2915e8f435ccc207c136992a",
+      "status": "human-reviewed"
+    },
+    "rag-context-evidence": {
+      "source_sha256": "5033e8c84401ac934be6de580bbe3d4114042fb503e3f1b7895d32badaa993b7",
+      "status": "human-reviewed"
+    },
+    "function-calling-tool-use": {
+      "source_sha256": "9ef2aaed69695675737ce2ec4522f9837018a98465ad9389315e2aa9229ea75f",
+      "status": "human-reviewed"
+    },
+    "agent-eval-business-quality-system": {
+      "source_sha256": "876f914bc96457d52ffbc5af6aea2cb7df50a398d4a88f182528721c97695bb1",
+      "status": "human-reviewed"
+    },
+    "mhs-mcp-domain-capability-protocol": {
+      "source_sha256": "efeece8eef1fe5473a3f075c30457abc8a6c41be7e80f9d0a9e696333e6532ce",
+      "status": "human-reviewed"
+    },
+    "harness-runtime-skills": {
+      "source_sha256": "41087f5187497b2dce3ce09c126660ba90f3e75fdb20d3c44c91e84c60ddf6a5",
+      "status": "human-reviewed"
+    },
+    "llm-infrastructure": {
+      "source_sha256": "17498fc57735108a59a72ad12e05b5bb00cff4a3296ff10aabd1d178ca9327b5",
+      "status": "human-reviewed"
+    },
+    "inference-performance-capacity": {
+      "source_sha256": "7a13de386177897a92281c0f2a5a9a9c1f576731d5d280648856179b3acc6474",
+      "status": "human-reviewed"
+    },
+    "serving-control-plane": {
+      "source_sha256": "9635745783b4142cc4684042880a25377ab0a898699bd032225e1cb6a95ae98a",
+      "status": "human-reviewed"
+    },
+    "what-ai-really-means": {
+      "source_sha256": "a14fb1a5d6ce7924b0d1b8a563bddff7a702a72b4f5f178b67950a45b34df2cf",
+      "status": "human-reviewed"
+    },
+    "can-ai-create-new-things": {
+      "source_sha256": "3fe0bbc90258b1077832bee7d021f5f7cb99b1a082f3d01eaff1e688d053c0a8",
+      "status": "human-reviewed"
+    },
+    "generative-ai-probability-and-innovation": {
+      "source_sha256": "ec373fb2b5ce35cddc2d911463c222f7d8e611fd5f65cdf6d9f860ef52e1a11c",
+      "status": "human-reviewed"
+    },
+    "learning-resources": {
+      "source_sha256": "2c3082d0c7c4df062333823ffd2e2850fc4268d4c711805c44965d24cee49992",
+      "status": "human-reviewed"
+    },
+    "ai-learning-guide": {
+      "source_sha256": "2fab75bf3377e99365e7daca2714179078620141178d4ce8eff24d84d7b8db2a",
+      "status": "human-reviewed"
+    },
+    "math-foundations": {
+      "source_sha256": "73221bf1ef3d9124dfb1630c59219447d8dc030bf0a7122c44241e5b6c059fb9",
+      "status": "human-reviewed"
+    },
+    "llm-internal": {
+      "source_sha256": "d7a62a97f6afbccbb9c7768768f7c71caf8f71de9db4392edea2351b18fad006",
+      "status": "human-reviewed"
+    },
+    "llm-external": {
+      "source_sha256": "69cb307465813a4ea362148164d43c26f7f11f3ddd2fe7c5d31832fb1c67d0c7",
+      "status": "human-reviewed"
+    },
+    "serving-runtime": {
+      "source_sha256": "e9fa9b6391e140ef8a2e41f77f5d99c1f8b0c5bdc55577266766357fa42c8eb5",
+      "status": "human-reviewed"
+    },
+    "appendices": {
+      "source_sha256": "9d958168d6f103a12a957c05ffcf225f8bd157fa00c64aa93c113e57cc6442f2",
+      "status": "human-reviewed"
+    },
+    "appendix": {
+      "source_sha256": "cee8d4922e8c00086d054892eb7054e88d0c81b5bb3290ffa5fcd677b6cd9192",
+      "status": "human-reviewed"
+    }
+  }
+}

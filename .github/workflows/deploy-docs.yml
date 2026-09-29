@@ -1,0 +1,66 @@
+name: Deploy reading website
+on:
+  push:
+    branches: [main]
+    paths:
+      - 'book/**'
+      - 'learning/**'
+      - 'web/**'
+      - 'tools/book-kit/**'
+      - '.github/workflows/deploy-docs.yml'
+  workflow_dispatch:
+permissions:
+  contents: read
+concurrency:
+  group: github-pages
+  cancel-in-progress: true
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: '24'
+          cache: npm
+          cache-dependency-path: web/package-lock.json
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.11'
+      - name: Install portable publishing tools
+        run: sudo apt-get update && sudo apt-get install -y pandoc librsvg2-bin fonts-noto-cjk epubcheck texlive-xetex texlive-lang-chinese texlive-latex-extra qpdf poppler-utils
+      - name: Validate and build portable books
+        run: |
+          python3 -m unittest discover -s tests -v
+          python3 tools/book-kit/validate_book.py --check-learning-index
+          python3 tools/book-kit/check_translations.py
+          python3 tools/book-kit/validate_figures.py
+          for locale in zh-Hans en; do
+            python3 tools/book-kit/validate_book.py --locale "$locale" --check-links
+            python3 tools/book-kit/build_print_html.py --locale "$locale"
+            python3 tools/book-kit/export_markdown.py --locale "$locale"
+            python3 tools/book-kit/export_epub.py --locale "$locale"
+            PDF_MAINFONT='Noto Serif CJK SC' PDF_CJK_MAINFONT='Noto Serif CJK SC' PDF_MONOFONT='Noto Sans Mono' python3 tools/book-kit/export_book_pdf.py --locale "$locale"
+            epubcheck "book/exported/$locale/Understanding-LLMs.epub"
+            python3 tools/book-kit/validate_publication_artifacts.py --locale "$locale"
+          done
+      - name: Build reading site
+        working-directory: web
+        run: npm ci && npm run check && npm test && npm run build && npm run check:deployment
+      - uses: actions/configure-pages@v5
+      - uses: actions/upload-pages-artifact@v3
+        with:
+          path: web/dist
+  deploy:
+    if: github.repository == 'kingson4wu/Understanding-LLMs'
+    needs: build
+    permissions:
+      pages: write
+      id-token: write
+    runs-on: ubuntu-latest
+    environment:
+      name: github-pages
+      url: ${{ steps.deployment.outputs.page_url }}
+    steps:
+      - uses: actions/deploy-pages@v4
+        id: deployment

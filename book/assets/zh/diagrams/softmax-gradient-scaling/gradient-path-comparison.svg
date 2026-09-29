@@ -1,0 +1,61 @@
+<?xml version="1.0"?>
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="670" viewBox="0 0 1200 670" role="img" aria-labelledby="title desc">
+  <title id="title">&#x672A;&#x9971;&#x548C;&#x4E0E;&#x9971;&#x548C; Softmax &#x7684;&#x53CD;&#x5411;&#x68AF;&#x5EA6;&#x8DEF;&#x5F84;</title>
+  <desc id="desc">&#x672A;&#x9971;&#x548C;&#x65F6;&#xFF0C;&#x635F;&#x5931;&#x7ECF; Softmax Jacobian &#x4ECD;&#x5411; logits &#x548C; Q&#x3001;K &#x4F20;&#x9012;&#x6709;&#x6548;&#x68AF;&#x5EA6;&#xFF1B;&#x9971;&#x548C;&#x65F6;&#xFF0C;Jacobian &#x9879;&#x8D8B;&#x5C0F;&#xFF0C;&#x5C40;&#x90E8;&#x68AF;&#x5EA6;&#x8870;&#x51CF;&#x3002;</desc>
+  <defs>
+    <marker id="a" viewBox="0 0 10 10" refX="8.5" refY="5" markerWidth="8" markerHeight="8" orient="auto">
+      <path d="M0 0 10 5 0 10z" fill="#0F4D92"/>
+    </marker>
+    <style>text{font-family:Arial,'Noto Sans SC',sans-serif}.h{font-size:22px;font-weight:700}.b{font-size:17px}.n{font-size:16px}</style>
+  </defs>
+  <rect width="1200" height="670" fill="#FFFFFF"/>
+  <text x="65" y="68" font-size="32" font-weight="700" fill="#17324D">Softmax &#x9971;&#x548C;&#x6539;&#x53D8;&#x7684;&#x662F;&#x53CD;&#x5411;&#x4F20;&#x64AD;&#x4E2D;&#x7684;&#x5C40;&#x90E8;&#x901A;&#x9053;</text>
+  <text x="65" y="103" class="b" fill="#416985">&#x8FD9;&#x89E3;&#x91CA;&#x7ECF; Softmax &#x5230; logits &#x7684;&#x4E00;&#x6BB5;&#x68AF;&#x5EA6;&#x98CE;&#x9669;&#xFF0C;&#x800C;&#x4E0D;&#x662F;&#x5168;&#x90E8;&#x8BAD;&#x7EC3;&#x4E0D;&#x7A33;&#x5B9A;&#x73B0;&#x8C61;&#x3002;</text>
+  <rect x="65" y="145" width="500" height="420" rx="22" fill="#EAF3FB" stroke="#8EB6D8" stroke-width="2"/>
+  <text x="98" y="190" class="h" fill="#17324D">&#x672A;&#x9971;&#x548C;&#xFF1A;&#x5C40;&#x90E8;&#x5BFC;&#x6570;&#x4ECD;&#x6709;&#x6548;</text>
+  <text x="98" y="218" class="b" fill="#416985">&#x53CD;&#x5411;&#x68AF;&#x5EA6;&#x53EF;&#x4EE5;&#x7A7F;&#x8FC7;&#x6982;&#x7387;&#x53D8;&#x6362;</text>
+  <g text-anchor="middle">
+    <rect x="187" y="255" width="250" height="56" rx="14" fill="#0F4D92"/>
+    <text x="312" y="291" font-size="19" font-weight="700" fill="#FFFFFF">Loss</text>
+    <path d="M312 311v44" fill="none" stroke="#0F4D92" stroke-width="4" marker-end="url(#a)" data-figure-connector="true"/>
+    <rect x="187" y="366" width="250" height="63" rx="14" fill="#DDF3DE"/>
+    <text x="312" y="394" class="h" fill="#17324D">Softmax Jacobian</text>
+    <text x="312" y="416" class="n" fill="#0F4D92">&#x2202;s / &#x2202;z &#x4E0D;&#x63A5;&#x8FD1;&#x96F6;</text>
+    <path d="M312 435v38" fill="none" stroke="#0F4D92" stroke-width="4" marker-end="url(#a)" data-figure-connector="true"/>
+    <rect x="187" y="484" width="250" height="52" rx="14" fill="#FFFFFF" stroke="#0F4D92" stroke-width="2"/>
+    <text x="312" y="517" class="b" fill="#17324D">logits &#x2192; Q&#x3001;K &#x53EF;&#x66F4;&#x65B0;</text>
+  </g>
+  <rect x="635" y="145" width="500" height="420" rx="22" fill="#FFF8D6" stroke="#E9A6A1" stroke-width="2"/>
+  <text x="668" y="190" class="h" fill="#8F3635">&#x9971;&#x548C;&#xFF1A;&#x5C40;&#x90E8;&#x5BFC;&#x6570;&#x53EF;&#x80FD;&#x5F88;&#x5C0F;</text>
+  <text x="668" y="218" class="b" fill="#8F3635">&#x68AF;&#x5EA6;&#x5728;&#x6982;&#x7387;&#x53D8;&#x6362;&#x8FD9;&#x4E00;&#x6BB5;&#x88AB;&#x524A;&#x5F31;</text>
+  <g text-anchor="middle">
+    <rect x="757" y="255" width="250" height="56" rx="14" fill="#B64342"/>
+    <text x="882" y="291" font-size="19" font-weight="700" fill="#FFFFFF">Loss</text>
+    <path d="M882 311v44" fill="none" stroke="#B64342" stroke-width="4" stroke-dasharray="8 7" marker-end="url(#a)" data-figure-connector="true"/>
+    <rect x="757" y="366" width="250" height="63" rx="14" fill="#F6CFCB"/>
+    <text x="882" y="394" class="h" fill="#8F3635">Softmax Jacobian</text>
+    <text x="882" y="416" class="n" fill="#B64342">&#x2202;s / &#x2202;z &#x63A5;&#x8FD1;&#x96F6;</text>
+    <path d="M882 435v38" fill="none" stroke="#B64342" stroke-width="4" stroke-dasharray="8 7" marker-end="url(#a)" data-figure-connector="true"/>
+    <rect x="757" y="484" width="250" height="52" rx="14" fill="#FFFFFF" stroke="#B64342" stroke-width="2"/>
+    <text x="882" y="517" class="b" fill="#8F3635">logits &#x2192; Q&#x3001;K &#x68AF;&#x5EA6;&#x53D8;&#x5C0F;</text>
+  </g>
+  <rect x="65" y="595" width="1070" height="43" rx="13" fill="#FFF8D6"/>
+  <text x="92" y="623" font-size="17" fill="#765800">&#x7F29;&#x653E;&#x70B9;&#x79EF;&#x5C06;&#x5178;&#x578B;&#x8F93;&#x5165;&#x5C3A;&#x5EA6;&#x62C9;&#x56DE;&#x8F83;&#x7A33;&#x5B9A;&#x8303;&#x56F4;&#xFF0C;&#x4ECE;&#x800C;&#x964D;&#x4F4E;&#x8FC7;&#x65E9;&#x8FDB;&#x5165;&#x53F3;&#x4FA7;&#x901A;&#x9053;&#x7684;&#x98CE;&#x9669;&#x3002;</text>
+  <g aria-hidden="true" fill="none" opacity="0" pointer-events="none">
+    <rect data-figure-safe-zone="text" x="53.0" y="24.0" width="643.5" height="67.2"/>
+    <rect data-figure-safe-zone="text" x="53.0" y="74.0" width="579.6" height="47.0"/>
+    <rect data-figure-safe-zone="text" x="86.0" y="156.0" width="244.4" height="53.7"/>
+    <rect data-figure-safe-zone="text" x="86.0" y="189.0" width="217.8" height="47.0"/>
+    <rect data-figure-safe-zone="text" x="300.0" y="260.0" width="63.5" height="49.7"/>
+    <rect data-figure-safe-zone="text" x="300.0" y="360.0" width="207.0" height="53.7"/>
+    <rect data-figure-safe-zone="text" x="300.0" y="387.0" width="159.3" height="47.0"/>
+    <rect data-figure-safe-zone="text" x="300.0" y="488.0" width="187.4" height="47.0"/>
+    <rect data-figure-safe-zone="text" x="656.0" y="156.0" width="244.4" height="53.7"/>
+    <rect data-figure-safe-zone="text" x="656.0" y="189.0" width="233.9" height="47.0"/>
+    <rect data-figure-safe-zone="text" x="870.0" y="260.0" width="63.5" height="49.7"/>
+    <rect data-figure-safe-zone="text" x="870.0" y="360.0" width="207.0" height="53.7"/>
+    <rect data-figure-safe-zone="text" x="870.0" y="387.0" width="143.2" height="47.0"/>
+    <rect data-figure-safe-zone="text" x="870.0" y="488.0" width="203.5" height="47.0"/>
+    <rect data-figure-safe-zone="text" x="80.0" y="594.0" width="574.6" height="47.0"/>
+  </g>
+</svg>

@@ -1,0 +1,49 @@
+<?xml version="1.0"?>
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="680" viewBox="0 0 1200 680" role="img" aria-labelledby="title desc">
+  <title id="title">The capability-model pattern extends beyond hardware</title>
+  <desc id="desc">Payments, game platforms, and smart homes can hide diverse implementations behind stable objects, capabilities, and constraints. Domain rules and risk boundaries must remain explicit.</desc>
+  <style>text{font-family:Arial,sans-serif}.h{font-size:22px;font-weight:700}.b{font-size:17px}.s{font-size:15px}</style>
+  <rect width="1200" height="680" fill="#FFFDF9"/>
+  <text x="65" y="68" font-size="32" font-weight="700" fill="#665F57">The capability-model pattern extends beyond hardware</text>
+  <text x="65" y="103" class="b" fill="#526D73">Stable objects, invocable capabilities, and explicit constraints enable reuse across implementations without erasing domain risk.</text>
+  <rect x="65" y="155" width="330" height="345" rx="22" fill="#EFF8F8" stroke="#C8E3E5" stroke-width="2"/>
+  <text x="97" y="205" class="h" fill="#665F57">Payments</text>
+  <text x="97" y="251" font-size="15" fill="#526D73">objects: payment &#xB7; refund</text><text x="97" y="273" font-size="15" fill="#526D73">settlement &#xB7; dispute</text>
+  <text x="97" y="311" font-size="15" fill="#526D73">capabilities: pay &#xB7; refund</text><text x="97" y="333" font-size="15" fill="#526D73">status &#xB7; reconcile</text>
+  <text x="97" y="371" font-size="15" fill="#526D73">constraints: currency &#xB7; region</text><text x="97" y="393" font-size="15" fill="#526D73">risk &#xB7; compliance</text>
+  <text x="97" y="433" font-size="14" fill="#7A8F93">Alipay / WeChat Pay / Stripe</text><text x="97" y="455" font-size="14" fill="#7A8F93">Apple Pay</text>
+  <rect x="435" y="155" width="330" height="345" rx="22" fill="#F8F1E5" stroke="#C5BA8B" stroke-width="2"/>
+  <text x="467" y="205" class="h" fill="#586653">Game-platform services</text>
+  <text x="467" y="251" font-size="15" fill="#586653">objects: player &#xB7; entitlement</text><text x="467" y="273" font-size="15" fill="#586653">inventory &#xB7; subscription</text>
+  <text x="467" y="311" font-size="15" fill="#586653">capabilities: sign in &#xB7; grant</text><text x="467" y="333" font-size="15" fill="#586653">verify &#xB7; refund</text>
+  <text x="467" y="371" font-size="15" fill="#586653">constraints: policy &#xB7; region</text><text x="467" y="393" font-size="15" fill="#586653">age &#xB7; anti-fraud</text>
+  <text x="467" y="433" font-size="14" fill="#586653">Steam / PlayStation / Xbox</text><text x="467" y="455" font-size="14" fill="#586653">App Store</text>
+  <rect x="805" y="155" width="330" height="345" rx="22" fill="#F8F1E5" stroke="#F4D5CE" stroke-width="2"/>
+  <text x="837" y="205" class="h" fill="#806560">Smart homes</text>
+  <text x="837" y="251" font-size="15" fill="#806560">objects: room &#xB7; person</text><text x="837" y="273" font-size="15" fill="#806560">device &#xB7; sensor</text>
+  <text x="837" y="311" font-size="15" fill="#806560">capabilities: switch &#xB7; lock</text><text x="837" y="333" font-size="15" fill="#806560">set temperature &#xB7; detect</text>
+  <text x="837" y="371" font-size="15" fill="#806560">constraints: authority &#xB7; safety</text><text x="837" y="393" font-size="15" fill="#806560">occupancy &#xB7; privacy</text>
+  <text x="837" y="433" font-size="14" fill="#806560">HomeKit / Mi Home / Google</text><text x="837" y="455" font-size="14" fill="#806560">Home / Home Assistant</text>
+  <rect x="65" y="555" width="1070" height="58" rx="16" fill="#E7E2D8"/>
+  <text x="94" y="580" font-size="17" fill="#665F57">Standardize stable objects, capabilities, and constraints; keep platform variation in adapters.</text><text x="94" y="604" font-size="17" fill="#665F57">Do not abstract away domain rules.</text>
+  <g aria-hidden="true" fill="none" opacity="0" pointer-events="none">
+    <rect data-figure-safe-zone="text" x="53.0" y="24.0" width="889.3" height="67.2"/>
+    <rect data-figure-safe-zone="text" x="53.0" y="74.0" width="1164.4" height="47.0"/>
+    <rect data-figure-safe-zone="text" x="85.0" y="171.0" width="115.5" height="53.7"/>
+    <rect data-figure-safe-zone="text" x="85.0" y="222.0" width="448.3" height="47.0"/>
+    <rect data-figure-safe-zone="text" x="85.0" y="262.0" width="439.5" height="47.0"/>
+    <rect data-figure-safe-zone="text" x="85.0" y="302.0" width="466.0" height="47.0"/>
+    <rect data-figure-safe-zone="text" x="85.0" y="360.0" width="377.6" height="47.0"/>
+    <rect data-figure-safe-zone="text" x="455.0" y="171.0" width="275.7" height="53.7"/>
+    <rect data-figure-safe-zone="text" x="455.0" y="222.0" width="519.0" height="47.0"/>
+    <rect data-figure-safe-zone="text" x="455.0" y="262.0" width="439.5" height="47.0"/>
+    <rect data-figure-safe-zone="text" x="455.0" y="302.0" width="439.5" height="47.0"/>
+    <rect data-figure-safe-zone="text" x="455.0" y="360.0" width="359.9" height="47.0"/>
+    <rect data-figure-safe-zone="text" x="825.0" y="171.0" width="149.8" height="53.7"/>
+    <rect data-figure-safe-zone="text" x="825.0" y="222.0" width="377.6" height="47.0"/>
+    <rect data-figure-safe-zone="text" x="825.0" y="262.0" width="501.4" height="47.0"/>
+    <rect data-figure-safe-zone="text" x="825.0" y="302.0" width="492.5" height="47.0"/>
+    <rect data-figure-safe-zone="text" x="825.0" y="360.0" width="448.3" height="47.0"/>
+    <rect data-figure-safe-zone="text" x="82.0" y="560.0" width="1278.2" height="48.3"/>
+  </g>
+<g aria-hidden="true" fill="none" opacity="0" pointer-events="none"><rect data-figure-safe-zone="text" x="53.0" y="24.0" width="889.3" height="67.2"/><rect data-figure-safe-zone="text" x="53.0" y="74.0" width="1164.4" height="47.0"/><rect data-figure-safe-zone="text" x="85.0" y="171.0" width="115.5" height="53.7"/><rect data-figure-safe-zone="text" x="85.0" y="224.0" width="219.0" height="44.2"/><rect data-figure-safe-zone="text" x="85.0" y="246.0" width="180.0" height="44.2"/><rect data-figure-safe-zone="text" x="85.0" y="284.0" width="226.8" height="44.2"/><rect data-figure-safe-zone="text" x="85.0" y="306.0" width="164.4" height="44.2"/><rect data-figure-safe-zone="text" x="85.0" y="344.0" width="258.0" height="44.2"/><rect data-figure-safe-zone="text" x="85.0" y="366.0" width="156.6" height="44.2"/><rect data-figure-safe-zone="text" x="85.0" y="407.0" width="227.8" height="42.9"/><rect data-figure-safe-zone="text" x="85.0" y="429.0" width="89.5" height="42.9"/><rect data-figure-safe-zone="text" x="455.0" y="171.0" width="275.7" height="53.7"/><rect data-figure-safe-zone="text" x="455.0" y="224.0" width="250.2" height="44.2"/><rect data-figure-safe-zone="text" x="455.0" y="246.0" width="211.2" height="44.2"/><rect data-figure-safe-zone="text" x="455.0" y="284.0" width="250.2" height="44.2"/><rect data-figure-safe-zone="text" x="455.0" y="306.0" width="141.0" height="44.2"/><rect data-figure-safe-zone="text" x="455.0" y="344.0" width="242.4" height="44.2"/><rect data-figure-safe-zone="text" x="455.0" y="366.0" width="148.8" height="44.2"/><rect data-figure-safe-zone="text" x="455.0" y="407.0" width="213.3" height="42.9"/><rect data-figure-safe-zone="text" x="455.0" y="429.0" width="89.5" height="42.9"/><rect data-figure-safe-zone="text" x="825.0" y="171.0" width="149.8" height="53.7"/><rect data-figure-safe-zone="text" x="825.0" y="224.0" width="195.6" height="44.2"/><rect data-figure-safe-zone="text" x="825.0" y="246.0" width="141.0" height="44.2"/><rect data-figure-safe-zone="text" x="825.0" y="284.0" width="234.6" height="44.2"/><rect data-figure-safe-zone="text" x="825.0" y="306.0" width="211.2" height="44.2"/><rect data-figure-safe-zone="text" x="825.0" y="344.0" width="265.8" height="44.2"/><rect data-figure-safe-zone="text" x="825.0" y="366.0" width="172.2" height="44.2"/><rect data-figure-safe-zone="text" x="825.0" y="407.0" width="213.3" height="42.9"/><rect data-figure-safe-zone="text" x="825.0" y="429.0" width="176.9" height="42.9"/><rect data-figure-safe-zone="text" x="82.0" y="551.0" width="863.8" height="47.0"/><rect data-figure-safe-zone="text" x="82.0" y="575.0" width="324.6" height="47.0"/></g></svg>

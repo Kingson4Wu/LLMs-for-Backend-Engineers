@@ -1,0 +1,74 @@
+<?xml version="1.0"?>
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="650" viewBox="0 0 1200 650" role="img" aria-labelledby="title desc">
+  <title id="title">Boundary between constrained decoding and business validation</title>
+  <desc id="desc">Model logits plus grammar or schema state create a valid-token mask, producing a parseable proposal. Business meaning, authority, and external final state remain validated on the execution side.</desc>
+  <defs>
+    <marker id="a" viewBox="0 0 10 10" refX="8" refY="5" markerWidth="8" markerHeight="8" orient="auto">
+      <path d="M0 0 10 5 0 10z" fill="#0F4D92"/>
+    </marker>
+  </defs>
+  <rect width="1200" height="650" rx="30" fill="#FFFFFF"/>
+  <g font-family="Arial,sans-serif">
+    <text x="58" y="68" font-size="31" font-weight="700" fill="#17324D">Constrained decoding gives valid form, not a valid business action</text>
+    <text x="58" y="105" font-size="18" fill="#5E7F9C">It excludes tokens that cannot form the target structure while generating; it does not establish facts, authority, or external-world final state.</text>
+    <g fill="none" stroke="#0F4D92" stroke-width="4" marker-end="url(#a)">
+      <path d="M230 270H285"/>
+      <path d="M485 270H540"/>
+      <path d="M740 270H795"/>
+    </g>
+    <g stroke-width="3">
+      <rect x="55" y="190" width="175" height="160" rx="22" fill="#EAF3FB" stroke="#0F4D92"/>
+      <rect x="285" y="190" width="200" height="160" rx="22" fill="#FFF8D6" stroke="#FFD700"/>
+      <rect x="540" y="190" width="200" height="160" rx="22" fill="#F6CFCB" stroke="#B64342"/>
+      <rect x="795" y="190" width="175" height="160" rx="22" fill="#EAF3FB" stroke="#0F4D92"/>
+    </g>
+    <g text-anchor="middle">
+      <text x="142" y="242" font-size="22" font-weight="700" fill="#17324D">model logits</text>
+      <text x="142" y="275" font-size="16" fill="#0F4D92">raw scores for</text>
+      <text x="142" y="301" font-size="16" fill="#0F4D92">vocabulary candidates</text>
+      <text x="385" y="230" font-size="20" font-weight="700" fill="#765800">grammar / schema</text>
+      <text x="385" y="254" font-size="20" font-weight="700" fill="#765800">state</text>
+      <text x="385" y="275" font-size="16" fill="#765800">which structural</text>
+      <text x="385" y="301" font-size="16" fill="#765800">continuations are allowed</text>
+      <text x="640" y="242" font-size="22" font-weight="700" fill="#B64342">valid-token mask</text>
+      <text x="640" y="275" font-size="16" fill="#B64342">exclude structurally</text>
+      <text x="640" y="301" font-size="16" fill="#B64342">invalid candidates</text>
+      <text x="882" y="242" font-size="20" font-weight="700" fill="#17324D">parseable proposal</text>
+      <text x="882" y="275" font-size="16" fill="#0F4D92">fields, types, nesting</text>
+      <text x="882" y="301" font-size="16" fill="#0F4D92">have valid form</text>
+    </g>
+    <path d="M970 190V180H1007" fill="none" stroke="#B64342" stroke-width="4" marker-end="url(#a)" data-figure-connector="true"/>
+    <rect x="1015" y="165" width="150" height="210" rx="22" fill="#FFFFFF" stroke="#FFD700" stroke-width="3"/>
+    <text x="1090" y="208" text-anchor="middle" font-size="16" font-weight="700" fill="#765800">execution checks</text>
+    <text x="1042" y="245" font-size="15" fill="#765800">&#x2022; business meaning</text>
+    <text x="1042" y="276" font-size="15" fill="#765800">&#x2022; authority + policy</text>
+    <text x="1042" y="307" font-size="15" fill="#765800">&#x2022; external result</text>
+    <text x="1042" y="338" font-size="15" fill="#765800">&#x2022; final state</text>
+    <text x="600" y="535" text-anchor="middle" font-size="19" font-weight="700" fill="#B64342">&#x201C;Valid JSON&#x201D; does not mean &#x201C;reasonable, authorized, and successfully executed.&#x201D;</text>
+    <text x="600" y="590" text-anchor="middle" font-size="18" fill="#5E7F9C">Structural constraints reduce interface friction; they are not a substitute for business governance.</text>
+  </g>
+  <g aria-hidden="true" fill="none" opacity="0" pointer-events="none">
+    <rect data-figure-safe-zone="text" x="46.0" y="25.0" width="1087.9" height="65.8"/>
+    <rect data-figure-safe-zone="text" x="46.0" y="75.0" width="1381.2" height="48.3"/>
+    <rect data-figure-safe-zone="text" x="130.0" y="208.0" width="161.3" height="53.7"/>
+    <rect data-figure-safe-zone="text" x="130.0" y="247.0" width="140.5" height="45.6"/>
+    <rect data-figure-safe-zone="text" x="130.0" y="273.0" width="198.7" height="45.6"/>
+    <rect data-figure-safe-zone="text" x="373.0" y="198.0" width="190.4" height="51.0"/>
+    <rect data-figure-safe-zone="text" x="373.0" y="222.0" width="76.0" height="51.0"/>
+    <rect data-figure-safe-zone="text" x="373.0" y="247.0" width="157.1" height="45.6"/>
+    <rect data-figure-safe-zone="text" x="373.0" y="273.0" width="232.0" height="45.6"/>
+    <rect data-figure-safe-zone="text" x="628.0" y="208.0" width="207.0" height="53.7"/>
+    <rect data-figure-safe-zone="text" x="628.0" y="247.0" width="190.4" height="45.6"/>
+    <rect data-figure-safe-zone="text" x="628.0" y="273.0" width="173.8" height="45.6"/>
+    <rect data-figure-safe-zone="text" x="870.0" y="210.0" width="211.2" height="51.0"/>
+    <rect data-figure-safe-zone="text" x="870.0" y="247.0" width="207.0" height="45.6"/>
+    <rect data-figure-safe-zone="text" x="870.0" y="273.0" width="148.8" height="45.6"/>
+    <rect data-figure-safe-zone="text" x="1011.4" y="180.0" width="157.1" height="45.6"/>
+    <rect data-figure-safe-zone="text" x="1030.0" y="218.0" width="164.4" height="44.2"/>
+    <rect data-figure-safe-zone="text" x="1030.0" y="249.0" width="180.0" height="44.2"/>
+    <rect data-figure-safe-zone="text" x="1030.0" y="280.0" width="156.6" height="44.2"/>
+    <rect data-figure-safe-zone="text" x="1030.0" y="311.0" width="125.4" height="44.2"/>
+    <rect data-figure-safe-zone="text" x="197.7" y="504.0" width="804.5" height="49.7"/>
+    <rect data-figure-safe-zone="text" x="120.0" y="560.0" width="960.0" height="48.3"/>
+  </g>
+</svg>

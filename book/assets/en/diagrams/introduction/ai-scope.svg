@@ -1,0 +1,49 @@
+<?xml version="1.0"?>
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1000 510" role="img" aria-labelledby="title desc">
+  <title id="title">AI spans digital information and physical-world systems</title>
+  <desc id="desc">A hierarchy divides AI into digital information systems and physical-world systems, with representative applications under each branch.</desc>
+  <rect width="1000" height="510" rx="28" fill="#FFFFFF"/>
+  <g font-family="Arial,sans-serif" text-anchor="middle">
+    <text x="500" y="52" font-size="28" font-weight="700" fill="#17324D">AI spans digital information and physical-world systems</text>
+    <rect x="430" y="82" width="140" height="54" rx="14" fill="#DDF3DE" stroke="#3775BA" stroke-width="2"/>
+    <text x="500" y="116" font-size="21" font-weight="700" fill="#17324D">AI</text>
+    <path d="M500 136V170H235V195M500 170H765V195" fill="none" stroke="#3775BA" stroke-width="3"/>
+    <g font-size="18" fill="#17324D">
+      <rect x="80" y="195" width="310" height="72" rx="14" fill="#F4F8FC" stroke="#3775BA" stroke-width="2"/>
+      <text x="235" y="226" font-weight="700">digital information systems</text>
+      <text x="235" y="251" font-size="15" fill="#5E7F9C">perception, prediction, generation, agents</text>
+      <rect x="610" y="195" width="310" height="72" rx="14" fill="#FFF8D6" stroke="#FFD700" stroke-width="2"/>
+      <text x="765" y="226" font-weight="700">physical-world systems</text>
+      <text x="765" y="251" fill="#765800">robotics, automated driving, control</text>
+    </g>
+    <path d="M235 267V300M765 267V300" stroke="#3775BA" stroke-width="3"/>
+    <g font-size="17" fill="#17324D">
+      <rect x="55" y="300" width="360" height="134" rx="16" fill="#F4F8FC" stroke="#8EB6D8" stroke-width="2"/>
+      <text x="235" y="337" font-weight="700">Representative digital work</text>
+      <text x="235" y="369">text, images, speech, multimodality</text>
+      <text x="235" y="398">ranking, recommendation, optimization</text>
+      <text x="235" y="425">generation and software-tool workflows</text>
+      <rect x="585" y="300" width="360" height="134" rx="16" fill="#FFF6E8" stroke="#D7A45C" stroke-width="2"/>
+      <text x="765" y="337" font-weight="700">Representative physical work</text>
+      <text x="765" y="369">sensor fusion and scene perception</text>
+      <text x="765" y="398">planning, localization, and control</text>
+      <text x="765" y="425">safe execution in changing environments</text>
+    </g>
+  </g>
+  <g aria-hidden="true" fill="none" opacity="0" pointer-events="none">
+    <rect data-figure-safe-zone="text" x="488.0" y="12.0" width="824.8" height="61.8"/>
+    <rect data-figure-safe-zone="text" x="488.0" y="83.0" width="45.8" height="52.4"/>
+    <rect data-figure-safe-zone="text" x="223.0" y="197.0" width="262.7" height="47.0"/>
+    <rect data-figure-safe-zone="text" x="223.0" y="222.0" width="395.3" height="47.0"/>
+    <rect data-figure-safe-zone="text" x="753.0" y="197.0" width="218.5" height="47.0"/>
+    <rect data-figure-safe-zone="text" x="753.0" y="222.0" width="342.2" height="47.0"/>
+    <rect data-figure-safe-zone="text" x="223.0" y="308.0" width="262.7" height="47.0"/>
+    <rect data-figure-safe-zone="text" x="223.0" y="340.0" width="333.4" height="47.0"/>
+    <rect data-figure-safe-zone="text" x="223.0" y="369.0" width="351.1" height="47.0"/>
+    <rect data-figure-safe-zone="text" x="223.0" y="396.0" width="359.9" height="47.0"/>
+    <rect data-figure-safe-zone="text" x="753.0" y="308.0" width="271.5" height="47.0"/>
+    <rect data-figure-safe-zone="text" x="753.0" y="340.0" width="324.6" height="47.0"/>
+    <rect data-figure-safe-zone="text" x="753.0" y="369.0" width="333.4" height="47.0"/>
+    <rect data-figure-safe-zone="text" x="753.0" y="396.0" width="368.8" height="47.0"/>
+  </g>
+<g aria-hidden="true" fill="none" opacity="0" pointer-events="none"><rect data-figure-safe-zone="text" x="488.0" y="12.0" width="824.8" height="61.8"/><rect data-figure-safe-zone="text" x="488.0" y="83.0" width="45.8" height="52.4"/><rect data-figure-safe-zone="text" x="223.0" y="197.0" width="262.7" height="47.0"/><rect data-figure-safe-zone="text" x="223.0" y="224.0" width="351.6" height="44.2"/><rect data-figure-safe-zone="text" x="753.0" y="197.0" width="218.5" height="47.0"/><rect data-figure-safe-zone="text" x="753.0" y="222.0" width="342.2" height="47.0"/><rect data-figure-safe-zone="text" x="223.0" y="308.0" width="262.7" height="47.0"/><rect data-figure-safe-zone="text" x="223.0" y="340.0" width="333.4" height="47.0"/><rect data-figure-safe-zone="text" x="223.0" y="369.0" width="351.1" height="47.0"/><rect data-figure-safe-zone="text" x="223.0" y="396.0" width="359.9" height="47.0"/><rect data-figure-safe-zone="text" x="753.0" y="308.0" width="271.5" height="47.0"/><rect data-figure-safe-zone="text" x="753.0" y="340.0" width="324.6" height="47.0"/><rect data-figure-safe-zone="text" x="753.0" y="369.0" width="333.4" height="47.0"/><rect data-figure-safe-zone="text" x="753.0" y="396.0" width="368.8" height="47.0"/></g></svg>

@@ -1,0 +1,73 @@
+<?xml version="1.0"?>
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="650" viewBox="0 0 1200 650" role="img" aria-labelledby="title desc">
+  <title id="title">Model-serving scale-out from load signal to accepted traffic</title>
+  <desc id="desc">The control plane confirms demand using load signals, allocates devices, loads and warms the model, and accepts traffic only after health checks. Scale-out has meaningful preparation time.</desc>
+  <defs>
+    <marker id="a" viewBox="0 0 10 10" refX="8" refY="5" markerWidth="8" markerHeight="8" orient="auto">
+      <path d="M0 0 10 5 0 10z" fill="#0F4D92"/>
+    </marker>
+  </defs>
+  <rect width="1200" height="650" rx="30" fill="#FFFFFF"/>
+  <g font-family="Arial,sans-serif">
+    <text x="58" y="68" font-size="31" font-weight="700" fill="#17324D">Model-serving scale-out is not instant web-replica startup</text>
+    <text x="58" y="105" font-size="18" fill="#5E7F9C">Loading weights, allocating memory, and warming introduce lag, so capacity policy must anticipate demand before queues are already full.</text>
+    <g fill="none" stroke="#0F4D92" stroke-width="4" marker-end="url(#a)">
+      <path d="M225 260H280"/>
+      <path d="M470 260H525"/>
+      <path d="M715 260H770"/>
+      <path d="M960 260H1015"/>
+    </g>
+    <g stroke-width="3">
+      <rect x="55" y="180" width="170" height="160" rx="22" fill="#F6CFCB" stroke="#B64342"/>
+      <rect x="280" y="180" width="190" height="160" rx="22" fill="#FFF8D6" stroke="#FFD700"/>
+      <rect x="525" y="180" width="190" height="160" rx="22" fill="#EAF3FB" stroke="#0F4D92"/>
+      <rect x="770" y="180" width="190" height="160" rx="22" fill="#FFF8D6" stroke="#FFD700"/>
+      <rect x="1015" y="180" width="130" height="160" rx="22" fill="#EAF3FB" stroke="#0F4D92"/>
+    </g>
+    <g text-anchor="middle">
+      <text x="140" y="226" font-size="21" font-weight="700" fill="#B64342">load signals</text>
+      <text x="140" y="259" font-size="16" fill="#B64342">queue, TTFT, memory,</text>
+      <text x="140" y="285" font-size="16" fill="#B64342">rate, context length</text>
+      <text x="375" y="216" font-size="18" font-weight="700" fill="#765800">confirmation</text>
+      <text x="375" y="238" font-size="18" font-weight="700" fill="#765800">window</text>
+      <text x="375" y="270" font-size="16" fill="#765800">avoid transient spikes</text>
+      <text x="375" y="296" font-size="16" fill="#765800">and rapid oscillation</text>
+      <text x="620" y="226" font-size="21" font-weight="700" fill="#17324D">allocate device</text>
+      <text x="620" y="259" font-size="16" fill="#0F4D92">GPU, memory, network,</text>
+      <text x="620" y="285" font-size="16" fill="#0F4D92">replica slot</text>
+      <text x="865" y="226" font-size="21" font-weight="700" fill="#765800">load + warm</text>
+      <text x="865" y="259" font-size="16" fill="#765800">weights, runtime,</text>
+      <text x="865" y="285" font-size="16" fill="#765800">typical execution paths</text>
+      <text x="1080" y="226" font-size="20" font-weight="700" fill="#17324D">health check</text>
+      <text x="1080" y="259" font-size="15" fill="#0F4D92">then accept</text>
+      <text x="1080" y="285" font-size="15" fill="#0F4D92">traffic</text>
+    </g>
+    <rect x="205" y="420" width="790" height="120" rx="20" fill="#FFFFFF" stroke="#FFD700" stroke-width="3"/>
+    <text x="600" y="466" text-anchor="middle" font-size="21" font-weight="700" fill="#765800">Capacity policy must match the actual bottleneck, not one CPU or QPS metric</text>
+    <text x="600" y="493" text-anchor="middle" font-size="16" fill="#765800">Model, context distribution, KV reuse, and generation length make the same QPS</text>
+    <text x="600" y="516" text-anchor="middle" font-size="16" fill="#765800">imply different resource pressure.</text>
+    <text x="600" y="592" text-anchor="middle" font-size="18" fill="#5E7F9C">Late scale-out harms users through queues and timeouts; early or frequent scale-out wastes costly capacity.</text>
+  </g>
+  <g aria-hidden="true" fill="none" opacity="0" pointer-events="none">
+    <rect data-figure-safe-zone="text" x="46.0" y="25.0" width="959.0" height="65.8"/>
+    <rect data-figure-safe-zone="text" x="46.0" y="75.0" width="1297.0" height="48.3"/>
+    <rect data-figure-safe-zone="text" x="128.0" y="193.0" width="155.0" height="52.4"/>
+    <rect data-figure-safe-zone="text" x="128.0" y="231.0" width="190.4" height="45.6"/>
+    <rect data-figure-safe-zone="text" x="128.0" y="257.0" width="190.4" height="45.6"/>
+    <rect data-figure-safe-zone="text" x="363.0" y="193.0" width="231.5" height="52.4"/>
+    <rect data-figure-safe-zone="text" x="363.0" y="231.0" width="207.0" height="45.6"/>
+    <rect data-figure-safe-zone="text" x="363.0" y="257.0" width="198.7" height="45.6"/>
+    <rect data-figure-safe-zone="text" x="608.0" y="193.0" width="187.8" height="52.4"/>
+    <rect data-figure-safe-zone="text" x="608.0" y="231.0" width="198.7" height="45.6"/>
+    <rect data-figure-safe-zone="text" x="608.0" y="257.0" width="123.8" height="45.6"/>
+    <rect data-figure-safe-zone="text" x="853.0" y="193.0" width="144.1" height="52.4"/>
+    <rect data-figure-safe-zone="text" x="853.0" y="231.0" width="165.4" height="45.6"/>
+    <rect data-figure-safe-zone="text" x="853.0" y="257.0" width="215.4" height="45.6"/>
+    <rect data-figure-safe-zone="text" x="1068.0" y="194.0" width="148.8" height="51.0"/>
+    <rect data-figure-safe-zone="text" x="1068.0" y="232.0" width="109.8" height="44.2"/>
+    <rect data-figure-safe-zone="text" x="1068.0" y="258.0" width="78.6" height="44.2"/>
+    <rect data-figure-safe-zone="text" x="178.5" y="433.0" width="843.0" height="52.4"/>
+    <rect data-figure-safe-zone="text" x="88.5" y="469.0" width="1022.9" height="47.0"/>
+    <rect data-figure-safe-zone="text" x="87.2" y="562.0" width="1025.5" height="48.3"/>
+  </g>
+<g aria-hidden="true" fill="none" opacity="0" pointer-events="none"><rect data-figure-safe-zone="text" x="46.0" y="25.0" width="959.0" height="65.8"/><rect data-figure-safe-zone="text" x="46.0" y="75.0" width="1297.0" height="48.3"/><rect data-figure-safe-zone="text" x="128.0" y="193.0" width="155.0" height="52.4"/><rect data-figure-safe-zone="text" x="128.0" y="231.0" width="190.4" height="45.6"/><rect data-figure-safe-zone="text" x="128.0" y="257.0" width="190.4" height="45.6"/><rect data-figure-safe-zone="text" x="363.0" y="186.0" width="136.3" height="48.3"/><rect data-figure-safe-zone="text" x="363.0" y="208.0" width="80.2" height="48.3"/><rect data-figure-safe-zone="text" x="363.0" y="242.0" width="207.0" height="45.6"/><rect data-figure-safe-zone="text" x="363.0" y="268.0" width="198.7" height="45.6"/><rect data-figure-safe-zone="text" x="608.0" y="193.0" width="187.8" height="52.4"/><rect data-figure-safe-zone="text" x="608.0" y="231.0" width="198.7" height="45.6"/><rect data-figure-safe-zone="text" x="608.0" y="257.0" width="123.8" height="45.6"/><rect data-figure-safe-zone="text" x="853.0" y="193.0" width="144.1" height="52.4"/><rect data-figure-safe-zone="text" x="853.0" y="231.0" width="165.4" height="45.6"/><rect data-figure-safe-zone="text" x="853.0" y="257.0" width="215.4" height="45.6"/><rect data-figure-safe-zone="text" x="1068.0" y="194.0" width="148.8" height="51.0"/><rect data-figure-safe-zone="text" x="1068.0" y="232.0" width="109.8" height="44.2"/><rect data-figure-safe-zone="text" x="1068.0" y="258.0" width="78.6" height="44.2"/><rect data-figure-safe-zone="text" x="178.5" y="433.0" width="843.0" height="52.4"/><rect data-figure-safe-zone="text" x="263.5" y="465.0" width="673.0" height="45.6"/><rect data-figure-safe-zone="text" x="446.6" y="488.0" width="306.9" height="45.6"/><rect data-figure-safe-zone="text" x="87.2" y="562.0" width="1025.5" height="48.3"/></g></svg>

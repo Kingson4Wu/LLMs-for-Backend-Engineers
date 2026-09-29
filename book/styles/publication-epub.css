@@ -1,0 +1,11 @@
+/* Reflowable EPUB styles: deliberately no fixed overlays or print-only rules. */
+body { margin: 0; color: #242930; line-height: 1.8; font-family: "Noto Serif CJK SC", "Songti SC", Georgia, serif; overflow-wrap: anywhere; }
+h1, h2, h3 { line-height: 1.35; }
+h1 { border-bottom: 1px solid #ccd2d9; padding-bottom: .5em; margin-top: 3em; }
+a { color: #235c78; }
+img, svg { display: block; max-width: 100%; height: auto; margin: 1.5rem auto; }
+pre { padding: 1em; background: #f1f3f5; white-space: pre-wrap; overflow-wrap: anywhere; }
+code { font-family: "Noto Sans Mono", Menlo, monospace; font-size: .88em; }
+table { border-collapse: collapse; width: 100%; }
+th, td { border: 1px solid #ccd2d9; padding: .4em .6em; }
+blockquote { border-left: 3px solid #71899b; padding-left: 1em; margin-left: 0; }

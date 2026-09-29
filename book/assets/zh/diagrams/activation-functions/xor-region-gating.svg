@@ -1,0 +1,53 @@
+<?xml version="1.0"?>
+<svg xmlns="http://www.w3.org/2000/svg" width="1100" height="620" viewBox="0 0 1100 620" role="img" aria-labelledby="title desc">
+  <title id="title">&#x4E24;&#x4E2A; ReLU &#x5355;&#x5143;&#x5728; XOR &#x5E73;&#x9762;&#x7684;&#x8FB9;&#x754C;&#x4E24;&#x4FA7;&#x5206;&#x5DE5;</title>
+  <desc id="desc">&#x76F4;&#x7EBF; x1 &#x7B49;&#x4E8E; x2 &#x628A;&#x5E73;&#x9762;&#x5206;&#x6210;&#x4E24;&#x4FA7;&#x3002;ReLU(x1-x2) &#x5728;&#x4E00;&#x4FA7;&#x4E3A;&#x6B63;&#xFF0C;ReLU(x2-x1) &#x5728;&#x53E6;&#x4E00;&#x4FA7;&#x4E3A;&#x6B63;&#xFF1B;&#x8F93;&#x51FA;&#x5C42;&#x5408;&#x5E76;&#x4E24;&#x79CD;&#x6FC0;&#x6D3B;&#x4EE5;&#x8868;&#x793A; XOR &#x6B63;&#x7C7B;&#x3002;</desc>
+  <defs>
+    <marker id="a" viewBox="0 0 10 10" refX="8.5" refY="5" markerWidth="8" markerHeight="8" orient="auto">
+      <path d="M0 0 10 5 0 10z" fill="#0F4D92"/>
+    </marker>
+    <style>text{font-family:Arial,'Noto Sans SC',sans-serif}.h{font-size:22px;font-weight:700}.b{font-size:17px}</style>
+  </defs>
+  <rect width="1100" height="620" fill="#FFFFFF"/>
+  <text x="65" y="68" font-size="32" font-weight="700" fill="#17324D">&#x540C;&#x4E00;&#x8FB9;&#x754C;&#x4E24;&#x4FA7;&#xFF0C;&#x7531;&#x4E0D;&#x540C; ReLU &#x5355;&#x5143;&#x54CD;&#x5E94;</text>
+  <text x="65" y="103" class="b" fill="#416985">&#x975E;&#x7EBF;&#x6027;&#x5355;&#x5143;&#x5C06;&#x8FDE;&#x7EED;&#x5E73;&#x9762;&#x5207;&#x6210;&#x533A;&#x57DF;&#xFF1B;&#x8F93;&#x51FA;&#x5C42;&#x53EF;&#x518D;&#x628A;&#x533A;&#x57DF;&#x7EC4;&#x5408;&#x6210;&#x6240;&#x9700;&#x7684;&#x5224;&#x522B;&#x5F62;&#x72B6;&#x3002;</text>
+  <rect x="65" y="145" width="650" height="395" rx="22" fill="#F4F8FC" stroke="#8EB6D8" stroke-width="2"/>
+  <path d="M170 465V200M170 465H625" stroke="#0F4D92" stroke-width="4" marker-end="url(#a)" data-figure-connector="true"/>
+  <path d="M205 425L575 225" stroke="#FFD700" stroke-width="5" stroke-dasharray="10 8"/>
+  <path d="M205 425L575 225L575 425Z" fill="#DDF3DE"/>
+  <path d="M205 425L205 225L575 225Z" fill="#F6CFCB"/>
+  <text x="648" y="480" class="h" fill="#17324D">x&#x2081;</text>
+  <text x="112" y="194" class="h" fill="#17324D">x&#x2082;</text>
+  <text x="485" y="408" class="h" fill="#17324D">h&#x2081; = ReLU(x&#x2081; &#x2212; x&#x2082;)</text>
+  <text x="220" y="256" class="h" fill="#8F3635">h&#x2082; = ReLU(x&#x2082; &#x2212; x&#x2081;)</text>
+  <text x="480" y="214" class="b" fill="#765800">x&#x2081; = x&#x2082;</text>
+  <circle cx="205" cy="425" r="20" fill="#FFFFFF" stroke="#B64342" stroke-width="5"/>
+  <circle cx="575" cy="225" r="20" fill="#FFFFFF" stroke="#B64342" stroke-width="5"/>
+  <circle cx="205" cy="225" r="20" fill="#0F4D92"/>
+  <circle cx="575" cy="425" r="20" fill="#0F4D92"/>
+  <rect x="770" y="170" width="270" height="135" rx="20" fill="#EAF3FB" stroke="#8EB6D8" stroke-width="2"/>
+  <text x="801" y="216" class="h" fill="#17324D">&#x7EFF;&#x8272;&#x533A;&#x57DF;</text>
+  <text x="801" y="250" class="b" fill="#416985">x&#x2081; &gt; x&#x2082;</text>
+  <text x="801" y="279" class="b" fill="#416985">h&#x2081; &#x6FC0;&#x6D3B;&#xFF0C;h&#x2082; &#x4E3A; 0</text>
+  <rect x="770" y="335" width="270" height="135" rx="20" fill="#FFF8D6" stroke="#E9A6A1" stroke-width="2"/>
+  <text x="801" y="381" class="h" fill="#8F3635">&#x7EA2;&#x8272;&#x533A;&#x57DF;</text>
+  <text x="801" y="415" class="b" fill="#8F3635">x&#x2082; &gt; x&#x2081;</text>
+  <text x="801" y="444" class="b" fill="#8F3635">h&#x2082; &#x6FC0;&#x6D3B;&#xFF0C;h&#x2081; &#x4E3A; 0</text>
+  <text x="65" y="582" font-size="17" fill="#8F3635">&#x8FB9;&#x754C;&#x4E0A;&#x4E24;&#x8005;&#x90FD;&#x4E3A; 0&#xFF1B;&#x5BF9;&#x4E8E;&#x4E8C;&#x503C; XOR &#x6837;&#x672C;&#xFF0C;&#x8F93;&#x51FA;&#x5C42;&#x5C06;&#x4E24;&#x4FA7;&#x7684;&#x6B63;&#x54CD;&#x5E94;&#x76F8;&#x52A0;&#xFF0C;&#x6070;&#x597D;&#x4FDD;&#x7559;&#x4E24;&#x4E2A;&#x5F02;&#x503C;&#x89D2;&#x3002;</text>
+  <g aria-hidden="true" fill="none" opacity="0" pointer-events="none">
+    <rect data-figure-safe-zone="text" x="53.0" y="24.0" width="535.7" height="67.2"/>
+    <rect data-figure-safe-zone="text" x="53.0" y="74.0" width="558.5" height="47.0"/>
+    <rect data-figure-safe-zone="text" x="636.0" y="446.0" width="46.9" height="53.7"/>
+    <rect data-figure-safe-zone="text" x="100.0" y="160.0" width="46.9" height="53.7"/>
+    <rect data-figure-safe-zone="text" x="473.0" y="374.0" width="229.9" height="53.7"/>
+    <rect data-figure-safe-zone="text" x="208.0" y="222.0" width="229.9" height="53.7"/>
+    <rect data-figure-safe-zone="text" x="468.0" y="185.0" width="85.9" height="47.0"/>
+    <rect data-figure-safe-zone="text" x="789.0" y="182.0" width="107.6" height="53.7"/>
+    <rect data-figure-safe-zone="text" x="789.0" y="221.0" width="85.9" height="47.0"/>
+    <rect data-figure-safe-zone="text" x="789.0" y="250.0" width="152.0" height="47.0"/>
+    <rect data-figure-safe-zone="text" x="789.0" y="347.0" width="107.6" height="53.7"/>
+    <rect data-figure-safe-zone="text" x="789.0" y="386.0" width="85.9" height="47.0"/>
+    <rect data-figure-safe-zone="text" x="789.0" y="415.0" width="152.0" height="47.0"/>
+    <rect data-figure-safe-zone="text" x="53.0" y="553.0" width="670.3" height="47.0"/>
+  </g>
+</svg>

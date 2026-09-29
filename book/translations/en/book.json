@@ -1,0 +1,25 @@
+{
+  "title": "Understanding LLMs for Software Engineers",
+  "description": "A systems-first guide for software engineers, especially backend, AI application, and platform engineers, to understand LLM principles, mechanisms, and boundaries.",
+  "author": "Kingson Wu",
+  "language": "en",
+  "root": ".",
+  "plugins": [],
+  "pluginsConfig": {},
+  "readme_path": "index.md",
+  "release_date": "2026-04-13",
+  "cover_image": "assets/cover-en.svg",
+  "cover_alt": "Cover: Understanding LLMs for Software Engineers",
+  "outputs": {
+    "print_html": "exported/en/Understanding-LLMs.print.html",
+    "pdf": "exported/en/Understanding-LLMs.pdf",
+    "epub": "exported/en/Understanding-LLMs.epub"
+  },
+  "title_page_lines": [
+    "A systems-first guide for software engineers",
+    "github.com/kingson4wu/Understanding-LLMs"
+  ],
+  "structure": {
+    "readme": "index.md"
+  }
+}

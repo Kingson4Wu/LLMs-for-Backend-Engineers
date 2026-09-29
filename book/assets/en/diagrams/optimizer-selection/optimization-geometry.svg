@@ -1,0 +1,37 @@
+<?xml version="1.0"?>
+<svg xmlns="http://www.w3.org/2000/svg" width="1080" height="640" viewBox="0 0 1080 640" role="img" aria-labelledby="title desc">
+  <title id="title">Global-scale SGD zigzags across a narrow loss valley</title>
+  <desc id="desc">Elliptical loss contours form a steep transverse direction and shallow progress direction. One learning rate makes SGD repeatedly overshoot across the valley while moving slowly along it.</desc>
+  <defs>
+    <marker id="a" viewBox="0 0 10 10" refX="8" refY="5" markerWidth="8" markerHeight="8" orient="auto">
+      <path d="M0 0 10 5 0 10z" fill="#0F4D92"/>
+    </marker>
+  </defs>
+  <rect width="1080" height="640" rx="36" fill="#FFFFFF"/>
+  <text x="60" y="70" font-family="Arial, sans-serif" font-size="32" font-weight="700" fill="#17324D">One global step size makes SGD zigzag in a narrow loss valley</text>
+  <g fill="none" stroke="#FFD700" stroke-width="3">
+    <ellipse cx="520" cy="315" rx="350" ry="115"/>
+    <ellipse cx="520" cy="315" rx="265" ry="84"/>
+    <ellipse cx="520" cy="315" rx="180" ry="55"/>
+    <ellipse cx="520" cy="315" rx="90" ry="25"/>
+  </g>
+  <path d="M245 170L805 455" fill="none" stroke="#0F4D92" stroke-width="4" marker-end="url(#a)" data-figure-connector="true"/>
+  <path d="M275 190L620 360L390 280L720 410L475 335L805 455" fill="none" stroke="#B64342" stroke-width="7" stroke-linejoin="round" marker-end="url(#a)" data-figure-connector="true"/>
+  <circle cx="520" cy="315" r="9" fill="#17324D"/>
+  <g font-family="Arial, sans-serif">
+    <text x="155" y="140" font-size="20" fill="#765800">steep direction: overshoot</text>
+    <text x="730" y="500" font-size="20" fill="#0F4D92">shallow direction: slow progress</text>
+    <text x="400" y="220" font-size="20" fill="#B64342">zigzag</text>
+    <text x="580" y="290" font-size="18" fill="#0F4D92">minimum</text>
+  </g>
+  <path d="M110 550H970" stroke="#FFD700" stroke-width="3"/>
+  <text x="540" y="595" font-family="Arial, sans-serif" font-size="18" fill="#765800" text-anchor="middle">Momentum accumulates consistent directions and cancels alternating ones; it does not remove scale differences.</text>
+  <g aria-hidden="true" fill="none" opacity="0" pointer-events="none">
+    <rect data-figure-safe-zone="text" x="48.0" y="26.0" width="1039.0" height="67.2"/>
+    <rect data-figure-safe-zone="text" x="143.0" y="108.0" width="294.4" height="51.0"/>
+    <rect data-figure-safe-zone="text" x="718.0" y="468.0" width="356.8" height="51.0"/>
+    <rect data-figure-safe-zone="text" x="388.0" y="188.0" width="86.4" height="51.0"/>
+    <rect data-figure-safe-zone="text" x="568.0" y="260.0" width="89.5" height="48.3"/>
+    <rect data-figure-safe-zone="text" x="13.2" y="565.0" width="1053.6" height="48.3"/>
+  </g>
+</svg>

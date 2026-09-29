@@ -1,0 +1,35 @@
+<?xml version="1.0"?>
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="650" viewBox="0 0 1200 650" role="img" aria-labelledby="title desc">
+  <title id="title">&#x9002;&#x5E94;&#x5C42;&#x4E0E;&#x4FDD;&#x8BC1;&#x5C42;&#x7684;&#x5206;&#x5DE5;</title>
+  <desc id="desc">&#x7A33;&#x5B9A;&#x76EE;&#x6807;&#x548C;&#x7EA6;&#x675F;&#x6846;&#x5B9A;&#x6A21;&#x578B;&#x53EF;&#x53D8;&#x7B56;&#x7565;&#xFF0C;&#x786E;&#x5B9A;&#x6027;&#x7A0B;&#x5E8F;&#x6267;&#x884C;&#x5DF2;&#x9A8C;&#x8BC1;&#x8DEF;&#x5F84;&#xFF0C;&#x5916;&#x90E8;&#x72B6;&#x6001;&#x4E3A;&#x6210;&#x529F;&#x3001;&#x5931;&#x8D25;&#x4E0E;&#x7EE7;&#x7EED;&#x63D0;&#x4F9B;&#x4F9D;&#x636E;&#x3002;</desc>
+  <rect width="1200" height="650" rx="30" fill="#FFFFFF"/>
+  <g font-family="Arial,'Noto Sans SC',sans-serif" text-anchor="middle">
+    <text x="58" y="68" text-anchor="start" font-size="31" font-weight="700" fill="#17324D">&#x628A;&#x53D8;&#x5316;&#x4EA4;&#x7ED9;&#x6A21;&#x578B;&#xFF0C;&#x628A;&#x5DF2;&#x9A8C;&#x8BC1;&#x7684;&#x7A33;&#x5B9A;&#x8DEF;&#x5F84;&#x4EA4;&#x7ED9;&#x7A0B;&#x5E8F;</text>
+    <text x="58" y="105" text-anchor="start" font-size="18" fill="#5E7F9C">&#x6A21;&#x578B;&#x9002;&#x5408;&#x5728;&#x4E0D;&#x786E;&#x5B9A;&#x6761;&#x4EF6;&#x4E0B;&#x63D0;&#x51FA;&#x7B56;&#x7565;&#xFF1B;&#x4FDD;&#x8BC1;&#x6027;&#x6765;&#x81EA;&#x660E;&#x786E;&#x7EA6;&#x675F;&#x3001;&#x786E;&#x5B9A;&#x6027;&#x6267;&#x884C;&#x548C;&#x5916;&#x90E8;&#x72B6;&#x6001;&#x9A8C;&#x8BC1;&#x3002;</text>
+    <g stroke-width="3">
+      <rect x="150" y="155" width="900" height="78" rx="20" fill="#EAF3FB" stroke="#0F4D92"/>
+      <rect x="150" y="260" width="900" height="105" rx="20" fill="#FFF8D6" stroke="#FFD700"/>
+      <rect x="150" y="392" width="900" height="105" rx="20" fill="#EAF3FB" stroke="#0F4D92"/>
+      <rect x="150" y="524" width="900" height="58" rx="18" fill="#F6CFCB" stroke="#B64342"/>
+    </g>
+    <text x="400" y="203" font-size="18" font-weight="700" fill="#17324D">&#x7A33;&#x5B9A;&#x76EE;&#x6807;&#x3001;&#x7EA6;&#x675F;&#x4E0E;&#x9A8C;&#x6536;&#x6807;&#x51C6;</text>
+    <text x="770" y="203" font-size="17" fill="#0F4D92">&#x4E0D;&#x53EF;&#x7531;&#x201C;&#x770B;&#x8D77;&#x6765;&#x5408;&#x7406;&#x201D;&#x66FF;&#x4EE3;</text>
+    <text x="600" y="292" font-size="20" font-weight="700" fill="#765800">&#x9002;&#x5E94;&#x5C42;&#xFF1A;&#x6A21;&#x578B;&#x6839;&#x636E;&#x89C2;&#x5BDF;&#x9009;&#x62E9;&#x4E0B;&#x4E00;&#x6B65;</text>
+    <text x="600" y="326" font-size="17" fill="#765800">&#x63A2;&#x7D22;&#x3001;&#x89E3;&#x91CA;&#x3001;&#x89C4;&#x5212;&#x3001;&#x5019;&#x9009;&#x751F;&#x6210;</text>
+    <text x="600" y="424" font-size="20" font-weight="700" fill="#17324D">&#x4FDD;&#x8BC1;&#x5C42;&#xFF1A;&#x786E;&#x5B9A;&#x6027;&#x7A0B;&#x5E8F;&#x6267;&#x884C;&#x7A33;&#x5B9A;&#x8DEF;&#x5F84;</text>
+    <text x="600" y="458" font-size="17" fill="#0F4D92">&#x67E5;&#x8BE2;&#x3001;&#x8BA1;&#x7B97;&#x3001;&#x5199;&#x5165;&#x3001;&#x5DF2;&#x9A8C;&#x8BC1;&#x811A;&#x672C;</text>
+    <text x="600" y="560" font-size="19" font-weight="700" fill="#B64342">&#x5916;&#x90E8;&#x4E1A;&#x52A1;&#x72B6;&#x6001;&#x624D;&#x662F;&#x6210;&#x529F;&#x3001;&#x5931;&#x8D25;&#x6216;&#x7EE7;&#x7EED;&#x7684;&#x4F9D;&#x636E;&#x3002;</text>
+    <path d="M600 233V250M600 365V382M600 497V514" stroke="#0F4D92" stroke-width="4"/>
+  </g>
+  <g aria-hidden="true" fill="none" opacity="0" pointer-events="none">
+    <rect data-figure-safe-zone="text" x="46.0" y="25.0" width="629.1" height="65.8"/>
+    <rect data-figure-safe-zone="text" x="46.0" y="75.0" width="667.7" height="48.3"/>
+    <rect data-figure-safe-zone="text" x="218.0" y="169.0" width="265.3" height="53.7"/>
+    <rect data-figure-safe-zone="text" x="758.0" y="174.0" width="203.2" height="47.0"/>
+    <rect data-figure-safe-zone="text" x="223.0" y="272.0" width="328.0" height="53.7"/>
+    <rect data-figure-safe-zone="text" x="638.0" y="277.0" width="212.0" height="47.0"/>
+    <rect data-figure-safe-zone="text" x="223.0" y="404.0" width="328.0" height="53.7"/>
+    <rect data-figure-safe-zone="text" x="638.0" y="409.0" width="228.2" height="47.0"/>
+    <rect data-figure-safe-zone="text" x="588.0" y="529.0" width="368.7" height="49.7"/>
+  </g>
+<g aria-hidden="true" fill="none" opacity="0" pointer-events="none"><rect data-figure-safe-zone="text" x="46.0" y="25.0" width="629.1" height="65.8"/><rect data-figure-safe-zone="text" x="46.0" y="75.0" width="667.7" height="48.3"/><rect data-figure-safe-zone="text" x="388.0" y="173.0" width="221.5" height="48.3"/><rect data-figure-safe-zone="text" x="758.0" y="174.0" width="203.2" height="47.0"/><rect data-figure-safe-zone="text" x="588.0" y="260.0" width="300.4" height="51.0"/><rect data-figure-safe-zone="text" x="588.0" y="297.0" width="212.0" height="47.0"/><rect data-figure-safe-zone="text" x="588.0" y="392.0" width="300.4" height="51.0"/><rect data-figure-safe-zone="text" x="588.0" y="429.0" width="228.2" height="47.0"/><rect data-figure-safe-zone="text" x="588.0" y="529.0" width="368.7" height="49.7"/></g></svg>

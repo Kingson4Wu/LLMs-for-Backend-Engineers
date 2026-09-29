@@ -1,0 +1,55 @@
+<?xml version="1.0"?>
+<svg xmlns="http://www.w3.org/2000/svg" width="1100" height="620" viewBox="0 0 1100 620" role="img" aria-labelledby="title desc">
+  <title id="title">Softmax &#x628A; logits &#x53D8;&#x4E3A;&#x7ADE;&#x4E89;&#x7684;&#x6982;&#x7387;&#x5206;&#x5E03;</title>
+  <desc id="desc">Softmax &#x5C06; logits &#x4E8C;&#x3001;&#x4E00;&#x3001;&#x96F6;&#x70B9;&#x4E00;&#x5F52;&#x4E00;&#x5316;&#x4E3A;&#x96F6;&#x70B9;&#x516D;&#x4E94;&#x4E5D;&#x3001;&#x96F6;&#x70B9;&#x4E8C;&#x56DB;&#x4E8C;&#x3001;&#x96F6;&#x70B9;&#x96F6;&#x4E5D;&#x4E5D;&#xFF0C;&#x6240;&#x6709;&#x6982;&#x7387;&#x975E;&#x8D1F;&#x4E14;&#x548C;&#x4E3A;&#x4E00;&#xFF0C;&#x4E00;&#x9879;&#x5347;&#x9AD8;&#x4F1A;&#x6539;&#x53D8;&#x5176;&#x4ED6;&#x9879;&#x7684;&#x76F8;&#x5BF9;&#x6982;&#x7387;&#x3002;</desc>
+  <defs>
+    <marker id="a" viewBox="0 0 10 10" refX="8.5" refY="5" markerWidth="8" markerHeight="8" orient="auto">
+      <path d="M0 0 10 5 0 10z" fill="#0F4D92"/>
+    </marker>
+    <style>text{font-family:Arial,'Noto Sans SC',sans-serif}.h{font-size:22px;font-weight:700}.b{font-size:17px}</style>
+  </defs>
+  <rect width="1100" height="620" fill="#FFFFFF"/>
+  <text x="65" y="68" font-size="32" font-weight="700" fill="#17324D">Softmax&#xFF1A;&#x5206;&#x6570;&#x53D8;&#x6210;&#x76F8;&#x4E92;&#x7ADE;&#x4E89;&#x7684;&#x6982;&#x7387;</text>
+  <text x="65" y="103" class="b" fill="#416985">&#x5B83;&#x4E0D;&#x72EC;&#x7ACB;&#x5904;&#x7406;&#x6BCF;&#x4E00;&#x9879;&#xFF1B;&#x63D0;&#x9AD8;&#x4E00;&#x4E2A;&#x5019;&#x9009;&#x7684;&#x5206;&#x6570;&#xFF0C;&#x4E5F;&#x4F1A;&#x538B;&#x4F4E;&#x5176;&#x4ED6;&#x5019;&#x9009;&#x7684;&#x76F8;&#x5BF9;&#x6982;&#x7387;&#x3002;</text>
+  <rect x="65" y="165" width="275" height="300" rx="22" fill="#F4F8FC" stroke="#8EB6D8" stroke-width="2"/>
+  <text x="97" y="216" class="h" fill="#17324D">&#x8F93;&#x5165; logits z</text>
+  <text x="97" y="267" class="b" fill="#416985">z&#x2081; = 2.0</text>
+  <text x="97" y="311" class="b" fill="#416985">z&#x2082; = 1.0</text>
+  <text x="97" y="355" class="b" fill="#416985">z&#x2083; = 0.1</text>
+  <text x="97" y="420" class="b" fill="#5E7F9C">&#x53EF;&#x4E3A;&#x4EFB;&#x610F;&#x5B9E;&#x6570;</text>
+  <path d="M340 315h115" fill="none" stroke="#0F4D92" stroke-width="4" marker-end="url(#a)" data-figure-connector="true"/>
+  <rect x="470" y="245" width="180" height="140" rx="22" fill="#FFF8D6" stroke="#D8A919" stroke-width="2"/>
+  <text x="560" y="299" text-anchor="middle" class="h" fill="#765800">Softmax</text>
+  <text x="560" y="335" text-anchor="middle" class="b" fill="#765800">&#x6307;&#x6570;&#x5316; + &#x5F52;&#x4E00;&#x5316;</text>
+  <path d="M650 315h115" fill="none" stroke="#0F4D92" stroke-width="4" marker-end="url(#a)" data-figure-connector="true"/>
+  <rect x="780" y="165" width="255" height="300" rx="22" fill="#EAF3FB" stroke="#8EB6D8" stroke-width="2"/>
+  <text x="812" y="216" class="h" fill="#17324D">&#x8F93;&#x51FA;&#x6982;&#x7387; p</text>
+  <g>
+    <rect x="812" y="246" width="148" height="31" rx="8" fill="#0F4D92"/>
+    <rect x="812" y="298" width="55" height="31" rx="8" fill="#6E9A8A"/>
+    <rect x="812" y="350" width="23" height="31" rx="8" fill="#A8C8BB"/>
+    <text x="950" y="285" class="b" fill="#17324D">p&#x2081; = 0.659</text>
+    <text x="884" y="321" class="b" fill="#17324D">p&#x2082; = 0.242</text>
+    <text x="850" y="373" class="b" fill="#17324D">p&#x2083; = 0.099</text>
+  </g>
+  <text x="812" y="423" class="b" fill="#0F4D92">p&#x1D62; &#x2265; 0&#xFF0C;&#x3A3;p&#x1D62; = 1</text>
+  <rect x="65" y="520" width="970" height="45" rx="13" fill="#F6CFCB"/>
+  <text x="93" y="549" font-size="17" fill="#8F3635">&#x6700;&#x5927; logit &#x5BF9;&#x5E94;&#x6700;&#x5927;&#x6982;&#x7387;&#xFF0C;&#x4F46;&#x4E0D;&#x662F;&#x201C;&#x53EA;&#x4FDD;&#x7559;&#x6700;&#x5927;&#x9879;&#x201D;&#xFF1B;&#x5206;&#x5E03;&#x7684;&#x5C16;&#x9510;&#x7A0B;&#x5EA6;&#x53D6;&#x51B3;&#x4E8E;&#x5206;&#x6570;&#x4E4B;&#x95F4;&#x7684;&#x5DEE;&#x8DDD;&#x4E0E;&#x5C3A;&#x5EA6;&#x3002;</text>
+  <g aria-hidden="true" fill="none" opacity="0" pointer-events="none">
+    <rect data-figure-safe-zone="text" x="53.0" y="24.0" width="491.5" height="67.2"/>
+    <rect data-figure-safe-zone="text" x="53.0" y="74.0" width="551.2" height="47.0"/>
+    <rect data-figure-safe-zone="text" x="85.0" y="182.0" width="168.8" height="53.7"/>
+    <rect data-figure-safe-zone="text" x="85.0" y="238.0" width="94.7" height="47.0"/>
+    <rect data-figure-safe-zone="text" x="85.0" y="282.0" width="94.7" height="47.0"/>
+    <rect data-figure-safe-zone="text" x="85.0" y="326.0" width="94.7" height="47.0"/>
+    <rect data-figure-safe-zone="text" x="85.0" y="391.0" width="120.9" height="47.0"/>
+    <rect data-figure-safe-zone="text" x="508.0" y="265.0" width="104.1" height="53.7"/>
+    <rect data-figure-safe-zone="text" x="486.3" y="306.0" width="147.4" height="47.0"/>
+    <rect data-figure-safe-zone="text" x="800.0" y="182.0" width="130.5" height="53.7"/>
+    <rect data-figure-safe-zone="text" x="964.0" y="240.0" width="112.4" height="47.0"/>
+    <rect data-figure-safe-zone="text" x="872.0" y="292.0" width="112.4" height="47.0"/>
+    <rect data-figure-safe-zone="text" x="838.0" y="344.0" width="112.4" height="47.0"/>
+    <rect data-figure-safe-zone="text" x="800.0" y="394.0" width="147.8" height="47.0"/>
+    <rect data-figure-safe-zone="text" x="81.0" y="520.0" width="727.6" height="47.0"/>
+  </g>
+<g aria-hidden="true" fill="none" opacity="0" pointer-events="none"><rect data-figure-safe-zone="text" x="53.0" y="24.0" width="491.5" height="67.2"/><rect data-figure-safe-zone="text" x="53.0" y="74.0" width="551.2" height="47.0"/><rect data-figure-safe-zone="text" x="85.0" y="182.0" width="168.8" height="53.7"/><rect data-figure-safe-zone="text" x="85.0" y="238.0" width="94.7" height="47.0"/><rect data-figure-safe-zone="text" x="85.0" y="282.0" width="94.7" height="47.0"/><rect data-figure-safe-zone="text" x="85.0" y="326.0" width="94.7" height="47.0"/><rect data-figure-safe-zone="text" x="85.0" y="391.0" width="120.9" height="47.0"/><rect data-figure-safe-zone="text" x="508.0" y="265.0" width="104.1" height="53.7"/><rect data-figure-safe-zone="text" x="486.3" y="306.0" width="147.4" height="47.0"/><rect data-figure-safe-zone="text" x="800.0" y="182.0" width="130.5" height="53.7"/><rect data-figure-safe-zone="text" x="938.0" y="256.0" width="112.4" height="47.0"/><rect data-figure-safe-zone="text" x="872.0" y="292.0" width="112.4" height="47.0"/><rect data-figure-safe-zone="text" x="838.0" y="344.0" width="112.4" height="47.0"/><rect data-figure-safe-zone="text" x="800.0" y="394.0" width="147.8" height="47.0"/><rect data-figure-safe-zone="text" x="81.0" y="520.0" width="727.6" height="47.0"/></g></svg>

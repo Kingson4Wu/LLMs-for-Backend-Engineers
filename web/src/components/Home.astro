@@ -1,0 +1,303 @@
+---
+import Layout from '../layouts/Layout.astro';
+import {
+  catalog,
+  pages,
+  t,
+  titleFor,
+  partTitle,
+  partDescription,
+  partNumber,
+  chapterNumber,
+} from '../lib/book.mjs';
+import { withBase, chapterUrl } from '../lib/paths.mjs';
+const { locale = 'zh-Hans' } = Astro.props;
+const base = import.meta.env.BASE_URL;
+const hostedBookUrl = `https://kingson4wu.github.io/Understanding-LLMs/exported/${locale}/Understanding-LLMs.pdf`;
+const learningPrompt = t(
+  locale,
+  `我要学习《理解大模型：面向软件工程师的原理与系统指南》。请先下载并阅读完整 PDF 书稿：${hostedBookUrl}\n\n若无法下载或读取该文件，请明确告诉我，并让我上传同语言书稿；不要假装已读取。读取成功后，先根据目录概括全书四个部分，再按我的目标给出最短学习路径。每次解释标注相关章节、标题、公式或图；区分“书中证据”“你的推断”和“需要外部核实”的内容。一次只讲一个概念，每次解释后问我一个检验理解的问题。`,
+  `I want to study Understanding LLMs for Software Engineers. Please first download and read the complete PDF: ${hostedBookUrl}\n\nIf you cannot download or read that file, tell me clearly and ask me to upload the same-language edition; do not pretend that you have read it. After reading it, summarize the book’s four parts from its table of contents, then give me the shortest learning path for my goal. In every explanation, name the relevant chapter, heading, formula, or figure; distinguish “book evidence,” “your inference,” and claims that “require external verification.” Teach one concept at a time and ask one question after each explanation to check my understanding.`,
+);
+---
+
+<Layout
+  locale={locale}
+  title={t(locale, '理解大模型：面向软件工程师的原理与系统指南', 'Understanding LLMs for Software Engineers')}
+>
+  <main id="main" class="home">
+    <section class="hero">
+      <div>
+        <p class="eyebrow">
+          <span class="dot"></span>{' '}
+          {t(locale, '一本写给系统构建者的书', 'A BOOK FOR SYSTEM BUILDERS')}
+        </p>
+        <h1>
+          {t(locale, '理解大模型，', 'Understanding')}
+          <br />
+          <em>{t(locale, '从原理到系统。', 'language models.')}</em>
+        </h1>
+        <p class="hero-subtitle">Principles · Mechanisms · Systems</p>
+        <p class="hero-description">
+          {t(
+            locale,
+            '面向后端、AI 应用与平台工程师，用熟悉的工程直觉理解 LLM 的原理、机制与系统边界。沿着数学基础、内部原理、外部系统与 LLM 基础设施，建立自己的知识地图。',
+            'For backend, AI application, and platform engineers: use familiar engineering intuition to understand LLM principles, mechanisms, and system boundaries, from foundations through systems and infrastructure.',
+          )}
+        </p>
+        <div class="hero-actions">
+          <a class="button primary" href={chapterUrl(locale, 'ai-learning-guide', base)}>
+            {t(locale, 'AI 辅助学习', 'Learn with AI')} <span>↗</span>
+          </a>
+          <a
+            class="text-link"
+            id="start-reading"
+            data-locale={locale}
+            href={chapterUrl(locale, 'introduction', base)}
+          >
+            {t(locale, '直接阅读', 'Read directly')} →
+          </a>
+          <a class="text-link" href={withBase(`/${locale}/downloads/`, base)}>
+            {t(locale, '下载电子书', 'Download editions')} ↗
+          </a>
+        </div>
+        <p class="ai-learning-note">
+          {t(
+            locale,
+            '推荐先让 AI 以本书原文、公式和图为依据诊断你的理解；章节阅读是共同的证据底座。',
+            'Recommended: let an AI tutor diagnose your understanding against this book’s source, formulas, and figures; the chapters remain the shared evidence base.',
+          )}
+        </p>
+        <p class="byline">
+          Kingson Wu ·{' '}
+          {t(
+            locale,
+            '面向有编程基础的软件工程师，尤其是后端、AI 应用与平台工程师',
+            'For software engineers, especially backend, AI application, and platform engineers',
+          )}
+        </p>
+      </div>
+      <aside class="hero-reading-note" aria-label={t(locale, '本书说明', 'About this book')}>
+        <p class="hero-note-index">{t(locale, '阅读说明 / 01', 'READING NOTE / 01')}</p>
+        <p class="hero-note-lead">
+          {t(
+            locale,
+            '理解 LLM，不必从框架或产品名开始。',
+            'You do not need to begin with frameworks or product names to understand LLMs.',
+          )}
+        </p>
+        <div class="hero-note-section">
+          <h2>{t(locale, '这本书解释什么', 'What this book explains')}</h2>
+          <p>
+            {t(
+              locale,
+              '模型怎样从数据形成能力，怎样根据上下文生成输出，又怎样与程序、资料和运行系统组成可交付的服务。',
+              'How models acquire capability from data, generate from context, and become deliverable systems with programs, evidence, and runtime infrastructure.',
+            )}
+          </p>
+        </div>
+        <div class="hero-note-section">
+          <h2>{t(locale, '这本书不做什么', 'What it leaves out')}</h2>
+          <p>
+            {t(
+              locale,
+              '不把它写成框架手册，也不试图罗列每个模型与产品；细节只在它改变工程判断时展开。',
+              'It is neither a framework manual nor a catalogue of models and products. Details appear where they change engineering judgment.',
+            )}
+          </p>
+        </div>
+        <a class="hero-note-link" href="#contents">
+          {t(locale, '查看全书结构', 'See the book structure')} <span aria-hidden="true">↓</span>
+        </a>
+      </aside>
+    </section>
+    <section class="ai-prompt-launcher">
+      <p class="eyebrow">{t(locale, 'AI 学习启动', 'START LEARNING WITH AI')}</p>
+      <h2>{t(locale, '复制提示词，让 AI 开始。', 'Copy a prompt. Let AI start the lesson.')}</h2>
+      <article class="ai-prompt-card">
+        <header><div><p class="eyebrow">{t(locale, '推荐路径', 'RECOMMENDED PATH')}</p><h3>{t(locale, '让 AI 下载完整书稿', 'Let AI download the complete book')}</h3></div><button type="button" class="prompt-copy-button" data-copy-text={learningPrompt} data-copy-label={t(locale, '复制提示词', 'Copy prompt')} data-copied-label={t(locale, '已复制', 'Copied')} data-fallback-label={t(locale, '请手动复制', 'Copy manually')}>{t(locale, '复制提示词', 'Copy prompt')}</button></header>
+        <pre><code>{learningPrompt}</code></pre>
+        <a class="ai-source-link" href={hostedBookUrl} download>{t(locale, '查看 / 下载完整 PDF 书稿', 'View / download the complete PDF')} ↓</a>
+      </article>
+    </section>
+    <div class="facts">
+      <span>
+        <strong>04</strong> {t(locale, '内容部分', 'parts of the book')}
+      </span>
+      <span>
+        <strong>{catalog.parts.flatMap((p) => p.chapters).length}</strong>{' '}
+        {t(locale, '篇正文', 'articles')}
+      </span>
+      <span>
+        {t(locale, '在线阅读 · EPUB · HTML', 'Read online · EPUB · HTML')}
+      </span>
+    </div>
+    <section class="routes">
+      <p class="eyebrow">
+        {t(locale, '找到你的起点', 'FIND YOUR STARTING POINT')}
+      </p>
+      <div>
+        {catalog.parts.slice(0, 4).map((part, i) => (
+          <a href={chapterUrl(locale, part.id, base)}>
+            <small>0{i + 1} / {t(locale, '阅读入口', 'READING ENTRY')}</small>
+            <h2>
+              {
+                [
+                  t(locale, '从零建立直觉', 'Build your intuition'),
+                  t(locale, '拆开模型看内部', 'Look inside the model'),
+                  t(locale, '连接外部世界', 'Connect the external world'),
+                  t(locale, '理解服务交付', 'Understand service delivery'),
+                ][i]
+              }
+            </h2>
+            <p>
+              {
+                [
+                  t(
+                    locale,
+                    '没有 ML 背景？从向量、概率与学习开始。',
+                    'New to ML? Start with vectors, probability, and learning.',
+                  ),
+                  t(
+                    locale,
+                    '已有基础？理解 Transformer 如何产生输出。',
+                    'Know the basics? Explore how Transformers produce outputs.',
+                  ),
+                  t(
+                    locale,
+                    '关注应用？从事实、资料与工具的边界开始。',
+                    'Building an application? Begin with boundaries among facts, material, and tools.',
+                  ),
+                  t(
+                    locale,
+                    '关注性能与部署？从一次请求的生命周期开始。',
+                    'Working on performance or deployment? Start with one request lifecycle.',
+                  ),
+                ][i]
+              }
+            </p>
+            <span>→</span>
+          </a>
+        ))}
+      </div>
+    </section>
+    <section id="contents" class="contents">
+      <div class="section-heading">
+        <div>
+          <p class="eyebrow">
+            {t(locale, '沿着依赖顺序，逐层深入', 'A PATH THROUGH THE IDEAS')}
+          </p>
+          <h2>
+            {t(locale, '全书目录', 'Inside the book')}
+            <em>.</em>
+          </h2>
+        </div>
+        <a href={chapterUrl(locale, 'preface', base)}>
+          {t(locale, '读前言', 'Read the preface')} ↗
+        </a>
+      </div>
+      {catalog.parts.map((part, i) => (
+        <section id={part.id} class="part-section">
+          <h3>
+            <span>{partNumber(locale, i)}</span>
+            <a href={chapterUrl(locale, part.id, base)}>
+              {partTitle(locale, part)}
+            </a>
+          </h3>
+          {partDescription(locale, part) && (
+            <p class="part-description">{partDescription(locale, part)}</p>
+          )}
+          <div class="chapter-grid">
+            {part.chapters.map((page, j) => (
+              <a href={chapterUrl(locale, page.id, base)}>
+                {part.id !== 'appendix' && (
+                  <span class="chapter-index">
+                    {chapterNumber(j)}
+                  </span>
+                )}
+                <span>{titleFor(locale, page)}</span>
+                <span>↗</span>
+              </a>
+            ))}
+          </div>
+        </section>
+      ))}
+    </section>
+    <section class="download-banner">
+      <div>
+        <p class="eyebrow">
+          {t(locale, '按自己的节奏阅读', 'READ AT YOUR OWN PACE')}
+        </p>
+          <h2>{t(locale, '带上 AI 导师学习。', 'Take an AI tutor with you.')}</h2>
+        <p>
+          {t(
+            locale,
+            '复制上方提示词，让 AI 先下载完整 PDF，再围绕你的目标带你学习。',
+            'Copy the prompt above: AI downloads the complete PDF first, then teaches around your goal.',
+          )}
+        </p>
+      </div>
+      <a class="button" href={withBase(`/${locale}/downloads/`, base)}>
+        {t(locale, '查看学习与下载方式', 'See learning & downloads')} ↗
+      </a>
+    </section>
+  </main>
+  <script
+    is:inline
+    define:vars={{ introUrl: chapterUrl(locale, 'introduction', base), locale }}
+  >
+    if (locale === 'zh-Hans' && location.hash) {
+      const old = new Set([
+        '导读',
+        '三层内容架构',
+        '第一层：数学与机器学习基础',
+        '第二层：llm-内部机制',
+        '第三层：llm-与外部系统的连接',
+        '阅读建议',
+        'llms-for-backend-engineers',
+      ]);
+      try {
+        const id = decodeURIComponent(location.hash.slice(1));
+        if (old.has(id))
+          location.replace(
+            introUrl +
+              (id === 'llms-for-backend-engineers' ? '' : location.hash),
+          );
+      } catch {}
+    }
+  </script>
+  <script>
+    const link = document.querySelector<HTMLAnchorElement>('#start-reading');
+    try {
+      const last = JSON.parse(
+        localStorage.getItem(`llms-last:${link?.dataset.locale}`) || 'null',
+      );
+      if (
+        link &&
+        last &&
+        typeof last.href === 'string' &&
+        last.href.startsWith(
+          link.href.slice(0, link.href.indexOf('/read/') + 6),
+        )
+      ) {
+        link.href = last.href;
+        link.firstChild.textContent =
+          link.dataset.locale === 'en' ? 'Continue reading ' : '继续阅读 ';
+      }
+    } catch {}
+  </script>
+  <script>
+    document.querySelectorAll<HTMLButtonElement>('[data-copy-text]').forEach((button) => {
+      const original = button.dataset.copyLabel || button.textContent || '';
+      button.addEventListener('click', async () => {
+        try {
+          await navigator.clipboard.writeText(button.dataset.copyText || '');
+          button.textContent = button.dataset.copiedLabel || original;
+        } catch {
+          button.textContent = button.dataset.fallbackLabel || original;
+        }
+        setTimeout(() => (button.textContent = original), 1800);
+      });
+    });
+  </script>
+</Layout>

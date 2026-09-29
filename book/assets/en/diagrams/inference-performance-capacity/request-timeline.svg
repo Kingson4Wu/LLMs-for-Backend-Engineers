@@ -1,0 +1,59 @@
+<?xml version="1.0"?>
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="650" viewBox="0 0 1200 650" role="img" aria-labelledby="title desc">
+  <title id="title">Latency timeline of a streaming request</title>
+  <desc id="desc">A request queues and performs prefill before its first token; it then enters Decode. TTFT runs from arrival to first token, and TPOT is the interval between Decode tokens.</desc>
+  <defs>
+    <marker id="a" viewBox="0 0 10 10" refX="8" refY="5" markerWidth="8" markerHeight="8" orient="auto">
+      <path d="M0 0 10 5 0 10z" fill="#0F4D92"/>
+    </marker>
+  </defs>
+  <rect width="1200" height="650" rx="30" fill="#FFFFFF"/>
+  <g font-family="Arial,sans-serif">
+    <text x="58" y="68" font-size="31" font-weight="700" fill="#17324D">&#x201C;Fast&#x201D; means at least three different times for a streaming request</text>
+    <text x="58" y="105" font-size="18" fill="#5E7F9C">Queueing controls when work starts; TTFT controls first visibility; TPOT describes the ongoing output rhythm.</text>
+    <path d="M100 365H1080" fill="none" stroke="#0F4D92" stroke-width="5" marker-end="url(#a)" data-figure-connector="true"/>
+    <g stroke-width="3">
+      <rect x="130" y="190" width="200" height="150" rx="22" fill="#FFF8D6" stroke="#FFD700"/>
+      <rect x="360" y="190" width="235" height="150" rx="22" fill="#EAF3FB" stroke="#0F4D92"/>
+      <rect x="650" y="190" width="315" height="150" rx="22" fill="#EAF3FB" stroke="#0F4D92"/>
+    </g>
+    <g text-anchor="middle">
+      <text x="230" y="244" font-size="23" font-weight="700" fill="#765800">queue</text>
+      <text x="230" y="278" font-size="17" fill="#765800">wait for instance, memory,</text>
+      <text x="230" y="303" font-size="17" fill="#765800">or a scheduling slot</text>
+      <text x="477" y="244" font-size="23" font-weight="700" fill="#17324D">prefill</text>
+      <text x="477" y="278" font-size="17" fill="#0F4D92">process existing input;</text>
+      <text x="477" y="303" font-size="17" fill="#0F4D92">build this turn&#x2019;s KV state</text>
+      <text x="807" y="244" font-size="23" font-weight="700" fill="#17324D">decode</text>
+      <text x="807" y="278" font-size="17" fill="#0F4D92">emit later tokens step by step</text>
+      <text x="807" y="303" font-size="17" fill="#0F4D92">until the final token</text>
+    </g>
+    <circle cx="625" cy="365" r="20" fill="#B64342"/>
+    <text x="625" y="164" text-anchor="middle" font-size="20" font-weight="700" fill="#B64342">first token</text>
+    <circle cx="1000" cy="365" r="20" fill="#0F4D92"/>
+    <text x="1000" y="164" text-anchor="middle" font-size="20" font-weight="700" fill="#17324D">final token</text>
+    <path d="M130 397H625M130 387v20M625 387v20" fill="none" stroke="#B64342" stroke-width="4"/>
+    <text x="377" y="442" text-anchor="middle" font-size="22" font-weight="700" fill="#B64342">TTFT = queue + input processing + prefill</text>
+    <path d="M670 490H960M670 480v20M960 480v20" fill="none" stroke="#FFD700" stroke-width="4"/>
+    <text x="815" y="536" text-anchor="middle" font-size="21" font-weight="700" fill="#765800">TPOT: interval between output tokens</text>
+    <text x="600" y="596" text-anchor="middle" font-size="18" fill="#5E7F9C">High throughput does not necessarily mean low TTFT or TPOT for each request.</text>
+  </g>
+  <g aria-hidden="true" fill="none" opacity="0" pointer-events="none">
+    <rect data-figure-safe-zone="text" x="46.0" y="25.0" width="1104.0" height="65.8"/>
+    <rect data-figure-safe-zone="text" x="46.0" y="75.0" width="1044.2" height="48.3"/>
+    <rect data-figure-safe-zone="text" x="218.0" y="209.0" width="83.8" height="55.0"/>
+    <rect data-figure-safe-zone="text" x="218.0" y="249.0" width="253.8" height="47.0"/>
+    <rect data-figure-safe-zone="text" x="218.0" y="274.0" width="200.8" height="47.0"/>
+    <rect data-figure-safe-zone="text" x="465.0" y="209.0" width="107.7" height="55.0"/>
+    <rect data-figure-safe-zone="text" x="465.0" y="249.0" width="227.3" height="47.0"/>
+    <rect data-figure-safe-zone="text" x="465.0" y="274.0" width="253.8" height="47.0"/>
+    <rect data-figure-safe-zone="text" x="795.0" y="209.0" width="95.8" height="55.0"/>
+    <rect data-figure-safe-zone="text" x="795.0" y="249.0" width="289.2" height="47.0"/>
+    <rect data-figure-safe-zone="text" x="795.0" y="274.0" width="209.6" height="47.0"/>
+    <rect data-figure-safe-zone="text" x="555.8" y="132.0" width="138.4" height="51.0"/>
+    <rect data-figure-safe-zone="text" x="930.8" y="132.0" width="138.4" height="51.0"/>
+    <rect data-figure-safe-zone="text" x="130.5" y="408.0" width="493.0" height="53.7"/>
+    <rect data-figure-safe-zone="text" x="606.4" y="503.0" width="417.1" height="52.4"/>
+    <rect data-figure-safe-zone="text" x="232.3" y="566.0" width="735.4" height="48.3"/>
+  </g>
+</svg>

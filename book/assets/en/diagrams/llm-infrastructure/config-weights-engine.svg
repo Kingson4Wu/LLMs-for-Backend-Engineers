@@ -1,0 +1,57 @@
+<?xml version="1.0"?>
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="620" viewBox="0 0 1200 620" role="img" aria-labelledby="title desc">
+  <title id="title">Configuration, weights, and inference engine are distinct model artifacts</title>
+  <desc id="desc">Configuration defines model structure, weights store learned numeric tensors, and an inference engine uses an architecture adapter plus general runtime to build and execute computation. All three must be compatible.</desc>
+  <defs>
+    <marker id="a" viewBox="0 0 10 10" refX="8.5" refY="5" markerWidth="8" markerHeight="8" orient="auto">
+      <path d="M0 0 10 5 0 10z" fill="#0F4D92"/>
+    </marker>
+    <style>text{font-family:Arial,sans-serif}.h{font-size:23px;font-weight:700}.b{font-size:17px}.s{font-size:16px}</style>
+  </defs>
+  <rect width="1200" height="620" fill="#FFFFFF"/>
+  <text x="65" y="68" font-size="32" font-weight="700" fill="#17324D">A runnable model is not one indivisible file</text>
+  <text x="65" y="103" class="b" fill="#416985">Structure, learned numbers, and execution capability are separate artifacts that must match one runtime contract.</text>
+  <rect x="65" y="165" width="300" height="260" rx="22" fill="#EAF3FB" stroke="#8EB6D8" stroke-width="2"/>
+  <text x="96" y="214" class="h" fill="#17324D">Model configuration</text>
+  <text x="96" y="255" class="b" fill="#416985">layers, dimensions, attention heads</text>
+  <text x="96" y="287" class="b" fill="#416985">vocabulary, positions, architecture</text>
+  <rect x="96" y="329" width="238" height="51" rx="12" fill="#DDF3DE"/>
+  <text x="215" y="361" text-anchor="middle" class="s" fill="#0F4D92">what computation should look like</text>
+  <path d="M365 165V150H459V163" fill="none" stroke="#0F4D92" stroke-width="4" marker-end="url(#a)" data-figure-connector="true"/>
+  <rect x="474" y="165" width="300" height="260" rx="22" fill="#FFF8D6" stroke="#D8A919" stroke-width="2"/>
+  <text x="505" y="214" class="h" fill="#765800">Model weights</text>
+  <text x="505" y="255" class="b" fill="#765800">learned parameter tensors</text>
+  <text x="505" y="287" class="b" fill="#765800">the numeric values for every layer</text>
+  <rect x="505" y="329" width="238" height="51" rx="12" fill="#FFF1B8"/>
+  <text x="624" y="361" text-anchor="middle" class="s" fill="#765800">which numbers computation uses</text>
+  <path d="M774 165V150H868V163" fill="none" stroke="#0F4D92" stroke-width="4" marker-end="url(#a)" data-figure-connector="true"/>
+  <rect x="883" y="165" width="252" height="260" rx="22" fill="#FFF8D6" stroke="#E9A6A1" stroke-width="2"/>
+  <text x="914" y="214" class="h" fill="#8F3635">Inference engine</text>
+  <text x="914" y="247" class="b" fill="#8F3635">architecture adapter builds</text>
+  <text x="914" y="273" class="b" fill="#8F3635">general runtime schedules</text>
+  <text x="914" y="299" class="b" fill="#8F3635">and runs</text>
+  <rect x="914" y="329" width="190" height="51" rx="12" fill="#F6CFCB"/>
+  <text x="1009" y="361" text-anchor="middle" class="s" fill="#8F3635">how execution is delivered</text>
+  <rect x="65" y="490" width="1070" height="73" rx="18" fill="#17324D"/>
+  <text x="98" y="525" font-size="20" font-weight="700" fill="#FFFFFF">Compatibility is the intersection of all three</text>
+  <text x="98" y="551" font-size="17" fill="#CFCECE">A plausible weight file cannot run reliably if its structure mismatches or the engine does not support execution.</text>
+  <g aria-hidden="true" fill="none" opacity="0" pointer-events="none">
+    <rect data-figure-safe-zone="text" x="53.0" y="24.0" width="756.2" height="67.2"/>
+    <rect data-figure-safe-zone="text" x="53.0" y="74.0" width="1022.9" height="47.0"/>
+    <rect data-figure-safe-zone="text" x="84.0" y="180.0" width="241.4" height="53.7"/>
+    <rect data-figure-safe-zone="text" x="84.0" y="226.0" width="333.4" height="47.0"/>
+    <rect data-figure-safe-zone="text" x="84.0" y="258.0" width="333.4" height="47.0"/>
+    <rect data-figure-safe-zone="text" x="57.1" y="332.0" width="315.7" height="47.0"/>
+    <rect data-figure-safe-zone="text" x="493.0" y="180.0" width="172.7" height="53.7"/>
+    <rect data-figure-safe-zone="text" x="493.0" y="226.0" width="245.0" height="47.0"/>
+    <rect data-figure-safe-zone="text" x="493.0" y="258.0" width="324.6" height="47.0"/>
+    <rect data-figure-safe-zone="text" x="479.4" y="332.0" width="289.2" height="47.0"/>
+    <rect data-figure-safe-zone="text" x="902.0" y="180.0" width="207.0" height="53.7"/>
+    <rect data-figure-safe-zone="text" x="902.0" y="218.0" width="262.7" height="47.0"/>
+    <rect data-figure-safe-zone="text" x="902.0" y="244.0" width="245.0" height="47.0"/>
+    <rect data-figure-safe-zone="text" x="902.0" y="270.0" width="94.7" height="47.0"/>
+    <rect data-figure-safe-zone="text" x="882.1" y="332.0" width="253.8" height="47.0"/>
+    <rect data-figure-safe-zone="text" x="86.0" y="493.0" width="502.4" height="51.0"/>
+    <rect data-figure-safe-zone="text" x="86.0" y="522.0" width="1022.9" height="47.0"/>
+  </g>
+</svg>
