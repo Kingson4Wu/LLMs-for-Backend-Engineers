@@ -1,0 +1,11 @@
+{
+  "schema_version": 1,
+  "id": "cross-entropy-evidence-boundary",
+  "artifact_requirements": {"locale": "zh-Hans", "complete_format": "markdown", "file": "Understanding-LLMs.md"},
+  "learner_task": "Explain why one-hot cross-entropy reduces to negative log probability for the correct class, including its domain and what it does not guarantee.",
+  "source_locations": [{"chapter_id": "cross-entropy", "title": "交叉熵：怎样衡量预测误差", "path": "chapters/part1-math-foundations/cross-entropy.md", "heading": "为什么简化成了 -log(p)？"}],
+  "required_labels": ["book_evidence", "inference", "external_verification"],
+  "comprehension_question": "If the correct class probability falls from 0.9 to 0.1, does the loss become smaller or larger, and why?",
+  "prohibited_claims": ["Minimizing cross-entropy guarantees a true answer."],
+  "figure_format_limitations": "If the supplied complete artifact flattens a diagram, state the limitation rather than inventing its visual relationship."
+}

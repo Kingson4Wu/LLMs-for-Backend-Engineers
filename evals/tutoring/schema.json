@@ -1,0 +1,34 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://understanding-llms.dev/evals/tutoring/schema-1.json",
+  "title": "Understanding LLMs tutoring development case v1",
+  "type": "object",
+  "required": [
+    "schema_version",
+    "id",
+    "artifact_requirements",
+    "learner_task",
+    "source_locations",
+    "required_labels",
+    "comprehension_question",
+    "prohibited_claims",
+    "figure_format_limitations"
+  ],
+  "properties": {
+    "schema_version": {"const": 1},
+    "id": {"type": "string", "minLength": 1},
+    "artifact_requirements": {
+      "type": "object",
+      "required": ["locale", "complete_format", "file"],
+      "properties": {
+        "locale": {"enum": ["zh-Hans", "en"]},
+        "complete_format": {"enum": ["markdown", "pdf"]},
+        "file": {"type": "string", "minLength": 1}
+      }
+    },
+    "source_locations": {"type": "array", "minItems": 1},
+    "required_labels": {"type": "array", "minItems": 3},
+    "prohibited_claims": {"type": "array", "minItems": 1},
+    "figure_format_limitations": {"type": "string", "minLength": 1}
+  }
+}

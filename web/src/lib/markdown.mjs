@@ -46,6 +46,12 @@ export async function renderMarkdown(source, page, pages, locale, base) {
           depth: Number(n.tagName[1]),
         });
     });
+  const keyboardScrollableRegions = () => (tree) =>
+    walk(tree, (n) => {
+      if (n.type === 'element' && n.tagName === 'table') {
+        n.properties.tabIndex = 0;
+      }
+    });
   const aliases = () => (tree) => {
     const used = new Set();
     walk(tree, (n) => {
@@ -83,6 +89,7 @@ export async function renderMarkdown(source, page, pages, locale, base) {
     .use(rehype)
     .use(slug)
     .use(aliases)
+    .use(keyboardScrollableRegions)
     .use(katex, { strict: false })
     .use(highlight, { detect: false })
     .use(outline)

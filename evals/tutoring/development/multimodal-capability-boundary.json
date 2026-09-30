@@ -1,0 +1,11 @@
+{
+  "schema_version": 1,
+  "id": "multimodal-capability-boundary",
+  "artifact_requirements": {"locale": "zh-Hans", "complete_format": "markdown", "file": "Understanding-LLMs.md"},
+  "learner_task": "Explain how different modalities enter a shared computation and distinguish understanding an input from being able to generate every output modality.",
+  "source_locations": [{"chapter_id": "multimodal-models", "title": "多模态模型：文字之外的信息怎样进入计算", "path": "chapters/part2-llm-internal/multimodal-models.md", "heading": "输出能力分层：能理解，不等于能生成"}],
+  "required_labels": ["book_evidence", "inference", "external_verification"],
+  "comprehension_question": "Why does a model that can answer questions about an image not necessarily generate images?",
+  "prohibited_claims": ["Multimodal understanding automatically implies every kind of multimodal generation."],
+  "figure_format_limitations": "When modality-routing graphics are unavailable, do not fabricate token paths or connector labels."
+}

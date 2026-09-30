@@ -1,0 +1,14 @@
+{
+  "version": 1,
+  "rules": [
+    {"family": "mathematical-foundations", "path_prefix": "book/chapters/part1-math-foundations/"},
+    {"family": "model-mechanisms", "path_prefix": "book/chapters/part2-llm-internal/"},
+    {"family": "external-system-boundaries", "path_prefix": "book/chapters/part3-llm-external/"},
+    {"family": "serving-and-runtime", "path_prefix": "book/chapters/part4-serving-runtime/"},
+    {"family": "mathematical-foundations", "path_prefix": "book/translations/en/chapters/part1-math-foundations/"},
+    {"family": "model-mechanisms", "path_prefix": "book/translations/en/chapters/part2-llm-internal/"},
+    {"family": "external-system-boundaries", "path_prefix": "book/translations/en/chapters/part3-llm-external/"},
+    {"family": "serving-and-runtime", "path_prefix": "book/translations/en/chapters/part4-serving-runtime/"}
+  ],
+  "exceptions": []
+}

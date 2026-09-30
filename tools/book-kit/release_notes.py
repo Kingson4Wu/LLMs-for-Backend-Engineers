@@ -37,7 +37,8 @@ def render_notes(*, version: str, source_commit: str, commits: list[str]) -> str
             "## Integrity",
             f"- Source commit: `{source_commit}`",
             "- Every format is built from the same tagged source.",
-            "- `manifest.json` records publication provenance; `SHA256SUMS` verifies downloaded files.",
+            "- `manifest.json` records the packaged publication artifacts; `release-provenance.json` binds the tag, source commit, build context, and downloaded-file checksums.",
+            "- `SHA256SUMS` verifies downloaded files. These are integrity records, not cryptographic signatures or quality claims.",
         ]
     )
     return "\n".join(lines) + "\n"

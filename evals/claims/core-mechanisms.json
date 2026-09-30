@@ -1,0 +1,792 @@
+{
+  "cases": [
+    {
+      "id": "attention-routes-visible-state",
+      "chapter": "transformer-architecture",
+      "heading": "Transformer 的三个计算职责",
+      "anchor_text": "Attention 决定位置之间如何交换信息",
+      "kind": "stable-mechanism",
+      "sources": [
+        "https://arxiv.org/abs/1706.03762"
+      ],
+      "expectation": "Attention routes information among states; it is not an external network router.",
+      "review": {
+        "reviewed_at": "2026-09-29",
+        "reviewer": "baseline curation",
+        "proposition": true,
+        "conditions_and_quantifiers": true,
+        "formula_symbols_and_units": true,
+        "figure_meaning": true,
+        "link_target": true,
+        "english_heading": "Transformer architecture: understanding from data flow",
+        "english_anchor_text": "Transformer architecture: understanding from data flow"
+      }
+    },
+    {
+      "id": "causal-decoder-cannot-see-future",
+      "chapter": "transformer-architecture",
+      "heading": "为什么会走到 Transformer？",
+      "anchor_text": "因果 Mask 下的 Decoder 仍不能看到未来位置。",
+      "kind": "boundary",
+      "sources": [
+        "https://arxiv.org/abs/1706.03762"
+      ],
+      "expectation": "A causally masked decoder may attend only to positions permitted by the causal mask.",
+      "must_not_imply": [
+        "Decoder self-attention can read future generated tokens."
+      ],
+      "review": {
+        "reviewed_at": "2026-09-29",
+        "reviewer": "baseline curation",
+        "proposition": true,
+        "conditions_and_quantifiers": true,
+        "formula_symbols_and_units": true,
+        "figure_meaning": true,
+        "link_target": true,
+        "english_heading": "Transformer architecture: understanding from data flow",
+        "english_anchor_text": "Transformer architecture: understanding from data flow"
+      }
+    },
+    {
+      "id": "kv-cache-is-runtime-state-not-memory",
+      "chapter": "llm-generation",
+      "heading": "Prefill、Decode 与 KV Cache",
+      "anchor_text": "KV Cache 是因果解码可以利用的**运行时计算状态**",
+      "kind": "boundary",
+      "sources": [
+        "https://huggingface.co/docs/transformers/main/en/cache_explanation"
+      ],
+      "expectation": "KV cache reuses causal-decoding computation and is distinct from application long-term memory.",
+      "must_not_imply": [
+        "KV cache is a persistent user profile or long-term retrievable memory."
+      ],
+      "review": {
+        "reviewed_at": "2026-09-29",
+        "reviewer": "baseline curation",
+        "proposition": true,
+        "conditions_and_quantifiers": true,
+        "formula_symbols_and_units": true,
+        "figure_meaning": true,
+        "link_target": true,
+        "english_heading": "LLM Generation: From Input to the Next Token",
+        "english_anchor_text": "LLM Generation: From Input to the Next Token"
+      }
+    },
+    {
+      "id": "generation-recomputes-new-query",
+      "chapter": "llm-generation",
+      "heading": "Prefill、Decode 与 KV Cache",
+      "anchor_text": "新位置的 Query 仍要与允许访问的历史 Key 计算匹配",
+      "kind": "stable-mechanism",
+      "sources": [
+        "https://huggingface.co/docs/transformers/main/en/cache_explanation"
+      ],
+      "expectation": "Caching avoids recomputing historical keys and values but does not eliminate computation for the new position.",
+      "review": {
+        "reviewed_at": "2026-09-29",
+        "reviewer": "baseline curation",
+        "proposition": true,
+        "conditions_and_quantifiers": true,
+        "formula_symbols_and_units": true,
+        "figure_meaning": true,
+        "link_target": true,
+        "english_heading": "LLM Generation: From Input to the Next Token",
+        "english_anchor_text": "LLM Generation: From Input to the Next Token"
+      }
+    },
+    {
+      "id": "rag-adds-current-evidence-not-parameters",
+      "chapter": "rag-context-evidence",
+      "heading": "RAG 要补的不是参数，而是当前事实",
+      "anchor_text": "应用需要在请求时读取外部事实",
+      "kind": "boundary",
+      "sources": [
+        "https://arxiv.org/abs/2005.11401"
+      ],
+      "expectation": "RAG supplies selected external evidence to the current request rather than updating model parameters online.",
+      "must_not_imply": [
+        "Retrieval changes the model's trained weights during an ordinary request."
+      ],
+      "review": {
+        "reviewed_at": "2026-09-29",
+        "reviewer": "baseline curation",
+        "proposition": true,
+        "conditions_and_quantifiers": true,
+        "formula_symbols_and_units": true,
+        "figure_meaning": true,
+        "link_target": true,
+        "english_heading": "RAG and Context Engineering: How Evidence Enters a Model",
+        "english_anchor_text": "RAG and Context Engineering: How Evidence Enters a Model"
+      }
+    },
+    {
+      "id": "rag-does-not-guarantee-truth",
+      "chapter": "rag-context-evidence",
+      "heading": "RAG 要补的不是参数，而是当前事实",
+      "anchor_text": "RAG 的目标是改善证据访问和可验证性",
+      "kind": "boundary",
+      "sources": [
+        "https://arxiv.org/abs/2005.11401"
+      ],
+      "expectation": "Retrieval may improve evidence access and verification but cannot itself guarantee a generated conclusion is true.",
+      "must_not_imply": [
+        "A retrieved passage proves that the model's answer is true."
+      ],
+      "review": {
+        "reviewed_at": "2026-09-29",
+        "reviewer": "baseline curation",
+        "proposition": true,
+        "conditions_and_quantifiers": true,
+        "formula_symbols_and_units": true,
+        "figure_meaning": true,
+        "link_target": true,
+        "english_heading": "RAG and Context Engineering: How Evidence Enters a Model",
+        "english_anchor_text": "RAG and Context Engineering: How Evidence Enters a Model"
+      }
+    },
+    {
+      "id": "function-calling-proposes-external-execution",
+      "chapter": "function-calling-tool-use",
+      "heading": "Function Calling 是结构化调用提议",
+      "anchor_text": "真正执行函数、校验权限与返回结果仍由外部应用负责。",
+      "kind": "boundary",
+      "sources": [
+        "https://platform.openai.com/docs/guides/function-calling"
+      ],
+      "expectation": "A model's structured tool-call proposal is distinct from external execution and authorization.",
+      "must_not_imply": [
+        "Generating a function call completes the requested external action."
+      ],
+      "review": {
+        "reviewed_at": "2026-09-29",
+        "reviewer": "baseline curation",
+        "proposition": true,
+        "conditions_and_quantifiers": true,
+        "formula_symbols_and_units": true,
+        "figure_meaning": true,
+        "link_target": true,
+        "english_heading": "Function Calling and Tool Use: Mechanism, Difference, and Essence",
+        "english_anchor_text": "Function Calling and Tool Use: Mechanism, Difference, and Essence"
+      }
+    },
+    {
+      "id": "tool-result-must-return-to-model-context",
+      "chapter": "function-calling-tool-use",
+      "heading": "Function Calling 是结构化调用提议",
+      "anchor_text": "工具调用结果再由应用侧执行并回填给模型",
+      "kind": "stable-mechanism",
+      "sources": [
+        "https://platform.openai.com/docs/guides/function-calling"
+      ],
+      "expectation": "The application executes the tool and returns its result into the model interaction before the model can use that result.",
+      "review": {
+        "reviewed_at": "2026-09-29",
+        "reviewer": "baseline curation",
+        "proposition": true,
+        "conditions_and_quantifiers": true,
+        "formula_symbols_and_units": true,
+        "figure_meaning": true,
+        "link_target": true,
+        "english_heading": "Function Calling and Tool Use: Mechanism, Difference, and Essence",
+        "english_anchor_text": "Function Calling and Tool Use: Mechanism, Difference, and Essence"
+      }
+    },
+    {
+      "id": "mcp-does-not-define-domain-model",
+      "chapter": "mhs-mcp-domain-capability-protocol",
+      "heading": "MCP 和 MHS 的分层关系",
+      "anchor_text": "但 MCP 不负责替具体领域建立领域模型。",
+      "kind": "boundary",
+      "sources": [
+        "https://modelcontextprotocol.io/specification/2025-06-18/server/tools"
+      ],
+      "expectation": "MCP exposes external capabilities and schemas but does not by itself define a domain's semantic model or authorization policy.",
+      "must_not_imply": [
+        "A discoverable MCP tool is automatically business-authorized or semantically sufficient."
+      ],
+      "review": {
+        "reviewed_at": "2026-09-29",
+        "reviewer": "baseline curation",
+        "proposition": true,
+        "conditions_and_quantifiers": true,
+        "formula_symbols_and_units": true,
+        "figure_meaning": true,
+        "link_target": true,
+        "english_heading": "From MHS and MCP to Domain Capability Protocols",
+        "english_anchor_text": "From MHS and MCP to Domain Capability Protocols"
+      }
+    },
+    {
+      "id": "infrastructure-constrains-delivery-not-capability",
+      "chapter": "llm-infrastructure",
+      "heading": "从任务到资源：六层视角",
+      "anchor_text": "模型本身定义要做什么计算；基础设施决定这些计算能否装入资源",
+      "kind": "boundary",
+      "sources": [
+        "https://arxiv.org/abs/2309.06180"
+      ],
+      "expectation": "Serving infrastructure constrains scheduling, capacity, latency, cost, and delivery; it does not define what the trained model computes.",
+      "must_not_imply": [
+        "A faster serving stack changes a model's learned capability by itself."
+      ],
+      "review": {
+        "reviewed_at": "2026-09-29",
+        "reviewer": "baseline curation",
+        "proposition": true,
+        "conditions_and_quantifiers": true,
+        "formula_symbols_and_units": true,
+        "figure_meaning": true,
+        "link_target": true,
+        "english_heading": "LLM Infrastructure: How a Model Becomes a Reliable Service",
+        "english_anchor_text": "LLM Infrastructure: How a Model Becomes a Reliable Service"
+      }
+    },
+    {
+      "id": "deep-gradient-products-can-decay-or-grow",
+      "chapter": "vanishing-exploding-gradients",
+      "heading": "梯度消失：为什么信号传不到前层",
+      "anchor_text": "梯度是多个导数的连乘结果。",
+      "kind": "stable-mechanism",
+      "sources": [
+        "https://proceedings.mlr.press/v9/glorot10a.html"
+      ],
+      "expectation": "Repeated local derivatives can attenuate or amplify a gradient across depth; the outcome depends on the product rather than depth alone.",
+      "review": {
+        "reviewed_at": "2026-09-30",
+        "reviewer": "baseline curation",
+        "proposition": true,
+        "conditions_and_quantifiers": true,
+        "formula_symbols_and_units": true,
+        "figure_meaning": true,
+        "link_target": true,
+        "english_heading": "Vanishing and Exploding Gradients: Why Deep Networks Are Hard to Train",
+        "english_anchor_text": "Vanishing and Exploding Gradients: Why Deep Networks Are Hard to Train"
+      }
+    },
+    {
+      "id": "residual-identity-is-representable-not-guaranteed",
+      "chapter": "residual-connections",
+      "heading": "残差连接为什么有效",
+      "anchor_text": "残差网络：只需令 $F(x)=0$",
+      "kind": "boundary",
+      "sources": [
+        "https://arxiv.org/abs/1512.03385"
+      ],
+      "expectation": "For y = F(x) + x, setting the residual branch to zero represents the identity path directly.",
+      "must_not_imply": [
+        "A residual connection by itself guarantees stable or successful training."
+      ],
+      "review": {
+        "reviewed_at": "2026-09-30",
+        "reviewer": "baseline curation",
+        "proposition": true,
+        "conditions_and_quantifiers": true,
+        "formula_symbols_and_units": true,
+        "figure_meaning": true,
+        "link_target": true,
+        "english_heading": "Residual Connections: Why Deep Networks Remain Trainable",
+        "english_anchor_text": "Residual Connections: Why Deep Networks Remain Trainable"
+      }
+    },
+    {
+      "id": "layer-norm-is-per-token-feature-normalization",
+      "chapter": "layer-norm",
+      "heading": "LayerNorm 在归一化什么",
+      "anchor_text": "LayerNorm 是对“每一个 token 自己的向量”做归一化，完全不依赖其他 token 或 batch。",
+      "kind": "boundary",
+      "sources": [
+        "https://arxiv.org/abs/1607.06450"
+      ],
+      "expectation": "Layer normalization computes normalization statistics over a sample's feature dimensions, rather than using batch-wide statistics.",
+      "must_not_imply": [
+        "LayerNorm normalizes one token by aggregating values from other tokens or examples in the batch."
+      ],
+      "review": {
+        "reviewed_at": "2026-09-30",
+        "reviewer": "baseline curation",
+        "proposition": true,
+        "conditions_and_quantifiers": true,
+        "formula_symbols_and_units": true,
+        "figure_meaning": true,
+        "link_target": true,
+        "english_heading": "LayerNorm: Keeping Representations Numerically Stable",
+        "english_anchor_text": "LayerNorm: Keeping Representations Numerically Stable"
+      }
+    },
+    {
+      "id": "scaled-dot-product-controls-softmax-score-scale",
+      "chapter": "softmax-gradient-scaling",
+      "heading": "缩放点积注意力：解决方案",
+      "anchor_text": "为什么按 Key 维度的平方根缩放",
+      "kind": "boundary",
+      "sources": [
+        "https://arxiv.org/abs/1706.03762"
+      ],
+      "expectation": "Scaled dot-product attention divides query-key scores by the square root of the key dimension to keep score scale from making Softmax excessively sharp.",
+      "must_not_imply": [
+        "The square-root scale makes attention probabilities independent of the input representations."
+      ],
+      "review": {
+        "reviewed_at": "2026-09-30",
+        "reviewer": "baseline curation",
+        "proposition": true,
+        "conditions_and_quantifiers": true,
+        "formula_symbols_and_units": true,
+        "figure_meaning": true,
+        "link_target": true,
+        "english_heading": "Scaled Dot Products: Why Softmax Gradients Become Extreme",
+        "english_anchor_text": "Scaled Dot Products: Why Softmax Gradients Become Extreme"
+      }
+    },
+    {
+      "id": "distillation-fits-teacher-outputs-not-internals",
+      "chapter": "fine-tuning-and-distillation",
+      "heading": "蒸馏：让小模型逼近大模型的输入输出函数",
+      "anchor_text": "Teacher 不“传递知识”，Teacher 生成目标函数值（软分布），Student 用这些值作为训练目标去拟合。",
+      "kind": "boundary",
+      "sources": [
+        "https://arxiv.org/abs/1503.02531"
+      ],
+      "expectation": "Knowledge distillation trains a student to match teacher output behavior, commonly using softened output distributions as targets.",
+      "must_not_imply": [
+        "Distillation copies a teacher's internal representation or guarantees all teacher capabilities transfer to a smaller student."
+      ],
+      "review": {
+        "reviewed_at": "2026-09-30",
+        "reviewer": "baseline curation",
+        "proposition": true,
+        "conditions_and_quantifiers": true,
+        "formula_symbols_and_units": true,
+        "figure_meaning": true,
+        "link_target": true,
+        "english_heading": "Fine-Tuning and Distillation as Function Approximation",
+        "english_anchor_text": "Fine-Tuning and Distillation as Function Approximation"
+      }
+    },
+    {
+      "id": "attention-preserves-positions-before-selection",
+      "chapter": "rnn-to-transformer",
+      "heading": "注意力：从压缩历史到动态选择",
+      "anchor_text": "注意力机制选择保留所有位置的中间表示，并在当前任务需要时，通过可学习的权重对历史信息进行加权选择。",
+      "kind": "boundary",
+      "sources": [
+        "https://arxiv.org/abs/1706.03762"
+      ],
+      "expectation": "Attention makes information at individual sequence positions available for weighted selection rather than forcing all history through one fixed-size recurrent state.",
+      "must_not_imply": [
+        "Attention removes all sequence-length, memory, or computational constraints."
+      ],
+      "review": {
+        "reviewed_at": "2026-09-30",
+        "reviewer": "baseline curation",
+        "proposition": true,
+        "conditions_and_quantifiers": true,
+        "formula_symbols_and_units": true,
+        "figure_meaning": true,
+        "link_target": true,
+        "english_heading": "From RNNs to Transformers: A Structural Change in Sequence Modeling",
+        "english_anchor_text": "From RNNs to Transformers: A Structural Change in Sequence Modeling"
+      }
+    },
+    {
+      "id": "serving-capacity-depends-on-token-state-not-qps-alone",
+      "chapter": "inference-performance-capacity",
+      "heading": "容量为什么不是 QPS",
+      "anchor_text": "可同时服务多少请求因而是一个随长度分布变化的数，而不是固定并发值。",
+      "kind": "boundary",
+      "sources": [
+        "https://arxiv.org/abs/2309.06180"
+      ],
+      "expectation": "Autoregressive serving capacity depends on active sequence lengths and their KV-cache state, not only on requests per second.",
+      "must_not_imply": [
+        "A single QPS figure characterizes capacity for all prompt and output-length distributions."
+      ],
+      "review": {
+        "reviewed_at": "2026-09-30",
+        "reviewer": "baseline curation",
+        "proposition": true,
+        "conditions_and_quantifiers": true,
+        "formula_symbols_and_units": true,
+        "figure_meaning": true,
+        "link_target": true,
+        "english_heading": "Inference Performance and Capacity: How Latency, Throughput, and KV Cache Constrain One Another",
+        "english_anchor_text": "Inference Performance and Capacity: How Latency, Throughput, and KV Cache Constrain One Another"
+      }
+    },
+    {
+      "id": "adam-uses-adaptive-moment-estimates-not-hessian",
+      "chapter": "optimizer-selection",
+      "heading": "Adam：参数级自适应学习率",
+      "anchor_text": "这是一种基于梯度一阶矩与平方梯度二阶矩的自适应一阶方法；这里的“二阶矩”不是 Hessian，不能把 Adam 等同于二阶优化。",
+      "kind": "boundary",
+      "sources": [
+        "https://arxiv.org/abs/1412.6980"
+      ],
+      "expectation": "Adam adapts first-order updates using estimates of gradient moments; its second-moment estimate is not a Hessian computation.",
+      "must_not_imply": [
+        "Adam is a second-order optimizer because it tracks a second moment."
+      ],
+      "review": {
+        "reviewed_at": "2026-09-30",
+        "reviewer": "baseline curation",
+        "proposition": true,
+        "conditions_and_quantifiers": true,
+        "formula_symbols_and_units": true,
+        "figure_meaning": true,
+        "link_target": true,
+        "english_heading": "Optimizers: How Gradients Become Parameter Updates",
+        "english_anchor_text": "Optimizers: How Gradients Become Parameter Updates"
+      }
+    },
+    {
+      "id": "zero-temperature-removes-sampling-not-system-variation",
+      "chapter": "llm-inference-nondeterminism",
+      "heading": "先区分：采样随机性与系统不确定性",
+      "anchor_text": "它消除了有意的采样随机性；若输出仍不同，问题在于数值和服务运行条件，而不是采样器掷骰子。",
+      "kind": "boundary",
+      "sources": [
+        "https://thinkingmachines.ai/blog/defeating-nondeterminism-in-llm-inference/"
+      ],
+      "expectation": "Greedy or temperature-zero decoding removes intentional sampling randomness, but numerical and serving-path changes can still alter a near-tied token choice.",
+      "must_not_imply": [
+        "Temperature zero guarantees identical online-serving output under every batch, kernel, hardware, and runtime condition."
+      ],
+      "review": {
+        "reviewed_at": "2026-09-30",
+        "reviewer": "baseline curation",
+        "proposition": true,
+        "conditions_and_quantifiers": true,
+        "formula_symbols_and_units": true,
+        "figure_meaning": true,
+        "link_target": true,
+        "english_heading": "Why LLM Inference Is Not Fully Deterministic",
+        "english_anchor_text": "Why LLM Inference Is Not Fully Deterministic"
+      }
+    },
+    {
+      "id": "serving-control-plane-decides-placement-not-token-computation",
+      "chapter": "serving-control-plane",
+      "heading": "数据面与控制面各做什么",
+      "anchor_text": "模型服务器的吞吐优化，不能替代流量隔离、发布策略或配额管理。",
+      "kind": "boundary",
+      "sources": [
+        "https://kubernetes.io/docs/concepts/architecture/"
+      ],
+      "expectation": "A control plane makes placement, capacity, policy, and recovery decisions, while execution resources perform the workload itself.",
+      "must_not_imply": [
+        "Improving model-server token throughput replaces routing, quotas, rollout controls, or failure handling."
+      ],
+      "review": {
+        "reviewed_at": "2026-09-30",
+        "reviewer": "baseline curation",
+        "proposition": true,
+        "conditions_and_quantifiers": true,
+        "formula_symbols_and_units": true,
+        "figure_meaning": true,
+        "link_target": true,
+        "english_heading": "Serving Control Plane: Routing, Scaling, and Reliable Delivery",
+        "english_anchor_text": "Serving Control Plane: Routing, Scaling, and Reliable Delivery"
+      }
+    },
+    {
+      "id": "agent-eval-score-is-not-business-quality-by-itself",
+      "chapter": "agent-eval-business-quality-system",
+      "heading": "AI Eval：把业务质量判断变成可运行的系统",
+      "anchor_text": "Eval 是业务质量系统里可运行、可复现、可比较的一层信号，不是整个质量体系本身。",
+      "kind": "boundary",
+      "sources": [
+        "https://www.anthropic.com/engineering/demystifying-evals-for-ai-agents"
+      ],
+      "expectation": "Agent evaluation is evidence about a defined system and task distribution; it informs quality decisions but does not substitute for production monitoring, user feedback, or incident review.",
+      "must_not_imply": [
+        "A favorable offline agent-eval score proves that a business system is correct or ready for every production condition."
+      ],
+      "review": {
+        "reviewed_at": "2026-09-30",
+        "reviewer": "baseline curation",
+        "proposition": true,
+        "conditions_and_quantifiers": true,
+        "formula_symbols_and_units": true,
+        "figure_meaning": true,
+        "link_target": true,
+        "english_heading": "AI Agent Evaluation: From Tests to a Business Quality System",
+        "english_anchor_text": "AI Agent Evaluation: From Tests to a Business Quality System"
+      }
+    },
+    {
+      "id": "capacity-expands-feasible-training-not-learning-target",
+      "chapter": "ai-math-foundations",
+      "heading": "人工智能：建模、优化与工程实现",
+      "anchor_text": "算力能扩大可训练的模型与数据规模，却不能单独决定模型会学到什么。",
+      "kind": "boundary",
+      "sources": [
+        "https://arxiv.org/abs/2005.14165"
+      ],
+      "expectation": "Compute changes feasible scale but learning outcomes also depend on data, objectives, and optimization.",
+      "must_not_imply": [
+        "More compute alone determines what a model learns."
+      ],
+      "review": {
+        "reviewed_at": "2026-09-30",
+        "reviewer": "baseline curation",
+        "proposition": true,
+        "conditions_and_quantifiers": true,
+        "formula_symbols_and_units": true,
+        "figure_meaning": true,
+        "link_target": true,
+        "english_heading": "Mathematical and Machine-Learning Foundations of AI: A Panorama",
+        "english_anchor_text": "Mathematical and Machine-Learning Foundations of AI: A Panorama"
+      }
+    },
+    {
+      "id": "one-hot-is-an-index-not-semantic-representation",
+      "chapter": "from-onehot-to-embedding",
+      "heading": "One-hot 表示：离散符号的直接编码",
+      "anchor_text": "因此，one-hot 只能作为**索引机制**，而无法承担“语义表示”的角色。",
+      "kind": "boundary",
+      "sources": [
+        "https://arxiv.org/abs/1301.3781"
+      ],
+      "expectation": "One-hot identifies a vocabulary item; learned embeddings obtain task-relevant geometry through an objective.",
+      "must_not_imply": [
+        "One-hot coordinates themselves encode semantic similarity."
+      ],
+      "review": {
+        "reviewed_at": "2026-09-30",
+        "reviewer": "baseline curation",
+        "proposition": true,
+        "conditions_and_quantifiers": true,
+        "formula_symbols_and_units": true,
+        "figure_meaning": true,
+        "link_target": true,
+        "english_heading": "From One-Hot to Embeddings: How Discrete Tokens Become Vectors",
+        "english_anchor_text": "From One-Hot to Embeddings: How Discrete Tokens Become Vectors"
+      }
+    },
+    {
+      "id": "cosine-is-directional-proximity-not-semantic-identity",
+      "chapter": "dot-product-angle",
+      "heading": "余弦相似度：剥离长度，只看方向",
+      "anchor_text": "余弦相似度：剥离长度，只看方向",
+      "kind": "boundary",
+      "sources": [
+        "https://scikit-learn.org/stable/modules/metrics.html#cosine-similarity"
+      ],
+      "expectation": "Cosine similarity normalizes vector magnitude and measures angular proximity in a chosen representation space.",
+      "must_not_imply": [
+        "A high cosine score proves semantic identity or task correctness."
+      ],
+      "review": {
+        "reviewed_at": "2026-09-30",
+        "reviewer": "baseline curation",
+        "proposition": true,
+        "conditions_and_quantifiers": true,
+        "formula_symbols_and_units": true,
+        "figure_meaning": true,
+        "link_target": true,
+        "english_heading": "Dot Products and Cosine Similarity: How Vectors Express Relationships",
+        "english_anchor_text": "Dot Products and Cosine Similarity: How Vectors Express Relationships"
+      }
+    },
+    {
+      "id": "nonlinearity-enables-capacity-not-training-guarantee",
+      "chapter": "activation-functions",
+      "heading": "表达能力不等于训练结果",
+      "anchor_text": "表达能力与表达准确性并不是同一个概念。",
+      "kind": "boundary",
+      "sources": [
+        "https://arxiv.org/abs/1502.01852"
+      ],
+      "expectation": "Nonlinear compositions expand representational capacity, while optimization and data determine whether training finds useful parameters.",
+      "must_not_imply": [
+        "Adding an activation function guarantees successful training or generalization."
+      ],
+      "review": {
+        "reviewed_at": "2026-09-30",
+        "reviewer": "baseline curation",
+        "proposition": true,
+        "conditions_and_quantifiers": true,
+        "formula_symbols_and_units": true,
+        "figure_meaning": true,
+        "link_target": true,
+        "english_heading": "Activation Functions: Where Nonlinearity Comes From",
+        "english_anchor_text": "Activation Functions: Where Nonlinearity Comes From"
+      }
+    },
+    {
+      "id": "single-layer-perceptron-has-linear-decision-boundary",
+      "chapter": "perceptron-learning",
+      "heading": "单层感知机的表达能力边界",
+      "anchor_text": "决策边界是线性的（对于分类任务）",
+      "kind": "boundary",
+      "sources": [
+        "https://arxiv.org/abs/1502.01852"
+      ],
+      "expectation": "A single affine classification layer separates classes with a linear boundary; hidden nonlinear layers change that function family.",
+      "must_not_imply": [
+        "A single-layer perceptron can represent XOR or arbitrary nonlinear class boundaries."
+      ],
+      "review": {
+        "reviewed_at": "2026-09-30",
+        "reviewer": "baseline curation",
+        "proposition": true,
+        "conditions_and_quantifiers": true,
+        "formula_symbols_and_units": true,
+        "figure_meaning": true,
+        "link_target": true,
+        "english_heading": "Perceptrons: How Parameters Update from Error",
+        "english_anchor_text": "Perceptrons: How Parameters Update from Error"
+      }
+    },
+    {
+      "id": "training-differs-from-inference-by-parameter-update",
+      "chapter": "model-training-lifecycle",
+      "heading": "先看训练的全景",
+      "anchor_text": "真正的分界是，**这次计算是否根据训练目标更新了参数。**",
+      "kind": "boundary",
+      "sources": [
+        "https://arxiv.org/abs/2005.14165"
+      ],
+      "expectation": "Training uses an objective to update parameters; inference uses existing parameters to compute an output for current context.",
+      "must_not_imply": [
+        "Any generation step is training because it emits tokens."
+      ],
+      "review": {
+        "reviewed_at": "2026-09-30",
+        "reviewer": "baseline curation",
+        "proposition": true,
+        "conditions_and_quantifiers": true,
+        "formula_symbols_and_units": true,
+        "figure_meaning": true,
+        "link_target": true,
+        "english_heading": "How Models Acquire Their Capabilities Through Training",
+        "english_anchor_text": "How Models Acquire Their Capabilities Through Training"
+      }
+    },
+    {
+      "id": "contextual-states-are-not-static-token-embeddings",
+      "chapter": "embedding-evolution",
+      "heading": "关键区分：上下文无关的 Embedding 与上下文相关的表示",
+      "anchor_text": "真正随上下文变化的是每一层 Transformer 的 hidden state",
+      "kind": "boundary",
+      "sources": [
+        "https://arxiv.org/abs/1810.04805"
+      ],
+      "expectation": "A token embedding is an input parameter lookup, whereas contextual representations vary with surrounding input after model computation.",
+      "must_not_imply": [
+        "A token has one fixed contextual meaning because its input embedding is fixed."
+      ],
+      "review": {
+        "reviewed_at": "2026-09-30",
+        "reviewer": "baseline curation",
+        "proposition": true,
+        "conditions_and_quantifiers": true,
+        "formula_symbols_and_units": true,
+        "figure_meaning": true,
+        "link_target": true,
+        "english_heading": "From Word2Vec to Transformers: The Changing Role of Embeddings",
+        "english_anchor_text": "From Word2Vec to Transformers: The Changing Role of Embeddings"
+      }
+    },
+    {
+      "id": "multilingual-output-does-not-reveal-internal-language",
+      "chapter": "multilingual-llms",
+      "heading": "为什么不能从输出判断“内部语言”",
+      "anchor_text": "它不能证明模型先在内部把每个中文问题翻成英文。",
+      "kind": "boundary",
+      "sources": [
+        "https://arxiv.org/abs/1911.02116"
+      ],
+      "expectation": "Observed output or product reasoning text does not identify a multilingual model's continuous internal representation or a mandatory translation pipeline.",
+      "must_not_imply": [
+        "An English intermediate output proves every non-English prompt was internally translated to English."
+      ],
+      "review": {
+        "reviewed_at": "2026-09-30",
+        "reviewer": "baseline curation",
+        "proposition": true,
+        "conditions_and_quantifiers": true,
+        "formula_symbols_and_units": true,
+        "figure_meaning": true,
+        "link_target": true,
+        "english_heading": "Multilingual LLMs: How Languages Share Representations and Capabilities",
+        "english_anchor_text": "Multilingual LLMs: How Languages Share Representations and Capabilities"
+      }
+    },
+    {
+      "id": "multimodal-input-requires-encoded-representations",
+      "chapter": "multimodal-models",
+      "heading": "输入怎样进入同一上下文",
+      "anchor_text": "它们不能原样混在一起交给 Transformer，必须先各自变成表示。",
+      "kind": "stable-mechanism",
+      "sources": [
+        "https://arxiv.org/abs/2103.00020"
+      ],
+      "expectation": "Different modalities require encoding or projection into representations that can participate in the model computation.",
+      "must_not_imply": [
+        "Raw pixels, waveforms, and text tokens enter one Transformer context unchanged."
+      ],
+      "review": {
+        "reviewed_at": "2026-09-30",
+        "reviewer": "baseline curation",
+        "proposition": true,
+        "conditions_and_quantifiers": true,
+        "formula_symbols_and_units": true,
+        "figure_meaning": true,
+        "link_target": true,
+        "english_heading": "Multimodal Models: How Information Beyond Text Enters Computation",
+        "english_anchor_text": "Multimodal Models: How Information Beyond Text Enters Computation"
+      }
+    },
+    {
+      "id": "model-proposal-does-not-change-external-state",
+      "chapter": "llm-external-interaction",
+      "heading": "提示词与上下文：改变解码的条件，而不是给模型下程序指令",
+      "anchor_text": "图中唯一会直接改变外部世界的是执行环境，而不是模型文本。",
+      "kind": "boundary",
+      "sources": [
+        "https://platform.openai.com/docs/guides/function-calling"
+      ],
+      "expectation": "A model emits text or a structured proposal; an authorized program validates and executes any external side effect.",
+      "must_not_imply": [
+        "Generating a tool argument or natural-language assertion executes an external action."
+      ],
+      "review": {
+        "reviewed_at": "2026-09-30",
+        "reviewer": "baseline curation",
+        "proposition": true,
+        "conditions_and_quantifiers": true,
+        "formula_symbols_and_units": true,
+        "figure_meaning": true,
+        "link_target": true,
+        "english_heading": "How LLMs Interact with the External World: From Generation to Action",
+        "english_anchor_text": "How LLMs Interact with the External World: From Generation to Action"
+      }
+    },
+    {
+      "id": "agent-runtime-controls-loop-not-model-prompt",
+      "chapter": "harness-runtime-skills",
+      "heading": "先决定是否真的需要 Agent 循环",
+      "anchor_text": "模型不是循环的所有者。它只能根据当前上下文生成下一步提议；运行层仍要控制回合、时间、成本、工具权限、重试和终止。",
+      "kind": "boundary",
+      "sources": [
+        "https://www.anthropic.com/engineering/building-effective-agents"
+      ],
+      "expectation": "An agent runtime owns loop controls and execution policy; the model proposes a next step from its current context.",
+      "must_not_imply": [
+        "A prompt alone supplies retries, authority, budgets, recovery, and stopping conditions."
+      ],
+      "review": {
+        "reviewed_at": "2026-09-30",
+        "reviewer": "baseline curation",
+        "proposition": true,
+        "conditions_and_quantifiers": true,
+        "formula_symbols_and_units": true,
+        "figure_meaning": true,
+        "link_target": true,
+        "english_heading": "Harnesses, Agent Runtimes, and Skills: How Multi-turn Tasks Run Reliably",
+        "english_anchor_text": "Harnesses, Agent Runtimes, and Skills: How Multi-turn Tasks Run Reliably"
+      }
+    }
+  ]
+}

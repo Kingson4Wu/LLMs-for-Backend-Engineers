@@ -10,6 +10,8 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
       - uses: actions/setup-node@v4
         with:
           node-version: '24'
@@ -20,10 +22,40 @@ jobs:
           python-version: '3.11'
       - name: Install publication tools
         run: sudo apt-get update && sudo apt-get install -y pandoc librsvg2-bin fonts-noto-cjk epubcheck
+      - name: Determine changed files for evaluation coverage
+        id: changed-files
+        shell: bash
+        env:
+          BASE_SHA: ${{ github.event.pull_request.base.sha || github.event.before }}
+          HEAD_SHA: ${{ github.sha }}
+        run: |
+          changed_file_list="$RUNNER_TEMP/changed-files.txt"
+          merge_base=""
+          if [ -n "$BASE_SHA" ] && git cat-file -e "$BASE_SHA^{commit}" 2>/dev/null; then
+            merge_base="$(git merge-base "$BASE_SHA" "$HEAD_SHA" 2>/dev/null || true)"
+          fi
+          if [ -z "$merge_base" ]; then
+            merge_base="$(git rev-parse "$HEAD_SHA^" 2>/dev/null || true)"
+          fi
+          if [ -n "$merge_base" ]; then
+            git diff --name-only "$merge_base" "$HEAD_SHA" > "$changed_file_list"
+          else
+            : > "$changed_file_list"
+          fi
+      - name: Require evaluation coverage for changed high-risk chapters
+        shell: bash
+        run: |
+          args=()
+          while IFS= read -r file; do
+            [ -n "$file" ] && args+=(--changed-file "$file")
+          done < "$RUNNER_TEMP/changed-files.txt"
+          python3 tools/book-kit/validate_eval_coverage.py "${args[@]}"
       - name: Test publication and source integrity
         run: |
           python3 -m unittest discover -s tests -v
           python3 tools/book-kit/validate_book.py --check-learning-index
+          python3 tools/book-kit/validate_evals.py
+          python3 tools/book-kit/validate_tutoring_cases.py --development
           python3 tools/book-kit/validate_book.py --check-links
           python3 tools/book-kit/validate_book.py --locale en --check-links
           python3 tools/book-kit/check_translations.py
@@ -34,8 +66,22 @@ jobs:
             python3 tools/book-kit/build_print_html.py --locale "$locale"
             python3 tools/book-kit/export_markdown.py --locale "$locale"
             python3 tools/book-kit/export_epub.py --locale "$locale"
-            epubcheck "book/exported/$locale/Understanding-LLMs.epub"
+            python3 tools/book-kit/audit_epub_accessibility.py --locale "$locale" --epub "book/exported/$locale/Understanding-LLMs.epub" --output "$RUNNER_TEMP/epub-accessibility-$locale.json"
+            epubcheck "book/exported/$locale/Understanding-LLMs.epub" > "$RUNNER_TEMP/epubcheck-$locale.txt" 2>&1
+            python3 tools/book-kit/validate_publication_artifacts.py --locale "$locale" --formats markdown,html,epub
           done
+      - uses: actions/upload-artifact@v4
+        if: always()
+        with:
+          name: epubcheck-reports
+          path: ${{ runner.temp }}/epubcheck-*.txt
+          if-no-files-found: warn
+      - uses: actions/upload-artifact@v4
+        if: always()
+        with:
+          name: epub-accessibility-reports
+          path: ${{ runner.temp }}/epub-accessibility-*.json
+          if-no-files-found: warn
       - name: Check website
         working-directory: web
         run: |
@@ -58,6 +104,41 @@ jobs:
           done
           BOOK_PREVIEW_URL=http://127.0.0.1:4322/Understanding-LLMs python3 scripts/browser-smoke.py
           PYTHONPATH=../tools/book-kit python3 ../tools/book-kit/audit_figure_layout.py --strict
+      - name: Run website accessibility route report
+        if: always()
+        continue-on-error: true
+        working-directory: web
+        run: PYTHONPATH=../tools/book-kit python3 ../tools/book-kit/audit_web_accessibility.py --base-url http://127.0.0.1:4322/Understanding-LLMs --site-dir dist --output "$RUNNER_TEMP/web-accessibility-routes.json"
+      - name: Run axe accessibility route report
+        if: always()
+        continue-on-error: true
+        working-directory: web
+        run: PYTHONPATH=../tools/book-kit python3 ../tools/book-kit/audit_axe_accessibility.py --base-url http://127.0.0.1:4322/Understanding-LLMs --site-dir dist --axe-script node_modules/axe-core/axe.min.js --output "$RUNNER_TEMP/axe-accessibility-routes.json"
+      - name: Capture advisory visual review matrix
+        if: always()
+        continue-on-error: true
+        working-directory: web
+        run: PYTHONPATH=../tools/book-kit python3 ../tools/book-kit/capture_visual_review.py --base-url http://127.0.0.1:4322/Understanding-LLMs --site-dir dist --screenshot-dir "$RUNNER_TEMP/visual-review-screenshots" --output "$RUNNER_TEMP/visual-review-report.json"
+      - uses: actions/upload-artifact@v4
+        if: always()
+        with:
+          name: web-accessibility-route-report
+          path: ${{ runner.temp }}/web-accessibility-routes.json
+          if-no-files-found: warn
+      - uses: actions/upload-artifact@v4
+        if: always()
+        with:
+          name: axe-accessibility-route-report
+          path: ${{ runner.temp }}/axe-accessibility-routes.json
+          if-no-files-found: warn
+      - uses: actions/upload-artifact@v4
+        if: always()
+        with:
+          name: visual-review-report
+          path: |
+            ${{ runner.temp }}/visual-review-report.json
+            ${{ runner.temp }}/visual-review-screenshots
+          if-no-files-found: warn
       - uses: actions/upload-artifact@v4
         with:
           name: book-preview

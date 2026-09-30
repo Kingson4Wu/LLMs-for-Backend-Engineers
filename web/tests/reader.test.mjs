@@ -143,7 +143,7 @@ test('reading positions restore a named section and remain compatible with saved
 test('markdown renders math, headings and chapter links', async () => {
   const pages = [{ id: 'softmax', path: 'chapters/softmax.md' }];
   const result = await renderMarkdown(
-    '# Title\n\n## 标题\n\nA $V$ matrix.\n\n[Read](./softmax#标题)\n\n```python\nprint(1)\n```',
+    '# Title\n\n## 标题\n\nA $V$ matrix.\n\n[Read](./softmax#标题)\n\n| input | output |\n| --- | --- |\n| x | y |\n\n```python\nprint(1)\n```',
     pages[0],
     pages,
     'zh-Hans',
@@ -151,6 +151,7 @@ test('markdown renders math, headings and chapter links', async () => {
   );
   assert.ok(result.html.includes('katex'));
   assert.ok(result.html.includes('language-python'));
+  assert.ok(result.html.includes('<table tabindex="0">'));
   assert.ok(result.html.includes('/book/zh-Hans/read/softmax/#'));
   assert.equal(result.headings[0].text, '标题');
   assert.ok(!result.html.includes('<h1'));

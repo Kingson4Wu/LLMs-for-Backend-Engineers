@@ -6,7 +6,22 @@
       "zh": "book/assets/zh/diagrams/introduction/ai-scope.svg",
       "en": "book/assets/en/diagrams/introduction/ai-scope.svg",
       "zh_source": "book/index.md",
-      "en_source": "book/translations/en/index.md"
+      "en_source": "book/translations/en/index.md",
+      "id": "introduction-01",
+      "zh_id": "zh-diagrams-introduction-ai-scope-svg",
+      "en_id": "en-diagrams-introduction-ai-scope-svg",
+      "semantics": {
+        "zh": {
+          "chapter": "introduction",
+          "heading": "AI 的范围与本书的位置",
+          "alternative": "AI 的范围：数字信息系统与物理世界系统"
+        },
+        "en": {
+          "chapter": "introduction",
+          "heading": "AI’s Scope and This Book’s Place Within It",
+          "alternative": "AI scope: digital information and physical-world systems."
+        }
+      }
     },
     {
       "chapter": "introduction",
@@ -14,7 +29,22 @@
       "zh": "book/assets/zh/diagrams/introduction/llm-scope.svg",
       "en": "book/assets/en/diagrams/introduction/llm-scope.svg",
       "zh_source": "book/index.md",
-      "en_source": "book/translations/en/index.md"
+      "en_source": "book/translations/en/index.md",
+      "id": "introduction-02",
+      "zh_id": "zh-diagrams-introduction-llm-scope-svg",
+      "en_id": "en-diagrams-introduction-llm-scope-svg",
+      "semantics": {
+        "zh": {
+          "chapter": "introduction",
+          "heading": "AI 的范围与本书的位置",
+          "alternative": "本书的聚焦路径：从 AI 到 LLM 系统"
+        },
+        "en": {
+          "chapter": "introduction",
+          "heading": "AI’s Scope and This Book’s Place Within It",
+          "alternative": "The book’s focus: from AI to LLM systems."
+        }
+      }
     },
     {
       "chapter": "introduction",
@@ -22,7 +52,22 @@
       "zh": "book/assets/zh/diagrams/introduction/system-flow.svg",
       "en": "book/assets/en/diagrams/introduction/system-flow.svg",
       "zh_source": "book/index.md",
-      "en_source": "book/translations/en/index.md"
+      "en_source": "book/translations/en/index.md",
+      "id": "introduction-03",
+      "zh_id": "zh-diagrams-introduction-system-flow-svg",
+      "en_id": "en-diagrams-introduction-system-flow-svg",
+      "semantics": {
+        "zh": {
+          "chapter": "introduction",
+          "heading": "先建立系统视角",
+          "alternative": "LLM 系统责任链：训练、当前上下文、模型提议、外部行动与服务运行时"
+        },
+        "en": {
+          "chapter": "introduction",
+          "heading": "Start with the System View",
+          "alternative": "LLM system responsibility chain: training, current context, model proposal, external action, and serving runtime."
+        }
+      }
     },
     {
       "chapter": "introduction",
@@ -30,7 +75,22 @@
       "zh": "book/assets/book-system-map-zh.svg",
       "en": "book/assets/book-system-map-en.svg",
       "zh_source": "book/index.md",
-      "en_source": "book/translations/en/index.md"
+      "en_source": "book/translations/en/index.md",
+      "id": "introduction-04",
+      "zh_id": "book-system-map-zh-svg",
+      "en_id": "book-system-map-en-svg",
+      "semantics": {
+        "zh": {
+          "chapter": "introduction",
+          "heading": "全书的主线图",
+          "alternative": "从训练到服务的 LLM 系统全景图：数学与机器学习基础、LLM 内部原理、LLM 与外部系统、LLM 基础设施依次连接；图中强调参数、当前上下文、外部动作和服务约束分别属于不同层次"
+        },
+        "en": {
+          "chapter": "introduction",
+          "heading": "The Book’s Main Map",
+          "alternative": "A four-layer map from training to service: mathematics and machine-learning foundations, LLM internals, external systems, and LLM infrastructure. It distinguishes parameters, current context, external actions, and service constraints."
+        }
+      }
     },
     {
       "chapter": "can-ai-create-new-things",
@@ -38,7 +98,22 @@
       "zh": "book/assets/zh/diagrams/can-ai-create-new-things/creative-feedback-loop.svg",
       "en": "book/assets/en/diagrams/appendices/candidate-verification-loop.svg",
       "zh_source": "book/chapters/appendices/can-ai-create-new-things.md",
-      "en_source": "book/translations/en/chapters/appendices/can-ai-create-new-things.md"
+      "en_source": "book/translations/en/chapters/appendices/can-ai-create-new-things.md",
+      "id": "can-ai-create-new-things-01",
+      "zh_id": "zh-diagrams-can-ai-create-new-things-creative-feedback-loop-svg",
+      "en_id": "en-diagrams-appendices-candidate-verification-loop-svg",
+      "semantics": {
+        "zh": {
+          "chapter": "can-ai-create-new-things",
+          "heading": "当前系统的优势与边界",
+          "alternative": "创造闭环：提出候选、外部检验、依据结果修订、保留或放弃；目标、标准与资源由人或系统持续提供。"
+        },
+        "en": {
+          "chapter": "can-ai-create-new-things",
+          "heading": "Strengths and boundaries of current systems",
+          "alternative": "Candidate generation needs external testing and revision"
+        }
+      }
     },
     {
       "chapter": "generative-ai-probability-and-innovation",
@@ -46,7 +121,22 @@
       "zh": "book/assets/zh/diagrams/generative-ai-probability-and-innovation/generation-validation-loop.svg",
       "en": "book/assets/en/diagrams/appendices/generation-control-loop.svg",
       "zh_source": "book/chapters/appendices/generative-ai-probability-and-innovation.md",
-      "en_source": "book/translations/en/chapters/appendices/generative-ai-probability-and-innovation.md"
+      "en_source": "book/translations/en/chapters/appendices/generative-ai-probability-and-innovation.md",
+      "id": "generative-ai-probability-and-innovation-01",
+      "zh_id": "zh-diagrams-generative-ai-probability-and-innovation-generation-validation-loop-svg",
+      "en_id": "en-diagrams-appendices-generation-control-loop-svg",
+      "semantics": {
+        "zh": {
+          "chapter": "generative-ai-probability-and-innovation",
+          "heading": "概率生成回答什么问题",
+          "alternative": "概率生成与验证闭环：上下文产生下一个 token 的分布，经解码形成候选输出；规则、工具或评测器决定接受、修订或重新生成。"
+        },
+        "en": {
+          "chapter": "generative-ai-probability-and-innovation",
+          "heading": "What probability generation answers",
+          "alternative": "Token generation is controlled by verification and a decision to accept, revise, or regenerate"
+        }
+      }
     },
     {
       "chapter": "generative-ai-probability-and-innovation",
@@ -54,7 +144,22 @@
       "zh": "book/assets/zh/diagrams/generative-ai-probability-and-innovation/responsibility-boundaries.svg",
       "en": "book/assets/en/diagrams/generative-ai-probability-and-innovation/responsibility-boundaries.svg",
       "zh_source": "book/chapters/appendices/generative-ai-probability-and-innovation.md",
-      "en_source": "book/translations/en/chapters/appendices/generative-ai-probability-and-innovation.md"
+      "en_source": "book/translations/en/chapters/appendices/generative-ai-probability-and-innovation.md",
+      "id": "generative-ai-probability-and-innovation-02",
+      "zh_id": "zh-diagrams-generative-ai-probability-and-innovation-responsibility-boundaries-svg",
+      "en_id": "en-diagrams-generative-ai-probability-and-innovation-responsibility-boundaries-svg",
+      "semantics": {
+        "zh": {
+          "chapter": "generative-ai-probability-and-innovation",
+          "heading": "提示词、结构化输出与验证各负责什么",
+          "alternative": "职责边界：提示词承载目标与背景，结构化输出限制形状，验证器处理可检验条件，失败处理决定修订、重试、拒绝或交给人。"
+        },
+        "en": {
+          "chapter": "generative-ai-probability-and-innovation",
+          "heading": "What prompts, structured output, and verification each do",
+          "alternative": "Prompts carry goals and context, structured output constrains shape, validators check conditions, and failure handling decides whether to revise, retry, reject, or escalate."
+        }
+      }
     },
     {
       "chapter": "generative-ai-probability-and-innovation",
@@ -62,7 +167,22 @@
       "zh": "book/assets/zh/diagrams/generative-ai-probability-and-innovation/explanation-evidence-chain.svg",
       "en": "book/assets/en/diagrams/appendices/evidence-decision-chain.svg",
       "zh_source": "book/chapters/appendices/generative-ai-probability-and-innovation.md",
-      "en_source": "book/translations/en/chapters/appendices/generative-ai-probability-and-innovation.md"
+      "en_source": "book/translations/en/chapters/appendices/generative-ai-probability-and-innovation.md",
+      "id": "generative-ai-probability-and-innovation-03",
+      "zh_id": "zh-diagrams-generative-ai-probability-and-innovation-explanation-evidence-chain-svg",
+      "en_id": "en-diagrams-appendices-evidence-decision-chain-svg",
+      "semantics": {
+        "zh": {
+          "chapter": "generative-ai-probability-and-innovation",
+          "heading": "模型对自身的解释也需要验证",
+          "alternative": "解释证据链：模型解释先转化为可检验主张，经外部证据与工具验证后再决定是否采纳。"
+        },
+        "en": {
+          "chapter": "generative-ai-probability-and-innovation",
+          "heading": "A model’s explanation of itself also needs verification",
+          "alternative": "Explanation evidence chain: turn a model explanation into a testable claim, verify it with external evidence and tools, then decide whether to adopt it."
+        }
+      }
     },
     {
       "chapter": "what-ai-really-means",
@@ -70,7 +190,22 @@
       "zh": "book/assets/zh/diagrams/what-ai-really-means/ai-system-feedback.svg",
       "en": "book/assets/en/diagrams/appendices/ai-feedback-boundary.svg",
       "zh_source": "book/chapters/appendices/what-ai-really-means.md",
-      "en_source": "book/translations/en/chapters/appendices/what-ai-really-means.md"
+      "en_source": "book/translations/en/chapters/appendices/what-ai-really-means.md",
+      "id": "what-ai-really-means-01",
+      "zh_id": "zh-diagrams-what-ai-really-means-ai-system-feedback-svg",
+      "en_id": "en-diagrams-appendices-ai-feedback-boundary-svg",
+      "semantics": {
+        "zh": {
+          "chapter": "what-ai-really-means",
+          "heading": "AI 是什么",
+          "alternative": "AI 系统基本链路：输入与目标经模型或规则产生预测、内容、推荐或行动，进入环境并获得反馈。"
+        },
+        "en": {
+          "chapter": "what-ai-really-means",
+          "heading": "What AI is",
+          "alternative": "AI outputs meet an environment that supplies feedback"
+        }
+      }
     },
     {
       "chapter": "activation-functions",
@@ -78,7 +213,22 @@
       "zh": "book/assets/zh/diagrams/activation-functions/xor-samples.svg",
       "en": "book/assets/en/diagrams/activation-functions/xor-samples.svg",
       "zh_source": "book/chapters/part1-math-foundations/activation-functions.md",
-      "en_source": "book/translations/en/chapters/part1-math-foundations/activation-functions.md"
+      "en_source": "book/translations/en/chapters/part1-math-foundations/activation-functions.md",
+      "id": "activation-functions-01",
+      "zh_id": "zh-diagrams-activation-functions-xor-samples-svg",
+      "en_id": "en-diagrams-activation-functions-xor-samples-svg",
+      "semantics": {
+        "zh": {
+          "chapter": "activation-functions",
+          "heading": "XOR 的定义",
+          "alternative": "XOR 样本在二维平面中的对角分布：输出为 1 的点位于 (0,1) 和 (1,0)，输出为 0 的点位于 (0,0) 和 (1,1)。"
+        },
+        "en": {
+          "chapter": "activation-functions",
+          "heading": "Definition of XOR",
+          "alternative": "XOR samples have a diagonal layout in a two-dimensional plane: points with output 1 are at (0,1) and (1,0), while points with output 0 are at (0,0) and (1,1)."
+        }
+      }
     },
     {
       "chapter": "activation-functions",
@@ -86,7 +236,22 @@
       "zh": "book/assets/zh/diagrams/activation-functions/xor-linear-boundary.svg",
       "en": "book/assets/en/diagrams/activation-functions/xor-linear-boundary.svg",
       "zh_source": "book/chapters/part1-math-foundations/activation-functions.md",
-      "en_source": "book/translations/en/chapters/part1-math-foundations/activation-functions.md"
+      "en_source": "book/translations/en/chapters/part1-math-foundations/activation-functions.md",
+      "id": "activation-functions-02",
+      "zh_id": "zh-diagrams-activation-functions-xor-linear-boundary-svg",
+      "en_id": "en-diagrams-activation-functions-xor-linear-boundary-svg",
+      "semantics": {
+        "zh": {
+          "chapter": "activation-functions",
+          "heading": "为什么线性模型无法解决 XOR",
+          "alternative": "单一直线无法分开 XOR：候选边界的两侧均同时出现输出为 0 和输出为 1 的样本。"
+        },
+        "en": {
+          "chapter": "activation-functions",
+          "heading": "Why Linear Models Cannot Solve XOR",
+          "alternative": "A single straight line cannot separate XOR: both sides of any candidate boundary contain samples with output 0 and output 1."
+        }
+      }
     },
     {
       "chapter": "activation-functions",
@@ -94,7 +259,22 @@
       "zh": "book/assets/zh/diagrams/activation-functions/xor-relu-network.svg",
       "en": "book/assets/en/diagrams/activation-functions/xor-relu-network.svg",
       "zh_source": "book/chapters/part1-math-foundations/activation-functions.md",
-      "en_source": "book/translations/en/chapters/part1-math-foundations/activation-functions.md"
+      "en_source": "book/translations/en/chapters/part1-math-foundations/activation-functions.md",
+      "id": "activation-functions-03",
+      "zh_id": "zh-diagrams-activation-functions-xor-relu-network-svg",
+      "en_id": "en-diagrams-activation-functions-xor-relu-network-svg",
+      "semantics": {
+        "zh": {
+          "chapter": "activation-functions",
+          "heading": "一个最小的两层 ReLU 网络",
+          "alternative": "两层 ReLU 网络：输入经两个分别计算 x₁−x₂ 和 x₂−x₁ 的 ReLU 单元，再由输出层相加。"
+        },
+        "en": {
+          "chapter": "activation-functions",
+          "heading": "A Minimal Two-Layer ReLU Network",
+          "alternative": "A two-layer ReLU network: the input passes through two ReLU units that compute x₁−x₂ and x₂−x₁, respectively, before the output layer adds them."
+        }
+      }
     },
     {
       "chapter": "activation-functions",
@@ -102,7 +282,22 @@
       "zh": "book/assets/zh/diagrams/activation-functions/xor-region-gating.svg",
       "en": "book/assets/en/diagrams/activation-functions/xor-region-gating.svg",
       "zh_source": "book/chapters/part1-math-foundations/activation-functions.md",
-      "en_source": "book/translations/en/chapters/part1-math-foundations/activation-functions.md"
+      "en_source": "book/translations/en/chapters/part1-math-foundations/activation-functions.md",
+      "id": "activation-functions-04",
+      "zh_id": "zh-diagrams-activation-functions-xor-region-gating-svg",
+      "en_id": "en-diagrams-activation-functions-xor-region-gating-svg",
+      "semantics": {
+        "zh": {
+          "chapter": "activation-functions",
+          "heading": "空间怎样被切分并重组",
+          "alternative": "XOR 的 ReLU 分工：x₁=x₂ 的对角边界两侧分别激活 h₁=ReLU(x₁−x₂) 与 h₂=ReLU(x₂−x₁)，输出层将两侧的正响应合并。"
+        },
+        "en": {
+          "chapter": "activation-functions",
+          "heading": "How Space Is Split and Recombined",
+          "alternative": "ReLU's division of labor for XOR: on opposite sides of the diagonal boundary x₁=x₂, h₁=ReLU(x₁−x₂) and h₂=ReLU(x₂−x₁) activate respectively, and the output layer combines the positive responses from both sides."
+        }
+      }
     },
     {
       "chapter": "activation-functions",
@@ -110,7 +305,22 @@
       "zh": "book/assets/zh/diagrams/activation-functions/relu-curve.svg",
       "en": "book/assets/en/diagrams/activation-functions/relu-curve.svg",
       "zh_source": "book/chapters/part1-math-foundations/activation-functions.md",
-      "en_source": "book/translations/en/chapters/part1-math-foundations/activation-functions.md"
+      "en_source": "book/translations/en/chapters/part1-math-foundations/activation-functions.md",
+      "id": "activation-functions-05",
+      "zh_id": "zh-diagrams-activation-functions-relu-curve-svg",
+      "en_id": "en-diagrams-activation-functions-relu-curve-svg",
+      "semantics": {
+        "zh": {
+          "chapter": "activation-functions",
+          "heading": "ReLU：隐藏层中的分段门控",
+          "alternative": "ReLU 曲线：输入小于等于零时输出零，输入大于零时线性通过；零点是门控边界。"
+        },
+        "en": {
+          "chapter": "activation-functions",
+          "heading": "ReLU: Piecewise Gating in Hidden Layers",
+          "alternative": "ReLU curve: the output is zero when the input is less than or equal to zero, and passes through linearly when the input is greater than zero; zero is the gating boundary."
+        }
+      }
     },
     {
       "chapter": "activation-functions",
@@ -118,7 +328,22 @@
       "zh": "book/assets/zh/diagrams/activation-functions/sigmoid-curve.svg",
       "en": "book/assets/en/diagrams/activation-functions/sigmoid-curve.svg",
       "zh_source": "book/chapters/part1-math-foundations/activation-functions.md",
-      "en_source": "book/translations/en/chapters/part1-math-foundations/activation-functions.md"
+      "en_source": "book/translations/en/chapters/part1-math-foundations/activation-functions.md",
+      "id": "activation-functions-06",
+      "zh_id": "zh-diagrams-activation-functions-sigmoid-curve-svg",
+      "en_id": "en-diagrams-activation-functions-sigmoid-curve-svg",
+      "semantics": {
+        "zh": {
+          "chapter": "activation-functions",
+          "heading": "Sigmoid：独立二分类概率与门控",
+          "alternative": "Sigmoid 曲线：将实数映射到零和一之间，远离零时逐渐饱和。"
+        },
+        "en": {
+          "chapter": "activation-functions",
+          "heading": "Sigmoid: Independent Binary Probabilities and Gating",
+          "alternative": "Sigmoid curve: maps real numbers to values between zero and one, gradually saturating far from zero."
+        }
+      }
     },
     {
       "chapter": "activation-functions",
@@ -126,7 +351,22 @@
       "zh": "book/assets/zh/diagrams/activation-functions/tanh-curve.svg",
       "en": "book/assets/en/diagrams/activation-functions/tanh-curve.svg",
       "zh_source": "book/chapters/part1-math-foundations/activation-functions.md",
-      "en_source": "book/translations/en/chapters/part1-math-foundations/activation-functions.md"
+      "en_source": "book/translations/en/chapters/part1-math-foundations/activation-functions.md",
+      "id": "activation-functions-07",
+      "zh_id": "zh-diagrams-activation-functions-tanh-curve-svg",
+      "en_id": "en-diagrams-activation-functions-tanh-curve-svg",
+      "semantics": {
+        "zh": {
+          "chapter": "activation-functions",
+          "heading": "Tanh：有界的零中心信号",
+          "alternative": "Tanh 曲线：输出位于负一与一之间，穿过原点且对正负输入对称。"
+        },
+        "en": {
+          "chapter": "activation-functions",
+          "heading": "Tanh: Bounded, Zero-Centered Signals",
+          "alternative": "Tanh curve: the output lies between negative one and one, passes through the origin, and is symmetric for positive and negative inputs."
+        }
+      }
     },
     {
       "chapter": "activation-functions",
@@ -134,7 +374,22 @@
       "zh": "book/assets/zh/diagrams/activation-functions/softmax-distribution.svg",
       "en": "book/assets/en/diagrams/activation-functions/softmax-distribution.svg",
       "zh_source": "book/chapters/part1-math-foundations/activation-functions.md",
-      "en_source": "book/translations/en/chapters/part1-math-foundations/activation-functions.md"
+      "en_source": "book/translations/en/chapters/part1-math-foundations/activation-functions.md",
+      "id": "activation-functions-08",
+      "zh_id": "zh-diagrams-activation-functions-softmax-distribution-svg",
+      "en_id": "en-diagrams-activation-functions-softmax-distribution-svg",
+      "semantics": {
+        "zh": {
+          "chapter": "activation-functions",
+          "heading": "Softmax：候选项之间的归一化竞争",
+          "alternative": "Softmax 分布：logits [2.0, 1.0, 0.1] 映射为和为 1 的概率 [0.659, 0.242, 0.099]；候选之间存在归一化竞争。"
+        },
+        "en": {
+          "chapter": "activation-functions",
+          "heading": "Softmax: Normalized Competition Among Candidates",
+          "alternative": "Softmax distribution: logits [2.0, 1.0, 0.1] map to probabilities [0.659, 0.242, 0.099], which sum to 1; candidates compete through normalization."
+        }
+      }
     },
     {
       "chapter": "backpropagation",
@@ -142,7 +397,22 @@
       "zh": "book/assets/zh/diagrams/backpropagation/branch-gradient.svg",
       "en": "book/assets/en/diagrams/backpropagation/branching-graph.svg",
       "zh_source": "book/chapters/part1-math-foundations/backpropagation.md",
-      "en_source": "book/translations/en/chapters/part1-math-foundations/backpropagation.md"
+      "en_source": "book/translations/en/chapters/part1-math-foundations/backpropagation.md",
+      "id": "backpropagation-01",
+      "zh_id": "zh-diagrams-backpropagation-branch-gradient-svg",
+      "en_id": "en-diagrams-backpropagation-branching-graph-svg",
+      "semantics": {
+        "zh": {
+          "chapter": "backpropagation",
+          "heading": "计算图结构",
+          "alternative": "带分叉的计算图：输入经 h₁ 分成 h₂、h₃ 两路，在 y 汇合为损失 L；反向梯度沿两路返回并在 h₁ 相加。"
+        },
+        "en": {
+          "chapter": "backpropagation",
+          "heading": "Computational-graph structure",
+          "alternative": "A branching computational graph: the input passes through h₁ into branches h₂ and h₃, joins at y, and produces loss L; backward gradients return through both branches and add at h₁."
+        }
+      }
     },
     {
       "chapter": "cross-entropy",
@@ -150,7 +420,22 @@
       "zh": "book/assets/zh/diagrams/cross-entropy/likelihood-to-cross-entropy.svg",
       "en": "book/assets/en/diagrams/cross-entropy/likelihood-to-cross-entropy.svg",
       "zh_source": "book/chapters/part1-math-foundations/cross-entropy.md",
-      "en_source": "book/translations/en/chapters/part1-math-foundations/cross-entropy.md"
+      "en_source": "book/translations/en/chapters/part1-math-foundations/cross-entropy.md",
+      "id": "cross-entropy-01",
+      "zh_id": "zh-diagrams-cross-entropy-likelihood-to-cross-entropy-svg",
+      "en_id": "en-diagrams-cross-entropy-likelihood-to-cross-entropy-svg",
+      "semantics": {
+        "zh": {
+          "chapter": "cross-entropy",
+          "heading": "完整的等价链",
+          "alternative": "从最大似然到交叉熵：最大化训练数据的条件似然，经取对数、变号后得到负对数似然；当目标分布为 one-hot 经验标签时，它可写为逐样本交叉熵。"
+        },
+        "en": {
+          "chapter": "cross-entropy",
+          "heading": "The Complete Equivalence Chain",
+          "alternative": "From maximum likelihood to cross-entropy: maximizing conditional likelihood of training data, taking logs, and negating yields negative log-likelihood; with one-hot empirical labels, this becomes per-example cross-entropy."
+        }
+      }
     },
     {
       "chapter": "cross-entropy",
@@ -158,7 +443,22 @@
       "zh": "book/assets/zh/diagrams/cross-entropy/understanding-path.svg",
       "en": "book/assets/en/diagrams/cross-entropy/understanding-path.svg",
       "zh_source": "book/chapters/part1-math-foundations/cross-entropy.md",
-      "en_source": "book/translations/en/chapters/part1-math-foundations/cross-entropy.md"
+      "en_source": "book/translations/en/chapters/part1-math-foundations/cross-entropy.md",
+      "id": "cross-entropy-02",
+      "zh_id": "zh-diagrams-cross-entropy-understanding-path-svg",
+      "en_id": "en-diagrams-cross-entropy-understanding-path-svg",
+      "semantics": {
+        "zh": {
+          "chapter": "cross-entropy",
+          "heading": "理解路径",
+          "alternative": "交叉熵理解路径：从希望正确答案概率更高，到以 −log(p) 惩罚低概率；在 one-hot 经验标签和一致归约下，对数似然、NLL 与交叉熵的优化目标对应。"
+        },
+        "en": {
+          "chapter": "cross-entropy",
+          "heading": "Path to Understanding",
+          "alternative": "Cross-entropy understanding path: from wanting a higher probability for the correct answer to penalizing low probability with −log(p); with one-hot empirical labels and consistent reduction, log likelihood, NLL, and cross-entropy correspond to the same optimization objective."
+        }
+      }
     },
     {
       "chapter": "dot-product-angle",
@@ -166,7 +466,22 @@
       "zh": "book/assets/zh/diagrams/dot-product-angle/vector-projection.svg",
       "en": "book/assets/en/diagrams/dot-product-angle/projection.svg",
       "zh_source": "book/chapters/part1-math-foundations/dot-product-angle.md",
-      "en_source": "book/translations/en/chapters/part1-math-foundations/dot-product-angle.md"
+      "en_source": "book/translations/en/chapters/part1-math-foundations/dot-product-angle.md",
+      "id": "dot-product-angle-01",
+      "zh_id": "zh-diagrams-dot-product-angle-vector-projection-svg",
+      "en_id": "en-diagrams-dot-product-angle-projection-svg",
+      "semantics": {
+        "zh": {
+          "chapter": "dot-product-angle",
+          "heading": "投影的几何意义",
+          "alternative": "向量 a 在 b 方向上的投影：投影长度为 |a|cos(θ)，点积等于该投影长度乘以 |b|。"
+        },
+        "en": {
+          "chapter": "dot-product-angle",
+          "heading": "The Geometric Meaning of Projection",
+          "alternative": "Projection of vector a onto the direction of b: its length is |a|cos(θ), and the dot product is that projected length multiplied by |b|."
+        }
+      }
     },
     {
       "chapter": "dot-product-angle",
@@ -174,7 +489,22 @@
       "zh": "book/assets/zh/diagrams/dot-product-angle/direction-comparison.svg",
       "en": "book/assets/en/diagrams/dot-product-angle/direction-cases.svg",
       "zh_source": "book/chapters/part1-math-foundations/dot-product-angle.md",
-      "en_source": "book/translations/en/chapters/part1-math-foundations/dot-product-angle.md"
+      "en_source": "book/translations/en/chapters/part1-math-foundations/dot-product-angle.md",
+      "id": "dot-product-angle-02",
+      "zh_id": "zh-diagrams-dot-product-angle-direction-comparison-svg",
+      "en_id": "en-diagrams-dot-product-angle-direction-cases-svg",
+      "semantics": {
+        "zh": {
+          "chapter": "dot-product-angle",
+          "heading": "为什么投影能反映相似度？",
+          "alternative": "同向、垂直与反向的向量关系：余弦值分别为 1、0、−1，对应投影最大、为零和为负。"
+        },
+        "en": {
+          "chapter": "dot-product-angle",
+          "heading": "Why Can Projection Reflect Similarity?",
+          "alternative": "Vectors with the same, perpendicular, and opposite directions: cosine values are 1, 0, and −1, so projections are respectively maximum, zero, and negative."
+        }
+      }
     },
     {
       "chapter": "dot-product-angle",
@@ -182,7 +512,22 @@
       "zh": "book/assets/zh/diagrams/dot-product-angle/cosine-angle-curve.svg",
       "en": "book/assets/en/diagrams/dot-product-angle/cosine-trend.svg",
       "zh_source": "book/chapters/part1-math-foundations/dot-product-angle.md",
-      "en_source": "book/translations/en/chapters/part1-math-foundations/dot-product-angle.md"
+      "en_source": "book/translations/en/chapters/part1-math-foundations/dot-product-angle.md",
+      "id": "dot-product-angle-03",
+      "zh_id": "zh-diagrams-dot-product-angle-cosine-angle-curve-svg",
+      "en_id": "en-diagrams-dot-product-angle-cosine-trend-svg",
+      "semantics": {
+        "zh": {
+          "chapter": "dot-product-angle",
+          "heading": "cos函数的性质",
+          "alternative": "余弦函数在 0° 到 180° 区间内的趋势：0°、45°、90°、135°、180° 对应的值依次从 1 降至 −1。"
+        },
+        "en": {
+          "chapter": "dot-product-angle",
+          "heading": "Properties of the cos Function",
+          "alternative": "Cosine from 0° to 180°: values at 0°, 45°, 90°, 135°, and 180° decrease from 1 to −1."
+        }
+      }
     },
     {
       "chapter": "dot-product-angle",
@@ -190,7 +535,22 @@
       "zh": "book/assets/zh/diagrams/dot-product-angle/cosine-law-triangle.svg",
       "en": "book/assets/en/diagrams/dot-product-angle/cosine-law-triangle.svg",
       "zh_source": "book/chapters/part1-math-foundations/dot-product-angle.md",
-      "en_source": "book/translations/en/chapters/part1-math-foundations/dot-product-angle.md"
+      "en_source": "book/translations/en/chapters/part1-math-foundations/dot-product-angle.md",
+      "id": "dot-product-angle-04",
+      "zh_id": "zh-diagrams-dot-product-angle-cosine-law-triangle-svg",
+      "en_id": "en-diagrams-dot-product-angle-cosine-law-triangle-svg",
+      "semantics": {
+        "zh": {
+          "chapter": "dot-product-angle",
+          "heading": "方法二：用余弦定理（适用于任意维度）",
+          "alternative": "余弦定理中的向量三角形：O 到 A 为向量 a，O 到 B 为向量 b，A 到 B 的边长为 |a−b|，夹角 θ 位于 O。"
+        },
+        "en": {
+          "chapter": "dot-product-angle",
+          "heading": "Method 2: The Law of Cosines (Applicable in Any Dimension)",
+          "alternative": "Vector triangle for the law of cosines: O to A is vector a, O to B is vector b, A to B has length |a−b|, and θ is at O."
+        }
+      }
     },
     {
       "chapter": "perceptron-learning",
@@ -198,7 +558,22 @@
       "zh": "book/assets/zh/diagrams/perceptron-learning/relu-breakpoints.svg",
       "en": "book/assets/en/diagrams/perceptron-learning/relu-breakpoints.svg",
       "zh_source": "book/chapters/part1-math-foundations/perceptron-learning.md",
-      "en_source": "book/translations/en/chapters/part1-math-foundations/perceptron-learning.md"
+      "en_source": "book/translations/en/chapters/part1-math-foundations/perceptron-learning.md",
+      "id": "perceptron-learning-01",
+      "zh_id": "zh-diagrams-perceptron-learning-relu-breakpoints-svg",
+      "en_id": "en-diagrams-perceptron-learning-relu-breakpoints-svg",
+      "semantics": {
+        "zh": {
+          "chapter": "perceptron-learning",
+          "heading": "折点：竖直分界线",
+          "alternative": "ReLU 折点：ReLU(x+1)、ReLU(x) 与 ReLU(x−1) 分别在 −1、0、1 处切换激活状态，把输入轴划分为四个区间；竖线不是输出函数图像。"
+        },
+        "en": {
+          "chapter": "perceptron-learning",
+          "heading": "Breakpoints: Vertical Boundaries",
+          "alternative": "ReLU breakpoints: ReLU(x+1), ReLU(x), and ReLU(x−1) switch activation at −1, 0, and 1, dividing the input axis into four intervals; the vertical lines are not the output graph."
+        }
+      }
     },
     {
       "chapter": "perceptron-learning",
@@ -206,7 +581,22 @@
       "zh": "book/assets/zh/diagrams/perceptron-learning/relu-piecewise-linear.svg",
       "en": "book/assets/en/diagrams/perceptron-learning/relu-piecewise-linear.svg",
       "zh_source": "book/chapters/part1-math-foundations/perceptron-learning.md",
-      "en_source": "book/translations/en/chapters/part1-math-foundations/perceptron-learning.md"
+      "en_source": "book/translations/en/chapters/part1-math-foundations/perceptron-learning.md",
+      "id": "perceptron-learning-02",
+      "zh_id": "zh-diagrams-perceptron-learning-relu-piecewise-linear-svg",
+      "en_id": "en-diagrams-perceptron-learning-relu-piecewise-linear-svg",
+      "semantics": {
+        "zh": {
+          "chapter": "perceptron-learning",
+          "heading": "输出函数的折线示意",
+          "alternative": "ReLU 单元叠加出的分段线性函数：−1、0、1 处的激活边界改变斜率；每段由当前所有已激活单元的线性部分相加得到。"
+        },
+        "en": {
+          "chapter": "perceptron-learning",
+          "heading": "A Polyline View of the Output Function",
+          "alternative": "A piecewise-linear function made by summing ReLU units: activation boundaries at −1, 0, and 1 change the slope; each segment adds the linear parts of all currently active units."
+        }
+      }
     },
     {
       "chapter": "vanishing-exploding-gradients",
@@ -214,7 +604,22 @@
       "zh": "book/assets/zh/diagrams/vanishing-exploding-gradients/activation-shapes.svg",
       "en": "book/assets/en/diagrams/vanishing-exploding-gradients/activation-shapes.svg",
       "zh_source": "book/chapters/part1-math-foundations/vanishing-exploding-gradients.md",
-      "en_source": "book/translations/en/chapters/part1-math-foundations/vanishing-exploding-gradients.md"
+      "en_source": "book/translations/en/chapters/part1-math-foundations/vanishing-exploding-gradients.md",
+      "id": "vanishing-exploding-gradients-01",
+      "zh_id": "zh-diagrams-vanishing-exploding-gradients-activation-shapes-svg",
+      "en_id": "en-diagrams-vanishing-exploding-gradients-activation-shapes-svg",
+      "semantics": {
+        "zh": {
+          "chapter": "vanishing-exploding-gradients",
+          "heading": "Sigmoid：典型的饱和型激活函数",
+          "alternative": "Sigmoid、ReLU 与 GELU 的函数形状对比：Sigmoid 两端饱和，ReLU 在零点折角，GELU 平滑过渡。"
+        },
+        "en": {
+          "chapter": "vanishing-exploding-gradients",
+          "heading": "Sigmoid: a typical saturating activation function",
+          "alternative": "Comparison of Sigmoid, ReLU, and GELU function shapes: Sigmoid saturates at both ends, ReLU has a corner at zero, and GELU transitions smoothly."
+        }
+      }
     },
     {
       "chapter": "layer-norm",
@@ -222,7 +627,22 @@
       "zh": "book/assets/zh/diagrams/layer-norm/deep-scale-drift.svg",
       "en": "book/assets/en/diagrams/layer-norm/deep-scale-drift.svg",
       "zh_source": "book/chapters/part2-llm-internal/layer-norm.md",
-      "en_source": "book/translations/en/chapters/part2-llm-internal/layer-norm.md"
+      "en_source": "book/translations/en/chapters/part2-llm-internal/layer-norm.md",
+      "id": "layer-norm-01",
+      "zh_id": "zh-diagrams-layer-norm-deep-scale-drift-svg",
+      "en_id": "en-diagrams-layer-norm-deep-scale-drift-svg",
+      "semantics": {
+        "zh": {
+          "chapter": "layer-norm",
+          "heading": "神经网络为什么需要归一化",
+          "alternative": "深层尺度漂移：表示从 x 经连续层变换为 y、z、u；微小的逐层放大或缩小会累积，归一化用于重新标定尺度。"
+        },
+        "en": {
+          "chapter": "layer-norm",
+          "heading": "Why Neural Networks Need Normalization",
+          "alternative": "Repeated transformations can drift in scale; LayerNorm recenters and rescales one token representation before further computation."
+        }
+      }
     },
     {
       "chapter": "layer-norm",
@@ -230,7 +650,22 @@
       "zh": "book/assets/zh/diagrams/layer-norm/residual-norm-path.svg",
       "en": "book/assets/en/diagrams/layer-norm/residual-norm-path.svg",
       "zh_source": "book/chapters/part2-llm-internal/layer-norm.md",
-      "en_source": "book/translations/en/chapters/part2-llm-internal/layer-norm.md"
+      "en_source": "book/translations/en/chapters/part2-llm-internal/layer-norm.md",
+      "id": "layer-norm-02",
+      "zh_id": "zh-diagrams-layer-norm-residual-norm-path-svg",
+      "en_id": "en-diagrams-layer-norm-residual-norm-path-svg",
+      "semantics": {
+        "zh": {
+          "chapter": "layer-norm",
+          "heading": "LayerNorm 怎样稳定表示",
+          "alternative": "Post-LN 示例中的 Attention、残差连接与 LayerNorm：输入 x 经 Attention 得到 f(x)，再与残差旁路的 x 相加，LayerNorm 控制输出尺度后交给下一层。"
+        },
+        "en": {
+          "chapter": "layer-norm",
+          "heading": "How LayerNorm Stabilizes Representations",
+          "alternative": "Attention transforms information, a residual shortcut preserves input, addition combines the paths, and LayerNorm prepares the next representation."
+        }
+      }
     },
     {
       "chapter": "llm-generation",
@@ -238,7 +673,22 @@
       "zh": "book/assets/zh/diagrams/llm-generation/text-token-embedding.svg",
       "en": "book/assets/en/diagrams/llm-generation/token-to-context.svg",
       "zh_source": "book/chapters/part2-llm-internal/llm-generation.md",
-      "en_source": "book/translations/en/chapters/part2-llm-internal/llm-generation.md"
+      "en_source": "book/translations/en/chapters/part2-llm-internal/llm-generation.md",
+      "id": "llm-generation-01",
+      "zh_id": "zh-diagrams-llm-generation-text-token-embedding-svg",
+      "en_id": "en-diagrams-llm-generation-token-to-context-svg",
+      "semantics": {
+        "zh": {
+          "chapter": "llm-generation",
+          "heading": "Token、编号与向量是三件事",
+          "alternative": "文本到上下文表示：文本经 Tokenizer 切分并映射到词表编号，查表得到 Embedding 向量，再由模型层结合位置和上下文计算。"
+        },
+        "en": {
+          "chapter": "llm-generation",
+          "heading": "Tokens, IDs, and Vectors Are Different Things",
+          "alternative": "Text to contextual representations: text is tokenized into IDs, looked up as embedding vectors, then combined with position and context through model layers."
+        }
+      }
     },
     {
       "chapter": "llm-generation",
@@ -246,7 +696,22 @@
       "zh": "book/assets/zh/diagrams/llm-generation/autoregressive-step.svg",
       "en": "book/assets/en/diagrams/llm-generation/autoregressive-step.svg",
       "zh_source": "book/chapters/part2-llm-internal/llm-generation.md",
-      "en_source": "book/translations/en/chapters/part2-llm-internal/llm-generation.md"
+      "en_source": "book/translations/en/chapters/part2-llm-internal/llm-generation.md",
+      "id": "llm-generation-02",
+      "zh_id": "zh-diagrams-llm-generation-autoregressive-step-svg",
+      "en_id": "en-diagrams-llm-generation-autoregressive-step-svg",
+      "semantics": {
+        "zh": {
+          "chapter": "llm-generation",
+          "heading": "一步生成究竟做什么",
+          "alternative": "自回归的一步：已有输入经 Transformer 得到最后位置表示，形成全词表 logits；解码选择 token 后追加到序列，开始下一步。"
+        },
+        "en": {
+          "chapter": "llm-generation",
+          "heading": "What One Generation Step Does",
+          "alternative": "Autoregressive next-token step: existing input produces a final-position representation and logits; decoding selects and appends one token before the next step."
+        }
+      }
     },
     {
       "chapter": "llm-generation",
@@ -254,7 +719,22 @@
       "zh": "book/assets/zh/diagrams/llm-generation/training-parallelism.svg",
       "en": "book/assets/en/diagrams/llm-generation/training-parallelism.svg",
       "zh_source": "book/chapters/part2-llm-internal/llm-generation.md",
-      "en_source": "book/translations/en/chapters/part2-llm-internal/llm-generation.md"
+      "en_source": "book/translations/en/chapters/part2-llm-internal/llm-generation.md",
+      "id": "llm-generation-03",
+      "zh_id": "zh-diagrams-llm-generation-training-parallelism-svg",
+      "en_id": "en-diagrams-llm-generation-training-parallelism-svg",
+      "semantics": {
+        "zh": {
+          "chapter": "llm-generation",
+          "heading": "为什么训练能并行，生成却有先后依赖",
+          "alternative": "训练时的并行目标：已知样本让 I、I love 与 I love coding 三个允许前缀可同时分别预测 love、coding 与 EOS。"
+        },
+        "en": {
+          "chapter": "llm-generation",
+          "heading": "Why Training Can Be Parallel but Generation Has Dependencies",
+          "alternative": "Known prefixes at several positions are compared with their next-token targets during one training pass, while the causal mask blocks access to later targets."
+        }
+      }
     },
     {
       "chapter": "llm-generation",
@@ -262,7 +742,22 @@
       "zh": "book/assets/zh/diagrams/llm-generation/prefill-decode-sequence.svg",
       "en": "book/assets/en/diagrams/llm-generation/prefill-decode-sequence.svg",
       "zh_source": "book/chapters/part2-llm-internal/llm-generation.md",
-      "en_source": "book/translations/en/chapters/part2-llm-internal/llm-generation.md"
+      "en_source": "book/translations/en/chapters/part2-llm-internal/llm-generation.md",
+      "id": "llm-generation-04",
+      "zh_id": "zh-diagrams-llm-generation-prefill-decode-sequence-svg",
+      "en_id": "en-diagrams-llm-generation-prefill-decode-sequence-svg",
+      "semantics": {
+        "zh": {
+          "chapter": "llm-generation",
+          "heading": "首次处理输入，与之后逐步生成",
+          "alternative": "Prefill 与 Decode：Prefill 处理 A、B、C 后预测 D；选出 D 后 Decode 将其送回模型预测 E，再逐步继续。"
+        },
+        "en": {
+          "chapter": "llm-generation",
+          "heading": "Processing the Input and Continuing Generation",
+          "alternative": "Prefill processes known context; decoding selects and appends one token at a time before the next prediction."
+        }
+      }
     },
     {
       "chapter": "llm-inference-nondeterminism",
@@ -270,7 +765,22 @@
       "zh": "book/assets/zh/diagrams/llm-inference-nondeterminism/numerical-divergence.svg",
       "en": "book/assets/en/diagrams/llm-inference-nondeterminism/numerical-divergence.svg",
       "zh_source": "book/chapters/part2-llm-internal/llm-inference-nondeterminism.md",
-      "en_source": "book/translations/en/chapters/part2-llm-internal/llm-inference-nondeterminism.md"
+      "en_source": "book/translations/en/chapters/part2-llm-internal/llm-inference-nondeterminism.md",
+      "id": "llm-inference-nondeterminism-01",
+      "zh_id": "zh-diagrams-llm-inference-nondeterminism-numerical-divergence-svg",
+      "en_id": "en-diagrams-llm-inference-nondeterminism-numerical-divergence-svg",
+      "semantics": {
+        "zh": {
+          "chapter": "llm-inference-nondeterminism",
+          "heading": "为什么数值条件会影响 token",
+          "alternative": "数值差异放大链：请求负载改变批次或切分，有限精度 logits 出现微差；临界 argmax 改变后，token 被带入后续上下文并使自回归生成分叉。"
+        },
+        "en": {
+          "chapter": "llm-inference-nondeterminism",
+          "heading": "How serving conditions affect a token",
+          "alternative": "Tiny numerical differences can change a near-tied token and later context"
+        }
+      }
     },
     {
       "chapter": "llm-inference-nondeterminism",
@@ -278,7 +788,22 @@
       "zh": "book/assets/zh/diagrams/llm-inference-nondeterminism/argmax-boundary.svg",
       "en": "book/assets/en/diagrams/llm-inference-nondeterminism/argmax-boundary.svg",
       "zh_source": "book/chapters/part2-llm-internal/llm-inference-nondeterminism.md",
-      "en_source": "book/translations/en/chapters/part2-llm-internal/llm-inference-nondeterminism.md"
+      "en_source": "book/translations/en/chapters/part2-llm-internal/llm-inference-nondeterminism.md",
+      "id": "llm-inference-nondeterminism-02",
+      "zh_id": "zh-diagrams-llm-inference-nondeterminism-argmax-boundary-svg",
+      "en_id": "en-diagrams-llm-inference-nondeterminism-argmax-boundary-svg",
+      "semantics": {
+        "zh": {
+          "chapter": "llm-inference-nondeterminism",
+          "heading": "为什么微差会变成完全不同的回答",
+          "alternative": "argmax 临界示例：两组 logits 的微小差异分别使 token 0 或 token 1 略大，从而让贪心选择离散翻转。"
+        },
+        "en": {
+          "chapter": "llm-inference-nondeterminism",
+          "heading": "Why a Tiny Difference Can Become a Completely Different Answer",
+          "alternative": "Near-tied logits select different greedy tokens when a minute numerical change crosses the discrete argmax boundary."
+        }
+      }
     },
     {
       "chapter": "model-training-lifecycle",
@@ -286,7 +811,22 @@
       "zh": "book/assets/zh/diagrams/model-training-lifecycle/training-lifecycle.svg",
       "en": "book/assets/en/diagrams/model-training-lifecycle/training-loop.svg",
       "zh_source": "book/chapters/part2-llm-internal/model-training-lifecycle.md",
-      "en_source": "book/translations/en/chapters/part2-llm-internal/model-training-lifecycle.md"
+      "en_source": "book/translations/en/chapters/part2-llm-internal/model-training-lifecycle.md",
+      "id": "model-training-lifecycle-01",
+      "zh_id": "zh-diagrams-model-training-lifecycle-training-lifecycle-svg",
+      "en_id": "en-diagrams-model-training-lifecycle-training-loop-svg",
+      "semantics": {
+        "zh": {
+          "chapter": "model-training-lifecycle",
+          "heading": "先看训练的全景",
+          "alternative": "训练全景：资料经处理形成批次，Transformer 前向计算产生 logits，与目标形成损失；反向传播和优化器更新参数、保存 checkpoint，再由独立验证和评测决定后续动作。"
+        },
+        "en": {
+          "chapter": "model-training-lifecycle",
+          "heading": "Start with the Training Map",
+          "alternative": "Training data-to-checkpoint feedback loop: material is selected and batched, passed through a model and loss, differentiated and optimized into a checkpoint, then independently evaluated to inform the next cycle."
+        }
+      }
     },
     {
       "chapter": "model-training-lifecycle",
@@ -294,7 +834,22 @@
       "zh": "book/assets/zh/diagrams/model-training-lifecycle/token-to-loss.svg",
       "en": "book/assets/en/diagrams/model-training-lifecycle/token-to-loss.svg",
       "zh_source": "book/chapters/part2-llm-internal/model-training-lifecycle.md",
-      "en_source": "book/translations/en/chapters/part2-llm-internal/model-training-lifecycle.md"
+      "en_source": "book/translations/en/chapters/part2-llm-internal/model-training-lifecycle.md",
+      "id": "model-training-lifecycle-02",
+      "zh_id": "zh-diagrams-model-training-lifecycle-token-to-loss-svg",
+      "en_id": "en-diagrams-model-training-lifecycle-token-to-loss-svg",
+      "semantics": {
+        "zh": {
+          "chapter": "model-training-lifecycle",
+          "heading": "一次参数更新究竟发生了什么",
+          "alternative": "训练批次的前向链：输入 token 经 Embedding、Transformer、logits 和 Softmax 得到目标 token 概率，交叉熵据此衡量预测误差。"
+        },
+        "en": {
+          "chapter": "model-training-lifecycle",
+          "heading": "What Happens in One Parameter Update",
+          "alternative": "Training tokens become cross-entropy loss: input tokens and targets pass through embeddings, Transformer, logits and Softmax; insufficient target probability produces loss."
+        }
+      }
     },
     {
       "chapter": "model-training-lifecycle",
@@ -302,7 +857,22 @@
       "zh": "book/assets/zh/diagrams/model-training-lifecycle/parameter-update-cycle.svg",
       "en": "book/assets/en/diagrams/model-training-lifecycle/parameter-update-cycle.svg",
       "zh_source": "book/chapters/part2-llm-internal/model-training-lifecycle.md",
-      "en_source": "book/translations/en/chapters/part2-llm-internal/model-training-lifecycle.md"
+      "en_source": "book/translations/en/chapters/part2-llm-internal/model-training-lifecycle.md",
+      "id": "model-training-lifecycle-03",
+      "zh_id": "zh-diagrams-model-training-lifecycle-parameter-update-cycle-svg",
+      "en_id": "en-diagrams-model-training-lifecycle-parameter-update-cycle-svg",
+      "semantics": {
+        "zh": {
+          "chapter": "model-training-lifecycle",
+          "heading": "一次参数更新究竟发生了什么",
+          "alternative": "一次参数更新：批次以前向预测形成损失，反向传播得到梯度，优化器更新参数，再由下一批次使用新参数继续检验。"
+        },
+        "en": {
+          "chapter": "model-training-lifecycle",
+          "heading": "What Happens in One Parameter Update",
+          "alternative": "One training iteration turns a batch into a forward pass, loss, gradients, a controlled parameter update, and the next batch."
+        }
+      }
     },
     {
       "chapter": "model-training-lifecycle",
@@ -310,7 +880,22 @@
       "zh": "book/assets/zh/diagrams/model-training-lifecycle/checkpoint-feedback.svg",
       "en": "book/assets/en/diagrams/model-training-lifecycle/checkpoint-feedback.svg",
       "zh_source": "book/chapters/part2-llm-internal/model-training-lifecycle.md",
-      "en_source": "book/translations/en/chapters/part2-llm-internal/model-training-lifecycle.md"
+      "en_source": "book/translations/en/chapters/part2-llm-internal/model-training-lifecycle.md",
+      "id": "model-training-lifecycle-04",
+      "zh_id": "zh-diagrams-model-training-lifecycle-checkpoint-feedback-svg",
+      "en_id": "en-diagrams-model-training-lifecycle-checkpoint-feedback-svg",
+      "semantics": {
+        "zh": {
+          "chapter": "model-training-lifecycle",
+          "heading": "从资料到 checkpoint：训练是一个持续闭环",
+          "alternative": "checkpoint 验证反馈：资料与任务定义、数据处理、批次和参数更新形成 checkpoint；验证、任务评测、数据审查与训练监控反馈到后续训练。"
+        },
+        "en": {
+          "chapter": "model-training-lifecycle",
+          "heading": "From Material to Checkpoint: A Continuing Loop",
+          "alternative": "Material and task definition, data preparation, batches, parameter updates, checkpoints, and independent validation form a continuing feedback loop."
+        }
+      }
     },
     {
       "chapter": "multilingual-llms",
@@ -318,7 +903,22 @@
       "zh": "book/assets/zh/diagrams/multilingual-llms/shared-representation.svg",
       "en": "book/assets/en/diagrams/multilingual-llms/shared-representation.svg",
       "zh_source": "book/chapters/part2-llm-internal/multilingual-llms.md",
-      "en_source": "book/translations/en/chapters/part2-llm-internal/multilingual-llms.md"
+      "en_source": "book/translations/en/chapters/part2-llm-internal/multilingual-llms.md",
+      "id": "multilingual-llms-01",
+      "zh_id": "zh-diagrams-multilingual-llms-shared-representation-svg",
+      "en_id": "en-diagrams-multilingual-llms-shared-representation-svg",
+      "semantics": {
+        "zh": {
+          "chapter": "multilingual-llms",
+          "heading": "从字符到共享模型",
+          "alternative": "多语言共享计算：不同书写系统经 Tokenizer 形成 token 向量，在共享 Transformer 参数中计算词表上的下一个 token 分布；不需要固定翻译到英语。"
+        },
+        "en": {
+          "chapter": "multilingual-llms",
+          "heading": "From Characters to a Shared Model",
+          "alternative": "A multilingual model maps many writing systems through shared processing layers"
+        }
+      }
     },
     {
       "chapter": "multimodal-models",
@@ -326,7 +926,22 @@
       "zh": "book/assets/zh/diagrams/multimodal-models/multimodal-overview.svg",
       "en": "book/assets/en/diagrams/multimodal-models/multimodal-overview.svg",
       "zh_source": "book/chapters/part2-llm-internal/multimodal-models.md",
-      "en_source": "book/translations/en/chapters/part2-llm-internal/multimodal-models.md"
+      "en_source": "book/translations/en/chapters/part2-llm-internal/multimodal-models.md",
+      "id": "multimodal-models-01",
+      "zh_id": "zh-diagrams-multimodal-models-multimodal-overview-svg",
+      "en_id": "en-diagrams-multimodal-models-multimodal-overview-svg",
+      "semantics": {
+        "zh": {
+          "chapter": "multimodal-models",
+          "heading": "多模态的全景：把不同信号接到同一计算中",
+          "alternative": "多模态全景：文字、图片、音频和视频经各自编码器形成表示，在核心 Transformer 的交错上下文中融合，再由对应输出头或解码器交付文字、声音、图像或视频。"
+        },
+        "en": {
+          "chapter": "multimodal-models",
+          "heading": "The Multimodal Map: Connecting Different Signals to One Computation",
+          "alternative": "Multimodal inputs are encoded, combined in a core Transformer, and decoded into outputs"
+        }
+      }
     },
     {
       "chapter": "multimodal-models",
@@ -334,7 +949,22 @@
       "zh": "book/assets/zh/diagrams/multimodal-models/interleaved-context.svg",
       "en": "book/assets/en/diagrams/multimodal-models/interleaved-context.svg",
       "zh_source": "book/chapters/part2-llm-internal/multimodal-models.md",
-      "en_source": "book/translations/en/chapters/part2-llm-internal/multimodal-models.md"
+      "en_source": "book/translations/en/chapters/part2-llm-internal/multimodal-models.md",
+      "id": "multimodal-models-02",
+      "zh_id": "zh-diagrams-multimodal-models-interleaved-context-svg",
+      "en_id": "en-diagrams-multimodal-models-interleaved-context-svg",
+      "semantics": {
+        "zh": {
+          "chapter": "multimodal-models",
+          "heading": "输入怎样进入同一上下文",
+          "alternative": "交错多模态上下文：文字 token、图片表示、音频表示、视频帧表示与后续问题 token 按输入顺序组织，共同进入同一个 Transformer 上下文。"
+        },
+        "en": {
+          "chapter": "multimodal-models",
+          "heading": "How Inputs Enter One Context",
+          "alternative": "Interleaved multimodal representations enter one Transformer context"
+        }
+      }
     },
     {
       "chapter": "multimodal-models",
@@ -342,7 +972,22 @@
       "zh": "book/assets/zh/diagrams/multimodal-models/screenshot-input-paths.svg",
       "en": "book/assets/en/diagrams/multimodal-models/screenshot-input-paths.svg",
       "zh_source": "book/chapters/part2-llm-internal/multimodal-models.md",
-      "en_source": "book/translations/en/chapters/part2-llm-internal/multimodal-models.md"
+      "en_source": "book/translations/en/chapters/part2-llm-internal/multimodal-models.md",
+      "id": "multimodal-models-03",
+      "zh_id": "zh-diagrams-multimodal-models-screenshot-input-paths-svg",
+      "en_id": "en-diagrams-multimodal-models-screenshot-input-paths-svg",
+      "semantics": {
+        "zh": {
+          "chapter": "multimodal-models",
+          "heading": "监控截图的两条输入路径",
+          "alternative": "截图输入路径对比：可先经 OCR 或图像描述转成文本再交给文本 LLM，也可转成视觉表示并与用户问题的文本表示在多模态计算中融合；两条路径各有信息边界。"
+        },
+        "en": {
+          "chapter": "multimodal-models",
+          "heading": "Two Input Paths for a Monitoring Screenshot",
+          "alternative": "A screenshot can enter through a text route or a visual route"
+        }
+      }
     },
     {
       "chapter": "multimodal-models",
@@ -350,7 +995,22 @@
       "zh": "book/assets/zh/diagrams/multimodal-models/visual-question-answering.svg",
       "en": "book/assets/en/diagrams/multimodal-models/visual-question-answering.svg",
       "zh_source": "book/chapters/part2-llm-internal/multimodal-models.md",
-      "en_source": "book/translations/en/chapters/part2-llm-internal/multimodal-models.md"
+      "en_source": "book/translations/en/chapters/part2-llm-internal/multimodal-models.md",
+      "id": "multimodal-models-04",
+      "zh_id": "zh-diagrams-multimodal-models-visual-question-answering-svg",
+      "en_id": "en-diagrams-multimodal-models-visual-question-answering-svg",
+      "semantics": {
+        "zh": {
+          "chapter": "multimodal-models",
+          "heading": "一张截图怎样变成文字回答",
+          "alternative": "视觉问答融合：截图经图块与视觉编码器形成视觉表示，用户问题形成文本表示；二者共同进入 Transformer 后生成文字回答。"
+        },
+        "en": {
+          "chapter": "multimodal-models",
+          "heading": "How One Screenshot Becomes a Text Answer",
+          "alternative": "Visual question answering combines image and question representations"
+        }
+      }
     },
     {
       "chapter": "multimodal-models",
@@ -358,7 +1018,22 @@
       "zh": "book/assets/zh/diagrams/multimodal-models/cross-modal-training-signals.svg",
       "en": "book/assets/en/diagrams/multimodal-models/cross-modal-training-signals.svg",
       "zh_source": "book/chapters/part2-llm-internal/multimodal-models.md",
-      "en_source": "book/translations/en/chapters/part2-llm-internal/multimodal-models.md"
+      "en_source": "book/translations/en/chapters/part2-llm-internal/multimodal-models.md",
+      "id": "multimodal-models-05",
+      "zh_id": "zh-diagrams-multimodal-models-cross-modal-training-signals-svg",
+      "en_id": "en-diagrams-multimodal-models-cross-modal-training-signals-svg",
+      "semantics": {
+        "zh": {
+          "chapter": "multimodal-models",
+          "heading": "训练怎样形成跨模态能力",
+          "alternative": "跨模态训练信号：配对或交错资料先学习内容、位置和时间对应；条件生成学习怎样利用输入线索；指令、偏好、验证和安全信号再塑造面向用户任务的行为。"
+        },
+        "en": {
+          "chapter": "multimodal-models",
+          "heading": "How Training Forms Cross-Modal Capability",
+          "alternative": "Multimodal training signals progress from paired material to aligned task behavior"
+        }
+      }
     },
     {
       "chapter": "optimizer-selection",
@@ -366,7 +1041,22 @@
       "zh": "book/assets/zh/diagrams/optimizer-selection/sgd-ravine.svg",
       "en": "book/assets/en/diagrams/optimizer-selection/optimization-geometry.svg",
       "zh_source": "book/chapters/part2-llm-internal/optimizer-selection.md",
-      "en_source": "book/translations/en/chapters/part2-llm-internal/optimizer-selection.md"
+      "en_source": "book/translations/en/chapters/part2-llm-internal/optimizer-selection.md",
+      "id": "optimizer-selection-01",
+      "zh_id": "zh-diagrams-optimizer-selection-sgd-ravine-svg",
+      "en_id": "en-diagrams-optimizer-selection-optimization-geometry-svg",
+      "semantics": {
+        "zh": {
+          "chapter": "optimizer-selection",
+          "heading": "2.2 SGD 的结构性缺陷",
+          "alternative": "SGD 峡谷震荡：损失等高线的横向方向陡峭、纵向方向平缓；统一步长使 SGD 横向反复越过谷底，同时才缓慢沿目标方向推进。"
+        },
+        "en": {
+          "chapter": "optimizer-selection",
+          "heading": "2.2 SGD's Structural Limitation",
+          "alternative": "Global-scale SGD zigzags across a narrow loss valley"
+        }
+      }
     },
     {
       "chapter": "optimizer-selection",
@@ -374,7 +1064,22 @@
       "zh": "book/assets/zh/diagrams/optimizer-selection/warmup-schedule.svg",
       "en": "book/assets/en/diagrams/optimizer-selection/warmup-schedule.svg",
       "zh_source": "book/chapters/part2-llm-internal/optimizer-selection.md",
-      "en_source": "book/translations/en/chapters/part2-llm-internal/optimizer-selection.md"
+      "en_source": "book/translations/en/chapters/part2-llm-internal/optimizer-selection.md",
+      "id": "optimizer-selection-02",
+      "zh_id": "zh-diagrams-optimizer-selection-warmup-schedule-svg",
+      "en_id": "en-diagrams-optimizer-selection-warmup-schedule-svg",
+      "semantics": {
+        "zh": {
+          "chapter": "optimizer-selection",
+          "heading": "6.2 Warmup 的策略",
+          "alternative": "Warmup 学习率：训练初期从接近零逐步升至目标学习率，限制不稳定梯度统计下的更新幅度。"
+        },
+        "en": {
+          "chapter": "optimizer-selection",
+          "heading": "6.2 The Warmup Strategy",
+          "alternative": "A warmup schedule raises learning rate gradually before the main schedule"
+        }
+      }
     },
     {
       "chapter": "optimizer-selection",
@@ -382,7 +1087,22 @@
       "zh": "book/assets/zh/diagrams/optimizer-selection/optimizer-evolution.svg",
       "en": "book/assets/en/diagrams/optimizer-selection/optimizer-progression.svg",
       "zh_source": "book/chapters/part2-llm-internal/optimizer-selection.md",
-      "en_source": "book/translations/en/chapters/part2-llm-internal/optimizer-selection.md"
+      "en_source": "book/translations/en/chapters/part2-llm-internal/optimizer-selection.md",
+      "id": "optimizer-selection-03",
+      "zh_id": "zh-diagrams-optimizer-selection-optimizer-evolution-svg",
+      "en_id": "en-diagrams-optimizer-selection-optimizer-progression-svg",
+      "semantics": {
+        "zh": {
+          "chapter": "optimizer-selection",
+          "heading": "从 SGD 到 AdamW 的演化逻辑",
+          "alternative": "优化器演化：SGD 的统一步长可能震荡；Momentum 平滑方向；Adam 实现参数级自适应；AdamW 解耦权重衰减；Warmup 保护训练初期。"
+        },
+        "en": {
+          "chapter": "optimizer-selection",
+          "heading": "The Evolutionary Logic from SGD to AdamW",
+          "alternative": "Optimizer progression from global scaling to adaptive updates and controlled startup"
+        }
+      }
     },
     {
       "chapter": "softmax-gradient-scaling",
@@ -390,7 +1110,22 @@
       "zh": "book/assets/zh/diagrams/softmax-gradient-scaling/saturation-comparison.svg",
       "en": "book/assets/en/diagrams/softmax-gradient-scaling/saturation-comparison.svg",
       "zh_source": "book/chapters/part2-llm-internal/softmax-gradient-scaling.md",
-      "en_source": "book/translations/en/chapters/part2-llm-internal/softmax-gradient-scaling.md"
+      "en_source": "book/translations/en/chapters/part2-llm-internal/softmax-gradient-scaling.md",
+      "id": "softmax-gradient-scaling-01",
+      "zh_id": "zh-diagrams-softmax-gradient-scaling-saturation-comparison-svg",
+      "en_id": "en-diagrams-softmax-gradient-scaling-saturation-comparison-svg",
+      "semantics": {
+        "zh": {
+          "chapter": "softmax-gradient-scaling",
+          "heading": "对比：适中尺度 vs 大尺度",
+          "alternative": "适中尺度下的 Softmax：logits [2, 1, 0, −1] 产生仍分散在四个位置的概率 [0.52, 0.28, 0.14, 0.06]。"
+        },
+        "en": {
+          "chapter": "softmax-gradient-scaling",
+          "heading": "Comparison: Moderate Scale vs. Large Scale",
+          "alternative": "Softmax at a moderate scale: logits [2, 1, 0, −1] produce probabilities [0.52, 0.28, 0.14, 0.06], which remain spread over four positions."
+        }
+      }
     },
     {
       "chapter": "softmax-gradient-scaling",
@@ -398,7 +1133,22 @@
       "zh": "book/assets/zh/diagrams/softmax-gradient-scaling/saturation-comparison.svg",
       "en": "book/assets/en/diagrams/softmax-gradient-scaling/saturation-comparison.svg",
       "zh_source": "book/chapters/part2-llm-internal/softmax-gradient-scaling.md",
-      "en_source": "book/translations/en/chapters/part2-llm-internal/softmax-gradient-scaling.md"
+      "en_source": "book/translations/en/chapters/part2-llm-internal/softmax-gradient-scaling.md",
+      "id": "softmax-gradient-scaling-02",
+      "zh_id": "zh-diagrams-softmax-gradient-scaling-saturation-comparison-svg",
+      "en_id": "en-diagrams-softmax-gradient-scaling-saturation-comparison-svg",
+      "semantics": {
+        "zh": {
+          "chapter": "softmax-gradient-scaling",
+          "heading": "对比：适中尺度 vs 大尺度",
+          "alternative": "大尺度下的 Softmax：logits [20, 10, 0, −10] 使概率几乎全部集中到第一个位置，形成饱和。"
+        },
+        "en": {
+          "chapter": "softmax-gradient-scaling",
+          "heading": "Comparison: Moderate Scale vs. Large Scale",
+          "alternative": "Softmax at a large scale: logits [20, 10, 0, −10] concentrate almost all probability at the first position, creating saturation."
+        }
+      }
     },
     {
       "chapter": "softmax-gradient-scaling",
@@ -406,7 +1156,22 @@
       "zh": "book/assets/zh/diagrams/softmax-gradient-scaling/gradient-path-comparison.svg",
       "en": "book/assets/en/diagrams/softmax-gradient-scaling/gradient-path-comparison.svg",
       "zh_source": "book/chapters/part2-llm-internal/softmax-gradient-scaling.md",
-      "en_source": "book/translations/en/chapters/part2-llm-internal/softmax-gradient-scaling.md"
+      "en_source": "book/translations/en/chapters/part2-llm-internal/softmax-gradient-scaling.md",
+      "id": "softmax-gradient-scaling-03",
+      "zh_id": "zh-diagrams-softmax-gradient-scaling-gradient-path-comparison-svg",
+      "en_id": "en-diagrams-softmax-gradient-scaling-gradient-path-comparison-svg",
+      "semantics": {
+        "zh": {
+          "chapter": "softmax-gradient-scaling",
+          "heading": "未饱和状态：梯度正常传播",
+          "alternative": "Softmax 反向传播对比：未饱和时 Jacobian 仍传递有效梯度到 logits 和 Q/K；饱和时 Jacobian 项接近零，梯度可能显著衰减。"
+        },
+        "en": {
+          "chapter": "softmax-gradient-scaling",
+          "heading": "Unsaturated State: Gradients Propagate Normally",
+          "alternative": "Softmax backpropagation comparison: before saturation the Jacobian still passes useful gradients to logits and Q/K; under saturation its terms approach zero and gradients can weaken substantially."
+        }
+      }
     },
     {
       "chapter": "softmax-gradient-scaling",
@@ -414,7 +1179,22 @@
       "zh": "book/assets/zh/diagrams/softmax-gradient-scaling/gradient-path-comparison.svg",
       "en": "book/assets/en/diagrams/softmax-gradient-scaling/gradient-path-comparison.svg",
       "zh_source": "book/chapters/part2-llm-internal/softmax-gradient-scaling.md",
-      "en_source": "book/translations/en/chapters/part2-llm-internal/softmax-gradient-scaling.md"
+      "en_source": "book/translations/en/chapters/part2-llm-internal/softmax-gradient-scaling.md",
+      "id": "softmax-gradient-scaling-04",
+      "zh_id": "zh-diagrams-softmax-gradient-scaling-gradient-path-comparison-svg",
+      "en_id": "en-diagrams-softmax-gradient-scaling-gradient-path-comparison-svg",
+      "semantics": {
+        "zh": {
+          "chapter": "softmax-gradient-scaling",
+          "heading": "饱和状态：梯度被截断",
+          "alternative": "Softmax 反向传播对比：未饱和时 Jacobian 仍传递有效梯度到 logits 和 Q/K；饱和时 Jacobian 项接近零，梯度可能显著衰减。"
+        },
+        "en": {
+          "chapter": "softmax-gradient-scaling",
+          "heading": "Saturated State: Gradients Are Cut Off",
+          "alternative": "Softmax backpropagation comparison: before saturation the Jacobian still passes useful gradients to logits and Q/K; under saturation its terms approach zero and gradients can weaken substantially."
+        }
+      }
     },
     {
       "chapter": "softmax-gradient-scaling",
@@ -422,7 +1202,22 @@
       "zh": "book/assets/zh/diagrams/softmax-gradient-scaling/scale-to-gradient-chain.svg",
       "en": "book/assets/en/diagrams/softmax-gradient-scaling/scale-to-gradient-chain.svg",
       "zh_source": "book/chapters/part2-llm-internal/softmax-gradient-scaling.md",
-      "en_source": "book/translations/en/chapters/part2-llm-internal/softmax-gradient-scaling.md"
+      "en_source": "book/translations/en/chapters/part2-llm-internal/softmax-gradient-scaling.md",
+      "id": "softmax-gradient-scaling-05",
+      "zh_id": "zh-diagrams-softmax-gradient-scaling-scale-to-gradient-chain-svg",
+      "en_id": "en-diagrams-softmax-gradient-scaling-scale-to-gradient-chain-svg",
+      "semantics": {
+        "zh": {
+          "chapter": "softmax-gradient-scaling",
+          "heading": "从点积到梯度变小的因果链",
+          "alternative": "缩放点积的因果链：高维点积典型尺度随 √d_k 增长，较大 Softmax 输入会使输出趋近 one-hot、Jacobian 梯度项变小，削弱向 Q 和 K 的梯度；除以 √d_k 用于控制这一风险。"
+        },
+        "en": {
+          "chapter": "softmax-gradient-scaling",
+          "heading": "The Causal Chain from Dot Product to Smaller Gradients",
+          "alternative": "Causal chain for scaled dot products: a high-dimensional dot product has a typical scale that grows with √d_k; larger Softmax inputs make output near one-hot and Jacobian terms small, weakening gradients to Q and K; dividing by √d_k controls this risk."
+        }
+      }
     },
     {
       "chapter": "transformer-architecture",
@@ -430,7 +1225,22 @@
       "zh": "book/assets/zh/diagrams/transformer-architecture/original-encoder-decoder.svg",
       "en": "book/assets/en/diagrams/transformer-architecture/original-encoder-decoder.svg",
       "zh_source": "book/chapters/part2-llm-internal/transformer-architecture.md",
-      "en_source": "book/translations/en/chapters/part2-llm-internal/transformer-architecture.md"
+      "en_source": "book/translations/en/chapters/part2-llm-internal/transformer-architecture.md",
+      "id": "transformer-architecture-01",
+      "zh_id": "zh-diagrams-transformer-architecture-original-encoder-decoder-svg",
+      "en_id": "en-diagrams-transformer-architecture-original-encoder-decoder-svg",
+      "semantics": {
+        "zh": {
+          "chapter": "transformer-architecture",
+          "heading": "整体架构概览",
+          "alternative": "原始 Transformer 的 Encoder–Decoder、Post-LN 架构：Encoder 与 Decoder 分别堆叠注意力、残差与归一化模块；Decoder 通过 Masked Self-Attention 和 Cross-Attention 生成输出。"
+        },
+        "en": {
+          "chapter": "transformer-architecture",
+          "heading": "Overall architecture overview",
+          "alternative": "Original Transformer encoder-decoder architecture: encoder and decoder stack attention, residual, and normalization modules; the decoder uses masked self-attention and cross-attention to generate output."
+        }
+      }
     },
     {
       "chapter": "transformer-architecture",
@@ -438,7 +1248,22 @@
       "zh": "book/assets/zh/diagrams/transformer-architecture/transformer-stack.svg",
       "en": "book/assets/en/diagrams/transformer-architecture/layer-data-flow.svg",
       "zh_source": "book/chapters/part2-llm-internal/transformer-architecture.md",
-      "en_source": "book/translations/en/chapters/part2-llm-internal/transformer-architecture.md"
+      "en_source": "book/translations/en/chapters/part2-llm-internal/transformer-architecture.md",
+      "id": "transformer-architecture-02",
+      "zh_id": "zh-diagrams-transformer-architecture-transformer-stack-svg",
+      "en_id": "en-diagrams-transformer-architecture-layer-data-flow-svg",
+      "semantics": {
+        "zh": {
+          "chapter": "transformer-architecture",
+          "heading": "整体架构概览",
+          "alternative": "Transformer 数据流：输入经 Token Embedding 与位置机制，穿过重复的 Attention、残差归一化、FFN、残差归一化 Block，最后由 LM Head 映射到词表。"
+        },
+        "en": {
+          "chapter": "transformer-architecture",
+          "heading": "Overall architecture overview",
+          "alternative": "Transformer data flow: input passes through token embedding and a positional mechanism, repeated attention, residual-and-normalization, FFN, and residual-and-normalization blocks, then an LM head maps it to vocabulary scores."
+        }
+      }
     },
     {
       "chapter": "transformer-architecture",
@@ -446,7 +1271,22 @@
       "zh": "book/assets/zh/diagrams/transformer-architecture/scaled-dot-product-attention.svg",
       "en": "book/assets/en/diagrams/transformer-architecture/scaled-dot-product-attention.svg",
       "zh_source": "book/chapters/part2-llm-internal/transformer-architecture.md",
-      "en_source": "book/translations/en/chapters/part2-llm-internal/transformer-architecture.md"
+      "en_source": "book/translations/en/chapters/part2-llm-internal/transformer-architecture.md",
+      "id": "transformer-architecture-03",
+      "zh_id": "zh-diagrams-transformer-architecture-scaled-dot-product-attention-svg",
+      "en_id": "en-diagrams-transformer-architecture-scaled-dot-product-attention-svg",
+      "semantics": {
+        "zh": {
+          "chapter": "transformer-architecture",
+          "heading": "Attention：可学习的信息路由",
+          "alternative": "图：Scaled Dot Product Attention"
+        },
+        "en": {
+          "chapter": "transformer-architecture",
+          "heading": "Attention: Learnable information routing",
+          "alternative": "Scaled dot-product attention."
+        }
+      }
     },
     {
       "chapter": "transformer-architecture",
@@ -454,7 +1294,22 @@
       "zh": "book/assets/zh/diagrams/transformer-architecture/multi-head-attention.svg",
       "en": "book/assets/en/diagrams/transformer-architecture/multi-head-attention.svg",
       "zh_source": "book/chapters/part2-llm-internal/transformer-architecture.md",
-      "en_source": "book/translations/en/chapters/part2-llm-internal/transformer-architecture.md"
+      "en_source": "book/translations/en/chapters/part2-llm-internal/transformer-architecture.md",
+      "id": "transformer-architecture-04",
+      "zh_id": "zh-diagrams-transformer-architecture-multi-head-attention-svg",
+      "en_id": "en-diagrams-transformer-architecture-multi-head-attention-svg",
+      "semantics": {
+        "zh": {
+          "chapter": "transformer-architecture",
+          "heading": "Multi-Head：并行的关系子空间",
+          "alternative": "图：Multi Head Attention"
+        },
+        "en": {
+          "chapter": "transformer-architecture",
+          "heading": "Multi-Head: Parallel relational subspace",
+          "alternative": "Multi-head attention."
+        }
+      }
     },
     {
       "chapter": "transformer-architecture",
@@ -462,7 +1317,22 @@
       "zh": "book/assets/zh/diagrams/transformer-architecture/moe-routing.svg",
       "en": "book/assets/en/diagrams/transformer-architecture/moe-routing.svg",
       "zh_source": "book/chapters/part2-llm-internal/transformer-architecture.md",
-      "en_source": "book/translations/en/chapters/part2-llm-internal/transformer-architecture.md"
+      "en_source": "book/translations/en/chapters/part2-llm-internal/transformer-architecture.md",
+      "id": "transformer-architecture-05",
+      "zh_id": "zh-diagrams-transformer-architecture-moe-routing-svg",
+      "en_id": "en-diagrams-transformer-architecture-moe-routing-svg",
+      "semantics": {
+        "zh": {
+          "chapter": "transformer-architecture",
+          "heading": "MoE：把稠密 FFN 改为稀疏计算",
+          "alternative": "MoE 路由：token 表示由路由器选择少数 FFN 专家，专家输出加权合并；这是模型单层内的 token 级计算。"
+        },
+        "en": {
+          "chapter": "transformer-architecture",
+          "heading": "MoE: Replacing a Dense FFN with Sparse Computation",
+          "alternative": "MoE routing: a router selects a small number of FFN experts for a token representation and combines their weighted outputs; this is token-level computation inside one model layer."
+        }
+      }
     },
     {
       "chapter": "transformer-architecture",
@@ -470,7 +1340,22 @@
       "zh": "book/assets/zh/diagrams/transformer-architecture/encoder-decoder-flow.svg",
       "en": "book/assets/en/diagrams/transformer-architecture/encoder-decoder-flow.svg",
       "zh_source": "book/chapters/part2-llm-internal/transformer-architecture.md",
-      "en_source": "book/translations/en/chapters/part2-llm-internal/transformer-architecture.md"
+      "en_source": "book/translations/en/chapters/part2-llm-internal/transformer-architecture.md",
+      "id": "transformer-architecture-06",
+      "zh_id": "zh-diagrams-transformer-architecture-encoder-decoder-flow-svg",
+      "en_id": "en-diagrams-transformer-architecture-encoder-decoder-flow-svg",
+      "semantics": {
+        "zh": {
+          "chapter": "transformer-architecture",
+          "heading": "Encoder vs Decoder",
+          "alternative": "Encoder–Decoder 数据流：源序列经 Encoder 形成编码表示；目标前缀经因果 Self-Attention 后，通过 Cross-Attention 读取编码表示，再经 FFN 和 LM Head 预测下一个 token。"
+        },
+        "en": {
+          "chapter": "transformer-architecture",
+          "heading": "Encoder vs Decoder",
+          "alternative": "Encoder-decoder data flow: the source sequence forms encoded representations; after causal self-attention, the target prefix reads those representations through cross-attention, then uses an FFN and LM head to predict the next token."
+        }
+      }
     },
     {
       "chapter": "agent-eval-business-quality-system",
@@ -478,7 +1363,22 @@
       "zh": "book/assets/zh/diagrams/agent-eval-business-quality-system/eval-comparison.svg",
       "en": "book/assets/en/diagrams/agent-eval-business-quality-system/eval-comparison.svg",
       "zh_source": "book/chapters/part3-llm-external/agent-eval-business-quality-system.md",
-      "en_source": "book/translations/en/chapters/part3-llm-external/agent-eval-business-quality-system.md"
+      "en_source": "book/translations/en/chapters/part3-llm-external/agent-eval-business-quality-system.md",
+      "id": "agent-eval-business-quality-system-01",
+      "zh_id": "zh-diagrams-agent-eval-business-quality-system-eval-comparison-svg",
+      "en_id": "en-diagrams-agent-eval-business-quality-system-eval-comparison-svg",
+      "semantics": {
+        "zh": {
+          "chapter": "agent-eval-business-quality-system",
+          "heading": "1. Eval 评估的不是裸模型，而是完整系统",
+          "alternative": "传统 LLM 评测与 Agent 评测的范围对比：前者从输入到回答再判断答案；后者覆盖任务、多轮推理、工具调用、外部状态、结果、trace 与评分。"
+        },
+        "en": {
+          "chapter": "agent-eval-business-quality-system",
+          "heading": "1. Eval Assesses a Complete System, Not a Bare Model",
+          "alternative": "Comparison of traditional LLM evaluation and agent evaluation: the former runs from input to answer and judges the answer; the latter covers task, multi-turn reasoning, tool calls, external state, outcome, trace, and grading."
+        }
+      }
     },
     {
       "chapter": "agent-eval-business-quality-system",
@@ -486,7 +1386,22 @@
       "zh": "book/assets/zh/posts/20260804-ai-agent-eval-business-quality-system/eval-iteration-loop.svg",
       "en": "book/assets/en/diagrams/agent-eval-business-quality-system/evaluation-regression-loop.svg",
       "zh_source": "book/chapters/part3-llm-external/agent-eval-business-quality-system.md",
-      "en_source": "book/translations/en/chapters/part3-llm-external/agent-eval-business-quality-system.md"
+      "en_source": "book/translations/en/chapters/part3-llm-external/agent-eval-business-quality-system.md",
+      "id": "agent-eval-business-quality-system-02",
+      "zh_id": "zh-posts-20260804-ai-agent-eval-business-quality-system-eval-iteration-loop-svg",
+      "en_id": "en-diagrams-agent-eval-business-quality-system-evaluation-regression-loop-svg",
+      "semantics": {
+        "zh": {
+          "chapter": "agent-eval-business-quality-system",
+          "heading": "7. 生产级工具设计应该 eval-driven",
+          "alternative": "从运行任务、读取 trace、归因失败、改进系统、更新 case 到回归验证的 eval 迭代闭环"
+        },
+        "en": {
+          "chapter": "agent-eval-business-quality-system",
+          "heading": "7. Production-Grade Tool Design Should Be Eval-Driven",
+          "alternative": "Eval iteration loop from running a task, reading a trace, attributing failure, improving the system, updating a case, and validating regression."
+        }
+      }
     },
     {
       "chapter": "agent-eval-business-quality-system",
@@ -494,7 +1409,22 @@
       "zh": "book/assets/zh/posts/20260804-ai-agent-eval-business-quality-system/business-quality-system.svg",
       "en": "book/assets/en/diagrams/agent-eval-business-quality-system/business-quality-system.svg",
       "zh_source": "book/chapters/part3-llm-external/agent-eval-business-quality-system.md",
-      "en_source": "book/translations/en/chapters/part3-llm-external/agent-eval-business-quality-system.md"
+      "en_source": "book/translations/en/chapters/part3-llm-external/agent-eval-business-quality-system.md",
+      "id": "agent-eval-business-quality-system-03",
+      "zh_id": "zh-posts-20260804-ai-agent-eval-business-quality-system-business-quality-system-svg",
+      "en_id": "en-diagrams-agent-eval-business-quality-system-business-quality-system-svg",
+      "semantics": {
+        "zh": {
+          "chapter": "agent-eval-business-quality-system",
+          "heading": "1. Eval 是传统质量体系的显性化",
+          "alternative": "AI eval 位于业务质量系统中，和自动化检查、人工复核、线上反馈、事故复盘共同工作"
+        },
+        "en": {
+          "chapter": "agent-eval-business-quality-system",
+          "heading": "1. Eval Makes Traditional Quality Systems Explicit",
+          "alternative": "AI eval sits in a business-quality system alongside automated checks, human review, production feedback, and incident retrospectives."
+        }
+      }
     },
     {
       "chapter": "agent-eval-business-quality-system",
@@ -502,7 +1432,22 @@
       "zh": "book/assets/zh/diagrams/agent-eval-business-quality-system/quality-layers.svg",
       "en": "book/assets/en/diagrams/agent-eval-business-quality-system/quality-layers.svg",
       "zh_source": "book/chapters/part3-llm-external/agent-eval-business-quality-system.md",
-      "en_source": "book/translations/en/chapters/part3-llm-external/agent-eval-business-quality-system.md"
+      "en_source": "book/translations/en/chapters/part3-llm-external/agent-eval-business-quality-system.md",
+      "id": "agent-eval-business-quality-system-04",
+      "zh_id": "zh-diagrams-agent-eval-business-quality-system-quality-layers-svg",
+      "en_id": "en-diagrams-agent-eval-business-quality-system-quality-layers-svg",
+      "semantics": {
+        "zh": {
+          "chapter": "agent-eval-business-quality-system",
+          "heading": "4. “自动化 + 人工确认”是成熟质量系统的基本结构",
+          "alternative": "业务质量系统按风险分层：高频低风险由自动化判断，高频中风险由自动化加抽检，低频高风险由人工确认；未知问题经人工处理后沉淀为规则与案例。"
+        },
+        "en": {
+          "chapter": "agent-eval-business-quality-system",
+          "heading": "4. “Automation Plus Human Confirmation” Is the Basic Structure of a Mature Quality System",
+          "alternative": "Business quality controls use automated checks for frequent low-risk cases, sampled review for intermediate risk, and human confirmation for infrequent high-risk work; new evidence becomes rules and cases."
+        }
+      }
     },
     {
       "chapter": "agent-eval-business-quality-system",
@@ -510,7 +1455,22 @@
       "zh": "book/assets/zh/diagrams/agent-eval-business-quality-system/case-to-regression.svg",
       "en": "book/assets/en/diagrams/agent-eval-business-quality-system/case-to-regression.svg",
       "zh_source": "book/chapters/part3-llm-external/agent-eval-business-quality-system.md",
-      "en_source": "book/translations/en/chapters/part3-llm-external/agent-eval-business-quality-system.md"
+      "en_source": "book/translations/en/chapters/part3-llm-external/agent-eval-business-quality-system.md",
+      "id": "agent-eval-business-quality-system-05",
+      "zh_id": "zh-diagrams-agent-eval-business-quality-system-case-to-regression-svg",
+      "en_id": "en-diagrams-agent-eval-business-quality-system-case-to-regression-svg",
+      "semantics": {
+        "zh": {
+          "chapter": "agent-eval-business-quality-system",
+          "heading": "5. 持续补规则是必然，但会产生 eval debt",
+          "alternative": "从个案归纳到回归套件：真实个案经失败模式、评估维度和可复用规则，进入回归套件；线上新证据继续校正规则与案例。"
+        },
+        "en": {
+          "chapter": "agent-eval-business-quality-system",
+          "heading": "5. Continually Adding Rules Is Inevitable, but Creates Eval Debt",
+          "alternative": "From individual cases to a regression suite: real cases pass through failure modes, evaluation dimensions, and reusable rules into the suite; new production evidence continues to correct rules and cases."
+        }
+      }
     },
     {
       "chapter": "function-calling-tool-use",
@@ -518,7 +1478,22 @@
       "zh": "book/assets/zh/diagrams/function-calling-tool-use/mcp-integration-layers.svg",
       "en": "book/assets/en/diagrams/function-calling-tool-use/mcp-integration-layers.svg",
       "zh_source": "book/chapters/part3-llm-external/function-calling-tool-use.md",
-      "en_source": "book/translations/en/chapters/part3-llm-external/function-calling-tool-use.md"
+      "en_source": "book/translations/en/chapters/part3-llm-external/function-calling-tool-use.md",
+      "id": "function-calling-tool-use-01",
+      "zh_id": "zh-diagrams-function-calling-tool-use-mcp-integration-layers-svg",
+      "en_id": "en-diagrams-function-calling-tool-use-mcp-integration-layers-svg",
+      "semantics": {
+        "zh": {
+          "chapter": "function-calling-tool-use",
+          "heading": "MCP 的技术定位",
+          "alternative": "MCP 分层：应用面向用户，MCP 标准化工具与上下文接入，Function Calling 负责模型侧结构化提议，基础模型提供生成能力；权限和业务语义仍在执行侧负责。"
+        },
+        "en": {
+          "chapter": "function-calling-tool-use",
+          "heading": "MCP's Technical Position",
+          "alternative": "Application, MCP, function-calling, and base-model layers have distinct responsibilities; MCP standardizes integration but does not supply application permissions."
+        }
+      }
     },
     {
       "chapter": "function-calling-tool-use",
@@ -526,7 +1501,22 @@
       "zh": "book/assets/zh/diagrams/function-calling-tool-use/mcp-reuse-comparison.svg",
       "en": "book/assets/en/diagrams/function-calling-tool-use/mcp-reuse-comparison.svg",
       "zh_source": "book/chapters/part3-llm-external/function-calling-tool-use.md",
-      "en_source": "book/translations/en/chapters/part3-llm-external/function-calling-tool-use.md"
+      "en_source": "book/translations/en/chapters/part3-llm-external/function-calling-tool-use.md",
+      "id": "function-calling-tool-use-02",
+      "zh_id": "zh-diagrams-function-calling-tool-use-mcp-reuse-comparison-svg",
+      "en_id": "en-diagrams-function-calling-tool-use-mcp-reuse-comparison-svg",
+      "semantics": {
+        "zh": {
+          "chapter": "function-calling-tool-use",
+          "heading": "从孤立能力到开放生态",
+          "alternative": "MCP 复用对比：没有共同接入契约时，各项目重复实现同类文件读取工具；使用 MCP 后，兼容项目可复用同一 filesystem MCP server，但仍需独立审查安全和质量。"
+        },
+        "en": {
+          "chapter": "function-calling-tool-use",
+          "heading": "From Isolated Capability to Open Ecosystem",
+          "alternative": "MCP reuse comparison: without a common integration contract, projects repeatedly implement similar file-reading tools; with MCP, compatible projects can reuse one filesystem MCP server, but safety and quality must still be reviewed independently."
+        }
+      }
     },
     {
       "chapter": "function-calling-tool-use",
@@ -534,7 +1524,22 @@
       "zh": "book/assets/zh/diagrams/function-calling-tool-use/product-to-model-stack.svg",
       "en": "book/assets/en/diagrams/function-calling-tool-use/product-to-model-stack.svg",
       "zh_source": "book/chapters/part3-llm-external/function-calling-tool-use.md",
-      "en_source": "book/translations/en/chapters/part3-llm-external/function-calling-tool-use.md"
+      "en_source": "book/translations/en/chapters/part3-llm-external/function-calling-tool-use.md",
+      "id": "function-calling-tool-use-03",
+      "zh_id": "zh-diagrams-function-calling-tool-use-product-to-model-stack-svg",
+      "en_id": "en-diagrams-function-calling-tool-use-product-to-model-stack-svg",
+      "semantics": {
+        "zh": {
+          "chapter": "function-calling-tool-use",
+          "heading": "要点回顾",
+          "alternative": "从产品到训练的层次：应用产品提供用户体验，MCP 负责工具与上下文接入，Function Calling 是结构化调用提议能力，模型训练是能力来源。"
+        },
+        "en": {
+          "chapter": "function-calling-tool-use",
+          "heading": "Key Takeaways",
+          "alternative": "Product-to-training layers: the application product supplies user experience, MCP handles tool and context integration, Function Calling is structured call-proposal capability, and model training is the source of that capability."
+        }
+      }
     },
     {
       "chapter": "harness-runtime-skills",
@@ -542,7 +1547,22 @@
       "zh": "book/assets/zh/diagrams/harness-runtime-skills/runtime-control-loop.svg",
       "en": "book/assets/en/diagrams/harness-runtime-skills/runtime-loop.svg",
       "zh_source": "book/chapters/part3-llm-external/harness-runtime-skills.md",
-      "en_source": "book/translations/en/chapters/part3-llm-external/harness-runtime-skills.md"
+      "en_source": "book/translations/en/chapters/part3-llm-external/harness-runtime-skills.md",
+      "id": "harness-runtime-skills-01",
+      "zh_id": "zh-diagrams-harness-runtime-skills-runtime-control-loop-svg",
+      "en_id": "en-diagrams-harness-runtime-skills-runtime-loop-svg",
+      "semantics": {
+        "zh": {
+          "chapter": "harness-runtime-skills",
+          "heading": "先决定是否真的需要 Agent 循环",
+          "alternative": "多轮任务闭环：任务与显式状态经 Harness 形成上下文，模型提出下一步；程序校验、授权和执行，观察外部结果并更新状态后继续或停止。"
+        },
+        "en": {
+          "chapter": "harness-runtime-skills",
+          "heading": "First Decide Whether an Agent Loop Is Needed",
+          "alternative": "Agent runtime control loop: task and state determine context; the model proposes a step; the program validates and executes it; observed results update state until continuation or stopping."
+        }
+      }
     },
     {
       "chapter": "harness-runtime-skills",
@@ -550,7 +1570,22 @@
       "zh": "book/assets/zh/diagrams/harness-runtime-skills/stable-path-layers.svg",
       "en": "book/assets/en/diagrams/harness-runtime-skills/stable-path-layers.svg",
       "zh_source": "book/chapters/part3-llm-external/harness-runtime-skills.md",
-      "en_source": "book/translations/en/chapters/part3-llm-external/harness-runtime-skills.md"
+      "en_source": "book/translations/en/chapters/part3-llm-external/harness-runtime-skills.md",
+      "id": "harness-runtime-skills-02",
+      "zh_id": "zh-diagrams-harness-runtime-skills-stable-path-layers-svg",
+      "en_id": "en-diagrams-harness-runtime-skills-stable-path-layers-svg",
+      "semantics": {
+        "zh": {
+          "chapter": "harness-runtime-skills",
+          "heading": "把变化交给模型，把稳定路径交给程序",
+          "alternative": "适应与保证分层：稳定目标和验收标准之下，模型选择可变策略；确定性程序执行已验证路径，外部业务状态决定成功、失败或继续。"
+        },
+        "en": {
+          "chapter": "harness-runtime-skills",
+          "heading": "Let the Model Adapt; Let Programs Carry Stable Paths",
+          "alternative": "Model strategy and deterministic execution layers: stable goals frame a model-selected strategy, programs run verified operations, and external state provides evidence for success, failure, or continuation."
+        }
+      }
     },
     {
       "chapter": "harness-runtime-skills",
@@ -558,7 +1593,22 @@
       "zh": "book/assets/zh/diagrams/harness-runtime-skills/skill-contents.svg",
       "en": "book/assets/en/diagrams/harness-runtime-skills/skill-contents.svg",
       "zh_source": "book/chapters/part3-llm-external/harness-runtime-skills.md",
-      "en_source": "book/translations/en/chapters/part3-llm-external/harness-runtime-skills.md"
+      "en_source": "book/translations/en/chapters/part3-llm-external/harness-runtime-skills.md",
+      "id": "harness-runtime-skills-03",
+      "zh_id": "zh-diagrams-harness-runtime-skills-skill-contents-svg",
+      "en_id": "en-diagrams-harness-runtime-skills-skill-contents-svg",
+      "semantics": {
+        "zh": {
+          "chapter": "harness-runtime-skills",
+          "heading": "Skill 是可按需使用的任务资产",
+          "alternative": "Skill 的组成：目标与停止条件、可用工具与约束、已验证步骤脚本和参考资料，以及验收、恢复与升级规则。"
+        },
+        "en": {
+          "chapter": "harness-runtime-skills",
+          "heading": "A Skill Is an On-demand Task Asset",
+          "alternative": "Contents of an on-demand skill: goals and stopping conditions, tools and constraints, verified steps and reference material, and acceptance, recovery, and escalation rules."
+        }
+      }
     },
     {
       "chapter": "harness-runtime-skills",
@@ -566,7 +1616,22 @@
       "zh": "book/assets/zh/diagrams/harness-runtime-skills/external-state-validation.svg",
       "en": "book/assets/en/diagrams/harness-runtime-skills/validation-layers.svg",
       "zh_source": "book/chapters/part3-llm-external/harness-runtime-skills.md",
-      "en_source": "book/translations/en/chapters/part3-llm-external/harness-runtime-skills.md"
+      "en_source": "book/translations/en/chapters/part3-llm-external/harness-runtime-skills.md",
+      "id": "harness-runtime-skills-04",
+      "zh_id": "zh-diagrams-harness-runtime-skills-external-state-validation-svg",
+      "en_id": "en-diagrams-harness-runtime-skills-validation-layers-svg",
+      "semantics": {
+        "zh": {
+          "chapter": "harness-runtime-skills",
+          "heading": "正确性来自外部终态与分层验证",
+          "alternative": "分层验证：模型提议先通过 schema 与策略检查，再由受控执行器调用外部系统，并根据外部终态验证和轨迹决定继续、停止或升级。"
+        },
+        "en": {
+          "chapter": "harness-runtime-skills",
+          "heading": "Correctness Comes from External Final State and Layered Checks",
+          "alternative": "Layered validation of a model proposal: schema and policy checks precede execution; external final state validates completion, and a trace records whether to continue, stop, or escalate."
+        }
+      }
     },
     {
       "chapter": "llm-external-interaction",
@@ -574,7 +1639,22 @@
       "zh": "book/assets/zh/diagrams/llm-external-interaction/model-to-world-loop.svg",
       "en": "book/assets/en/diagrams/llm-external-interaction/model-world-boundary.svg",
       "zh_source": "book/chapters/part3-llm-external/llm-external-interaction.md",
-      "en_source": "book/translations/en/chapters/part3-llm-external/llm-external-interaction.md"
+      "en_source": "book/translations/en/chapters/part3-llm-external/llm-external-interaction.md",
+      "id": "llm-external-interaction-01",
+      "zh_id": "zh-diagrams-llm-external-interaction-model-to-world-loop-svg",
+      "en_id": "en-diagrams-llm-external-interaction-model-world-boundary-svg",
+      "semantics": {
+        "zh": {
+          "chapter": "llm-external-interaction",
+          "heading": "LLM 怎样与外部世界交互：从生成到行动",
+          "alternative": "模型到外部世界：任务、规则、资料、历史和工具契约形成上下文；LLM 产生文字回答或结构化提议，只有程序校验、授权和执行后才会改变外部状态，结果进入下一轮。"
+        },
+        "en": {
+          "chapter": "llm-external-interaction",
+          "heading": "How LLMs Interact with the External World: From Generation to Action",
+          "alternative": "Boundary between model generation and external-world action: task material becomes context for LLM decoding; text can go to the user, while structured proposals pass through program validation and execution, and observed results become later context."
+        }
+      }
     },
     {
       "chapter": "llm-external-interaction",
@@ -582,7 +1662,22 @@
       "zh": "book/assets/zh/diagrams/llm-external-interaction/constrained-decoding.svg",
       "en": "book/assets/en/diagrams/llm-external-interaction/structured-output-validation.svg",
       "zh_source": "book/chapters/part3-llm-external/llm-external-interaction.md",
-      "en_source": "book/translations/en/chapters/part3-llm-external/llm-external-interaction.md"
+      "en_source": "book/translations/en/chapters/part3-llm-external/llm-external-interaction.md",
+      "id": "llm-external-interaction-02",
+      "zh_id": "zh-diagrams-llm-external-interaction-constrained-decoding-svg",
+      "en_id": "en-diagrams-llm-external-interaction-structured-output-validation-svg",
+      "semantics": {
+        "zh": {
+          "chapter": "llm-external-interaction",
+          "heading": "结构化输出：把生成的提议交给程序",
+          "alternative": "受约束解码：模型 logits 和当前语法或 Schema 状态生成合法 token 掩码，解码器再选择下一个 token。"
+        },
+        "en": {
+          "chapter": "llm-external-interaction",
+          "heading": "Structured Output: Handing a Generated Proposal to a Program",
+          "alternative": "Structured-output constraints and business validation: grammar or schema state masks invalid tokens during decoding; a parseable proposal still needs semantic, authorization, and execution-result checks."
+        }
+      }
     },
     {
       "chapter": "llm-external-interaction",
@@ -590,7 +1685,22 @@
       "zh": "book/assets/zh/diagrams/llm-external-interaction/validation-boundaries.svg",
       "en": "book/assets/en/diagrams/llm-external-interaction/validation-boundaries.svg",
       "zh_source": "book/chapters/part3-llm-external/llm-external-interaction.md",
-      "en_source": "book/translations/en/chapters/part3-llm-external/llm-external-interaction.md"
+      "en_source": "book/translations/en/chapters/part3-llm-external/llm-external-interaction.md",
+      "id": "llm-external-interaction-03",
+      "zh_id": "zh-diagrams-llm-external-interaction-validation-boundaries-svg",
+      "en_id": "en-diagrams-llm-external-interaction-validation-boundaries-svg",
+      "semantics": {
+        "zh": {
+          "chapter": "llm-external-interaction",
+          "heading": "结构化输出：把生成的提议交给程序",
+          "alternative": "执行前的四层判断：模型输出先检查语法与结构、语义与业务、授权与策略，最后确认下游执行和终态。"
+        },
+        "en": {
+          "chapter": "llm-external-interaction",
+          "heading": "Structured Output: Handing a Generated Proposal to a Program",
+          "alternative": "A model proposal must pass checks for syntax and structure, business meaning, authorization and policy, then execution and terminal result."
+        }
+      }
     },
     {
       "chapter": "llm-external-interaction",
@@ -598,7 +1708,22 @@
       "zh": "book/assets/zh/diagrams/llm-external-interaction/tool-calling-cycle.svg",
       "en": "book/assets/en/diagrams/llm-external-interaction/tool-calling-cycle.svg",
       "zh_source": "book/chapters/part3-llm-external/llm-external-interaction.md",
-      "en_source": "book/translations/en/chapters/part3-llm-external/llm-external-interaction.md"
+      "en_source": "book/translations/en/chapters/part3-llm-external/llm-external-interaction.md",
+      "id": "llm-external-interaction-04",
+      "zh_id": "zh-diagrams-llm-external-interaction-tool-calling-cycle-svg",
+      "en_id": "en-diagrams-llm-external-interaction-tool-calling-cycle-svg",
+      "semantics": {
+        "zh": {
+          "chapter": "llm-external-interaction",
+          "heading": "工具调用：模型提出请求，程序访问外部世界",
+          "alternative": "工具调用闭环：应用把问题和工具 Schema 提供给模型，模型提出调用；应用校验后以受认证身份访问库存服务，将实际结果回传模型，最后形成用户回答。"
+        },
+        "en": {
+          "chapter": "llm-external-interaction",
+          "heading": "Tool Calling: The Model Requests; a Program Reaches the World",
+          "alternative": "The application supplies the tool contract to the model, validates and performs an authenticated service call, then returns observed results for the user-facing answer."
+        }
+      }
     },
     {
       "chapter": "llm-external-interaction",
@@ -606,7 +1731,22 @@
       "zh": "book/assets/zh/diagrams/llm-external-interaction/agent-observe-act-loop.svg",
       "en": "book/assets/en/diagrams/llm-external-interaction/agent-feedback-loop.svg",
       "zh_source": "book/chapters/part3-llm-external/llm-external-interaction.md",
-      "en_source": "book/translations/en/chapters/part3-llm-external/llm-external-interaction.md"
+      "en_source": "book/translations/en/chapters/part3-llm-external/llm-external-interaction.md",
+      "id": "llm-external-interaction-05",
+      "zh_id": "zh-diagrams-llm-external-interaction-agent-observe-act-loop-svg",
+      "en_id": "en-diagrams-llm-external-interaction-agent-feedback-loop-svg",
+      "semantics": {
+        "zh": {
+          "chapter": "llm-external-interaction",
+          "heading": "多轮交互：固定工作流与 Agent 循环的分界",
+          "alternative": "Agent 观察—行动循环：任务与显式状态形成上下文，模型提出下一步，运行层校验并执行工具；结果、错误和环境观察更新状态后进入下一轮，满足停止条件时结束。"
+        },
+        "en": {
+          "chapter": "llm-external-interaction",
+          "heading": "Multi-turn Interaction: The Boundary Between Workflows and Agent Loops",
+          "alternative": "Observation-driven Agent feedback loop: task and state form context for a model proposal; validated tool results update state until a verified goal, inability, budget, or required approval stops the loop."
+        }
+      }
     },
     {
       "chapter": "mhs-mcp-domain-capability-protocol",
@@ -614,7 +1754,22 @@
       "zh": "book/assets/zh/posts/20260831-mhs-mcp-domain-capability-protocol/mhs-integration-pain.svg",
       "en": "book/assets/en/diagrams/mhs-mcp-domain-capability-protocol/mhs-integration-pain.svg",
       "zh_source": "book/chapters/part3-llm-external/mhs-mcp-domain-capability-protocol.md",
-      "en_source": "book/translations/en/chapters/part3-llm-external/mhs-mcp-domain-capability-protocol.md"
+      "en_source": "book/translations/en/chapters/part3-llm-external/mhs-mcp-domain-capability-protocol.md",
+      "id": "mhs-mcp-domain-capability-protocol-01",
+      "zh_id": "zh-posts-20260831-mhs-mcp-domain-capability-protocol-mhs-integration-pain-svg",
+      "en_id": "en-diagrams-mhs-mcp-domain-capability-protocol-mhs-integration-pain-svg",
+      "semantics": {
+        "zh": {
+          "chapter": "mhs-mcp-domain-capability-protocol",
+          "heading": "MHS 标准化的对象",
+          "alternative": "MHS 要解决的硬件集成问题：大量设备供应商、能力相似但接口不同、说明书和安全限制分散，导致人工适配成本高，Agent 还需要动态理解和组合"
+        },
+        "en": {
+          "chapter": "mhs-mcp-domain-capability-protocol",
+          "heading": "What MHS Standardizes",
+          "alternative": "MHS addresses a hardware-integration problem: many device vendors have similar capabilities but different interfaces, while manuals and safety limits are scattered. This creates high manual adaptation cost and requires agents to understand and combine devices dynamically."
+        }
+      }
     },
     {
       "chapter": "mhs-mcp-domain-capability-protocol",
@@ -622,7 +1777,22 @@
       "zh": "book/assets/zh/posts/20260831-mhs-mcp-domain-capability-protocol/mhs-driver-stack.svg",
       "en": "book/assets/en/diagrams/mhs-mcp-domain-capability-protocol/mhs-driver-stack.svg",
       "zh_source": "book/chapters/part3-llm-external/mhs-mcp-domain-capability-protocol.md",
-      "en_source": "book/translations/en/chapters/part3-llm-external/mhs-mcp-domain-capability-protocol.md"
+      "en_source": "book/translations/en/chapters/part3-llm-external/mhs-mcp-domain-capability-protocol.md",
+      "id": "mhs-mcp-domain-capability-protocol-02",
+      "zh_id": "zh-posts-20260831-mhs-mcp-domain-capability-protocol-mhs-driver-stack-svg",
+      "en_id": "en-diagrams-mhs-mcp-domain-capability-protocol-mhs-driver-stack-svg",
+      "semantics": {
+        "zh": {
+          "chapter": "mhs-mcp-domain-capability-protocol",
+          "heading": "MHS 标准化的对象",
+          "alternative": "MHS Driver 位于物理设备、厂商 SDK、标准设备表示和上层 Agent 或程序之间"
+        },
+        "en": {
+          "chapter": "mhs-mcp-domain-capability-protocol",
+          "heading": "What MHS Standardizes",
+          "alternative": "An MHS driver lies between vendor SDKs and physical devices below, and a standard device-capability model used by agents and applications above."
+        }
+      }
     },
     {
       "chapter": "mhs-mcp-domain-capability-protocol",
@@ -630,7 +1800,22 @@
       "zh": "book/assets/zh/posts/20260831-mhs-mcp-domain-capability-protocol/mhs-read-write.svg",
       "en": "book/assets/en/diagrams/mhs-mcp-domain-capability-protocol/mhs-read-write.svg",
       "zh_source": "book/chapters/part3-llm-external/mhs-mcp-domain-capability-protocol.md",
-      "en_source": "book/translations/en/chapters/part3-llm-external/mhs-mcp-domain-capability-protocol.md"
+      "en_source": "book/translations/en/chapters/part3-llm-external/mhs-mcp-domain-capability-protocol.md",
+      "id": "mhs-mcp-domain-capability-protocol-03",
+      "zh_id": "zh-posts-20260831-mhs-mcp-domain-capability-protocol-mhs-read-write-svg",
+      "en_id": "en-diagrams-mhs-mcp-domain-capability-protocol-mhs-read-write-svg",
+      "semantics": {
+        "zh": {
+          "chapter": "mhs-mcp-domain-capability-protocol",
+          "heading": "MHS 标准化的对象",
+          "alternative": "MHS Driver 的 read 和 write primitive：read 用于 get temperature，write 用于 set temperature"
+        },
+        "en": {
+          "chapter": "mhs-mcp-domain-capability-protocol",
+          "heading": "What MHS Standardizes",
+          "alternative": "MHS Driver read and write primitives: read gets temperature; write sets temperature."
+        }
+      }
     },
     {
       "chapter": "mhs-mcp-domain-capability-protocol",
@@ -638,7 +1823,22 @@
       "zh": "book/assets/zh/posts/20260831-mhs-mcp-domain-capability-protocol/hardware-capability-model.svg",
       "en": "book/assets/en/diagrams/mhs-mcp-domain-capability-protocol/hardware-capability-model.svg",
       "zh_source": "book/chapters/part3-llm-external/mhs-mcp-domain-capability-protocol.md",
-      "en_source": "book/translations/en/chapters/part3-llm-external/mhs-mcp-domain-capability-protocol.md"
+      "en_source": "book/translations/en/chapters/part3-llm-external/mhs-mcp-domain-capability-protocol.md",
+      "id": "mhs-mcp-domain-capability-protocol-04",
+      "zh_id": "zh-posts-20260831-mhs-mcp-domain-capability-protocol-hardware-capability-model-svg",
+      "en_id": "en-diagrams-mhs-mcp-domain-capability-protocol-hardware-capability-model-svg",
+      "semantics": {
+        "zh": {
+          "chapter": "mhs-mcp-domain-capability-protocol",
+          "heading": "MHS 标准化的对象",
+          "alternative": "不同机械臂厂商接口被抽象成统一 RobotArm 能力模型，包括 move、grasp、position、load、workspace 和 safety limits"
+        },
+        "en": {
+          "chapter": "mhs-mcp-domain-capability-protocol",
+          "heading": "What MHS Standardizes",
+          "alternative": "Vendor-specific robot-arm functions can be adapted to a shared model of state, operations, limits, units, confirmation, and recovery."
+        }
+      }
     },
     {
       "chapter": "mhs-mcp-domain-capability-protocol",
@@ -646,7 +1846,22 @@
       "zh": "book/assets/zh/posts/20260831-mhs-mcp-domain-capability-protocol/mcp-basic-shape.svg",
       "en": "book/assets/en/diagrams/mhs-mcp-domain-capability-protocol/mcp-basic-shape.svg",
       "zh_source": "book/chapters/part3-llm-external/mhs-mcp-domain-capability-protocol.md",
-      "en_source": "book/translations/en/chapters/part3-llm-external/mhs-mcp-domain-capability-protocol.md"
+      "en_source": "book/translations/en/chapters/part3-llm-external/mhs-mcp-domain-capability-protocol.md",
+      "id": "mhs-mcp-domain-capability-protocol-05",
+      "zh_id": "zh-posts-20260831-mhs-mcp-domain-capability-protocol-mcp-basic-shape-svg",
+      "en_id": "en-diagrams-mhs-mcp-domain-capability-protocol-mcp-basic-shape-svg",
+      "semantics": {
+        "zh": {
+          "chapter": "mhs-mcp-domain-capability-protocol",
+          "heading": "MCP 和 MHS 的分层关系",
+          "alternative": "MCP 的基本结构：MCP Client 通过 MCP Server 连接 Data、Tool 和 Workflow"
+        },
+        "en": {
+          "chapter": "mhs-mcp-domain-capability-protocol",
+          "heading": "MCP and MHS Sit at Different Layers",
+          "alternative": "An MCP client connects through an MCP server to prompts, resources, tools, and their backing data or workflows."
+        }
+      }
     },
     {
       "chapter": "mhs-mcp-domain-capability-protocol",
@@ -654,7 +1869,22 @@
       "zh": "book/assets/zh/posts/20260831-mhs-mcp-domain-capability-protocol/mcp-mhs-layering.svg",
       "en": "book/assets/en/diagrams/mhs-mcp-domain-capability-protocol/mcp-mhs-layering.svg",
       "zh_source": "book/chapters/part3-llm-external/mhs-mcp-domain-capability-protocol.md",
-      "en_source": "book/translations/en/chapters/part3-llm-external/mhs-mcp-domain-capability-protocol.md"
+      "en_source": "book/translations/en/chapters/part3-llm-external/mhs-mcp-domain-capability-protocol.md",
+      "id": "mhs-mcp-domain-capability-protocol-06",
+      "zh_id": "zh-posts-20260831-mhs-mcp-domain-capability-protocol-mcp-mhs-layering-svg",
+      "en_id": "en-diagrams-mhs-mcp-domain-capability-protocol-mcp-mhs-layering-svg",
+      "semantics": {
+        "zh": {
+          "chapter": "mhs-mcp-domain-capability-protocol",
+          "heading": "MCP 和 MHS 的分层关系",
+          "alternative": "MCP 与 MHS 的分层关系：AI Agent 通过 MCP、CLI、code files 或业务 API 访问 MHS，MHS 再通过 Driver 连接具体硬件"
+        },
+        "en": {
+          "chapter": "mhs-mcp-domain-capability-protocol",
+          "heading": "MCP and MHS Sit at Different Layers",
+          "alternative": "MCP and MHS layering: an AI agent accesses MHS through MCP, CLI, code files, or a business API; MHS then connects to concrete hardware through Drivers."
+        }
+      }
     },
     {
       "chapter": "mhs-mcp-domain-capability-protocol",
@@ -662,7 +1892,22 @@
       "zh": "book/assets/zh/posts/20260831-mhs-mcp-domain-capability-protocol/business-access-stack.svg",
       "en": "book/assets/en/diagrams/mhs-mcp-domain-capability-protocol/business-access-stack.svg",
       "zh_source": "book/chapters/part3-llm-external/mhs-mcp-domain-capability-protocol.md",
-      "en_source": "book/translations/en/chapters/part3-llm-external/mhs-mcp-domain-capability-protocol.md"
+      "en_source": "book/translations/en/chapters/part3-llm-external/mhs-mcp-domain-capability-protocol.md",
+      "id": "mhs-mcp-domain-capability-protocol-07",
+      "zh_id": "zh-posts-20260831-mhs-mcp-domain-capability-protocol-business-access-stack-svg",
+      "en_id": "en-diagrams-mhs-mcp-domain-capability-protocol-business-access-stack-svg",
+      "semantics": {
+        "zh": {
+          "chapter": "mhs-mcp-domain-capability-protocol",
+          "heading": "MHS 不替业务方设计工具",
+          "alternative": "业务目标通过业务方自己的 MCP Tools、CLI、code files 或 APIs 接入 MHS 标准设备表示，再连接不同厂商设备 Driver 和具体硬件"
+        },
+        "en": {
+          "chapter": "mhs-mcp-domain-capability-protocol",
+          "heading": "MHS Does Not Design a Business's Tools",
+          "alternative": "Business goals reach MHS-standard device representations through an organization's own MCP Tools, CLI, code files, or APIs, then connect through Drivers to different vendors' hardware."
+        }
+      }
     },
     {
       "chapter": "mhs-mcp-domain-capability-protocol",
@@ -670,7 +1915,22 @@
       "zh": "book/assets/zh/posts/20260831-mhs-mcp-domain-capability-protocol/domain-capability-layers.svg",
       "en": "book/assets/en/diagrams/mhs-mcp-domain-capability-protocol/domain-capability-layers.svg",
       "zh_source": "book/chapters/part3-llm-external/mhs-mcp-domain-capability-protocol.md",
-      "en_source": "book/translations/en/chapters/part3-llm-external/mhs-mcp-domain-capability-protocol.md"
+      "en_source": "book/translations/en/chapters/part3-llm-external/mhs-mcp-domain-capability-protocol.md",
+      "id": "mhs-mcp-domain-capability-protocol-08",
+      "zh_id": "zh-posts-20260831-mhs-mcp-domain-capability-protocol-domain-capability-layers-svg",
+      "en_id": "en-diagrams-mhs-mcp-domain-capability-protocol-domain-capability-layers-svg",
+      "semantics": {
+        "zh": {
+          "chapter": "mhs-mcp-domain-capability-protocol",
+          "heading": "从硬件能力到领域能力",
+          "alternative": "从现实世界业务领域到领域模型、能力模型、标准化 Adapter 或 Driver，再到软件、硬件、服务和人"
+        },
+        "en": {
+          "chapter": "mhs-mcp-domain-capability-protocol",
+          "heading": "From Hardware Capability to Domain Capability",
+          "alternative": "From real-world business domains to a domain model, capability model, and standardized Adapter or Driver, then to software, hardware, services, and people."
+        }
+      }
     },
     {
       "chapter": "mhs-mcp-domain-capability-protocol",
@@ -678,7 +1938,22 @@
       "zh": "book/assets/zh/posts/20260831-mhs-mcp-domain-capability-protocol/domain-examples.svg",
       "en": "book/assets/en/diagrams/mhs-mcp-domain-capability-protocol/domain-examples.svg",
       "zh_source": "book/chapters/part3-llm-external/mhs-mcp-domain-capability-protocol.md",
-      "en_source": "book/translations/en/chapters/part3-llm-external/mhs-mcp-domain-capability-protocol.md"
+      "en_source": "book/translations/en/chapters/part3-llm-external/mhs-mcp-domain-capability-protocol.md",
+      "id": "mhs-mcp-domain-capability-protocol-09",
+      "zh_id": "zh-posts-20260831-mhs-mcp-domain-capability-protocol-domain-examples-svg",
+      "en_id": "en-diagrams-mhs-mcp-domain-capability-protocol-domain-examples-svg",
+      "semantics": {
+        "zh": {
+          "chapter": "mhs-mcp-domain-capability-protocol",
+          "heading": "从硬件能力到领域能力",
+          "alternative": "支付、游戏平台服务和智能家居的领域能力模型类比，展示对象、能力、约束和异构实现"
+        },
+        "en": {
+          "chapter": "mhs-mcp-domain-capability-protocol",
+          "heading": "From Hardware Capability to Domain Capability",
+          "alternative": "Domain-capability analogies for payments, game-platform services, and smart homes, showing objects, capabilities, constraints, and heterogeneous implementations."
+        }
+      }
     },
     {
       "chapter": "rag-context-evidence",
@@ -686,7 +1961,22 @@
       "zh": "book/assets/zh/diagrams/rag-context-evidence/evidence-to-context.svg",
       "en": "book/assets/en/diagrams/rag-context-evidence/evidence-pipeline.svg",
       "zh_source": "book/chapters/part3-llm-external/rag-context-evidence.md",
-      "en_source": "book/translations/en/chapters/part3-llm-external/rag-context-evidence.md"
+      "en_source": "book/translations/en/chapters/part3-llm-external/rag-context-evidence.md",
+      "id": "rag-context-evidence-01",
+      "zh_id": "zh-diagrams-rag-context-evidence-evidence-to-context-svg",
+      "en_id": "en-diagrams-rag-context-evidence-evidence-pipeline-svg",
+      "semantics": {
+        "zh": {
+          "chapter": "rag-context-evidence",
+          "heading": "RAG 要补的不是参数，而是当前事实",
+          "alternative": "RAG 的证据链：问题经检索与查询选择少量带来源、版本和权限条件的外部证据，再进入当前上下文支持模型生成。"
+        },
+        "en": {
+          "chapter": "rag-context-evidence",
+          "heading": "RAG Supplies Current Facts, Not Missing Parameters",
+          "alternative": "RAG evidence chain: a question retrieves and queries a small set of external evidence with source, revision, and access conditions, then puts it in the current context to support generation."
+        }
+      }
     },
     {
       "chapter": "rag-context-evidence",
@@ -694,7 +1984,22 @@
       "zh": "book/assets/zh/diagrams/rag-context-evidence/rag-selection-pipeline.svg",
       "en": "book/assets/en/diagrams/rag-context-evidence/rag-selection-pipeline.svg",
       "zh_source": "book/chapters/part3-llm-external/rag-context-evidence.md",
-      "en_source": "book/translations/en/chapters/part3-llm-external/rag-context-evidence.md"
+      "en_source": "book/translations/en/chapters/part3-llm-external/rag-context-evidence.md",
+      "id": "rag-context-evidence-02",
+      "zh_id": "zh-diagrams-rag-context-evidence-rag-selection-pipeline-svg",
+      "en_id": "en-diagrams-rag-context-evidence-rag-selection-pipeline-svg",
+      "semantics": {
+        "zh": {
+          "chapter": "rag-context-evidence",
+          "heading": "从资料到上下文：每一步都在缩小候选范围",
+          "alternative": "RAG 选择链：资料经清理、版本化、切分、标注和索引后，按问题召回，再经权限、时间与业务条件过滤、重排去重，组装证据后生成并检查引用和终态。"
+        },
+        "en": {
+          "chapter": "rag-context-evidence",
+          "heading": "From Material to Context: Each Stage Narrows Candidates",
+          "alternative": "RAG narrows candidates from source material through preparation, access-aware retrieval, filtering, reranking, evidence assembly, generation, and terminal checks."
+        }
+      }
     },
     {
       "chapter": "inference-performance-capacity",
@@ -702,7 +2007,22 @@
       "zh": "book/assets/zh/diagrams/inference-performance-capacity/request-latency-timeline.svg",
       "en": "book/assets/en/diagrams/inference-performance-capacity/request-timeline.svg",
       "zh_source": "book/chapters/part4-serving-runtime/inference-performance-capacity.md",
-      "en_source": "book/translations/en/chapters/part4-serving-runtime/inference-performance-capacity.md"
+      "en_source": "book/translations/en/chapters/part4-serving-runtime/inference-performance-capacity.md",
+      "id": "inference-performance-capacity-01",
+      "zh_id": "zh-diagrams-inference-performance-capacity-request-latency-timeline-svg",
+      "en_id": "en-diagrams-inference-performance-capacity-request-timeline-svg",
+      "semantics": {
+        "zh": {
+          "chapter": "inference-performance-capacity",
+          "heading": "先把“快”拆开",
+          "alternative": "流式请求时间线：请求到达后排队、Prefill、输出首个 token、Decode，直至最后一个 token；TTFT 包含排队和 Prefill，TPOT 描述 Decode 的输出间隔。"
+        },
+        "en": {
+          "chapter": "inference-performance-capacity",
+          "heading": "Separate the meanings of “fast”",
+          "alternative": "Streaming request latency timeline: a request moves through queueing and prefill to the first token, then decode to the final token; queue time, TTFT, and output pace are distinct."
+        }
+      }
     },
     {
       "chapter": "inference-performance-capacity",
@@ -710,7 +2030,22 @@
       "zh": "book/assets/zh/diagrams/inference-performance-capacity/kv-and-prefix-reuse.svg",
       "en": "book/assets/en/diagrams/inference-performance-capacity/kv-prefix-reuse.svg",
       "zh_source": "book/chapters/part4-serving-runtime/inference-performance-capacity.md",
-      "en_source": "book/translations/en/chapters/part4-serving-runtime/inference-performance-capacity.md"
+      "en_source": "book/translations/en/chapters/part4-serving-runtime/inference-performance-capacity.md",
+      "id": "inference-performance-capacity-02",
+      "zh_id": "zh-diagrams-inference-performance-capacity-kv-and-prefix-reuse-svg",
+      "en_id": "en-diagrams-inference-performance-capacity-kv-prefix-reuse-svg",
+      "semantics": {
+        "zh": {
+          "chapter": "inference-performance-capacity",
+          "heading": "KV Cache：速度优化，也是容量约束",
+          "alternative": "K/V 状态复用：同一请求保留已处理 token 的 K/V 供下一步 Attention 复用；多个请求可在前缀相同时命中状态，跳过重复 Prefill。"
+        },
+        "en": {
+          "chapter": "inference-performance-capacity",
+          "heading": "KV Cache: a speed optimization and a capacity constraint",
+          "alternative": "KV cache and prefix-cache reuse: within one request stored K/V serves the next attention step; across requests an identical prefix can hit cached K/V and skip repeated prefill."
+        }
+      }
     },
     {
       "chapter": "inference-performance-capacity",
@@ -718,7 +2053,22 @@
       "zh": "book/assets/zh/diagrams/inference-performance-capacity/chunked-prefill.svg",
       "en": "book/assets/en/diagrams/inference-performance-capacity/chunked-prefill.svg",
       "zh_source": "book/chapters/part4-serving-runtime/inference-performance-capacity.md",
-      "en_source": "book/translations/en/chapters/part4-serving-runtime/inference-performance-capacity.md"
+      "en_source": "book/translations/en/chapters/part4-serving-runtime/inference-performance-capacity.md",
+      "id": "inference-performance-capacity-03",
+      "zh_id": "zh-diagrams-inference-performance-capacity-chunked-prefill-svg",
+      "en_id": "en-diagrams-inference-performance-capacity-chunked-prefill-svg",
+      "semantics": {
+        "zh": {
+          "chapter": "inference-performance-capacity",
+          "heading": "长 Prefill 为什么会让“正在回答”的请求卡住",
+          "alternative": "完整长 Prefill 与分块交错：不分块会让已有 Decode 长时间等待；分块将 Prefill 穿插在 Decode 之间，降低单次输出停顿。"
+        },
+        "en": {
+          "chapter": "inference-performance-capacity",
+          "heading": "Why Long Prefill Can Freeze Requests That Are Already Answering",
+          "alternative": "A single long prefill can pause decode output; chunked prefill alternates bounded input work with decode to reduce the longest pause."
+        }
+      }
     },
     {
       "chapter": "inference-performance-capacity",
@@ -726,7 +2076,22 @@
       "zh": "book/assets/zh/diagrams/inference-performance-capacity/prefill-decode-disaggregation.svg",
       "en": "book/assets/en/diagrams/inference-performance-capacity/prefill-decode-disaggregation.svg",
       "zh_source": "book/chapters/part4-serving-runtime/inference-performance-capacity.md",
-      "en_source": "book/translations/en/chapters/part4-serving-runtime/inference-performance-capacity.md"
+      "en_source": "book/translations/en/chapters/part4-serving-runtime/inference-performance-capacity.md",
+      "id": "inference-performance-capacity-04",
+      "zh_id": "zh-diagrams-inference-performance-capacity-prefill-decode-disaggregation-svg",
+      "en_id": "en-diagrams-inference-performance-capacity-prefill-decode-disaggregation-svg",
+      "semantics": {
+        "zh": {
+          "chapter": "inference-performance-capacity",
+          "heading": "何时值得拆开 Prefill 与 Decode",
+          "alternative": "Prefill/Decode 分离：长上下文请求在 Prefill 池处理输入，交接 K/V 状态给 Decode 池，再流式输出。"
+        },
+        "en": {
+          "chapter": "inference-performance-capacity",
+          "heading": "When to separate Prefill from Decode",
+          "alternative": "Prefill/decode disaggregation: a long-context request is processed in a prefill pool, hands K/V state to a decode pool, and then streams output."
+        }
+      }
     },
     {
       "chapter": "inference-performance-capacity",
@@ -734,7 +2099,22 @@
       "zh": "book/assets/zh/diagrams/inference-performance-capacity/speculative-decoding.svg",
       "en": "book/assets/en/diagrams/inference-performance-capacity/speculative-decoding.svg",
       "zh_source": "book/chapters/part4-serving-runtime/inference-performance-capacity.md",
-      "en_source": "book/translations/en/chapters/part4-serving-runtime/inference-performance-capacity.md"
+      "en_source": "book/translations/en/chapters/part4-serving-runtime/inference-performance-capacity.md",
+      "id": "inference-performance-capacity-05",
+      "zh_id": "zh-diagrams-inference-performance-capacity-speculative-decoding-svg",
+      "en_id": "en-diagrams-inference-performance-capacity-speculative-decoding-svg",
+      "semantics": {
+        "zh": {
+          "chapter": "inference-performance-capacity",
+          "heading": "推测解码：用并行提议减少串行步骤",
+          "alternative": "推测解码：草稿提出 a、b、c、d；目标模型验证前三个一致、第四个不一致，接受 a、b、c 后继续决定后续 token。"
+        },
+        "en": {
+          "chapter": "inference-performance-capacity",
+          "heading": "Speculative Decoding: Parallel Proposals to Reduce Serial Steps",
+          "alternative": "Speculative decoding: a draft proposes a, b, c and d; target validation accepts the matching prefix a, b and c, rejects d, and determines subsequent tokens."
+        }
+      }
     },
     {
       "chapter": "llm-infrastructure",
@@ -742,7 +2122,22 @@
       "zh": "book/assets/zh/diagrams/llm-infrastructure/request-serving-stack.svg",
       "en": "book/assets/en/diagrams/llm-infrastructure/request-serving-stack.svg",
       "zh_source": "book/chapters/part4-serving-runtime/llm-infrastructure.md",
-      "en_source": "book/translations/en/chapters/part4-serving-runtime/llm-infrastructure.md"
+      "en_source": "book/translations/en/chapters/part4-serving-runtime/llm-infrastructure.md",
+      "id": "llm-infrastructure-01",
+      "zh_id": "zh-diagrams-llm-infrastructure-request-serving-stack-svg",
+      "en_id": "en-diagrams-llm-infrastructure-request-serving-stack-svg",
+      "semantics": {
+        "zh": {
+          "chapter": "llm-infrastructure",
+          "heading": "LLM 基础设施：模型怎样成为可靠服务",
+          "alternative": "一次模型请求的服务链路：用户应用经网关与路由进入推理服务和设备计算，批处理调度与 KV Cache 支撑执行，结果以流式输出、指标、日志和计费等服务能力交付。"
+        },
+        "en": {
+          "chapter": "llm-infrastructure",
+          "heading": "LLM Infrastructure: How a Model Becomes a Reliable Service",
+          "alternative": "LLM request-serving stack: a request passes gateway and routing to an inference service and GPU/NPU computation; batching, scheduling, K/V state, observability, limits, and billing support delivery."
+        }
+      }
     },
     {
       "chapter": "llm-infrastructure",
@@ -750,7 +2145,22 @@
       "zh": "book/assets/zh/diagrams/llm-infrastructure/web-and-sharded-serving.svg",
       "en": "book/assets/en/diagrams/llm-infrastructure/web-vs-sharded.svg",
       "zh_source": "book/chapters/part4-serving-runtime/llm-infrastructure.md",
-      "en_source": "book/translations/en/chapters/part4-serving-runtime/llm-infrastructure.md"
+      "en_source": "book/translations/en/chapters/part4-serving-runtime/llm-infrastructure.md",
+      "id": "llm-infrastructure-02",
+      "zh_id": "zh-diagrams-llm-infrastructure-web-and-sharded-serving-svg",
+      "en_id": "en-diagrams-llm-infrastructure-web-vs-sharded-svg",
+      "semantics": {
+        "zh": {
+          "chapter": "llm-infrastructure",
+          "heading": "为什么它不像普通的负载均衡",
+          "alternative": "普通 Web 服务与分片 LLM 推理服务的对比：前者通常将请求分给完整应用实例；后者可能让多个 GPU 保存部分权重或状态，并在同一请求的关键路径协作。"
+        },
+        "en": {
+          "chapter": "llm-infrastructure",
+          "heading": "Why This Is Not Ordinary Load Balancing",
+          "alternative": "Typical web service versus sharded LLM serving: a web request normally reaches one complete application instance; a sharded model request can coordinate multiple GPUs that hold parts of weights or state."
+        }
+      }
     },
     {
       "chapter": "llm-infrastructure",
@@ -758,7 +2168,22 @@
       "zh": "book/assets/zh/diagrams/llm-infrastructure/model-runtime-hardware.svg",
       "en": "book/assets/en/diagrams/llm-infrastructure/model-runtime-hardware.svg",
       "zh_source": "book/chapters/part4-serving-runtime/llm-infrastructure.md",
-      "en_source": "book/translations/en/chapters/part4-serving-runtime/llm-infrastructure.md"
+      "en_source": "book/translations/en/chapters/part4-serving-runtime/llm-infrastructure.md",
+      "id": "llm-infrastructure-03",
+      "zh_id": "zh-diagrams-llm-infrastructure-model-runtime-hardware-svg",
+      "en_id": "en-diagrams-llm-infrastructure-model-runtime-hardware-svg",
+      "semantics": {
+        "zh": {
+          "chapter": "llm-infrastructure",
+          "heading": "一个 token 到底由谁负责？",
+          "alternative": "模型、推理引擎与硬件的职责边界：Transformer 定义计算图，推理引擎组织请求和状态，硬件与互联提供计算、存储和数据搬移。"
+        },
+        "en": {
+          "chapter": "llm-infrastructure",
+          "heading": "Who Is Responsible for One Token?",
+          "alternative": "The model defines computation and data dependencies, the inference engine manages request state and execution policy, and hardware supplies compute, memory, and data movement."
+        }
+      }
     },
     {
       "chapter": "llm-infrastructure",
@@ -766,7 +2191,22 @@
       "zh": "book/assets/zh/diagrams/llm-infrastructure/config-weights-engine.svg",
       "en": "book/assets/en/diagrams/llm-infrastructure/config-weights-engine.svg",
       "zh_source": "book/chapters/part4-serving-runtime/llm-infrastructure.md",
-      "en_source": "book/translations/en/chapters/part4-serving-runtime/llm-infrastructure.md"
+      "en_source": "book/translations/en/chapters/part4-serving-runtime/llm-infrastructure.md",
+      "id": "llm-infrastructure-04",
+      "zh_id": "zh-diagrams-llm-infrastructure-config-weights-engine-svg",
+      "en_id": "en-diagrams-llm-infrastructure-config-weights-engine-svg",
+      "semantics": {
+        "zh": {
+          "chapter": "llm-infrastructure",
+          "heading": "推理引擎并非完全脱离模型",
+          "alternative": "模型配置、权重与推理引擎：配置描述结构参数，权重保存参数数值，引擎以架构适配层和通用运行时构建并执行模型。"
+        },
+        "en": {
+          "chapter": "llm-infrastructure",
+          "heading": "An Inference Engine Is Not Fully Model-Agnostic",
+          "alternative": "Configuration describes architecture, weights hold learned tensors, and an inference engine uses architecture support plus a runtime to build and execute the model."
+        }
+      }
     },
     {
       "chapter": "llm-infrastructure",
@@ -774,7 +2214,22 @@
       "zh": "book/assets/zh/diagrams/llm-infrastructure/prefill-decode-state.svg",
       "en": "book/assets/en/diagrams/llm-infrastructure/prefill-decode-state.svg",
       "zh_source": "book/chapters/part4-serving-runtime/llm-infrastructure.md",
-      "en_source": "book/translations/en/chapters/part4-serving-runtime/llm-infrastructure.md"
+      "en_source": "book/translations/en/chapters/part4-serving-runtime/llm-infrastructure.md",
+      "id": "llm-infrastructure-05",
+      "zh_id": "zh-diagrams-llm-infrastructure-prefill-decode-state-svg",
+      "en_id": "en-diagrams-llm-infrastructure-prefill-decode-state-svg",
+      "semantics": {
+        "zh": {
+          "chapter": "llm-infrastructure",
+          "heading": "一次生成请求：Prefill、Decode 与状态",
+          "alternative": "Prefill 与 Decode：上下文 token 经 Prefill 并行处理并建立 K/V 状态；Decode 每次生成一个 token，追加状态后继续生成。"
+        },
+        "en": {
+          "chapter": "llm-infrastructure",
+          "heading": "One Generation Request: Prefill, Decode, and State",
+          "alternative": "Prefill and decode state transition: context tokens are processed in prefill to build K/V state; decode generates a token, appends state, and repeats."
+        }
+      }
     },
     {
       "chapter": "serving-control-plane",
@@ -782,7 +2237,22 @@
       "zh": "book/assets/zh/diagrams/serving-control-plane/data-and-control-plane.svg",
       "en": "book/assets/en/diagrams/serving-control-plane/data-control-plane.svg",
       "zh_source": "book/chapters/part4-serving-runtime/serving-control-plane.md",
-      "en_source": "book/translations/en/chapters/part4-serving-runtime/serving-control-plane.md"
+      "en_source": "book/translations/en/chapters/part4-serving-runtime/serving-control-plane.md",
+      "id": "serving-control-plane-01",
+      "zh_id": "zh-diagrams-serving-control-plane-data-and-control-plane-svg",
+      "en_id": "en-diagrams-serving-control-plane-data-control-plane-svg",
+      "semantics": {
+        "zh": {
+          "chapter": "serving-control-plane",
+          "heading": "数据面与控制面各做什么",
+          "alternative": "推理服务的数据面与控制面：数据面让请求经过网关、队列和推理引擎产生流式响应；控制面跨越这些节点负责选择、限额、扩缩容、发布和观测。"
+        },
+        "en": {
+          "chapter": "serving-control-plane",
+          "heading": "What data plane and control plane do",
+          "alternative": "Data plane and control plane in model serving: the data plane executes request tokenization, queueing, inference and streaming response; the control plane selects models and resources and manages limits, scaling, releases and observation."
+        }
+      }
     },
     {
       "chapter": "serving-control-plane",
@@ -790,7 +2260,22 @@
       "zh": "book/assets/zh/diagrams/serving-control-plane/model-scale-up.svg",
       "en": "book/assets/en/diagrams/serving-control-plane/scale-out.svg",
       "zh_source": "book/chapters/part4-serving-runtime/serving-control-plane.md",
-      "en_source": "book/translations/en/chapters/part4-serving-runtime/serving-control-plane.md"
+      "en_source": "book/translations/en/chapters/part4-serving-runtime/serving-control-plane.md",
+      "id": "serving-control-plane-02",
+      "zh_id": "zh-diagrams-serving-control-plane-model-scale-up-svg",
+      "en_id": "en-diagrams-serving-control-plane-scale-out-svg",
+      "semantics": {
+        "zh": {
+          "chapter": "serving-control-plane",
+          "heading": "扩缩容为什么比 Web 服务更慢",
+          "alternative": "模型服务扩容：负载上升后，经观察窗口确认、分配设备、加载并预热模型、健康检查，最后才接入流量。"
+        },
+        "en": {
+          "chapter": "serving-control-plane",
+          "heading": "Why scaling is slower than web-service scaling",
+          "alternative": "Model-serving scale-out: load increase is confirmed before a device is allocated, the model is loaded and warmed, health is checked, and the replica accepts traffic."
+        }
+      }
     },
     {
       "chapter": "serving-control-plane",
@@ -798,7 +2283,22 @@
       "zh": "book/assets/zh/diagrams/serving-control-plane/progressive-rollout.svg",
       "en": "book/assets/en/diagrams/serving-control-plane/progressive-rollout.svg",
       "zh_source": "book/chapters/part4-serving-runtime/serving-control-plane.md",
-      "en_source": "book/translations/en/chapters/part4-serving-runtime/serving-control-plane.md"
+      "en_source": "book/translations/en/chapters/part4-serving-runtime/serving-control-plane.md",
+      "id": "serving-control-plane-03",
+      "zh_id": "zh-diagrams-serving-control-plane-progressive-rollout-svg",
+      "en_id": "en-diagrams-serving-control-plane-progressive-rollout-svg",
+      "semantics": {
+        "zh": {
+          "chapter": "serving-control-plane",
+          "heading": "发布、回退与可复现行为",
+          "alternative": "渐进发布：候选配置先离线评测，再以小流量观察和扩大流量逐步发布；质量、错误、TTFT 或成本越界时回退。"
+        },
+        "en": {
+          "chapter": "serving-control-plane",
+          "heading": "Release, rollback, and reproducible behavior",
+          "alternative": "Progressive rollout with rollback: a candidate advances through offline evaluation, small traffic and wider traffic only while quality, errors, TTFT and cost stay within conditions; a breach rolls back."
+        }
+      }
     }
   ]
 }

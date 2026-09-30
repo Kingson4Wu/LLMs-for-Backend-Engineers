@@ -7,6 +7,8 @@ on:
       - 'learning/**'
       - 'web/**'
       - 'tools/book-kit/**'
+      - 'evals/**'
+      - 'tests/**'
       - '.github/workflows/deploy-docs.yml'
   workflow_dispatch:
 permissions:
@@ -19,6 +21,8 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
       - uses: actions/setup-node@v4
         with:
           node-version: '24'
@@ -29,10 +33,39 @@ jobs:
           python-version: '3.11'
       - name: Install portable publishing tools
         run: sudo apt-get update && sudo apt-get install -y pandoc librsvg2-bin fonts-noto-cjk epubcheck texlive-xetex texlive-lang-chinese texlive-latex-extra qpdf poppler-utils
+      - name: Determine changed files for evaluation coverage
+        id: changed-files
+        shell: bash
+        env:
+          BASE_SHA: ${{ github.event.before }}
+          HEAD_SHA: ${{ github.sha }}
+        run: |
+          changed_file_list="$RUNNER_TEMP/changed-files.txt"
+          merge_base=""
+          if [ -n "$BASE_SHA" ] && git cat-file -e "$BASE_SHA^{commit}" 2>/dev/null; then
+            merge_base="$(git merge-base "$BASE_SHA" "$HEAD_SHA" 2>/dev/null || true)"
+          fi
+          if [ -z "$merge_base" ]; then
+            merge_base="$(git rev-parse "$HEAD_SHA^" 2>/dev/null || true)"
+          fi
+          if [ -n "$merge_base" ]; then
+            git diff --name-only "$merge_base" "$HEAD_SHA" > "$changed_file_list"
+          else
+            : > "$changed_file_list"
+          fi
+      - name: Require evaluation coverage for changed high-risk chapters
+        shell: bash
+        run: |
+          args=()
+          while IFS= read -r file; do
+            [ -n "$file" ] && args+=(--changed-file "$file")
+          done < "$RUNNER_TEMP/changed-files.txt"
+          python3 tools/book-kit/validate_eval_coverage.py "${args[@]}"
       - name: Validate and build portable books
         run: |
           python3 -m unittest discover -s tests -v
           python3 tools/book-kit/validate_book.py --check-learning-index
+          python3 tools/book-kit/validate_evals.py
           python3 tools/book-kit/check_translations.py
           python3 tools/book-kit/validate_figures.py
           for locale in zh-Hans en; do
@@ -40,10 +73,28 @@ jobs:
             python3 tools/book-kit/build_print_html.py --locale "$locale"
             python3 tools/book-kit/export_markdown.py --locale "$locale"
             python3 tools/book-kit/export_epub.py --locale "$locale"
+            python3 tools/book-kit/audit_epub_accessibility.py --locale "$locale" --epub "book/exported/$locale/Understanding-LLMs.epub" --output "$RUNNER_TEMP/epub-accessibility-$locale.json"
             PDF_MAINFONT='Noto Serif CJK SC' PDF_CJK_MAINFONT='Noto Serif CJK SC' PDF_MONOFONT='Noto Sans Mono' python3 tools/book-kit/export_book_pdf.py --locale "$locale"
-            epubcheck "book/exported/$locale/Understanding-LLMs.epub"
-            python3 tools/book-kit/validate_publication_artifacts.py --locale "$locale"
+            epubcheck "book/exported/$locale/Understanding-LLMs.epub" > "$RUNNER_TEMP/epubcheck-$locale.txt" 2>&1
+            python3 tools/book-kit/validate_publication_artifacts.py --locale "$locale" --formats markdown,html,epub,pdf
           done
+      - uses: actions/upload-artifact@v4
+        if: always()
+        with:
+          name: pdf-formula-audits
+          path: book/_build/evaluations/*/pdf-formula-audit.json
+      - uses: actions/upload-artifact@v4
+        if: always()
+        with:
+          name: epubcheck-reports
+          path: ${{ runner.temp }}/epubcheck-*.txt
+          if-no-files-found: warn
+      - uses: actions/upload-artifact@v4
+        if: always()
+        with:
+          name: epub-accessibility-reports
+          path: ${{ runner.temp }}/epub-accessibility-*.json
+          if-no-files-found: warn
       - name: Build reading site
         working-directory: web
         run: npm ci && npm run check && npm test && npm run build && npm run check:deployment

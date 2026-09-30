@@ -12,7 +12,7 @@
 - [中文学习契约](https://kingson4wu.github.io/Understanding-LLMs/ai-learning/zh-Hans/contract.md)
 - [全书地图](https://kingson4wu.github.io/Understanding-LLMs/ai-learning/book-map.zh-Hans.md)
 
-简体中文是权威源内容；英文是严格对应的镜像。若无法下载或读取书稿，明确说明这一点并请用户上传同语言书稿，不要假装已经读取。
+简体中文与英文是严格对齐、同等发布的对应版本。若无法下载或读取书稿，明确说明这一点并请用户上传同语言书稿，不要假装已经读取。
 
 ## 教学协议
 

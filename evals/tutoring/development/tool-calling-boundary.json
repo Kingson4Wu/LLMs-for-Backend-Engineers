@@ -1,0 +1,11 @@
+{
+  "schema_version": 1,
+  "id": "tool-calling-boundary",
+  "artifact_requirements": {"locale": "zh-Hans", "complete_format": "markdown", "file": "Understanding-LLMs.md"},
+  "learner_task": "Distinguish a function-calling proposal from an executed tool action and explain why prompt formatting alone remains probabilistic.",
+  "source_locations": [{"chapter_id": "function-calling-tool-use", "title": "Function Calling 与工具调用：机制、区别与本质", "path": "chapters/part3-llm-external/function-calling-tool-use.md", "heading": "Function Calling 是结构化调用提议"}],
+  "required_labels": ["book_evidence", "inference", "external_verification"],
+  "comprehension_question": "Which component must still validate and execute a proposed tool call after the model emits it?",
+  "prohibited_claims": ["A function call emitted by a model has already executed the tool."],
+  "figure_format_limitations": "Do not invent API fields, arrows, or execution state that cannot be inspected in the supplied artifact."
+}

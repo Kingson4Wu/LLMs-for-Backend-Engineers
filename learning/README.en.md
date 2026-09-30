@@ -14,7 +14,7 @@ For an AI that can retrieve web material autonomously, give it the public [AI le
 
 ### Clone + Codex (best for figures, formulas, and source files)
 
-Start Codex from the repository root. It reads `AGENTS.md`; ask it to read this file, the [book map](BOOK_MAP.md), the [learning index](index.json), and the matching learning contract: [Chinese](LEARNING_CONTRACT.zh-Hans.md) / [English](LEARNING_CONTRACT.en.md). Chinese is the source edition; English is its mapped mirror.
+Start Codex from the repository root. It reads `AGENTS.md`; ask it to read this file, the [book map](BOOK_MAP.md), the [learning index](index.json), and the matching learning contract: [Chinese](LEARNING_CONTRACT.zh-Hans.md) / [English](LEARNING_CONTRACT.en.md). The Chinese and English editions are strictly aligned counterparts; read the edition chosen by the learner.
 
 ## Learner-owned work
 

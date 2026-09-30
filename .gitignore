@@ -54,3 +54,6 @@ web/review/
 
 # Learner-owned material; copy learning/WORKSPACE_TEMPLATE to start privately.
 learning/workspace/
+
+# Reviewer-owned tutoring holdouts are deliberately not public test data.
+evals/tutoring/holdout/*.json

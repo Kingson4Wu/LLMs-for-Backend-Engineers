@@ -1,0 +1,304 @@
+{
+  "cases": [
+    {
+      "id": "softmax-normalizes",
+      "chapter": "softmax",
+      "heading": "为什么每个输出介于零和一之间，且总和为一",
+      "anchor_text": "为什么所有概率之和为一",
+      "formula_anchor": "\\sum_{i=1}^K p_i = \\sum_i \\frac{e^{z_i}}{\\sum_j e^{z_j}} = \\frac{\\sum_i e^{z_i}}{\\sum_j e^{z_j}} = 1",
+      "formula_fingerprint": "60c97b7ff9d6fdf0b469a263101217dd2c25c7a12d3997c3ddf79d4eea709a30",
+      "evaluator": "softmax",
+      "inputs": {
+        "logits": [
+          0,
+          0
+        ]
+      },
+      "expected": [
+        0.5,
+        0.5
+      ],
+      "tolerance": 1E-12,
+      "domain": "finite logits",
+      "review": {
+        "reviewed_at": "2026-09-29",
+        "reviewer": "baseline curation",
+        "proposition": true,
+        "conditions_and_quantifiers": true,
+        "formula_symbols_and_units": true,
+        "figure_meaning": true,
+        "link_target": true,
+        "english_heading": "Softmax: How Scores Become Probabilities",
+        "english_anchor_text": "Softmax: How Scores Become Probabilities"
+      }
+    },
+    {
+      "id": "softmax-shift-invariance",
+      "chapter": "softmax",
+      "heading": "数值稳定的实现形式",
+      "anchor_text": "数学上结果完全相同",
+      "formula_anchor": "\\text{Softmax}(z_i) = \\frac{e^{z_i - \\max(z)}}{\\sum_{j=1}^K e^{z_j - \\max(z)}}",
+      "formula_fingerprint": "d5d7ace70b1af7aa641f59c125d2caafea55dc51f8b7c7beb68aeb69b44e9a36",
+      "evaluator": "softmax",
+      "inputs": {
+        "logits": [
+          7,
+          7
+        ]
+      },
+      "expected": [
+        0.5,
+        0.5
+      ],
+      "tolerance": 1E-12,
+      "domain": "finite logits; equal shifts preserve the distribution",
+      "review": {
+        "reviewed_at": "2026-09-29",
+        "reviewer": "baseline curation",
+        "proposition": true,
+        "conditions_and_quantifiers": true,
+        "formula_symbols_and_units": true,
+        "figure_meaning": true,
+        "link_target": true,
+        "english_heading": "Softmax: How Scores Become Probabilities",
+        "english_anchor_text": "Softmax: How Scores Become Probabilities"
+      }
+    },
+    {
+      "id": "softmax-stable-extremes",
+      "chapter": "softmax",
+      "heading": "数值稳定的实现形式",
+      "anchor_text": "当 $z_i$ 很大时（如 1000）",
+      "formula_anchor": "\\text{Softmax}(z_i) = \\frac{e^{z_i - \\max(z)}}{\\sum_{j=1}^K e^{z_j - \\max(z)}}",
+      "formula_fingerprint": "d5d7ace70b1af7aa641f59c125d2caafea55dc51f8b7c7beb68aeb69b44e9a36",
+      "evaluator": "softmax",
+      "inputs": {
+        "logits": [
+          1000,
+          999,
+          998
+        ]
+      },
+      "expected": [
+        0.6652409557748218,
+        0.24472847105479764,
+        0.09003057317038046
+      ],
+      "tolerance": 1E-12,
+      "domain": "finite logits evaluated after subtracting their maximum",
+      "review": {
+        "reviewed_at": "2026-09-29",
+        "reviewer": "baseline curation",
+        "proposition": true,
+        "conditions_and_quantifiers": true,
+        "formula_symbols_and_units": true,
+        "figure_meaning": true,
+        "link_target": true,
+        "english_heading": "Softmax: How Scores Become Probabilities",
+        "english_anchor_text": "Softmax: How Scores Become Probabilities"
+      }
+    },
+    {
+      "id": "cross-entropy-one-hot",
+      "chapter": "cross-entropy",
+      "heading": "交叉熵的最简形式",
+      "anchor_text": "这就是交叉熵的核心。",
+      "formula_anchor": "\\text{loss} = -\\log(p)",
+      "formula_fingerprint": "80f55aca15c12f9499e9f3e3dd8cec8c371598e98c0374950b24a8c4440501b7",
+      "evaluator": "cross_entropy_one_hot",
+      "inputs": {
+        "probabilities": [
+          0.8,
+          0.2
+        ],
+        "target": 0
+      },
+      "expected": 0.2231435513142097,
+      "tolerance": 1E-12,
+      "domain": "strictly positive normalized probabilities and a valid one-hot target index",
+      "review": {
+        "reviewed_at": "2026-09-29",
+        "reviewer": "baseline curation",
+        "proposition": true,
+        "conditions_and_quantifiers": true,
+        "formula_symbols_and_units": true,
+        "figure_meaning": true,
+        "link_target": true,
+        "english_heading": "Cross-Entropy: How to Measure Prediction Error",
+        "english_anchor_text": "Cross-Entropy: How to Measure Prediction Error"
+      }
+    },
+    {
+      "id": "backprop-chain-rule",
+      "chapter": "backpropagation",
+      "heading": "多步计算与链式法则",
+      "anchor_text": "多步计算的变化率，可以拆成每一步变化率的连乘。",
+      "formula_anchor": "\\frac{dy}{dx} = \\frac{dy}{du} \\cdot \\frac{du}{dx}",
+      "formula_fingerprint": "d90585489076874ab96d245042fcd3a71b707a685d2d6217ac93fe279a05afa0",
+      "evaluator": "chain_rule_product",
+      "inputs": {
+        "gradients": [
+          3,
+          4
+        ]
+      },
+      "expected": 12,
+      "tolerance": 0,
+      "domain": "a differentiable scalar composition with the listed local derivatives",
+      "review": {
+        "reviewed_at": "2026-09-29",
+        "reviewer": "baseline curation",
+        "proposition": true,
+        "conditions_and_quantifiers": true,
+        "formula_symbols_and_units": true,
+        "figure_meaning": true,
+        "link_target": true,
+        "english_heading": "Backpropagation: How Error Reaches Each Parameter",
+        "english_anchor_text": "Backpropagation: How Error Reaches Each Parameter"
+      }
+    },
+    {
+      "id": "attention-mask-excludes-future-key",
+      "chapter": "transformer-architecture",
+      "heading": "Masked Self-Attention",
+      "anchor_text": "每个位置只能看到之前的位置（因果 mask）",
+      "formula_anchor": "\\text{Attention}(Q, K, V) = \\text{softmax}!\\left(\\frac{QK^T}{\\sqrt{d_k}}\\right)V",
+      "formula_fingerprint": "f213a5e1532ad6d3a5e4327c1320960e30c7c253fc205cc2426659f77a5a71a1",
+      "evaluator": "masked_attention",
+      "inputs": {
+        "scores": [
+          [
+            0,
+            100
+          ]
+        ],
+        "mask": [
+          [
+            true,
+            false
+          ]
+        ],
+        "values": [
+          [
+            2
+          ],
+          [
+            999
+          ]
+        ]
+      },
+      "expected": [
+        [
+          2
+        ]
+      ],
+      "tolerance": 1E-12,
+      "domain": "finite score and value matrices; each query permits at least one key",
+      "review": {
+        "reviewed_at": "2026-09-29",
+        "reviewer": "baseline curation",
+        "proposition": true,
+        "conditions_and_quantifiers": true,
+        "formula_symbols_and_units": true,
+        "figure_meaning": true,
+        "link_target": true,
+        "english_heading": "Transformer architecture: understanding from data flow",
+        "english_anchor_text": "Transformer architecture: understanding from data flow"
+      }
+    },
+    {
+      "id": "layer-norm-zero-variance-is-finite-with-epsilon",
+      "chapter": "transformer-architecture",
+      "heading": "Residual 与 LayerNorm：深层训练的稳定路径",
+      "anchor_text": "LayerNorm 则在每个位置的特征维度上调节数值尺度",
+      "formula_anchor": "\\tilde{H}^{(\\ell-1)} = \\text{LayerNorm}(H^{(\\ell-1)})",
+      "formula_fingerprint": "d417e36fae66222384af5633829679b51b83978847abc8f081c2378fb8f7c99c",
+      "evaluator": "layer_norm",
+      "inputs": {
+        "values": [
+          5,
+          5
+        ],
+        "epsilon": 0.00001
+      },
+      "expected": [
+        0,
+        0
+      ],
+      "tolerance": 1E-12,
+      "domain": "finite feature vector and strictly positive epsilon",
+      "review": {
+        "reviewed_at": "2026-09-29",
+        "reviewer": "baseline curation",
+        "proposition": true,
+        "conditions_and_quantifiers": true,
+        "formula_symbols_and_units": true,
+        "figure_meaning": true,
+        "link_target": true,
+        "english_heading": "Transformer architecture: understanding from data flow",
+        "english_anchor_text": "Transformer architecture: understanding from data flow"
+      }
+    },
+    {
+      "id": "temperature-softmax-requires-positive-temperature",
+      "chapter": "llm-generation",
+      "heading": "Temperature：改变分布的集中程度",
+      "anchor_text": "公式不适用于 $T=0$",
+      "formula_anchor": "p_i(T)=\\frac{\\exp(z_i/T)}{\\sum_j\\exp(z_j/T)}",
+      "formula_fingerprint": "7e5f4dab1ecc622104fff53d827585126fca6657d23533420a70165ed8a2b7c1",
+      "evaluator": "temperature_softmax",
+      "inputs": {
+        "logits": [
+          0,
+          0
+        ],
+        "temperature": 0.5
+      },
+      "expected": [
+        0.5,
+        0.5
+      ],
+      "tolerance": 1E-12,
+      "domain": "finite logits and a strictly positive finite temperature",
+      "review": {
+        "reviewed_at": "2026-09-29",
+        "reviewer": "baseline curation",
+        "proposition": true,
+        "conditions_and_quantifiers": true,
+        "formula_symbols_and_units": true,
+        "figure_meaning": true,
+        "link_target": true,
+        "english_heading": "LLM Generation: From Input to the Next Token",
+        "english_anchor_text": "LLM Generation: From Input to the Next Token"
+      }
+    },
+    {
+      "id": "kv-cache-stores-key-and-value-states",
+      "chapter": "llm-generation",
+      "heading": "缓存保存了什么",
+      "anchor_text": "缓存本身也占用内存",
+      "evaluator": "kv_cache_bytes",
+      "inputs": {
+        "layers": 2,
+        "tokens": 3,
+        "kv_heads": 4,
+        "head_dim": 5,
+        "bytes_per_element": 2
+      },
+      "expected": 480,
+      "tolerance": 0,
+      "domain": "whole positive dimensions; the factor of two represents both keys and values",
+      "review": {
+        "reviewed_at": "2026-09-29",
+        "reviewer": "baseline curation",
+        "proposition": true,
+        "conditions_and_quantifiers": true,
+        "formula_symbols_and_units": true,
+        "figure_meaning": true,
+        "link_target": true,
+        "english_heading": "LLM Generation: From Input to the Next Token",
+        "english_anchor_text": "LLM Generation: From Input to the Next Token"
+      }
+    }
+  ]
+}

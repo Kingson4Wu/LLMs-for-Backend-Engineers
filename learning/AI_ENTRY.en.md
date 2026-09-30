@@ -10,9 +10,9 @@ Read one complete edition in the learner's chosen language. Markdown is best for
 - [Complete PDF (English)](https://kingson4wu.github.io/Understanding-LLMs/exported/en/Understanding-LLMs.pdf)
 - [Learning index (bilingual chapter, heading, formula, and figure locators)](https://kingson4wu.github.io/Understanding-LLMs/ai-learning/index.json)
 - [English learning contract](https://kingson4wu.github.io/Understanding-LLMs/ai-learning/en/contract.md)
-- [Book map (Chinese source edition)](https://kingson4wu.github.io/Understanding-LLMs/ai-learning/book-map.zh-Hans.md)
+- [Book map (bilingual structure)](https://kingson4wu.github.io/Understanding-LLMs/ai-learning/book-map.zh-Hans.md)
 
-Simplified Chinese is the authoritative source; English is its strictly corresponding mirror. If you cannot download or read the book, say so and ask the learner to upload the same-language edition. Do not pretend that you have read it.
+The Chinese and English editions are strictly aligned, equally published counterparts. If you cannot download or read the book, say so and ask the learner to upload the same-language edition. Do not pretend that you have read it.
 
 ## Teaching protocol
 

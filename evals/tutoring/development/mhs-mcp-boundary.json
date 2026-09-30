@@ -1,0 +1,11 @@
+{
+  "schema_version": 1,
+  "id": "mhs-mcp-boundary",
+  "artifact_requirements": {"locale": "zh-Hans", "complete_format": "markdown", "file": "Understanding-LLMs.md"},
+  "learner_task": "Explain the layering relationship between MCP and MHS without claiming that a protocol supplies business-domain semantics or authorization by itself.",
+  "source_locations": [{"chapter_id": "mhs-mcp-domain-capability-protocol", "title": "从 MHS、MCP 到领域能力协议", "path": "chapters/part3-llm-external/mhs-mcp-domain-capability-protocol.md", "heading": "MCP 和 MHS 的分层关系"}],
+  "required_labels": ["book_evidence", "inference", "external_verification"],
+  "comprehension_question": "What remains to be designed when a generic connection protocol exists but a business domain needs meaningful capabilities?",
+  "prohibited_claims": ["MCP alone defines a domain's business semantics and authorization policy."],
+  "figure_format_limitations": "If a layered diagram is absent or flattened, state that its spatial layering cannot be inferred from the artifact alone."
+}

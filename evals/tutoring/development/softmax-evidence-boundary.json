@@ -1,0 +1,41 @@
+{
+  "schema_version": 1,
+  "id": "softmax-evidence-boundary",
+  "artifact_requirements": {
+    "locale": "zh-Hans",
+    "complete_format": "markdown",
+    "file": "Understanding-LLMs.md"
+  },
+  "learner_task": "Explain why Softmax maps finite logits to a probability distribution without claiming that it makes a model answer true.",
+  "source_locations": [
+    {
+      "chapter_id": "softmax",
+      "title": "Softmax：怎样把分数变成概率",
+      "path": "chapters/part1-math-foundations/softmax.md",
+      "heading": "为什么每个输出介于零和一之间，且总和为一"
+    }
+  ],
+  "required_labels": [
+    "book_evidence",
+    "inference",
+    "external_verification"
+  ],
+  "formula_constraint": {
+    "location": {
+      "chapter_id": "softmax",
+      "heading": "为什么每个输出介于零和一之间，且总和为一"
+    },
+    "domain": "finite logits",
+    "numeric_golden": {
+      "inputs": {"logits": [0, 0]},
+      "expected": [0.5, 0.5],
+      "tolerance": 1e-12
+    }
+  },
+  "comprehension_question": "Why does adding the same constant to both logits leave this two-class distribution unchanged?",
+  "prohibited_claims": [
+    "Softmax makes an answer true.",
+    "A probability distribution guarantees correctness."
+  ],
+  "figure_format_limitations": "A complete Markdown or PDF artifact can omit, flatten, or make a figure hard to inspect. State that limitation and do not invent arrows, labels, or spatial relationships that are unavailable in the supplied artifact."
+}

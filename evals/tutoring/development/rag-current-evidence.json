@@ -1,0 +1,11 @@
+{
+  "schema_version": 1,
+  "id": "rag-current-evidence",
+  "artifact_requirements": {"locale": "zh-Hans", "complete_format": "markdown", "file": "Understanding-LLMs.md"},
+  "learner_task": "Explain what RAG changes during an answer and contrast it with changing model parameters, while naming the evidence-chain failure boundary.",
+  "source_locations": [{"chapter_id": "rag-context-evidence", "title": "RAG 与上下文工程：怎样把证据带入模型", "path": "chapters/part3-llm-external/rag-context-evidence.md", "heading": "RAG 要补的不是参数，而是当前事实"}],
+  "required_labels": ["book_evidence", "inference", "external_verification"],
+  "comprehension_question": "Why can retrieved text improve an answer without changing any trained weight?",
+  "prohibited_claims": ["RAG guarantees that an answer is true."],
+  "figure_format_limitations": "If retrieval-flow details are not visible in the supplied artifact, identify that limitation rather than reconstructing a pipeline from memory."
+}

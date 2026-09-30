@@ -18,6 +18,38 @@ jobs:
         run: |
           sudo apt-get update
           sudo apt-get install -y pandoc librsvg2-bin fonts-noto-cjk fonts-noto-core texlive-xetex texlive-lang-chinese texlive-latex-extra epubcheck poppler-utils qpdf
+      - name: Determine changed files for evaluation coverage
+        shell: bash
+        run: |
+          changed_file_list="$RUNNER_TEMP/changed-files.txt"
+          HEAD_SHA="$(git rev-parse HEAD)"
+          base_sha=""
+          previous_tag="$(git describe --tags --abbrev=0 "$HEAD_SHA^" 2>/dev/null || true)"
+          if [ -n "$previous_tag" ]; then
+            base_sha="$(git rev-list -n 1 "$previous_tag")"
+          fi
+          merge_base=""
+          if [ -n "$base_sha" ]; then
+            merge_base="$(git merge-base "$base_sha" "$HEAD_SHA" 2>/dev/null || true)"
+            if [ -z "$merge_base" ]; then
+              merge_base="$(git rev-parse "$HEAD_SHA^" 2>/dev/null || true)"
+            fi
+          else
+            merge_base="$(git hash-object -t tree /dev/null)"
+          fi
+          if [ -n "$merge_base" ]; then
+            git diff --name-only "$merge_base" "$HEAD_SHA" > "$changed_file_list"
+          else
+            : > "$changed_file_list"
+          fi
+      - name: Require evaluation coverage for changed high-risk chapters
+        shell: bash
+        run: |
+          args=()
+          while IFS= read -r file; do
+            [ -n "$file" ] && args+=(--changed-file "$file")
+          done < "$RUNNER_TEMP/changed-files.txt"
+          python3 tools/book-kit/validate_eval_coverage.py "${args[@]}"
       - name: Build and validate both editions
         env:
           PDF_MAINFONT: Noto Serif CJK SC
@@ -27,18 +59,39 @@ jobs:
           python3 tools/book-kit/check_translations.py
           python3 -m unittest discover -s tests -v
           python3 tools/book-kit/validate_book.py --check-learning-index
+          python3 tools/book-kit/validate_evals.py
           python3 tools/book-kit/validate_figures.py
           for locale in zh-Hans en; do
             python3 tools/book-kit/validate_book.py --locale "$locale" --check-links
             python3 tools/book-kit/build_print_html.py --locale "$locale"
             python3 tools/book-kit/export_markdown.py --locale "$locale"
             python3 tools/book-kit/export_epub.py --locale "$locale"
+            python3 tools/book-kit/audit_epub_accessibility.py --locale "$locale" --epub "book/exported/$locale/Understanding-LLMs.epub" --output "$RUNNER_TEMP/epub-accessibility-$locale.json"
             python3 tools/book-kit/export_book_pdf.py --locale "$locale"
-            epubcheck "book/exported/$locale/Understanding-LLMs.epub"
+            epubcheck "book/exported/$locale/Understanding-LLMs.epub" > "$RUNNER_TEMP/epubcheck-$locale.txt" 2>&1
             pdffonts "book/exported/$locale/Understanding-LLMs.pdf"
-            python3 tools/book-kit/validate_publication_artifacts.py --locale "$locale"
+            python3 tools/book-kit/validate_publication_artifacts.py --locale "$locale" --formats markdown,html,epub,pdf
           done
           python3 tools/book-kit/package_release.py --version "$GITHUB_REF_NAME"
+          test -f release/release-provenance.json
+          python3 tools/book-kit/validate_release_provenance.py --release release --version "$GITHUB_REF_NAME" --commit "$GITHUB_SHA"
+      - uses: actions/upload-artifact@v4
+        if: always()
+        with:
+          name: pdf-formula-audits
+          path: book/_build/evaluations/*/pdf-formula-audit.json
+      - uses: actions/upload-artifact@v4
+        if: always()
+        with:
+          name: epubcheck-reports
+          path: ${{ runner.temp }}/epubcheck-*.txt
+          if-no-files-found: warn
+      - uses: actions/upload-artifact@v4
+        if: always()
+        with:
+          name: epub-accessibility-reports
+          path: ${{ runner.temp }}/epub-accessibility-*.json
+          if-no-files-found: warn
       - uses: actions/upload-artifact@v4
         with:
           name: versioned-books
@@ -70,3 +123,11 @@ jobs:
           else
             gh release create "$RELEASE_TAG" release/* --verify-tag --title "$RELEASE_TAG" --notes-file release-notes.md
           fi
+      - name: Verify downloaded release assets
+        env:
+          GH_TOKEN: ${{ github.token }}
+          GH_REPO: ${{ github.repository }}
+          RELEASE_TAG: ${{ github.ref_name }}
+        run: |
+          gh release download "$RELEASE_TAG" --dir published-release
+          python3 tools/book-kit/validate_release_provenance.py --release published-release --version "$RELEASE_TAG" --commit "$GITHUB_SHA"

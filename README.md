@@ -6,7 +6,7 @@
 
 [<img src="book/assets/cover-en.svg" width="240" alt="Cover of Understanding LLMs for Software Engineers">](https://kingson4wu.github.io/Understanding-LLMs/en/)
 
-**Four core parts · 36 chapters · Simplified Chinese source and English mirror · online, Markdown, PDF, EPUB**
+**Four core parts · 36 chapters · strictly aligned Chinese and English editions · online, Markdown, PDF, EPUB**
 
 ## Start here
 
@@ -62,13 +62,13 @@ Part I is reference material, not an entrance exam. Visit it when representation
 | [PDF](https://kingson4wu.github.io/Understanding-LLMs/exported/en/Understanding-LLMs.pdf) | You want a fixed, print-oriented layout with formulas and figures. |
 | [EPUB](https://kingson4wu.github.io/Understanding-LLMs/exported/en/Understanding-LLMs.epub) | You want reflowable reading on an e-reader or mobile device. |
 
-The downloads page shows only files present in the current build. Versioned releases include source provenance and SHA256 checksums. Simplified Chinese is the source edition; the English mirror is maintained as its reviewed counterpart.
+The downloads page shows only files present in the current build. Versioned releases include `release-provenance.json` (tag, source commit, build context, and file hashes) and SHA256 checksums. They support provenance and file-integrity review, not cryptographic signing, security certification, or a quality claim. The Chinese and English editions are published as strictly aligned counterparts.
 
 ## Repository map
 
 ```text
-book/                  Chinese source, catalog, part landings, and publication assets
-book/translations/en/  English mirror, glossary, and translation status
+book/                  Chinese edition, catalog, part landings, and publication assets
+book/translations/en/  English counterpart, glossary, and alignment status
 web/                   Astro reader, search, and browser-local notes
 learning/              Dialogue-learning contracts, prompts, and local-assistant guidance
 tools/book-kit/        Validation and Markdown, HTML, PDF, EPUB publication tools
@@ -87,8 +87,4 @@ See the [local development guide](LOCAL_DEVELOPMENT.md) for full builds, both de
 
 ## Contribute
 
-Corrections, English editorial review, examples, and reader improvements are welcome. Use the [erratum and question forms](https://github.com/Kingson4Wu/Understanding-LLMs/issues/new/choose): include the article URL, language, quoted passage, and supporting evidence. See the [contribution guide](CONTRIBUTING.md) before sending a change.
-
-## License
-
-The book content and source code are released under the [MIT License](LICENSE).
+Corrections, bilingual-alignment review, examples, and reader improvements are welcome. Use the [erratum and question forms](https://github.com/Kingson4Wu/Understanding-LLMs/issues/new/choose): include the article URL, language, quoted passage, and supporting evidence. See the [contribution guide](CONTRIBUTING.md) before sending a change.

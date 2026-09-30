@@ -12,6 +12,8 @@ from pathlib import Path
 
 SVG_REFERENCE = re.compile(r"!\[.*?\]\(([^)\s]+\.svg)(?:\s+[^)]*)?\)")
 IMAGE_REFERENCE = re.compile(r"!\[.*?\]\(([^)\s]+\.(?:svg|png))(?:\s+[^)]*)?\)")
+SEMANTIC_IMAGE_REFERENCE = re.compile(r"!\[(.*?)\]\(([^)\s]+\.(?:svg|png))(?:\s+[^)]*)?\)")
+HEADING_REFERENCE = re.compile(r"^#{1,6}\s+(.+?)\s*$")
 
 
 def svg_targets(source: Path) -> list[str]:
@@ -22,6 +24,134 @@ def svg_targets(source: Path) -> list[str]:
 def image_targets(source: Path) -> list[str]:
     """Return editorial image targets used by an explicit bilingual pair."""
     return IMAGE_REFERENCE.findall(source.read_text(encoding="utf-8"))
+
+
+def source_image_context(root: Path, source: Path, figure: Path, ordinal: int | None = None) -> tuple[str, str] | None:
+    """Return the nearest Markdown heading and authored alternative for one image."""
+    heading = ""
+    image_ordinal = 0
+    for line in source.read_text(encoding="utf-8").splitlines():
+        if match := HEADING_REFERENCE.match(line):
+            heading = match.group(1).strip()
+        for match in SEMANTIC_IMAGE_REFERENCE.finditer(line):
+            image_ordinal += 1
+            alternative, target = match.groups()
+            if (source.parent / target).resolve() == figure.resolve() and (ordinal is None or ordinal == image_ordinal):
+                return heading, alternative.strip()
+    return None
+
+
+def catalogued_source_ids(root: Path) -> dict[str, dict[str, str]]:
+    """Map each bilingual catalogue source path to its canonical chapter ID."""
+    from book_meta import catalog_entries, load_catalog
+
+    result = {"zh": {}, "en": {}}
+    for locale, source in (("zh", root / "book"), ("en", root / "book" / "translations" / "en")):
+        if not (source / "catalog.json").is_file():
+            continue
+        for entry in catalog_entries(load_catalog(source)):
+            result[locale][(source / entry["path"]).relative_to(root).as_posix()] = entry["id"]
+    return result
+
+
+def validate_semantics(root: Path, figures_data: dict, pairs_data: dict) -> list[str]:
+    """Require explicit roles and bilingual instructional equivalents for diagrams."""
+    root = root.resolve()
+    figures = figures_data.get("figures")
+    pairs = pairs_data.get("pairs")
+    if not isinstance(figures, list):
+        return ['Figure semantic inventory needs a "figures" list']
+    if not isinstance(pairs, list):
+        return ['Figure semantic inventory needs a "pairs" list']
+
+    errors: list[str] = []
+    source_ids = catalogued_source_ids(root)
+    by_id: dict[str, dict] = {}
+    by_path: dict[str, dict] = {}
+    paired_ids = set()
+    for figure in figures:
+        if not isinstance(figure, dict) or not isinstance(figure.get("path"), str):
+            continue
+        path = figure["path"]
+        identifier = figure.get("id")
+        if not isinstance(identifier, str) or not identifier.strip():
+            errors.append(f"figure needs stable id: {path}")
+        elif identifier in by_id:
+            errors.append(f"figure id is duplicated: {identifier}")
+        else:
+            by_id[identifier] = figure
+        if figure.get("role") not in {"informational", "decorative"}:
+            errors.append(f"figure needs explicit role: {path}")
+        by_path[path] = figure
+
+    seen_pairs = set()
+    for pair in pairs:
+        if not isinstance(pair, dict):
+            continue
+        pair_id = pair.get("id")
+        if not isinstance(pair_id, str) or not pair_id.strip():
+            errors.append("figure pair needs stable id")
+            continue
+        if pair_id in seen_pairs:
+            errors.append(f"figure pair id is duplicated: {pair_id}")
+        seen_pairs.add(pair_id)
+        locale_entries = (("zh", "Chinese"), ("en", "English"))
+        referenced = []
+        for locale, label in locale_entries:
+            path, identifier = pair.get(locale), pair.get(f"{locale}_id")
+            figure = by_path.get(path)
+            if figure is None:
+                errors.append(f"semantic pair references unlisted {locale} figure: {pair_id}")
+                continue
+            if identifier != figure.get("id"):
+                errors.append(f"semantic pair needs matching {locale} figure id: {pair_id}")
+            elif figure.get("role") == "informational":
+                paired_ids.add(identifier)
+            referenced.append((locale, label, figure))
+        if not referenced or any(figure.get("role") != "informational" for _, _, figure in referenced):
+            continue
+        semantic = pair.get("semantics")
+        if not isinstance(semantic, dict):
+            errors.append(f"informational figure needs bilingual semantics: {pair_id}")
+            continue
+        for locale, label, figure in referenced:
+            record = semantic.get(locale)
+            if not isinstance(record, dict):
+                errors.append(f"informational figure needs {locale} semantic record: {pair_id}")
+                continue
+            alternative = record.get("alternative")
+            if not isinstance(alternative, str) or len(re.sub(r"\s+", "", alternative)) < 8:
+                errors.append(f"informational figure needs {locale} alternative text: {pair_id}")
+            source_key = f"{locale}_source"
+            source_value = pair.get(source_key)
+            if not isinstance(source_value, str) or not (root / source_value).is_file():
+                errors.append(f"semantic pair needs {locale} source: {pair_id}")
+                continue
+            canonical_chapter = source_ids[locale].get(source_value)
+            if canonical_chapter is None:
+                errors.append(f"semantic {locale} source is absent from catalog: {pair_id}")
+            elif canonical_chapter != pair.get("chapter"):
+                errors.append(f"semantic {locale} source chapter does not match catalog: {pair_id}")
+            elif record.get("chapter") != canonical_chapter:
+                errors.append(f"semantic {locale} chapter does not match catalog: {pair_id}")
+            if record.get("chapter") != pair.get("chapter"):
+                errors.append(f"semantic chapter does not match pair: {pair_id}")
+            context = source_image_context(root, root / source_value, root / figure["path"], pair.get("ordinal"))
+            if context is None:
+                errors.append(f"semantic {locale} source does not reference figure: {pair_id}")
+                continue
+            source_heading, source_alternative = context
+            if record.get("heading") != source_heading:
+                errors.append(f"semantic heading is absent from {locale} source: {pair_id}")
+            if isinstance(alternative, str) and re.sub(r"\s+", " ", alternative).strip() != re.sub(r"\s+", " ", source_alternative).strip():
+                errors.append(f"semantic alternative does not match {locale} source alt text: {pair_id}")
+        canonical = [source_ids[locale].get(pair.get(f"{locale}_source")) for locale, _label in locale_entries]
+        if all(chapter is not None for chapter in canonical) and canonical[0] != canonical[1]:
+            errors.append(f"semantic zh and en source chapters disagree: {pair_id}")
+    for identifier, figure in by_id.items():
+        if figure.get("role") == "informational" and identifier not in paired_ids:
+            errors.append(f"informational figure has no semantic pair: {identifier}")
+    return errors
 
 
 def validate_pairs(root: Path, data: dict) -> list[str]:
@@ -151,7 +281,10 @@ def main() -> int:
     errors = validate(args.root.resolve(), args.manifest.resolve())
     if args.pairs.is_file():
         try:
-            errors.extend(validate_pairs(args.root.resolve(), json.loads(args.pairs.read_text(encoding="utf-8"))))
+            pairs = json.loads(args.pairs.read_text(encoding="utf-8"))
+            figures = json.loads(args.manifest.read_text(encoding="utf-8"))
+            errors.extend(validate_pairs(args.root.resolve(), pairs))
+            errors.extend(validate_semantics(args.root.resolve(), figures, pairs))
         except (OSError, ValueError) as exc:
             errors.append(f"Cannot read figure pair manifest: {exc}")
     if errors:

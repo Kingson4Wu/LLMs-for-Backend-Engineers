@@ -1,0 +1,11 @@
+{
+  "version": 1,
+  "sources": [
+    {"url": "https://arxiv.org/abs/1706.03762", "final_url": null, "content_digest": null, "recorded_at": null},
+    {"url": "https://arxiv.org/abs/2005.11401", "final_url": null, "content_digest": null, "recorded_at": null},
+    {"url": "https://arxiv.org/abs/2309.06180", "final_url": null, "content_digest": null, "recorded_at": null},
+    {"url": "https://huggingface.co/docs/transformers/main/en/cache_explanation", "final_url": null, "content_digest": null, "recorded_at": null},
+    {"url": "https://modelcontextprotocol.io/specification/2025-06-18/server/tools", "final_url": null, "content_digest": null, "recorded_at": null},
+    {"url": "https://platform.openai.com/docs/guides/function-calling", "final_url": null, "content_digest": null, "recorded_at": null}
+  ]
+}

@@ -3,6 +3,7 @@
 from __future__ import annotations
 
 import argparse
+import json
 from html.parser import HTMLParser
 from pathlib import Path
 import posixpath
@@ -13,6 +14,13 @@ import xml.etree.ElementTree as ET
 import zipfile
 
 from book_meta import normalize_locale, resolve_book_dir
+from audit_epub_accessibility import audit_epub, deterministic_gate_errors
+from content_manifest import (
+    derive_source_manifest,
+    validate_artifact_manifest,
+    validate_pdf_formula_allowlist,
+    write_pdf_formula_audit,
+)
 
 
 AI_LEARNING_GUIDE_MARKERS = {
@@ -216,34 +224,59 @@ def validate_markdown(path: Path, guide_marker: str, provenance_marker: str) -> 
     return errors
 
 
-def validate(locale: str) -> list[str]:
+FORMAT_NAMES = {"html": "HTML", "epub": "EPUB", "pdf": "PDF", "markdown": "Markdown"}
+
+
+def validate(locale: str, formats: set[str] | None = None) -> list[str]:
     book = resolve_book_dir(None)
     code = normalize_locale(locale)
+    formats = formats or set(FORMAT_NAMES)
+    unknown = formats - set(FORMAT_NAMES)
+    if unknown:
+        raise ValueError(f"Unknown publication format(s): {', '.join(sorted(unknown))}")
     guide_marker = AI_LEARNING_GUIDE_MARKERS[code]
     provenance_marker = PROVENANCE_MARKERS[code]
     output = book / "exported" / code
     artifacts = {
-        "HTML": output / "Understanding-LLMs.print.html",
-        "EPUB": output / "Understanding-LLMs.epub",
-        "PDF": output / "Understanding-LLMs.pdf",
-        "Markdown": output / "Understanding-LLMs.md",
+        "html": output / "Understanding-LLMs.print.html",
+        "epub": output / "Understanding-LLMs.epub",
+        "pdf": output / "Understanding-LLMs.pdf",
+        "markdown": output / "Understanding-LLMs.md",
     }
-    errors = [f"missing {name}: {path}" for name, path in artifacts.items() if not path.is_file()]
+    errors = [f"missing {FORMAT_NAMES[name]}: {artifacts[name]}" for name in sorted(formats) if not artifacts[name].is_file()]
     if errors:
         return errors
-    return (
-        validate_html(artifacts["HTML"], guide_marker, VISUAL_WATERMARK_MARKER)
-        + validate_epub(artifacts["EPUB"], guide_marker, provenance_marker)
-        + validate_pdf(artifacts["PDF"], guide_marker, VISUAL_WATERMARK_MARKER)
-        + validate_markdown(artifacts["Markdown"], guide_marker, provenance_marker)
-    )
+    checks = []
+    if "html" in formats:
+        checks.extend(validate_html(artifacts["html"], guide_marker, VISUAL_WATERMARK_MARKER))
+    if "epub" in formats:
+        checks.extend(validate_epub(artifacts["epub"], guide_marker, provenance_marker))
+        checks.extend(deterministic_gate_errors(audit_epub(book, artifacts["epub"], code)))
+    if "pdf" in formats:
+        checks.extend(validate_pdf(artifacts["pdf"], guide_marker, VISUAL_WATERMARK_MARKER))
+    if "markdown" in formats:
+        checks.extend(validate_markdown(artifacts["markdown"], guide_marker, provenance_marker))
+    manifest = derive_source_manifest(book, code)
+    if "pdf" in formats:
+        allowlist = json.loads((book.parent / "evals" / "pdf-formula-allowlist.json").read_text(encoding="utf-8"))
+        checks.extend(validate_pdf_formula_allowlist(manifest, allowlist))
+        report = book / "_build" / "evaluations" / code / "pdf-formula-audit.json"
+        _audit, audit_errors = write_pdf_formula_audit(manifest, artifacts["pdf"], report, allowlist)
+        checks.extend(audit_errors)
+    return checks + validate_artifact_manifest(manifest, artifacts, formats=formats)
 
 
 def main() -> None:
     parser = argparse.ArgumentParser(description=__doc__)
     parser.add_argument("--locale", required=True)
+    parser.add_argument(
+        "--formats",
+        default=",".join(FORMAT_NAMES),
+        help="comma-separated export formats to validate (html, epub, pdf, markdown)",
+    )
     args = parser.parse_args()
-    errors = validate(args.locale)
+    formats = {item.strip().lower() for item in args.formats.split(",") if item.strip()}
+    errors = validate(args.locale, formats)
     if errors:
         raise SystemExit("Publication artifact validation failed:\n- " + "\n- ".join(errors))
     print(f"Publication artifacts are valid for {normalize_locale(args.locale)}.")

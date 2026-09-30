@@ -6,7 +6,7 @@
 
 [<img src="book/assets/cover-zh-Hans.svg" width="240" alt="《理解大模型：面向软件工程师的原理与系统指南》封面">](https://kingson4wu.github.io/Understanding-LLMs/zh-Hans/)
 
-**四个核心部分 · 36 章 · 简体中文源版本与英文镜像 · 网页、Markdown、PDF、EPUB**
+**四个核心部分 · 36 章 · 严格对齐的简体中文与英文版本 · 网页、Markdown、PDF、EPUB**
 
 ## 从这里开始
 
@@ -64,13 +64,13 @@ codex
 | [PDF](https://kingson4wu.github.io/Understanding-LLMs/exported/zh-Hans/Understanding-LLMs.pdf) | 需要公式和图完整的固定版式，或打印阅读。 |
 | [EPUB](https://kingson4wu.github.io/Understanding-LLMs/exported/zh-Hans/Understanding-LLMs.epub) | 在电子书阅读器或手机上使用可重排版式。 |
 
-下载页只展示当前构建中实际存在的文件；版本发布包含来源清单和 SHA256 校验和。简体中文是源版本。英文镜像由 AI 辅助翻译并经代理审阅，但尚未完成人工编辑审校。
+下载页只展示当前构建中实际存在的文件；版本发布包含来源清单和 SHA256 校验和。简体中文与英文作为严格对齐的对应版本发布。
 
 ## 仓库结构
 
 ```text
-book/                  中文原稿、目录、部分首页与出版资源
-book/translations/en/  英文镜像、术语表与翻译状态
+book/                  简体中文版、目录、部分首页与出版资源
+book/translations/en/  英文对应版、术语表与对齐状态
 web/                   Astro 阅读站、搜索与浏览器本地笔记
 learning/              对话式学习契约、提示词与本地助手指南
 tools/book-kit/        内容校验及 Markdown、HTML、PDF、EPUB 出版工具
@@ -89,8 +89,4 @@ npm --prefix web run dev
 
 ## 参与改进
 
-欢迎提交勘误、英文审校、示例与阅读体验改进。通过[勘误和问题表单](https://github.com/Kingson4Wu/Understanding-LLMs/issues/new/choose)提交时，请附上文章 URL、语言、原文片段与依据；提交变更前请阅读[贡献指南](CONTRIBUTING.md)。
-
-## 许可证
-
-书籍内容与源码均按 [MIT License](LICENSE) 发布。
+欢迎提交勘误、双语对齐复核、示例与阅读体验改进。通过[勘误和问题表单](https://github.com/Kingson4Wu/Understanding-LLMs/issues/new/choose)提交时，请附上文章 URL、语言、原文片段与依据；提交变更前请阅读[贡献指南](CONTRIBUTING.md)。

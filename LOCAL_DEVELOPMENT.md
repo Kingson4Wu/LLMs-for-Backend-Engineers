@@ -4,7 +4,7 @@
 
 ## 网站
 
-主站使用 Astro；中文原稿保留在 `book/chapters/`。Node.js 22.12+、npm 9.6.5+、Python 3.11+；CI 使用 Node 24 和 Python 3.11。依赖通过锁文件与 `npm ci` 安装。
+主站使用 Astro；简体中文章节位于 `book/chapters/`，英文对应章节位于 `book/translations/en/chapters/`。Node.js 22.12+、npm 9.6.5+、Python 3.11+；CI 使用 Node 24 和 Python 3.11。依赖通过锁文件与 `npm ci` 安装。
 
 Inter/Lora 西文字体随网站自托管；中文使用系统字体回退，不要求读者下载整套 CJK 字体，因此不同操作系统的中文观感可能略有差异。网站本身不调用 Python；Python 是内容校验和出版工具的依赖。
 
@@ -39,9 +39,9 @@ SITE_BASE=/ npm --prefix web run preview
 
 ## 内容与翻译
 
-`book/catalog.json` 是中文篇章顺序与分组的权威索引；`book/editions.json` 定义语言入口。英文目录和正文位于 `book/translations/en/`，同一篇文章的 ID 与相对路径必须一致。语言只有在完整来源可用时才标记 published；它表示纳入网站和发行清单，不等于已部署或人工审校完成。当前为中文原文和英文译文，各含导读、前言与 36 个编排章节（四个核心部分、扩展阅读与附录）。
+`book/catalog.json` 提供双语共同使用的篇章顺序与分组参考；`book/editions.json` 定义语言入口。英文目录和正文位于 `book/translations/en/`，同一篇文章的 ID 与相对路径必须一致。语言只有在完整内容可用时才标记 published；它表示纳入网站和发行清单，不等于已部署。当前中英文两版均含导读、前言与 36 个编排章节（四个核心部分、扩展阅读与附录），并须严格对齐。
 
-修改篇名时同步正文 H1 和对应语言的 catalog 标题：网站从 H1 取文章标题，旧站导航从 catalog 生成。中英 SUMMARY 都是生成结果，不单独修改。英文术语表和审校记录为仓库辅助文档，不单独编入书籍目录；书中链接前往 GitHub，离线打开它们仍需要网络。
+修改篇名时同步两版正文 H1 和对应语言的 catalog 标题：网站从 H1 取文章标题，旧站导航从 catalog 生成。中英 SUMMARY 都是生成结果，不单独修改。英文术语表和对齐记录为仓库辅助文档，不单独编入书籍目录；书中链接前往 GitHub，离线打开它们仍需要网络。
 
 ```bash
 python3 tools/book-kit/validate_book.py --write-summary
@@ -53,7 +53,7 @@ python3 tools/book-kit/validate_figures.py
 python3 -m unittest discover -s tests -v
 ```
 
-`--check-links` 需要 Pandoc；Python 测试还需要 librsvg，并会重新生成中文 HTML/EPUB。中文变更后译文 hash 不匹配会失败；应实际同步与审阅译文，然后更新 `status.json`，不可仅覆盖 hash 绕过检查。术语见英文版 `glossary.md`。
+`--check-links` 需要 Pandoc；Python 测试还需要 librsvg，并会重新生成中文 HTML/EPUB。任一版本的实质内容变更后，都应实际同步另一版本并复核对齐，再更新 `status.json` 中的对齐 hash；不可仅覆盖 hash 绕过检查。术语见英文版 `glossary.md`。
 
 两种语言各自的 `book.json` 管理书名、作者、封面、PDF 标题页等。`release_date` 是人工维护的书籍发布日期，并非本次构建日期；实际构建时间见 manifest 的 `built_at`。出版工具按 `--locale` 规范化语言和输出路径，不支持仅通过修改 JSON 的 `outputs` 任意改变输出目录。网站排版在 `web/src/styles/site.css`，HTML/EPUB 排版在 `book/styles/publication.css`，PDF 排版在 Python/LaTeX 模板。
 

@@ -105,6 +105,31 @@ class LearningIndexTests(unittest.TestCase):
         self.assertIn("理解大模型：面向软件工程师的原理与系统指南", (ROOT / "README.zh-CN.md").read_text(encoding="utf-8"))
         self.assertIn("Understanding LLMs for Software Engineers", (ROOT / "README.md").read_text(encoding="utf-8"))
 
+    def test_public_materials_do_not_rank_or_disclaim_either_edition(self):
+        public_materials = (
+            "README.md",
+            "README.zh-CN.md",
+            "book/preface.md",
+            "book/translations/en/preface.md",
+            "learning/README.md",
+            "learning/README.en.md",
+            "learning/AI_ENTRY.zh-Hans.md",
+            "learning/AI_ENTRY.en.md",
+            "learning/LEARNING_CONTRACT.zh-Hans.md",
+            "learning/LEARNING_CONTRACT.en.md",
+        )
+        prohibited = (
+            "AI-assisted English edition",
+            "awaits human editorial review",
+            "尚待人工编辑审校",
+            "中文是权威内容",
+            "Chinese is authoritative",
+        )
+        for relative_path in public_materials:
+            text = (ROOT / relative_path).read_text(encoding="utf-8")
+            for phrase in prohibited:
+                self.assertNotIn(phrase, text, relative_path)
+
 
 if __name__ == "__main__":
     unittest.main()

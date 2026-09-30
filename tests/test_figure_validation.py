@@ -3,6 +3,7 @@ import re
 import sys
 import tempfile
 import unittest
+from copy import deepcopy
 from pathlib import Path
 
 sys.path.insert(0, str(Path(__file__).resolve().parents[1] / 'tools' / 'book-kit'))
@@ -460,6 +461,74 @@ class FigureValidationTests(unittest.TestCase):
             manifest = root / 'figures.json'
             manifest.write_text(json.dumps({'figures': []}), encoding='utf-8')
             self.assertTrue(any('not listed' in error for error in validate(root, manifest)))
+
+    def test_semantic_inventory_requires_explicit_roles_alternatives_and_source_context(self):
+        from validate_figures import validate_semantics
+
+        with tempfile.TemporaryDirectory() as tmp:
+            root = Path(tmp)
+            zh_asset = root / 'book/assets/zh/diagram.svg'
+            en_asset = root / 'book/assets/en/diagram.svg'
+            decorative = root / 'book/assets/cover.svg'
+            for asset in (zh_asset, en_asset, decorative):
+                asset.parent.mkdir(parents=True, exist_ok=True)
+                asset.write_text('<svg/>', encoding='utf-8')
+            zh_source = root / 'book/chapters/topic.md'
+            en_source = root / 'book/translations/en/chapters/topic.md'
+            zh_source.parent.mkdir(parents=True)
+            en_source.parent.mkdir(parents=True)
+            zh_source.write_text('## 正确标题\n\n![中文等效说明](../assets/zh/diagram.svg)', encoding='utf-8')
+            en_source.write_text('## Correct heading\n\n![English equivalent explanation](../../../assets/en/diagram.svg)', encoding='utf-8')
+            figures = {'figures': [
+                {'id': 'zh-topic-diagram', 'path': 'book/assets/zh/diagram.svg', 'kind': 'diagram', 'role': 'informational'},
+                {'id': 'en-topic-diagram', 'path': 'book/assets/en/diagram.svg', 'kind': 'diagram', 'role': 'informational'},
+                {'id': 'cover', 'path': 'book/assets/cover.svg', 'kind': 'cover'},
+            ]}
+            pairs = {'pairs': [{
+                'id': 'topic-diagram', 'chapter': 'topic', 'ordinal': 1,
+                'zh': 'book/assets/zh/diagram.svg', 'en': 'book/assets/en/diagram.svg',
+                'zh_id': 'zh-topic-diagram', 'en_id': 'en-topic-diagram',
+                'zh_source': 'book/chapters/topic.md', 'en_source': 'book/translations/en/chapters/topic.md',
+                'semantics': {
+                    'zh': {'chapter': 'topic', 'heading': '错误标题', 'alternative': ''},
+                    'en': {'chapter': 'topic', 'heading': 'Correct heading', 'alternative': 'English equivalent explanation'},
+                },
+            }]}
+            errors = validate_semantics(root, figures, pairs)
+
+        self.assertIn('figure needs explicit role: book/assets/cover.svg', errors)
+        self.assertIn('informational figure needs zh alternative text: topic-diagram', errors)
+        self.assertIn('semantic heading is absent from zh source: topic-diagram', errors)
+
+    def test_semantic_inventory_derives_chapter_from_both_catalogues(self):
+        from validate_figures import validate_semantics
+
+        root = Path(__file__).resolve().parents[1]
+        figures = json.loads((root / 'book/figures.json').read_text(encoding='utf-8'))
+        pairs = json.loads((root / 'book/figure-pairs.json').read_text(encoding='utf-8'))
+        mutated = deepcopy(pairs)
+        pair = mutated['pairs'][0]
+        pair['chapter'] = 'coordinated-wrong-chapter'
+        pair['semantics']['zh']['chapter'] = 'coordinated-wrong-chapter'
+        pair['semantics']['en']['chapter'] = 'coordinated-wrong-chapter'
+
+        errors = validate_semantics(root, figures, mutated)
+
+        self.assertIn('semantic zh source chapter does not match catalog: introduction-01', errors)
+        self.assertIn('semantic en source chapter does not match catalog: introduction-01', errors)
+
+    def test_semantic_inventory_rejects_an_unpaired_informational_figure(self):
+        from validate_figures import validate_semantics
+
+        figures = {'figures': [{
+            'id': 'orphan-diagram', 'path': 'book/assets/en/orphan.svg',
+            'kind': 'diagram', 'role': 'informational',
+        }]}
+
+        self.assertIn(
+            'informational figure has no semantic pair: orphan-diagram',
+            validate_semantics(Path('.'), figures, {'pairs': []}),
+        )
 
     def test_pair_validation_reports_a_missing_english_counterpart(self):
         from validate_figures import validate_pairs

@@ -1,0 +1,11 @@
+{
+  "schema_version": 1,
+  "id": "backpropagation-chain-rule",
+  "artifact_requirements": {"locale": "zh-Hans", "complete_format": "markdown", "file": "Understanding-LLMs.md"},
+  "learner_task": "Explain how a gradient travels through a branching computation graph, separating the chain rule from the later parameter-update step.",
+  "source_locations": [{"chapter_id": "backpropagation", "title": "反向传播：误差怎样传回每个参数", "path": "chapters/part1-math-foundations/backpropagation.md", "heading": "分叉结构如何汇总梯度"}],
+  "required_labels": ["book_evidence", "inference", "external_verification"],
+  "comprehension_question": "When one variable affects the loss through two downstream paths, how are its two gradient contributions combined?",
+  "prohibited_claims": ["Backpropagation itself updates parameters."],
+  "figure_format_limitations": "If the computation graph is unavailable or flattened in the artifact, do not invent arrows or node values."
+}

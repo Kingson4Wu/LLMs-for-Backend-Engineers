@@ -23,5 +23,3 @@
 ## 参与贡献
 
 本书的书稿与构建源码公开托管于 GitHub，欢迎提出问题、建议和修正。反馈时可以附上难以理解的段落、你的理解以及仍然困惑的问题。
-
-中文是原文，英文为 AI 辅助翻译并经过代理检查，尚待人工编辑审校。书籍内容与构建源码均按 [MIT License](https://github.com/kingson4wu/Understanding-LLMs/blob/main/LICENSE) 发布。

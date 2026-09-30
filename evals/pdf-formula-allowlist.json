@@ -1,0 +1,723 @@
+{
+  "version": 1,
+  "defaults": {
+    "reason": "PDF text extraction cannot preserve this TeX expression without ambiguity.",
+    "reviewer": "publication-eval",
+    "reviewed_at": "2026-09-29"
+  },
+  "formulas": [
+    {
+      "chapter": "ai-math-foundations",
+      "fingerprint": "5cc1dce0f80773f09dd2f7708cc231973b333686ca754293ec550b7fb25f09c4"
+    },
+    {
+      "chapter": "ai-math-foundations",
+      "fingerprint": "d485fa0a6f829131a5370449b88e33f27f2c8aff2a18e7924c59c286b7f38059"
+    },
+    {
+      "chapter": "ai-math-foundations",
+      "fingerprint": "9ee8e55e250c9838405138bacc230cf8c3868bf5f7c02d49123f69b8fd898685"
+    },
+    {
+      "chapter": "ai-math-foundations",
+      "fingerprint": "c692db43eb7a8c7706c54c3a8bbcdfddde66248e5f3435abf62db3e8168e3f35"
+    },
+    {
+      "chapter": "ai-math-foundations",
+      "fingerprint": "695081639fcf89cdc5c477529fe74785a0096798cf2bd8173e5ced006ee12fc5"
+    },
+    {
+      "chapter": "from-onehot-to-embedding",
+      "fingerprint": "7cf136fc0c4a03804bb896cc58925e9041c27cf64c7763bb2104a3c8740d7b2e"
+    },
+    {
+      "chapter": "from-onehot-to-embedding",
+      "fingerprint": "a5a87b762035ae2a2d88ac424dd8439d9fbdba865a63860c63598c96f26c97f8"
+    },
+    {
+      "chapter": "dot-product-angle",
+      "fingerprint": "f1b714dbf55a5f8faa2802575dcd21e478d0c70fbfca1f5651145601a4c19fbb"
+    },
+    {
+      "chapter": "softmax",
+      "fingerprint": "afd26cd524771ed5823bdc6491b840c746fb2ba37f11b9793c076a131fa6ea42"
+    },
+    {
+      "chapter": "softmax",
+      "fingerprint": "08082d630bbf4336afb2ba1d1479d22e1d7df5aab10edc2e0e4ef8e7c26c6364"
+    },
+    {
+      "chapter": "softmax",
+      "fingerprint": "4d47007a9fe6bb388a3763075c88ac17db3af54227efbf255dfa863264c8de70"
+    },
+    {
+      "chapter": "softmax",
+      "fingerprint": "7cdb9e28f2a6d2a6e40c3ec298a1ea6f351f9263568ece1d0a0f970d71ef752d"
+    },
+    {
+      "chapter": "softmax",
+      "fingerprint": "1888b56ef3da29c4109f9d15334d2d32f5eedb407b93780de329b024c7addb4d"
+    },
+    {
+      "chapter": "softmax",
+      "fingerprint": "fbbeae8dd619a4bd5838533a941e6dd9def4d02384125d667fcc353296d0f734"
+    },
+    {
+      "chapter": "softmax",
+      "fingerprint": "21d96df522e0580bd00027486baaca93c853345b98fcd7ad5003650c05e2697a"
+    },
+    {
+      "chapter": "softmax",
+      "fingerprint": "acd209c104a1fc2edc223a7276ec8f5cb05b222a573d1598828ffe3d8bd9752b"
+    },
+    {
+      "chapter": "softmax",
+      "fingerprint": "f1cad925819a74def1554b356875b5bc242432965b30310302b98dd6c632c140"
+    },
+    {
+      "chapter": "softmax",
+      "fingerprint": "5547ff4d866743787fb3037771032bfe86a2d21e34a8a80afc5c337be4e50306"
+    },
+    {
+      "chapter": "softmax",
+      "fingerprint": "1a3a31539005b613a2ae2975ea61ad39cf9ccdcbc7f8e40c764dc654b5ac9f17"
+    },
+    {
+      "chapter": "softmax",
+      "fingerprint": "bad700ff5378c8960c5e7add9bf0027894d7729ce3b1ecdc517833daa0d23372"
+    },
+    {
+      "chapter": "softmax",
+      "fingerprint": "26cb853582ee33bf6b9bacbe847cdc14bb3febfbb53523589825c4694c8ae9d7"
+    },
+    {
+      "chapter": "softmax",
+      "fingerprint": "54f52f2b9b8d4f53eaa27eea04b6cbedb607c40e0bab336082dd0a7d2a2a6c79"
+    },
+    {
+      "chapter": "softmax",
+      "fingerprint": "e50c9930fbb173aa49564877214cf71382d2fb38164d22ef39f414be264e94ca"
+    },
+    {
+      "chapter": "softmax",
+      "fingerprint": "3e52b27f89ea5633f35c75f9cc895c97c8d72250e5c9344c5ec9c2574ce9140c"
+    },
+    {
+      "chapter": "softmax",
+      "fingerprint": "0d1ab03182870966a7e47a3c3a52262c9516cc6b8b428c9903e2c5ff5fbbc297"
+    },
+    {
+      "chapter": "softmax",
+      "fingerprint": "72f9a43e7fe7120d18469c4eb6dfc23aeda29bdcf2a867af8e8403b8640cde58"
+    },
+    {
+      "chapter": "softmax",
+      "fingerprint": "bd89c443585ea201f3f556a9dcc0d94a5187009cd0480262c4dcd7f29a7c05d9"
+    },
+    {
+      "chapter": "softmax",
+      "fingerprint": "dfc549a95b438c7665b080046f82e63da542f3a7112f410cdb0fa605b65c22d1"
+    },
+    {
+      "chapter": "softmax",
+      "fingerprint": "93d6c9436f1107439b3a89f0f5d5ccb125a760f433178af73a8aab327397200f"
+    },
+    {
+      "chapter": "softmax",
+      "fingerprint": "af07f8a9171d5a8f97c2d05621e31e4adcfb3ffee59cc4d1843488722ad4d5a6"
+    },
+    {
+      "chapter": "softmax",
+      "fingerprint": "1add44aa7be97207f019f4e30002ad0dffa038383782032ab67f57dc5327d835"
+    },
+    {
+      "chapter": "softmax",
+      "fingerprint": "cc81a37c7258ddffd692822173f07061043ec77d76d59e210bb57a837f3db626"
+    },
+    {
+      "chapter": "softmax",
+      "fingerprint": "61f3bd79ffb250130ac955daccadc743c18888b94151beda723c7a2d37336554"
+    },
+    {
+      "chapter": "softmax",
+      "fingerprint": "b8d58a7e8da2fc8922d01372d22810ee41a3cf1415a912466be3992a11ef7355"
+    },
+    {
+      "chapter": "softmax",
+      "fingerprint": "071e14ab45b40f271f20740eabd64edeaee76015990ac7357c51eabecb0dcc15"
+    },
+    {
+      "chapter": "softmax",
+      "fingerprint": "1b27f41b830be3061ba2b2c6fb94e6e69f349f6585353178c2f729a527682bb7"
+    },
+    {
+      "chapter": "softmax",
+      "fingerprint": "9a224692428e993bb7b51d10d5c0c45f0c4e9e668d3a633f36d3b85c8a296ca5"
+    },
+    {
+      "chapter": "softmax",
+      "fingerprint": "920a8cc1f06f700d09c3674a2a793f91c81315127e46289beb09bbb42086a100"
+    },
+    {
+      "chapter": "softmax",
+      "fingerprint": "3961bfb0a2e480160e1fb6d5ddf6ee988b65bf3fe68ff3361afd69c4a66d467c"
+    },
+    {
+      "chapter": "softmax",
+      "fingerprint": "99f9c121586729bca0282f75ae1764dfdbdbc748badb62199cb0d3c35b55b463"
+    },
+    {
+      "chapter": "softmax",
+      "fingerprint": "9268764977f2a8237fcda8ea866d1b49861e7752156b3e3ae8d08ee406b33398"
+    },
+    {
+      "chapter": "softmax",
+      "fingerprint": "b315efcf811040c1dfb117e2eb73729c5359b63c1d9596a1a945c33c77a20b19"
+    },
+    {
+      "chapter": "softmax",
+      "fingerprint": "c78fd91c958f11f001cb834b53f229d009cb776c1d130bda4ab248c5e9d5d069"
+    },
+    {
+      "chapter": "activation-functions",
+      "fingerprint": "f0e9d2c224a61373845221cbfaddceb8bcb0e0063743b9cf0054ff33e19529eb"
+    },
+    {
+      "chapter": "activation-functions",
+      "fingerprint": "55e6f6e8b4f7199ddad09239ca6b515e2574c85b5602315aa8939c8f459dadeb"
+    },
+    {
+      "chapter": "activation-functions",
+      "fingerprint": "2d35467cf5836a928318ed7729c14d5fc4fb1806b03b10aa8c2e8b05f9bc7694"
+    },
+    {
+      "chapter": "activation-functions",
+      "fingerprint": "350eaba30ca0e0aa5695b0a335ad947a8cbca3f527e8c088b6f94a808e0b6020"
+    },
+    {
+      "chapter": "perceptron-learning",
+      "fingerprint": "cee78b3bfea71fbee699f1eaee85001df6c95299dc817493eb4cc600d761e04e"
+    },
+    {
+      "chapter": "perceptron-learning",
+      "fingerprint": "e3c36228416cb7ae874ebe1b43f1adfbb3daa46b957225e9a512584469878110"
+    },
+    {
+      "chapter": "perceptron-learning",
+      "fingerprint": "21d88b37fda86c4b425190467ebee9003412b77d0b4595173c65e06d0100ee38"
+    },
+    {
+      "chapter": "perceptron-learning",
+      "fingerprint": "c2441e94aea8119d20562df72d60d7dee8899fe34d46dcbb081c6f572e0ec920"
+    },
+    {
+      "chapter": "perceptron-learning",
+      "fingerprint": "e7eda1ef2bc1975396d700853cb493ed66007d4ae3303e254498f791fe54cebc"
+    },
+    {
+      "chapter": "perceptron-learning",
+      "fingerprint": "d0ed2000f3a568ddc0530a8b9b39afcd470ff4ad17adf16b853caec0d9add853"
+    },
+    {
+      "chapter": "perceptron-learning",
+      "fingerprint": "e7a3a94c65f720948ef87f5fa1be21affd719bfdd603408fbc1068e3fcf2135d"
+    },
+    {
+      "chapter": "perceptron-learning",
+      "fingerprint": "1bcb0391610348dfa8cf2dbc2b76ebce815ae0319e9fca757216da2dd47a3cf8"
+    },
+    {
+      "chapter": "perceptron-learning",
+      "fingerprint": "a51810cdc6a92856a05b7f8c41769c0551ed6d39d35e7e15cd85586922cb5729"
+    },
+    {
+      "chapter": "perceptron-learning",
+      "fingerprint": "fd9dab27aee633facc23f28a63445dc0cc1edfbb66ae20d9fcff380114f85ddb"
+    },
+    {
+      "chapter": "perceptron-learning",
+      "fingerprint": "c5f3f54be6933e826f3785078e758bd2d7ed0cf4756aca0d91f76bd6ecceca67"
+    },
+    {
+      "chapter": "perceptron-learning",
+      "fingerprint": "6995ccbebc2c929de71bfe081c5a88b149c283052e9d9af75baf4c85818aff3f"
+    },
+    {
+      "chapter": "perceptron-learning",
+      "fingerprint": "69cfaf2beca048653df6bcdc8ae59d9fe8378f28d800f40acd53c8791517b46a"
+    },
+    {
+      "chapter": "perceptron-learning",
+      "fingerprint": "fb1d5cd5b227336c1986d3b99a5d1a09f80258c4fd8149c95358b2abbc3dda38"
+    },
+    {
+      "chapter": "cross-entropy",
+      "fingerprint": "cf37869a180667795a5d55df9d0c48e6d714eee89e1410d07767bdaf962c7647"
+    },
+    {
+      "chapter": "cross-entropy",
+      "fingerprint": "8774c752b3123e43cf135fb5111fc1572fed5bead566bd493792518302a2238f"
+    },
+    {
+      "chapter": "cross-entropy",
+      "fingerprint": "d22a6a147dce5b81a3cc1eeb80dae45d2357981f95751783273add0ffb50abd1"
+    },
+    {
+      "chapter": "cross-entropy",
+      "fingerprint": "9a6928022d57171fc9e0c7d2616bba0c9f506b180b60197982b09294fa1973f9"
+    },
+    {
+      "chapter": "cross-entropy",
+      "fingerprint": "0faa24b59d5d5b9dfedc54bd342f8f2e48b52b66cd103a98741b6319ecdde2c5"
+    },
+    {
+      "chapter": "cross-entropy",
+      "fingerprint": "79f9bdb994619a233986bbc64066b12b596534b3ea5afba4e75f89294b5d41af"
+    },
+    {
+      "chapter": "cross-entropy",
+      "fingerprint": "7f50e2662b4043392de44f260de6e43ff25d56bb16aed3fdf15db52263156a85"
+    },
+    {
+      "chapter": "cross-entropy",
+      "fingerprint": "0b7e600fdda98a840b93cf403906f9ce886112d814134c8c9836124318b08b02"
+    },
+    {
+      "chapter": "cross-entropy",
+      "fingerprint": "e0c5c8d77dc61c581852e0400e79b0683050e88c6d1cbba81c7e006db52a7d56"
+    },
+    {
+      "chapter": "cross-entropy",
+      "fingerprint": "a3158a27345e4536f3c8a119d34de61f7d983d10658d1577e579fc48e5fe45f7"
+    },
+    {
+      "chapter": "cross-entropy",
+      "fingerprint": "e244a51eb12d02b2de776c9d0ae8ccec1491a993b278f2b93b1c5d198a2740a7"
+    },
+    {
+      "chapter": "cross-entropy",
+      "fingerprint": "016a9849c5a779b66f323c8ace2916edf3a2c9fe1898563f8251177986e0747a"
+    },
+    {
+      "chapter": "cross-entropy",
+      "fingerprint": "fbc05fe3a43448245e11641e1642fd354ff8c2843cb124cfc1a55644623702e4"
+    },
+    {
+      "chapter": "cross-entropy",
+      "fingerprint": "4d9351bad8929450236485b51fe36575a160c80e1900125db8fda60c3360acc9"
+    },
+    {
+      "chapter": "cross-entropy",
+      "fingerprint": "4e5ff93f800081f250ee92f20c43a4b7f6f0e62fd07516c296896f3542f9c59c"
+    },
+    {
+      "chapter": "cross-entropy",
+      "fingerprint": "c235b7dd8665eb45f15a679eb0c8e941c432406a8c8f504641025ca80b5ee53b"
+    },
+    {
+      "chapter": "cross-entropy",
+      "fingerprint": "fcda8d880526740c9ffbe9a2eac632864182e92f47ba5c76fd730affa4fca023"
+    },
+    {
+      "chapter": "cross-entropy",
+      "fingerprint": "1dda3cc0693811ef0771a0127c69ab7161e3f885196fc42992e86de547ab71e5"
+    },
+    {
+      "chapter": "cross-entropy",
+      "fingerprint": "9aaf76a41b71beb1649a4ab6a7ad076f6426778b4e310154ca739f23039e5e6f"
+    },
+    {
+      "chapter": "cross-entropy",
+      "fingerprint": "473ef1b30dfa257a7d058e37a78b14b3ce717035af4e04bb07222b2870188421"
+    },
+    {
+      "chapter": "cross-entropy",
+      "fingerprint": "bd2286c2b9355aa60ce40e50792c779a0e5f14a1d8925f1c320a5173811913bb"
+    },
+    {
+      "chapter": "cross-entropy",
+      "fingerprint": "0c147bd0b58be619f455a5d7bf34b25df401b23bcf483b69f7982a111da34a9b"
+    },
+    {
+      "chapter": "cross-entropy",
+      "fingerprint": "4164746dc0fc642486fc3b7789aaa8907442f507ad60576c4d152fb47dab430e"
+    },
+    {
+      "chapter": "cross-entropy",
+      "fingerprint": "af07f8a9171d5a8f97c2d05621e31e4adcfb3ffee59cc4d1843488722ad4d5a6"
+    },
+    {
+      "chapter": "cross-entropy",
+      "fingerprint": "dec4b4754e6d79ae6409c9f85cc23aa537ab7cdba4c7077be1c088a28bdde62d"
+    },
+    {
+      "chapter": "cross-entropy",
+      "fingerprint": "220119379c29a87b0673412c25649863b12c98e262b7df60fe467afe7fb81290"
+    },
+    {
+      "chapter": "cross-entropy",
+      "fingerprint": "5ec2f7e445afaaabb178603b70ec3c92dd361007971733504851327edd8ecdc6"
+    },
+    {
+      "chapter": "backpropagation",
+      "fingerprint": "20933958f4f67750344fb8bc279c3877344bd3aa85cc9b728804a61107561a5c"
+    },
+    {
+      "chapter": "backpropagation",
+      "fingerprint": "50696521b79d8104ec1419938da8cd36724ab5c339b12bde43b08499ecf859fe"
+    },
+    {
+      "chapter": "backpropagation",
+      "fingerprint": "a597d06362ae8176938892770f51eeb2cec801e09826447eabcb0b5d73042203"
+    },
+    {
+      "chapter": "backpropagation",
+      "fingerprint": "87c28837b51e87c9e3ffe4003ae046645f203868f78f93f596688c4d8a7756af"
+    },
+    {
+      "chapter": "backpropagation",
+      "fingerprint": "067100ac94af4d72b8c0a0e7c538ca75b3910cbb249d990e3ac0e0e517003e85"
+    },
+    {
+      "chapter": "backpropagation",
+      "fingerprint": "b373ec24fcbacd0e24795d5bb15ed7d0eb19ecb0225e3f8d85a834592693e11f"
+    },
+    {
+      "chapter": "backpropagation",
+      "fingerprint": "403200fc567eda76529735cb9b75e119aff0a87a3fa9ae4441753c8f755923fb"
+    },
+    {
+      "chapter": "backpropagation",
+      "fingerprint": "78a8109b54e9cc948da7eb56c8dfa46fca2c8f8e31807967fb0d0182a7adb77e"
+    },
+    {
+      "chapter": "backpropagation",
+      "fingerprint": "2d36cd033182cb5c007bc218e4093b6475d90792b690fb5815fee983fddc4548"
+    },
+    {
+      "chapter": "backpropagation",
+      "fingerprint": "25387b56ab15a3a408ce300a952f78fd3d0940fdeb3b251c754319828063ae3f"
+    },
+    {
+      "chapter": "backpropagation",
+      "fingerprint": "d521ff2f31e977230d3848f8f8e202b962433509fc75756d365e497a88357a29"
+    },
+    {
+      "chapter": "backpropagation",
+      "fingerprint": "4f4e7623bc8d02cf98030a0a88e757cce0808f62a53a1ff1191a450d668a933d"
+    },
+    {
+      "chapter": "backpropagation",
+      "fingerprint": "ec13f371cd4ac4767176a7e6d1ba0361f6cbcbbd1d256f8e380bc5a614303b6f"
+    },
+    {
+      "chapter": "backpropagation",
+      "fingerprint": "74853e018ed1f3e182a6a4da929dc4c58a17d0697166ed1407714d8d3c6e83d7"
+    },
+    {
+      "chapter": "backpropagation",
+      "fingerprint": "b5dba307f7af719ee5e7e750c51c1dbac093183a072d98780cb35acbf13f0b19"
+    },
+    {
+      "chapter": "backpropagation",
+      "fingerprint": "daf233cd005a1dc23de313c46d79b719f56b13fed33ce443aac3fadfabb2e424"
+    },
+    {
+      "chapter": "backpropagation",
+      "fingerprint": "f38bc62f06221f8c82c696b2ecc19b1deae5c207cf58af3376b0089524e98c77"
+    },
+    {
+      "chapter": "backpropagation",
+      "fingerprint": "ea0c916c488856b1a95de38eb9dd201e32d30c36979456307946341eb0e742ee"
+    },
+    {
+      "chapter": "backpropagation",
+      "fingerprint": "c2e54be4e56e2ba2d1ffe362122f0919774ab10db00e34d4bc0e200c7c10af34"
+    },
+    {
+      "chapter": "backpropagation",
+      "fingerprint": "fabbda7bf9ce4185d833846c01d0657dcc4c295d55a821f1a7bcde0d7749d7eb"
+    },
+    {
+      "chapter": "backpropagation",
+      "fingerprint": "0443f569c9b348536cf30d1503d72f1c98ca051988fd294c849089727637e516"
+    },
+    {
+      "chapter": "backpropagation",
+      "fingerprint": "c41bbdf1a70c8cb28e75b2883f00cc57b9dea8f2e0b7f09214e62f8e9d66fd89"
+    },
+    {
+      "chapter": "backpropagation",
+      "fingerprint": "15d6dc5a4839f9e7f65d2c5dac477a244664797c2e94477741fc868193b00f37"
+    },
+    {
+      "chapter": "backpropagation",
+      "fingerprint": "876734bf4810225bcc68044657bd25c0a0ee4389a78073302615d0fa4ed35c14"
+    },
+    {
+      "chapter": "backpropagation",
+      "fingerprint": "e44b41dbaf3096753a4948aa552008a45852ddf5210a545baa1bcc73f274931a"
+    },
+    {
+      "chapter": "vanishing-exploding-gradients",
+      "fingerprint": "8d01abce0b6b1b9368d631e85c1e3b8326d968ab9fb8d6a56e43b1d8d8634beb"
+    },
+    {
+      "chapter": "vanishing-exploding-gradients",
+      "fingerprint": "20933958f4f67750344fb8bc279c3877344bd3aa85cc9b728804a61107561a5c"
+    },
+    {
+      "chapter": "vanishing-exploding-gradients",
+      "fingerprint": "71ec592e7e15491c88bc6a2b367b5bf1186760dca8cadeab33f0bc485ec19ed9"
+    },
+    {
+      "chapter": "vanishing-exploding-gradients",
+      "fingerprint": "02032c32b672751fa82890b37d680ca6bf775212d8234890c878349c6fed694a"
+    },
+    {
+      "chapter": "vanishing-exploding-gradients",
+      "fingerprint": "edc980cd02adb57b0cbccedc66fe335a9cb0356cbb553b970e81db6d307673bd"
+    },
+    {
+      "chapter": "vanishing-exploding-gradients",
+      "fingerprint": "5d58b3d919b0e1ddb2abda90cc1243b24bad00746943121c613fd944fb31d0f3"
+    },
+    {
+      "chapter": "vanishing-exploding-gradients",
+      "fingerprint": "8f36f318b0a6266e43ccdff3f4fc38d598cdc15b3f285b962fc4b0aea9a61d18"
+    },
+    {
+      "chapter": "vanishing-exploding-gradients",
+      "fingerprint": "3cf5c822667a977033e3475de36d8d619b90c9e426e4cec72e7bbf66ac3bdc73"
+    },
+    {
+      "chapter": "optimizer-selection",
+      "fingerprint": "ae4cbed54debbe9b491117f842756e984ba3f26ed093024193add667919fbb23"
+    },
+    {
+      "chapter": "optimizer-selection",
+      "fingerprint": "37097d9faaffa7d32c521c94970408fced3ab063352ab1cc88bfb87a77241c17"
+    },
+    {
+      "chapter": "optimizer-selection",
+      "fingerprint": "e45a400ec46ab54433f3860e5df7561e398c059a9b9eec98d1e5e9ae61932324"
+    },
+    {
+      "chapter": "optimizer-selection",
+      "fingerprint": "c684b3ce4733fb3b3543a2983ac31b62a954bca4313bf33aef6421cc3f2aa505"
+    },
+    {
+      "chapter": "optimizer-selection",
+      "fingerprint": "caedeeee27912e58137bdbefd91da7867432dcec5a49ee2bba624159ce7e1a6d"
+    },
+    {
+      "chapter": "optimizer-selection",
+      "fingerprint": "12bb2336d1fbfa95f55830ba09243f70e21cbb59dc2e747d9f691cdecde74775"
+    },
+    {
+      "chapter": "optimizer-selection",
+      "fingerprint": "22ac92394f45864595f7208a5fa74748063473bbe01a4e025b244658e49afc21"
+    },
+    {
+      "chapter": "optimizer-selection",
+      "fingerprint": "256577ea3f5a7ea2f422f6221a82922614c20f2a40da67f46e427864c4f42ef6"
+    },
+    {
+      "chapter": "fine-tuning-and-distillation",
+      "fingerprint": "9ba50abe805906f784c48aa5ce11b993b5f498618e81a4a60c15fabb3d92f01e"
+    },
+    {
+      "chapter": "fine-tuning-and-distillation",
+      "fingerprint": "13f399f818f8c5c02809ff0f6dd7a0577b96e6306edefa95536b7f34b70b0b4b"
+    },
+    {
+      "chapter": "fine-tuning-and-distillation",
+      "fingerprint": "4cddc979ccbde11951d5e36649850c66f93ea40297b007294db22795ade23b26"
+    },
+    {
+      "chapter": "embedding-evolution",
+      "fingerprint": "fcc48e7d3c910a73cbe675d7004193a14bdc07d21640737389d80ecec5027dd1"
+    },
+    {
+      "chapter": "embedding-evolution",
+      "fingerprint": "8817a68e7d682fe7150da33454b47b66ea4eec84249bcf7fcf92fe6e5aae1946"
+    },
+    {
+      "chapter": "embedding-evolution",
+      "fingerprint": "41f4fb686316f7d32a6048fbeb911f936fb181bf37ebd54bfb869e3b56cd9805"
+    },
+    {
+      "chapter": "embedding-evolution",
+      "fingerprint": "fb73e62e29f37f6c8f12a7ac5768b81b9fe00080c671e859ac723c6bfae190c4"
+    },
+    {
+      "chapter": "embedding-evolution",
+      "fingerprint": "b42d8e07072e4da829c4d2db07ae2fe3119a942f5d817e57f6f95967bffbff72"
+    },
+    {
+      "chapter": "transformer-architecture",
+      "fingerprint": "ac07dde9e8e2fb2cdd2412d96a0008b88334b490f87a0156e6423604b9cf3eb8"
+    },
+    {
+      "chapter": "transformer-architecture",
+      "fingerprint": "548a062cd96f41e456a5330a934188a678bdf8e167b31cd6361fbf3135da9fa1"
+    },
+    {
+      "chapter": "transformer-architecture",
+      "fingerprint": "63e53984bdbac3b46f86fd9d82d47d9c94917ea9a39fc23ffdfd99896f0e1e2b"
+    },
+    {
+      "chapter": "transformer-architecture",
+      "fingerprint": "d68a001ce3dd371236752a7ae6959afd3776fe7390ef913fa51975882b75dcd8"
+    },
+    {
+      "chapter": "transformer-architecture",
+      "fingerprint": "fce0108f51b5c6e89fe2a35b2d3e85895f8fcb936ee7ade8cadc9511f89882c2"
+    },
+    {
+      "chapter": "transformer-architecture",
+      "fingerprint": "3ae6d4d29575e9de25622f67fbfdd140615dfa2d158358a3f5cfcdc59028c451"
+    },
+    {
+      "chapter": "transformer-architecture",
+      "fingerprint": "91a31df67eab3fed333094cc7c538b50e5256bc7cde9fb61e0249bb77cf43870"
+    },
+    {
+      "chapter": "transformer-architecture",
+      "fingerprint": "8bab87201a850fc6b093f76938cfac38af41cfbbbc5d72f3092e3b3550722183"
+    },
+    {
+      "chapter": "transformer-architecture",
+      "fingerprint": "3c692f581409e91654dbb4a9296a05aecb211ab0ffe878676d36012410b91577"
+    },
+    {
+      "chapter": "transformer-architecture",
+      "fingerprint": "3d7a35e8e3a78c2098373f0b9ea60bdc3ddbfb89999105e63be27671f6420dd3"
+    },
+    {
+      "chapter": "transformer-architecture",
+      "fingerprint": "10980afaa5b94068d7a5c6f298ea4184cae210d87d22d2e9392515a6ee09eb1f"
+    },
+    {
+      "chapter": "transformer-architecture",
+      "fingerprint": "0800ae3ef5072576445f61e99b3fab58f7ad97e922e8a1975fb4db51660b2f15"
+    },
+    {
+      "chapter": "transformer-architecture",
+      "fingerprint": "6a8cc7dc030152d4683418e4fac8fcb642459a090f391202aa5dff85b9fbf19d"
+    },
+    {
+      "chapter": "softmax-gradient-scaling",
+      "fingerprint": "97b433afb132c1719d16842b9d4df66358a42e02363cf4f1d0a4929a01ca02c3"
+    },
+    {
+      "chapter": "softmax-gradient-scaling",
+      "fingerprint": "b6d27618d827b01c0ccf4f20093ae5c697041ebed0b3406d708d5909ee9019d8"
+    },
+    {
+      "chapter": "softmax-gradient-scaling",
+      "fingerprint": "49f65b4290a97e6b936e8a5585518834f8a109dc1eeb86e8a4b0e4098ff836f8"
+    },
+    {
+      "chapter": "softmax-gradient-scaling",
+      "fingerprint": "94bd115bc8ac69f07fe75c4573ed098526eb77801d96124372aa9bdc5afa858e"
+    },
+    {
+      "chapter": "softmax-gradient-scaling",
+      "fingerprint": "53c2901d4bea5ea732bf90b0b53246847dc4e29821d1ee2995d77ab8372ce853"
+    },
+    {
+      "chapter": "softmax-gradient-scaling",
+      "fingerprint": "f12aabb3da60e8a76df151c1599b2f199c32c47f0994b7e0fc3ab8b2b6b9df35"
+    },
+    {
+      "chapter": "softmax-gradient-scaling",
+      "fingerprint": "37b5ccbc41cb45faddb62e5589be84997d73062437e43a00f8c821b9e6e12e2a"
+    },
+    {
+      "chapter": "softmax-gradient-scaling",
+      "fingerprint": "fe3abe5d122d0bdbd4547066759df014205120481acc9a8e1588ff60eb4ef976"
+    },
+    {
+      "chapter": "softmax-gradient-scaling",
+      "fingerprint": "68f16fbbdac4f0c46d27348c6f4b1463b6ce98913bc77540df624c20b8fbe1a2"
+    },
+    {
+      "chapter": "softmax-gradient-scaling",
+      "fingerprint": "cc7a18d750ce969eecd36f1e8f7a4271a3b04fc55cfada0ed51bc4f0412a599a"
+    },
+    {
+      "chapter": "softmax-gradient-scaling",
+      "fingerprint": "95c098b9728bdfc3bf427cb2b6b18b62f96cf0c01f1ef184e5b0cfe4a9474e6c"
+    },
+    {
+      "chapter": "residual-connections",
+      "fingerprint": "d3eefb766d19e43e650e230cc76f7cf14ec7fee0826d62d2594745acc23918e7"
+    },
+    {
+      "chapter": "layer-norm",
+      "fingerprint": "e20e41ce99a061ea2529a095cb645321a6b1cd844c7c0dee5704a6490a68c85a"
+    },
+    {
+      "chapter": "layer-norm",
+      "fingerprint": "3f3f6fb1fc9afea86daadf7f30e417a35dcf7aef6bf31faaddf9c5a2107e002f"
+    },
+    {
+      "chapter": "layer-norm",
+      "fingerprint": "1159471446e5faeed3a68eac3a198dbede360f622a85f9324b6b00e66abf47de"
+    },
+    {
+      "chapter": "layer-norm",
+      "fingerprint": "1982b45cda5a05b7932ad7ade184f06551c744a8db2ccd9420efa892d68ed76d"
+    },
+    {
+      "chapter": "layer-norm",
+      "fingerprint": "91a31df67eab3fed333094cc7c538b50e5256bc7cde9fb61e0249bb77cf43870"
+    },
+    {
+      "chapter": "layer-norm",
+      "fingerprint": "a8f4992f0cd6854547db3af4ba45589732c8c543e6f2e8dd8a3e34cb4c1ef1d4"
+    },
+    {
+      "chapter": "llm-generation",
+      "fingerprint": "f939284ef51df8e41338abe2b9d585ea0b9c025039ad5e343aaf62f5bd0d6faf"
+    },
+    {
+      "chapter": "llm-generation",
+      "fingerprint": "7e5f4dab1ecc622104fff53d827585126fca6657d23533420a70165ed8a2b7c1"
+    },
+    {
+      "chapter": "llm-external-interaction",
+      "fingerprint": "53c4fcf2de00a9ae3ef51720885d7f3e1005c3ead767bf44ed937dcf5fe192dc"
+    },
+    {
+      "chapter": "llm-infrastructure",
+      "fingerprint": "db63cbd6d87643fc102bad23a844b3a7bd51ca32994e2d2367a923c1f616d267"
+    },
+    {
+      "chapter": "generative-ai-probability-and-innovation",
+      "fingerprint": "85ffd95cc8ad7d67c2962391d57795233ef92bfd50a4fbe93ab3b8d5ab270c05"
+    },
+    {"chapter": "ai-math-foundations", "fingerprint": "ae95e38ba5d68dfb466190cbdfc63f9bb51a24120b5d6a896900b71150e61b2c"},
+    {"chapter": "from-onehot-to-embedding", "fingerprint": "a9c5908810f5072deb43d4944859b867c5b00f0048e30cec038aed34cf301863"},
+    {"chapter": "cross-entropy", "fingerprint": "ac12353a3c54ffd29313e6810e07548e1b2a490eea869b4a62bd0a6394332524"},
+    {"chapter": "cross-entropy", "fingerprint": "a737aae574815280402214ce78d1e430767159b14a6b870fbcc7d19bbad6f00d"},
+    {"chapter": "cross-entropy", "fingerprint": "3092a646519e8a4ae6aebbc12fe9c031a43ac1703c8994b565cbe091700b2dac"},
+    {"chapter": "cross-entropy", "fingerprint": "d64363c737e5142ad67832d45f5568d0c8fbcad5c7b542406d8c35136564d513"},
+    {"chapter": "backpropagation", "fingerprint": "10bf966a82e56caa56fe2b34f15cfada6d3543fc6d21fcce29b683d90ad4fdef"},
+    {"chapter": "backpropagation", "fingerprint": "c4485d45f36f206bfc356bd525a927718bdf3881e9dd28ab834d89aeddb06119"},
+    {"chapter": "vanishing-exploding-gradients", "fingerprint": "23cbf155cee1c0108bc81f0c5a7dfbf6ed3d4cd7be5910f02a851195555f33be"},
+    {"chapter": "embedding-evolution", "fingerprint": "5afc9d4099050a7f40355786452519a0d7b21de19112babefdd2cd1611a0f841"},
+    {"chapter": "from-onehot-to-embedding", "fingerprint": "6f0ce408d33b9141e0a91d2e8ed5ec674710440da926b3bd73daa1c3cb65e828"},
+    {"chapter": "activation-functions", "fingerprint": "58d6ae7dc05225c32ad85e1581d4a0753e199a379a99e6ad95b25c242b17b996"},
+    {"chapter": "backpropagation", "fingerprint": "9355d17cbee825bb301af7e7284978fc81f1f1aeaaa383e828c418afc59a18f8"},
+    {"chapter": "backpropagation", "fingerprint": "56d4726c3447b9c6aadc80e845b17cd8b3dc790213259181040d9bef4ac87fcb"},
+    {"chapter": "vanishing-exploding-gradients", "fingerprint": "b4139eca80fca833d76eecfd547dc997594cdca8ae8cc4e97b3271a740553ad6"},
+    {"chapter": "vanishing-exploding-gradients", "fingerprint": "d4c12460710b0e20d4803e459944bce1dbc616b9482005076621ba6e2252c55f"},
+    {"chapter": "residual-connections", "fingerprint": "b180adbca2da1d553a30e8862748bf4483ebb9356b4aab052357e75c3c8b6cbc"},
+    {"chapter": "residual-connections", "fingerprint": "b30e1f7430cb6205c5f270219a45b4c8a5e62dc5c2ed58a649ef3bc767ae0428"},
+    {"chapter": "residual-connections", "fingerprint": "0d9d34020eaab8260b55a208de8d3c719bf057da8005bcd9989ed6b4cbd00b6e"},
+    {"chapter": "layer-norm", "fingerprint": "58d6ae7dc05225c32ad85e1581d4a0753e199a379a99e6ad95b25c242b17b996"},
+    {"chapter": "llm-inference-nondeterminism", "fingerprint": "4938458aacfd47da5c858543e977309c2c951bb929a0a9391d30045ca0c696c9"}
+  ]
+}

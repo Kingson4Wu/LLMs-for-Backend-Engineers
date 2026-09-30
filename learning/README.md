@@ -14,7 +14,7 @@
 
 ### Clone + Codex（逐图、公式和源码核对时更合适）
 
-在仓库根目录启动 Codex。它会读取 `AGENTS.md`；先要求它阅读本文件、[全书地图](BOOK_MAP.md)、[学习索引](index.json)和对应语言的学习契约：[中文](LEARNING_CONTRACT.zh-Hans.md) / [English](LEARNING_CONTRACT.en.md)。中文是源内容，英文是映射镜像。
+在仓库根目录启动 Codex。它会读取 `AGENTS.md`；先要求它阅读本文件、[全书地图](BOOK_MAP.md)、[学习索引](index.json)和所选语言的学习契约：[中文](LEARNING_CONTRACT.zh-Hans.md) / [English](LEARNING_CONTRACT.en.md)。中英文是严格对齐的对应版本，应优先读取学习者选择的同语言书稿。
 
 ## 学习产物属于学习者
 

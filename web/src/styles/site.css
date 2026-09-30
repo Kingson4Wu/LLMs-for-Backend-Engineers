@@ -2,7 +2,7 @@
   --bg: #f6f4ed;
   --surface: #eeece3;
   --ink: #23332f;
-  --muted: #646e65;
+  --muted: #606a61;
   --line: #d6d8cd;
   --accent: #b34a2e;
   --accent-soft: #eac7b4;
@@ -442,6 +442,9 @@ em {
   font-size: 22px;
 }
 .part-section h3 a {
+  display: inline-flex;
+  align-items: center;
+  min-height: 24px;
   color: inherit;
   text-decoration: none;
 }

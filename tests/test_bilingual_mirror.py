@@ -6,6 +6,27 @@ sys.path.insert(0, str(Path(__file__).resolve().parents[1] / "tools" / "book-kit
 
 
 class BilingualMirrorTests(unittest.TestCase):
+    def test_formula_semantics_ignore_localized_text_but_reject_math_changes(self):
+        from audit_bilingual_mirror import compare_formula_semantics
+
+        self.assertEqual(
+            compare_formula_semantics(
+                [r"H(P,Q)=-\\log Q_{\\text{正确类}}"],
+                [r"H(P,Q)=-\\log Q_{\\text{correct class}}"],
+            ),
+            [],
+        )
+        self.assertEqual(
+            compare_formula_semantics([r"y=Wx+b"], [r"y=Wx-b"]),
+            ["Formula 1 mathematical structure differs"],
+        )
+
+    def test_full_catalogue_is_a_strict_bilingual_structural_mirror(self):
+        from audit_bilingual_mirror import audit_book
+
+        root = Path(__file__).resolve().parents[1]
+        self.assertEqual(audit_book(root), {})
+
     def test_ai_learning_guide_is_a_strict_bilingual_appendix_mirror(self):
         from audit_bilingual_mirror import audit_book
         import json

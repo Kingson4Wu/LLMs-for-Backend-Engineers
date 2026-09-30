@@ -1,0 +1,11 @@
+{
+  "schema_version": 1,
+  "id": "serving-kv-cache-tradeoff",
+  "artifact_requirements": {"locale": "zh-Hans", "complete_format": "markdown", "file": "Understanding-LLMs.md"},
+  "learner_task": "Explain why KV Cache can reduce repeated computation while also constraining capacity, and separate latency, throughput, and memory trade-offs.",
+  "source_locations": [{"chapter_id": "inference-performance-capacity", "title": "推理服务的性能与容量：延迟、吞吐与 KV Cache 怎样互相制约", "path": "chapters/part4-serving-runtime/inference-performance-capacity.md", "heading": "KV Cache：速度优化，也是容量约束"}],
+  "required_labels": ["book_evidence", "inference", "external_verification"],
+  "comprehension_question": "Why can a longer active context reduce the number of requests a server can hold at once?",
+  "prohibited_claims": ["KV Cache is persistent user memory that survives independent requests."],
+  "figure_format_limitations": "If capacity diagrams or axes are not available in the artifact, do not infer unshown thresholds or numeric limits."
+}

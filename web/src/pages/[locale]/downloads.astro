@@ -155,7 +155,7 @@ const htmlExists = fs.existsSync(
       </a>
     </p>
     <h2>{t(locale, '本地构建', 'Build locally')}</h2>
-    <pre><code>{`python3 tools/book-kit/export_markdown.py --locale ${locale}\npython3 tools/book-kit/build_print_html.py --locale ${locale}\npython3 tools/book-kit/export_epub.py --locale ${locale}\npython3 tools/book-kit/export_book_pdf.py --locale ${locale}`}</code></pre>
+    <pre tabindex="0" aria-label={t(locale, '本地构建命令', 'Local build commands')}><code>{`python3 tools/book-kit/export_markdown.py --locale ${locale}\npython3 tools/book-kit/build_print_html.py --locale ${locale}\npython3 tools/book-kit/export_epub.py --locale ${locale}\npython3 tools/book-kit/export_book_pdf.py --locale ${locale}`}</code></pre>
     <p>
       {t(
         locale,

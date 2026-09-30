@@ -23,5 +23,3 @@ Readers can follow the full route in the introduction or start with a problem th
 ## Contributing
 
 The manuscript and build sources are publicly hosted on GitHub. Questions, suggestions, and corrections are welcome. Feedback can include a difficult passage, your interpretation, and what remains unclear.
-
-The book content and build sources are released under the [MIT License](https://github.com/kingson4wu/Understanding-LLMs/blob/main/LICENSE).

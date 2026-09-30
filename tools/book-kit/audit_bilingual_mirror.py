@@ -19,12 +19,39 @@ LIST = re.compile(r"^\s*(?:[-*+] |\d+[.)] )")
 TABLE = re.compile(r"^\s*\|.+\|\s*$")
 QUOTE = re.compile(r"^\s*>")
 FENCE = re.compile(r"^\s*(```|~~~)")
+DISPLAY_MATH = re.compile(r"^\$\$\s*(.*?)\s*\$\$$", re.MULTILINE | re.DOTALL)
+LOCALIZED_TEX_TEXT = re.compile(r"\\text\{[^{}]*\}")
 
 
 def normalized_fingerprint(text: str) -> str:
     """Return a stable fingerprint for a source unit without its presentation."""
     normalized = re.sub(r"\s+", " ", text).strip()
     return hashlib.sha256(normalized.encode("utf-8")).hexdigest()
+
+
+def formula_semantic_fingerprint(formula: str) -> str:
+    """Fingerprint mathematical notation while excluding translated TeX labels.
+
+    ``\\text{...}`` is explanatory prose in this book's display equations; its
+    language may legitimately differ between editions. Operators, variables,
+    delimiters, and every non-text TeX construct remain part of the fingerprint.
+    """
+    without_localized_text = LOCALIZED_TEX_TEXT.sub(r"\\text{}", formula)
+    return normalized_fingerprint(without_localized_text)
+
+
+def compare_formula_semantics(zh_formulas: list[str], en_formulas: list[str]) -> list[str]:
+    """Require paired display equations to retain their mathematical structure."""
+    errors: list[str] = []
+    shared = min(len(zh_formulas), len(en_formulas))
+    for ordinal in range(shared):
+        if formula_semantic_fingerprint(zh_formulas[ordinal]) != formula_semantic_fingerprint(en_formulas[ordinal]):
+            errors.append(f"Formula {ordinal + 1} mathematical structure differs")
+    for ordinal in range(shared, len(zh_formulas)):
+        errors.append(f"Chinese has an unmapped formula at ordinal {ordinal + 1}")
+    for ordinal in range(shared, len(en_formulas)):
+        errors.append(f"English has an unmapped formula at ordinal {ordinal + 1}")
+    return errors
 
 
 def inventory_markdown(source: str) -> list[dict[str, str | int]]:
@@ -280,6 +307,7 @@ def audit_book(
         zh_units = inventory_markdown(zh_source)
         en_units = inventory_markdown(en_source)
         article_errors = compare_inventories(zh_units, en_units)
+        article_errors.extend(compare_formula_semantics(DISPLAY_MATH.findall(zh_source), DISPLAY_MATH.findall(en_source)))
         figure_pairs = [
             pair for pair in figure_manifest["pairs"] if pair["chapter"] == zh["id"]
         ]

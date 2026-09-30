@@ -1,0 +1,61 @@
+{
+  "version": 1,
+  "claim": {
+    "required": [
+      "id",
+      "chapter",
+      "heading",
+      "anchor_text",
+      "kind",
+      "sources",
+      "expectation",
+      "review"
+    ],
+    "kinds": ["stable-mechanism", "boundary", "time-sensitive"],
+    "boundary_requires": ["must_not_imply"]
+  },
+  "formula": {
+    "required": [
+      "id",
+      "chapter",
+      "heading",
+      "anchor_text",
+      "evaluator",
+      "inputs",
+      "expected",
+      "tolerance",
+      "domain",
+      "review"
+    ],
+    "formula_binding": ["formula_anchor", "formula_fingerprint"],
+    "evaluators": ["softmax", "cross_entropy_one_hot", "chain_rule_product", "masked_attention", "layer_norm", "temperature_softmax", "kv_cache_bytes"]
+  },
+  "review": {
+    "required": [
+      "reviewed_at",
+      "reviewer",
+      "proposition",
+      "conditions_and_quantifiers",
+      "formula_symbols_and_units",
+      "figure_meaning",
+      "link_target",
+      "english_heading",
+      "english_anchor_text"
+    ]
+  },
+  "source_lock": {
+    "required": [
+      "chapter",
+      "zh_digest",
+      "en_digest",
+      "english_heading",
+      "english_anchor_text",
+      "reviewed_at",
+      "reviewer"
+    ]
+  },
+  "provenance": {
+    "types": ["paper", "specification", "official-documentation"],
+    "required": ["type", "url", "locator", "published_or_versioned_at", "retrieved_at"]
+  }
+}

@@ -4,11 +4,11 @@
 
 This book uses an Astro reading website and independent Pandoc publication tools. Preserve the four-part structure and descriptive source filenames.
 
-- `book/book.json`: Chinese book metadata; `book/catalog.json`: ordered frontmatter and grouped articles.
+- `book/book.json`: Chinese-edition metadata and the shared article ordering reference; `book/catalog.json`: ordered frontmatter and grouped articles.
 - `book/editions.json`: available languages and source directories.
-- `book/chapters/`: Chinese source, divided into mathematics and machine-learning foundations, LLM internals, external systems, and LLM infrastructure.
+- `book/chapters/`: Simplified Chinese edition, divided into mathematics and machine-learning foundations, LLM internals, external systems, and LLM infrastructure.
 - `book/parts/`: four website-only part landing pages; each is reached by its part title and is not a numbered core chapter.
-- `book/translations/en/`: English mirror, localized catalog/metadata, glossary and source hashes.
+- `book/translations/en/`: English counterpart, localized catalog/metadata, glossary and alignment hashes.
 - `book/SUMMARY.md`: generated legacy navigation; update via `validate_book.py --write-summary`.
 - `web/`: Astro homepage, reader, search, typography and local reading data.
 - `tools/book-kit/`: validation and standalone Markdown/print HTML/PDF/EPUB generation.
@@ -39,7 +39,7 @@ Run the block from the repository root after installing publication prerequisite
 - Before drafting or revising book prose, follow [BOOK_CONTENT_GUIDELINES.md](BOOK_CONTENT_GUIDELINES.md). It defines the book's required global framing, clear causal explanations, and selective mechanism-level depth.
 - No duplicate article IDs or duplicated publication entries; groups are not chapters.
 - Do not silently substitute Chinese for a missing requested language.
-- English source hashes track change, not translation quality; preserve AI-assisted review disclosure.
+- Alignment hashes track synchronized changes, not edition rank or translation quality; keep the two published editions strictly matched.
 - Body max width 900px; centered responsive images; `text-rendering: optimizeLegibility`.
 - Validate Chinese/English typography, 390px mobile and desktop, light/dark, formulas, code, tables, keyboard access.
 - Local notes are private browser storage with export/import, not a cloud service.

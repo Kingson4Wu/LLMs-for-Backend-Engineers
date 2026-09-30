@@ -10,6 +10,13 @@ test('downloads present the specific AI learning routes', async () => {
   );
   assert.match(downloads, /Codex/);
   assert.match(downloads, /ChatGPT/);
+  assert.match(downloads, /<pre tabindex="0"/);
+});
+
+test('reader styles retain accessible contrast and touch targets', async () => {
+  const styles = await readFile(new URL('../src/styles/site.css', import.meta.url), 'utf8');
+  assert.match(styles, /--muted:\s*#606a61/);
+  assert.match(styles, /\.part-section h3 a\s*\{[^}]*min-height:\s*24px/s);
 });
 
 test('homepage has one tool-neutral learning action that stays inside the reader', async () => {

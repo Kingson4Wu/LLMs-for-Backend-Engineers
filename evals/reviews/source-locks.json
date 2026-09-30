@@ -1,0 +1,283 @@
+{
+  "locks": [
+    {
+      "chapter": "backpropagation",
+      "zh_digest": "2b540f6ae602da25d8e843ae2a2c2e527e539ff05ea04439f9b0ede65443eafb",
+      "en_digest": "36a2698012890352ef37573b4bc2f60bc5460eac49d448f59d34268aea6ad448",
+      "english_heading": "Backpropagation: How Error Reaches Each Parameter",
+      "english_anchor_text": "Backpropagation: How Error Reaches Each Parameter",
+      "reviewed_at": "2026-09-29",
+      "reviewer": "Kingson Wu"
+    },
+    {
+      "chapter": "cross-entropy",
+      "zh_digest": "74365d587b8dd0f1fc06262d973251b99334ac6d6f0ee9367ba7248df7105e43",
+      "en_digest": "5cbf31c3a83c22604a7b48d59ca7760f1db9b1ca3673b40024a39da873265e59",
+      "english_heading": "Cross-Entropy: How to Measure Prediction Error",
+      "english_anchor_text": "Cross-Entropy: How to Measure Prediction Error",
+      "reviewed_at": "2026-09-29",
+      "reviewer": "Kingson Wu"
+    },
+    {
+      "chapter": "function-calling-tool-use",
+      "zh_digest": "9ef2aaed69695675737ce2ec4522f9837018a98465ad9389315e2aa9229ea75f",
+      "en_digest": "f91a2dd5fd2aed528383cff6d68b1c92474a3bd4873aa70426ec95df8834ac12",
+      "english_heading": "Function Calling and Tool Use: Mechanism, Difference, and Essence",
+      "english_anchor_text": "Function Calling and Tool Use: Mechanism, Difference, and Essence",
+      "reviewed_at": "2026-09-29",
+      "reviewer": "Kingson Wu"
+    },
+    {
+      "chapter": "llm-generation",
+      "zh_digest": "2ab2299126bf432d7162a7a7cd8bdd787cc12737e8f2969f1dd7de0ef3efd06e",
+      "en_digest": "538a68da2ecc54688a388f94fd397ab06e5458606a030a466e9fca427992704f",
+      "english_heading": "LLM Generation: From Input to the Next Token",
+      "english_anchor_text": "LLM Generation: From Input to the Next Token",
+      "reviewed_at": "2026-09-29",
+      "reviewer": "Kingson Wu"
+    },
+    {
+      "chapter": "llm-infrastructure",
+      "zh_digest": "17498fc57735108a59a72ad12e05b5bb00cff4a3296ff10aabd1d178ca9327b5",
+      "en_digest": "e96bdf2be9777ed2bcd2a070691a6cd8944eb238ebca85934c593f9e010aecdc",
+      "english_heading": "LLM Infrastructure: How a Model Becomes a Reliable Service",
+      "english_anchor_text": "LLM Infrastructure: How a Model Becomes a Reliable Service",
+      "reviewed_at": "2026-09-29",
+      "reviewer": "Kingson Wu"
+    },
+    {
+      "chapter": "mhs-mcp-domain-capability-protocol",
+      "zh_digest": "efeece8eef1fe5473a3f075c30457abc8a6c41be7e80f9d0a9e696333e6532ce",
+      "en_digest": "a5e48be3f0d0cd47c33c2da470e276c2f815251ce23b2a2b47aebf45c79ca1f0",
+      "english_heading": "From MHS and MCP to Domain Capability Protocols",
+      "english_anchor_text": "From MHS and MCP to Domain Capability Protocols",
+      "reviewed_at": "2026-09-29",
+      "reviewer": "Kingson Wu"
+    },
+    {
+      "chapter": "rag-context-evidence",
+      "zh_digest": "5033e8c84401ac934be6de580bbe3d4114042fb503e3f1b7895d32badaa993b7",
+      "en_digest": "3484b14ab538a0e8b1bf59bfc1184c2a1a30c23b60430927f9fa14e794d630c3",
+      "english_heading": "RAG and Context Engineering: How Evidence Enters a Model",
+      "english_anchor_text": "RAG and Context Engineering: How Evidence Enters a Model",
+      "reviewed_at": "2026-09-29",
+      "reviewer": "Kingson Wu"
+    },
+    {
+      "chapter": "softmax",
+      "zh_digest": "371256f99a44edc3ff993bd2d0c946f6842140908a9a8c1e759dcfe1e9aa4c53",
+      "en_digest": "5ccbc77035cab850959cb3c50e1011f129a23a3284ca6da481a81070525303fe",
+      "english_heading": "Softmax: How Scores Become Probabilities",
+      "english_anchor_text": "Softmax: How Scores Become Probabilities",
+      "reviewed_at": "2026-09-29",
+      "reviewer": "Kingson Wu"
+    },
+    {
+      "chapter": "transformer-architecture",
+      "zh_digest": "6d03cc584a9f377c940861b0d9286678d003c464b0d618cbab2765bc70347c24",
+      "en_digest": "fd8b8f3482b9a57f6b670fefaff69ec3c51d0fb17d87dbe31b8c75419e4d66a7",
+      "english_heading": "Transformer architecture: understanding from data flow",
+      "english_anchor_text": "Transformer architecture: understanding from data flow",
+      "reviewed_at": "2026-09-29",
+      "reviewer": "Kingson Wu"
+    },
+    {
+      "chapter": "vanishing-exploding-gradients",
+      "zh_digest": "dd6850d23b6f6bc3e53482c410d05d2e8ca1948200ebb60ebfdcc1cc408e81bb",
+      "en_digest": "28dfeb2f153a304cfd49a2461971c5a008c3629ee91bfc00f225638074e57782",
+      "english_heading": "Vanishing and Exploding Gradients: Why Deep Networks Are Hard to Train",
+      "english_anchor_text": "Vanishing and Exploding Gradients: Why Deep Networks Are Hard to Train",
+      "reviewed_at": "2026-09-30",
+      "reviewer": "baseline curation"
+    },
+    {
+      "chapter": "residual-connections",
+      "zh_digest": "84a8f45c05b0ffe1d7ddaa591073f4e9d5f93cb92f630a7561097e90a0623cd5",
+      "en_digest": "ad37a6326fd3839496cc29ed78aef31b630346b096d39f8d97f9840bcce00081",
+      "english_heading": "Residual Connections: Why Deep Networks Remain Trainable",
+      "english_anchor_text": "Residual Connections: Why Deep Networks Remain Trainable",
+      "reviewed_at": "2026-09-30",
+      "reviewer": "baseline curation"
+    },
+    {
+      "chapter": "layer-norm",
+      "zh_digest": "85787bde7f47f9e00c130527bfbcb034e22c70f808e2c6990a511aa1c996d9d5",
+      "en_digest": "5d87f9816f434312bd20ec03210954563a35635427f5459dd9ab8bed25f3449d",
+      "english_heading": "LayerNorm: Keeping Representations Numerically Stable",
+      "english_anchor_text": "LayerNorm: Keeping Representations Numerically Stable",
+      "reviewed_at": "2026-09-30",
+      "reviewer": "baseline curation"
+    },
+    {
+      "chapter": "softmax-gradient-scaling",
+      "zh_digest": "cd3627bd943e8f704938b26922973b9bce4a4df008cbd471a52dcfda2d14c539",
+      "en_digest": "cd8447e566d3093ad5b4a7674e547690f27261d7864edd1926a9eef744a1b0aa",
+      "english_heading": "Scaled Dot Products: Why Softmax Gradients Become Extreme",
+      "english_anchor_text": "Scaled Dot Products: Why Softmax Gradients Become Extreme",
+      "reviewed_at": "2026-09-30",
+      "reviewer": "baseline curation"
+    },
+    {
+      "chapter": "fine-tuning-and-distillation",
+      "zh_digest": "ed97581ca10f76c205ecb2627c211620566075505f39c83defbf7f8743527241",
+      "en_digest": "d25d83b4ca3a71f49f8fe18727a5084a7e68dcc3867182ba46181531baccd1cb",
+      "english_heading": "Fine-Tuning and Distillation as Function Approximation",
+      "english_anchor_text": "Fine-Tuning and Distillation as Function Approximation",
+      "reviewed_at": "2026-09-30",
+      "reviewer": "baseline curation"
+    },
+    {
+      "chapter": "rnn-to-transformer",
+      "zh_digest": "b4a323c2ca38da37d4ab136e8d46c0b0433363b12cc6851e32285f092847ef5f",
+      "en_digest": "3f083184553733154fb555c90edd258d290ee3bc3f4a90d081cdd80953e078e3",
+      "english_heading": "From RNNs to Transformers: A Structural Change in Sequence Modeling",
+      "english_anchor_text": "From RNNs to Transformers: A Structural Change in Sequence Modeling",
+      "reviewed_at": "2026-09-30",
+      "reviewer": "baseline curation"
+    },
+    {
+      "chapter": "inference-performance-capacity",
+      "zh_digest": "7a13de386177897a92281c0f2a5a9a9c1f576731d5d280648856179b3acc6474",
+      "en_digest": "c0cf0bfb773d591651742c4e67ad1cc9a91930f6b38430a4c370ba004d046474",
+      "english_heading": "Inference Performance and Capacity: How Latency, Throughput, and KV Cache Constrain One Another",
+      "english_anchor_text": "Inference Performance and Capacity: How Latency, Throughput, and KV Cache Constrain One Another",
+      "reviewed_at": "2026-09-30",
+      "reviewer": "baseline curation"
+    },
+    {
+      "chapter": "optimizer-selection",
+      "zh_digest": "9a56b8bc966c011f575994fa04460eab2577b5e9d02aec758660938e2b699ad2",
+      "en_digest": "20938e4486b2d6eb944f04e14ff0e8410290df13e2875f7e3eb1fcef413da54f",
+      "english_heading": "Optimizers: How Gradients Become Parameter Updates",
+      "english_anchor_text": "Optimizers: How Gradients Become Parameter Updates",
+      "reviewed_at": "2026-09-30",
+      "reviewer": "baseline curation"
+    },
+    {
+      "chapter": "llm-inference-nondeterminism",
+      "zh_digest": "eac2e1f0f2ae6cb1b8f74d14c617d0b473da76674f4f2c9abc84834571251d2a",
+      "en_digest": "318094e42a097fad4fc16d920b985a9662c1e86b16c5b7c523b9dba73800d0c5",
+      "english_heading": "Why LLM Inference Is Not Fully Deterministic",
+      "english_anchor_text": "Why LLM Inference Is Not Fully Deterministic",
+      "reviewed_at": "2026-09-30",
+      "reviewer": "baseline curation"
+    },
+    {
+      "chapter": "serving-control-plane",
+      "zh_digest": "9635745783b4142cc4684042880a25377ab0a898699bd032225e1cb6a95ae98a",
+      "en_digest": "e99a4c8e133a233e1972a7a5f5d883c4cee56ac6d73ee023775e2609d82480c6",
+      "english_heading": "Serving Control Plane: Routing, Scaling, and Reliable Delivery",
+      "english_anchor_text": "Serving Control Plane: Routing, Scaling, and Reliable Delivery",
+      "reviewed_at": "2026-09-30",
+      "reviewer": "baseline curation"
+    },
+    {
+      "chapter": "agent-eval-business-quality-system",
+      "zh_digest": "876f914bc96457d52ffbc5af6aea2cb7df50a398d4a88f182528721c97695bb1",
+      "en_digest": "ad7f449afc4ca9273a87c58fd9d56bed0506978f684c32f5ad9f8e88973407a5",
+      "english_heading": "AI Agent Evaluation: From Tests to a Business Quality System",
+      "english_anchor_text": "AI Agent Evaluation: From Tests to a Business Quality System",
+      "reviewed_at": "2026-09-30",
+      "reviewer": "baseline curation"
+    },
+    {
+      "chapter": "ai-math-foundations",
+      "zh_digest": "f2864dfdfc4ac5f37df3f0f23d159834ad7c40b82775c6d07824e54f70e71c2c",
+      "en_digest": "2c50d6b395bea7dc4e60eef647d09ea4749c8e070e0ece2d4403e920dc38e20b",
+      "english_heading": "Mathematical and Machine-Learning Foundations of AI: A Panorama",
+      "english_anchor_text": "Mathematical and Machine-Learning Foundations of AI: A Panorama",
+      "reviewed_at": "2026-09-30",
+      "reviewer": "baseline curation"
+    },
+    {
+      "chapter": "from-onehot-to-embedding",
+      "zh_digest": "f340f38ab3b05be62fd636420b1cc74d3f8e39ad85dfb8c37dd334e816f2799d",
+      "en_digest": "2c057d1f0d65536a47c3391cd3f9c6153d7abad83f8db6a142b2b8425f574a1c",
+      "english_heading": "From One-Hot to Embeddings: How Discrete Tokens Become Vectors",
+      "english_anchor_text": "From One-Hot to Embeddings: How Discrete Tokens Become Vectors",
+      "reviewed_at": "2026-09-30",
+      "reviewer": "baseline curation"
+    },
+    {
+      "chapter": "dot-product-angle",
+      "zh_digest": "453dfa1179310f5ffa840dd9407fcc71255d17ef6e326fc1e383e603ee175253",
+      "en_digest": "d5042de1120a37b4e23d31afd60698d6d52a9b85247de2376034b42a6ab8dd66",
+      "english_heading": "Dot Products and Cosine Similarity: How Vectors Express Relationships",
+      "english_anchor_text": "Dot Products and Cosine Similarity: How Vectors Express Relationships",
+      "reviewed_at": "2026-09-30",
+      "reviewer": "baseline curation"
+    },
+    {
+      "chapter": "activation-functions",
+      "zh_digest": "60b581def5501dbd1c175b0b1ce6b5b05e4035c8092df326ab4d47e6c9d9f952",
+      "en_digest": "b37034d576b536215e10c917ca80fea4cafb5a579312b657009956b82119dad9",
+      "english_heading": "Activation Functions: Where Nonlinearity Comes From",
+      "english_anchor_text": "Activation Functions: Where Nonlinearity Comes From",
+      "reviewed_at": "2026-09-30",
+      "reviewer": "baseline curation"
+    },
+    {
+      "chapter": "perceptron-learning",
+      "zh_digest": "fdec9c538d4f87d5cb21067a8c83bfea2d2553955d84d5a630b35c7b543b0d21",
+      "en_digest": "b396687f0858c775483363278400e4563ec00f31fd2911d5bf24682a2fba584b",
+      "english_heading": "Perceptrons: How Parameters Update from Error",
+      "english_anchor_text": "Perceptrons: How Parameters Update from Error",
+      "reviewed_at": "2026-09-30",
+      "reviewer": "baseline curation"
+    },
+    {
+      "chapter": "model-training-lifecycle",
+      "zh_digest": "e7ad47522ad1098659fc7eba4307fcf4f485bb08563494c74fa29a4a974ff55a",
+      "en_digest": "f52b38aecc89e33dfdc7a1af8ee7c2a94c1a04901f9610e8f5b02b7834438554",
+      "english_heading": "How Models Acquire Their Capabilities Through Training",
+      "english_anchor_text": "How Models Acquire Their Capabilities Through Training",
+      "reviewed_at": "2026-09-30",
+      "reviewer": "baseline curation"
+    },
+    {
+      "chapter": "embedding-evolution",
+      "zh_digest": "b53f46b1f1176f0927df6aa56704b3112906729fcae175174a6d7b0178545d06",
+      "en_digest": "a525d9bfe997bcda1fe6218ceff865bc72200dfe2e8042339aebbe0caab4fe79",
+      "english_heading": "From Word2Vec to Transformers: The Changing Role of Embeddings",
+      "english_anchor_text": "From Word2Vec to Transformers: The Changing Role of Embeddings",
+      "reviewed_at": "2026-09-30",
+      "reviewer": "baseline curation"
+    },
+    {
+      "chapter": "multilingual-llms",
+      "zh_digest": "8eaae0de23faeca13b0e0edf7141f0eaf7de3f8e355f2d3d2460f6f8ac5e932f",
+      "en_digest": "52e1d764e189efc7669d90d2950a4284835729f54ffbb54ced7c43036c1b711f",
+      "english_heading": "Multilingual LLMs: How Languages Share Representations and Capabilities",
+      "english_anchor_text": "Multilingual LLMs: How Languages Share Representations and Capabilities",
+      "reviewed_at": "2026-09-30",
+      "reviewer": "baseline curation"
+    },
+    {
+      "chapter": "multimodal-models",
+      "zh_digest": "22cefc0cf688d773f9b387cc2eb229a854917b3caa9108370b581a01b01dfe15",
+      "en_digest": "ac2006691fb53ec4d232204e7a3a0f567134132686d5db5e4c605dcb7b9759d5",
+      "english_heading": "Multimodal Models: How Information Beyond Text Enters Computation",
+      "english_anchor_text": "Multimodal Models: How Information Beyond Text Enters Computation",
+      "reviewed_at": "2026-09-30",
+      "reviewer": "baseline curation"
+    },
+    {
+      "chapter": "llm-external-interaction",
+      "zh_digest": "4ebed2827f012f03072480ade22c8803bdab428b2915e8f435ccc207c136992a",
+      "en_digest": "f7ad22b55ccbf146fb110c857251ac7e4c79a760fcd6e99303ba386d90316554",
+      "english_heading": "How LLMs Interact with the External World: From Generation to Action",
+      "english_anchor_text": "How LLMs Interact with the External World: From Generation to Action",
+      "reviewed_at": "2026-09-30",
+      "reviewer": "baseline curation"
+    },
+    {
+      "chapter": "harness-runtime-skills",
+      "zh_digest": "41087f5187497b2dce3ce09c126660ba90f3e75fdb20d3c44c91e84c60ddf6a5",
+      "en_digest": "6b47e528422b01e894b096d1c1778966b6edaf5e23df67205b29b7003080e315",
+      "english_heading": "Harnesses, Agent Runtimes, and Skills: How Multi-turn Tasks Run Reliably",
+      "english_anchor_text": "Harnesses, Agent Runtimes, and Skills: How Multi-turn Tasks Run Reliably",
+      "reviewed_at": "2026-09-30",
+      "reviewer": "baseline curation"
+    }
+  ]
+}

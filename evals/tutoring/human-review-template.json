@@ -1,0 +1,32 @@
+{
+  "schema_version": 1,
+  "judgement": "unreviewed",
+  "learning_paths": ["ai-downloads-artifact", "user-supplies-artifact"],
+  "session_metadata": {
+    "reviewer": "",
+    "date": "",
+    "tool_and_model": "",
+    "artifact_url_or_local_name": "",
+    "artifact_sha256": ""
+  },
+  "checks": {
+    "complete_artifact_was_available": null,
+    "chapter_or_heading_locations_are_traceable": null,
+    "book_evidence_inference_and_external_verification_are_distinguished": null,
+    "one_concept_at_a_time_is_maintained": null,
+    "comprehension_question_follows_each_explanation": null,
+    "formula_and_figure_limits_are_stated_when_relevant": null,
+    "material_error_or_unsupported_claim": ""
+  },
+  "evidence": {
+    "prompt": "",
+    "transcript_or_secure_reference": "",
+    "book_locations_checked": [],
+    "reviewer_notes": ""
+  },
+  "limitations": [
+    "does_not_use_model_as_judge",
+    "does_not_claim_provider_or_model_generalization",
+    "human_reviewer_decides_the_judgement"
+  ]
+}
