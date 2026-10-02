@@ -1333,7 +1333,7 @@ textarea {
   transform: rotate(-30deg);
 }
 
-.reader > :not(.reading-watermark) {
+.reader > :not(.reading-watermark):not(.site-header):not(.skip) {
   position: relative;
   z-index: 1;
 }
