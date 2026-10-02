@@ -63,6 +63,19 @@ for (const file of [
 ]) {
   assert.ok(fs.existsSync(path.join(root, file)), `Missing AI learning asset: ${file}`);
 }
+for (const locale of ['en', 'zh-Hans']) {
+  const manuscript = `exported/${locale}/Understanding-LLMs.md`;
+  assert.ok(fs.existsSync(path.join(root, manuscript)), `Missing deployed manuscript: ${manuscript}`);
+  const home = htmls.get(path.join(root, locale, 'index.html'));
+  assert.ok(home, `Missing home page for ${locale}`);
+  assert.match(home, new RegExp(`${manuscript.replaceAll('/', '\\/').replace('.', '\\.')}`));
+  assert.doesNotMatch(home, /Understanding-LLMs\.pdf/);
+}
+assert.doesNotMatch(
+  fs.readFileSync(path.join(root, 'llms.txt'), 'utf8'),
+  /Understanding-LLMs\.pdf/,
+  'Machine-facing discovery must not advertise a PDF absent from Pages',
+);
 console.log(
   `Checked ${htmls.size} pages and ${checked} local references under ${base}`,
 );

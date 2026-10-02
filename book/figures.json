@@ -1187,6 +1187,114 @@
       "kind": "diagram",
       "id": "zh-diagrams-transformer-architecture-original-encoder-decoder-svg",
       "role": "informational"
+    },
+    {
+      "path": "book/assets/zh/diagrams/reasoning-models/direct-vs-deliberate.svg",
+      "kind": "diagram",
+      "id": "zh-diagrams-reasoning-models-direct-vs-deliberate-svg",
+      "role": "informational"
+    },
+    {
+      "path": "book/assets/zh/diagrams/reasoning-models/compute-allocation.svg",
+      "kind": "diagram",
+      "id": "zh-diagrams-reasoning-models-compute-allocation-svg",
+      "role": "informational"
+    },
+    {
+      "path": "book/assets/zh/diagrams/reasoning-models/training-signals.svg",
+      "kind": "diagram",
+      "id": "zh-diagrams-reasoning-models-training-signals-svg",
+      "role": "informational"
+    },
+    {
+      "path": "book/assets/en/diagrams/reasoning-models/direct-vs-deliberate.svg",
+      "kind": "diagram",
+      "id": "en-diagrams-reasoning-models-direct-vs-deliberate-svg",
+      "role": "informational"
+    },
+    {
+      "path": "book/assets/en/diagrams/reasoning-models/compute-allocation.svg",
+      "kind": "diagram",
+      "id": "en-diagrams-reasoning-models-compute-allocation-svg",
+      "role": "informational"
+    },
+    {
+      "path": "book/assets/en/diagrams/reasoning-models/training-signals.svg",
+      "kind": "diagram",
+      "id": "en-diagrams-reasoning-models-training-signals-svg",
+      "role": "informational"
+    },
+    {
+      "path": "book/assets/zh/diagrams/ai-loss-of-control/risk-escalation-threshold.svg",
+      "kind": "diagram",
+      "id": "zh-diagrams-ai-loss-of-control-risk-escalation-threshold-svg",
+      "role": "informational"
+    },
+    {
+      "path": "book/assets/en/diagrams/ai-loss-of-control/risk-escalation-threshold.svg",
+      "kind": "diagram",
+      "id": "en-diagrams-ai-loss-of-control-risk-escalation-threshold-svg",
+      "role": "informational"
+    },
+    {
+      "path": "book/assets/zh/diagrams/ai-loss-of-control/knowledge-reasoning-result.svg",
+      "kind": "diagram",
+      "id": "zh-diagrams-ai-loss-of-control-knowledge-reasoning-result-svg",
+      "role": "informational"
+    },
+    {
+      "path": "book/assets/en/diagrams/ai-loss-of-control/knowledge-reasoning-result.svg",
+      "kind": "diagram",
+      "id": "en-diagrams-ai-loss-of-control-knowledge-reasoning-result-svg",
+      "role": "informational"
+    },
+    {
+      "path": "book/assets/zh/diagrams/ai-loss-of-control/knowledge-discovery-loop.svg",
+      "kind": "diagram",
+      "id": "zh-diagrams-ai-loss-of-control-knowledge-discovery-loop-svg",
+      "role": "informational"
+    },
+    {
+      "path": "book/assets/en/diagrams/ai-loss-of-control/knowledge-discovery-loop.svg",
+      "kind": "diagram",
+      "id": "en-diagrams-ai-loss-of-control-knowledge-discovery-loop-svg",
+      "role": "informational"
+    },
+    {
+      "path": "book/assets/zh/diagrams/ai-loss-of-control/capability-permission-paths.svg",
+      "kind": "diagram",
+      "id": "zh-diagrams-ai-loss-of-control-capability-permission-paths-svg",
+      "role": "informational"
+    },
+    {
+      "path": "book/assets/en/diagrams/ai-loss-of-control/capability-permission-paths.svg",
+      "kind": "diagram",
+      "id": "en-diagrams-ai-loss-of-control-capability-permission-paths-svg",
+      "role": "informational"
+    },
+    {
+      "path": "book/assets/zh/diagrams/ai-loss-of-control/competition-feedback-loops.svg",
+      "kind": "diagram",
+      "id": "zh-diagrams-ai-loss-of-control-competition-feedback-loops-svg",
+      "role": "informational"
+    },
+    {
+      "path": "book/assets/en/diagrams/ai-loss-of-control/competition-feedback-loops.svg",
+      "kind": "diagram",
+      "id": "en-diagrams-ai-loss-of-control-competition-feedback-loops-svg",
+      "role": "informational"
+    },
+    {
+      "path": "book/assets/zh/diagrams/ai-loss-of-control/recursive-improvement-boundary.svg",
+      "kind": "diagram",
+      "id": "zh-diagrams-ai-loss-of-control-recursive-improvement-boundary-svg",
+      "role": "informational"
+    },
+    {
+      "path": "book/assets/en/diagrams/ai-loss-of-control/recursive-improvement-boundary.svg",
+      "kind": "diagram",
+      "id": "en-diagrams-ai-loss-of-control-recursive-improvement-boundary-svg",
+      "role": "informational"
     }
   ]
 }

@@ -10,7 +10,7 @@
 
 ## 从这里开始
 
-**推荐：[AI 辅助学习](https://kingson4wu.github.io/Understanding-LLMs/zh-Hans/read/ai-learning-guide/)。** 这本书是学习对话的证据底座，而不只是可被一次性总结的文档。在学习指南页复制启动提示词：它会要求 AI 下载完整中文 PDF，按你的目标给出最短路径，标注相关章节、公式和图，并以一次一个概念的方式检查你的理解。
+**推荐：[AI 辅助学习](https://kingson4wu.github.io/Understanding-LLMs/zh-Hans/read/ai-learning-guide/)。** 这本书是学习对话的证据底座，而不只是可被一次性总结的文档。在学习指南页复制启动提示词：它会要求 AI 下载完整中文 Markdown 书稿，按你的目标给出最短路径，标注相关章节、公式和图，并以一次一个概念的方式检查你的理解。
 
 按你的工具选择路径：
 
@@ -61,7 +61,7 @@ codex
 | --- | --- |
 | [在线阅读器](https://kingson4wu.github.io/Understanding-LLMs/zh-Hans/) | 需要搜索、响应式排版、公式、明暗主题、浏览器本地笔记和阅读进度。 |
 | [Markdown](https://kingson4wu.github.io/Understanding-LLMs/exported/zh-Hans/Understanding-LLMs.md) | 希望让 AI 或文本工具以结构化原稿读取全书。 |
-| [PDF](https://kingson4wu.github.io/Understanding-LLMs/exported/zh-Hans/Understanding-LLMs.pdf) | 需要公式和图完整的固定版式，或打印阅读。 |
+| [带版本 PDF](https://github.com/Kingson4Wu/Understanding-LLMs/releases) | 需要公式和图完整的固定版式，或打印阅读。选择 manifest 标明源版本的发行版。 |
 | [EPUB](https://kingson4wu.github.io/Understanding-LLMs/exported/zh-Hans/Understanding-LLMs.epub) | 在电子书阅读器或手机上使用可重排版式。 |
 
 下载页只展示当前构建中实际存在的文件；版本发布包含来源清单和 SHA256 校验和。简体中文与英文作为严格对齐的对应版本发布。

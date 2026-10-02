@@ -1,0 +1,42 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="420" viewBox="0 0 1200 420" role="img" aria-labelledby="title desc">
+  <title id="title">已有知识经过推理、搜索和计算产生新结果</title>
+  <desc id="desc">已有知识、推理、搜索和计算共同构成求解过程，可以产生训练数据中没有直接出现的新结果；新结果仍不等于正确结果。</desc>
+  <defs>
+    <marker id="arrow" viewBox="0 0 10 10" refX="8" refY="5" markerWidth="9" markerHeight="9" orient="auto">
+      <path d="M0 0L10 5L0 10Z" fill="#173f63"/>
+    </marker>
+  </defs>
+  <rect width="1200" height="420" fill="#fbf7ef"/>
+  <text x="70" y="70" font-family="Georgia, 'Times New Roman', serif" font-size="38" font-weight="700" fill="#173f63">训练数据之外，不等于知识边界之外</text>
+  <text x="70" y="106" font-family="'Noto Sans SC', 'PingFang SC', 'Microsoft YaHei', sans-serif" font-size="22" fill="#6f7f8d">模型和工具系统可以根据已有信息继续求解，而不只是复述现成答案</text>
+
+  <g font-family="'Noto Sans SC', 'PingFang SC', 'Microsoft YaHei', sans-serif" text-anchor="middle">
+    <rect x="70" y="162" width="170" height="112" rx="14" fill="#fffdf8" stroke="#173f63" stroke-width="1.7"/>
+    <text x="155" y="211" font-size="25" font-weight="700" fill="#173f63">已有知识</text>
+    <text x="155" y="246" font-size="17" fill="#6f7f8d">定义 · 定理 · 结构</text>
+
+    <text x="265" y="228" font-family="Georgia, 'Times New Roman', serif" font-size="34" fill="#89a6bd">+</text>
+    <rect x="290" y="162" width="150" height="112" rx="14" fill="#fffdf8" stroke="#173f63" stroke-width="1.7"/>
+    <text x="365" y="211" font-size="25" font-weight="700" fill="#173f63">推理</text>
+    <text x="365" y="246" font-size="17" fill="#6f7f8d">组合与推导</text>
+
+    <text x="465" y="228" font-family="Georgia, 'Times New Roman', serif" font-size="34" fill="#89a6bd">+</text>
+    <rect x="490" y="162" width="150" height="112" rx="14" fill="#fffdf8" stroke="#173f63" stroke-width="1.7"/>
+    <text x="565" y="211" font-size="25" font-weight="700" fill="#173f63">搜索</text>
+    <text x="565" y="246" font-size="17" fill="#6f7f8d">探索候选路径</text>
+
+    <text x="665" y="228" font-family="Georgia, 'Times New Roman', serif" font-size="34" fill="#89a6bd">+</text>
+    <rect x="690" y="162" width="150" height="112" rx="14" fill="#fffdf8" stroke="#173f63" stroke-width="1.7"/>
+    <text x="765" y="211" font-size="25" font-weight="700" fill="#173f63">计算</text>
+    <text x="765" y="246" font-size="17" fill="#6f7f8d">执行与求解</text>
+  </g>
+
+  <line x1="868" y1="218" x2="928" y2="218" stroke="#173f63" stroke-width="3" marker-end="url(#arrow)"/>
+  <rect x="950" y="148" width="200" height="140" rx="18" fill="#eef5f1" stroke="#1f7a57" stroke-width="2"/>
+  <text x="1050" y="194" text-anchor="middle" font-family="'Noto Sans SC', 'PingFang SC', 'Microsoft YaHei', sans-serif" font-size="21" font-weight="700" fill="#1f7a57">训练数据中</text>
+  <text x="1050" y="228" text-anchor="middle" font-family="'Noto Sans SC', 'PingFang SC', 'Microsoft YaHei', sans-serif" font-size="21" font-weight="700" fill="#1f7a57">没有直接出现的</text>
+  <text x="1050" y="262" text-anchor="middle" font-family="'Noto Sans SC', 'PingFang SC', 'Microsoft YaHei', sans-serif" font-size="25" font-weight="700" fill="#173f63">新结果</text>
+
+  <rect x="316" y="326" width="568" height="50" rx="25" fill="#f3e8e4"/>
+  <text x="600" y="359" text-anchor="middle" font-family="'Noto Sans SC', 'PingFang SC', 'Microsoft YaHei', sans-serif" font-size="21" font-weight="700" fill="#9a3b2f">新结果 ≠ 正确结果，仍然需要独立验证</text>
+</svg>

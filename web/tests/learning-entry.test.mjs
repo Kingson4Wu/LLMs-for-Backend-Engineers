@@ -86,13 +86,14 @@ test('AI learning appendices expose a copyable tool-neutral starter prompt', asy
   assert.match(en, /If you cannot download or read that file, tell me clearly and ask me to upload the same-language edition/);
 });
 
-test('homepage exposes one visible prompt for AI PDF download', async () => {
+test('homepage exposes one visible prompt for a deployed Markdown manuscript', async () => {
   const home = await readFile(
     new URL('../src/components/Home.astro', import.meta.url),
     'utf8',
   );
   assert.match(home, /learningPrompt/);
-  assert.match(home, /exported\/\$\{locale\}\/Understanding-LLMs\.pdf/);
+  assert.match(home, /exported\/\$\{locale\}\/Understanding-LLMs\.md/);
+  assert.doesNotMatch(home, /Understanding-LLMs\.pdf/);
   assert.match(home, /data-copy-text/);
   assert.match(home, /让 AI 下载完整书稿/);
   assert.match(home, /Let AI download the complete book/);

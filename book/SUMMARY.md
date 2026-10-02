@@ -27,6 +27,7 @@
 - [残差连接：深层网络为什么仍能训练](chapters/part2-llm-internal/residual-connections.md)
 - [LayerNorm：怎样保持表示的数值稳定](chapters/part2-llm-internal/layer-norm.md)
 - [LLM 生成机制：从输入到下一个 Token](chapters/part2-llm-internal/llm-generation.md)
+- [推理模型：多步推理过程怎样提高复杂任务的成功率](chapters/part2-llm-internal/reasoning-models.md)
 - [大模型推理的不确定性：从采样到工程实现](chapters/part2-llm-internal/llm-inference-nondeterminism.md)
 - [多语言大模型：不同语言怎样共享表示与能力](chapters/part2-llm-internal/multilingual-llms.md)
 - [多模态模型：文字之外的信息怎样进入计算](chapters/part2-llm-internal/multimodal-models.md)
@@ -51,6 +52,7 @@
 - [“人工智能”一词是否准确：一次关于 AI 概念边界的反思](chapters/appendices/what-ai-really-means.md)
 - [AI 能否创造真正的新事物](chapters/appendices/can-ai-create-new-things.md)
 - [生成式 AI：概率生成、约束与验证](chapters/appendices/generative-ai-probability-and-innovation.md)
+- [AI 失控风险：能力、权限与人类的协调困境](chapters/appendices/agent-capability-authority-control.md)
 
 ## 附录
 

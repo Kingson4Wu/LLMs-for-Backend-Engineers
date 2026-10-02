@@ -2,11 +2,11 @@
 
 Use an LLM as an interactive tutor grounded in the book, not as a one-shot summarizer. It should locate chapters, explain causes, offer counterexamples, test your understanding, and return every important conclusion to evidence you can inspect.
 
-## Recommended path: one prompt, complete PDF
+## Recommended path: one prompt, complete Markdown manuscript
 
-Open the [English home page](https://kingson4wu.github.io/Understanding-LLMs/en/), copy its single learning prompt, and paste it into Codex, Claude, ChatGPT, DeepSeek, or another AI that can download files. The prompt tells the AI to download the complete PDF before it teaches, so the book—not an improvised summary—remains the shared evidence base. It also tells the AI to map the four parts, cite chapters and figures, distinguish evidence from inference, and check your understanding one concept at a time.
+Open the [English home page](https://kingson4wu.github.io/Understanding-LLMs/en/), copy its single learning prompt, and paste it into Codex, Claude, ChatGPT, DeepSeek, or another AI that can download files. The prompt tells the AI to download the complete Markdown manuscript before it teaches, so the book—not an improvised summary—remains the shared evidence base. It also tells the AI to map the four parts, cite chapters and figures, distinguish evidence from inference, and check your understanding one concept at a time.
 
-If the AI cannot download the linked file, give it an edition from the [downloads page](https://kingson4wu.github.io/Understanding-LLMs/en/downloads/). PDF is the default complete reading edition; Markdown, EPUB, and print HTML remain available for tools or readers that handle those formats better.
+If the AI cannot download the linked file, give it a same-language edition from the [downloads page](https://kingson4wu.github.io/Understanding-LLMs/en/downloads/). Markdown is the default complete learning edition; EPUB and print HTML remain available for tools or readers that handle those formats better. Fixed-layout PDFs are published only with versioned [GitHub Releases](https://github.com/Kingson4Wu/Understanding-LLMs/releases).
 
 For an AI that can retrieve web material autonomously, give it the public [AI learning entry](https://kingson4wu.github.io/Understanding-LLMs/ai-learning/en.md). It links the complete editions, learning index, contract, and book map. The site-root `llms.txt` also lists both language entries.
 

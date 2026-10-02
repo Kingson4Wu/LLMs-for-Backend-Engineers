@@ -718,6 +718,7 @@
     {"chapter": "residual-connections", "fingerprint": "b30e1f7430cb6205c5f270219a45b4c8a5e62dc5c2ed58a649ef3bc767ae0428"},
     {"chapter": "residual-connections", "fingerprint": "0d9d34020eaab8260b55a208de8d3c719bf057da8005bcd9989ed6b4cbd00b6e"},
     {"chapter": "layer-norm", "fingerprint": "58d6ae7dc05225c32ad85e1581d4a0753e199a379a99e6ad95b25c242b17b996"},
-    {"chapter": "llm-inference-nondeterminism", "fingerprint": "4938458aacfd47da5c858543e977309c2c951bb929a0a9391d30045ca0c696c9"}
+    {"chapter": "llm-inference-nondeterminism", "fingerprint": "4938458aacfd47da5c858543e977309c2c951bb929a0a9391d30045ca0c696c9"},
+    {"chapter": "reasoning-models", "fingerprint": "57f5ed2de9c63c98e068c4ee0cacb15899bcb99d779f0e44b027fdcda19360db"}
   ]
 }

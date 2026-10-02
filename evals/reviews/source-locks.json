@@ -29,11 +29,11 @@
     },
     {
       "chapter": "llm-generation",
-      "zh_digest": "2ab2299126bf432d7162a7a7cd8bdd787cc12737e8f2969f1dd7de0ef3efd06e",
-      "en_digest": "538a68da2ecc54688a388f94fd397ab06e5458606a030a466e9fca427992704f",
+      "zh_digest": "0a0ba77f6d368f3ff67d90e0d27db41bb74fa5376e9f69bd8f3c4305ee1ee20b",
+      "en_digest": "c1391e73fce348a813972039d21462d5a88960afa5e762f72bbcff46cc0da3f5",
       "english_heading": "LLM Generation: From Input to the Next Token",
       "english_anchor_text": "LLM Generation: From Input to the Next Token",
-      "reviewed_at": "2026-09-29",
+      "reviewed_at": "2026-09-30",
       "reviewer": "Kingson Wu"
     },
     {
@@ -276,6 +276,15 @@
       "en_digest": "6b47e528422b01e894b096d1c1778966b6edaf5e23df67205b29b7003080e315",
       "english_heading": "Harnesses, Agent Runtimes, and Skills: How Multi-turn Tasks Run Reliably",
       "english_anchor_text": "Harnesses, Agent Runtimes, and Skills: How Multi-turn Tasks Run Reliably",
+      "reviewed_at": "2026-09-30",
+      "reviewer": "baseline curation"
+    },
+    {
+      "chapter": "reasoning-models",
+      "zh_digest": "53df263c10576740d43c3709f9b64f91552ccbfdac6c2b608bca0d3a387deae5",
+      "en_digest": "a54e9ebb847432bfcb5b0d3ac09447bfc26340171d7390645d3b6b9093576b91",
+      "english_heading": "Reasoning Models: How Multi-Step Reasoning Improves Complex Problem Solving",
+      "english_anchor_text": "Reasoning Models: How Multi-Step Reasoning Improves Complex Problem Solving",
       "reviewed_at": "2026-09-30",
       "reviewer": "baseline curation"
     }

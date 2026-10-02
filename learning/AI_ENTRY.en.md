@@ -4,10 +4,9 @@ Use this file as the entry point for an AI assistant studying this book. Act as 
 
 ## Read these materials first
 
-Read one complete edition in the learner's chosen language. Markdown is best for retrieval and navigation; PDF best preserves formulas and figure layout.
+Read the complete single-file Markdown manuscript in the learner's chosen language. It supports retrieval, navigation, and traceable references to chapters, formulas, and figures.
 
 - [Complete single-file Markdown (English)](https://kingson4wu.github.io/Understanding-LLMs/exported/en/Understanding-LLMs.md)
-- [Complete PDF (English)](https://kingson4wu.github.io/Understanding-LLMs/exported/en/Understanding-LLMs.pdf)
 - [Learning index (bilingual chapter, heading, formula, and figure locators)](https://kingson4wu.github.io/Understanding-LLMs/ai-learning/index.json)
 - [English learning contract](https://kingson4wu.github.io/Understanding-LLMs/ai-learning/en/contract.md)
 - [Book map (bilingual structure)](https://kingson4wu.github.io/Understanding-LLMs/ai-learning/book-map.zh-Hans.md)
@@ -24,4 +23,4 @@ The Chinese and English editions are strictly aligned, equally published counter
 
 ## Formats and boundaries
 
-The complete single-file Markdown is suitable for text retrieval and chapter jumps; PDF preserves formulas, figures, and fixed layout. EPUB and print HTML are on the [downloads page](https://kingson4wu.github.io/Understanding-LLMs/en/downloads/). Only a local tool in a cloned repository can inspect original Markdown, SVG figures, and source paths. Do not claim that those files were checked when they are unavailable.
+The complete single-file Markdown is the online learning source for text retrieval and chapter jumps. EPUB and print HTML are on the [downloads page](https://kingson4wu.github.io/Understanding-LLMs/en/downloads/). Fixed-layout PDFs are published only with versioned [GitHub Releases](https://github.com/Kingson4Wu/Understanding-LLMs/releases) and should not replace the current online manuscript. Only a local tool in a cloned repository can inspect original Markdown, SVG figures, and source paths. Do not claim that those files were checked when they are unavailable.

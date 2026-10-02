@@ -49,6 +49,12 @@ class LearningIndexTests(unittest.TestCase):
                 if metadata["formula_count"]:
                     self.assertTrue(metadata["formula_sections"])
 
+    def test_reasoning_models_follows_generation_in_part_two(self):
+        catalogue = json.loads((ROOT / "book" / "catalog.json").read_text(encoding="utf-8"))
+        part_two = next(part for part in catalogue["parts"] if part["id"] == "llm-internal")
+        ids = [chapter["id"] for chapter in part_two["chapters"]]
+        self.assertEqual(ids[ids.index("llm-generation") + 1], "reasoning-models")
+
     def test_learning_contracts_require_traceable_read_only_tutoring(self):
         for name in ("LEARNING_CONTRACT.zh-Hans.md", "LEARNING_CONTRACT.en.md"):
             text = (ROOT / "learning" / name).read_text(encoding="utf-8").lower()

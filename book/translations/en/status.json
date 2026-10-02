@@ -84,7 +84,11 @@
       "status": "human-reviewed"
     },
     "llm-generation": {
-      "source_sha256": "2ab2299126bf432d7162a7a7cd8bdd787cc12737e8f2969f1dd7de0ef3efd06e",
+      "source_sha256": "0a0ba77f6d368f3ff67d90e0d27db41bb74fa5376e9f69bd8f3c4305ee1ee20b",
+      "status": "human-reviewed"
+    },
+    "reasoning-models": {
+      "source_sha256": "53df263c10576740d43c3709f9b64f91552ccbfdac6c2b608bca0d3a387deae5",
       "status": "human-reviewed"
     },
     "llm-inference-nondeterminism": {
@@ -152,7 +156,7 @@
       "status": "human-reviewed"
     },
     "ai-learning-guide": {
-      "source_sha256": "2fab75bf3377e99365e7daca2714179078620141178d4ce8eff24d84d7b8db2a",
+      "source_sha256": "f0f9e11a7d12d7bc3cbba9cc81e23a95eb2cca36099ab2bdb3c8ec04b3fb5a2a",
       "status": "human-reviewed"
     },
     "math-foundations": {
@@ -173,6 +177,10 @@
     },
     "appendices": {
       "source_sha256": "9d958168d6f103a12a957c05ffcf225f8bd157fa00c64aa93c113e57cc6442f2",
+      "status": "human-reviewed"
+    },
+    "agent-capability-authority-control": {
+      "source_sha256": "d90bfc640e124760c51749865225a96d89cd5e9dcdde8e2e7ae9d74094f8e0e8",
       "status": "human-reviewed"
     },
     "appendix": {

@@ -154,6 +154,16 @@ class BilingualMirrorTests(unittest.TestCase):
         root = Path(__file__).resolve().parents[1]
         self.assertEqual(audit_book(root, article="llm-inference-nondeterminism"), {})
 
+    def test_reasoning_models_chapter_is_a_strict_structural_mirror(self):
+        from audit_bilingual_mirror import audit_book
+        import json
+
+        root = Path(__file__).resolve().parents[1]
+        catalogue = json.loads((root / "book" / "catalog.json").read_text(encoding="utf-8"))
+        ids = [chapter["id"] for part in catalogue["parts"] for chapter in part["chapters"]]
+        self.assertIn("reasoning-models", ids)
+        self.assertEqual(audit_book(root, article="reasoning-models"), {})
+
     def test_llm_infrastructure_chapter_is_a_strict_structural_mirror(self):
         from audit_bilingual_mirror import audit_book
 

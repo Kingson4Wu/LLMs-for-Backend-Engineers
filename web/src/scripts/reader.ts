@@ -427,7 +427,7 @@ byId<HTMLInputElement>('import-notes').onchange = async (e) => {
   if (!file) return;
   try {
     if (file.size > 5_000_000) throw new Error();
-    const imported = parseBackup(await file.text(), key);
+    const imported: typeof notes = parseBackup(await file.text(), key);
     const existing = new Set(notes.map((n) => n.id));
     const merged = [...notes, ...imported.filter((n) => !existing.has(n.id))];
     if (merged.length > 1000) throw new Error();

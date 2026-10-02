@@ -27,6 +27,7 @@
 - [Residual Connections: Why Deep Networks Remain Trainable](chapters/part2-llm-internal/residual-connections.md)
 - [LayerNorm: Keeping Representations Numerically Stable](chapters/part2-llm-internal/layer-norm.md)
 - [LLM Generation: From Input to the Next Token](chapters/part2-llm-internal/llm-generation.md)
+- [Reasoning Models: How Multi-Step Reasoning Improves Complex Problem Solving](chapters/part2-llm-internal/reasoning-models.md)
 - [Why LLM Inference Is Not Fully Deterministic](chapters/part2-llm-internal/llm-inference-nondeterminism.md)
 - [Multilingual LLMs: How Languages Share Representations and Capabilities](chapters/part2-llm-internal/multilingual-llms.md)
 - [Multimodal Models: How Information Beyond Text Enters Computation](chapters/part2-llm-internal/multimodal-models.md)
@@ -51,6 +52,7 @@
 - [Is “Artificial Intelligence” an Accurate Name? Reflections on AI’s Conceptual Boundary](chapters/appendices/what-ai-really-means.md)
 - [Can AI Create Genuinely New Things?](chapters/appendices/can-ai-create-new-things.md)
 - [Generative AI: Probability, Constraints, and Verification](chapters/appendices/generative-ai-probability-and-innovation.md)
+- [AI Loss-of-Control Risk: Capability, Authority, and the Human Coordination Problem](chapters/appendices/agent-capability-authority-control.md)
 
 ## Appendix
 

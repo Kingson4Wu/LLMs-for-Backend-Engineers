@@ -787,6 +787,39 @@
         "english_heading": "Harnesses, Agent Runtimes, and Skills: How Multi-turn Tasks Run Reliably",
         "english_anchor_text": "Harnesses, Agent Runtimes, and Skills: How Multi-turn Tasks Run Reliably"
       }
+    },
+    {
+      "id": "reasoning-models-remain-autoregressive-transformers",
+      "chapter": "reasoning-models",
+      "heading": "推理模型仍是自回归 Transformer",
+      "anchor_text": "大多数推理模型仍按下式逐个生成 token",
+      "kind": "stable-mechanism",
+      "sources": ["https://arxiv.org/abs/2201.11903", "https://arxiv.org/abs/2408.03314"],
+      "expectation": "Reasoning models commonly retain autoregressive Transformer generation while training and inference policy allocate multi-step computation differently.",
+      "must_not_imply": ["A reasoning model requires a separate thinking network or a different Transformer definition."],
+      "review": {"reviewed_at":"2026-09-30","reviewer":"baseline curation","proposition":true,"conditions_and_quantifiers":true,"formula_symbols_and_units":true,"figure_meaning":true,"link_target":true,"english_heading":"Reasoning Models: How Multi-Step Reasoning Improves Complex Problem Solving","english_anchor_text":"Reasoning Models: How Multi-Step Reasoning Improves Complex Problem Solving"}
+    },
+    {
+      "id": "cot-is-not-complete-internal-computation",
+      "chapter": "reasoning-models",
+      "heading": "中间 token 怎样变成工作空间",
+      "anchor_text": "它不是推理能力的定义",
+      "kind": "boundary",
+      "sources": ["https://arxiv.org/abs/2201.11903"],
+      "expectation": "An observable chain of thought can supply intermediate context but is not a complete or automatically faithful readout of internal model computation.",
+      "must_not_imply": ["A thinking tag creates reasoning ability.", "Visible reasoning text exposes every internal activation."],
+      "review": {"reviewed_at":"2026-09-30","reviewer":"baseline curation","proposition":true,"conditions_and_quantifiers":true,"formula_symbols_and_units":true,"figure_meaning":true,"link_target":true,"english_heading":"Reasoning Models: How Multi-Step Reasoning Improves Complex Problem Solving","english_anchor_text":"Reasoning Models: How Multi-Step Reasoning Improves Complex Problem Solving"}
+    },
+    {
+      "id": "rlvr-verifier-has-coverage-boundary",
+      "chapter": "reasoning-models",
+      "heading": "训练怎样让模型学会使用这些步骤",
+      "anchor_text": "测试可能漏掉边界条件",
+      "kind": "boundary",
+      "sources": ["https://arxiv.org/abs/2501.12948"],
+      "expectation": "RLVR can reinforce outcomes verified by a program, but cannot establish correctness for properties the verifier does not check.",
+      "must_not_imply": ["A passing verifier proves every reasoning step or every unencoded requirement correct."],
+      "review": {"reviewed_at":"2026-09-30","reviewer":"baseline curation","proposition":true,"conditions_and_quantifiers":true,"formula_symbols_and_units":true,"figure_meaning":true,"link_target":true,"english_heading":"Reasoning Models: How Multi-Step Reasoning Improves Complex Problem Solving","english_anchor_text":"Reasoning Models: How Multi-Step Reasoning Improves Complex Problem Solving"}
     }
   ]
 }

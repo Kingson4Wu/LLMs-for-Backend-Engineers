@@ -70,14 +70,6 @@ if (fs.existsSync(exported)) {
     }
   }
 }
-// Keep a concise root-level PDF URL available once a real PDF is present.
-if (fs.existsSync(path.join(exported, 'zh-Hans/Understanding-LLMs.pdf'))) {
-  fs.mkdirSync(new URL('exported/', dist), { recursive: true });
-  fs.copyFileSync(
-    path.join(exported, 'zh-Hans/Understanding-LLMs.pdf'),
-    new URL('exported/Understanding-LLMs.pdf', dist),
-  );
-}
 for (const [source, target] of [
   ['index.json', 'ai-learning/index.json'],
   ['AI_ENTRY.zh-Hans.md', 'ai-learning/zh-Hans.md'],
@@ -101,9 +93,9 @@ write(
 ## Complete editions
 
 - [English Markdown](${siteUrl('/exported/en/Understanding-LLMs.md')})
-- [English PDF](${siteUrl('/exported/en/Understanding-LLMs.pdf')})
+- [English EPUB](${siteUrl('/exported/en/Understanding-LLMs.epub')})
 - [Simplified Chinese Markdown](${siteUrl('/exported/zh-Hans/Understanding-LLMs.md')})
-- [Simplified Chinese PDF](${siteUrl('/exported/zh-Hans/Understanding-LLMs.pdf')})
+- [Simplified Chinese EPUB](${siteUrl('/exported/zh-Hans/Understanding-LLMs.epub')})
 
 Read the language-specific AI learning entry before tutoring. It specifies evidence boundaries, citation expectations, and the fallback when a file cannot be read.
 `,

@@ -144,19 +144,9 @@ def sample_next_token(logits, temperature=1.0, top_k=0, top_p=1.0):
 
 Even with Top-K disabled, sorting is required before applying a cumulative Top-P threshold. Putting the most probable token last in vocabulary order is a useful way to check this behavior.
 
-## Why Intermediate Reasoning Steps Can Help
+## From Token-by-Token Generation to Reasoning Models
 
-“Token-by-token generation” describes an output mechanism. By itself, it proves neither the presence nor the absence of a reasoning ability. Consider comparing totals for two orders: a model could state a conclusion immediately, or first list the amounts, add them, and compare.
-
-The second route places intermediate results into subsequent context, making room for stepwise processing. The [Chain-of-Thought paper](https://arxiv.org/abs/2201.11903) studies the effects of demonstrations containing intermediate steps on reasoning tasks. This does not mean that more words always improve accuracy: an intermediate step can be wrong, and later steps can inherit that error.
-
-Three ways of spending more inference-time computation should be distinguished:
-
-- Generate more intermediate steps along one path.
-- Generate multiple candidates, then compare or verify them.
-- Use external tools to obtain new evidence or execution results.
-
-These provide different computation, information, and selection opportunities. Without a way to identify correct results, retries merely produce more answers. Visible reasoning text is not necessarily a faithful record of all internal computation; whether a product displays it is a separate product and interface choice.
+Token-by-token generation describes how a model extends a sequence; it does not by itself establish whether the model has formed a reliable multi-step problem-solving strategy. A reasoning model usually still uses an autoregressive Transformer, but specialized training can make it more able to generate intermediate states selectively, check candidates, or adjust a path from verification feedback. [Reasoning Models: How Multi-Step Reasoning Improves Complex Problem Solving](reasoning-models.md) explains why this can improve success on some hard tasks and which conclusions cannot be inferred from visible “thinking” text.
 
 ## Summary
 

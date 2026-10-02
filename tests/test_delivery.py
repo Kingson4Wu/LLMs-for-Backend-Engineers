@@ -279,11 +279,16 @@ class PublicationArtifactValidationTests(unittest.TestCase):
             'validate_publication_artifacts.py --locale "$locale" --formats markdown,html,epub',
             ci,
         )
-        for name in ('deploy-docs.yml', 'release-books.yml'):
-            self.assertIn(
-                'validate_publication_artifacts.py --locale "$locale" --formats markdown,html,epub,pdf',
-                (root / name).read_text(encoding='utf-8'),
-            )
+        deploy = (root / 'deploy-docs.yml').read_text(encoding='utf-8')
+        self.assertIn(
+            'validate_publication_artifacts.py --locale "$locale" --formats markdown,html,epub',
+            deploy,
+        )
+        release = (root / 'release-books.yml').read_text(encoding='utf-8')
+        self.assertIn(
+            'validate_publication_artifacts.py --locale "$locale" --formats markdown,html,epub,pdf',
+            release,
+        )
 
     def test_publication_workflows_preserve_epubcheck_and_pdf_audit_reports(self):
         root = Path(__file__).resolve().parents[1] / '.github/workflows'
@@ -292,7 +297,7 @@ class PublicationArtifactValidationTests(unittest.TestCase):
             self.assertIn('> "$RUNNER_TEMP/epubcheck-$locale.txt" 2>&1', workflow)
             self.assertIn('name: epubcheck-reports', workflow)
             self.assertIn('path: ${{ runner.temp }}/epubcheck-*.txt', workflow)
-        for name in ('deploy-docs.yml', 'release-books.yml'):
+        for name in ('release-books.yml',):
             workflow = (root / name).read_text(encoding='utf-8')
             audit = workflow.index('name: pdf-formula-audits')
             self.assertIn('if: always()', workflow[max(0, audit - 80):audit])

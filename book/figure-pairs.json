@@ -2299,6 +2299,213 @@
           "alternative": "Progressive rollout with rollback: a candidate advances through offline evaluation, small traffic and wider traffic only while quality, errors, TTFT and cost stay within conditions; a breach rolls back."
         }
       }
+    },
+    {
+      "chapter": "reasoning-models",
+      "ordinal": 1,
+      "zh": "book/assets/zh/diagrams/reasoning-models/direct-vs-deliberate.svg",
+      "en": "book/assets/en/diagrams/reasoning-models/direct-vs-deliberate.svg",
+      "zh_source": "book/chapters/part2-llm-internal/reasoning-models.md",
+      "en_source": "book/translations/en/chapters/part2-llm-internal/reasoning-models.md",
+      "id": "reasoning-models-01",
+      "zh_id": "zh-diagrams-reasoning-models-direct-vs-deliberate-svg",
+      "en_id": "en-diagrams-reasoning-models-direct-vs-deliberate-svg",
+      "semantics": {
+        "zh": {
+          "chapter": "reasoning-models",
+          "heading": "推理模型仍是自回归 Transformer",
+          "alternative": "同一自回归 Transformer 的两种求解路径：直接路径很快给出答案；推理路径将中间状态放入后续上下文，并可能在校验后修正。两者都不是新增网络层。"
+        },
+        "en": {
+          "chapter": "reasoning-models",
+          "heading": "Reasoning Models Are Still Autoregressive Transformers",
+          "alternative": "Two solution paths through the same autoregressive Transformer: a direct path answers quickly; a reasoning path places intermediate states into subsequent context and may correct after checking. Neither path adds network layers."
+        }
+      }
+    },
+    {
+      "chapter": "reasoning-models",
+      "ordinal": 2,
+      "zh": "book/assets/zh/diagrams/reasoning-models/compute-allocation.svg",
+      "en": "book/assets/en/diagrams/reasoning-models/compute-allocation.svg",
+      "zh_source": "book/chapters/part2-llm-internal/reasoning-models.md",
+      "en_source": "book/translations/en/chapters/part2-llm-internal/reasoning-models.md",
+      "id": "reasoning-models-02",
+      "zh_id": "zh-diagrams-reasoning-models-compute-allocation-svg",
+      "en_id": "en-diagrams-reasoning-models-compute-allocation-svg",
+      "semantics": {
+        "zh": {
+          "chapter": "reasoning-models",
+          "heading": "推理时计算怎样换取更高成功率",
+          "alternative": "推理时计算的三种分配：延长一条轨迹、生成多个候选并选择、以及在搜索或验证反馈下继续分支。它们的计算、信息与失败模式不同。"
+        },
+        "en": {
+          "chapter": "reasoning-models",
+          "heading": "How Inference-Time Compute Can Buy Higher Success Rates",
+          "alternative": "Three allocations of inference-time compute: extending one trajectory, generating and selecting among multiple candidates, and branching with search or verification feedback. Their computation, information, and failure modes differ."
+        }
+      }
+    },
+    {
+      "chapter": "reasoning-models",
+      "ordinal": 3,
+      "zh": "book/assets/zh/diagrams/reasoning-models/training-signals.svg",
+      "en": "book/assets/en/diagrams/reasoning-models/training-signals.svg",
+      "zh_source": "book/chapters/part2-llm-internal/reasoning-models.md",
+      "en_source": "book/translations/en/chapters/part2-llm-internal/reasoning-models.md",
+      "id": "reasoning-models-03",
+      "zh_id": "zh-diagrams-reasoning-models-training-signals-svg",
+      "en_id": "en-diagrams-reasoning-models-training-signals-svg",
+      "semantics": {
+        "zh": {
+          "chapter": "reasoning-models",
+          "heading": "训练怎样让模型学会使用这些步骤",
+          "alternative": "训练信号与边界：SFT 提供示范，偏好或强化学习比较候选，RLVR 使用可验证结果；所有路径都更新策略，但验证器只检查明确编码的条件。"
+        },
+        "en": {
+          "chapter": "reasoning-models",
+          "heading": "How Training Teaches the Model to Use These Steps",
+          "alternative": "Training signals and their boundary: SFT provides demonstrations; preference or reinforcement learning compares candidates; RLVR uses verifiable outcomes. All can update a policy, but a verifier checks only explicitly encoded conditions."
+        }
+      }
+    },
+    {
+      "chapter": "agent-capability-authority-control",
+      "ordinal": 1,
+      "zh": "book/assets/zh/diagrams/ai-loss-of-control/risk-escalation-threshold.svg",
+      "en": "book/assets/en/diagrams/ai-loss-of-control/risk-escalation-threshold.svg",
+      "zh_source": "book/chapters/appendices/agent-capability-authority-control.md",
+      "en_source": "book/translations/en/chapters/appendices/agent-capability-authority-control.md",
+      "id": "agent-capability-authority-control-01",
+      "zh_id": "zh-diagrams-ai-loss-of-control-risk-escalation-threshold-svg",
+      "en_id": "en-diagrams-ai-loss-of-control-risk-escalation-threshold-svg",
+      "semantics": {
+        "zh": {
+          "chapter": "agent-capability-authority-control",
+          "heading": "失控不是一个单一结果",
+          "alternative": "从局部越权或失效、系统性事故、长期脱离控制到人类灭绝的风险阶梯，越往后门槛越高、证据越少"
+        },
+        "en": {
+          "chapter": "agent-capability-authority-control",
+          "heading": "Loss of control is not one outcome",
+          "alternative": "A risk ladder from local overreach or failure, through systemic incidents and persistent loss of control, to human extinction; evidence becomes weaker as the threshold rises"
+        }
+      }
+    },
+    {
+      "chapter": "agent-capability-authority-control",
+      "ordinal": 2,
+      "zh": "book/assets/zh/diagrams/ai-loss-of-control/knowledge-reasoning-result.svg",
+      "en": "book/assets/en/diagrams/ai-loss-of-control/knowledge-reasoning-result.svg",
+      "zh_source": "book/chapters/appendices/agent-capability-authority-control.md",
+      "en_source": "book/translations/en/chapters/appendices/agent-capability-authority-control.md",
+      "id": "agent-capability-authority-control-02",
+      "zh_id": "zh-diagrams-ai-loss-of-control-knowledge-reasoning-result-svg",
+      "en_id": "en-diagrams-ai-loss-of-control-knowledge-reasoning-result-svg",
+      "semantics": {
+        "zh": {
+          "chapter": "agent-capability-authority-control",
+          "heading": "从“概率复读机”到持续行动的系统",
+          "alternative": "已有知识经过推理、搜索和计算，可以产生训练数据中没有直接出现的新结果"
+        },
+        "en": {
+          "chapter": "agent-capability-authority-control",
+          "heading": "From “probability parrot” to a system that keeps acting",
+          "alternative": "Existing knowledge can yield results not directly present in training data through reasoning, search, and computation"
+        }
+      }
+    },
+    {
+      "chapter": "agent-capability-authority-control",
+      "ordinal": 3,
+      "zh": "book/assets/zh/diagrams/ai-loss-of-control/knowledge-discovery-loop.svg",
+      "en": "book/assets/en/diagrams/ai-loss-of-control/knowledge-discovery-loop.svg",
+      "zh_source": "book/chapters/appendices/agent-capability-authority-control.md",
+      "en_source": "book/translations/en/chapters/appendices/agent-capability-authority-control.md",
+      "id": "agent-capability-authority-control-03",
+      "zh_id": "zh-diagrams-ai-loss-of-control-knowledge-discovery-loop-svg",
+      "en_id": "en-diagrams-ai-loss-of-control-knowledge-discovery-loop-svg",
+      "semantics": {
+        "zh": {
+          "chapter": "agent-capability-authority-control",
+          "heading": "从“概率复读机”到持续行动的系统",
+          "alternative": "AI 从已有知识出发，经过提出假设、设计实验、获得数据、分析验证和形成新知识的发现闭环"
+        },
+        "en": {
+          "chapter": "agent-capability-authority-control",
+          "heading": "From “probability parrot” to a system that keeps acting",
+          "alternative": "An AI knowledge-discovery loop: start from existing knowledge, propose hypotheses, design experiments, obtain data, analyse and verify it, and form new knowledge"
+        }
+      }
+    },
+    {
+      "chapter": "agent-capability-authority-control",
+      "ordinal": 4,
+      "zh": "book/assets/zh/diagrams/ai-loss-of-control/capability-permission-paths.svg",
+      "en": "book/assets/en/diagrams/ai-loss-of-control/capability-permission-paths.svg",
+      "zh_source": "book/chapters/appendices/agent-capability-authority-control.md",
+      "en_source": "book/translations/en/chapters/appendices/agent-capability-authority-control.md",
+      "id": "agent-capability-authority-control-04",
+      "zh_id": "zh-diagrams-ai-loss-of-control-capability-permission-paths-svg",
+      "en_id": "en-diagrams-ai-loss-of-control-capability-permission-paths-svg",
+      "semantics": {
+        "zh": {
+          "chapter": "agent-capability-authority-control",
+          "heading": "权限怎样把能力变成现实影响",
+          "alternative": "能力、自主性、权限和可预测性共同放大风险，AI 的实际权限同时来自人类授权和漏洞越权"
+        },
+        "en": {
+          "chapter": "agent-capability-authority-control",
+          "heading": "How authority turns capability into real-world impact",
+          "alternative": "Capability, autonomy, authority, and predictability jointly amplify risk; AI's effective authority can arise from human authorisation and vulnerability-based escalation"
+        }
+      }
+    },
+    {
+      "chapter": "agent-capability-authority-control",
+      "ordinal": 5,
+      "zh": "book/assets/zh/diagrams/ai-loss-of-control/competition-feedback-loops.svg",
+      "en": "book/assets/en/diagrams/ai-loss-of-control/competition-feedback-loops.svg",
+      "zh_source": "book/chapters/appendices/agent-capability-authority-control.md",
+      "en_source": "book/translations/en/chapters/appendices/agent-capability-authority-control.md",
+      "id": "agent-capability-authority-control-05",
+      "zh_id": "zh-diagrams-ai-loss-of-control-competition-feedback-loops-svg",
+      "en_id": "en-diagrams-ai-loss-of-control-competition-feedback-loops-svg",
+      "semantics": {
+        "zh": {
+          "chapter": "agent-capability-authority-control",
+          "heading": "人类为什么难以一起收紧边界",
+          "alternative": "AI 能力、权限、依赖、漏洞发现与竞争压力相互强化的两个反馈循环"
+        },
+        "en": {
+          "chapter": "agent-capability-authority-control",
+          "heading": "Why people struggle to tighten the boundary together",
+          "alternative": "Two reinforcing feedback loops among AI capability, authority, reliance, vulnerability discovery, and competitive pressure"
+        }
+      }
+    },
+    {
+      "chapter": "agent-capability-authority-control",
+      "ordinal": 6,
+      "zh": "book/assets/zh/diagrams/ai-loss-of-control/recursive-improvement-boundary.svg",
+      "en": "book/assets/en/diagrams/ai-loss-of-control/recursive-improvement-boundary.svg",
+      "zh_source": "book/chapters/appendices/agent-capability-authority-control.md",
+      "en_source": "book/translations/en/chapters/appendices/agent-capability-authority-control.md",
+      "id": "agent-capability-authority-control-06",
+      "zh_id": "zh-diagrams-ai-loss-of-control-recursive-improvement-boundary-svg",
+      "en_id": "en-diagrams-ai-loss-of-control-recursive-improvement-boundary-svg",
+      "semantics": {
+        "zh": {
+          "chapter": "agent-capability-authority-control",
+          "heading": "AI 参与研发，不等于递归自我改进已经实现",
+          "alternative": "当前 AI 辅助研发与未来完整递归自我改进的区别，以及递归改进、自主部署和失去控制之间的概念边界"
+        },
+        "en": {
+          "chapter": "agent-capability-authority-control",
+          "heading": "AI participation in R&D is not complete recursive self-improvement",
+          "alternative": "The distinction between present AI-assisted R&D and complete recursive self-improvement, including the boundaries among recursive improvement, autonomous deployment, and loss of control"
+        }
+      }
     }
   ]
 }

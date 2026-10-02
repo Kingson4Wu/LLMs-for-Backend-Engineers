@@ -2,7 +2,6 @@
 import Layout from '../layouts/Layout.astro';
 import {
   catalog,
-  pages,
   t,
   titleFor,
   partTitle,
@@ -13,11 +12,11 @@ import {
 import { withBase, chapterUrl } from '../lib/paths.mjs';
 const { locale = 'zh-Hans' } = Astro.props;
 const base = import.meta.env.BASE_URL;
-const hostedBookUrl = `https://kingson4wu.github.io/Understanding-LLMs/exported/${locale}/Understanding-LLMs.pdf`;
+const hostedBookUrl = `https://kingson4wu.github.io/Understanding-LLMs/exported/${locale}/Understanding-LLMs.md`;
 const learningPrompt = t(
   locale,
-  `我要学习《理解大模型：面向软件工程师的原理与系统指南》。请先下载并阅读完整 PDF 书稿：${hostedBookUrl}\n\n若无法下载或读取该文件，请明确告诉我，并让我上传同语言书稿；不要假装已读取。读取成功后，先根据目录概括全书四个部分，再按我的目标给出最短学习路径。每次解释标注相关章节、标题、公式或图；区分“书中证据”“你的推断”和“需要外部核实”的内容。一次只讲一个概念，每次解释后问我一个检验理解的问题。`,
-  `I want to study Understanding LLMs for Software Engineers. Please first download and read the complete PDF: ${hostedBookUrl}\n\nIf you cannot download or read that file, tell me clearly and ask me to upload the same-language edition; do not pretend that you have read it. After reading it, summarize the book’s four parts from its table of contents, then give me the shortest learning path for my goal. In every explanation, name the relevant chapter, heading, formula, or figure; distinguish “book evidence,” “your inference,” and claims that “require external verification.” Teach one concept at a time and ask one question after each explanation to check my understanding.`,
+  `我要学习《理解大模型：面向软件工程师的原理与系统指南》。请先下载并阅读完整 Markdown 书稿：${hostedBookUrl}\n\n若无法下载或读取该文件，请明确告诉我，并让我上传同语言书稿；不要假装已读取。读取成功后，先根据目录概括全书四个部分，再按我的目标给出最短学习路径。每次解释标注相关章节、标题、公式或图；区分“书中证据”“你的推断”和“需要外部核实”的内容。一次只讲一个概念，每次解释后问我一个检验理解的问题。`,
+  `I want to study Understanding LLMs for Software Engineers. Please first download and read the complete Markdown manuscript: ${hostedBookUrl}\n\nIf you cannot download or read that file, tell me clearly and ask me to upload the same-language edition; do not pretend that you have read it. After reading it, summarize the book’s four parts from its table of contents, then give me the shortest learning path for my goal. In every explanation, name the relevant chapter, heading, formula, or figure; distinguish “book evidence,” “your inference,” and claims that “require external verification.” Teach one concept at a time and ask one question after each explanation to check my understanding.`,
 );
 ---
 
@@ -117,7 +116,7 @@ const learningPrompt = t(
       <article class="ai-prompt-card">
         <header><div><p class="eyebrow">{t(locale, '推荐路径', 'RECOMMENDED PATH')}</p><h3>{t(locale, '让 AI 下载完整书稿', 'Let AI download the complete book')}</h3></div><button type="button" class="prompt-copy-button" data-copy-text={learningPrompt} data-copy-label={t(locale, '复制提示词', 'Copy prompt')} data-copied-label={t(locale, '已复制', 'Copied')} data-fallback-label={t(locale, '请手动复制', 'Copy manually')}>{t(locale, '复制提示词', 'Copy prompt')}</button></header>
         <pre><code>{learningPrompt}</code></pre>
-        <a class="ai-source-link" href={hostedBookUrl} download>{t(locale, '查看 / 下载完整 PDF 书稿', 'View / download the complete PDF')} ↓</a>
+        <a class="ai-source-link" href={hostedBookUrl} download>{t(locale, '查看 / 下载完整 Markdown 书稿', 'View / download the complete Markdown manuscript')} ↓</a>
       </article>
     </section>
     <div class="facts">
@@ -232,8 +231,8 @@ const learningPrompt = t(
         <p>
           {t(
             locale,
-            '复制上方提示词，让 AI 先下载完整 PDF，再围绕你的目标带你学习。',
-            'Copy the prompt above: AI downloads the complete PDF first, then teaches around your goal.',
+            '复制上方提示词，让 AI 先下载完整 Markdown 书稿，再围绕你的目标带你学习。',
+            'Copy the prompt above: AI downloads the complete Markdown manuscript first, then teaches around your goal.',
           )}
         </p>
       </div>

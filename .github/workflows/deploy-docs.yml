@@ -31,8 +31,8 @@ jobs:
       - uses: actions/setup-python@v5
         with:
           python-version: '3.11'
-      - name: Install portable publishing tools
-        run: sudo apt-get update && sudo apt-get install -y pandoc librsvg2-bin fonts-noto-cjk epubcheck texlive-xetex texlive-lang-chinese texlive-latex-extra qpdf poppler-utils
+      - name: Install web publication tools
+        run: sudo apt-get update && sudo apt-get install -y pandoc librsvg2-bin fonts-noto-cjk epubcheck
       - name: Determine changed files for evaluation coverage
         id: changed-files
         shell: bash
@@ -74,15 +74,9 @@ jobs:
             python3 tools/book-kit/export_markdown.py --locale "$locale"
             python3 tools/book-kit/export_epub.py --locale "$locale"
             python3 tools/book-kit/audit_epub_accessibility.py --locale "$locale" --epub "book/exported/$locale/Understanding-LLMs.epub" --output "$RUNNER_TEMP/epub-accessibility-$locale.json"
-            PDF_MAINFONT='Noto Serif CJK SC' PDF_CJK_MAINFONT='Noto Serif CJK SC' PDF_MONOFONT='Noto Sans Mono' python3 tools/book-kit/export_book_pdf.py --locale "$locale"
             epubcheck "book/exported/$locale/Understanding-LLMs.epub" > "$RUNNER_TEMP/epubcheck-$locale.txt" 2>&1
-            python3 tools/book-kit/validate_publication_artifacts.py --locale "$locale" --formats markdown,html,epub,pdf
+            python3 tools/book-kit/validate_publication_artifacts.py --locale "$locale" --formats markdown,html,epub
           done
-      - uses: actions/upload-artifact@v4
-        if: always()
-        with:
-          name: pdf-formula-audits
-          path: book/_build/evaluations/*/pdf-formula-audit.json
       - uses: actions/upload-artifact@v4
         if: always()
         with:

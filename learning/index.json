@@ -6557,8 +6557,8 @@
             {
               "order": 15,
               "level": 2,
-              "title": "中间推理步骤为什么可能有帮助",
-              "anchor": "中间推理步骤为什么可能有帮助"
+              "title": "从逐 Token 生成到推理模型",
+              "anchor": "从逐-token-生成到推理模型"
             },
             {
               "order": 16,
@@ -6675,8 +6675,8 @@
             {
               "order": 15,
               "level": 2,
-              "title": "Why Intermediate Reasoning Steps Can Help",
-              "anchor": "why-intermediate-reasoning-steps-can-help"
+              "title": "From Token-by-Token Generation to Reasoning Models",
+              "anchor": "from-token-by-token-generation-to-reasoning-models"
             },
             {
               "order": 16,
@@ -6706,13 +6706,152 @@
       },
       "navigation": {
         "previous": "layer-norm",
+        "next": "reasoning-models"
+      }
+    },
+    {
+      "id": "reasoning-models",
+      "part": "llm-internal",
+      "order": 20,
+      "title": {
+        "zh-Hans": "推理模型：多步推理过程怎样提高复杂任务的成功率",
+        "en": "Reasoning Models: How Multi-Step Reasoning Improves Complex Problem Solving"
+      },
+      "source": {
+        "zh-Hans": {
+          "path": "chapters/part2-llm-internal/reasoning-models.md",
+          "headings": [
+            {
+              "order": 1,
+              "level": 1,
+              "title": "推理模型：多步推理过程怎样提高复杂任务的成功率",
+              "anchor": "推理模型多步推理过程怎样提高复杂任务的成功率"
+            },
+            {
+              "order": 2,
+              "level": 2,
+              "title": "推理模型仍是自回归 Transformer",
+              "anchor": "推理模型仍是自回归-transformer"
+            },
+            {
+              "order": 3,
+              "level": 2,
+              "title": "中间 token 怎样变成工作空间",
+              "anchor": "中间-token-怎样变成工作空间"
+            },
+            {
+              "order": 4,
+              "level": 2,
+              "title": "推理时计算怎样换取更高成功率",
+              "anchor": "推理时计算怎样换取更高成功率"
+            },
+            {
+              "order": 5,
+              "level": 2,
+              "title": "训练怎样让模型学会使用这些步骤",
+              "anchor": "训练怎样让模型学会使用这些步骤"
+            },
+            {
+              "order": 6,
+              "level": 2,
+              "title": "可见 CoT、蒸馏和 Agent 分别处在哪一层",
+              "anchor": "可见-cot蒸馏和-agent-分别处在哪一层"
+            },
+            {
+              "order": 7,
+              "level": 2,
+              "title": "小结",
+              "anchor": "小结"
+            },
+            {
+              "order": 8,
+              "level": 2,
+              "title": "延伸阅读",
+              "anchor": "延伸阅读"
+            }
+          ],
+          "formula_count": 2,
+          "formula_sections": [
+            "推理模型仍是自回归-transformer"
+          ],
+          "figures": [
+            "assets/zh/diagrams/reasoning-models/direct-vs-deliberate.svg",
+            "assets/zh/diagrams/reasoning-models/compute-allocation.svg",
+            "assets/zh/diagrams/reasoning-models/training-signals.svg"
+          ]
+        },
+        "en": {
+          "path": "translations/en/chapters/part2-llm-internal/reasoning-models.md",
+          "headings": [
+            {
+              "order": 1,
+              "level": 1,
+              "title": "Reasoning Models: How Multi-Step Reasoning Improves Complex Problem Solving",
+              "anchor": "reasoning-models-how-multi-step-reasoning-improves-complex-problem-solving"
+            },
+            {
+              "order": 2,
+              "level": 2,
+              "title": "Reasoning Models Are Still Autoregressive Transformers",
+              "anchor": "reasoning-models-are-still-autoregressive-transformers"
+            },
+            {
+              "order": 3,
+              "level": 2,
+              "title": "How Intermediate Tokens Become a Workspace",
+              "anchor": "how-intermediate-tokens-become-a-workspace"
+            },
+            {
+              "order": 4,
+              "level": 2,
+              "title": "How Inference-Time Compute Can Buy Higher Success Rates",
+              "anchor": "how-inference-time-compute-can-buy-higher-success-rates"
+            },
+            {
+              "order": 5,
+              "level": 2,
+              "title": "How Training Teaches the Model to Use These Steps",
+              "anchor": "how-training-teaches-the-model-to-use-these-steps"
+            },
+            {
+              "order": 6,
+              "level": 2,
+              "title": "Visible CoT, Distillation, and Agents Belong to Different Layers",
+              "anchor": "visible-cot-distillation-and-agents-belong-to-different-layers"
+            },
+            {
+              "order": 7,
+              "level": 2,
+              "title": "Summary",
+              "anchor": "summary"
+            },
+            {
+              "order": 8,
+              "level": 2,
+              "title": "Further Reading",
+              "anchor": "further-reading"
+            }
+          ],
+          "formula_count": 2,
+          "formula_sections": [
+            "reasoning-models-are-still-autoregressive-transformers"
+          ],
+          "figures": [
+            "assets/en/diagrams/reasoning-models/direct-vs-deliberate.svg",
+            "assets/en/diagrams/reasoning-models/compute-allocation.svg",
+            "assets/en/diagrams/reasoning-models/training-signals.svg"
+          ]
+        }
+      },
+      "navigation": {
+        "previous": "llm-generation",
         "next": "llm-inference-nondeterminism"
       }
     },
     {
       "id": "llm-inference-nondeterminism",
       "part": "llm-internal",
-      "order": 20,
+      "order": 21,
       "title": {
         "zh-Hans": "大模型推理的不确定性：从采样到工程实现",
         "en": "Why LLM Inference Is Not Fully Deterministic"
@@ -6842,14 +6981,14 @@
         }
       },
       "navigation": {
-        "previous": "llm-generation",
+        "previous": "reasoning-models",
         "next": "multilingual-llms"
       }
     },
     {
       "id": "multilingual-llms",
       "part": "llm-internal",
-      "order": 21,
+      "order": 22,
       "title": {
         "zh-Hans": "多语言大模型：不同语言怎样共享表示与能力",
         "en": "Multilingual LLMs: How Languages Share Representations and Capabilities"
@@ -6980,7 +7119,7 @@
     {
       "id": "multimodal-models",
       "part": "llm-internal",
-      "order": 22,
+      "order": 23,
       "title": {
         "zh-Hans": "多模态模型：文字之外的信息怎样进入计算",
         "en": "Multimodal Models: How Information Beyond Text Enters Computation"
@@ -7119,7 +7258,7 @@
     {
       "id": "llm-external-interaction",
       "part": "llm-external",
-      "order": 23,
+      "order": 24,
       "title": {
         "zh-Hans": "LLM 怎样与外部世界交互：从生成到行动",
         "en": "How LLMs Interact with the External World: From Generation to Action"
@@ -7262,7 +7401,7 @@
     {
       "id": "rag-context-evidence",
       "part": "llm-external",
-      "order": 24,
+      "order": 25,
       "title": {
         "zh-Hans": "RAG 与上下文工程：怎样把证据带入模型",
         "en": "RAG and Context Engineering: How Evidence Enters a Model"
@@ -7395,7 +7534,7 @@
     {
       "id": "function-calling-tool-use",
       "part": "llm-external",
-      "order": 25,
+      "order": 26,
       "title": {
         "zh-Hans": "Function Calling 与工具调用：机制、区别与本质",
         "en": "Function Calling and Tool Use: Mechanism, Difference, and Essence"
@@ -7890,7 +8029,7 @@
     {
       "id": "mhs-mcp-domain-capability-protocol",
       "part": "llm-external",
-      "order": 26,
+      "order": 27,
       "title": {
         "zh-Hans": "从 MHS、MCP 到领域能力协议",
         "en": "From MHS and MCP to Domain Capability Protocols"
@@ -8049,7 +8188,7 @@
     {
       "id": "harness-runtime-skills",
       "part": "llm-external",
-      "order": 27,
+      "order": 28,
       "title": {
         "zh-Hans": "Harness、Agent Runtime 与 Skill：怎样让多轮任务可靠运行",
         "en": "Harnesses, Agent Runtimes, and Skills: How Multi-turn Tasks Run Reliably"
@@ -8198,7 +8337,7 @@
     {
       "id": "agent-eval-business-quality-system",
       "part": "llm-external",
-      "order": 28,
+      "order": 29,
       "title": {
         "zh-Hans": "AI Agent Eval：从评测到业务质量系统",
         "en": "AI Agent Evaluation: From Tests to a Business Quality System"
@@ -8517,7 +8656,7 @@
     {
       "id": "llm-infrastructure",
       "part": "serving-runtime",
-      "order": 29,
+      "order": 30,
       "title": {
         "zh-Hans": "LLM 基础设施：模型怎样成为可靠服务",
         "en": "LLM Infrastructure: How a Model Becomes a Reliable Service"
@@ -8696,7 +8835,7 @@
     {
       "id": "inference-performance-capacity",
       "part": "serving-runtime",
-      "order": 30,
+      "order": 31,
       "title": {
         "zh-Hans": "推理服务的性能与容量：延迟、吞吐与 KV Cache 怎样互相制约",
         "en": "Inference Performance and Capacity: How Latency, Throughput, and KV Cache Constrain One Another"
@@ -8859,7 +8998,7 @@
     {
       "id": "serving-control-plane",
       "part": "serving-runtime",
-      "order": 31,
+      "order": 32,
       "title": {
         "zh-Hans": "推理服务的控制面：路由、扩缩容与可靠交付",
         "en": "Serving Control Plane: Routing, Scaling, and Reliable Delivery"
@@ -9006,7 +9145,7 @@
     {
       "id": "what-ai-really-means",
       "part": "appendices",
-      "order": 32,
+      "order": 33,
       "title": {
         "zh-Hans": "“人工智能”一词是否准确：一次关于 AI 概念边界的反思",
         "en": "Is “Artificial Intelligence” an Accurate Name? Reflections on AI’s Conceptual Boundary"
@@ -9101,7 +9240,7 @@
     {
       "id": "can-ai-create-new-things",
       "part": "appendices",
-      "order": 33,
+      "order": 34,
       "title": {
         "zh-Hans": "AI 能否创造真正的新事物",
         "en": "Can AI Create Genuinely New Things?"
@@ -9196,7 +9335,7 @@
     {
       "id": "generative-ai-probability-and-innovation",
       "part": "appendices",
-      "order": 34,
+      "order": 35,
       "title": {
         "zh-Hans": "生成式 AI：概率生成、约束与验证",
         "en": "Generative AI: Probability, Constraints, and Verification"
@@ -9317,13 +9456,154 @@
       },
       "navigation": {
         "previous": "can-ai-create-new-things",
+        "next": "agent-capability-authority-control"
+      }
+    },
+    {
+      "id": "agent-capability-authority-control",
+      "part": "appendices",
+      "order": 36,
+      "title": {
+        "zh-Hans": "AI 失控风险：能力、权限与人类的协调困境",
+        "en": "AI Loss-of-Control Risk: Capability, Authority, and the Human Coordination Problem"
+      },
+      "source": {
+        "zh-Hans": {
+          "path": "chapters/appendices/agent-capability-authority-control.md",
+          "headings": [
+            {
+              "order": 1,
+              "level": 1,
+              "title": "AI 失控风险：能力、权限与人类的协调困境",
+              "anchor": "ai-失控风险能力权限与人类的协调困境"
+            },
+            {
+              "order": 2,
+              "level": 2,
+              "title": "失控不是一个单一结果",
+              "anchor": "失控不是一个单一结果"
+            },
+            {
+              "order": 3,
+              "level": 2,
+              "title": "从“概率复读机”到持续行动的系统",
+              "anchor": "从概率复读机到持续行动的系统"
+            },
+            {
+              "order": 4,
+              "level": 3,
+              "title": "表现、理解与现实影响不是同一个问题",
+              "anchor": "表现理解与现实影响不是同一个问题"
+            },
+            {
+              "order": 5,
+              "level": 2,
+              "title": "权限怎样把能力变成现实影响",
+              "anchor": "权限怎样把能力变成现实影响"
+            },
+            {
+              "order": 6,
+              "level": 2,
+              "title": "人类为什么难以一起收紧边界",
+              "anchor": "人类为什么难以一起收紧边界"
+            },
+            {
+              "order": 7,
+              "level": 2,
+              "title": "AI 参与研发，不等于递归自我改进已经实现",
+              "anchor": "ai-参与研发不等于递归自我改进已经实现"
+            },
+            {
+              "order": 8,
+              "level": 2,
+              "title": "小结",
+              "anchor": "小结"
+            }
+          ],
+          "formula_count": 0,
+          "formula_sections": [],
+          "figures": [
+            "assets/zh/diagrams/ai-loss-of-control/risk-escalation-threshold.svg",
+            "assets/zh/diagrams/ai-loss-of-control/knowledge-reasoning-result.svg",
+            "assets/zh/diagrams/ai-loss-of-control/knowledge-discovery-loop.svg",
+            "assets/zh/diagrams/ai-loss-of-control/capability-permission-paths.svg",
+            "assets/zh/diagrams/ai-loss-of-control/competition-feedback-loops.svg",
+            "assets/zh/diagrams/ai-loss-of-control/recursive-improvement-boundary.svg"
+          ]
+        },
+        "en": {
+          "path": "translations/en/chapters/appendices/agent-capability-authority-control.md",
+          "headings": [
+            {
+              "order": 1,
+              "level": 1,
+              "title": "AI Loss-of-Control Risk: Capability, Authority, and the Human Coordination Problem",
+              "anchor": "ai-loss-of-control-risk-capability-authority-and-the-human-coordination-problem"
+            },
+            {
+              "order": 2,
+              "level": 2,
+              "title": "Loss of control is not one outcome",
+              "anchor": "loss-of-control-is-not-one-outcome"
+            },
+            {
+              "order": 3,
+              "level": 2,
+              "title": "From “probability parrot” to a system that keeps acting",
+              "anchor": "from-probability-parrot-to-a-system-that-keeps-acting"
+            },
+            {
+              "order": 4,
+              "level": 3,
+              "title": "Performance, understanding, and real-world impact differ",
+              "anchor": "performance-understanding-and-real-world-impact-differ"
+            },
+            {
+              "order": 5,
+              "level": 2,
+              "title": "How authority turns capability into real-world impact",
+              "anchor": "how-authority-turns-capability-into-real-world-impact"
+            },
+            {
+              "order": 6,
+              "level": 2,
+              "title": "Why people struggle to tighten the boundary together",
+              "anchor": "why-people-struggle-to-tighten-the-boundary-together"
+            },
+            {
+              "order": 7,
+              "level": 2,
+              "title": "AI participation in R&D is not complete recursive self-improvement",
+              "anchor": "ai-participation-in-rd-is-not-complete-recursive-self-improvement"
+            },
+            {
+              "order": 8,
+              "level": 2,
+              "title": "Summary",
+              "anchor": "summary"
+            }
+          ],
+          "formula_count": 0,
+          "formula_sections": [],
+          "figures": [
+            "assets/en/diagrams/ai-loss-of-control/risk-escalation-threshold.svg",
+            "assets/en/diagrams/ai-loss-of-control/knowledge-reasoning-result.svg",
+            "assets/en/diagrams/ai-loss-of-control/knowledge-discovery-loop.svg",
+            "assets/en/diagrams/ai-loss-of-control/capability-permission-paths.svg",
+            "assets/en/diagrams/ai-loss-of-control/competition-feedback-loops.svg",
+            "assets/en/diagrams/ai-loss-of-control/recursive-improvement-boundary.svg"
+          ]
+        }
+      },
+      "navigation": {
+        "previous": "generative-ai-probability-and-innovation",
         "next": "learning-resources"
       }
     },
     {
       "id": "learning-resources",
       "part": "appendix",
-      "order": 35,
+      "order": 37,
       "title": {
         "zh-Hans": "附录一：推荐学习资料",
         "en": "Appendix I: Recommended Learning Resources"
@@ -9359,14 +9639,14 @@
         }
       },
       "navigation": {
-        "previous": "generative-ai-probability-and-innovation",
+        "previous": "agent-capability-authority-control",
         "next": "ai-learning-guide"
       }
     },
     {
       "id": "ai-learning-guide",
       "part": "appendix",
-      "order": 36,
+      "order": 38,
       "title": {
         "zh-Hans": "附录二：用 AI 学习本书",
         "en": "Appendix II: Learn This Book with AI"

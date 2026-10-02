@@ -121,6 +121,11 @@
           "title": "LLM 生成机制：从输入到下一个 Token"
         },
         {
+          "id": "reasoning-models",
+          "path": "chapters/part2-llm-internal/reasoning-models.md",
+          "title": "推理模型：多步推理过程怎样提高复杂任务的成功率"
+        },
+        {
           "id": "llm-inference-nondeterminism",
           "path": "chapters/part2-llm-internal/llm-inference-nondeterminism.md",
           "title": "大模型推理的不确定性：从采样到工程实现"
@@ -215,6 +220,11 @@
           "id": "generative-ai-probability-and-innovation",
           "path": "chapters/appendices/generative-ai-probability-and-innovation.md",
           "title": "生成式 AI：概率生成、约束与验证"
+        },
+        {
+          "id": "agent-capability-authority-control",
+          "path": "chapters/appendices/agent-capability-authority-control.md",
+          "title": "AI 失控风险：能力、权限与人类的协调困境"
         }
       ]
     },

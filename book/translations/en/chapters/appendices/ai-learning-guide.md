@@ -1,10 +1,10 @@
 # Appendix II: Learn This Book with AI
 
-This manuscript can itself be the shared material for a conversation with AI. Let a network-capable AI download the complete PDF first and learn from it; when it cannot download files, give it a same-language PDF, Markdown, EPUB, or complete print HTML edition instead. AI’s role is not to produce a one-shot summary, but to help you locate, explain, question, and test understanding.
+This manuscript can itself be the shared material for a conversation with AI. Let a network-capable AI download the complete Markdown manuscript first and learn from it; when it cannot download files, give it a same-language edition instead. AI’s role is not to produce a one-shot summary, but to help you locate, explain, question, and test understanding.
 
 ## Start Learning with AI
 
-Copy the home page’s single learning prompt. It asks AI to first download the complete PDF at `https://kingson4wu.github.io/Understanding-LLMs/exported/en/Understanding-LLMs.pdf`, then learn from its table of contents, chapters, formulas, and figures.
+Copy the home page’s single learning prompt. It asks AI to first download the complete Markdown manuscript at `https://kingson4wu.github.io/Understanding-LLMs/exported/en/Understanding-LLMs.md`, then learn from its table of contents, chapters, formulas, and figures.
 
 ## How AI Should Help You Learn
 
@@ -37,18 +37,18 @@ You can replace the goal with a concrete case, such as “Why do Prefill and Dec
 
 ## Copyable Starter Prompt
 
-Copy this single prompt into Codex, Claude Code, ChatGPT, DeepSeek, or another AI tool. It downloads the complete PDF first; if the tool cannot download files, give it the corresponding edition from the downloads page.
+Copy this single prompt into Codex, Claude Code, ChatGPT, DeepSeek, or another AI tool. It downloads the complete Markdown manuscript first; if the tool cannot download files, give it the corresponding edition from the downloads page.
 
 ```text
-I want to study Understanding LLMs for Software Engineers. First download and read the complete PDF manuscript: https://kingson4wu.github.io/Understanding-LLMs/exported/en/Understanding-LLMs.pdf
+I want to study Understanding LLMs for Software Engineers. First download and read the complete Markdown manuscript: https://kingson4wu.github.io/Understanding-LLMs/exported/en/Understanding-LLMs.md
 
 If you cannot download or read that file, tell me clearly and ask me to upload the same-language edition; do not pretend that you have read it. After you have read it, summarize the book’s four parts from its table of contents, then give me the shortest learning path for my goal. In every explanation, name the relevant chapter, heading, formula, or figure; distinguish “book evidence,” “your inference,” and claims that “require external verification.” Explain one concept at a time, then ask one question that checks my understanding.
 ```
 
 ## Boundaries of Figures, Formulas, and External Facts
 
-Text, the table of contents, and formulas in the PDF are usually enough to begin learning; AI tools differ in their ability to read PDF images, long documents, and persistent context. If a question depends on spatial layout, arrows, or small labels in a figure, ask the tool to open that page, or use another edition from the downloads page when it cannot read the PDF. Do not treat a tool’s current behavior, model version, price, paper result, or production metric as a fixed fact from this book; check reliable current sources separately.
+Text, the table of contents, and formulas in Markdown are usually enough to begin learning; AI tools differ in their ability to retrieve long documents and retain context. If a question depends on spatial layout, arrows, or small labels in a figure, ask the tool to open the corresponding web page, or clone the repository to inspect the SVG source. Do not treat a tool’s current behavior, model version, price, paper result, or production metric as a fixed fact from this book; check reliable current sources separately.
 
 ## Repository Tools Are an Enhanced Path
 
-When you clone the repository and use Codex, Claude Code, or another tool that can read local files, AI can also inspect the original Markdown, SVG figures, learning index, and bilingual mapping. That makes it better for figure-by-figure checking, traceable citations, or private learning records. This is an enhancement, not a prerequisite: the complete PDF alone should let you begin a high-quality learning dialogue from this appendix.
+When you clone the repository and use Codex, Claude Code, or another tool that can read local files, AI can also inspect the original Markdown, SVG figures, learning index, and bilingual mapping. That makes it better for figure-by-figure checking, traceable citations, or private learning records. This is an enhancement, not a prerequisite: the complete Markdown manuscript alone should let you begin a high-quality learning dialogue from this appendix.

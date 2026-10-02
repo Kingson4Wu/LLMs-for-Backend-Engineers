@@ -1,0 +1,54 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="680" viewBox="0 0 1200 680" role="img" aria-labelledby="title desc">
+  <title id="title">从已有知识到新知识的发现闭环</title>
+  <desc id="desc">左侧区分训练数据没有答案、人类暂时没有答案和尚未形成问题或概念三种未知；右侧展示从已有知识、假设、实验、新数据、分析验证到新知识的循环。</desc>
+  <defs>
+    <marker id="arrow-green" viewBox="0 0 10 10" refX="8" refY="5" markerWidth="8" markerHeight="8" orient="auto">
+      <path d="M0 0L10 5L0 10Z" fill="#1f7a57"/>
+    </marker>
+  </defs>
+  <rect width="1200" height="680" fill="#fbf7ef"/>
+  <text x="70" y="72" font-family="Georgia, 'Times New Roman', serif" font-size="38" font-weight="700" fill="#173f63">“不知道”并不只有一种</text>
+  <text x="70" y="108" font-family="'Noto Sans SC', 'PingFang SC', 'Microsoft YaHei', sans-serif" font-size="22" fill="#6f7f8d">已有知识可以通过推理、搜索、实验和反馈产生训练数据中没有的新结果</text>
+
+  <text x="70" y="160" font-family="Georgia, 'Times New Roman', serif" font-size="25" font-weight="700" fill="#173f63">三种未知</text>
+  <g font-family="'Noto Sans SC', 'PingFang SC', 'Microsoft YaHei', sans-serif">
+    <rect x="70" y="182" width="390" height="112" rx="14" fill="#fffdf8" stroke="#89a6bd" stroke-width="1.5"/>
+    <circle cx="112" cy="238" r="23" fill="#e8f0f5"/><text x="112" y="246" text-anchor="middle" font-size="22" font-weight="700" fill="#173f63">1</text>
+    <text x="155" y="226" font-size="23" font-weight="700" fill="#173f63">训练数据没有具体答案</text>
+    <text x="155" y="261" font-size="18" fill="#6f7f8d">仍可能通过推理或计算得到</text>
+
+    <rect x="70" y="314" width="390" height="112" rx="14" fill="#fffdf8" stroke="#6c91ad" stroke-width="1.5"/>
+    <circle cx="112" cy="370" r="23" fill="#dce9f1"/><text x="112" y="378" text-anchor="middle" font-size="22" font-weight="700" fill="#173f63">2</text>
+    <text x="155" y="358" font-size="23" font-weight="700" fill="#173f63">人类暂时没有答案</text>
+    <text x="155" y="393" font-size="18" fill="#6f7f8d">但已经拥有理论与工具</text>
+
+    <rect x="70" y="446" width="390" height="112" rx="14" fill="#fffdf8" stroke="#173f63" stroke-width="1.5"/>
+    <circle cx="112" cy="502" r="23" fill="#d2e2ed"/><text x="112" y="510" text-anchor="middle" font-size="22" font-weight="700" fill="#173f63">3</text>
+    <text x="155" y="490" font-size="23" font-weight="700" fill="#173f63">尚未形成问题或概念</text>
+    <text x="155" y="525" font-size="18" fill="#6f7f8d">一种更深层的未知</text>
+  </g>
+
+  <text x="530" y="160" font-family="Georgia, 'Times New Roman', serif" font-size="25" font-weight="700" fill="#173f63">知识发现闭环</text>
+  <g font-family="'Noto Sans SC', 'PingFang SC', 'Microsoft YaHei', sans-serif" font-size="20" font-weight="700" text-anchor="middle">
+    <rect x="718" y="172" width="190" height="66" rx="12" fill="#fffdf8" stroke="#1f7a57" stroke-width="2"/><text x="813" y="214" fill="#1f7a57">已有知识</text>
+    <rect x="952" y="254" width="180" height="66" rx="12" fill="#fffdf8" stroke="#1f7a57" stroke-width="2"/><text x="1042" y="296" fill="#1f7a57">提出假设</text>
+    <rect x="952" y="390" width="180" height="66" rx="12" fill="#fffdf8" stroke="#1f7a57" stroke-width="2"/><text x="1042" y="432" fill="#1f7a57">设计实验</text>
+    <rect x="718" y="482" width="190" height="66" rx="12" fill="#fffdf8" stroke="#1f7a57" stroke-width="2"/><text x="813" y="524" fill="#1f7a57">获得新数据</text>
+    <rect x="510" y="390" width="180" height="66" rx="12" fill="#fffdf8" stroke="#1f7a57" stroke-width="2"/><text x="600" y="432" fill="#1f7a57">分析与验证</text>
+    <rect x="510" y="254" width="180" height="66" rx="12" fill="#fffdf8" stroke="#1f7a57" stroke-width="2"/><text x="600" y="296" fill="#1f7a57">形成新知识</text>
+  </g>
+  <g fill="none" stroke="#1f7a57" stroke-width="2.5" marker-end="url(#arrow-green)">
+    <path d="M904 212C944 218 973 232 997 253"/>
+    <path d="M1042 321V380"/>
+    <path d="M998 458C970 486 943 502 916 510"/>
+    <path d="M710 515C666 503 637 486 614 458"/>
+    <path d="M600 389V331"/>
+    <path d="M692 278C720 248 745 233 766 235"/>
+  </g>
+  <circle cx="813" cy="360" r="76" fill="#f1f6f2" stroke="#b7d4c5" stroke-width="1.5"/>
+  <text x="813" y="351" text-anchor="middle" font-family="Georgia, 'Times New Roman', serif" font-size="26" font-weight="700" fill="#173f63">推理 · 搜索</text>
+  <text x="813" y="385" text-anchor="middle" font-family="Georgia, 'Times New Roman', serif" font-size="26" font-weight="700" fill="#173f63">实验 · 反馈</text>
+
+  <rect x="470" y="596" width="662" height="54" rx="27" fill="#f3e8e4"/>
+  <text x="801" y="630" text-anchor="middle" font-family="'Noto Sans SC', 'PingFang SC', 'Microsoft YaHei', sans-serif" font-size="21" font-weight="700" fill="#9a3b2f">新结果 ≠ 正确结果，仍需证明、实验或独立验证</text>
+</svg>

@@ -4,10 +4,9 @@
 
 ## 先读取的材料
 
-按用户选择的语言，先读取一份完整书稿；Markdown 更便于定位，PDF 更适合保留公式和图的版式。
+按用户选择的语言，先读取完整单文件 Markdown 书稿；它便于定位、检索和回链到章节、公式与图。
 
 - [完整单文件 Markdown（简体中文）](https://kingson4wu.github.io/Understanding-LLMs/exported/zh-Hans/Understanding-LLMs.md)
-- [完整 PDF（简体中文）](https://kingson4wu.github.io/Understanding-LLMs/exported/zh-Hans/Understanding-LLMs.pdf)
 - [学习索引（双语、章节/标题/公式/图定位）](https://kingson4wu.github.io/Understanding-LLMs/ai-learning/index.json)
 - [中文学习契约](https://kingson4wu.github.io/Understanding-LLMs/ai-learning/zh-Hans/contract.md)
 - [全书地图](https://kingson4wu.github.io/Understanding-LLMs/ai-learning/book-map.zh-Hans.md)
@@ -24,4 +23,4 @@
 
 ## 可用格式与边界
 
-完整 Markdown 适合文本检索和章节跳转；PDF 适合公式、图和固定排版；EPUB 和 print HTML 位于[下载页](https://kingson4wu.github.io/Understanding-LLMs/zh-Hans/downloads/)。只有克隆仓库的本地工具才能直接检查原始 Markdown、SVG 与源文件路径；不要在无法访问这些文件时声称已经核对过它们。
+完整 Markdown 是在线可获取、适合文本检索和章节跳转的学习源；EPUB 和 print HTML 位于[下载页](https://kingson4wu.github.io/Understanding-LLMs/zh-Hans/downloads/)。固定版式 PDF 仅随带版本的 [GitHub Release](https://github.com/Kingson4Wu/Understanding-LLMs/releases) 发布，不应替代当前在线书稿。只有克隆仓库的本地工具才能直接检查原始 Markdown、SVG 与源文件路径；不要在无法访问这些文件时声称已经核对过它们。

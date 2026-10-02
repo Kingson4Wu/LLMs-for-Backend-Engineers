@@ -10,7 +10,7 @@
 
 ## Start here
 
-**Recommended: [learn with AI](https://kingson4wu.github.io/Understanding-LLMs/en/read/ai-learning-guide/).** This book is an evidence base for a learning conversation, not merely a document to summarize. Copy the starter prompt on the guide page: it directs an AI to download the complete English PDF, build the shortest path for your goal, name the relevant chapters, formulas, and figures, and test your understanding one concept at a time.
+**Recommended: [learn with AI](https://kingson4wu.github.io/Understanding-LLMs/en/read/ai-learning-guide/).** This book is an evidence base for a learning conversation, not merely a document to summarize. Copy the starter prompt on the guide page: it directs an AI to download the complete English Markdown manuscript, build the shortest path for your goal, name the relevant chapters, formulas, and figures, and test your understanding one concept at a time.
 
 | Route | Best for | What to do |
 | --- | --- | --- |
@@ -59,7 +59,7 @@ Part I is reference material, not an entrance exam. Visit it when representation
 | --- | --- |
 | [Online reader](https://kingson4wu.github.io/Understanding-LLMs/en/) | You want search, responsive typography, formulas, light/dark themes, browser-local notes, and reading progress. |
 | [Markdown](https://kingson4wu.github.io/Understanding-LLMs/exported/en/Understanding-LLMs.md) | You want an AI assistant or text tool to read the complete book as structured source. |
-| [PDF](https://kingson4wu.github.io/Understanding-LLMs/exported/en/Understanding-LLMs.pdf) | You want a fixed, print-oriented layout with formulas and figures. |
+| [Versioned PDF](https://github.com/Kingson4Wu/Understanding-LLMs/releases) | You want a fixed, print-oriented layout with formulas and figures. Choose the release whose manifest identifies its source revision. |
 | [EPUB](https://kingson4wu.github.io/Understanding-LLMs/exported/en/Understanding-LLMs.epub) | You want reflowable reading on an e-reader or mobile device. |
 
 The downloads page shows only files present in the current build. Versioned releases include `release-provenance.json` (tag, source commit, build context, and file hashes) and SHA256 checksums. They support provenance and file-integrity review, not cryptographic signing, security certification, or a quality claim. The Chinese and English editions are published as strictly aligned counterparts.

@@ -50,6 +50,6 @@ When the user asks to learn rather than edit, read `learning/README.md`, the app
 
 ## Delivery
 
-PR validates. On the upstream repository, matching main-branch path changes (or manual dispatch) trigger Pages deployment; v-prefixed numeric tags such as `v1.0.0` trigger versioned Markdown/PDF/EPUB/HTML releases. Pages rebuilds and includes all four formats; the release workflow packages the same four formats as versioned assets. See the actual workflow filters in `.github/workflows/`. Do not publish partial or mixed-source releases: the four formats within each language must share source provenance. Never label a build or translation as verified without actual checks.
+PR validates. On the upstream repository, matching main-branch path changes (or manual dispatch) trigger Pages deployment; v-prefixed numeric tags such as `v1.0.0` trigger versioned Markdown/PDF/EPUB/HTML releases. Pages rebuilds and includes Markdown, print HTML, and EPUB; the release workflow packages all four formats as versioned assets. See the actual workflow filters in `.github/workflows/`. Do not publish partial or mixed-source releases: the four formats within each language must share source provenance. Never label a build or translation as verified without actual checks.
 
 Use concise imperative commit messages focused on a single change. Do not invent a content/code license: the author has not selected one.

@@ -94,7 +94,7 @@ pdffonts book/exported/zh-Hans/Understanding-LLMs.pdf
 ## 发布
 
 - PR：检查目录/链接/翻译，测试出版，构建新旧站，验证根路径与 Pages 子路径。
-- main：`book/**`、`learning/**`、`web/**`、`tools/book-kit/**` 或部署工作流变更时触发，也可手动触发。部署会在带 TeX 的 CI 环境重建 Markdown、HTML、EPUB 与 PDF，再将它们和 Astro 站点放入 `web/dist/`；仅 README 的修改不会触发 Pages。
+- main：`book/**`、`learning/**`、`web/**`、`tools/book-kit/**` 或部署工作流变更时触发，也可手动触发。Pages 部署会重建 Markdown、HTML 与 EPUB，并将它们和 Astro 站点放入 `web/dist/`；PDF 只在带版本 tag 的发行流程中构建和发布。仅 README 的修改不会触发 Pages。
 - `v*` tag：触发书籍发行构建；打包器要求 `v` 后紧接数字，例如 `v1.0.0`。生成两种语言的四种格式，通过校验后才上传整套 artifact 和创建 Release。
 
 Pages 部署与 Release 发布仅对上游仓库 `kingson4wu/Understanding-LLMs` 启用。fork 自行发布需修改仓库限制、`web/astro.config.mjs` 的站点地址和 base，以及 `web/src/lib/book.mjs`、`web/scripts/postbuild.mjs` 中的仓库/站点 URL；还需将 GitHub Pages 的 Source 设置为 GitHub Actions。

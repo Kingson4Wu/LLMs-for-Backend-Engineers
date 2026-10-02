@@ -2,11 +2,11 @@
 
 推荐把 LLM 当作基于书稿的交互导师，而不是让它做一次性总结。它应帮助你定位章节、解释因果、提出反例、检验理解，并把所有关键结论回链到可核对的书稿。
 
-## 推荐路径：一段提示词，完整 PDF
+## 推荐路径：一段提示词，完整 Markdown 书稿
 
-打开[中文首页](https://kingson4wu.github.io/Understanding-LLMs/zh-Hans/)，复制唯一的学习提示词，粘贴给 Codex、Claude、ChatGPT、DeepSeek 或其他能下载文件的 AI。提示词要求 AI 先下载完整 PDF 再开始讲解，避免把临时生成的总结当作依据；它还要求 AI 概括四个部分、标注章节和图、区分证据与推断，并一次只讲一个概念、检验一次理解。
+打开[中文首页](https://kingson4wu.github.io/Understanding-LLMs/zh-Hans/)，复制唯一的学习提示词，粘贴给 Codex、Claude、ChatGPT、DeepSeek 或其他能下载文件的 AI。提示词要求 AI 先下载完整 Markdown 书稿再开始讲解，避免把临时生成的总结当作依据；它还要求 AI 概括四个部分、标注章节和图、区分证据与推断，并一次只讲一个概念、检验一次理解。
 
-若所用 AI 不能下载链接文件，可从[下载页](https://kingson4wu.github.io/Understanding-LLMs/zh-Hans/downloads/)取得书稿后交给它。PDF 是默认的完整阅读版本；Markdown、EPUB 和 print HTML 仍供更适合这些格式的工具或阅读器使用。
+若所用 AI 不能下载链接文件，可从[下载页](https://kingson4wu.github.io/Understanding-LLMs/zh-Hans/downloads/)取得同语言书稿后交给它。Markdown 是默认的完整学习版本；EPUB 和 print HTML 仍供更适合这些格式的工具或阅读器使用。固定版式 PDF 仅随带版本的 [GitHub Release](https://github.com/Kingson4Wu/Understanding-LLMs/releases) 发布。
 
 对于能自主抓取网页资料的 AI，可先提供公开的[AI 学习入口](https://kingson4wu.github.io/Understanding-LLMs/ai-learning/zh-Hans.md)；它链接完整书稿、学习索引、学习契约和全书地图。站点根目录的 `llms.txt` 也会列出两种语言的入口。
 
